@@ -1,4 +1,5 @@
 """
+
 dbe.plasma
 ----------
 Phase 1 scaffold: radial profiles, parameters, and placeholders.
