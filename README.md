@@ -1,83 +1,35 @@
-# DBE Fusion Stability Forecaster
+# DBE Fusion Stability Simulator (Research Grade)
 
-This repository contains a toy simulation of a fusion plasma discharge under the control of a **Dimensional Braid Engine (DBE)**.  The simulation is designed to illustrate, in a playful and educational way, how the DBE described in the accompanying white paper might actively stabilise a tokamak plasma by predicting and mitigating magnetohydrodynamic instabilities.
+This project implements a research‑grade simulation of a fusion plasma discharge controlled by a **Dimensional Braid Engine (DBE)**. It combines a simplified magnetohydrodynamic (MHD) transport model with models of advanced quantum subsystems and realistic actuators to explore how a DBE might stabilise tokamak plasmas by predicting and mitigating instabilities.
 
-## Overview
+## Highlights
 
-The DBE is treated as a black‑box controller with five subsystems:
+- **Physics core:** A 1‑D radial grid with analytic temperature, density and safety‑factor profiles evolves under a finite‑difference transport equation. A shear‑dependent diffusivity suppresses turbulence, and built‑in triggers simulate edge localised modes (ELMs) and other instabilities.
+- **Actuators:** Models of resonant magnetic perturbation (RMP) coils and pellet injection change the edge stability and temperature profile. Actuator limits (current, pellet size and rate) are respected.
+- **Quantum subsystems:** Topological quantum compute with Majorana braids, fracton memory for robust state storage, a Floquet time crystal for synchronised timing, and a holographic encoder for compressing high‑dimensional plasma states.
+- **DBE controller:** The `DBEController` coordinates quantum subsystems and actuators based on plasma stability. It stores compressed profiles in fracton memory, decides coil currents and pellet injections, and synchronises actions on the time crystal tick.
+- **Risk analysis:** A `RiskAnalyzer` monitors stability, actuator saturation and memory errors, producing a risk score and explanatory notes for each event.
+- **Batch runs:** The script in `cli/run_batch.py` runs many randomised scenarios, collects risk scores and outputs a CSV dataset for analysis.
+- **Integration API:** The `simulate_event()` function in `dbe_simulation.py` allows embedding the simulation into other frameworks (e.g. web applications).
 
-1. **Topological Quantum Core** – allocates Majorana qubits to simulate the plasma and detect anomalies.  More qubits devoted to anomaly detection yield faster response times.
-2. **Fracton Memory** – divides its capacity between storing long‑term stability logs and high‑fidelity real‑time state information.  A larger real‑time allocation improves the DBE’s predictive stability score.
-3. **Floquet Time Crystal** – when engaged, synchronises the entire system to reduce noise and enhance coherence, effectively boosting the effectiveness of the other subsystems.
-4. **Holographic Encoder** – compresses the sensor data stream to free up qubits and memory for more useful work.
-5. **Fusion Plasma Interface** – executes mitigation actions based on the DBE’s predictions.  The likelihood of a successful mitigation depends on the performance of the other subsystems.
+## Getting started
 
-At each simulated event, a random instability (for example an edge localised mode or a tearing mode) is triggered.  The operator must reallocate qubits and memory, decide whether to engage the time crystal and holographic encoder, and finally decide whether to execute mitigation.  The outcome of each event influences the plasma stability and the cumulative energy gain compared to a baseline reactor without the DBE.  The key performance indicators are:
-
-* **Energy confinement time (tau_E)** – this is increased relative to a baseline value when the DBE’s stability score is high.  In this model
-
-  `tau_E_DBE = tau_E_standard * (1 + alpha * stability_score)`
-
-  where `alpha` is a tunable constant and the `stability_score` is derived from the fracton memory allocation and learning.
-
-* **Instability growth rate (gamma)** – this is reduced by the DBE’s ability to act quickly.  In the simulation
-
-  `gamma_effective = gamma_physical - beta * response_time`
-
-  where `beta` is a tunable constant and `response_time` is determined by the number of qubits allocated to anomaly detection.
-
-These simple formulas mirror the high‑level ideas in the white paper without attempting to model the full complexity of magnetohydrodynamic instabilities.
-
-## Running the simulation
-
-1. Ensure you have a recent Python 3 interpreter installed (no additional packages are required).
-2. Run the simulation from a terminal:
-
-   ```sh
-   python dbe_simulation.py
-   ```
-
-3. Follow the on‑screen prompts to allocate resources, engage subsystems, and decide when to execute mitigation.  The simulation runs through a fixed number of events (five by default).  At the end you will see your cumulative energy gain compared with a baseline reactor.
-
-You can adjust the number of events or the constants `alpha` and `beta` by editing the parameters passed to the `Simulation` class in `dbe_simulation.py`.
-
-## Programmatic integration
-
-The core logic of the simulation can be used as a lightweight library.  The
-function `simulate_event` in `dbe_simulation.py` takes explicit parameters
-for the DBE state, plasma state, physical growth rate and resource
-allocations, and returns the updated objects along with the outcome of
-mitigation.  This makes it straightforward to embed the model into
-other systems (for example, a web application in Odoo) without relying
-on the interactive command‑line interface.
-
-Here's an example of how to call it:
-
-```python
-from dbe_simulation import DBEState, PlasmaState, simulate_event
-
-alpha = 0.3
-beta = 0.2
-dbe = DBEState()
-plasma = PlasmaState()
-gamma_physical = 1.0  # some instability strength
-
-# allocate 60 qubits, 40 memory units, engage time crystal and compress, and attempt mitigation
-success, p_mit, new_stab, dbe, plasma = simulate_event(
-    dbe_state=dbe,
-    plasma_state=plasma,
-    gamma_physical=gamma_physical,
-    alpha=alpha,
-    beta=beta,
-    qubits_alloc=60,
-    memory_alloc=40,
-    engage_time_crystal=True,
-    engage_compression=True,
-    execute_mitigation=True,
-)
-print(f"Mitigation success: {success}, probability was {p_mit:.2f}, new stability: {new_stab:.1f}%")
+Clone this repository and install Python 3. No external packages are required. To run an interactive simulation:
+```sh
+python dbe_simulation.py
 ```
+Follow the prompts to allocate qubits and memory, engage subsystems and execute mitigations. The game will report your cumulative energy gain and risk at the end.
 
-## Notes
+To run a batch of random scenarios and save the results:
+```sh
+python cli/run_batch.py
+```
+This will produce `outputs/batch_runs.csv` with one row per run and columns `run_id, stability, coil_fraction, pellet_available, memory_errors, risk_score, notes`. You can adjust the number of runs and parameter ranges in the script.
 
-This project is intended as an educational demonstration.  While inspired by concepts in topological quantum computing and fusion physics, the model is deliberately simplified and should not be interpreted as a realistic predictor of plasma behaviour.  Nevertheless, it highlights the interplay between predictive control, resource allocation and system performance—ideas central to the Dimensional Braid Engine vision.
+## Scientific notes
+
+This repository is inspired by the DBE white paper and related literature. The plasma model uses simplified MHD and transport equations and is not intended for operational predictions. The quantum subsystem models demonstrate timing and error‑resilience rather than performing real quantum computation. See `docs/THEORY.md` for details and references to original research.
+
+## Contributing
+
+Contributions are welcome. See the open issues for planned work and feel free to open new issues or pull requests.

@@ -1,0 +1,20 @@
+# Physical constants & defaults (Phase 1 placeholders; refined later)
+plasma:
+  minor_radius_m: 1.0
+  major_radius_m: 3.0
+  lnLambda: 15.0
+  B0_T: 5.0
+profiles:
+  T0_keV: 10.0
+  n0_1e20: 1.0
+  alpha_T: 3.0
+  alpha_n: 2.0
+quantum:
+  logical_qubits: 64
+  braid_latency_ns: 50.0
+time_crystal:
+  tick_ns: 100.0
+actuators:
+  rmp_I_max: 1.0
+  pellet_rate_max_hz: 50.0
+  pellet_size_max: 1.0
