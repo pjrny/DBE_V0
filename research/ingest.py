@@ -101,6 +101,12 @@ def fetch_query(q: str, n: int = 12) -> list[dict]:
                 "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
                 "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
                 "source": "arXiv API",
+                "importance": 52,
+                "confidence": 58,
+                "popularity": 70,
+                "role": "week",
+                "foundational": False,
+                "tags": ["live", *fields],
             }
         )
     return out

@@ -25,6 +25,7 @@ Anyons, TQC, Majorana, braid/knot theory, topology, fracton memory, time crystal
 python research/ingest.py --lookback-days 365
 python cli/research_observatory.py
 python cli/research_observatory.py --field anyons --role week
+cd research && python -m http.server 8000   # lab.html tab
 ```
 
 Program manuscripts (DBE white paper, DBE-S revision) sit in the catalog as `role: internal`. They are scored with lower confidence on purpose.

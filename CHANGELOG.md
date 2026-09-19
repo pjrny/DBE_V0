@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.1] - 2026-09-19
+### Changed
+- Research Observatory HTML tab (`research/lab.html`) now matches the catalog schema: core idea / why it matters / limitation, importance–confidence–popularity gauges, field chips, this week / month / year lookback / pillars / catalog / daily runs / suggested pillars.
+- Catalog expanded to 50+ papers including Kitaev 1997/2001/honeycomb, Nayak 2008, S₃ Nature 2026, Lyons–Brown, DBE V1 and DBE-S (lower confidence), plus this week’s arXiv (Tamiya, Polley, Jennings, …).
+- Suggested pillars now include cyclic fusion universality, Floquet–Majorana codes, fracton holography, non-Abelian qLDPC, and topological hardware for dynamics.
+
 ## [0.3.0] - 2026-09-19
 ### Added
 - Research Lab (`research/lab.html` + `research/catalog.json`) with tabs for All / Pillars / This week / Year lookback / Recent.

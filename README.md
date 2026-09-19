@@ -2,18 +2,22 @@
 
 This project implements a research-grade simulation of a fusion plasma discharge controlled by a **Dimensional Braid Engine (DBE)**. It combines a simplified magnetohydrodynamic (MHD) transport model with models of advanced quantum subsystems and realistic actuators to explore how a DBE might stabilise tokamak plasmas by predicting and mitigating instabilities.
 
-## Research Lab (papers tab)
+## Research Observatory (papers tab)
 
 Interactive catalog of core sources for Anyons, TQC, Majorana, braid/knot theory, topology, fracton memory, time crystals, plasma control, holography, and fusion–quantum integration (including DBE V1 / DBE-S and the Q=1000 goal).
 
 ```sh
 cd research && python -m http.server 8000
 # open http://localhost:8000/lab.html
-python fetch_arxiv.py --days 400   # first-run year lookback
-python fetch_arxiv.py              # daily
+
+python research/ingest.py --lookback-days 365   # first-run year lookback
+python research/ingest.py --lookback-days 7     # daily
+python cli/research_observatory.py              # CLI tab
 ```
 
-Tabs: All / Pillars / This week / Year lookback / Recent. Each paper has tags, field segment, importance / confidence / popularity, a plain-language core idea, why it matters, one limitation, and a DBE link. Foundational papers are pillars; suggested new pillars (Haah/X-cube, Floquet time crystals) are flagged in the catalog.
+Tabs: This week / This month / Year lookback / Pillars / Catalog / Daily runs / New pillars. Each paper is tagged, segmented, and scored for **importance** (pillar lift toward Q = 1000), **confidence** (review / experiment vs theory), and **popularity** (venue + recency). Every brief has a plain-language core idea, why it matters, and one limitation. Foundational papers are pillars of any age; new papers can suggest new pillars.
+
+Feeds: [quant-ph](https://arxiv.org/list/quant-ph/recent), [cond-mat.str-el](https://arxiv.org/list/cond-mat.str-el/recent), [cond-mat.mes-hall](https://arxiv.org/list/cond-mat.mes-hall/recent), [hep-th](https://arxiv.org/list/hep-th/recent), [physics.plasm-ph](https://arxiv.org/list/physics.plasm-ph/recent), [advanced search](https://arxiv.org/search/advanced).
 
 ## Highlights
 
