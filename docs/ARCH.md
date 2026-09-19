@@ -11,19 +11,25 @@ This document explains the structure of the DBE research-grade code base and how
   - **`controller.py`** – houses the `DBEController` class which orchestrates quantum subsystems and actuators based on the plasma state and stability metrics.
   - **`risk.py`** – defines the `RiskReport` dataclass and a `RiskAnalyzer` that computes risk scores and explanatory notes.
 
-- **`cli/`** – command‑line utilities
+- **`cli/`** – command-line utilities
   - **`run_batch.py`** – generates datasets by running multiple simulations under random conditions and writing the results to CSV.
-  - **`compare_baseline.py`** – (future work) will compare DBE‑controlled and baseline runs.
+  - **`compare_baseline.py`** – (future work) will compare DBE-controlled and baseline runs.
+  - **`research_observatory.py`** – interactive Research Observatory tab over `research/catalog.json`.
 
-- **`docs/`** – project documentation (including this file).
+- **`research/`** – source ledger
+  - **`catalog.json`** – tagged papers, pillars, ingest runs.
+  - **`ingest.py`** – arXiv daily ingest (`--lookback-days 365` on first runs).
+  - **`runs/`** – dated ingest payloads.
 
-- **`tests/`** – automated unit tests covering each module.
+- **`docs/`** – project documentation (including this file and `docs/research/OBSERVATORY.md`).
+
+- **`tests/`** – automated unit tests covering each module plus the research catalog.
 
 ## Data flow
 
-1. **Initialisation:** A `PlasmaState` is created with radial temperature, density and safety‑factor profiles. A `TransportSimulator` is initialised to evolve these profiles via a finite‑difference heat transport equation with ELM triggers.
+1. **Initialisation:** A `PlasmaState` is created with radial temperature, density and safety-factor profiles. A `TransportSimulator` is initialised to evolve these profiles via a finite-difference heat transport equation with ELM triggers.
 
-2. **Quantum subsystem setup:** A `MajoranaQubitRegister` is initialised with a configurable number of logical qubits. A `FractonMemory` instance stores past state snapshots or controller parameters. The `TimeCrystalClock` provides a global tick for synchronisation, and the `HolographicEncoder` compresses high‑dimensional arrays for efficient storage and processing.
+2. **Quantum subsystem setup:** A `MajoranaQubitRegister` is initialised with a configurable number of logical qubits. A `FractonMemory` instance stores past state snapshots or controller parameters. The `TimeCrystalClock` provides a global tick for synchronisation, and the `HolographicEncoder` compresses high-dimensional arrays for efficient storage and processing.
 
 3. **Control loop:** At each simulation step or instability event:
    - The `TransportSimulator` advances the plasma state and checks for edge gradients that might exceed the ELM threshold, triggering crashes when necessary.
@@ -33,13 +39,16 @@ This document explains the structure of the DBE research-grade code base and how
 
 4. **Outputs:** Metrics such as stability, risk, coil current, pellet firing and energy gain are logged. The batch runner writes these to CSV for further analysis or machine learning.
 
+5. **Research loop:** `research/ingest.py` pulls arXiv feeds, tags the ten program fields, and scores importance / confidence / popularity. Foundational pillars remain in `catalog.json` regardless of date. Suggested pillars are raised when a paper is load-bearing for DBE V1 or DBE-S (including the Q = 1000 accounting bar).
+
 ## Extending the architecture
 
 The code is modular by design:
 
-- New physics models (e.g., multi‑fluid or kinetic plasma descriptions, improved transport coefficients) can be added to `plasma.py` without changing the rest of the system.
+- New physics models (e.g., multi-fluid or kinetic plasma descriptions, improved transport coefficients) can be added to `plasma.py` without changing the rest of the system.
 - Additional actuators (neutral beams, electron cyclotron heating, divertor coils) can be introduced in `actuators.py` and hooked into the controller.
 - The decision logic in `controller.py` can be replaced by model predictive control, reinforcement learning or other optimisation techniques.
 - The `RiskAnalyzer` in `risk.py` can be expanded to include more sophisticated disruption prediction algorithms.
+- New observatory fields or scoring rules belong in `research/ingest.py` and `docs/research/OBSERVATORY.md`.
 
 This flexibility allows the DBE simulator to grow from a toy model into a platform for exploring advanced fusion control strategies.

@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.0] - 2026-09-19
+### Added
+- Research Observatory: tagged catalog of core papers across Anyons, TQC, Majorana, braid/knot theory, topology, fracton memory, time crystals, plasma control, holography, and fusion–quantum integration.
+- Each paper carries importance / confidence / popularity scores and a plain-language triple (core idea, why it matters, one limitation).
+- Foundational pillars are date-unrestricted; first ingest runs look back 1 year or more.
+- Suggested new pillars when a result is load-bearing (cyclic fusion universality, Floquet–Majorana codes, fracton holography, 2D non-Abelian qLDPC, topological dynamics hardware).
+- `research/ingest.py` daily arXiv ingest against the program feeds.
+- `cli/research_observatory.py` interactive catalog tab.
+- `docs/research/OBSERVATORY.md` scoring rules and the Q = 1000 honesty bar.
+- Unit tests for catalog completeness (`tests/test_research.py`).
+
 ## [0.2.0] - 2025-08-20
 ### Added
 - Created a modular package structure for the DBE research simulator with subpackages for plasma physics, actuators, quantum subsystems, controller logic and risk analysis.
