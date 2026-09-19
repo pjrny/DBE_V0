@@ -4,14 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## [0.3.0] - 2026-09-19
 ### Added
-- Research Observatory: tagged catalog of core papers across Anyons, TQC, Majorana, braid/knot theory, topology, fracton memory, time crystals, plasma control, holography, and fusion–quantum integration.
-- Each paper carries importance / confidence / popularity scores and a plain-language triple (core idea, why it matters, one limitation).
-- Foundational pillars are date-unrestricted; first ingest runs look back 1 year or more.
-- Suggested new pillars when a result is load-bearing (cyclic fusion universality, Floquet–Majorana codes, fracton holography, 2D non-Abelian qLDPC, topological dynamics hardware).
-- `research/ingest.py` daily arXiv ingest against the program feeds.
-- `cli/research_observatory.py` interactive catalog tab.
-- `docs/research/OBSERVATORY.md` scoring rules and the Q = 1000 honesty bar.
-- Unit tests for catalog completeness (`tests/test_research.py`).
+- Research Lab (`research/lab.html` + `research/catalog.json`) with tabs for All / Pillars / This week / Year lookback / Recent.
+- Per-paper tags, field segments, importance / confidence / popularity scores, plain-language core idea, why it matters, one limitation, and DBE link.
+- Seed catalog: Kitaev 1997, Nayak 2008, S3 Nature 2026 hardware gates, Lyons–Brown fault-tolerance, week’s coherent-error threshold and modular DQC stack, Majorana braid sims, semi-holographic time crystals, DBE-S Q=1000 and V0 architecture.
+- Suggested new pillars: Haah/X-cube fracton memory; Floquet time crystals.
+- `research/fetch_arxiv.py` daily/year lookback ingest from quant-ph, cond-mat.str-el, cond-mat.mes-hall, hep-th, physics.plasm-ph.
 
 ## [0.2.0] - 2025-08-20
 ### Added
@@ -38,3 +35,4 @@ All notable changes to this project will be documented in this file.
 - The transport model remains a simplified single-fluid treatment; no 2D MHD or kinetic effects are included.
 - Quantum subsystem implementations are illustrative and do not perform actual quantum computation.
 - Risk model thresholds and penalties are heuristic and should be calibrated with real data in the future.
+- Research-lab scores are editorial heuristics, not citation metrics.

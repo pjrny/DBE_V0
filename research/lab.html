@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DBE Research Lab — Papers</title>
+<style>
+  :root { --bg:#0b1020; --card:#151b2e; --ink:#e8eefc; --dim:#8ea0c4; --acc:#7aa2ff; --warn:#ffd37a; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:15px/1.45 ui-sans-serif, system-ui, sans-serif; background:var(--bg); color:var(--ink); }
+  header { padding:20px 24px 8px; }
+  h1 { margin:0 0 4px; font-size:22px; }
+  .sub { color:var(--dim); font-size:13px; }
+  nav { display:flex; gap:8px; flex-wrap:wrap; padding:8px 24px 16px; }
+  nav button, select, input { background:#1c243b; color:var(--ink); border:1px solid #2a3554; border-radius:8px; padding:7px 10px; }
+  nav button.active { background:var(--acc); color:#0b1020; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:12px; padding:0 24px 40px; }
+  article { background:var(--card); border:1px solid #2a3554; border-radius:12px; padding:14px 16px; }
+  article h3 { margin:0 0 6px; font-size:16px; }
+  .meta { color:var(--dim); font-size:12px; margin-bottom:8px; }
+  .bars span { display:inline-block; margin:2px 6px 2px 0; font-size:11px; color:var(--dim); }
+  .bar { display:inline-block; width:70px; height:6px; background:#2a3554; border-radius:4px; vertical-align:middle; }
+  .bar i { display:block; height:100%; background:var(--acc); border-radius:4px; }
+  .tag { display:inline-block; font-size:11px; padding:2px 6px; margin:0 4px 4px 0; border-radius:999px; background:#243056; color:#c9d6ff; }
+  .tag.foundational { background:#3a2a10; color:var(--warn); }
+  .lim { color:#ffb4b4; font-size:12px; margin-top:8px; }
+  a { color:var(--acc); }
+  #pillars { padding:0 24px 16px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>DBE Research Lab</h1>
+  <p class="sub">Anyons · TQC · Majorana · braid/knots · topology · fractons · time crystals · plasma control · holography · fusion–quantum. First runs look back ≥1 year. Foundational papers are pillars. Serve this folder (<code>python -m http.server</code>) so <code>catalog.json</code> loads.</p>
+</header>
+<nav>
+  <button class="active" data-seg="all">All</button>
+  <button data-seg="foundational">Pillars</button>
+  <button data-seg="week">This week</button>
+  <button data-seg="year">Year lookback</button>
+  <button data-seg="recent">Recent</button>
+  <select id="field"><option value="">All fields</option></select>
+  <input id="q" placeholder="search title, tag, arxiv…"/>
+  <select id="sort">
+    <option value="importance">Sort: importance</option>
+    <option value="popularity">Sort: popularity</option>
+    <option value="confidence">Sort: confidence</option>
+    <option value="year">Sort: year</option>
+  </select>
+</nav>
+<section id="pillars"></section>
+<div class="grid" id="grid">Loading catalog…</div>
+<script>
+let DATA = {papers:[], fields:[], pillars:[]};
+const fieldSel = document.getElementById('field');
+const grid = document.getElementById('grid');
+let segment = 'all';
+function bar(n){ return `<span class="bar"><i style="width:${n}%"></i></span>`; }
+function card(p){
+  const tags = (p.tags||[]).map(t => `<span class="tag ${t}">${t}</span>`).join('');
+  const fields = (p.fields||[]).map(t => `<span class="tag">${t}</span>`).join('');
+  const link = p.url ? `<a href="${p.url}" target="_blank" rel="noopener">${p.arxiv || 'link'}</a>` : (p.arxiv||'local');
+  return `<article>
+    <h3>${p.title}</h3>
+    <div class="meta">${p.authors||''} · ${p.year||''} · ${p.venue||''} · ${link}</div>
+    ${fields}${tags}
+    <p>${p.plain||''}</p>
+    <p><b>Why it matters.</b> ${p.why_matters||''}</p>
+    <p><b>DBE.</b> ${p.dbe_link||''}</p>
+    <p class="lim"><b>Limitation.</b> ${p.limitation||''}</p>
+    <div class="bars">
+      <span>imp ${p.importance} ${bar(p.importance)}</span>
+      <span>conf ${p.confidence} ${bar(p.confidence)}</span>
+      <span>pop ${p.popularity} ${bar(p.popularity)}</span>
+    </div>
+  </article>`;
+}
+function render(){
+  const f = fieldSel.value;
+  const q = document.getElementById('q').value.toLowerCase();
+  const key = document.getElementById('sort').value;
+  let papers = DATA.papers || [];
+  papers = papers.filter(p => segment==='all' || p.segment===segment || (segment==='foundational' && (p.tags||[]).includes('foundational')));
+  if (f) papers = papers.filter(p => (p.fields||[]).includes(f));
+  if (q) papers = papers.filter(p => JSON.stringify(p).toLowerCase().includes(q));
+  papers = papers.slice().sort((a,b)=>(b[key]||0)-(a[key]||0));
+  grid.innerHTML = papers.map(card).join('') || '<p class="sub">No papers match.</p>';
+}
+function setup(){
+  fieldSel.innerHTML = '<option value="">All fields</option>';
+  (DATA.fields||[]).forEach(f => {
+    const o = document.createElement('option'); o.value=f; o.textContent=f; fieldSel.appendChild(o);
+  });
+  document.getElementById('pillars').innerHTML = '<b>Pillars</b><ul>' +
+    (DATA.pillars||[]).map(p => `<li>${p.suggested?'<i>suggested</i> ':''}<b>${p.title}</b> — ${p.why}</li>`).join('') + '</ul>';
+  document.querySelectorAll('nav button[data-seg]').forEach(b => b.onclick = () => {
+    document.querySelectorAll('nav button[data-seg]').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active'); segment = b.dataset.seg; render();
+  });
+  fieldSel.onchange = render;
+  document.getElementById('q').oninput = render;
+  document.getElementById('sort').onchange = render;
+  render();
+}
+fetch('catalog.json').then(r => {
+  if (!r.ok) throw new Error('catalog missing');
+  return r.json();
+}).then(d => { DATA = d; setup(); }).catch(err => {
+  grid.innerHTML = '<p class="sub">Could not load catalog.json. From <code>research/</code> run <code>python -m http.server 8000</code> and open this page at localhost.</p>';
+  console.error(err);
+});
+</script>
+</body>
+</html>
