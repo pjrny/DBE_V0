@@ -1,8 +1,8 @@
 {
   "scheme": "MAJOR.MINOR.PATCH. Dates live in the changelog, not the version number.",
   "current": {
-    "DBE": "DBE-0.1.1",
-    "DBES": "DBES-0.1.1"
+    "DBE": "DBE-0.1.2",
+    "DBES": "DBES-0.1.2"
   },
   "lines": [
     {
@@ -185,6 +185,33 @@
         "S-L2": "HOLD C1 (bound tightened, C unchanged)"
       },
       "runId": "run-2026-09-20-daily"
+    },
+    {
+      "version": "DBE-0.1.2",
+      "date": "2026-09-20",
+      "kind": "PATCH",
+      "action": "INCLUDE",
+      "title": "DIII-D / MAST-U PCS / ASPT bibliography",
+      "summary": "INCLUDE Zimmermann DIII-D error-field ramp-up, Marshall MAST-U PCS integration, Shen ASPT on processors. C unchanged. hashimoto-2026 REJECT for E-HOL (denylist).",
+      "claimSnapshot": {
+        "E-RL": "KEEP C4 (no move)",
+        "E-QEC": "KEEP C4 (no move)",
+        "E-HOL": "CUT (no reversal)"
+      },
+      "runId": "run-2026-09-20-extra"
+    },
+    {
+      "version": "DBES-0.1.2",
+      "date": "2026-09-20",
+      "kind": "PATCH",
+      "action": "INCLUDE",
+      "title": "kobra Vlasov + NIF Q_sci into the ledger bibliography",
+      "summary": "INCLUDE kobra Vlasov code under S-L3 methods. NIF Q_sci=4.13 logged as baseline, not as Q_eng. Conservative. C unchanged.",
+      "claimSnapshot": {
+        "S-L3": "KEEP methods (no move)",
+        "S-Q": "CUT as output"
+      },
+      "runId": "run-2026-09-20-extra"
     }
   ]
 }

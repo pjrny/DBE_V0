@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.4.1] - 2026-09-20
+### Added
+- Follow-on harvest: DIII-D error-field ramp-up, kobra Vlasov, NIF Q_sci=4.13, ASPT on processors, MAST-U PCS integration notes.
+- DBE-0.1.2 / DBES-0.1.2 PATCH bibliography. No C moves. E-HOL denylist held.
+
 ## [0.4.0] - 2026-09-20
 ### Added
 - Confidence-framework freeze: `research/claims.json` (C/T/D/A), `research/versions.json`, `research/reviews.json`, `research/ledger.json`.

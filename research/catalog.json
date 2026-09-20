@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T09:16:00-05:00",
+  "generatedAt": "2026-09-20T09:45:00-05:00",
   "lookback": "1y+",
   "northStar": "Q=1000",
   "feeds": [
@@ -347,6 +347,23 @@
         "floquet-fracton-2026"
       ],
       "whySuggested": "Prettiest unification of two HOLD items. Protocol still forbids load-bearing."
+    },
+    {
+      "id": "spacetime-fracton-codes",
+      "name": "Spacetime-fracton Floquet codes",
+      "fields": [
+        "fracton",
+        "time-crystal",
+        "tqc"
+      ],
+      "statement": "Fractalizing spacetime yields Floquet codes whose excitations are immobile in space and time.",
+      "dbeGoal": "One dynamical object instead of a separate memory and clock \u2014 only if it attaches to Bus B without 3D hardware.",
+      "status": "suggested",
+      "evidence": [
+        "floquet-fracton-2026",
+        "soule-2026"
+      ],
+      "whySuggested": "Unifies two HOLD/CUT boxes. Queued; Auto-Gate forbids opening it automatically."
     }
   ],
   "papers": [
@@ -2794,9 +2811,451 @@
         "E-RL"
       ],
       "bindAction": "INCLUDE"
+    },
+    {
+      "id": "zimmermann-2026",
+      "title": "Assessing the effect of error field penetration during plasma current ramp-up in the DIII-D tokamak",
+      "authors": [
+        "C. F. B. Zimmermann",
+        "E. M. Bursch",
+        "C. Paz-Soldan",
+        "J. M. Hanson",
+        "N. Leuthold"
+      ],
+      "year": 2026,
+      "date": "2026-09-03",
+      "venue": "arXiv physics.plasm-ph",
+      "arxiv": "2609.04546",
+      "url": "https://arxiv.org/abs/2609.04546",
+      "fields": [
+        "plasma"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 80,
+      "confidence": 88,
+      "popularity": 52,
+      "coreIdea": "On DIII-D, n=1 error-field thresholds measured in flattop still apply during Ip ramp-up. Above 2\u20133 kA of 3D coil current, MHD modes get seeded.",
+      "whyItMatters": "C4 on the relevant machine. Coil-current numbers and ramp-up windows are the kind of actuator bound Bus A can attach to.",
+      "limitation": "Classical MHD/error-field study. No quantum hardware, and it does not by itself close a tearing-avoidance RL loop.",
+      "source": "arXiv physics.plasm-ph / DIII-D",
+      "tags": [
+        "daily-run",
+        "DIII-D",
+        "error field"
+      ],
+      "pillarId": "plasma-rl",
+      "claimIds": [
+        "E-RL"
+      ],
+      "runIds": [
+        "run-2026-09-20-daily"
+      ]
+    },
+    {
+      "id": "formicola-2026",
+      "title": "Discrete time crystals in disordered anisotropic Heisenberg chains",
+      "authors": [
+        "Francesco Formicola",
+        "Grazia Di Bello",
+        "Antonio De Candia",
+        "Giulio De Filippis",
+        "Carmine Antonio Perroni"
+      ],
+      "year": 2026,
+      "date": "2026-09-03",
+      "venue": "arXiv quant-ph",
+      "arxiv": "2609.04037",
+      "url": "https://arxiv.org/abs/2609.04037",
+      "fields": [
+        "time-crystal"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 62,
+      "confidence": 74,
+      "popularity": 48,
+      "coreIdea": "Matrix-product simulations find discrete time-crystalline order in disordered Heisenberg spin chains, including the isotropic point, under periodic drive.",
+      "whyItMatters": "Keeps the many-body physics of Floquet time crystals current. That is allowed as a study. It is not allowed as the system metronome.",
+      "limitation": "Numerics on 1D chains. Prethermal lifetime vs a control horizon is still the kill test, and it is not passed here.",
+      "source": "arXiv quant-ph",
+      "tags": [
+        "daily-run",
+        "DTC"
+      ],
+      "pillarId": "floquet-clock",
+      "claimIds": [
+        "E-TC"
+      ],
+      "runIds": [
+        "run-2026-09-20-daily"
+      ]
+    },
+    {
+      "id": "dong-mzm-2026",
+      "title": "Phase-Controlled Majorana Zero Modes in Altermagnetic Topological-Insulator Josephson Junctions",
+      "authors": [
+        "Hao Dong",
+        "Xun-Jiang Luo",
+        "Xiao-Hong Pan",
+        "Xin Liu"
+      ],
+      "year": 2026,
+      "date": "2026-09-10",
+      "venue": "arXiv cond-mat.mes-hall",
+      "arxiv": "2609.11633",
+      "url": "https://arxiv.org/abs/2609.11633",
+      "fields": [
+        "majorana"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 66,
+      "confidence": 68,
+      "popularity": 51,
+      "coreIdea": "Altermagnetic order in a topological-insulator Josephson junction lets a phase bias park and move Majorana modes via facet-dependent Andreev shifts.",
+      "whyItMatters": "Another proposed MZM knob. Logged under WATCH. Novelty of materials is Adoption, not Confidence.",
+      "limitation": "Proposal / model. No public logical qubit.",
+      "source": "arXiv cond-mat.mes-hall",
+      "tags": [
+        "daily-run",
+        "altermagnet"
+      ],
+      "pillarId": "majorana-braids",
+      "claimIds": [
+        "E-MZM"
+      ],
+      "runIds": [
+        "run-2026-09-20-daily"
+      ]
+    },
+    {
+      "id": "konewko-2026",
+      "title": "kobra: a new Vlasov code intended for plasma-wall modeling",
+      "authors": [
+        "Sebastian Konewko",
+        "Nathan Maestracci",
+        "Sven Van Loo"
+      ],
+      "year": 2026,
+      "date": "2026-09-10",
+      "venue": "arXiv physics.plasm-ph",
+      "arxiv": "2609.11563",
+      "url": "https://arxiv.org/abs/2609.11563",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 78,
+      "confidence": 82,
+      "popularity": 46,
+      "coreIdea": "A finite-volume Vlasov solver for sheath-scale plasma\u2013wall physics. Unlike PIC, it evolves the full distribution function and so does not undersample velocity space.",
+      "whyItMatters": "S-L3 says keep the solvers and do not skip hole-burning / SRS-SBS. A public Vlasov code is exactly the Bus C tool the ledger is allowed to use.",
+      "limitation": "Sheath / wall code, not a driven-Coulomb-barrier fusion-rate engine. Does not move Layer 2 off HOLD.",
+      "source": "arXiv physics.plasm-ph",
+      "tags": [
+        "daily-run",
+        "Vlasov",
+        "Bus C"
+      ],
+      "pillarId": "fusion-q1000",
+      "claimIds": [
+        "S-L3"
+      ],
+      "runIds": [
+        "run-2026-09-20-daily"
+      ]
+    },
+    {
+      "id": "antonenas-2026",
+      "title": "Hamiltonian Particle Dynamics in Fusion Plasmas: Orbital Tomography and Spectrum Analysis for Energy and Momentum Transport under Resonant Non-Axisymmetric Perturbations",
+      "authors": [
+        "Yiannis Antonenas"
+      ],
+      "year": 2026,
+      "date": "2026-09-07",
+      "venue": "arXiv physics.plasm-ph",
+      "arxiv": "2609.07759",
+      "url": "https://arxiv.org/abs/2609.07759",
+      "fields": [
+        "plasma"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 64,
+      "confidence": 80,
+      "popularity": 40,
+      "coreIdea": "A thesis-scale study of how resonant magnetic perturbations move particles of different energies, with a cheap orbital-tomography diagnostic for transport.",
+      "whyItMatters": "RMP coils are a DBE actuator. Knowing which velocity classes they empty is the classical cousin of spectral hole-burning.",
+      "limitation": "Thesis, not a plant Q. No Floquet nuclear tunneling.",
+      "source": "arXiv physics.plasm-ph",
+      "tags": [
+        "daily-run",
+        "RMP",
+        "transport"
+      ],
+      "pillarId": "plasma-rl",
+      "claimIds": [
+        "S-L3",
+        "E-RL"
+      ],
+      "runIds": [
+        "run-2026-09-20-daily"
+      ]
+    },
+    {
+      "id": "li-elmo-2026",
+      "title": "ELMO: An Uncertainty-Aware Simulation-to-Surrogate Workflow for Fast Pedestal Linear-Stability Prediction",
+      "authors": [
+        "Nami Li",
+        "X. Q. Xu",
+        "T. Osborne",
+        "E. Suchyta",
+        "Y. C. Fu"
+      ],
+      "year": 2026,
+      "date": "2026-08-28",
+      "venue": "arXiv physics.plasm-ph",
+      "arxiv": "2608.28763",
+      "url": "https://arxiv.org/abs/2608.28763",
+      "fields": [
+        "plasma"
+      ],
+      "role": "month",
+      "foundational": false,
+      "importance": 76,
+      "confidence": 80,
+      "popularity": 49,
+      "coreIdea": "BOUT++ pedestal stability is too slow for operating-space search. ELMO trains an uncertainty-aware surrogate so linear ELM/peeling-ballooning predictions come back fast enough to be useful.",
+      "whyItMatters": "Bus B\u2019s job is offline and near-online optimization against a classical baseline. A pedestal surrogate is a bake-off target, not a quantum claim.",
+      "limitation": "Linear MHD surrogate. Fail if a quantum path is slower or less accurate on the same model.",
+      "source": "arXiv physics.plasm-ph",
+      "tags": [
+        "daily-run",
+        "ELM",
+        "surrogate"
+      ],
+      "pillarId": "plasma-rl",
+      "claimIds": [
+        "E-RL",
+        "E-QEC"
+      ],
+      "runIds": [
+        "run-2026-09-20-daily"
+      ]
+    },
+    {
+      "id": "hashimoto-2026",
+      "title": "Deep learning emergent spacetime from fermionic spectral functions in holography",
+      "authors": [
+        "Koji Hashimoto",
+        "Hyun-Sik Jeong",
+        "Keun-Young Kim",
+        "Daichi Takeda",
+        "Kwan Yun"
+      ],
+      "year": 2026,
+      "date": "2026-09-16",
+      "venue": "arXiv hep-th",
+      "arxiv": "2609.18566",
+      "url": "https://arxiv.org/abs/2609.18566",
+      "fields": [
+        "holography"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 55,
+      "confidence": 82,
+      "popularity": 60,
+      "coreIdea": "A physics-informed neural ODE reconstructs the bulk metric of a charged AdS black hole from boundary fermionic spectral functions, with UV/horizon constraints baked into the net.",
+      "whyItMatters": "Interesting AdS/CFT inverse problem. It stays in the reading list. It does not sit on the bus.",
+      "limitation": "Holography as a reactor or processor subsystem is on the denylist (E-HOL CUT). One paper cannot un-cut it.",
+      "source": "arXiv hep-th",
+      "tags": [
+        "daily-run",
+        "denylist",
+        "AdS"
+      ],
+      "pillarId": "holographic-encode",
+      "claimIds": [
+        "E-HOL"
+      ],
+      "runIds": [
+        "run-2026-09-20-daily"
+      ]
+    },
+    {
+      "id": "shen-aspt-2026",
+      "title": "Realization of decoherence-induced averaged symmetry-protected topological phases on quantum processors",
+      "authors": [
+        "Ruizhe Shen",
+        "Xue-Jia Yu",
+        "Ching Hua Lee"
+      ],
+      "year": 2026,
+      "date": "2026-09-07",
+      "venue": "arXiv quant-ph",
+      "arxiv": "2609.07831",
+      "url": "https://arxiv.org/abs/2609.07831",
+      "fields": [
+        "tqc",
+        "topology"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 73,
+      "confidence": 80,
+      "popularity": 57,
+      "coreIdea": "Open-system decoherence can create an averaged symmetry-protected topological phase that only exists after you average over trajectories. The team realised it on programmable processors.",
+      "whyItMatters": "Noise as a resource for topology, not only an error. Relevant to how a braid core looks once it is coupled to a hot plant. Library INCLUDE for E-QEC, C capped at 3 (wrong platform for a reactor).",
+      "limitation": "Processor analog. G5: does not treat a QPU demo as a tokamak result.",
+      "source": "arXiv quant-ph",
+      "tags": [
+        "daily-run",
+        "open system",
+        "SPT"
+      ],
+      "pillarId": "anyon-tqc",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "runIds": [
+        "run-2026-09-20-daily"
+      ]
+    },
+    {
+      "id": "tesfaye-2026",
+      "title": "Few-body bound states in the anyon-Hubbard model",
+      "authors": [
+        "Isaac Tesfaye",
+        "Christina Mascherbauer",
+        "Joyce Kwan",
+        "Perrin Segura",
+        "Yanfei Li"
+      ],
+      "year": 2026,
+      "date": "2026-09-08",
+      "venue": "arXiv cond-mat.quant-gas",
+      "arxiv": "2609.09125",
+      "url": "https://arxiv.org/abs/2609.09125",
+      "fields": [
+        "anyons"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 52,
+      "confidence": 78,
+      "popularity": 44,
+      "coreIdea": "Fractional exchange statistics in the 1D anyon-Hubbard model bind few-body clusters that ordinary bosons or fermions would not form the same way.",
+      "whyItMatters": "Anyon statistics as a dynamical resource in cold atoms. Off the engine path but on-field for the library.",
+      "limitation": "1D Hubbard physics, not 2D topological order.",
+      "source": "arXiv cond-mat",
+      "tags": [
+        "daily-run",
+        "Hubbard"
+      ],
+      "claimIds": [],
+      "runIds": [
+        "run-2026-09-20-daily"
+      ]
+    },
+    {
+      "id": "ezawa-2026",
+      "title": "Topological superconductors and Majorana fermions based on X-wave magnets with X = p, d, f, g, i",
+      "authors": [
+        "Motohiko Ezawa"
+      ],
+      "year": 2026,
+      "date": "2026-09-14",
+      "venue": "arXiv cond-mat.mes-hall",
+      "arxiv": "2609.16084",
+      "url": "https://arxiv.org/abs/2609.16084",
+      "fields": [
+        "majorana"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 58,
+      "confidence": 70,
+      "popularity": 53,
+      "coreIdea": "Altermagnets and odd-parity magnets coupled to s-wave superconductors produce a zoo of topological superconducting phases, some hosting Majorana modes, depending on magnetic strength and filling.",
+      "whyItMatters": "Materials catalog for the MZM WATCH file. Adoption of altermagnet papers does not raise Confidence.",
+      "limitation": "Phase-diagram theory. No logical qubit.",
+      "source": "arXiv cond-mat.mes-hall",
+      "tags": [
+        "daily-run",
+        "altermagnet"
+      ],
+      "pillarId": "majorana-braids",
+      "claimIds": [
+        "E-MZM"
+      ],
+      "runIds": [
+        "run-2026-09-20-daily"
+      ]
+    },
+    {
+      "id": "nif-qsci-2025",
+      "title": "NIF scientific gain Q_sci = 4.13 (8.6 MJ out / 2.08 MJ on target)",
+      "authors": [
+        "Lawrence Livermore National Laboratory, National Ignition Facility"
+      ],
+      "year": 2025,
+      "date": "2025-04-01",
+      "venue": "NIF shot record / LLNL",
+      "url": "https://lasers.llnl.gov/",
+      "fields": [
+        "fusion-quantum",
+        "plasma"
+      ],
+      "role": "lookback",
+      "foundational": true,
+      "importance": 95,
+      "confidence": 94,
+      "popularity": 90,
+      "coreIdea": "The only public platform with scientific gain above one reached Q_sci = 4.13 in April 2025. That is fusion energy out over energy on target, not plant electricity.",
+      "whyItMatters": "Ground truth that constrains the moonshot. Q = 1000 is not on any public machine roadmap. The baseline got real; the slogan did not get easier.",
+      "limitation": "Q_sci is not Q_eng. Drive, pumping, and conversion are still on the plant side of the ledger.",
+      "source": "LLNL / NIF",
+      "tags": [
+        "foundational",
+        "ledger",
+        "Q_sci"
+      ],
+      "pillarId": "fusion-q1000",
+      "claimIds": [
+        "S-Q"
+      ],
+      "runIds": [
+        "run-2026-09-20-daily"
+      ]
     }
   ],
   "runs": [
+    {
+      "id": "run-2026-09-20-extra",
+      "startedAt": "2026-09-20T09:45:00-05:00",
+      "windowStart": "2025-09-20",
+      "windowEnd": "2026-09-20",
+      "kind": "daily",
+      "paperIds": [
+        "zimmermann-2026",
+        "formicola-2026",
+        "dong-mzm-2026",
+        "konewko-2026",
+        "antonenas-2026",
+        "li-elmo-2026",
+        "hashimoto-2026",
+        "shen-aspt-2026",
+        "tesfaye-2026",
+        "ezawa-2026",
+        "nif-qsci-2025",
+        "seo-2024"
+      ],
+      "notes": "Follow-on harvest: DIII-D error-field ramp-up, MAST-U PCS integration, kobra Vlasov, NIF Q_sci=4.13, ASPT on processors. INCLUDE-only; C unchanged. hashimoto-2026 denylist for E-HOL."
+    },
     {
       "id": "run-2026-09-20-daily",
       "startedAt": "2026-09-20T09:16:00-05:00",

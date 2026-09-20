@@ -2,6 +2,284 @@
   "asOf": "2026-09-20",
   "cards": [
     {
+      "id": "2026-09-20/zimmermann-2026",
+      "paperId": "zimmermann-2026",
+      "date": "2026-09-20",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Classical MHD/error-field study. No quantum hardware, and it does not by itself close a tearing-avoidance RL loop.",
+      "score": "C unchanged",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.1.2",
+      "disputer": "See bound claim kill threshold.",
+      "ledger": "none"
+    },
+    {
+      "id": "2026-09-20/formicola-2026",
+      "paperId": "formicola-2026",
+      "date": "2026-09-20",
+      "bind": [
+        "E-TC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Numerics on 1D chains. Prethermal lifetime vs a control horizon is still the kill test, and it is not passed here.",
+      "score": "C unchanged",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": "none",
+      "disputer": "See bound claim kill threshold.",
+      "ledger": "none"
+    },
+    {
+      "id": "2026-09-20/dong-mzm-2026",
+      "paperId": "dong-mzm-2026",
+      "date": "2026-09-20",
+      "bind": [
+        "E-MZM"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Proposal / model. No public logical qubit.",
+      "score": "C unchanged",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": "none",
+      "disputer": "See bound claim kill threshold.",
+      "ledger": "none"
+    },
+    {
+      "id": "2026-09-20/konewko-2026",
+      "paperId": "konewko-2026",
+      "date": "2026-09-20",
+      "bind": [
+        "S-L3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Sheath / wall code, not a driven-Coulomb-barrier fusion-rate engine. Does not move Layer 2 off HOLD.",
+      "score": "C unchanged",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.1.2",
+      "disputer": "See bound claim kill threshold.",
+      "ledger": "none"
+    },
+    {
+      "id": "2026-09-20/antonenas-2026",
+      "paperId": "antonenas-2026",
+      "date": "2026-09-20",
+      "bind": [
+        "S-L3",
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Thesis, not a plant Q. No Floquet nuclear tunneling.",
+      "score": "C unchanged",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.1.2",
+      "disputer": "See bound claim kill threshold.",
+      "ledger": "none"
+    },
+    {
+      "id": "2026-09-20/li-elmo-2026",
+      "paperId": "li-elmo-2026",
+      "date": "2026-09-20",
+      "bind": [
+        "E-RL",
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Linear MHD surrogate. Fail if a quantum path is slower or less accurate on the same model.",
+      "score": "C unchanged",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.1.2",
+      "disputer": "See bound claim kill threshold.",
+      "ledger": "none"
+    },
+    {
+      "id": "2026-09-20/hashimoto-2026",
+      "paperId": "hashimoto-2026",
+      "date": "2026-09-20",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "fail"
+      },
+      "gateNote": "Holography as a reactor or processor subsystem is on the denylist (E-HOL CUT). One paper cannot un-cut it.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "REJECT",
+      "version": "none",
+      "disputer": "See bound claim kill threshold.",
+      "ledger": "none"
+    },
+    {
+      "id": "2026-09-20/shen-aspt-2026",
+      "paperId": "shen-aspt-2026",
+      "date": "2026-09-20",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Processor analog. G5: does not treat a QPU demo as a tokamak result.",
+      "score": "C unchanged",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.1.2",
+      "disputer": "See bound claim kill threshold.",
+      "ledger": "none"
+    },
+    {
+      "id": "2026-09-20/tesfaye-2026",
+      "paperId": "tesfaye-2026",
+      "date": "2026-09-20",
+      "bind": [
+        "REJECT"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "1D Hubbard physics, not 2D topological order.",
+      "score": "C unchanged",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.1.2",
+      "disputer": "See bound claim kill threshold.",
+      "ledger": "none"
+    },
+    {
+      "id": "2026-09-20/ezawa-2026",
+      "paperId": "ezawa-2026",
+      "date": "2026-09-20",
+      "bind": [
+        "E-MZM"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Phase-diagram theory. No logical qubit.",
+      "score": "C unchanged",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": "none",
+      "disputer": "See bound claim kill threshold.",
+      "ledger": "none"
+    },
+    {
+      "id": "2026-09-20/nif-qsci-2025",
+      "paperId": "nif-qsci-2025",
+      "date": "2026-09-20",
+      "bind": [
+        "S-Q"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Q_sci is not Q_eng. Drive, pumping, and conversion are still on the plant side of the ledger.",
+      "score": "C unchanged",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.1.2",
+      "disputer": "See bound claim kill threshold.",
+      "ledger": "none"
+    },
+    {
+      "id": "2026-09-20/seo-2024",
+      "paperId": "seo-2024",
+      "date": "2026-09-20",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Avoiding a tearing mode is not Q = 1000 and is not a quantum processor in the plasma loop.",
+      "score": "C unchanged",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.1.2",
+      "disputer": "See bound claim kill threshold.",
+      "ledger": "none"
+    },
+    {
       "id": "rev-2026-09-20-tamiya",
       "date": "2026-09-20",
       "paperId": "tamiya-2026",
