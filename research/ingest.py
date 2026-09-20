@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# Harvest 0-100 scores from this script are ingest metadata.
+# They are NOT C, T, D, or A. Physics confidence lives in research/claims.json.
+# See research/score.py and the Version Control Protocol.
+
 """Daily arXiv ingest for the DBE Research Observatory.
 
 Queries the program feeds and writes a dated JSON run under research/runs/.
@@ -148,8 +152,11 @@ def main() -> int:
         "papers": papers,
         "notes": (
             "Foundational pillars stay in catalog.json (any date). "
-            "This run only captures the sliding lookback window."
+            "This run only captures the sliding lookback window. "
+            "Harvest 0–100 scores are ingest metadata — not C/T/D/A. "
+            "Do not merge this file into the frozen claim set."
         ),
+        "protocol": "Ingest is not a version. Bind and score via research/score.py.",
     }
     dest = args.out_dir / f"{stamp}.json"
     dest.write_text(json.dumps(payload, indent=2), encoding="utf-8")

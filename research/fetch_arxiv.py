@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Daily / lookback arXiv ingest for the DBE research lab.
 
-Pulls recent (or year-lookback) records from the DBE field feeds,
-tags them, scores importance/confidence/popularity heuristics,
-and merges into research/catalog.json.
+Heuristic 0–100 importance / confidence / popularity scores written here are
+harvest metadata. They are NOT C, T, D, or A and must not enter claims.json.
+Physics confidence lives on a named claim ID (see score.py and the Version
+Control Protocol). Ingest is not a version.
 
 Usage:
   python research/fetch_arxiv.py              # last 7 days
@@ -25,35 +26,40 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 CATALOG = ROOT / "catalog.json"
 
+HARVEST_NOTE = (
+    "Heuristic importance/confidence/popularity are harvest metadata. "
+    "They do not equal C/T/D/A and cannot raise C."
+)
+
 QUERIES = {
-    "Anyons": 'all:anyon OR all:"quantum double" OR all:"non-Abelian"',
-    "TQC": 'all:"topological quantum computation" OR all:"topological quantum computing"',
-    "Majorana": 'all:"Majorana zero mode" OR all:"Majorana braiding"',
-    "Braid & Knot Theory": "all:braiding AND (all:anyon OR all:Majorana OR all:knot)",
-    "Topology": 'all:"topological order" OR all:"toric code"',
-    "Fracton Memory": 'all:fracton OR all:"Haah code" OR all:"X-cube"',
-    "Time Crystals": 'all:"time crystal" OR all:Floquet',
-    "Plasma Control": "all:tokamak AND (all:control OR all:ELM OR all:RMP)",
-    "Holography": "all:holographic AND (all:encoding OR all:AdS OR all:plasma)",
-    "Fusion–Quantum Integration": "all:fusion AND (all:quantum OR all:qubit)",
+    "anyons": 'all:anyon OR all:"quantum double" OR all:"non-Abelian"',
+    "tqc": 'all:"topological quantum computation" OR all:"topological quantum computing"',
+    "majorana": 'all:"Majorana zero mode" OR all:"Majorana braiding"',
+    "braid-knot": "all:braiding AND (all:anyon OR all:Majorana OR all:knot)",
+    "topology": 'all:"topological order" OR all:"toric code"',
+    "fracton": 'all:fracton OR all:"Haah code" OR all:"X-cube"',
+    "time-crystal": 'all:"time crystal" OR all:Floquet',
+    "plasma": "all:tokamak AND (all:control OR all:ELM OR all:RMP)",
+    "holography": "all:holographic AND (all:encoding OR all:AdS OR all:plasma)",
+    "fusion-quantum": "all:fusion AND (all:quantum OR all:qubit)",
 }
 
 KEYWORD_FIELDS = [
-    ("anyon", "Anyons"),
-    ("quantum double", "Anyons"),
-    ("topological quantum", "TQC"),
-    ("majorana", "Majorana"),
-    ("braid", "Braid & Knot Theory"),
-    ("knot", "Braid & Knot Theory"),
-    ("fracton", "Fracton Memory"),
-    ("haah", "Fracton Memory"),
-    ("time crystal", "Time Crystals"),
-    ("floquet", "Time Crystals"),
-    ("tokamak", "Plasma Control"),
-    ("plasma", "Plasma Control"),
-    ("holograph", "Holography"),
-    ("ads/cft", "Holography"),
-    ("fusion", "Fusion–Quantum Integration"),
+    ("anyon", "anyons"),
+    ("quantum double", "anyons"),
+    ("topological quantum", "tqc"),
+    ("majorana", "majorana"),
+    ("braid", "braid-knot"),
+    ("knot", "braid-knot"),
+    ("fracton", "fracton"),
+    ("haah", "fracton"),
+    ("time crystal", "time-crystal"),
+    ("floquet", "time-crystal"),
+    ("tokamak", "plasma"),
+    ("plasma", "plasma"),
+    ("holograph", "holography"),
+    ("ads/cft", "holography"),
+    ("fusion", "fusion-quantum"),
 ]
 
 
@@ -91,7 +97,7 @@ def fetch_query(query: str, max_results: int, start: int = 0) -> list[dict]:
             {
                 "arxiv": arxiv_id,
                 "title": title,
-                "authors": ", ".join(authors[:8]),
+                "authors": authors[:8],
                 "published": published,
                 "year": int(published[:4]) if published else None,
                 "url": f"https://arxiv.org/abs/{arxiv_id}",
@@ -107,17 +113,18 @@ def tag_fields(title: str, summary: str) -> list[str]:
     for key, field in KEYWORD_FIELDS:
         if key in blob and field not in fields:
             fields.append(field)
-    return fields or ["Topology"]
+    return fields or ["topology"]
 
 
 def score(paper: dict, field_hint: str) -> tuple[int, int, int]:
+    """Harvest 0–100 gauges. Not C/T/D/A. Cannot raise a frozen claim."""
     blob = f"{paper['title']} {paper.get('summary','')}".lower()
     importance = 50
     if any(w in blob for w in ("universal", "threshold", "fault-tolerant", "braiding")):
         importance += 18
     if any(w in blob for w in ("experiment", "processor", "hardware", "tokamak")):
         importance += 12
-    if field_hint in ("Anyons", "TQC", "Majorana", "Fusion–Quantum Integration"):
+    if field_hint in ("anyons", "tqc", "majorana", "fusion-quantum"):
         importance += 8
     importance = min(95, importance)
     confidence = 70 if "proof" in blob or "theorem" in blob else 62
@@ -131,22 +138,22 @@ def explain(paper: dict) -> tuple[str, str, str]:
     s = paper.get("summary") or ""
     first = s.split(". ")[0][:280]
     plain = first + ("." if not first.endswith(".") else "")
-    why = "Touches a DBE pillar (anyons / TQC / Majorana / plasma / holography / clocks)."
-    lim = "arXiv preprint — treat claims as unverified until journal or independent replication."
+    why = "Touches a DBE pillar (anyons / TQC / Majorana / plasma / holography / clocks). Score against a named claim before it can move C."
+    lim = "arXiv preprint — harvest gauges only. Not a C/T/D/A verdict until bound and gated."
     return plain, why, lim
 
 
 def load_catalog() -> dict:
     if CATALOG.exists():
         return json.loads(CATALOG.read_text())
-    return {"papers": [], "pillars": [], "fields": list(QUERIES)}
+    return {"papers": [], "pillars": [], "fields": [], "protocol": {"note": HARVEST_NOTE}}
 
 
 def merge(cat: dict, incoming: list[dict]) -> int:
     existing = {p.get("arxiv") or p.get("id") for p in cat["papers"]}
     added = 0
     for p in incoming:
-        key = p.get("arxiv")
+        key = p.get("arxiv") or p.get("id")
         if not key or key in existing:
             continue
         cat["papers"].append(p)
@@ -156,7 +163,7 @@ def merge(cat: dict, incoming: list[dict]) -> int:
 
 
 def main():
-    ap = argparse.ArgumentParser()
+    ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--days", type=int, default=7)
     ap.add_argument("--max", type=int, default=15)
     args = ap.parse_args()
@@ -188,26 +195,33 @@ def main():
                     "title": row["title"],
                     "authors": row["authors"],
                     "year": row["year"],
+                    "date": row["published"],
                     "venue": "arXiv",
                     "url": row["url"],
                     "fields": fields,
-                    "tags": ["daily-run", "arxiv"],
-                    "segment": "week" if args.days <= 10 else "year",
+                    "role": "week" if args.days <= 10 else "lookback",
+                    "foundational": False,
+                    "tags": ["daily-run", "arxiv", "harvest"],
                     "importance": imp,
                     "confidence": conf,
                     "popularity": pop,
-                    "dbe_link": f"Auto-tagged under {field}.",
-                    "plain": plain,
-                    "why_matters": why,
+                    "coreIdea": plain,
+                    "whyItMatters": why,
                     "limitation": lim,
-                    "published": row["published"],
+                    "source": "arXiv API",
+                    "claimIds": [],
+                    "bindAction": "HOLD",
                 }
             )
-        print(f"[ok] {field}: scanned {len(rows)}")
+        print(f"[ok] {field}: scanned {len(rows)} (harvest only; C unchanged)")
     added = merge(cat, harvested)
-    cat["generated_at"] = datetime.now(timezone.utc).isoformat()
-    CATALOG.write_text(json.dumps(cat, indent=2))
+    cat["generatedAt"] = datetime.now(timezone.utc).isoformat()
+    proto = cat.get("protocol") or {}
+    proto["note"] = HARVEST_NOTE
+    cat["protocol"] = proto
+    CATALOG.write_text(json.dumps(cat, indent=2) + "\n")
     print(f"merged {added} new papers → {CATALOG}")
+    print("NOTE harvest gauges are not C/T/D/A and cannot raise a frozen claim.")
 
 
 if __name__ == "__main__":
