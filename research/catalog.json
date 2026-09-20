@@ -3231,6 +3231,46 @@
       "runIds": [
         "run-2026-09-20-daily"
       ]
+    },
+    {
+      "id": "marshall-2026",
+      "title": "Real-time virtual circuits for plasma shape control via neural network emulators: integration and testing in the MAST-U PCS",
+      "authors": [
+        "Matthew J. Marshall",
+        "Edward Jones",
+        "Graham J. McArdle",
+        "Alasdair Ross",
+        "Kamran Pentland"
+      ],
+      "year": 2026,
+      "date": "2026-08-26",
+      "venue": "arXiv physics.plasm-ph",
+      "arxiv": "2608.26216",
+      "url": "https://arxiv.org/abs/2608.26216",
+      "fields": [
+        "plasma"
+      ],
+      "role": "month",
+      "foundational": false,
+      "importance": 82,
+      "confidence": 84,
+      "popularity": 50,
+      "coreIdea": "The companion engineering paper: how the neural virtual-circuit controller was wired into MAST Upgrade\u2019s actual plasma control system and tested before the shot.",
+      "whyItMatters": "Interface contracts (in/out/latency/fail-safe) are what make a module a module. This is the PCS-integration evidence Bus A needs.",
+      "limitation": "Integration and testing write-up, not a Q-gain result.",
+      "source": "arXiv physics.plasm-ph",
+      "tags": [
+        "daily-run",
+        "PCS",
+        "interface"
+      ],
+      "pillarId": "plasma-rl",
+      "claimIds": [
+        "E-RL"
+      ],
+      "runIds": [
+        "run-2026-09-20-daily"
+      ]
     }
   ],
   "runs": [

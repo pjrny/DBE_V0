@@ -8,3 +8,5 @@ Never rewrite history. A reversed CUT is a new MAJOR line.
 2026-09-20  DBES-0.1.1  PATCH  INCLUDE  PRC 109, PRC 110, dynamically assisted fusion → S-L2 bibliography (C unchanged)
 2026-09-20  QUEUE  NEW PILLAR  spacetime-fractons (Floquet-immobile excitations) — needs interface contract
 2026-09-20  REJECT  holographic-ions-2026  → E-HOL denylist
+2026-09-20  DBE-0.1.2  PATCH  INCLUDE  DIII-D Zimmermann / kobra / NIF Q_sci / ASPT / marshall MAST-U PCS → E-RL, S-L3 bibliography
+2026-09-20  library  Daily score tab  interactive INCLUDE/WEAKEN workshop on the working freeze (C never moves from harvest gauges)
