@@ -11,6 +11,7 @@
   :root {
     --bg:#0c0d10; --surface:#16171c; --elevated:#1c1e24; --ink:#ebe6dc;
     --muted:#9b968c; --subtle:#6f6b64; --acc:#8aa4b0; --warn:#c4a574;
+    --keep:#8fad9a; --cut:#c98980;
     --border:color-mix(in oklab, var(--ink) 12%, transparent);
     --radius:12px;
   }
@@ -18,7 +19,8 @@
   html, body { margin:0; background:var(--bg); color:var(--ink); }
   body { font:16px/1.55 "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; }
   header { max-width:72rem; margin:0 auto; padding:1.5rem 1.25rem 1.25rem; border-bottom:1px solid var(--border); }
-  h1 { font-family:"Fraunces", Georgia, serif; font-weight:500; font-size:clamp(2rem,4vw,3rem); letter-spacing:-0.03em; margin:0.35rem 0 0; }
+  h1,h2,h3 { font-family:"Fraunces", Georgia, serif; font-weight:500; letter-spacing:-0.03em; }
+  h1 { font-size:clamp(2rem,4vw,3rem); margin:0.35rem 0 0; }
   .kicker { text-transform:uppercase; letter-spacing:0.22em; font-size:0.75rem; color:var(--acc); }
   .lede { max-width:40rem; color:var(--muted); margin:0.75rem 0 0; }
   .stats { display:grid; grid-template-columns:repeat(2,1fr); gap:0.75rem; margin-top:1.25rem; }
@@ -28,7 +30,7 @@
   .stat dd { margin:0.25rem 0 0; font-family:"IBM Plex Mono", ui-monospace, monospace; font-size:1.25rem; }
   .legend-row { display:grid; gap:0.75rem; margin-top:0.9rem; }
   @media (min-width:640px) { .legend-row { grid-template-columns:repeat(3,1fr); } }
-  .legend h3 { margin:0; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.16em; color:var(--subtle); font-weight:500; }
+  .legend h3 { margin:0; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.16em; color:var(--subtle); font-weight:500; font-family:inherit; }
   .legend p { margin:0.4rem 0 0; color:var(--muted); font-size:0.9rem; }
   nav.tabs { display:flex; gap:0.25rem; overflow-x:auto; background:var(--surface); padding:0.25rem; border-radius:var(--radius); }
   nav.tabs button, .chip, select, input, .ghost {
@@ -37,9 +39,7 @@
   nav.tabs button.active { background:var(--elevated); color:var(--ink); }
   .wrap { max-width:72rem; margin:0 auto; padding:1.25rem; }
   .tools { display:flex; flex-wrap:wrap; gap:0.75rem; margin:1.1rem 0; }
-  input, select {
-    border:1px solid var(--border); background:var(--surface); color:var(--ink); border-radius:var(--radius); padding:0 0.85rem;
-  }
+  input, select { border:1px solid var(--border); background:var(--surface); color:var(--ink); border-radius:var(--radius); padding:0 0.85rem; }
   input { flex:1; min-width:12rem; }
   .chips { display:flex; flex-wrap:wrap; gap:0.5rem; }
   .chip { border:1px solid var(--border); border-radius:999px; padding:0 0.85rem; font-size:0.9rem; }
@@ -49,11 +49,12 @@
   .list { margin-top:1.5rem; border-top:1px solid var(--border); }
   .row { width:100%; text-align:left; display:flex; flex-direction:column; gap:0.85rem; padding:1.15rem 0; border-bottom:1px solid var(--border); background:transparent; color:inherit; cursor:pointer; }
   @media (min-width:800px) { .row { flex-direction:row; justify-content:space-between; } }
-  .row h3 { font-family:"Fraunces", Georgia, serif; font-weight:500; font-size:1.35rem; letter-spacing:-0.02em; margin:0.4rem 0 0.2rem; }
+  .row h3 { font-size:1.35rem; margin:0.4rem 0 0.2rem; }
   .meta { color:var(--muted); font-size:0.9rem; }
-  .idea { margin:0.55rem 0 0; }
   .tag { display:inline-flex; align-items:center; border:1px solid var(--border); border-radius:999px; padding:0.15rem 0.6rem; font-size:0.75rem; color:var(--muted); margin:0 0.3rem 0.3rem 0; }
   .tag.acc { color:var(--acc); border-color:color-mix(in oklab, var(--acc) 35%, transparent); background:color-mix(in oklab, var(--acc) 10%, transparent); }
+  .tag.keep { color:var(--keep); border-color:color-mix(in oklab, var(--keep) 35%, transparent); }
+  .tag.cut { color:var(--cut); border-color:color-mix(in oklab, var(--cut) 35%, transparent); }
   .tag.warn { color:var(--warn); border-color:color-mix(in oklab, var(--warn) 35%, transparent); }
   .meters { display:grid; grid-template-columns:repeat(3,1fr); gap:0.75rem; min-width:13rem; }
   .meters .lbl { display:flex; justify-content:space-between; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.12em; color:var(--subtle); }
@@ -61,35 +62,43 @@
   .bar i { display:block; height:100%; background:var(--acc); }
   .grid { display:grid; gap:0.85rem; margin-top:1.25rem; }
   @media (min-width:800px) { .grid { grid-template-columns:1fr 1fr; } }
-  article.card h3 { font-family:"Fraunces", Georgia, serif; font-weight:500; margin:0; }
   .overlay { position:fixed; inset:0; background:color-mix(in oklab, var(--bg) 70%, transparent); display:flex; align-items:flex-end; justify-content:center; z-index:20; }
   @media (min-width:640px) { .overlay { align-items:center; padding:1.5rem; } }
   .panel { position:relative; width:min(42rem,100%); max-height:92dvh; overflow:auto; background:var(--elevated); border:1px solid var(--border); border-radius:28px 28px 0 0; padding:1.25rem; }
   @media (min-width:640px) { .panel { border-radius:28px; padding:2rem; } }
-  .panel h2 { font-family:"Fraunces", Georgia, serif; font-weight:500; letter-spacing:-0.02em; margin:0.4rem 0 0; }
+  .panel h2 { margin:0.4rem 0 0; }
   a { color:var(--acc); }
   .actions { display:flex; gap:0.5rem; flex-wrap:wrap; margin-top:1.25rem; }
   .actions a, .ghost { display:inline-flex; align-items:center; min-height:44px; padding:0 1rem; border-radius:8px; text-decoration:none; }
   .actions a { background:var(--acc); color:var(--bg); }
   .empty { color:var(--muted); margin-top:2rem; }
+  .axes { display:grid; grid-template-columns:repeat(4,1fr); gap:0.5rem; margin:0.75rem 0; font-family:"IBM Plex Mono", monospace; font-size:0.9rem; }
+  .axes div { background:var(--bg); border-radius:8px; padding:0.5rem 0.7rem; }
+  .tiny { font-size:0.7rem; text-transform:uppercase; letter-spacing:0.14em; color:var(--subtle); }
+  .freeze-bar { display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; margin-top:1rem; font-size:0.9rem; color:var(--muted); }
+  .freeze-bar code { font-family:"IBM Plex Mono", monospace; color:var(--acc); }
+  .toast { position:fixed; bottom:1rem; left:50%; transform:translateX(-50%); background:var(--elevated); border:1px solid var(--border); padding:0.5rem 1rem; border-radius:999px; font-family:"IBM Plex Mono", monospace; font-size:0.85rem; color:var(--acc); z-index:40; }
+  button.apply { border:1px solid color-mix(in oklab, var(--acc) 40%, transparent); color:var(--acc); }
+  button.apply[disabled] { opacity:0.45; cursor:not-allowed; }
 </style>
 </head>
 <body>
 <header>
   <p class="kicker">DBE source ledger</p>
   <h1>Observatory</h1>
-  <p class="lede">Catalog, tag, and rank papers that lift Anyons, TQC, Majorana, braids, topology, fracton memory, time crystals, plasma control, holography, and fusion–quantum integration. First runs look back a year; pillars can be any age. North star: Q = 1000.</p>
+  <p class="lede">Three layers: library papers, C/T/D/A claims, version log. Harvest gauges (0–100) never move C. Q = 1000 is a ledger test, not an output.</p>
   <dl class="stats" id="stats"></dl>
   <div class="legend-row">
-    <div class="legend"><h3>Importance</h3><p>How much this lifts a DBE pillar toward Q = 1000.</p></div>
-    <div class="legend"><h3>Confidence</h3><p>Peer review, experiment vs theory, known disputes. Program manuscripts sit lower on purpose.</p></div>
-    <div class="legend"><h3>Popularity</h3><p>Venue prestige, citations, recency-weighted attention.</p></div>
+    <div class="legend"><h3>Library</h3><p>Importance, confidence, popularity are harvest metadata.</p></div>
+    <div class="legend"><h3>Claims</h3><p>C/T/D/A are independent. Coupling starts at C1.</p></div>
+    <div class="legend"><h3>Versions</h3><p>DBE and DBE-S version separately. INCLUDE is a PATCH. APPLY is a local working freeze.</p></div>
   </div>
+  <div class="freeze-bar" id="freezeBar"></div>
 </header>
 <div class="wrap">
   <nav class="tabs" id="tabs"></nav>
-  <div class="tools">
-    <input id="q" placeholder="Search title, author, arXiv, idea"/>
+  <div class="tools" id="tools">
+    <input id="q" placeholder="Search title, author, arXiv, claim ID"/>
     <select id="sort">
       <option value="importance">Sort: importance</option>
       <option value="confidence">Sort: confidence</option>
@@ -102,30 +111,119 @@
   <div id="main">Loading catalog…</div>
 </div>
 <script>
-const NOW = new Date("2026-09-19T17:00:00-05:00");
+const NOW = new Date("2026-09-20T09:16:00-05:00");
 const TABS = [
   ["week","This week"],["month","This month"],["lookback","Year lookback"],
-  ["pillars","Pillars"],["catalog","Catalog"],["runs","Daily runs"],["suggested","New pillars"]
+  ["catalog","Catalog"],["claims","Claims"],["versions","Versions"],
+  ["reviews","Reviews"],["ledger","Ledger"],["pillars","Pillars"],["runs","Daily runs"]
 ];
 let DATA = { papers:[], pillars:[], fields:[], feeds:[], runs:[] };
+let CLAIMS = { claims:[], axes:{} };
+let VERSIONS = { history:[], buses:[], milestones:[], lines:[], current:{} };
+let REVIEWS = { cards:[] };
+let LEDGER = {};
 let tab = "week", field = "all", q = "", sort = "importance";
+const KEY = "dbe-observatory-overlay-v1";
+let FREEZE = { actions:[], dbe:"DBE-0.1.1", dbes:"DBES-0.1.1" };
 
 const idea = p => p.coreIdea || p.plain || "";
-const why = p => p.whyItMatters || p.why_matters || "";
-const lim = p => p.limitation || "";
 const fieldLabel = id => (DATA.fields.find(f => f.id === id || f === id)?.short || id);
-
-function inWeek(p){ const t = new Date(p.date || `${p.year}-01-01`).getTime(); return NOW - t <= 7*864e5; }
-function inMonth(p){ return String(p.date||"").startsWith("2026-09") || p.role === "month"; }
-function inLookback(p){ return String(p.date||"") >= "2025-09-19" || ["lookback","week","month"].includes(p.role); }
+function inWeek(p){ const t = new Date(p.date || `${p.year}-01-01`).getTime(); return NOW - t <= 7*864e5 || p.role === "week"; }
+function inMonth(p){ return String(p.date||"").startsWith("2026-09") || String(p.date||"").startsWith("2026-08") || p.role === "month" || inWeek(p); }
+function inLookback(p){ return String(p.date||"") >= "2025-09-20" || ["lookback","week","month"].includes(p.role); }
 function roleLabel(p){
   if (p.role === "internal") return "Program source";
-  if (p.foundational || p.role === "pillar" || (p.tags||[]).includes("foundational")) return "Foundational";
+  if (p.foundational || p.role === "pillar") return "Foundational";
   if (inWeek(p) || p.role === "week") return "This week";
   if (inMonth(p)) return "This month";
   if (inLookback(p)) return "Year lookback";
-  return p.segment || p.role || "Catalog";
+  return p.role || "Catalog";
 }
+function statusClass(s){
+  s = String(s||"").toUpperCase();
+  if (s==="KEEP"||s==="PASS"||s==="INCLUDE"||s==="STRENGTHEN") return "keep";
+  if (s==="CUT"||s==="REJECT"||s==="DISCONFIRM") return "cut";
+  if (s==="HOLD"||s==="QUEUE"||s==="WATCH"||s==="WEAKEN"||s==="NEW PILLAR") return "warn";
+  return "acc";
+}
+function loadFreeze(){
+  try {
+    const raw = JSON.parse(localStorage.getItem(KEY) || "null");
+    if (raw && raw.dbe) return raw;
+  } catch {}
+  return {
+    actions: [],
+    dbe: (VERSIONS.current || {}).DBE || "DBE-0.1.1",
+    dbes: (VERSIONS.current || {}).DBES || "DBES-0.1.1",
+  };
+}
+function saveFreeze(){ localStorage.setItem(KEY, JSON.stringify(FREEZE)); }
+function bump(v, kind){
+  const m = String(v).match(/^(DBE|DBES)-(\d+)\.(\d+)\.(\d+)$/);
+  if (!m) return v;
+  if (kind === "patch") return `${m[1]}-${m[2]}.${m[3]}.${Number(m[4])+1}`;
+  return `${m[1]}-${m[2]}.${Number(m[3])+1}.0`;
+}
+function toast(msg){
+  document.querySelectorAll(".toast").forEach(n => n.remove());
+  const t = document.createElement("div");
+  t.className = "toast";
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), 2800);
+}
+function applied(id){ return FREEZE.actions.some(a => a.reviewId === id); }
+function applyCard(id){
+  const c = (REVIEWS.cards || []).find(x => x.id === id);
+  if (!c) return;
+  if (applied(id)) { toast("Already applied to the working freeze."); return; }
+  const line = (c.bind || []).some(b => String(b).startsWith("S-")) ? "dbes" : "dbe";
+  if (c.action === "NEW PILLAR" || c.action === "REJECT" || c.route === "QUEUE") {
+    FREEZE.actions.push({ reviewId: id, action: c.action, at: new Date().toISOString() });
+    saveFreeze();
+    toast(`Queued ${c.action} — no auto-bump`);
+    paintFreeze();
+    render();
+    return;
+  }
+  if (c.action === "INCLUDE") FREEZE[line] = bump(FREEZE[line], "patch");
+  if (["WEAKEN","DISCONFIRM","STRENGTHEN"].includes(c.action)) FREEZE[line] = bump(FREEZE[line], "minor");
+  FREEZE.actions.push({ reviewId: id, action: c.action, at: new Date().toISOString() });
+  saveFreeze();
+  toast(`Applied ${c.action} → ${FREEZE.dbe} / ${FREEZE.dbes}`);
+  paintFreeze();
+  render();
+}
+function resetFreeze(){
+  FREEZE = {
+    actions: [],
+    dbe: (VERSIONS.current || {}).DBE || "DBE-0.1.1",
+    dbes: (VERSIONS.current || {}).DBES || "DBES-0.1.1",
+  };
+  saveFreeze();
+  toast("Working freeze reset to published 0.1.1");
+  paintFreeze();
+  render();
+}
+function paintFreeze(){
+  const el = document.getElementById("freezeBar");
+  if (!el) return;
+  el.innerHTML = `<code>${FREEZE.dbe}</code><span>/</span><code>${FREEZE.dbes}</code>
+    <span>${FREEZE.actions.length} local action${FREEZE.actions.length===1?"":"s"}</span>
+    <button class="ghost" type="button" id="resetFreeze">Reset freeze</button>`;
+  document.getElementById("resetFreeze").onclick = resetFreeze;
+  const stats = document.getElementById("stats");
+  if (stats) {
+    const papers = DATA.papers || [];
+    stats.innerHTML = [
+      ["Sources", papers.length],
+      ["Claims", (CLAIMS.claims||[]).length],
+      ["DBE", FREEZE.dbe.replace("DBE-","")],
+      ["DBE-S", FREEZE.dbes.replace("DBES-","")],
+    ].map(([k,v])=>`<div class="stat"><dt>${k}</dt><dd>${v}</dd></div>`).join("");
+  }
+}
+
 function meters(p){
   const row = (label,n) => `<div><div class="lbl"><span>${label}</span><span>${n}</span></div><div class="bar"><i style="width:${Math.max(4,Math.min(100,n||0))}%"></i></div></div>`;
   return `<div class="meters">${row("Importance",p.importance)}${row("Confidence",p.confidence)}${row("Popularity",p.popularity)}</div>`;
@@ -133,7 +231,7 @@ function meters(p){
 function pool(){
   let papers = DATA.papers.slice();
   if (tab === "week") papers = papers.filter(p => inWeek(p) || p.role === "week");
-  else if (tab === "month") papers = papers.filter(p => inWeek(p) || inMonth(p) || p.role === "month");
+  else if (tab === "month") papers = papers.filter(p => inMonth(p));
   else if (tab === "lookback") papers = papers.filter(p => inLookback(p));
   else if (tab === "pillars") papers = papers.filter(p => p.foundational || p.role === "pillar" || p.role === "internal");
   if (field !== "all") papers = papers.filter(p => (p.fields||[]).includes(field));
@@ -148,19 +246,21 @@ function openPaper(id){
   const p = DATA.papers.find(x => x.id === id);
   if (!p) return;
   const pillar = (DATA.pillars||[]).find(x => x.id === p.pillarId || x.id === p.suggestedPillar);
+  const claims = (CLAIMS.claims||[]).filter(c => (p.claimIds||[]).includes(c.id));
   const overlay = document.createElement("div");
   overlay.className = "overlay";
   overlay.innerHTML = `<article class="panel">
     <p class="kicker">${p.source || ""}</p>
     <h2>${p.title}</h2>
     <p class="meta">${[].concat(p.authors||[]).join(", ")} · ${p.year||""} · ${p.venue||""}</p>
-    <div>${(p.fields||[]).map(f=>`<span class="tag">${fieldLabel(f)}</span>`).join("")}${(p.tags||[]).map(t=>`<span class="tag">${t}</span>`).join("")}</div>
+    <div>${(p.fields||[]).map(f=>`<span class="tag">${fieldLabel(f)}</span>`).join("")}${(p.claimIds||[]).map(t=>`<span class="tag acc">${t}</span>`).join("")}</div>
     ${meters(p)}
-    <p class="meta" style="margin-top:0.75rem">Importance lifts a DBE pillar toward Q = 1000. Confidence tracks review. Popularity tracks venue and recency.</p>
+    <p class="meta" style="margin-top:0.75rem">Harvest gauges are not C/T/D/A and cannot raise a claim.</p>
     <p><b>Core idea.</b> ${idea(p)}</p>
-    <p><b>Why it matters for DBE.</b> ${why(p)}</p>
-    <p><b>One limitation.</b> ${lim(p)}</p>
-    ${pillar ? `<p class="legend"><b>${pillar.status==="suggested"?"Suggested pillar":"Pillar"}: ${pillar.name||pillar.title}</b><br/>${pillar.dbeGoal||pillar.why||""}</p>` : ""}
+    <p><b>Why it matters.</b> ${p.whyItMatters||""}</p>
+    <p><b>One limitation.</b> ${p.limitation||""}</p>
+    ${claims.map(c=>`<p class="legend"><span class="tag ${statusClass(c.status)}">${c.status}</span> <b>${c.id}</b> ${c.C} ${c.T} ${c.D} ${c.A}<br/>${c.verdict}</p>`).join("")}
+    ${pillar ? `<p class="legend"><b>${pillar.engineStatus||pillar.status}: ${pillar.name}</b><br/>${pillar.engineNote||pillar.dbeGoal||""}</p>` : ""}
     <div class="actions">
       ${p.url && String(p.url).startsWith("http") ? `<a href="${p.url}" target="_blank" rel="noreferrer">Open source</a>` : ""}
       <button class="ghost" type="button">Close</button>
@@ -173,62 +273,118 @@ function paperRow(p){
   return `<button class="row" data-id="${p.id}">
     <div>
       <div>${p.foundational?`<span class="tag acc">Foundational</span>`:`<span class="tag">${roleLabel(p)}</span>`}
-        ${p.role==="internal"?`<span class="tag warn">Program source</span>`:""}
-        ${p.suggestedPillar?`<span class="tag warn">Suggests pillar</span>`:""}
+        ${(p.claimIds||[]).map(id=>`<span class="tag acc">${id}</span>`).join("")}
         <span class="meta">${p.date||p.year||""}</span></div>
       <h3>${p.title}</h3>
       <p class="meta">${[].concat(p.authors||[]).slice(0,4).join(", ")} · ${p.venue||""}</p>
-      <p class="idea">${idea(p)}</p>
-      <div>${(p.fields||[]).map(f=>`<span class="tag">${fieldLabel(f)}</span>`).join("")}${(p.tags||[]).slice(0,3).map(t=>`<span class="tag">${t}</span>`).join("")}</div>
+      <p>${idea(p)}</p>
+      <div>${(p.fields||[]).map(f=>`<span class="tag">${fieldLabel(f)}</span>`).join("")}</div>
     </div>${meters(p)}
   </button>`;
 }
-function pillarCard(p){
-  return `<article class="card">
-    <div style="display:flex;justify-content:space-between;gap:0.75rem;align-items:center">
-      <h3>${p.name||p.title}</h3>
-      <span class="tag ${p.status==="suggested"||p.suggested?"warn":"acc"}">${p.status==="suggested"||p.suggested?"Suggested":"Pillar"}</span>
+function renderClaims(){
+  const groups = { DBE: [], "DBE-S": [] };
+  (CLAIMS.claims||[]).forEach(c => (groups[c.doc]||(groups[c.doc]=[])).push(c));
+  return Object.entries(groups).map(([doc, list]) => `
+    <h2>${doc}</h2>
+    <div class="grid">${list.map(c => `
+      <article class="card">
+        <div style="display:flex;justify-content:space-between;gap:0.75rem">
+          <div><span class="tiny">${c.id}</span><h3>${c.name}</h3><p class="meta">${c.claim}</p></div>
+          <span class="tag ${statusClass(c.status)}">${c.status}</span>
+        </div>
+        <div class="axes">${["C","T","D","A"].map(k=>`<div><div class="tiny">${k}</div>${c[k]}</div>`).join("")}</div>
+        <p>${c.verdict}</p>
+        <p class="meta"><b>Disputer.</b> ${c.disputer}</p>
+        <p class="meta"><b>Kill.</b> ${c.kill}</p>
+        <div>${(c.evidence||[]).map(id=>`<button class="chip" data-open="${id}">${id}</button>`).join("")}</div>
+      </article>`).join("")}</div>`).join("");
+}
+function renderVersions(){
+  const lines = (VERSIONS.lines||[]).map(l => `<article class="card"><div class="tiny">${l.id}</div><h3>${l.name}</h3><p class="kicker">${l.current}</p><p>${l.freeze}</p></article>`).join("");
+  const buses = (VERSIONS.buses||[]).map(b => `<article class="card"><h3>Bus ${b.id} · ${b.name}</h3><p class="tiny">${b.C} · ${b.D}</p><p>${b.target}</p><p class="meta">${b.interface}</p></article>`).join("");
+  const hist = (VERSIONS.history||[]).map(v => `<article class="card">
+    <span class="tag acc">${v.kind}</span> <span class="tag">${v.action}</span>
+    <h3>${v.version} · ${v.title}</h3>
+    <p class="meta">${v.date}</p>
+    <p>${v.summary}</p>
+    <div class="axes">${Object.entries(v.claimSnapshot||{}).map(([k,val])=>`<div><div class="tiny">${k}</div>${val}</div>`).join("")}</div>
+  </article>`).join("");
+  return `<div class="grid">${lines}</div><h2>Buses</h2><div class="grid">${buses}</div><h2>Version log</h2>${hist}`;
+}
+function renderReviews(){
+  return (REVIEWS.cards||[]).map(c => `<article class="card">
+    <span class="tag ${statusClass(c.action)}">${c.action}</span>
+    <span class="tag">${c.route}</span>
+    ${(c.bind||[]).map(id=>`<span class="tag acc">${id}</span>`).join("")}
+    <h3>${(DATA.papers.find(p=>p.id===c.paperId)||{}).title || c.paperId}</h3>
+    <p>${c.plain?.core||""}</p>
+    <p class="meta"><b>Why.</b> ${c.plain?.why||""}</p>
+    <p class="meta"><b>Limitation.</b> ${c.plain?.limit||""}</p>
+    <p class="meta"><b>Disputer.</b> ${c.disputer}</p>
+    <p class="tiny">${c.claimDelta} · ${c.version || "no version"}</p>
+    <div class="actions">
+      <button class="chip" data-open="${c.paperId}">Open paper</button>
+      <button class="chip apply" data-apply="${c.id}" ${applied(c.id)?"disabled":""}>${applied(c.id)?"Applied":"APPLY "+c.action}</button>
     </div>
-    <p>${p.statement||p.why||""}</p>
-    <p class="meta">${p.dbeGoal||""}</p>
-    ${p.whySuggested?`<p style="color:var(--acc)">${p.whySuggested}</p>`:""}
+  </article>`).join("");
+}
+function renderLedger(){
+  const defs = (LEDGER.definitions||[]).map(d => `<article class="card"><div class="tiny">${d.id}</div><h3>${d.name}</h3><p class="meta">${d.meaning}</p><p>${d.current}</p></article>`).join("");
+  const terms = (LEDGER.terms||[]).map(t => `<article class="card"><b>${t.id}</b> ${t.name}<p class="meta">${t.note}</p></article>`).join("");
+  return `<p class="lede">${LEDGER.northStar||""}</p><div class="grid">${defs}</div><h2>Required terms</h2>${terms}`;
+}
+function renderPillars(only){
+  const list = (DATA.pillars||[]).filter(p => {
+    const on = ["KEEP","WATCH","HOLD","CUT"].includes(p.engineStatus);
+    return only === "queue" ? !on : on;
+  });
+  return `<div class="grid">${list.map(p => `<article class="card">
+    <div style="display:flex;justify-content:space-between;gap:0.75rem">
+      <h3>${p.name}</h3><span class="tag ${statusClass(p.engineStatus||p.status)}">${p.engineStatus||p.status}</span>
+    </div>
+    <p>${p.statement||""}</p>
+    <p class="meta">${p.engineNote||p.dbeGoal||""}</p>
     <div>${(p.evidence||[]).map(id=>`<button class="chip" data-open="${id}">${id}</button>`).join("")}</div>
-  </article>`;
+  </article>`).join("")}</div>`;
 }
 function render(){
   const main = document.getElementById("main");
-  if (tab === "pillars" || tab === "suggested") {
-    const only = tab === "suggested" ? "suggested" : "established";
-    const list = (DATA.pillars||[]).filter(p => (p.status|| (p.suggested?"suggested":"established")) === only);
-    main.innerHTML = `<div class="grid">${list.map(pillarCard).join("")}</div>`;
-  } else if (tab === "runs") {
+  const tools = document.getElementById("tools");
+  const chips = document.getElementById("chips");
+  const hideTools = ["claims","versions","reviews","ledger","pillars","runs"].includes(tab);
+  tools.style.display = hideTools ? "none" : "flex";
+  chips.style.display = hideTools ? "none" : "flex";
+  if (tab === "claims") main.innerHTML = renderClaims();
+  else if (tab === "versions") main.innerHTML = renderVersions();
+  else if (tab === "reviews") main.innerHTML = renderReviews();
+  else if (tab === "ledger") main.innerHTML = renderLedger();
+  else if (tab === "pillars") main.innerHTML = `<h2>Engine</h2>${renderPillars("engine")}<h2>Queued</h2>${renderPillars("queue")}`;
+  else if (tab === "runs") {
     const feeds = (DATA.feeds||[]).map(f => `<li class="meta" style="display:flex;justify-content:space-between;padding:0.6rem 0;border-bottom:1px solid var(--border)"><span>${f.label||f}</span><a href="${f.url||f}">${(f.url||f).replace("https://","")}</a></li>`).join("");
-    const runs = (DATA.runs||[]).map(r => `<div class="run"><span class="tag acc">${r.kind}</span> <span class="meta">${r.startedAt||""}</span><p>${r.notes||""}</p><p class="meta">Window ${r.windowStart||""} → ${r.windowEnd||""}</p>
-      ${(r.paperIds||[]).map(id=>{ const p=DATA.papers.find(x=>x.id===id); return `<button class="chip" data-open="${id}">${p?p.title:id}</button>`; }).join("")}</div>`).join("");
-    main.innerHTML = `<h2 style="font-family:Fraunces,serif;font-weight:500">Feeds</h2><ul style="list-style:none;padding:0">${feeds}</ul><h2 style="font-family:Fraunces,serif;font-weight:500">Ingest runs</h2>${runs||"<p class='empty'>No dated runs stored yet.</p>"}`;
+    const runs = (DATA.runs||[]).map(r => `<div class="run"><span class="tag acc">${r.kind}</span> <span class="meta">${r.startedAt||""}</span><p>${r.notes||""}</p></div>`).join("");
+    main.innerHTML = `<h2>Feeds</h2><ul style="list-style:none;padding:0">${feeds}</ul><h2>Ingest runs</h2>${runs}`;
   } else {
     const papers = pool();
-    main.innerHTML = papers.length ? `<div class="list">${papers.map(paperRow).join("")}</div>` : `<p class="empty">No papers in this slice. Clear the field filter.</p>`;
+    main.innerHTML = papers.length ? `<div class="list">${papers.map(paperRow).join("")}</div>` : `<p class="empty">No papers in this slice.</p>`;
   }
   main.querySelectorAll("[data-id], [data-open]").forEach(btn => btn.addEventListener("click", () => openPaper(btn.dataset.id || btn.dataset.open)));
+  main.querySelectorAll("[data-apply]").forEach(btn => btn.addEventListener("click", () => applyCard(btn.dataset.apply)));
 }
 function setup(){
   const papers = DATA.papers||[];
   document.getElementById("stats").innerHTML = [
     ["Sources", papers.length],
-    ["Mean importance", Math.round(papers.reduce((s,p)=>s+(p.importance||0),0)/Math.max(1,papers.length))],
-    ["Mean confidence", Math.round(papers.reduce((s,p)=>s+(p.confidence||0),0)/Math.max(1,papers.length))],
-    ["Suggested pillars", (DATA.pillars||[]).filter(p=>p.status==="suggested"||p.suggested).length],
+    ["Claims", (CLAIMS.claims||[]).length],
+    ["DBE", FREEZE.dbe.replace("DBE-","")],
+    ["DBE-S", FREEZE.dbes.replace("DBES-","")],
   ].map(([k,v])=>`<div class="stat"><dt>${k}</dt><dd>${v}</dd></div>`).join("");
+  paintFreeze();
   document.getElementById("tabs").innerHTML = TABS.map(([id,label])=>`<button data-tab="${id}" class="${id===tab?"active":""}">${label}</button>`).join("");
   const counts = {};
   papers.forEach(p => (p.fields||[]).forEach(f => counts[f]=(counts[f]||0)+1));
-  const fields = DATA.fields.length ? DATA.fields : Object.keys(counts);
   document.getElementById("chips").innerHTML = `<button class="chip ${field==="all"?"active":""}" data-field="all">All fields<span>${papers.length}</span></button>` +
-    fields.map(f => {
-      const id = f.id || f; const label = f.short || f.label || f;
-      return `<button class="chip ${field===id?"active":""}" data-field="${id}">${label}<span>${counts[id]||0}</span></button>`;
-    }).join("");
+    DATA.fields.map(f => `<button class="chip ${field===f.id?"active":""}" data-field="${f.id}">${f.short}<span>${counts[f.id]||0}</span></button>`).join("");
   document.getElementById("tabs").onclick = e => { const b=e.target.closest("[data-tab]"); if(!b) return; tab=b.dataset.tab; [...document.getElementById("tabs").children].forEach(x=>x.classList.toggle("active",x===b)); render(); };
   document.getElementById("chips").onclick = e => {
     const b=e.target.closest("[data-field]"); if(!b) return; field=b.dataset.field;
@@ -243,9 +399,17 @@ function setup(){
   document.getElementById("sort").onchange = e => { sort=e.target.value; render(); };
   render();
 }
-fetch("catalog.json").then(r => { if(!r.ok) throw new Error("missing catalog"); return r.json(); })
-  .then(d => { DATA = d; setup(); })
-  .catch(() => { document.getElementById("main").innerHTML = "<p class='empty'>Serve this folder so catalog.json can load: <code>python -m http.server 8000</code> then open lab.html.</p>"; });
+Promise.all([
+  fetch("catalog.json").then(r => r.json()),
+  fetch("claims.json").then(r => r.json()).catch(() => ({claims:[]})),
+  fetch("versions.json").then(r => r.json()).catch(() => ({history:[]})),
+  fetch("reviews.json").then(r => r.json()).catch(() => ({cards:[]})),
+  fetch("ledger.json").then(r => r.json()).catch(() => ({})),
+]).then(([cat, claims, versions, reviews, ledger]) => {
+  DATA = cat; CLAIMS = claims; VERSIONS = versions; REVIEWS = reviews; LEDGER = ledger;
+  FREEZE = loadFreeze();
+  setup();
+}).catch(() => { document.getElementById("main").innerHTML = "<p class='empty'>Serve this folder so catalog.json can load.</p>"; });
 </script>
 </body>
 </html>

@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.4.0] - 2026-09-20
+### Added
+- Confidence-framework freeze: `research/claims.json` (C/T/D/A), `research/versions.json`, `research/reviews.json`, `research/ledger.json`.
+- Daily review cards under `research/reviews/2026-09-20/` with G1–G6, disputer, and protocol route.
+- `research/score.py` — protocol scorer that refuses to treat harvest 0–100 gauges as C.
+- Observatory HTML tab now has Claims, Versions, Reviews, and Ledger layers. Heuristic gauges are labeled as harvest metadata.
+
+### Changed
+- Catalog expanded with this week's arXiv, year lookback, PRC 109/110 Layer-2 bounds, Seo 2024 tearing RL, and S3-adjacent reconstruction papers.
+- Pillars recut to engine status: KEEP / WATCH / HOLD / CUT / QUEUE. Holography and the five-head monolith stay CUT. Q = 1000 is a ledger test, not an output.
+- DBE-0.1.1 / DBES-0.1.1 PATCH INCLUDE for 2026-09-20. Spacetime-fractons queued as a new pillar (no auto-bump).
+
 ## [0.3.1] - 2026-09-19
 ### Changed
 - Research Observatory HTML tab (`research/lab.html`) now matches the catalog schema: core idea / why it matters / limitation, importance–confidence–popularity gauges, field chips, this week / month / year lookback / pillars / catalog / daily runs / suggested pillars.
@@ -41,4 +53,4 @@ All notable changes to this project will be documented in this file.
 - The transport model remains a simplified single-fluid treatment; no 2D MHD or kinetic effects are included.
 - Quantum subsystem implementations are illustrative and do not perform actual quantum computation.
 - Risk model thresholds and penalties are heuristic and should be calibrated with real data in the future.
-- Research-lab scores are editorial heuristics, not citation metrics.
+- Research-lab harvest scores are editorial heuristics, not C/T/D/A and not citation metrics.

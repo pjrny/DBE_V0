@@ -1,0 +1,190 @@
+{
+  "scheme": "MAJOR.MINOR.PATCH. Dates live in the changelog, not the version number.",
+  "current": {
+    "DBE": "DBE-0.1.1",
+    "DBES": "DBES-0.1.1"
+  },
+  "lines": [
+    {
+      "id": "DBE",
+      "name": "Dimensional Braid Engine",
+      "meaning": "Modular quantum-topological processor + plasma controller",
+      "current": "DBE-0.1.1",
+      "freeze": "Post-cut stack: Bus A/B/C, S3+QEC+RL control"
+    },
+    {
+      "id": "DBES",
+      "name": "Dynamic Barrier Evasion",
+      "meaning": "Floquet / laser-RF driven tunneling through the Coulomb barrier",
+      "current": "DBES-0.1.1",
+      "freeze": "L1\u2013L4 as HOLD; Q=1000 is ledger stress, not output"
+    }
+  ],
+  "buses": [
+    {
+      "id": "A",
+      "name": "Plant attach",
+      "D": "D2",
+      "C": "C4",
+      "target": "DIII-D now, SPARC/ITER-class later, ICF pulse-shape as sibling",
+      "interface": "Diagnostics in, actuator commands out, latency bound published, safe-hold on packet loss",
+      "metric": "Disruption rate, tearing-onset warning time, stored-energy flattop vs lab baseline",
+      "quantum": false
+    },
+    {
+      "id": "B",
+      "name": "Compute",
+      "D": "D3",
+      "C": "C3\u2013C4",
+      "target": "Existing trapped-ion / SC / atom-array processors",
+      "interface": "Offline and near-online optimization, not in-loop braiding of a tokamak",
+      "metric": "Solution quality vs classical HPC at fixed wall-clock",
+      "quantum": true
+    },
+    {
+      "id": "C",
+      "name": "Microphysics",
+      "D": "D1\u2192D2",
+      "C": "C2",
+      "target": "Published FV/CN/PIC codes, then XFEL or high-intensity laser time",
+      "interface": "Reactivity ratio R_drive / R_thermal at stated I, \u03c9, n, T, all aux power counted",
+      "metric": "Never writes a plant Q until Bus A\u2019s ledger accepts auxiliary terms",
+      "quantum": false
+    }
+  ],
+  "milestones": [
+    {
+      "id": "M0",
+      "name": "Freeze the rubric",
+      "status": "done",
+      "note": "This observatory. Every paper tagged C/T/D/A and PASS/HOLD/CUT before it can change a claim."
+    },
+    {
+      "id": "M1",
+      "name": "Energy ledger v1",
+      "status": "open",
+      "note": "Q_sci, Q_fuel, Q_eng as three numbers. Include P_coh, P_repopulate, P_drive, P_aux, conversion."
+    },
+    {
+      "id": "M2",
+      "name": "Attach Bus A",
+      "status": "open",
+      "note": "Beat a lab baseline on one disruption-relevant metric."
+    },
+    {
+      "id": "M3",
+      "name": "Bus B bake-off",
+      "status": "open",
+      "note": "S3 / surface-code optimizer vs classical solver on a published MHD or pulse-shape problem."
+    },
+    {
+      "id": "M4",
+      "name": "Layer-2 replication",
+      "status": "open",
+      "note": "Reproduce PRC 109 FV vs CN on DT at 1 keV, then add Lindblad + hole-burning."
+    },
+    {
+      "id": "M5",
+      "name": "Distinguishing Majorana test or drop",
+      "status": "open",
+      "note": "Independent X and Z logicals plus gap scaling, or remove from the engine diagram."
+    },
+    {
+      "id": "M6",
+      "name": "Tabletop / XFEL driven-tunneling shot",
+      "status": "open",
+      "note": "A shot or an official rejected proposal. Either is a result."
+    },
+    {
+      "id": "M7",
+      "name": "Coupled ledger",
+      "status": "open",
+      "note": "Only now may Bus C terms enter a plant Q estimate."
+    },
+    {
+      "id": "M8",
+      "name": "Modular product",
+      "status": "open",
+      "note": "A control container a SPARC-class or stellarator team can run without DBE metaphysics."
+    }
+  ],
+  "history": [
+    {
+      "version": "DBE-0.0.0",
+      "date": "2025-06-01",
+      "kind": "HISTORICAL",
+      "action": "PRE-CUT",
+      "title": "Five-head engine (white paper)",
+      "summary": "Majorana braids + fracton memory + Floquet clock + holographic encoder + plasma actuators as one device. Consciousness benchmark still in the surrounding notes. Q = 1000 treated as an output.",
+      "claimSnapshot": {
+        "E-S3": "unscored",
+        "E-MZM": "load-bearing",
+        "E-FR": "load-bearing",
+        "E-TC": "load-bearing",
+        "E-HOL": "load-bearing",
+        "E-5": "the product",
+        "S-Q": "claimed output"
+      }
+    },
+    {
+      "version": "DBE-0.1.0",
+      "date": "2026-09-19",
+      "kind": "MAJOR",
+      "action": "FREEZE",
+      "title": "Cut the monolith; keep three buses",
+      "summary": "Cut E-HOL, E-5, consciousness. Keep E-S3, E-QEC, E-RL. Majorana demoted to WATCH. Time crystal cut as clock. Fracton cut as hardware.",
+      "claimSnapshot": {
+        "E-S3": "KEEP C3",
+        "E-QEC": "KEEP C4",
+        "E-RL": "KEEP C4",
+        "E-MZM": "WATCH C1",
+        "E-TC": "HOLD / cut-as-clock",
+        "E-FR": "HOLD / cut-as-hardware",
+        "E-HOL": "CUT",
+        "E-5": "CUT"
+      }
+    },
+    {
+      "version": "DBES-0.1.0",
+      "date": "2026-09-19",
+      "kind": "MAJOR",
+      "action": "FREEZE",
+      "title": "Q = 1000 demoted to ledger test",
+      "summary": "S-Q demoted to ledger test. S-L2 HOLD at PRC 109 field bound. L1/L4 HOLD. L3 solvers KEEP.",
+      "claimSnapshot": {
+        "S-L1": "HOLD C2",
+        "S-L2": "HOLD C1 as gain path",
+        "S-L3": "KEEP methods",
+        "S-L4": "HOLD",
+        "S-Q": "CUT as output"
+      }
+    },
+    {
+      "version": "DBE-0.1.1",
+      "date": "2026-09-20",
+      "kind": "PATCH",
+      "action": "INCLUDE",
+      "title": "Daily run: this week\u2019s arXiv under existing KEEP claims",
+      "summary": "INCLUDE Tamiya, Polley, Flores, Seo 2024 (lookback), virtual-circuit emulators, braid-without-transport. Heuristic gauges updated. No C move. Floquet-fracton queued as a new-pillar candidate (spacetime fractons), not auto-promoted.",
+      "claimSnapshot": {
+        "E-S3": "KEEP C3 (no move)",
+        "E-QEC": "KEEP C4 (no move)",
+        "E-RL": "KEEP C4 (no move)",
+        "E-MZM": "WATCH C1 (no move)"
+      },
+      "runId": "run-2026-09-20-daily"
+    },
+    {
+      "version": "DBES-0.1.1",
+      "date": "2026-09-20",
+      "kind": "PATCH",
+      "action": "INCLUDE",
+      "title": "Layer-2 bibliography: PRC 109/110 + dynamically assisted fusion",
+      "summary": "INCLUDE the published field and intensity bounds into the ledger. Conservative direction only. S-L2 stays HOLD / C1 as a gain path.",
+      "claimSnapshot": {
+        "S-L2": "HOLD C1 (bound tightened, C unchanged)"
+      },
+      "runId": "run-2026-09-20-daily"
+    }
+  ]
+}

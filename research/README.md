@@ -1,29 +1,30 @@
 # Research Observatory
 
-Catalog, tag, score, and brief the papers that lift DBE V0 → V1 and DBE-S.
+Three layers, never mixed into one score bar:
 
-Fields: Anyons, TQC, Majorana, braid/knot theory, topology, fracton memory, time crystals, plasma control, holography, fusion–quantum integration (Q = 1000).
+1. **Library** — `catalog.json` papers with tags, fields, 0–100 harvest gauges, and a plain-language triple (core idea / why it matters / one limitation).
+2. **Claims** — `claims.json` frozen C/T/D/A table (E-S3, E-QEC, E-RL, …). Heuristic gauges are not C.
+3. **Version log** — `versions.json` + `CHANGELOG.md`. DBE and DBE-S version separately.
 
 ```sh
 # first runs look back a year or more
 python research/ingest.py --lookback-days 365
 
-# daily
+# daily harvest (library only — does not bump C)
 python research/ingest.py --lookback-days 7
+python research/fetch_arxiv.py --days 7
 
-# interactive CLI tab
+# protocol scorer (cannot raise C from a harvest number)
+python research/score.py --bind E-S3 --action INCLUDE --paper lo-2026 --venue nature
+
+# CLI
 python cli/research_observatory.py
-python cli/research_observatory.py --field anyons --role week --sort importance
 
-# viewable HTML tab (same folder as catalog.json)
+# viewable HTML tab
 cd research && python -m http.server 8000
-# open http://localhost:8000/lab.html
+# open lab.html  (loads catalog + claims + versions + reviews + ledger)
 ```
 
-Foundational papers are pillars and may be any age. Live ingest never deletes them. If a paper is load-bearing rather than a citation, the catalog suggests a new pillar.
+Fields: Anyons, TQC, Majorana, braid/knot theory, topology, fracton memory, time crystals, plasma control, holography, fusion–quantum integration (Q = 1000 is a ledger stress test, not an output).
 
-Each paper has:
-
-- tags and field segments
-- importance / confidence / popularity (0–100)
-- a plain-language core idea, why it matters for DBE, and one limitation
+Foundational papers are pillars of any age. Live ingest never deletes them. New load-bearing ideas are queued as pillars — they need an interface contract before a MAJOR bump.

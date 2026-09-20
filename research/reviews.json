@@ -1,0 +1,279 @@
+{
+  "asOf": "2026-09-20",
+  "cards": [
+    {
+      "id": "rev-2026-09-20-tamiya",
+      "date": "2026-09-20",
+      "paperId": "tamiya-2026",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "Closed threshold proof vs stochastic baseline; platform-honest (codes, not a tokamak)."
+      },
+      "math": "Coherent Z-rotation noise on qLDPC / surface code; ML Pauli recovery. Breaks if noise is generic non-Pauli coherent.",
+      "scoreHeuristic": {
+        "importance": 86,
+        "confidence": 84,
+        "popularity": 72
+      },
+      "claimDelta": "E-QEC C4 \u2192 C4 (no move)",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.1.1",
+      "disputer": "Proof is Z-type coherent rotations, not a non-Abelian decoder.",
+      "ledger": null,
+      "plain": {
+        "core": "Real devices make coherent over-rotations, not just random bit flips. This paper proves a positive threshold still exists for that noise on surface-code-like codes.",
+        "why": "DBE braids will be miscalibrated. A coherent-error theorem is more honest than a stochastic slogan.",
+        "limit": "Does not cover generic non-Pauli coherent noise or non-Abelian anyon decoding."
+      }
+    },
+    {
+      "id": "rev-2026-09-20-polley",
+      "date": "2026-09-20",
+      "paperId": "polley-2026",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "hold",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G3: compilation study, not vs a named MHD baseline, so no C raise."
+      },
+      "math": "Compile molecular / condensed-phase propagators onto Fibonacci/Ising braids. Breaks if leakage or compilation depth exceeds hardware.",
+      "scoreHeuristic": {
+        "importance": 84,
+        "confidence": 70,
+        "popularity": 68
+      },
+      "claimDelta": "E-S3 C3 \u2192 C3; queued suggested pillar topo-dynamics",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.1.1",
+      "disputer": "A bounded quantum advantage on toy dynamics is not in-loop plasma control (latency kill test).",
+      "ledger": null,
+      "plain": {
+        "core": "Topological hardware can compile quantum dynamics, not only static molecular energies.",
+        "why": "This is a Bus B job: offline simulation on S3/Fibonacci, never a tokamak in-loop braid.",
+        "limit": "Does not attach to a plant API and must not skip the latency bound."
+      }
+    },
+    {
+      "id": "rev-2026-09-20-lo",
+      "date": "2026-09-20",
+      "paperId": "lo-2026",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "Journal hardware on trapped ions. Caps C at 3 because it is not a tokamak (G5)."
+      },
+      "math": "S3 quantum double; C2 fluxes; braid + fusion + X/Z measurements. Unitarity of fusion space preserved.",
+      "scoreHeuristic": {
+        "importance": 99,
+        "confidence": 90,
+        "popularity": 92
+      },
+      "claimDelta": "E-S3 C3 stays (already set by this paper at freeze)",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.1.0",
+      "disputer": "Linear-depth with post-selection at 54 qubits; constant-depth adaptive is the scalable claim, not this shot.",
+      "ledger": null,
+      "plain": {
+        "core": "On 54 trapped-ion qubits, S3 anyons were prepared and braided+fused into a universal qutrit gate set, including a magic state.",
+        "why": "This is the actual braid primitive. Majorana is no longer the only topological path.",
+        "limit": "Processor analog, not a reactor part. C cannot exceed 3 by G5."
+      }
+    },
+    {
+      "id": "rev-2026-09-20-prc109",
+      "date": "2026-09-20",
+      "paperId": "prc109-2024",
+      "bind": [
+        "S-L2"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "Journal nuclear theory vs thermal rate. Conservative ledger move (required E up)."
+      },
+      "math": "Floquet/Volkov DT tunneling at 1 keV. Breaks if hole-burning + SRS/SBS are omitted from the rate.",
+      "scoreHeuristic": {
+        "importance": 92,
+        "confidence": 88,
+        "popularity": 70
+      },
+      "claimDelta": "S-L2 C1 as gain path stays; required E bound recorded",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBES-0.1.1",
+      "disputer": "PRC 110 finds even harsher irradiance. KH vs FV disagreement keeps the gain-path at C1.",
+      "ledger": "E ~ 1e15\u20131e16 V/m; \u0127\u03c9 \u2272 1 keV; DT at 1 keV",
+      "plain": {
+        "core": "Laser-assisted DT tunneling is real theory, but the field needed is next-gen XFEL, not a tokamak antenna.",
+        "why": "Sets the Layer-2 fail threshold the daily run is required to hunt.",
+        "limit": "No fusion-gain experiment. Does not write a plant Q."
+      }
+    },
+    {
+      "id": "rev-2026-09-20-seo",
+      "date": "2026-09-20",
+      "paperId": "seo-2024",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "Nature hardware on DIII-D. Relevant class of machine (C4)."
+      },
+      "math": "RL policy on shape/beta vs tearing onset. Baseline is the lab controller.",
+      "scoreHeuristic": {
+        "importance": 94,
+        "confidence": 93,
+        "popularity": 90
+      },
+      "claimDelta": "E-RL C4 stays; T3 confirmed on DIII-D",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.1.1",
+      "disputer": "Tearing avoidance \u2260 Q_eng. Quantum in this loop still fails the latency kill test.",
+      "ledger": null,
+      "plain": {
+        "core": "A deep-RL agent on DIII-D saw tearing coming and moved the plasma out of the way using the real coils.",
+        "why": "The only DBE piece that already talks to a fusion plant.",
+        "limit": "Classical controller. Do not smuggle a quantum processor into the Alfv\u00e9n time."
+      }
+    },
+    {
+      "id": "rev-2026-09-20-mzml",
+      "date": "2026-09-20",
+      "paperId": "majorana-landscape-2026",
+      "bind": [
+        "E-MZM"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "hold",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "Cannot RAISE C. Bare arXiv + mimic-prone signatures."
+      },
+      "math": "Inhomogeneous landscape vs Bloch topological invariant. Distinguisher proposed, not completed.",
+      "scoreHeuristic": {
+        "importance": 71,
+        "confidence": 62,
+        "popularity": 58
+      },
+      "claimDelta": "E-MZM C1 \u2192 C1",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.1.1",
+      "disputer": "Andreev / YSR mimics still explain many zero-bias peaks.",
+      "ledger": null,
+      "plain": {
+        "core": "In a dirty superconductor, band-topology labels do not tell you if a Majorana is still there.",
+        "why": "A distinguisher paper, which is what WATCH items are for.",
+        "limit": "Not an X+Z logical qubit. Does not un-WATCH E-MZM."
+      }
+    },
+    {
+      "id": "rev-2026-09-20-ffracton",
+      "date": "2026-09-20",
+      "paperId": "floquet-fracton-2026",
+      "bind": [
+        "E-FR",
+        "E-TC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "hold",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "fail",
+        "note": "G6: would couple two HOLD items into one hardware story. Coupling starts at C1. A7: would add a HOLD/pillar. QUEUE."
+      },
+      "math": "Floquet code with excitations immobile in space and time.",
+      "scoreHeuristic": {
+        "importance": 79,
+        "confidence": 66,
+        "popularity": 54
+      },
+      "claimDelta": "none (queued)",
+      "action": "NEW PILLAR",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "D1 simulation. Protocol cuts fracton-as-hardware and time-crystal-as-clock.",
+      "ledger": null,
+      "whyQueued": "Would add pillar spacetime-fractons. One NEW PILLAR proposal per month; needs an interface contract (in/out/latency/fail-safe) before weekly freeze.",
+      "plain": {
+        "core": "A measured Floquet code whose quasiparticles cannot move in space or in time.",
+        "why": "The prettiest unification of two things we already cut as infrastructure.",
+        "limit": "Reading is allowed. Load-bearing is not. Queue, do not bump."
+      }
+    },
+    {
+      "id": "rev-2026-09-20-holions",
+      "date": "2026-09-20",
+      "paperId": "holographic-ions-2026",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "hold",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "Denylist. Cannot INCLUDE without a CUT-reversal packet of two C\u22654 sources."
+      },
+      "math": "Holographic QEC on trapped ions.",
+      "scoreHeuristic": {
+        "importance": 64,
+        "confidence": 68,
+        "popularity": 57
+      },
+      "claimDelta": "none",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "E-HOL is CUT as a reactor/processor part. Duality remains C2.",
+      "ledger": null,
+      "plain": {
+        "core": "Put a holographic code on the same ion hardware that ran S3.",
+        "why": "Useful as reading. Forbidden as an engine INCLUDE.",
+        "limit": "On the denylist until two independent C\u22654 sources reverse the CUT."
+      }
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "asOf": "2026-09-20",
+  "northStar": "Q = 1000 is a stress test of this ledger, not an output of the current stack.",
+  "definitions": [
+    {
+      "id": "Q_sci",
+      "name": "Scientific gain",
+      "meaning": "Fusion energy out / energy delivered to the target or plasma",
+      "current": "NIF 4.13 (8.6 MJ / 2.08 MJ, Apr 2025). JET peak \u2248 0.67. No MCF Q_sci > 1."
+    },
+    {
+      "id": "Q_fuel",
+      "name": "Fuel gain",
+      "meaning": "Fusion energy / energy in the fuel assembly",
+      "current": "SPARC design Q_fuel of order 2\u201311. ITER design Q = 10."
+    },
+    {
+      "id": "Q_eng",
+      "name": "Engineering / plant gain",
+      "meaning": "Electricity out / electricity in",
+      "current": "Unshown on any public machine. Harder than Q_sci."
+    }
+  ],
+  "terms": [
+    {
+      "id": "P_fusion",
+      "name": "Fusion power",
+      "required": true,
+      "note": "DT or advanced-fuel yield after hole-burning."
+    },
+    {
+      "id": "P_coh",
+      "name": "Coherence / pumping power",
+      "required": true,
+      "note": "Optical pumping against Lindblad collapse. If P_coh / P_fusion \u2265 0.1 at useful n, L1 fails."
+    },
+    {
+      "id": "P_repopulate",
+      "name": "Spectral refill",
+      "required": true,
+      "note": "Power to refill the depleted velocity class. Infinite Maxwellian refill is forbidden."
+    },
+    {
+      "id": "P_drive",
+      "name": "Floquet / laser / RF drive",
+      "required": true,
+      "note": "Must count the field that produces 10^15 V/m-class E or 10^27 W/cm^2-class I."
+    },
+    {
+      "id": "P_aux",
+      "name": "Plant auxiliaries",
+      "required": true,
+      "note": "Coils, gyrotrons, cryogenics, lasers, conversion."
+    },
+    {
+      "id": "P_rad",
+      "name": "Radiation",
+      "required": true,
+      "note": "Bremsstrahlung ~ Z^2. High-Z fuels (p-11B) radiate massively. Cavity suppression is a loss-reduction term, not a source."
+    },
+    {
+      "id": "eta_conv",
+      "name": "Conversion efficiency",
+      "required": true,
+      "note": "Direct conversion is not 100%. Ideal adiabatic extraction is void."
+    }
+  ],
+  "baselines": [
+    {
+      "label": "NIF Q_sci",
+      "value": "4.13",
+      "date": "2025-04"
+    },
+    {
+      "label": "JET Q",
+      "value": "\u2248 0.67",
+      "date": "historic peak"
+    },
+    {
+      "label": "ITER design Q",
+      "value": "10",
+      "date": "design"
+    },
+    {
+      "label": "SPARC first plasma",
+      "value": "~2027, Q_fuel ~ 2\u201311",
+      "date": "roadmap"
+    },
+    {
+      "label": "DBE-S Q_eng = 1000",
+      "value": "fail-unless-proven",
+      "date": "ledger test"
+    }
+  ],
+  "layer2": {
+    "prc109": "DT @ 1 keV: E ~ 1e15\u20131e16 V/m, \u0127\u03c9 \u2272 1 keV",
+    "prc110": "7\u201370% enhancement only at 1e27\u20131e29 W/cm^2",
+    "kill": "After hole-burning + SRS/SBS, net <2\u00d7 thermal at reachable I,\u03c9 \u2192 Layer 2 off the plant path"
+  }
+}

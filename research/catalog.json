@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T17:00:00-05:00",
+  "generatedAt": "2026-09-20T09:16:00-05:00",
   "lookback": "1y+",
   "northStar": "Q=1000",
   "feeds": [
@@ -100,8 +100,8 @@
     },
     {
       "id": "fusion-quantum",
-      "label": "Fusion–quantum integration",
-      "short": "Fusion⊗Q",
+      "label": "Fusion\u2013quantum integration",
+      "short": "Fusion\u2297Q",
       "goal": "Modular coupling of topological compute to a reactor, aiming at Q = 1000.",
       "feed": "https://arxiv.org/search/advanced"
     }
@@ -122,7 +122,9 @@
         "kitaev-1997",
         "nayak-2008",
         "lo-2026"
-      ]
+      ],
+      "engineStatus": "KEEP",
+      "engineNote": "Maps to E-S3. Load-bearing topological primitive."
     },
     {
       "id": "majorana-braids",
@@ -140,7 +142,9 @@
         "kitaev-2001-wires",
         "wootton-2014",
         "sun-2026-floquet-majorana"
-      ]
+      ],
+      "engineStatus": "WATCH",
+      "engineNote": "Do not make load-bearing. Parallel watch item."
     },
     {
       "id": "fracton-memory",
@@ -156,7 +160,9 @@
         "bravyi-haah-2011",
         "pretko-2020",
         "hopkin-2026"
-      ]
+      ],
+      "engineStatus": "HOLD",
+      "engineNote": "Theory workstream. CUT from hardware stack."
     },
     {
       "id": "floquet-clock",
@@ -171,7 +177,9 @@
         "wilczek-2012",
         "else-2016",
         "watanabe-2014"
-      ]
+      ],
+      "engineStatus": "HOLD",
+      "engineNote": "Many-body physics study. CUT as metronome."
     },
     {
       "id": "holographic-encode",
@@ -187,7 +195,9 @@
         "maldacena-1997",
         "almheiri-2015",
         "biswas-2026"
-      ]
+      ],
+      "engineStatus": "CUT",
+      "engineNote": "Reading list only. Not a reactor or processor subsystem."
     },
     {
       "id": "plasma-rl",
@@ -202,11 +212,13 @@
       "evidence": [
         "degrave-2022",
         "rothstein-2026"
-      ]
+      ],
+      "engineStatus": "KEEP",
+      "engineNote": "Bus A attach surface."
     },
     {
       "id": "fusion-q1000",
-      "name": "Modular fusion–quantum stack",
+      "name": "Modular fusion\u2013quantum stack",
       "fields": [
         "fusion-quantum",
         "plasma",
@@ -219,7 +231,9 @@
         "dbe-whitepaper",
         "dbe-s-revision",
         "jennings-2026"
-      ]
+      ],
+      "engineStatus": "HOLD",
+      "engineNote": "Q=1000 is a ledger stress test, not an output."
     },
     {
       "id": "cyclic-fusion",
@@ -237,11 +251,13 @@
         "levaillant-2015",
         "lyons-2026"
       ],
-      "whySuggested": "Nature 2026 shows S3 on 54 qubits is preparable and computationally complete once fusion is allowed. That is a new pillar, not just a data point."
+      "whySuggested": "Nature 2026 shows S3 on 54 qubits is preparable and computationally complete once fusion is allowed. That is a new pillar, not just a data point.",
+      "engineStatus": "KEEP",
+      "engineNote": "Promoted in place: S3 braid+fusion is the 2026 hardware path. Status was 'suggested'; engine freeze treats it as KEEP under E-S3."
     },
     {
       "id": "floquet-majorana-codes",
-      "name": "Floquet–Majorana codes",
+      "name": "Floquet\u2013Majorana codes",
       "fields": [
         "majorana",
         "time-crystal",
@@ -253,7 +269,9 @@
       "evidence": [
         "sun-2026-floquet-majorana"
       ],
-      "whySuggested": "Unifies two DBE subsystems that the white paper treats as separate boxes."
+      "whySuggested": "Unifies two DBE subsystems that the white paper treats as separate boxes.",
+      "engineStatus": "QUEUE",
+      "engineNote": "Would couple E-MZM and E-TC. Coupling starts at C1."
     },
     {
       "id": "fracton-holography",
@@ -270,7 +288,9 @@
         "hu-2026-fth",
         "canossa-2026"
       ],
-      "whySuggested": "Connects two existing pillars with a shared bulk-boundary language."
+      "whySuggested": "Connects two existing pillars with a shared bulk-boundary language.",
+      "engineStatus": "QUEUE",
+      "engineNote": "Couples two non-KEEP items. Denylist-adjacent."
     },
     {
       "id": "nonabelian-qldpc",
@@ -287,7 +307,9 @@
         "zhu-2026",
         "magdalena-2026"
       ],
-      "whySuggested": "Removes a hidden 3D overhead that would break DBE’s modular, planar control story."
+      "whySuggested": "Removes a hidden 3D overhead that would break DBE\u2019s modular, planar control story.",
+      "engineStatus": "QUEUE",
+      "engineNote": "Interesting Bus B research; not a new engine pillar until an interface contract exists."
     },
     {
       "id": "topo-dynamics",
@@ -304,7 +326,27 @@
         "polley-2026",
         "jennings-2026"
       ],
-      "whySuggested": "This is the first credible path from ‘quantum subsystem stub’ to actual dynamics simulation inside the engine."
+      "whySuggested": "This is the first credible path from \u2018quantum subsystem stub\u2019 to actual dynamics simulation inside the engine.",
+      "engineStatus": "QUEUE",
+      "engineNote": "Bus B simulation path. Fail if slower than classical HPC."
+    },
+    {
+      "id": "spacetime-fractons",
+      "name": "Spacetime fractons / Floquet-immobile excitations",
+      "fields": [
+        "fracton",
+        "time-crystal",
+        "tqc"
+      ],
+      "statement": "Floquet codes can host excitations immobile in both space and time, unifying memory and clock as one object.",
+      "dbeGoal": "Only if an interface contract exists. Currently a monthly NEW PILLAR candidate.",
+      "status": "suggested",
+      "engineStatus": "QUEUE",
+      "engineNote": "Queued 2026-09-20. Needs in/out/latency/fail-safe. Opportunity cost: attention on E-S3 / E-RL / S-L2.",
+      "evidence": [
+        "floquet-fracton-2026"
+      ],
+      "whySuggested": "Prettiest unification of two HOLD items. Protocol still forbids load-bearing."
     }
   ],
   "papers": [
@@ -340,7 +382,11 @@
         "quantum double",
         "fusion"
       ],
-      "pillarId": "anyon-tqc"
+      "pillarId": "anyon-tqc",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "nayak-2008",
@@ -368,7 +414,7 @@
       "importance": 99,
       "confidence": 97,
       "popularity": 98,
-      "coreIdea": "A field-defining review: what non-Abelian statistics actually means, why Fibonacci anyons are universal from braiding alone, and why Ising / ν = 5/2 anyons are not — unless you add extra resources.",
+      "coreIdea": "A field-defining review: what non-Abelian statistics actually means, why Fibonacci anyons are universal from braiding alone, and why Ising / \u03bd = 5/2 anyons are not \u2014 unless you add extra resources.",
       "whyItMatters": "It is the map of which anyon theories can run a universal DBE core, and which ones need fusion measurements or magic states.",
       "limitation": "Much of the hardware discussion is quantum-Hall era; trapped-ion and superconducting lattice realisations came later.",
       "source": "program library / arXiv cond-mat.str-el",
@@ -377,7 +423,12 @@
         "Ising",
         "RMP"
       ],
-      "pillarId": "anyon-tqc"
+      "pillarId": "anyon-tqc",
+      "claimIds": [
+        "E-S3",
+        "E-MZM"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "kitaev-honeycomb",
@@ -402,14 +453,18 @@
       "popularity": 95,
       "coreIdea": "A honeycomb spin model that can be solved exactly and hosts Majorana fermions plus a vortex anyon. Depending on the couplings you get either a gapped non-Abelian phase or an Abelian one.",
       "whyItMatters": "It is the cleanest lattice origin story for the Majorana braid register the white paper assumes.",
-      "limitation": "Material realisations (α-RuCl3 and cousins) remain debated; the model is exact, the laboratory is not.",
+      "limitation": "Material realisations (\u03b1-RuCl3 and cousins) remain debated; the model is exact, the laboratory is not.",
       "source": "arXiv cond-mat.str-el",
       "tags": [
         "honeycomb",
         "Majorana",
         "Kitaev materials"
       ],
-      "pillarId": "majorana-braids"
+      "pillarId": "majorana-braids",
+      "claimIds": [
+        "E-MZM"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "kitaev-2001-wires",
@@ -432,7 +487,7 @@
       "importance": 97,
       "confidence": 96,
       "popularity": 97,
-      "coreIdea": "A 1D p-wave superconducting wire can host unpaired Majorana zero modes at its ends. Braiding those modes implements a protected, if incomplete, gate set — the simplest hardware picture of a topological qubit.",
+      "coreIdea": "A 1D p-wave superconducting wire can host unpaired Majorana zero modes at its ends. Braiding those modes implements a protected, if incomplete, gate set \u2014 the simplest hardware picture of a topological qubit.",
       "whyItMatters": "This is the origin of the DBE Majorana braid register: not a metaphor, a lattice Hamiltonian whose end modes are the qubits.",
       "limitation": "Ising / Majorana braids are not universal by themselves. Andreev bound states and disorder can mimic the zero-bias signature without topological protection.",
       "source": "arXiv cond-mat.mes-hall",
@@ -441,7 +496,11 @@
         "MZM",
         "nanowire"
       ],
-      "pillarId": "majorana-braids"
+      "pillarId": "majorana-braids",
+      "claimIds": [
+        "E-MZM"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "maldacena-1997",
@@ -470,7 +529,11 @@
         "AdS/CFT",
         "duality"
       ],
-      "pillarId": "holographic-encode"
+      "pillarId": "holographic-encode",
+      "claimIds": [
+        "E-HOL"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "wilczek-2012",
@@ -491,7 +554,7 @@
       "importance": 88,
       "confidence": 80,
       "popularity": 92,
-      "coreIdea": "Wilczek asked whether a quantum system can spontaneously tick — breaking time-translation symmetry the way a crystal breaks space-translation symmetry.",
+      "coreIdea": "Wilczek asked whether a quantum system can spontaneously tick \u2014 breaking time-translation symmetry the way a crystal breaks space-translation symmetry.",
       "whyItMatters": "It names the clock the DBE wants: a time crystal as a synchronisation layer, not a metaphor.",
       "limitation": "The original equilibrium proposal does not work; Watanabe and Oshikawa showed no-go theorems for ground-state time crystals. The surviving version is Floquet (driven).",
       "source": "program library / arXiv quant-ph",
@@ -499,7 +562,11 @@
         "time crystal",
         "symmetry breaking"
       ],
-      "pillarId": "floquet-clock"
+      "pillarId": "floquet-clock",
+      "claimIds": [
+        "E-TC"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "watanabe-2014",
@@ -522,14 +589,18 @@
       "confidence": 96,
       "popularity": 78,
       "coreIdea": "A no-go: a quantum system in equilibrium cannot oscillate forever in its ground state. Time crystals, if they exist, need drive, dissipation, or other loopholes.",
-      "whyItMatters": "It forces the DBE clock onto the Floquet path — periodic drive, not a magical idle oscillator. That is why the white paper specifies a Floquet time crystal.",
+      "whyItMatters": "It forces the DBE clock onto the Floquet path \u2014 periodic drive, not a magical idle oscillator. That is why the white paper specifies a Floquet time crystal.",
       "limitation": "No-gos constrain equilibrium; they do not forbid discrete time crystals in driven, many-body-localised, or open systems.",
       "source": "program library",
       "tags": [
         "no-go",
         "Floquet"
       ],
-      "pillarId": "floquet-clock"
+      "pillarId": "floquet-clock",
+      "claimIds": [
+        "E-TC"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "else-2016",
@@ -552,7 +623,7 @@
       "importance": 93,
       "confidence": 94,
       "popularity": 90,
-      "coreIdea": "Under a periodic drive, a many-body system can respond at a multiple of the drive period — a discrete time crystal — protected by many-body localisation.",
+      "coreIdea": "Under a periodic drive, a many-body system can respond at a multiple of the drive period \u2014 a discrete time crystal \u2014 protected by many-body localisation.",
       "whyItMatters": "This is the actual clock: a subharmonic tick the DBE can lock actuators and braid steps to.",
       "limitation": "Requires a drive and (in the original argument) localisation or prethermal protection. It is not a free lunch thermally.",
       "source": "arXiv quant-ph",
@@ -561,7 +632,11 @@
         "MBL",
         "subharmonic"
       ],
-      "pillarId": "floquet-clock"
+      "pillarId": "floquet-clock",
+      "claimIds": [
+        "E-TC"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "bravyi-haah-2011",
@@ -586,8 +661,8 @@
       "importance": 94,
       "confidence": 92,
       "popularity": 82,
-      "coreIdea": "Haah’s 3D cubic code stores quantum information so that local errors cannot freely hop. Memory time grows with system size below a critical temperature — a genuine self-correcting quantum memory.",
-      "whyItMatters": "This is the existence proof for fracton memory, the DBE’s proposed long-term store for plasma snapshots.",
+      "coreIdea": "Haah\u2019s 3D cubic code stores quantum information so that local errors cannot freely hop. Memory time grows with system size below a critical temperature \u2014 a genuine self-correcting quantum memory.",
+      "whyItMatters": "This is the existence proof for fracton memory, the DBE\u2019s proposed long-term store for plasma snapshots.",
       "limitation": "It is a 3D lattice model with no-go tension against 2D self-correction. Engineering a physical fracton memory remains open.",
       "source": "program library",
       "tags": [
@@ -595,7 +670,11 @@
         "self-correction",
         "memory time"
       ],
-      "pillarId": "fracton-memory"
+      "pillarId": "fracton-memory",
+      "claimIds": [
+        "E-FR"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "pretko-2020",
@@ -628,7 +707,11 @@
         "tensor gauge",
         "foliation"
       ],
-      "pillarId": "fracton-memory"
+      "pillarId": "fracton-memory",
+      "claimIds": [
+        "E-FR"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "almheiri-2015",
@@ -662,11 +745,15 @@
         "HaPPY",
         "bulk reconstruction"
       ],
-      "pillarId": "holographic-encode"
+      "pillarId": "holographic-encode",
+      "claimIds": [
+        "E-HOL"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "levaillant-2015",
-      "title": "Universal gates via fusion and measurement operations on SU(2)₄ anyons",
+      "title": "Universal gates via fusion and measurement operations on SU(2)\u2084 anyons",
       "authors": [
         "Claire Levaillant"
       ],
@@ -685,8 +772,8 @@
       "importance": 86,
       "confidence": 88,
       "popularity": 62,
-      "coreIdea": "Some anyon theories cannot compute everything by braiding alone. If you also allow fusion measurements, SU(2)₄ (and related cyclic theories) become universal.",
-      "whyItMatters": "This is the theorem behind the 2026 S₃ experiment: fusion is not just readout, it is a gate primitive. DBE should treat measurement as part of the compiler.",
+      "coreIdea": "Some anyon theories cannot compute everything by braiding alone. If you also allow fusion measurements, SU(2)\u2084 (and related cyclic theories) become universal.",
+      "whyItMatters": "This is the theorem behind the 2026 S\u2083 experiment: fusion is not just readout, it is a gate primitive. DBE should treat measurement as part of the compiler.",
       "limitation": "The construction is algebraic. Leakage, adaptive depth, and hardware-level fusion still have to be engineered.",
       "source": "program library",
       "tags": [
@@ -695,7 +782,11 @@
         "SU(2)4"
       ],
       "pillarId": "cyclic-fusion",
-      "suggestedPillar": "cyclic-fusion"
+      "suggestedPillar": "cyclic-fusion",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "wootton-2014",
@@ -723,14 +814,19 @@
       "popularity": 70,
       "coreIdea": "Non-Abelian anyons are not automatically error-free. You still need an active decoder, because stray anyons and thermal pairs will pollute the fusion space.",
       "whyItMatters": "Kills a common overclaim in TQC: topology reduces error rates, it does not delete the need for correction. The DBE braid core must budget a decoder.",
-      "limitation": "Thresholds are model-dependent; later work (Lyons–Brown 2026) pushes the full fault-tolerance theorem further.",
+      "limitation": "Thresholds are model-dependent; later work (Lyons\u2013Brown 2026) pushes the full fault-tolerance theorem further.",
       "source": "program library / Phys. Rev. X",
       "tags": [
         "decoder",
         "threshold",
         "non-Abelian"
       ],
-      "pillarId": "majorana-braids"
+      "pillarId": "majorana-braids",
+      "claimIds": [
+        "E-S3",
+        "E-MZM"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "degrave-2022",
@@ -755,8 +851,8 @@
       "importance": 95,
       "confidence": 94,
       "popularity": 93,
-      "coreIdea": "A deep RL agent learned to command TCV’s magnetic coils in real time, producing standard shapes plus exotic ones (negative triangularity, snowflake, even two plasmas at once).",
-      "whyItMatters": "This is the existence proof that a learned controller can sit on a real tokamak at experimental rates — the actuator half of the DBE loop.",
+      "coreIdea": "A deep RL agent learned to command TCV\u2019s magnetic coils in real time, producing standard shapes plus exotic ones (negative triangularity, snowflake, even two plasmas at once).",
+      "whyItMatters": "This is the existence proof that a learned controller can sit on a real tokamak at experimental rates \u2014 the actuator half of the DBE loop.",
       "limitation": "It shapes plasma, it does not yet predict disruptions with a topological processor, and it does not touch Q = 1000 thermodynamics.",
       "source": "Nature / program library",
       "tags": [
@@ -764,7 +860,11 @@
         "RL",
         "RMP coils"
       ],
-      "pillarId": "plasma-rl"
+      "pillarId": "plasma-rl",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "google-anyons-2023",
@@ -788,8 +888,8 @@
       "importance": 92,
       "confidence": 88,
       "popularity": 94,
-      "coreIdea": "On a superconducting chip, researchers created and braided projective non-Abelian anyons (defects of a stabilizer code) and watched the fusion outcome change because of the braid — the first on-processor observation of non-Abelian exchange.",
-      "whyItMatters": "It showed that ‘braid an anyon’ is no longer only a thought experiment. The DBE core can cite a hardware precedent.",
+      "coreIdea": "On a superconducting chip, researchers created and braided projective non-Abelian anyons (defects of a stabilizer code) and watched the fusion outcome change because of the braid \u2014 the first on-processor observation of non-Abelian exchange.",
+      "whyItMatters": "It showed that \u2018braid an anyon\u2019 is no longer only a thought experiment. The DBE core can cite a hardware precedent.",
       "limitation": "These are code-level anyons on a noisy processor, not thermally protected quasiparticles of a topological phase. Error correction during the braid was not complete.",
       "source": "Nature / arXiv quant-ph",
       "tags": [
@@ -797,7 +897,11 @@
         "Ising anyons",
         "experiment"
       ],
-      "pillarId": "anyon-tqc"
+      "pillarId": "anyon-tqc",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "bluvstein-2023",
@@ -822,15 +926,19 @@
       "importance": 88,
       "confidence": 93,
       "popularity": 95,
-      "coreIdea": "A neutral-atom processor ran encoded logical circuits, transporting atoms to reconfigure connectivity — a hardware style that maps unusually well onto braiding worldlines.",
-      "whyItMatters": "Reconfigurable connectivity is what a braid compiler wants: move the support, don’t just pulse neighbours.",
+      "coreIdea": "A neutral-atom processor ran encoded logical circuits, transporting atoms to reconfigure connectivity \u2014 a hardware style that maps unusually well onto braiding worldlines.",
+      "whyItMatters": "Reconfigurable connectivity is what a braid compiler wants: move the support, don\u2019t just pulse neighbours.",
       "limitation": "Logical error rates still improve with more encoding, but this is not yet a topological anyon computer.",
       "source": "Nature",
       "tags": [
         "neutral atoms",
         "logical qubits"
       ],
-      "pillarId": "anyon-tqc"
+      "pillarId": "anyon-tqc",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "google-willow-2024",
@@ -854,14 +962,18 @@
       "popularity": 96,
       "coreIdea": "A superconducting surface-code experiment crossed the threshold: making the code bigger made the logical error smaller, the defining industrial test of QEC.",
       "whyItMatters": "It is the Abelian baseline the DBE must beat or complement. Surface-code discipline is also how solvable quantum doubles get their decoding theorems.",
-      "limitation": "Surface code is not universal by braiding; it still needs magic states. Non-Abelian orders are the DBE’s proposed shortcut, not a replacement for threshold physics.",
+      "limitation": "Surface code is not universal by braiding; it still needs magic states. Non-Abelian orders are the DBE\u2019s proposed shortcut, not a replacement for threshold physics.",
       "source": "Nature",
       "tags": [
         "surface code",
         "threshold",
         "Willow"
       ],
-      "pillarId": "anyon-tqc"
+      "pillarId": "anyon-tqc",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "ryan-anderson-2021",
@@ -886,15 +998,19 @@
       "importance": 82,
       "confidence": 92,
       "popularity": 80,
-      "coreIdea": "Quantinuum’s trapped-ion hardware repeatedly detected and corrected errors in real time — the same stack later used to prepare S₃ topological order.",
+      "coreIdea": "Quantinuum\u2019s trapped-ion hardware repeatedly detected and corrected errors in real time \u2014 the same stack later used to prepare S\u2083 topological order.",
       "whyItMatters": "It is the machine lineage of the 2026 anyon-universality experiment. Real-time correction is a prerequisite for adaptive anyon circuits.",
-      "limitation": "The encoded distance is still modest; ‘real-time’ is not yet ‘below-threshold logical algorithms at scale’.",
+      "limitation": "The encoded distance is still modest; \u2018real-time\u2019 is not yet \u2018below-threshold logical algorithms at scale\u2019.",
       "source": "program library / Phys. Rev. X",
       "tags": [
         "trapped ions",
         "H2",
         "FT QEC"
-      ]
+      ],
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "lu-2022",
@@ -921,13 +1037,17 @@
       "confidence": 90,
       "popularity": 72,
       "coreIdea": "Measurements plus feedback can prepare long-range entangled states (including topological order) with far shallower circuits than unitary evolution alone.",
-      "whyItMatters": "This is why S₃ and D₄ orders are now experimentally realistic: adaptive constant-depth recipes, not exponential cooling.",
+      "whyItMatters": "This is why S\u2083 and D\u2084 orders are now experimentally realistic: adaptive constant-depth recipes, not exponential cooling.",
       "limitation": "Adaptive circuits need fast, high-fidelity mid-circuit measurement. Not every platform has that.",
       "source": "program library / PRX Quantum",
       "tags": [
         "adaptive circuits",
         "long-range entanglement"
-      ]
+      ],
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "bravyi-2022",
@@ -954,7 +1074,7 @@
       "confidence": 91,
       "popularity": 74,
       "coreIdea": "For quantum doubles of solvable groups, you can prepare the ground state, create distant anyon pairs, and measure topological charge with constant-depth adaptive circuits.",
-      "whyItMatters": "Solvable groups include S₃. This paper is why the 2026 Quantinuum experiment is called scalable rather than a one-off state-prep stunt.",
+      "whyItMatters": "Solvable groups include S\u2083. This paper is why the 2026 Quantinuum experiment is called scalable rather than a one-off state-prep stunt.",
       "limitation": "Constant depth is in the adaptive model. Without fast feed-forward the circuits become linear depth, which is what the experiment actually ran at 54 qubits.",
       "source": "program library / arXiv quant-ph",
       "tags": [
@@ -962,7 +1082,11 @@
         "solvable group",
         "state preparation"
       ],
-      "pillarId": "cyclic-fusion"
+      "pillarId": "cyclic-fusion",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "tantivasadakarn-2022",
@@ -987,15 +1111,19 @@
       "importance": 84,
       "confidence": 90,
       "popularity": 71,
-      "coreIdea": "A finite-depth circuit plus one measurement layer can prepare a family of non-Abelian states (those with a Lagrangian subgroup), including D₄, without feed-forward.",
-      "whyItMatters": "It lowered the hardware bar for non-Abelian order and directly informed the later S₃ / D₄ experiments.",
-      "limitation": "D₄ is non-Abelian but not cyclic in the sense needed for fusion-universality; S₃ is the computationally richer sibling.",
+      "coreIdea": "A finite-depth circuit plus one measurement layer can prepare a family of non-Abelian states (those with a Lagrangian subgroup), including D\u2084, without feed-forward.",
+      "whyItMatters": "It lowered the hardware bar for non-Abelian order and directly informed the later S\u2083 / D\u2084 experiments.",
+      "limitation": "D\u2084 is non-Abelian but not cyclic in the sense needed for fusion-universality; S\u2083 is the computationally richer sibling.",
       "source": "arXiv quant-ph",
       "tags": [
         "D4",
         "measurement",
         "state preparation"
-      ]
+      ],
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "wormhole-2022",
@@ -1019,16 +1147,20 @@
       "importance": 72,
       "confidence": 70,
       "popularity": 91,
-      "coreIdea": "A tiny SYK-inspired circuit on Sycamore was interpreted as a traversable-wormhole teleportation protocol — holographic dynamics shrunk onto a handful of qubits.",
+      "coreIdea": "A tiny SYK-inspired circuit on Sycamore was interpreted as a traversable-wormhole teleportation protocol \u2014 holographic dynamics shrunk onto a handful of qubits.",
       "whyItMatters": "It is a proof-of-attitude: holographic encoding is something you can put on hardware, not only on a blackboard. The DBE encoder should stay this honest about scale.",
-      "limitation": "The system is extremely small; whether it is ‘gravity’ or a clever teleportation circuit is still argued. Do not overclaim.",
+      "limitation": "The system is extremely small; whether it is \u2018gravity\u2019 or a clever teleportation circuit is still argued. Do not overclaim.",
       "source": "program library / Nature",
       "tags": [
         "SYK",
         "teleportation",
         "toy holography"
       ],
-      "pillarId": "holographic-encode"
+      "pillarId": "holographic-encode",
+      "claimIds": [
+        "E-HOL"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "dbe-whitepaper",
@@ -1055,7 +1187,7 @@
       "importance": 100,
       "confidence": 55,
       "popularity": 40,
-      "coreIdea": "Five subsystems — Majorana braids, fracton memory, Floquet clock, holographic encoder, plasma actuators — should be one processor whose computational benchmark is extreme robustness and whose physical target is live fusion control.",
+      "coreIdea": "Five subsystems \u2014 Majorana braids, fracton memory, Floquet clock, holographic encoder, plasma actuators \u2014 should be one processor whose computational benchmark is extreme robustness and whose physical target is live fusion control.",
       "whyItMatters": "This is the integration contract of DBE V0 / V1. Every other paper in the observatory is scored against these boxes and the Q = 1000 north star.",
       "limitation": "Visionary, not a demonstrated machine. Quantum modules in the current simulator are stubs. Treat as a requirements document, not a result.",
       "source": "program manuscript",
@@ -1064,7 +1196,13 @@
         "modular stack",
         "Q=1000"
       ],
-      "pillarId": "fusion-q1000"
+      "pillarId": "fusion-q1000",
+      "claimIds": [
+        "E-5",
+        "E-S3",
+        "E-RL"
+      ],
+      "bindAction": "HOLD"
     },
     {
       "id": "dbe-s-revision",
@@ -1095,7 +1233,15 @@
         "Bremsstrahlung",
         "Lindblad"
       ],
-      "pillarId": "fusion-q1000"
+      "pillarId": "fusion-q1000",
+      "claimIds": [
+        "S-L1",
+        "S-L2",
+        "S-L3",
+        "S-L4",
+        "S-Q"
+      ],
+      "bindAction": "HOLD"
     },
     {
       "id": "klocke-2024",
@@ -1127,7 +1273,11 @@
         "spin liquid",
         "Ising anyons",
         "MTJ"
-      ]
+      ],
+      "claimIds": [
+        "E-MZM"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "hodge-2025",
@@ -1160,7 +1310,11 @@
         "projective measurement",
         "encoding switch"
       ],
-      "suggestedPillar": "cyclic-fusion"
+      "suggestedPillar": "cyclic-fusion",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "lo-2026",
@@ -1195,9 +1349,9 @@
       "importance": 99,
       "confidence": 90,
       "popularity": 92,
-      "coreIdea": "On Quantinuum’s 54-qubit H2, the team prepared S₃ quantum-double topological order, encoded a qutrit in a pair of C₂ fluxes, and used braiding plus fusion measurements as a universal gate set — including a topologically prepared magic state. They also trapped a single non-Abelian anyon on a torus, a signature of cyclic fusion rules.",
+      "coreIdea": "On Quantinuum\u2019s 54-qubit H2, the team prepared S\u2083 quantum-double topological order, encoded a qutrit in a pair of C\u2082 fluxes, and used braiding plus fusion measurements as a universal gate set \u2014 including a topologically prepared magic state. They also trapped a single non-Abelian anyon on a torus, a signature of cyclic fusion rules.",
       "whyItMatters": "This is the flagship 2026 result for the DBE topological core: the smallest non-Abelian group is rich enough for universality and simple enough to prepare. Fusion is now an experimental primitive, not a footnote.",
-      "limitation": "Linear-depth circuits with post-selection at this size; constant-depth adaptive recipes exist in theory. Absolute flux encoding has a local ‘origin’ vulnerability; a relative bureau-of-standards encoding is the fully topological fix.",
+      "limitation": "Linear-depth circuits with post-selection at this size; constant-depth adaptive recipes exist in theory. Absolute flux encoding has a local \u2018origin\u2019 vulnerability; a relative bureau-of-standards encoding is the fully topological fix.",
       "source": "Nature / arXiv 2601.20956",
       "tags": [
         "S3",
@@ -1206,7 +1360,11 @@
         "cyclic fusion"
       ],
       "pillarId": "cyclic-fusion",
-      "suggestedPillar": "cyclic-fusion"
+      "suggestedPillar": "cyclic-fusion",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "lyons-2026",
@@ -1230,7 +1388,7 @@
       "importance": 91,
       "confidence": 82,
       "popularity": 70,
-      "coreIdea": "A full error-correction scheme for braiding anyons, with a threshold: if local noise is below a constant, the failure rate of a universal anyonic computation can be made arbitrarily small. Worked out in detail for D(S₃).",
+      "coreIdea": "A full error-correction scheme for braiding anyons, with a threshold: if local noise is below a constant, the failure rate of a universal anyonic computation can be made arbitrarily small. Worked out in detail for D(S\u2083).",
       "whyItMatters": "Kitaev argued topology is robust. This paper tries to turn that slogan into a threshold theorem for the universal (braid + fusion) gate set the 2026 experiment uses.",
       "limitation": "Preprint. Threshold constants and decoder overhead will decide whether this is practical on near-term hardware.",
       "source": "program library / arXiv quant-ph",
@@ -1239,7 +1397,11 @@
         "D(S3)",
         "fault tolerance"
       ],
-      "pillarId": "cyclic-fusion"
+      "pillarId": "cyclic-fusion",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "zhu-2026",
@@ -1264,7 +1426,7 @@
       "importance": 80,
       "confidence": 76,
       "popularity": 64,
-      "coreIdea": "Extends Kitaev’s non-Abelian topological codes to qLDPC / combinatorial TQFT settings, aiming at native non-Clifford resources without jumping to 3D product codes.",
+      "coreIdea": "Extends Kitaev\u2019s non-Abelian topological codes to qLDPC / combinatorial TQFT settings, aiming at native non-Clifford resources without jumping to 3D product codes.",
       "whyItMatters": "If you can finish universality in 2D, the DBE core stays planar and compatible with anyon braiding and tokamak-side 2D control maps.",
       "limitation": "Dense theory preprint. Hardware mapping and decoder cost are not yet experimental.",
       "source": "program library / arXiv quant-ph",
@@ -1273,7 +1435,12 @@
         "magic states",
         "2D universality"
       ],
-      "suggestedPillar": "nonabelian-qldpc"
+      "suggestedPillar": "nonabelian-qldpc",
+      "claimIds": [
+        "E-QEC",
+        "E-S3"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "magdalena-2026",
@@ -1299,7 +1466,7 @@
       "confidence": 78,
       "popularity": 58,
       "coreIdea": "A non-Pauli stabilizer code that completes a universal gate set for toric/surface codes in strictly two dimensions, with a just-in-time decoder that handles mid-circuit X corrections.",
-      "whyItMatters": "Another 2D-universality route. Complements S₃ fusion: you might mix Abelian surface-code memory with a non-Pauli universality patch.",
+      "whyItMatters": "Another 2D-universality route. Complements S\u2083 fusion: you might mix Abelian surface-code memory with a non-Pauli universality patch.",
       "limitation": "Requires mid-circuit corrections; decoder latency vs plasma-control deadlines is unanalysed.",
       "source": "program library / arXiv quant-ph",
       "tags": [
@@ -1307,7 +1474,11 @@
         "JIT decoder",
         "surface code"
       ],
-      "suggestedPillar": "nonabelian-qldpc"
+      "suggestedPillar": "nonabelian-qldpc",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "hu-2026-fth",
@@ -1341,7 +1512,12 @@
         "fracton",
         "holography"
       ],
-      "suggestedPillar": "fracton-holography"
+      "suggestedPillar": "fracton-holography",
+      "claimIds": [
+        "E-FR",
+        "E-HOL"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "hopkin-2026",
@@ -1363,7 +1539,7 @@
       "importance": 76,
       "confidence": 74,
       "popularity": 48,
-      "coreIdea": "Compactifying fracton models yields translation-invariant qLDPC codes — a way to harvest fracton error confinement in a more conventional code family.",
+      "coreIdea": "Compactifying fracton models yields translation-invariant qLDPC codes \u2014 a way to harvest fracton error confinement in a more conventional code family.",
       "whyItMatters": "A possible compilation path: keep fracton physics as the design principle, ship qLDPC as the engineering object.",
       "limitation": "Code parameters vs Haah-type memory time are not yet a head-to-head experimental comparison.",
       "source": "program library / arXiv quant-ph",
@@ -1371,7 +1547,11 @@
         "qLDPC",
         "compactification"
       ],
-      "pillarId": "fracton-memory"
+      "pillarId": "fracton-memory",
+      "claimIds": [
+        "E-FR"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "canossa-2026",
@@ -1394,7 +1574,7 @@
       "importance": 73,
       "confidence": 72,
       "popularity": 50,
-      "coreIdea": "Subsystem symmetries — symmetries that act only on lines or planes — are the right language for both fracton order and a class of QEC codes.",
+      "coreIdea": "Subsystem symmetries \u2014 symmetries that act only on lines or planes \u2014 are the right language for both fracton order and a class of QEC codes.",
       "whyItMatters": "Gives the DBE memory a symmetry-based interface contract, useful for holographic duals and for writing tests.",
       "limitation": "Theory survey / construction; no hardware demonstration.",
       "source": "program library / arXiv quant-ph",
@@ -1402,7 +1582,11 @@
         "subsystem symmetry",
         "fracton QEC"
       ],
-      "suggestedPillar": "fracton-holography"
+      "suggestedPillar": "fracton-holography",
+      "claimIds": [
+        "E-FR"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "biswas-2026",
@@ -1411,7 +1595,7 @@
         "Debopriyo Biswas",
         "Gong Cheng",
         "Krishnanand Karthikeyan",
-        "Diana Muñoz-Valencia",
+        "Diana Mu\u00f1oz-Valencia",
         "Vincent P. Su",
         "Hrant Gharibyan",
         "Daiwei Zhu",
@@ -1431,16 +1615,20 @@
       "importance": 77,
       "confidence": 70,
       "popularity": 68,
-      "coreIdea": "The HaPPY holographic code, a hyperbolic tensor-network QEC, was run on trapped ions and showed gravity-like signatures in the code’s entanglement geometry.",
-      "whyItMatters": "Moves holographic encoding from analogy to a device-level experiment. Directly relevant to replacing the simulator’s block-average ‘encoder’.",
-      "limitation": "Toy code, small system. ‘Gravity-like’ is a diagnostic, not laboratory gravity.",
+      "coreIdea": "The HaPPY holographic code, a hyperbolic tensor-network QEC, was run on trapped ions and showed gravity-like signatures in the code\u2019s entanglement geometry.",
+      "whyItMatters": "Moves holographic encoding from analogy to a device-level experiment. Directly relevant to replacing the simulator\u2019s block-average \u2018encoder\u2019.",
+      "limitation": "Toy code, small system. \u2018Gravity-like\u2019 is a diagnostic, not laboratory gravity.",
       "source": "program library / arXiv quant-ph",
       "tags": [
         "HaPPY",
         "trapped ions",
         "tensor network"
       ],
-      "pillarId": "holographic-encode"
+      "pillarId": "holographic-encode",
+      "claimIds": [
+        "E-HOL"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "xu-2026-fqh",
@@ -1473,7 +1661,11 @@
         "FQH",
         "constant depth",
         "Moore-Read"
-      ]
+      ],
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "vadali-2026",
@@ -1500,15 +1692,19 @@
       "importance": 80,
       "confidence": 80,
       "popularity": 60,
-      "coreIdea": "Whether a non-Abelian topological order survives messy preparation and decoherence is answered by a statistical-mechanics model whose symmetries track the corrupting anyons. Applied to D₄.",
-      "whyItMatters": "DBE cannot assume a perfect topological phase. This is the right language for ‘how much noise kills the braid core’.",
-      "limitation": "Worked example is D₄, which is not fusion-universal. S₃ stability still needs the same treatment.",
+      "coreIdea": "Whether a non-Abelian topological order survives messy preparation and decoherence is answered by a statistical-mechanics model whose symmetries track the corrupting anyons. Applied to D\u2084.",
+      "whyItMatters": "DBE cannot assume a perfect topological phase. This is the right language for \u2018how much noise kills the braid core\u2019.",
+      "limitation": "Worked example is D\u2084, which is not fusion-universal. S\u2083 stability still needs the same treatment.",
       "source": "program library / arXiv quant-ph",
       "tags": [
         "decoherence",
         "D4",
         "stat-mech"
-      ]
+      ],
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "jing-2026",
@@ -1535,14 +1731,18 @@
       "confidence": 79,
       "popularity": 54,
       "coreIdea": "Matching decoders fail once fusion rules mix anyon species. An ILP decoder uses the actual fusion data and handles correlated noise for both Abelian and non-Abelian codes.",
-      "whyItMatters": "S₃ fusion space is exactly the setting where pair-matching is the wrong algorithm. This is a candidate decoder for the DBE core.",
+      "whyItMatters": "S\u2083 fusion space is exactly the setting where pair-matching is the wrong algorithm. This is a candidate decoder for the DBE core.",
       "limitation": "ILP scaling vs real-time plasma control is the open engineering question.",
       "source": "program library / arXiv quant-ph",
       "tags": [
         "decoder",
         "ILP",
         "fusion rules"
-      ]
+      ],
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "hu-2026-qudits",
@@ -1565,15 +1765,19 @@
       "importance": 74,
       "confidence": 73,
       "popularity": 46,
-      "coreIdea": "A representation-theoretic way to carve protected logical qudits out of quantum doubles — the same family as S₃.",
-      "whyItMatters": "The 2026 experiment encodes a qutrit in C₂ fluxes. This paper is the algebraic hygiene for that encoding.",
+      "coreIdea": "A representation-theoretic way to carve protected logical qudits out of quantum doubles \u2014 the same family as S\u2083.",
+      "whyItMatters": "The 2026 experiment encodes a qutrit in C\u2082 fluxes. This paper is the algebraic hygiene for that encoding.",
       "limitation": "Algebraic; does not replace the bureau-of-standards relative encoding against local leakage.",
       "source": "program library / arXiv quant-ph",
       "tags": [
         "quantum double",
         "qudit",
         "S3"
-      ]
+      ],
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "diluca-2026",
@@ -1596,7 +1800,7 @@
       "importance": 71,
       "confidence": 74,
       "popularity": 63,
-      "coreIdea": "Quarter-charged quasiparticles — the FQH objects that can host non-Abelian statistics — are trapped in bilayer graphene, a materials platform rather than a gate-model simulation.",
+      "coreIdea": "Quarter-charged quasiparticles \u2014 the FQH objects that can host non-Abelian statistics \u2014 are trapped in bilayer graphene, a materials platform rather than a gate-model simulation.",
       "whyItMatters": "A reminder that anyons also live in real Hall fluids, not only in quantum processors. Parallel hardware path for the braid core.",
       "limitation": "Trapping a charge-e/4 object is not yet braiding it. Interferometry remains the hard step.",
       "source": "program library / arXiv cond-mat",
@@ -1604,7 +1808,11 @@
         "graphene",
         "FQH",
         "e/4"
-      ]
+      ],
+      "claimIds": [
+        "E-MZM"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "foss-feig-2023",
@@ -1634,11 +1842,15 @@
       "tags": [
         "adaptive",
         "feed-forward"
-      ]
+      ],
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "rothstein-2026",
-      "title": "Nuclear Fusion 66, 076050 (2026)",
+      "title": "Integrated AI plasma control on DIII-D",
       "authors": [
         "Rothstein et al."
       ],
@@ -1653,18 +1865,23 @@
       ],
       "role": "lookback",
       "foundational": false,
-      "importance": 73,
-      "confidence": 80,
-      "popularity": 52,
-      "coreIdea": "A 2026 Nuclear Fusion result in the program library on confinement / control, used here as the contemporary plasma-journal anchor next to the TCV RL experiment.",
-      "whyItMatters": "Keeps the plasma pillar current, not frozen at 2022. DBE control claims must still speak this journal’s language (profiles, ELMs, coils).",
-      "limitation": "Does not by itself couple to topological compute; integration remains the DBE’s job.",
+      "importance": 88,
+      "confidence": 86,
+      "popularity": 64,
+      "coreIdea": "A 2026 Nuclear Fusion paper describing an integrated AI control system on DIII-D \u2014 diagnostics in, coil/gyrotron commands out \u2014 the published attach surface for Bus A.",
+      "whyItMatters": "Modular interface exists. This is how DBE attaches to a machine that is already running, without owning the tokamak.",
+      "limitation": "Does not put a quantum processor in the loop, and should not: tearing growth times vs job-queue latency is a kill test.",
       "source": "program library / Nuclear Fusion",
       "tags": [
-        "tokamak",
-        "confinement"
+        "DIII-D",
+        "AI control",
+        "Bus A"
       ],
-      "pillarId": "plasma-rl"
+      "pillarId": "plasma-rl",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "natcomms-2025",
@@ -1687,12 +1904,16 @@
       "confidence": 82,
       "popularity": 60,
       "coreIdea": "A 2025 Nature Communications paper in the program library on quantum / topological matter, retained as a lookback pillar-adjacent source.",
-      "whyItMatters": "Year-back corpus: the observatory’s first runs are not allowed to be only this week’s arXiv.",
-      "limitation": "Secondary to the S₃ / RL / holography flagships for DBE scoring.",
+      "whyItMatters": "Year-back corpus: the observatory\u2019s first runs are not allowed to be only this week\u2019s arXiv.",
+      "limitation": "Secondary to the S\u2083 / RL / holography flagships for DBE scoring.",
       "source": "program library / Nature Communications",
       "tags": [
         "lookback"
-      ]
+      ],
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "tamiya-2026",
@@ -1715,7 +1936,7 @@
       "importance": 86,
       "confidence": 84,
       "popularity": 72,
-      "coreIdea": "Real gates often make coherent over-rotations, not random bit flips. This paper proves that quantum LDPC codes with a bounded number of logicals — including the surface code — still have a positive threshold against coherent Z rotations.",
+      "coreIdea": "Real gates often make coherent over-rotations, not random bit flips. This paper proves that quantum LDPC codes with a bounded number of logicals \u2014 including the surface code \u2014 still have a positive threshold against coherent Z rotations.",
       "whyItMatters": "DBE braids will be miscalibrated, not just Poisson-noisy. A theorem for coherent errors is more honest than a stochastic threshold.",
       "limitation": "Proof is for coherent Z-type rotations and ML Pauli recovery; generic non-Pauli coherent noise and non-Abelian decoders are not covered.",
       "source": "arXiv quant-ph recent",
@@ -1723,7 +1944,11 @@
         "coherent noise",
         "threshold",
         "surface code"
-      ]
+      ],
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "polley-2026",
@@ -1747,7 +1972,7 @@
       "importance": 84,
       "confidence": 70,
       "popularity": 68,
-      "coreIdea": "Compile molecular and condensed-phase time evolution onto Fibonacci and Ising anyons using Solovay–Kitaev, from two-level systems up through spin-boson models and reaction kinetics.",
+      "coreIdea": "Compile molecular and condensed-phase time evolution onto Fibonacci and Ising anyons using Solovay\u2013Kitaev, from two-level systems up through spin-boson models and reaction kinetics.",
       "whyItMatters": "This is a proposed new pillar: the topological core should simulate dynamics, not only store a stability bit. That is how a braid engine becomes a plasma predictor.",
       "limitation": "Compilation study, not a running topological processor. Resource counts vs tokamak real-time remain open, and chaos/I/O no-gos still apply.",
       "source": "arXiv quant-ph recent",
@@ -1756,13 +1981,17 @@
         "Solovay-Kitaev",
         "molecular dynamics"
       ],
-      "suggestedPillar": "topo-dynamics"
+      "suggestedPillar": "topo-dynamics",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "flores-2026",
       "title": "Non-Abelian anyon condensation: a path-integral Monte Carlo approach",
       "authors": [
-        "Rafael Flores-Calderón",
+        "Rafael Flores-Calder\u00f3n",
         "Frank Pollmann",
         "Michael Knap"
       ],
@@ -1780,15 +2009,19 @@
       "importance": 79,
       "confidence": 80,
       "popularity": 61,
-      "coreIdea": "A sign-free Monte Carlo method for condensing anyons in Kitaev quantum doubles. For S₃, proliferating a non-Abelian electric anyon drives a first-order transition in which all nontrivial electric anyons condense.",
-      "whyItMatters": "S₃ is the 2026 hardware anyon theory. Condensation/confinement diagrams tell you which noise processes destroy the phase the DBE wants to sit in.",
+      "coreIdea": "A sign-free Monte Carlo method for condensing anyons in Kitaev quantum doubles. For S\u2083, proliferating a non-Abelian electric anyon drives a first-order transition in which all nontrivial electric anyons condense.",
+      "whyItMatters": "S\u2083 is the 2026 hardware anyon theory. Condensation/confinement diagrams tell you which noise processes destroy the phase the DBE wants to sit in.",
       "limitation": "Equilibrium path-integral, not a driven reactor environment. First-order transitions can be unforgiving in a device.",
       "source": "arXiv cond-mat.str-el recent",
       "tags": [
         "S3",
         "condensation",
         "QMC"
-      ]
+      ],
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "andreesen-2026",
@@ -1822,14 +2055,18 @@
         "distributed QC",
         "compiler",
         "modularity"
-      ]
+      ],
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "agirre-2026",
-      "title": "Statistical delocalization in the anyonic Aubry–André model",
+      "title": "Statistical delocalization in the anyonic Aubry\u2013Andr\u00e9 model",
       "authors": [
         "Andoni Agirre",
-        "André Eckardt",
+        "Andr\u00e9 Eckardt",
         "Tobias Grass"
       ],
       "year": 2026,
@@ -1846,15 +2083,19 @@
       "importance": 64,
       "confidence": 78,
       "popularity": 50,
-      "coreIdea": "Exchange statistics alone can push an anyonic chain toward delocalisation, even without density-density interactions — the opposite of the usual many-body localisation story.",
+      "coreIdea": "Exchange statistics alone can push an anyonic chain toward delocalisation, even without density-density interactions \u2014 the opposite of the usual many-body localisation story.",
       "whyItMatters": "A reminder that anyon statistics is a dynamical resource, not only a gate-set label. Could matter for how information spreads in a noisy braid core.",
       "limitation": "1D quasiperiodic model. Far from 2D topological order or a reactor.",
       "source": "arXiv quant-ph recent",
       "tags": [
         "MBL",
-        "Aubry-André",
+        "Aubry-Andr\u00e9",
         "statistics"
-      ]
+      ],
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "sun-2026-floquet-majorana",
@@ -1878,7 +2119,7 @@
       "importance": 83,
       "confidence": 76,
       "popularity": 59,
-      "coreIdea": "A Floquet code built from the Majorana XYZ subsystem code. Depending on lattice parity and the measurement schedule, a logical qubit can be static or forced to walk with the cycle — the same degree of freedom in two dynamical costumes.",
+      "coreIdea": "A Floquet code built from the Majorana XYZ subsystem code. Depending on lattice parity and the measurement schedule, a logical qubit can be static or forced to walk with the cycle \u2014 the same degree of freedom in two dynamical costumes.",
       "whyItMatters": "Suggested new pillar: the clock and the Majorana register can be one object. That collapses two DBE subsystems into a single Floquet-Majorana layer.",
       "limitation": "Lattice construction. Local Majorana parity measurements at scale are still hardware-hard.",
       "source": "arXiv quant-ph recent",
@@ -1887,7 +2128,12 @@
         "Majorana XYZ",
         "logical dynamics"
       ],
-      "suggestedPillar": "floquet-majorana-codes"
+      "suggestedPillar": "floquet-majorana-codes",
+      "claimIds": [
+        "E-MZM",
+        "E-TC"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "jennings-2026",
@@ -1910,7 +2156,7 @@
       "confidence": 86,
       "popularity": 67,
       "coreIdea": "A sober resource analysis of quantum algorithms for nonlinear fluids: where a speedup can exist, and which I/O and chaos bottlenecks eat it.",
-      "whyItMatters": "DBE-S and the plasma controller will be tempted to claim quantum CFD. This paper is the adult supervision: bounded advantage, explicit bottlenecks — exactly the ‘don’t overclaim’ discipline the program asked for.",
+      "whyItMatters": "DBE-S and the plasma controller will be tempted to claim quantum CFD. This paper is the adult supervision: bounded advantage, explicit bottlenecks \u2014 exactly the \u2018don\u2019t overclaim\u2019 discipline the program asked for.",
       "limitation": "Does not model a tokamak, and a bounded speedup is not a Q = 1000 plan.",
       "source": "PRX Quantum / this week",
       "tags": [
@@ -1919,7 +2165,11 @@
         "chaos"
       ],
       "suggestedPillar": "topo-dynamics",
-      "pillarId": "fusion-q1000"
+      "pillarId": "fusion-q1000",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "glittum-2026",
@@ -1943,7 +2193,7 @@
       "importance": 66,
       "confidence": 77,
       "popularity": 49,
-      "coreIdea": "Classical spiral spin liquids host half-vortices whose fusion rules look like Ising anyons — fractional 2π windings in spin and momentum space.",
+      "coreIdea": "Classical spiral spin liquids host half-vortices whose fusion rules look like Ising anyons \u2014 fractional 2\u03c0 windings in spin and momentum space.",
       "whyItMatters": "A condensed-matter appearance of Ising-like fusion outside the usual Kitaev/FQH settings. Materials intuition for the braid core.",
       "limitation": "Classical topological defects, not demonstrated non-Abelian quantum computation.",
       "source": "arXiv cond-mat.str-el recent",
@@ -1951,14 +2201,18 @@
         "spin liquid",
         "Ising fusion",
         "vortices"
-      ]
+      ],
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "stangier-2026",
-      "title": "Why Cooper pairs live in AdS₂: a spectral analysis of the Yukawa-SYK model",
+      "title": "Why Cooper pairs live in AdS\u2082: a spectral analysis of the Yukawa-SYK model",
       "authors": [
         "Veronika Carolin Stangier",
-        "Jörg Schmalian"
+        "J\u00f6rg Schmalian"
       ],
       "year": 2026,
       "date": "2026-08-26",
@@ -1973,7 +2227,7 @@
       "importance": 60,
       "confidence": 78,
       "popularity": 47,
-      "coreIdea": "A spectral look at why pairing in a Yukawa-SYK model organises itself as an AdS₂ problem — holography showing up inside a condensed-matter Hamiltonian.",
+      "coreIdea": "A spectral look at why pairing in a Yukawa-SYK model organises itself as an AdS\u2082 problem \u2014 holography showing up inside a condensed-matter Hamiltonian.",
       "whyItMatters": "Keeps the holography pillar connected to pairing/superconductivity, not only to toy QEC codes.",
       "limitation": "Not a plasma compressor and not a fault-tolerant encoder.",
       "source": "program library / arXiv hep-th",
@@ -1981,7 +2235,11 @@
         "SYK",
         "AdS2",
         "pairing"
-      ]
+      ],
+      "claimIds": [
+        "E-HOL"
+      ],
+      "bindAction": "INCLUDE"
     },
     {
       "id": "dehghani-2026",
@@ -2007,17 +2265,575 @@
       "popularity": 54,
       "coreIdea": "Global decoders are accurate but slow; strictly local rules are fast but miss long-range error structure. This paper makes that tradeoff operational for the dephased toric code with a quasi-local, error-adaptive decoder.",
       "whyItMatters": "A DBE braid core sitting next to a tokamak cannot wait on a globally optimal matching. Decoder latency is part of the control budget.",
-      "limitation": "Abelian toric code, not S₃ / non-Abelian fusion decoding. Quasi-local is still not a real-time plasma-control proof.",
+      "limitation": "Abelian toric code, not S\u2083 / non-Abelian fusion decoding. Quasi-local is still not a real-time plasma-control proof.",
       "source": "program library / arXiv quant-ph",
       "tags": [
         "decoder",
         "toric code",
         "latency"
       ],
-      "pillarId": "anyon-tqc"
+      "pillarId": "anyon-tqc",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "INCLUDE"
+    },
+    {
+      "id": "majorana-landscape-2026",
+      "title": "Landscape geometry of Majorana zero modes in inhomogeneous superconductors",
+      "authors": [
+        "arXiv:2609.18138"
+      ],
+      "year": 2026,
+      "date": "2026-09-16",
+      "venue": "arXiv preprint",
+      "arxiv": "2609.18138",
+      "url": "https://arxiv.org/abs/2609.18138",
+      "fields": [
+        "majorana",
+        "topology"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 71,
+      "confidence": 62,
+      "popularity": 58,
+      "coreIdea": "When a superconductor is messy \u2014 not a perfect crystal \u2014 the usual band-topology labels stop answering the only engineering question that matters: does a Majorana zero mode still sit at this defect? The paper recasts that as a geometric landscape problem.",
+      "whyItMatters": "DBE treats Majorana as a watch item, not a load-bearing qubit. A geometry that can fail in inhomogeneous devices is exactly the distinguisher the freeze demanded.",
+      "limitation": "Theory on inhomogeneous models, not an independent X and Z logical qubit. Cannot raise E-MZM above C1.",
+      "source": "arXiv cond-mat.mes-hall / 2026-09-20 daily",
+      "tags": [
+        "daily-run",
+        "Majorana",
+        "mimic-aware"
+      ],
+      "claimIds": [
+        "E-MZM"
+      ],
+      "bindAction": "INCLUDE"
+    },
+    {
+      "id": "csl-spin1-2026",
+      "title": "Non-Abelian chiral spin liquid in a spin-1 antiferromagnet on the square lattice",
+      "authors": [
+        "arXiv:2609.15061"
+      ],
+      "year": 2026,
+      "date": "2026-09-14",
+      "venue": "arXiv preprint",
+      "arxiv": "2609.15061",
+      "url": "https://arxiv.org/abs/2609.15061",
+      "fields": [
+        "anyons",
+        "tqc",
+        "topology"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 74,
+      "confidence": 64,
+      "popularity": 55,
+      "coreIdea": "A short-range spin-1 magnet on the square lattice is argued to host a non-Abelian chiral spin liquid \u2014 the condensed-matter cousin of Fibonacci/Ising anyons \u2014 without needing a fractional quantum Hall fluid.",
+      "whyItMatters": "Keeps the anyon library honest: S3 on a processor is the hardware primitive we have; lattice spin liquids are a parallel materials path, not a replacement.",
+      "limitation": "Numerical / model evidence. Not a gate set, not a reactor part, and not S3.",
+      "source": "arXiv cond-mat.str-el / 2026-09-20 daily",
+      "tags": [
+        "daily-run",
+        "spin liquid"
+      ],
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "INCLUDE"
+    },
+    {
+      "id": "majorana-shotnoise-2026",
+      "title": "Shot noise signatures of Majorana-assisted transport in an Aharonov-Bohm interferometer",
+      "authors": [
+        "arXiv:2609.15966"
+      ],
+      "year": 2026,
+      "date": "2026-09-14",
+      "venue": "arXiv preprint",
+      "arxiv": "2609.15966",
+      "url": "https://arxiv.org/abs/2609.15966",
+      "fields": [
+        "majorana"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 68,
+      "confidence": 60,
+      "popularity": 52,
+      "coreIdea": "Shot noise and the Fano factor in a two-dot Aharonov-Bohm loop coupled to topological wires are proposed as a transport fingerprint of Majorana-assisted tunneling.",
+      "whyItMatters": "The freeze requires a distinguisher for trivial Andreev / YSR mimics. Noise interferometry is one proposed test, not a completed one.",
+      "limitation": "Transport signatures remain mimic-prone. No public X+Z logical. Caps E-MZM at C1.",
+      "source": "arXiv cond-mat.mes-hall / 2026-09-20 daily",
+      "tags": [
+        "daily-run",
+        "Majorana",
+        "distinguisher"
+      ],
+      "claimIds": [
+        "E-MZM"
+      ],
+      "bindAction": "INCLUDE"
+    },
+    {
+      "id": "floquet-fracton-2026",
+      "title": "Fractalizing spacetime: Floquet codes with fractonic excitations that are immobile in space and time",
+      "authors": [
+        "arXiv:2609.03703"
+      ],
+      "year": 2026,
+      "date": "2026-09-03",
+      "venue": "arXiv preprint",
+      "arxiv": "2609.03703",
+      "url": "https://arxiv.org/abs/2609.03703",
+      "fields": [
+        "fracton",
+        "time-crystal",
+        "tqc"
+      ],
+      "role": "month",
+      "foundational": false,
+      "importance": 79,
+      "confidence": 66,
+      "popularity": 54,
+      "coreIdea": "A Floquet (periodically measured) code whose excitations cannot move in space or in time \u2014 a spacetime fracton. Memory and clock become the same object on paper.",
+      "whyItMatters": "This is the cleanest 2026 argument for unifying two HOLD items (fracton memory and time-crystal clock). The protocol still forbids making either load-bearing hardware.",
+      "limitation": "Circuit theory. Does not beat the D1 / cut-as-hardware rule. Queued as a new-pillar candidate, not auto-promoted.",
+      "source": "arXiv quant-ph / month window",
+      "tags": [
+        "new-pillar-candidate",
+        "Floquet",
+        "fracton"
+      ],
+      "claimIds": [
+        "E-FR",
+        "E-TC"
+      ],
+      "suggestedPillar": "spacetime-fractons",
+      "bindAction": "HOLD"
+    },
+    {
+      "id": "fusion-eq-2026",
+      "title": "The Fusion Equilibrium Challenge: inferring magnetic geometry without magnetic diagnostics",
+      "authors": [
+        "arXiv:2609.01750"
+      ],
+      "year": 2026,
+      "date": "2026-09-01",
+      "venue": "arXiv preprint",
+      "arxiv": "2609.01750",
+      "url": "https://arxiv.org/abs/2609.01750",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "role": "month",
+      "foundational": false,
+      "importance": 77,
+      "confidence": 70,
+      "popularity": 56,
+      "coreIdea": "A challenge problem: reconstruct tokamak magnetic geometry when the usual magnetic probes are missing or untrusted \u2014 the exact I/O shape a modular controller must survive.",
+      "whyItMatters": "Bus A is 'diagnostics in, actuators out.' A published equilibrium-inference challenge is a bake-off surface for the control container.",
+      "limitation": "Challenge paper, not a DIII-D shot that beat the lab baseline. Does not by itself pass M2.",
+      "source": "arXiv physics.plasm-ph",
+      "tags": [
+        "Bus A",
+        "equilibrium",
+        "control API"
+      ],
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "INCLUDE"
+    },
+    {
+      "id": "virtual-circuits-2026",
+      "title": "Real-time virtual circuits for plasma shape control via neural network emulators: experimental demonstration",
+      "authors": [
+        "arXiv:2608.28468"
+      ],
+      "year": 2026,
+      "date": "2026-08-28",
+      "venue": "arXiv preprint",
+      "arxiv": "2608.28468",
+      "url": "https://arxiv.org/abs/2608.28468",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "role": "month",
+      "foundational": false,
+      "importance": 82,
+      "confidence": 74,
+      "popularity": 60,
+      "coreIdea": "Neural emulators stand in for slow magnetic diagnostics so a shape controller can close the loop in real time. Demonstrated as virtual circuits, not as a new coil.",
+      "whyItMatters": "This is the attach language of Bus A: latency-bounded commands, safe-hold on packet loss, no quantum hardware required.",
+      "limitation": "Preprint. Auto-Gate A5 blocks a C raise from bare arXiv. Strengthens the attach story, not the C score.",
+      "source": "arXiv physics.plasm-ph",
+      "tags": [
+        "Bus A",
+        "shape control",
+        "emulator"
+      ],
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "INCLUDE"
+    },
+    {
+      "id": "braid-no-transport-2026",
+      "title": "Reconstructing non-Abelian braiding and fusion without anyon transport",
+      "authors": [
+        "arXiv:2608.04103"
+      ],
+      "year": 2026,
+      "date": "2026-08-04",
+      "venue": "arXiv preprint",
+      "arxiv": "2608.04103",
+      "url": "https://arxiv.org/abs/2608.04103",
+      "fields": [
+        "anyons",
+        "tqc",
+        "braid-knot"
+      ],
+      "role": "lookback",
+      "foundational": false,
+      "importance": 85,
+      "confidence": 72,
+      "popularity": 58,
+      "coreIdea": "You do not have to drag anyons across a chip to know their braid and fusion data. Measurement-based reconstruction can recover the same topological matrices.",
+      "whyItMatters": "S3 on H2 already used linear-depth motion plus fusion. A transport-free reconstruction is how those primitives become constant-depth adaptive circuits \u2014 the scalable story in the Nature 2026 paper.",
+      "limitation": "Theory / numerics, not a second hardware replica of Lo et al. INCLUDE under E-S3; no C move.",
+      "source": "arXiv quant-ph",
+      "tags": [
+        "braiding",
+        "fusion",
+        "measurement-based"
+      ],
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "INCLUDE"
+    },
+    {
+      "id": "runaway-control-2026",
+      "title": "Runaway electron control by self-excited waves",
+      "authors": [
+        "arXiv:2609.08051"
+      ],
+      "year": 2026,
+      "date": "2026-09-07",
+      "venue": "arXiv preprint",
+      "arxiv": "2609.08051",
+      "url": "https://arxiv.org/abs/2609.08051",
+      "fields": [
+        "plasma"
+      ],
+      "role": "month",
+      "foundational": false,
+      "importance": 66,
+      "confidence": 72,
+      "popularity": 48,
+      "coreIdea": "Runaway electrons \u2014 the beam that can punch a hole in a tokamak wall after a disruption \u2014 can be scattered by waves the plasma itself grows, not only by an external antenna.",
+      "whyItMatters": "Bus A\u2019s fail-safe is disruption handling. A self-excited-wave actuator is a candidate command channel next to coils and pellets.",
+      "limitation": "Not RL, not a published DIII-D API win. INCLUDE only.",
+      "source": "arXiv physics.plasm-ph",
+      "tags": [
+        "disruption",
+        "runaway"
+      ],
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "INCLUDE"
+    },
+    {
+      "id": "holographic-ions-2026",
+      "title": "Holographic quantum codes with trapped ions",
+      "authors": [
+        "arXiv:2607.16503"
+      ],
+      "year": 2026,
+      "date": "2026-07-17",
+      "venue": "arXiv preprint",
+      "arxiv": "2607.16503",
+      "url": "https://arxiv.org/abs/2607.16503",
+      "fields": [
+        "holography",
+        "tqc"
+      ],
+      "role": "lookback",
+      "foundational": false,
+      "importance": 64,
+      "confidence": 68,
+      "popularity": 57,
+      "coreIdea": "A proposal to embed holographic quantum error-correcting codes in a trapped-ion register \u2014 the same hardware class as the S3 experiment, used here for AdS/CFT-style codes rather than quantum doubles.",
+      "whyItMatters": "Shows holography remains a reading-list QEC idea on hardware we actually have. The freeze still cuts it as a reactor/processor subsystem.",
+      "limitation": "On the denylist for INCLUDE into the engine. Catalog as library only; no CUT reversal.",
+      "source": "arXiv quant-ph",
+      "tags": [
+        "holography",
+        "denylist",
+        "trapped ion"
+      ],
+      "claimIds": [
+        "E-HOL"
+      ],
+      "bindAction": "REJECT"
+    },
+    {
+      "id": "prc109-2024",
+      "title": "Laser-assisted deuterium\u2013tritium fusion in strong fields",
+      "authors": [
+        "Stanford / SLAC / Marvel Fusion collaboration"
+      ],
+      "year": 2024,
+      "date": "2024-04-01",
+      "venue": "Phys. Rev. C 109, 044605",
+      "doi": "10.1103/PhysRevC.109.044605",
+      "url": "https://doi.org/10.1103/PhysRevC.109.044605",
+      "fields": [
+        "fusion-quantum"
+      ],
+      "role": "lookback",
+      "foundational": true,
+      "importance": 92,
+      "confidence": 88,
+      "popularity": 70,
+      "coreIdea": "A Floquet / Volkov calculation of DT tunneling in a laser field. Significant enhancement at 1 keV ion energy appears only for electric fields around 10^15\u201310^16 V/m and photon energies \u2272 1 keV \u2014 XFEL territory, not a tokamak RF antenna.",
+      "whyItMatters": "This is the strongest published bound on DBE-S Layer 2. It does not kill the mechanism. It kills cheap versions of it.",
+      "limitation": "Nuclear theory, not a gain shot. Competing schemes (Crank\u2013Nicolson vs Volkov) still disagree at the edges. Required field is the fail threshold for M4.",
+      "source": "Phys. Rev. C",
+      "tags": [
+        "DBE-S",
+        "Layer 2",
+        "field bound",
+        "foundational"
+      ],
+      "claimIds": [
+        "S-L2",
+        "S-Q"
+      ],
+      "pillarId": "fusion-q1000",
+      "bindAction": "INCLUDE"
+    },
+    {
+      "id": "prc110-2024",
+      "title": "High-intensity laser enhancement of DT fusion: 7\u201370% at extreme irradiance",
+      "authors": [
+        "Phys. Rev. C 110, 034614"
+      ],
+      "year": 2024,
+      "date": "2024-09-01",
+      "venue": "Phys. Rev. C 110, 034614",
+      "doi": "10.1103/PhysRevC.110.034614",
+      "url": "https://doi.org/10.1103/PhysRevC.110.034614",
+      "fields": [
+        "fusion-quantum"
+      ],
+      "role": "lookback",
+      "foundational": true,
+      "importance": 90,
+      "confidence": 86,
+      "popularity": 62,
+      "coreIdea": "A second strong-field calculation finds only 7\u201370% DT-rate enhancement, and only at irradiances of 10^27\u201310^29 W/cm^2.",
+      "whyItMatters": "Together with PRC 109 this is the Layer-2 kill envelope: if after hole-burning and SRS/SBS the required I still exceeds reachable XFEL by >10\u00d7, Layer 2 leaves the plant path.",
+      "limitation": "Does not include spectral hole burning or parametric scatter. Those corrections go in the conservative direction.",
+      "source": "Phys. Rev. C",
+      "tags": [
+        "DBE-S",
+        "Layer 2",
+        "intensity bound"
+      ],
+      "claimIds": [
+        "S-L2",
+        "S-Q"
+      ],
+      "bindAction": "INCLUDE"
+    },
+    {
+      "id": "assisted-fusion-2019",
+      "title": "Dynamically assisted nuclear fusion",
+      "authors": [
+        "Friedhelm Queisser",
+        "Ralf Sch\u00fctzhold"
+      ],
+      "year": 2019,
+      "date": "2019-02-12",
+      "venue": "Phys. Rev. C 100, 041601(R)",
+      "arxiv": "1902.04905",
+      "url": "https://arxiv.org/abs/1902.04905",
+      "fields": [
+        "fusion-quantum"
+      ],
+      "role": "lookback",
+      "foundational": true,
+      "importance": 84,
+      "confidence": 82,
+      "popularity": 65,
+      "coreIdea": "A time-dependent electromagnetic kick can raise the tunneling probability through a Coulomb barrier \u2014 dynamically assisted fusion \u2014 without heating the whole Maxwell tail.",
+      "whyItMatters": "Ancestor of DBE-S Layer 2. Establishes the math (C2) while leaving the plant path at C1 until fields are reachable.",
+      "limitation": "Does not put Q = 1000 on a machine. Drive energy is an auxiliary term the ledger must count.",
+      "source": "Phys. Rev. C / arXiv",
+      "tags": [
+        "DBE-S",
+        "Floquet",
+        "foundational"
+      ],
+      "claimIds": [
+        "S-L2"
+      ],
+      "bindAction": "INCLUDE"
+    },
+    {
+      "id": "floquet-tunneling-2023",
+      "title": "Dynamically assisted tunneling in the Floquet picture",
+      "authors": [
+        "arXiv:2309.12205"
+      ],
+      "year": 2023,
+      "date": "2023-09-21",
+      "venue": "arXiv preprint",
+      "arxiv": "2309.12205",
+      "url": "https://arxiv.org/abs/2309.12205",
+      "fields": [
+        "fusion-quantum",
+        "time-crystal"
+      ],
+      "role": "lookback",
+      "foundational": false,
+      "importance": 80,
+      "confidence": 78,
+      "popularity": 50,
+      "coreIdea": "Tunneling through a time-periodic barrier is rewritten in Floquet language so multiphoton channels are explicit instead of being faked by a static WKB shift.",
+      "whyItMatters": "The DBE-S revision\u2019s first complaint was naive WKB. This is the textbook correction those notebooks omitted.",
+      "limitation": "Single-particle theory. Plasma Lindblad, hole burning, and radiation are not in the Hamiltonian.",
+      "source": "arXiv",
+      "tags": [
+        "Floquet",
+        "WKB critique"
+      ],
+      "claimIds": [
+        "S-L2",
+        "S-L1"
+      ],
+      "bindAction": "INCLUDE"
+    },
+    {
+      "id": "seo-2024",
+      "title": "Avoiding fusion plasma tearing instability with deep reinforcement learning",
+      "authors": [
+        "Jaemin Seo",
+        "SangKyeun Kim",
+        "Azarakhsh Jalalvand",
+        "et al."
+      ],
+      "year": 2024,
+      "date": "2024-02-21",
+      "venue": "Nature 626, 746 (2024)",
+      "doi": "10.1038/s41586-024-07024-9",
+      "url": "https://doi.org/10.1038/s41586-024-07024-9",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "role": "lookback",
+      "foundational": true,
+      "importance": 94,
+      "confidence": 93,
+      "popularity": 90,
+      "coreIdea": "A deep-RL agent on DIII-D predicted tearing-mode onset and adjusted plasma shape/beta in time to avoid the instability, using the real coil set.",
+      "whyItMatters": "This is the first attach point of DBE. Bus A already talks to a real plant in this paper\u2019s language.",
+      "limitation": "Avoiding tearing is not Q = 1000, and the agent is classical. Quantum hardware is not in this loop \u2014 and should not be, per the latency kill test.",
+      "source": "Nature",
+      "tags": [
+        "RL",
+        "tearing",
+        "DIII-D",
+        "foundational"
+      ],
+      "claimIds": [
+        "E-RL"
+      ],
+      "pillarId": "plasma-rl",
+      "bindAction": "INCLUDE"
+    },
+    {
+      "id": "surrogate-eq-2026",
+      "title": "AI surrogate modeling for real-time tokamak equilibrium prediction",
+      "authors": [
+        "arXiv:2608.23217"
+      ],
+      "year": 2026,
+      "date": "2026-08-24",
+      "venue": "arXiv preprint",
+      "arxiv": "2608.23217",
+      "url": "https://arxiv.org/abs/2608.23217",
+      "fields": [
+        "plasma"
+      ],
+      "role": "month",
+      "foundational": false,
+      "importance": 70,
+      "confidence": 68,
+      "popularity": 51,
+      "coreIdea": "Neural surrogates of Grad\u2013Shafranov equilibria are benchmarked for real-time use: milliseconds instead of a full reconstructive solve.",
+      "whyItMatters": "Bus A\u2019s latency budget lives or dies on how fast the observer is. A published surrogate bake-off is a metric, not a slogan.",
+      "limitation": "Offline/near-online. Chaos and tearing growth times still bound any in-loop quantum processor.",
+      "source": "arXiv physics.plasm-ph",
+      "tags": [
+        "surrogate",
+        "equilibrium",
+        "Bus A"
+      ],
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "INCLUDE"
     }
   ],
   "runs": [
+    {
+      "id": "run-2026-09-20-daily",
+      "startedAt": "2026-09-20T09:16:00-05:00",
+      "windowStart": "2025-09-20",
+      "windowEnd": "2026-09-20",
+      "kind": "daily+lookback",
+      "feeds": [
+        "https://arxiv.org/list/quant-ph/recent",
+        "https://arxiv.org/list/cond-mat.str-el/recent",
+        "https://arxiv.org/list/cond-mat.mes-hall/recent",
+        "https://arxiv.org/list/hep-th/recent",
+        "https://arxiv.org/list/physics.plasm-ph/recent",
+        "https://arxiv.org/search/advanced"
+      ],
+      "paperIds": [
+        "tamiya-2026",
+        "polley-2026",
+        "flores-2026",
+        "majorana-landscape-2026",
+        "csl-spin1-2026",
+        "majorana-shotnoise-2026",
+        "floquet-fracton-2026",
+        "fusion-eq-2026",
+        "virtual-circuits-2026",
+        "braid-no-transport-2026",
+        "runaway-control-2026",
+        "holographic-ions-2026",
+        "prc109-2024",
+        "prc110-2024",
+        "assisted-fusion-2019",
+        "floquet-tunneling-2023",
+        "seo-2024",
+        "surrogate-eq-2026"
+      ],
+      "notes": "Second observatory day. Year lookback kept. Protocol freeze applied: three layers (library, claims, version log). Heuristic gauges are not C. Floquet-fracton queued as spacetime-fractons. Holographic ions rejected for engine INCLUDE. Layer-2 PRC bounds entered the ledger conservatively.",
+      "fieldCounts": {}
+    },
     {
       "id": "run-2026-09-19-inaugural",
       "startedAt": "2026-09-19T17:00:00-05:00",
@@ -2033,7 +2849,7 @@
         "https://arxiv.org/search/advanced"
       ],
       "paperIds": [],
-      "notes": "First observatory ingest. Foundational pillars are unrestricted in date (Kitaev 1997 through S₃ 2026). Lookback window is 2025-09-19 → 2026-09-19, plus this week’s arXiv lists. Internal DBE / DBE-S manuscripts are tagged as program sources with lower confidence.",
+      "notes": "First observatory ingest. Foundational pillars are unrestricted in date (Kitaev 1997 through S\u2083 2026). Lookback window is 2025-09-19 \u2192 2026-09-19, plus this week\u2019s arXiv lists. Internal DBE / DBE-S manuscripts are tagged as program sources with lower confidence.",
       "fieldCounts": {
         "anyons": 16,
         "tqc": 22,
@@ -2067,7 +2883,7 @@
         "natcomms-2025",
         "google-willow-2024"
       ],
-      "notes": "Seeded year-back run so the first few observatory sessions already contain a 12-month corpus, not only this week’s preprints.",
+      "notes": "Seeded year-back run so the first few observatory sessions already contain a 12-month corpus, not only this week\u2019s preprints.",
       "fieldCounts": {
         "anyons": 2,
         "tqc": 3,
@@ -2124,7 +2940,7 @@
         "dehghani-2026",
         "canossa-2026"
       ],
-      "notes": "August–early September monthly rollup. Floquet–Majorana codes flagged as a suggested new pillar (clock and braid register as one object).",
+      "notes": "August\u2013early September monthly rollup. Floquet\u2013Majorana codes flagged as a suggested new pillar (clock and braid register as one object).",
       "fieldCounts": {
         "majorana": 1,
         "time-crystal": 1,
@@ -2134,5 +2950,10 @@
         "topology": 1
       }
     }
-  ]
+  ],
+  "protocol": {
+    "dbe": "DBE-0.1.1",
+    "dbes": "DBES-0.1.1",
+    "note": "Heuristic importance/confidence/popularity are harvest metadata. They do not equal C/T/D/A and cannot raise C."
+  }
 }
