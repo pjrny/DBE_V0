@@ -151,7 +151,14 @@ let LEDGER = {};
 let REVIEWS = { cards:[] };
 let tab = "week", field = "all", q = "", sort = "importance", selectedClaim = "E-S3";
 
-const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&","<":"<",">":">","\"":""","'":"&#39;"}[c]));
+function esc(s) {
+  return String(s ?? "")
+    .replace(/&/g, "\u0026amp;")
+    .replace(/</g, "\u0026lt;")
+    .replace(/>/g, "\u0026gt;")
+    .replace(/"/g, "\u0026quot;")
+    .replace(/'/g, "\u0026#39;");
+}
 const fid = (f) => FIELD_ALIAS[f] || String(f).toLowerCase().replace(/\s+/g,"-");
 const fieldsOf = (p) => (p.fields || []).map(fid);
 const idea = (p) => p.coreIdea || p.plain || (p.plain && p.plain.core) || "";
