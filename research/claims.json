@@ -1,363 +1,49 @@
 {
-  "freeze": "2026-09-19",
-  "dbeVersion": "DBE-0.1.3",
-  "dbesVersion": "DBES-0.1.2",
+  "freeze": "2026-09-21",
+  "dbeVersion": "DBE-0.2.0",
+  "dbesVersion": "DBES-0.2.0",
   "rule": "PASS if C≥3 and T≥2 and D≥2. HOLD if C=2 and T≥2. CUT if T=0 or C≤1 after a distinguisher or D=0. Coupling is a new claim and starts at C1. Heuristic 0–100 gauges are harvest metadata and never move C.",
   "axes": {
     "C": [
-      {
-        "id": "C0",
-        "meaning": "No closed math, or math that contradicts a conservation law"
-      },
-      {
-        "id": "C1",
-        "meaning": "Theory only, contested or mimic-prone"
-      },
-      {
-        "id": "C2",
-        "meaning": "Standard theory, textbooks agree, no relevant experiment"
-      },
-      {
-        "id": "C3",
-        "meaning": "Analog or digital-quantum demo on a processor, not the target platform"
-      },
-      {
-        "id": "C4",
-        "meaning": "Experiment on the relevant class of machine"
-      },
-      {
-        "id": "C5",
-        "meaning": "Repeated by independent labs or in engineering use"
-      }
+      {"id": "C0", "meaning": "No closed math, or math that contradicts a conservation law"},
+      {"id": "C1", "meaning": "Theory only, contested or mimic-prone"},
+      {"id": "C2", "meaning": "Standard theory, textbooks agree, no relevant experiment"},
+      {"id": "C3", "meaning": "Analog or digital-quantum demo on a processor, not the target platform"},
+      {"id": "C4", "meaning": "Experiment on the relevant class of machine"},
+      {"id": "C5", "meaning": "Repeated by independent labs or in engineering use"}
     ],
     "T": [
-      {
-        "id": "T0",
-        "meaning": "Not falsifiable as written"
-      },
-      {
-        "id": "T1",
-        "meaning": "Falsifiable only after a multi-year facility exists"
-      },
-      {
-        "id": "T2",
-        "meaning": "Falsifiable in simulation against a published baseline this quarter"
-      },
-      {
-        "id": "T3",
-        "meaning": "Falsifiable on existing hardware or a tabletop this year"
-      }
+      {"id": "T0", "meaning": "Not falsifiable as written"},
+      {"id": "T1", "meaning": "Falsifiable only after a multi-year facility exists"},
+      {"id": "T2", "meaning": "Falsifiable in simulation against a published baseline this quarter"},
+      {"id": "T3", "meaning": "Falsifiable on existing hardware or a tabletop this year"}
     ],
     "D": [
-      {
-        "id": "D0",
-        "meaning": "Cannot be built; conflicts with measured rates or energy accounting"
-      },
-      {
-        "id": "D1",
-        "meaning": "Simulation only"
-      },
-      {
-        "id": "D2",
-        "meaning": "Module that can bolt onto an existing machine"
-      },
-      {
-        "id": "D3",
-        "meaning": "Hardware that labs or companies are already building"
-      }
+      {"id": "D0", "meaning": "Cannot be built; conflicts with measured rates or energy accounting"},
+      {"id": "D1", "meaning": "Simulation only"},
+      {"id": "D2", "meaning": "Module that can bolt onto an existing machine"},
+      {"id": "D3", "meaning": "Hardware that labs or companies are already building"}
     ],
     "A": [
-      {
-        "id": "A0",
-        "meaning": "Our notes only"
-      },
-      {
-        "id": "A1",
-        "meaning": "A few papers, <50 citations, no company"
-      },
-      {
-        "id": "A2",
-        "meaning": "Active literature or one serious lab/company line"
-      },
-      {
-        "id": "A3",
-        "meaning": "Textbook + many groups + funded programs"
-      }
+      {"id": "A0", "meaning": "Our notes only"},
+      {"id": "A1", "meaning": "A few papers, <50 citations, no company"},
+      {"id": "A2", "meaning": "Active literature or one serious lab/company line"},
+      {"id": "A3", "meaning": "Textbook + many groups + funded programs"}
     ]
   },
   "claims": [
-    {
-      "id": "E-S3",
-      "doc": "DBE",
-      "name": "S3 braid + fusion",
-      "claim": "S3 braid+fusion is the topological primitive",
-      "status": "KEEP",
-      "C": "C3",
-      "T": "T3",
-      "D": "D3",
-      "A": "A3",
-      "bus": "B",
-      "verdict": "KEEP. Replace Majorana-only path.",
-      "evidence": [
-        "lo-2026",
-        "kitaev-1997",
-        "nayak-2008",
-        "levaillant-2015",
-        "lyons-2026",
-        "gattu-jain-2026",
-        "witten-cs-2026",
-        "perez-fadon-2026",
-        "faurot-2026"
-      ],
-      "disputer": "Braiding alone is not universal for S3; fusion measurement must stay in the gate set (Freedman–Larsen–Wang / Levaillant).",
-      "kill": "If fusion is dropped and braid-only compilation fails, E-S3 is no longer a universal primitive."
-    },
-    {
-      "id": "E-QEC",
-      "doc": "DBE",
-      "name": "Surface-code / qLDPC error layer",
-      "claim": "Surface-code / qLDPC is the error layer",
-      "status": "KEEP",
-      "C": "C4",
-      "T": "T3",
-      "D": "D3",
-      "A": "A3",
-      "bus": "B",
-      "verdict": "KEEP as default error layer.",
-      "evidence": [
-        "google-willow-2024",
-        "tamiya-2026",
-        "bluvstein-2023",
-        "dehghani-2026",
-        "han-qldpc-2026",
-        "shutty-2026",
-        "hartweg-2026"
-      ],
-      "disputer": "Threshold papers are still Abelian; they do not make non-Abelian decoding free.",
-      "kill": "If a larger code makes logical error worse on the relevant platform, drop as default."
-    },
-    {
-      "id": "E-RL",
-      "doc": "DBE",
-      "name": "RL / AI plant control",
-      "claim": "RL/AI control attaches to an existing plant bus",
-      "status": "KEEP",
-      "C": "C4",
-      "T": "T3",
-      "D": "D3",
-      "A": "A3",
-      "bus": "A",
-      "verdict": "KEEP. First attach point. No quantum hardware required.",
-      "evidence": [
-        "seo-2024",
-        "degrave-2022",
-        "rothstein-2026",
-        "virtual-circuits-2026",
-        "subbotin-2026",
-        "rl4f-2026"
-      ],
-      "disputer": "Loop cannot close inside tearing / Alfvén times if I/O is a quantum job queue.",
-      "kill": "Fail M2 if the module cannot beat the lab baseline on one disruption-relevant metric."
-    },
-    {
-      "id": "E-MZM",
-      "doc": "DBE",
-      "name": "Majorana zero-mode qubits",
-      "claim": "Majorana zero modes as load-bearing qubits",
-      "status": "WATCH",
-      "C": "C1",
-      "T": "T3",
-      "D": "D3",
-      "A": "A2",
-      "bus": "B",
-      "verdict": "WATCH. Do not make load-bearing. S3 is the braid primitive we have.",
-      "evidence": [
-        "kitaev-2001-wires",
-        "kitaev-honeycomb",
-        "majorana-landscape-2026",
-        "majorana-shotnoise-2026"
-      ],
-      "disputer": "Trivial Andreev / YSR mimics; Nature caveat on Majorana 1; missing public X+Z logical on Majorana 2.",
-      "kill": "No independent X and Z logical ops with topological-gap scaling → drop as load-bearing."
-    },
-    {
-      "id": "E-TC",
-      "doc": "DBE",
-      "name": "Floquet time crystal as clock",
-      "claim": "Floquet time crystal as system clock",
-      "status": "HOLD",
-      "C": "C1",
-      "T": "T2",
-      "D": "D1",
-      "A": "A2",
-      "bus": null,
-      "verdict": "HOLD as physics. CUT as metronome. Use a classical clock + QEC cycle.",
-      "evidence": [
-        "else-2016",
-        "wilczek-2012",
-        "watanabe-2014",
-        "floquet-fracton-2026",
-        "cole-aperiodic-2026"
-      ],
-      "disputer": "Prethermal lifetime vs required shot duration.",
-      "kill": "Lifetime < control horizon → cut as clock."
-    },
-    {
-      "id": "E-FR",
-      "doc": "DBE",
-      "name": "Fracton hardware memory",
-      "claim": "Fracton code as hardware memory",
-      "status": "HOLD",
-      "C": "C2",
-      "T": "T2",
-      "D": "D1",
-      "A": "A2",
-      "bus": null,
-      "verdict": "HOLD in sim. CUT from hardware stack. Do not wait on 3D multi-body Hamiltonians to store a control bit.",
-      "evidence": [
-        "bravyi-haah-2011",
-        "pretko-2020",
-        "hopkin-2026",
-        "floquet-fracton-2026"
-      ],
-      "disputer": "No 3D fracton processor exists; Haah/X-cube remain theory.",
-      "kill": "If D stays D1, it cannot ride Bus B as memory."
-    },
-    {
-      "id": "E-HOL",
-      "doc": "DBE",
-      "name": "Holographic encoding",
-      "claim": "Holographic encoding as a reactor/processor part",
-      "status": "CUT",
-      "C": "C0",
-      "T": "T0",
-      "D": "D0",
-      "A": "A0",
-      "bus": null,
-      "verdict": "CUT from the engine. AdS/CFT stays on the reading list.",
-      "evidence": [
-        "maldacena-1997",
-        "almheiri-2015",
-        "wormhole-2022",
-        "holographic-ions-2026"
-      ],
-      "disputer": "Duality ≠ a tokamak I/O map. T=0 as a reactor part.",
-      "kill": "Already cut. Reversal needs two independent C≥4 sources."
-    },
-    {
-      "id": "E-5",
-      "doc": "DBE",
-      "name": "Five-way coupled engine",
-      "claim": "Five subsystems coupled as one device",
-      "status": "CUT",
-      "C": "C1",
-      "T": "T1",
-      "D": "D0",
-      "A": "A0",
-      "bus": null,
-      "verdict": "CUT as a first system. Reintroduce only after modules pass on one bus.",
-      "evidence": [
-        "dbe-whitepaper"
-      ],
-      "disputer": "Coupling is a new claim and starts at C1. No subsystem may raise another’s C.",
-      "kill": "A module that cannot state inputs, outputs, latency, and fail-safe is not a module."
-    },
-    {
-      "id": "S-L1",
-      "doc": "DBE-S",
-      "name": "Lindblad coherence penalty",
-      "claim": "Lindblad coherence penalty P_coh is computable vs n,T",
-      "status": "HOLD",
-      "C": "C2",
-      "T": "T2",
-      "D": "D1",
-      "A": "A3",
-      "bus": "C",
-      "verdict": "HOLD. First output must be P_coh vs n,T.",
-      "evidence": [
-        "dbe-s-revision",
-        "floquet-tunneling-2023"
-      ],
-      "disputer": "Collision frequencies at fusion-relevant n,T vs optical pumping rate.",
-      "kill": "If P_coh / P_fusion ≥ 0.1 at any useful density, L1 fails."
-    },
-    {
-      "id": "S-L2",
-      "doc": "DBE-S",
-      "name": "Floquet / multiphoton barrier evasion",
-      "claim": "Floquet/Volkov drive enhances DT tunneling at reachable I,ω",
-      "status": "HOLD",
-      "C": "C1",
-      "T": "T2",
-      "D": "D1",
-      "A": "A2",
-      "bus": "C",
-      "verdict": "HOLD. Must beat published FV/CN baselines. Required fields are extreme.",
-      "evidence": [
-        "prc109-2024",
-        "prc110-2024",
-        "assisted-fusion-2019",
-        "dbe-s-revision",
-        "perez-gonzalez-floquet-2026"
-      ],
-      "disputer": "PRC 109 10^15–10^16 V/m; PRC 110 10^27–10^29 W/cm^2; KH vs FV disagreement.",
-      "kill": "After hole-burning + instability, net <2× thermal rate at reachable I,ω → Layer 2 off the plant path."
-    },
-    {
-      "id": "S-L3",
-      "doc": "DBE-S",
-      "name": "Vlasov / hole-burning / SRS-SBS",
-      "claim": "Vlasov / hole-burning / SRS-SBS must sit in the rate",
-      "status": "KEEP",
-      "C": "C4",
-      "T": "T2",
-      "D": "D2",
-      "A": "A3",
-      "bus": "C",
-      "verdict": "KEEP the solvers. Do not skip them. C1 for DBE coupling.",
-      "evidence": [
-        "dbe-s-revision"
-      ],
-      "disputer": "Resonant depletion without repopulation kills bulk rate.",
-      "kill": "A rate that assumes infinite Maxwellian refill is void."
-    },
-    {
-      "id": "S-L4",
-      "doc": "DBE-S",
-      "name": "Cavity suppression + direct conversion",
-      "claim": "Cavity suppression + direct conversion are net sources",
-      "status": "HOLD",
-      "C": "C1",
-      "T": "T1",
-      "D": "D1",
-      "A": "A1",
-      "bus": "C",
-      "verdict": "HOLD. Energy sink, not a source.",
-      "evidence": [
-        "dbe-s-revision"
-      ],
-      "disputer": "High-Z Bremsstrahlung (p-11B, Z=5) classically exceeds fusion power at equilibrium.",
-      "kill": "Model as a loss-reduction term with an independent unstaged-plasma baseline, or drop."
-    },
-    {
-      "id": "S-Q",
-      "doc": "DBE-S",
-      "name": "Stack Q_eng ≈ 1000",
-      "claim": "Net Q ≈ 1000 from L1–L4 as written",
-      "status": "CUT",
-      "C": "C1",
-      "T": "T2",
-      "D": "D0",
-      "A": "A0",
-      "bus": "C",
-      "verdict": "CUT as output. KEEP as ledger stress test. Fail-unless-proven.",
-      "evidence": [
-        "dbe-s-revision",
-        "prc109-2024",
-        "prc110-2024"
-      ],
-      "disputer": "NIF Q_sci ≈ 4.13 (Apr 2025); JET Q ≈ 0.67; no MCF Q_sci > 1; plant Q unshown.",
-      "kill": "Any stack whose energy ledger omits drive, pumping, and conversion → reject the number."
-    }
+    {"id": "E-S3", "doc": "DBE", "name": "S3 braid + fusion", "claim": "S3 braid+fusion is the topological primitive", "status": "KEEP", "C": "C3", "T": "T3", "D": "D3", "A": "A3", "bus": "B", "verdict": "KEEP. Load-bearing topological primitive. Cyclic fusion (S3 + fusion measurement) is the universality reason, not a new bus.", "evidence": ["lo-2026", "kitaev-1997", "nayak-2008", "levaillant-2015", "lyons-2026", "gattu-jain-2026", "witten-cs-2026", "perez-fadon-2026", "faurot-2026"], "disputer": "Braiding alone is not universal for S3; fusion measurement must stay in the gate set (Freedman–Larsen–Wang / Levaillant).", "kill": "If fusion is dropped and braid-only compilation fails, E-S3 is no longer a universal primitive."},
+    {"id": "E-QEC", "doc": "DBE", "name": "Surface-code / qLDPC error layer", "claim": "Surface-code / qLDPC is the error layer", "status": "KEEP", "C": "C4", "T": "T3", "D": "D3", "A": "A3", "bus": "B", "verdict": "KEEP as default error layer.", "evidence": ["google-willow-2024", "tamiya-2026", "bluvstein-2023", "dehghani-2026", "han-qldpc-2026", "shutty-2026", "hartweg-2026"], "disputer": "Threshold papers are still Abelian; they do not make non-Abelian decoding free.", "kill": "If a larger code makes logical error worse on the relevant platform, drop as default."},
+    {"id": "E-RL", "doc": "DBE", "name": "RL / AI plant control", "claim": "RL/AI control attaches to an existing plant bus", "status": "KEEP", "C": "C4", "T": "T3", "D": "D3", "A": "A3", "bus": "A", "verdict": "KEEP. First attach point. No quantum hardware required.", "evidence": ["seo-2024", "degrave-2022", "rothstein-2026", "virtual-circuits-2026", "subbotin-2026", "rl4f-2026"], "disputer": "Loop cannot close inside tearing / Alfvén times if I/O is a quantum job queue.", "kill": "Fail M2 if the module cannot beat the lab baseline on one disruption-relevant metric."},
+    {"id": "E-MZM", "doc": "DBE", "name": "Majorana zero-mode qubits", "claim": "Majorana zero modes as load-bearing qubits", "status": "WATCH", "C": "C1", "T": "T3", "D": "D3", "A": "A2", "bus": "B", "verdict": "WATCH. Do not make load-bearing. S3 is the braid primitive we have.", "evidence": ["kitaev-2001-wires", "kitaev-honeycomb", "majorana-landscape-2026", "majorana-shotnoise-2026"], "disputer": "Trivial Andreev / YSR mimics; Nature caveat on Majorana 1; missing public X+Z logical on Majorana 2.", "kill": "No independent X and Z logical ops with topological-gap scaling → drop as load-bearing."},
+    {"id": "E-TC", "doc": "DBE", "name": "Floquet time crystal as clock", "claim": "Floquet time crystal as system clock", "status": "CUT", "C": "C1", "T": "T2", "D": "D1", "A": "A2", "bus": null, "verdict": "CUT as metronome. Classical clock + QEC cycle only. Time-crystal physics stays on the reading list.", "evidence": ["else-2016", "wilczek-2012", "watanabe-2014", "floquet-fracton-2026", "cole-aperiodic-2026"], "disputer": "Prethermal lifetime vs required shot duration.", "kill": "Lifetime < control horizon → cut as clock."},
+    {"id": "E-FR", "doc": "DBE", "name": "Fracton hardware memory", "claim": "Fracton code as hardware memory", "status": "CUT", "C": "C2", "T": "T2", "D": "D1", "A": "A2", "bus": null, "verdict": "CUT from the hardware stack. Fracton codes remain theory. Do not store a control bit on a 3D multi-body Hamiltonian.", "evidence": ["bravyi-haah-2011", "pretko-2020", "hopkin-2026", "floquet-fracton-2026"], "disputer": "No 3D fracton processor exists; Haah/X-cube remain theory.", "kill": "If D stays D1, it cannot ride Bus B as memory."},
+    {"id": "E-HOL", "doc": "DBE", "name": "Holographic encoding", "claim": "Holographic encoding as a reactor/processor part", "status": "CUT", "C": "C0", "T": "T0", "D": "D0", "A": "A0", "bus": null, "verdict": "CUT from the engine. AdS/CFT stays on the reading list. Not a reactor or processor part.", "evidence": ["maldacena-1997", "almheiri-2015", "wormhole-2022", "holographic-ions-2026"], "disputer": "Duality ≠ a tokamak I/O map. T=0 as a reactor part.", "kill": "Already cut. Reversal needs two independent C≥4 sources."},
+    {"id": "E-5", "doc": "DBE", "name": "Five-way coupled engine", "claim": "Five subsystems coupled as one device", "status": "CUT", "C": "C1", "T": "T1", "D": "D0", "A": "A0", "bus": null, "verdict": "CUT as a first system. Coupling is a new C1 claim. Reintroduce only after modules pass on one bus.", "evidence": ["dbe-whitepaper"], "disputer": "Coupling is a new claim and starts at C1. No subsystem may raise another’s C.", "kill": "A module that cannot state inputs, outputs, latency, and fail-safe is not a module."},
+    {"id": "S-L1", "doc": "DBE-S", "name": "Lindblad coherence penalty", "claim": "Lindblad coherence penalty P_coh is computable vs n,T", "status": "HOLD", "C": "C2", "T": "T2", "D": "D1", "A": "A3", "bus": "C", "verdict": "HOLD. First output must be P_coh vs n,T.", "evidence": ["dbe-s-revision", "floquet-tunneling-2023"], "disputer": "Collision frequencies at fusion-relevant n,T vs optical pumping rate.", "kill": "If P_coh / P_fusion ≥ 0.1 at any useful density, L1 fails."},
+    {"id": "S-L2", "doc": "DBE-S", "name": "Floquet / multiphoton barrier evasion", "claim": "Floquet/Volkov drive enhances DT tunneling at reachable I,ω", "status": "HOLD", "C": "C1", "T": "T2", "D": "D1", "A": "A2", "bus": "C", "verdict": "HOLD. Must beat published FV/CN baselines. Required fields are extreme.", "evidence": ["prc109-2024", "prc110-2024", "assisted-fusion-2019", "dbe-s-revision", "perez-gonzalez-floquet-2026"], "disputer": "PRC 109 10^15–10^16 V/m; PRC 110 10^27–10^29 W/cm^2; KH vs FV disagreement.", "kill": "After hole-burning + instability, net <2× thermal rate at reachable I,ω → Layer 2 off the plant path."},
+    {"id": "S-L3", "doc": "DBE-S", "name": "Vlasov / hole-burning / SRS-SBS", "claim": "Vlasov / hole-burning / SRS-SBS must sit in the rate", "status": "KEEP", "C": "C4", "T": "T2", "D": "D2", "A": "A3", "bus": "C", "verdict": "KEEP the solvers. Do not skip them. C1 for DBE coupling.", "evidence": ["dbe-s-revision"], "disputer": "Resonant depletion without repopulation kills bulk rate.", "kill": "A rate that assumes infinite Maxwellian refill is void."},
+    {"id": "S-L4", "doc": "DBE-S", "name": "Cavity suppression + direct conversion", "claim": "Cavity suppression + direct conversion are net sources", "status": "HOLD", "C": "C1", "T": "T1", "D": "D1", "A": "A1", "bus": "C", "verdict": "HOLD. Energy sink, not a source.", "evidence": ["dbe-s-revision"], "disputer": "High-Z Bremsstrahlung (p-11B, Z=5) classically exceeds fusion power at equilibrium.", "kill": "Model as a loss-reduction term with an independent unstaged-plasma baseline, or drop."},
+    {"id": "S-Q", "doc": "DBE-S", "name": "Stack Q_eng ≈ 1000", "claim": "Net Q ≈ 1000 from L1–L4 as written", "status": "CUT", "C": "C1", "T": "T2", "D": "D0", "A": "A0", "bus": "C", "verdict": "CUT as output. KEEP as ledger stress test. Fail-unless-proven. Not a number the paper may quote as a result.", "evidence": ["dbe-s-revision", "prc109-2024", "prc110-2024"], "disputer": "NIF Q_sci ≈ 4.13 (Apr 2025); JET Q ≈ 0.67; no MCF Q_sci > 1; plant Q unshown.", "kill": "Any stack whose energy ledger omits drive, pumping, and conversion → reject the number."}
   ]
 }
