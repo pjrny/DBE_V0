@@ -1,5 +1,5 @@
-const NOW = new Date("2026-09-20T19:23:00-05:00");
-const KEY = "dbe-observatory-freeze-v2";
+const NOW = new Date("2026-09-21T10:08:00-05:00");
+const KEY = "dbe-observatory-freeze-v4";
 const TABS = [
   ["week", "This week"],
   ["month", "Month"],
@@ -31,7 +31,7 @@ let VERS = { history: [], buses: [], milestones: [], lines: [], current: {} };
 let REVIEWS = { cards: [] };
 let LEDGER = {};
 let tab = "week", field = "all", q = "", sort = "importance";
-let FREEZE = { actions: [], dbe: "DBE-0.1.2", dbes: "DBES-0.1.2", log: [], parkedPaperIds: [] };
+let FREEZE = { actions: [], dbe: "DBE-0.1.3", dbes: "DBES-0.1.2", log: [], parkedPaperIds: [] };
 
 const esc = (s) => String(s ?? "")
   .replace(/&/g, "&").replace(/</g, "<").replace(/>/g, ">")
@@ -104,20 +104,21 @@ function inferProposal(p) {
 }
 function saveFreeze() { localStorage.setItem(KEY, JSON.stringify(FREEZE)); }
 function loadFreeze() {
-  try {
-    const raw = JSON.parse(localStorage.getItem(KEY) || "null");
-    if (raw && raw.dbe) return raw;
-  } catch (e) { /* ignore */ }
   const published = (REVIEWS.cards || []).filter((c) => c.route === "AUTO-MERGED").map((c) => ({
     reviewId: c.id, paperId: c.paperId, action: c.action, route: "AUTO-MERGED", at: c.date, version: c.version,
   }));
-  return {
-    actions: published,
-    dbe: (VERS.current || {}).DBE || "DBE-0.1.2",
+  let raw = null;
+  try { raw = JSON.parse(localStorage.getItem(KEY) || "null"); } catch (e) { /* ignore */ }
+  const base = (raw && raw.dbe) ? raw : {
+    actions: [],
+    dbe: (VERS.current || {}).DBE || "DBE-0.1.3",
     dbes: (VERS.current || {}).DBES || "DBES-0.1.2",
     parkedPaperIds: [],
     log: [],
   };
+  const have = new Set((base.actions || []).map((a) => a.reviewId));
+  const missing = published.filter((a) => !have.has(a.reviewId));
+  return { ...base, actions: missing.concat(base.actions || []) };
 }
 function applyCard(id) {
   const c = (REVIEWS.cards || []).find((x) => x.id === id);
@@ -218,7 +219,8 @@ function renderEngine() {
   const autoC = (REVIEWS.cards || []).filter((c) => !applied(c.id) && c.action === "INCLUDE" && autoGate(c).pass);
   const cardC = (c) => "<article class=\"card\"><div style=\"display:flex;justify-content:space-between;gap:0.75rem\"><div><span class=\"mono\" style=\"font-size:0.75rem;color:var(--subtle)\">" + esc(c.id) + "</span><h3>" + esc(c.name) + "</h3><p class=\"meta\">" + esc(c.claim) + "</p></div><span class=\"tag " + statusClass(c.status) + "\">" + esc(c.status) + "</span></div><p>" + axisPills(c) + "</p><p>" + esc(c.verdict) + "</p><div>" + (c.evidence || []).map((id) => "<button class=\"chip\" data-open=\"" + id + "\">" + id + "</button>").join("") + "</div></article>";
   return "<p class=\"notice\">Three layers, never mixed. Harvest gauges cannot raise C. Q = 1000 is a ledger stress test, not an output. KEEP claims with C≥3 ride the paper; CUT sections are already out.</p>"
-    + "<div class=\"grid\"><article class=\"card\"><p class=\"kicker\">DBE " + esc(FREEZE.dbe) + "</p><h2>Dimensional Braid Engine</h2><p class=\"meta\">Modular quantum-topological processor + plasma controller</p><p>Post-cut stack: Bus A talks to a real plant. Bus B uses the anyon and QEC results we actually have. Bus C is a microphysics campaign, not a coupled engine.</p></article><article class=\"card\"><p class=\"kicker\">DBE-S " + esc(FREEZE.dbes) + "</p><h2>Dynamic Barrier Evasion</h2><p class=\"meta\">Floquet / laser-RF driven tunneling through the Coulomb barrier</p><p>L1–L4 as HOLD except L3 solvers KEEP. Q = 1000 is a stress test of the energy ledger, not an output of the current stack.</p></article></div>"
+    + "<div class=\"grid\"><article class=\"card\"><p class=\"kicker\">DBE " + esc(FREEZE.dbe) + "</p><h2>Dimensional Braid Engine</h2><p class=\"meta\">Modular quantum-topological processor + plasma controller</p><p>Post-cut stack: Bus A talks to a real plant. Bus B uses the anyon and QEC results we actually have. Bus C is a microphysics campaign, not a coupled engine.</p><button class=\"chip\" data-open=\"dbe-whitepaper\">Open current paper</button></article><article class=\"card\"><p class=\"kicker\">DBE-S " + esc(FREEZE.dbes) + "</p><h2>Dynamic Barrier Evasion</h2><p class=\"meta\">Floquet / laser-RF driven tunneling through the Coulomb barrier</p><p>L1–L4 as HOLD except L3 solvers KEEP. Q = 1000 is a stress test of the energy ledger, not an output of the current stack.</p><button class=\"chip\" data-open=\"dbe-s-revision\">Open current paper</button></article></div>"
+    + "<h2>Current papers</h2><p class=\"meta\">Live freeze plus the hardware and review pillars it rests on. Open any card for idea / why it matters / one limitation.</p><div class=\"grid\">" + ["dbe-whitepaper","dbe-s-revision","lo-2026","kitaev-1997","nayak-2008"].map((id) => { const p = paperById(id) || {}; return "<article class=\"card\"><p class=\"kicker\">" + esc(p.venue || "Program source") + "</p><h3>" + esc(p.title || id) + "</h3><p>" + esc(idea(p)) + "</p><p class=\"meta\"><b>Limitation.</b> " + esc(p.limitation || "") + "</p><button class=\"chip\" data-open=\"" + id + "\">Open paper</button></article>"; }).join("") + "</div>"
     + "<h2>Load-bearing</h2><div class=\"grid\">" + keep.map(cardC).join("") + "</div>"
     + "<h2>Hold / watch</h2><div class=\"grid\">" + hold.map(cardC).join("") + "</div>"
     + "<h2>Removed from the paper</h2><div class=\"grid3\">" + cut.map(cardC).join("") + "</div>"

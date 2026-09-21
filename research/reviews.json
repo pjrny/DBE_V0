@@ -1,6 +1,425 @@
 {
-  "asOf": "2026-09-20",
+  "asOf": "2026-09-21",
   "cards": [
+    {
+      "id": "2026-09-21/han-qldpc-2026",
+      "paperId": "han-qldpc-2026",
+      "date": "2026-09-21",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Named baseline: stochastic qLDPC threshold. Distinguisher: coherent vs Pauli. Processor analog, not a plant.",
+      "score": "C unchanged (C4)",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.1.3",
+      "disputer": "Threshold papers are still Abelian; they do not make non-Abelian decoding free.",
+      "ledger": "none",
+      "plain": {
+        "core": "qLDPC still has a nonzero threshold under coherent errors.",
+        "why": "Tightens Bus B’s error-layer bibliography.",
+        "limit": "Wrong platform for a C raise."
+      }
+    },
+    {
+      "id": "2026-09-21/shutty-2026",
+      "paperId": "shutty-2026",
+      "date": "2026-09-21",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Compilation/layout paper against planar color-code baseline.",
+      "score": "C unchanged",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.1.3",
+      "disputer": "Abelian density ≠ universality.",
+      "ledger": "none",
+      "plain": {
+        "core": "Denser 4.8.8 color-code layout on a square grid.",
+        "why": "Cheaper Bus B wrapper.",
+        "limit": "Not a hardware demo."
+      }
+    },
+    {
+      "id": "2026-09-21/gattu-jain-2026",
+      "paperId": "gattu-jain-2026",
+      "date": "2026-09-21",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Continuum FQH vs lattice quantum double. Distinguisher: path-shape independence.",
+      "score": "C unchanged (C3)",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.1.3",
+      "disputer": "Real FQH braid phases can leak geometry; digital S3 anyons do not inherit this automatically.",
+      "ledger": "none",
+      "plain": {
+        "core": "FQH braid phase can depend on loop shape.",
+        "why": "Keeps E-S3 on the digital quantum-double path.",
+        "limit": "Not a processor result."
+      }
+    },
+    {
+      "id": "2026-09-21/witten-cs-2026",
+      "paperId": "witten-cs-2026",
+      "date": "2026-09-21",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Pedagogical CS/QHE. Reading, not E-HOL.",
+      "score": "C unchanged",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.1.3",
+      "disputer": "Duality ≠ a tokamak I/O map.",
+      "ledger": "none",
+      "plain": {
+        "core": "Why Chern-Simons sits under the quantum Hall effect.",
+        "why": "Foundational topology reading.",
+        "limit": "Must not un-cut holography."
+      }
+    },
+    {
+      "id": "2026-09-21/subbotin-2026",
+      "paperId": "subbotin-2026",
+      "date": "2026-09-21",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Journal + DIII-D hardware. Reconstruction-free RL vs isoflux baseline. G5 honest: tokamak, not a quantum processor.",
+      "score": "C unchanged (C4)",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.1.3",
+      "disputer": "Static shape control ≠ tearing-onset warning time. VDEs out of scope.",
+      "ledger": "latency: shape/position errors 1–2 cm; not an Alfvén-time loop.",
+      "plain": {
+        "core": "RL on DIII-D skips EFIT and holds shape to ~2 cm.",
+        "why": "Bus A attach surface with a published baseline.",
+        "limit": "Not disruption avoidance."
+      }
+    },
+    {
+      "id": "2026-09-21/rl4f-2026",
+      "paperId": "rl4f-2026",
+      "date": "2026-09-21",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Public DIII-D offline-RL benchmark. Named baseline required by G3.",
+      "score": "C unchanged",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.1.3",
+      "disputer": "Learned dynamics inherit diagnostic coverage; not a live tearing predictor.",
+      "ledger": "none",
+      "plain": {
+        "core": "RL4F: four-profile DIII-D offline RL bake-off.",
+        "why": "M2/M3 need a public baseline.",
+        "limit": "Offline, not a shot."
+      }
+    },
+    {
+      "id": "2026-09-21/perez-fadon-2026",
+      "paperId": "perez-fadon-2026",
+      "date": "2026-09-21",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Journal method for S-matrix extraction. Wrong platform for C>3.",
+      "score": "C unchanged",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.1.3",
+      "disputer": "Numerical FQH S-matrix ≠ a fusion-measurement gate on hardware.",
+      "ledger": "none",
+      "plain": {
+        "core": "Neural FQH states yield a modular S-matrix.",
+        "why": "Certifies anyon type, fusion, braid.",
+        "limit": "Not Quantinuum H2."
+      }
+    },
+    {
+      "id": "2026-09-21/hartweg-2026",
+      "paperId": "hartweg-2026",
+      "date": "2026-09-21",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "MPS comparison of cultivation vs published schemes.",
+      "score": "C unchanged",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.1.3",
+      "disputer": "Cultivation is not topological fusion; it is a competing magic-state factory.",
+      "ledger": "none",
+      "plain": {
+        "core": "MPS bake-off of magic-state cultivation.",
+        "why": "Bus B should know both magic-state routes.",
+        "limit": "Modest bond dimension."
+      }
+    },
+    {
+      "id": "2026-09-21/faurot-2026",
+      "paperId": "faurot-2026",
+      "date": "2026-09-21",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Clean math against a published categorical baseline.",
+      "score": "C unchanged",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.1.3",
+      "disputer": "A W*-category equivalence is not a gate set.",
+      "ledger": "none",
+      "plain": {
+        "core": "Connes fusion rebuilds the braided anyon category.",
+        "why": "Mathematical warranty for lattice anyons.",
+        "limit": "No hardware."
+      }
+    },
+    {
+      "id": "2026-09-21/conformal-braid-2026",
+      "paperId": "conformal-braid-2026",
+      "date": "2026-09-21",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "RCFT F-matrices vs Dotsenko–Fateev.",
+      "score": "C unchanged",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.1.3",
+      "disputer": "Fibonacci/Ising compilation is the path S3 was chosen to avoid.",
+      "ledger": "none",
+      "plain": {
+        "core": "A route to exact F-matrices in Virasoro minimal models.",
+        "why": "Braiding compiler language.",
+        "limit": "Not S3, not hardware."
+      }
+    },
+    {
+      "id": "2026-09-21/cole-aperiodic-2026",
+      "paperId": "cole-aperiodic-2026",
+      "date": "2026-09-21",
+      "bind": [
+        "E-TC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Aperiodic driven topology. Strengthens HOLD-as-physics, not clock.",
+      "score": "C unchanged (C1 as clock)",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Prethermal lifetime vs required shot duration.",
+      "ledger": "none",
+      "plain": {
+        "core": "Topology without a Floquet Hamiltonian.",
+        "why": "Clock remains a special limit.",
+        "limit": "No lifetime number."
+      }
+    },
+    {
+      "id": "2026-09-21/sahoo-floquet-mem-2026",
+      "paperId": "sahoo-floquet-mem-2026",
+      "date": "2026-09-21",
+      "bind": [
+        "E-TC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Which states remember under a drive. Still D1.",
+      "score": "C unchanged",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Lifetime < control horizon → cut as clock.",
+      "ledger": "none",
+      "plain": {
+        "core": "Only some degenerate states keep Floquet memory.",
+        "why": "Memory ≠ metronome.",
+        "limit": "Closed system."
+      }
+    },
+    {
+      "id": "2026-09-21/perez-gonzalez-floquet-2026",
+      "paperId": "perez-gonzalez-floquet-2026",
+      "date": "2026-09-21",
+      "bind": [
+        "S-L2",
+        "E-TC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "fail"
+      },
+      "gateNote": "G6: two claim IDs. Coupling ban. Split or keep HOLD. Does not beat PRC 109 field bound.",
+      "score": "C unchanged",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "PRC 109 1e15–1e16 V/m; PRC 110 1e27–1e29 W/cm^2.",
+      "ledger": "required E still ~1e15 V/m class; no new bound.",
+      "plain": {
+        "core": "Quantized-field Floquet meets cavity QED.",
+        "why": "Honest Layer-2 language.",
+        "limit": "Does not lower the field cost."
+      }
+    },
+    {
+      "id": "2026-09-21/nvqlink-anyon-2026",
+      "paperId": "nvqlink-anyon-2026",
+      "date": "2026-09-21",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "fail",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Vendor announcement. No closed equations, no named latency baseline vs tearing times. NEW PILLAR queue for qpu-gpu-control-bus.",
+      "score": "C unchanged",
+      "action": "NEW PILLAR",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A QPU–GPU loop is not a tokamak loop. Chaos/Alfvén times still forbid in-loop braiding of a plant.",
+      "ledger": "claimed microsecond QEC loop; not an Alfvén-time number.",
+      "plain": {
+        "core": "NVQLink wires a QPU as a GPU co-processor.",
+        "why": "Bus B latency contract, if true.",
+        "limit": "Industry claim, not a journal."
+      }
+    },
+    {
+      "id": "2026-09-21/galviz-2026",
+      "paperId": "galviz-2026",
+      "date": "2026-09-21",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Zero claim IDs. Reading. Not a pillar unless an interface contract appears.",
+      "score": "none",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Abelian CS defects are not S3 fusion and not a reactor encoding.",
+      "ledger": "none",
+      "plain": {
+        "core": "Functorial defects in Abelian Chern-Simons.",
+        "why": "TQFT reading list.",
+        "limit": "Do not open E-HOL."
+      }
+    },
     {
       "id": "2026-09-20/zimmermann-2026",
       "paperId": "zimmermann-2026",
@@ -301,7 +720,7 @@
         "confidence": 84,
         "popularity": 72
       },
-      "claimDelta": "E-QEC C4 \u2192 C4 (no move)",
+      "claimDelta": "E-QEC C4 → C4 (no move)",
       "action": "INCLUDE",
       "route": "AUTO-MERGED",
       "version": "DBE-0.1.1",
@@ -335,7 +754,7 @@
         "confidence": 70,
         "popularity": 68
       },
-      "claimDelta": "E-S3 C3 \u2192 C3; queued suggested pillar topo-dynamics",
+      "claimDelta": "E-S3 C3 → C3; queued suggested pillar topo-dynamics",
       "action": "INCLUDE",
       "route": "AUTO-MERGED",
       "version": "DBE-0.1.1",
@@ -408,7 +827,7 @@
       "route": "AUTO-MERGED",
       "version": "DBES-0.1.1",
       "disputer": "PRC 110 finds even harsher irradiance. KH vs FV disagreement keeps the gain-path at C1.",
-      "ledger": "E ~ 1e15\u20131e16 V/m; \u0127\u03c9 \u2272 1 keV; DT at 1 keV",
+      "ledger": "E ~ 1e15–1e16 V/m; ħω ≲ 1 keV; DT at 1 keV",
       "plain": {
         "core": "Laser-assisted DT tunneling is real theory, but the field needed is next-gen XFEL, not a tokamak antenna.",
         "why": "Sets the Layer-2 fail threshold the daily run is required to hunt.",
@@ -441,12 +860,12 @@
       "action": "INCLUDE",
       "route": "AUTO-MERGED",
       "version": "DBE-0.1.1",
-      "disputer": "Tearing avoidance \u2260 Q_eng. Quantum in this loop still fails the latency kill test.",
+      "disputer": "Tearing avoidance ≠ Q_eng. Quantum in this loop still fails the latency kill test.",
       "ledger": null,
       "plain": {
         "core": "A deep-RL agent on DIII-D saw tearing coming and moved the plasma out of the way using the real coils.",
         "why": "The only DBE piece that already talks to a fusion plant.",
-        "limit": "Classical controller. Do not smuggle a quantum processor into the Alfv\u00e9n time."
+        "limit": "Classical controller. Do not smuggle a quantum processor into the Alfvén time."
       }
     },
     {
@@ -471,7 +890,7 @@
         "confidence": 62,
         "popularity": 58
       },
-      "claimDelta": "E-MZM C1 \u2192 C1",
+      "claimDelta": "E-MZM C1 → C1",
       "action": "INCLUDE",
       "route": "AUTO-MERGED",
       "version": "DBE-0.1.1",
@@ -533,7 +952,7 @@
         "G4": "fail",
         "G5": "pass",
         "G6": "pass",
-        "note": "Denylist. Cannot INCLUDE without a CUT-reversal packet of two C\u22654 sources."
+        "note": "Denylist. Cannot INCLUDE without a CUT-reversal packet of two C≥4 sources."
       },
       "math": "Holographic QEC on trapped ions.",
       "scoreHeuristic": {
@@ -550,7 +969,7 @@
       "plain": {
         "core": "Put a holographic code on the same ion hardware that ran S3.",
         "why": "Useful as reading. Forbidden as an engine INCLUDE.",
-        "limit": "On the denylist until two independent C\u22654 sources reverse the CUT."
+        "limit": "On the denylist until two independent C≥4 sources reverse the CUT."
       }
     }
   ]

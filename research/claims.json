@@ -1,8 +1,8 @@
 {
   "freeze": "2026-09-19",
-  "dbeVersion": "DBE-0.1.0",
-  "dbesVersion": "DBES-0.1.0",
-  "rule": "PASS if C\u22653 and T\u22652 and D\u22652. HOLD if C=2 and T\u22652. CUT if T=0 or C\u22641 after a distinguisher or D=0. Coupling is a new claim and starts at C1. Heuristic 0\u2013100 gauges are harvest metadata and never move C.",
+  "dbeVersion": "DBE-0.1.3",
+  "dbesVersion": "DBES-0.1.2",
+  "rule": "PASS if C≥3 and T≥2 and D≥2. HOLD if C=2 and T≥2. CUT if T=0 or C≤1 after a distinguisher or D=0. Coupling is a new claim and starts at C1. Heuristic 0–100 gauges are harvest metadata and never move C.",
   "axes": {
     "C": [
       {
@@ -103,9 +103,13 @@
         "kitaev-1997",
         "nayak-2008",
         "levaillant-2015",
-        "lyons-2026"
+        "lyons-2026",
+        "gattu-jain-2026",
+        "witten-cs-2026",
+        "perez-fadon-2026",
+        "faurot-2026"
       ],
-      "disputer": "Braiding alone is not universal for S3; fusion measurement must stay in the gate set (Freedman\u2013Larsen\u2013Wang / Levaillant).",
+      "disputer": "Braiding alone is not universal for S3; fusion measurement must stay in the gate set (Freedman–Larsen–Wang / Levaillant).",
       "kill": "If fusion is dropped and braid-only compilation fails, E-S3 is no longer a universal primitive."
     },
     {
@@ -124,7 +128,10 @@
         "google-willow-2024",
         "tamiya-2026",
         "bluvstein-2023",
-        "dehghani-2026"
+        "dehghani-2026",
+        "han-qldpc-2026",
+        "shutty-2026",
+        "hartweg-2026"
       ],
       "disputer": "Threshold papers are still Abelian; they do not make non-Abelian decoding free.",
       "kill": "If a larger code makes logical error worse on the relevant platform, drop as default."
@@ -145,9 +152,11 @@
         "seo-2024",
         "degrave-2022",
         "rothstein-2026",
-        "virtual-circuits-2026"
+        "virtual-circuits-2026",
+        "subbotin-2026",
+        "rl4f-2026"
       ],
-      "disputer": "Loop cannot close inside tearing / Alfv\u00e9n times if I/O is a quantum job queue.",
+      "disputer": "Loop cannot close inside tearing / Alfvén times if I/O is a quantum job queue.",
       "kill": "Fail M2 if the module cannot beat the lab baseline on one disruption-relevant metric."
     },
     {
@@ -169,7 +178,7 @@
         "majorana-shotnoise-2026"
       ],
       "disputer": "Trivial Andreev / YSR mimics; Nature caveat on Majorana 1; missing public X+Z logical on Majorana 2.",
-      "kill": "No independent X and Z logical ops with topological-gap scaling \u2192 drop as load-bearing."
+      "kill": "No independent X and Z logical ops with topological-gap scaling → drop as load-bearing."
     },
     {
       "id": "E-TC",
@@ -187,10 +196,11 @@
         "else-2016",
         "wilczek-2012",
         "watanabe-2014",
-        "floquet-fracton-2026"
+        "floquet-fracton-2026",
+        "cole-aperiodic-2026"
       ],
       "disputer": "Prethermal lifetime vs required shot duration.",
-      "kill": "Lifetime < control horizon \u2192 cut as clock."
+      "kill": "Lifetime < control horizon → cut as clock."
     },
     {
       "id": "E-FR",
@@ -231,8 +241,8 @@
         "wormhole-2022",
         "holographic-ions-2026"
       ],
-      "disputer": "Duality \u2260 a tokamak I/O map. T=0 as a reactor part.",
-      "kill": "Already cut. Reversal needs two independent C\u22654 sources."
+      "disputer": "Duality ≠ a tokamak I/O map. T=0 as a reactor part.",
+      "kill": "Already cut. Reversal needs two independent C≥4 sources."
     },
     {
       "id": "E-5",
@@ -249,7 +259,7 @@
       "evidence": [
         "dbe-whitepaper"
       ],
-      "disputer": "Coupling is a new claim and starts at C1. No subsystem may raise another\u2019s C.",
+      "disputer": "Coupling is a new claim and starts at C1. No subsystem may raise another’s C.",
       "kill": "A module that cannot state inputs, outputs, latency, and fail-safe is not a module."
     },
     {
@@ -269,13 +279,13 @@
         "floquet-tunneling-2023"
       ],
       "disputer": "Collision frequencies at fusion-relevant n,T vs optical pumping rate.",
-      "kill": "If P_coh / P_fusion \u2265 0.1 at any useful density, L1 fails."
+      "kill": "If P_coh / P_fusion ≥ 0.1 at any useful density, L1 fails."
     },
     {
       "id": "S-L2",
       "doc": "DBE-S",
       "name": "Floquet / multiphoton barrier evasion",
-      "claim": "Floquet/Volkov drive enhances DT tunneling at reachable I,\u03c9",
+      "claim": "Floquet/Volkov drive enhances DT tunneling at reachable I,ω",
       "status": "HOLD",
       "C": "C1",
       "T": "T2",
@@ -287,10 +297,11 @@
         "prc109-2024",
         "prc110-2024",
         "assisted-fusion-2019",
-        "dbe-s-revision"
+        "dbe-s-revision",
+        "perez-gonzalez-floquet-2026"
       ],
-      "disputer": "PRC 109 10^15\u201310^16 V/m; PRC 110 10^27\u201310^29 W/cm^2; KH vs FV disagreement.",
-      "kill": "After hole-burning + instability, net <2\u00d7 thermal rate at reachable I,\u03c9 \u2192 Layer 2 off the plant path."
+      "disputer": "PRC 109 10^15–10^16 V/m; PRC 110 10^27–10^29 W/cm^2; KH vs FV disagreement.",
+      "kill": "After hole-burning + instability, net <2× thermal rate at reachable I,ω → Layer 2 off the plant path."
     },
     {
       "id": "S-L3",
@@ -331,8 +342,8 @@
     {
       "id": "S-Q",
       "doc": "DBE-S",
-      "name": "Stack Q_eng \u2248 1000",
-      "claim": "Net Q \u2248 1000 from L1\u2013L4 as written",
+      "name": "Stack Q_eng ≈ 1000",
+      "claim": "Net Q ≈ 1000 from L1–L4 as written",
       "status": "CUT",
       "C": "C1",
       "T": "T2",
@@ -345,8 +356,8 @@
         "prc109-2024",
         "prc110-2024"
       ],
-      "disputer": "NIF Q_sci \u2248 4.13 (Apr 2025); JET Q \u2248 0.67; no MCF Q_sci > 1; plant Q unshown.",
-      "kill": "Any stack whose energy ledger omits drive, pumping, and conversion \u2192 reject the number."
+      "disputer": "NIF Q_sci ≈ 4.13 (Apr 2025); JET Q ≈ 0.67; no MCF Q_sci > 1; plant Q unshown.",
+      "kill": "Any stack whose energy ledger omits drive, pumping, and conversion → reject the number."
     }
   ]
 }
