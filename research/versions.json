@@ -2,7 +2,7 @@
   "scheme": "MAJOR.MINOR.PATCH. Dates live in the changelog, not the version number.",
   "current": {
     "DBE": "DBE-0.1.3",
-    "DBES": "DBES-0.1.2"
+    "DBES": "DBES-0.1.3"
   },
   "lines": [
     {
@@ -10,14 +10,14 @@
       "name": "Dimensional Braid Engine",
       "meaning": "Modular quantum-topological processor + plasma controller",
       "current": "DBE-0.1.3",
-      "freeze": "Post-cut stack: Bus A/B/C, S3+QEC+RL control. 2026-09-21 INCLUDE under E-QEC/E-RL/E-S3."
+      "freeze": "Post-cut stack: Bus A/B/C, S3+QEC+RL control"
     },
     {
       "id": "DBES",
       "name": "Dynamic Barrier Evasion",
       "meaning": "Floquet / laser-RF driven tunneling through the Coulomb barrier",
-      "current": "DBES-0.1.2",
-      "freeze": "L1–L4 as HOLD; Q=1000 is ledger stress, not output"
+      "current": "DBES-0.1.3",
+      "freeze": "L1\u2013L4 as HOLD; Q=1000 is ledger stress, not output"
     }
   ],
   "buses": [
@@ -35,7 +35,7 @@
       "id": "B",
       "name": "Compute",
       "D": "D3",
-      "C": "C3–C4",
+      "C": "C3\u2013C4",
       "target": "Existing trapped-ion / SC / atom-array processors",
       "interface": "Offline and near-online optimization, not in-loop braiding of a tokamak",
       "metric": "Solution quality vs classical HPC at fixed wall-clock",
@@ -44,11 +44,11 @@
     {
       "id": "C",
       "name": "Microphysics",
-      "D": "D1→D2",
+      "D": "D1\u2192D2",
       "C": "C2",
       "target": "Published FV/CN/PIC codes, then XFEL or high-intensity laser time",
-      "interface": "Reactivity ratio R_drive / R_thermal at stated I, ω, n, T, all aux power counted",
-      "metric": "Never writes a plant Q until Bus A’s ledger accepts auxiliary terms",
+      "interface": "Reactivity ratio R_drive / R_thermal at stated I, \u03c9, n, T, all aux power counted",
+      "metric": "Never writes a plant Q until Bus A\u2019s ledger accepts auxiliary terms",
       "quantum": false
     }
   ],
@@ -164,7 +164,7 @@
       "date": "2026-09-20",
       "kind": "PATCH",
       "action": "INCLUDE",
-      "title": "Daily run: this week’s arXiv under existing KEEP claims",
+      "title": "Daily run: this week\u2019s arXiv under existing KEEP claims",
       "summary": "INCLUDE Tamiya, Polley, Flores, Seo 2024 (lookback), virtual-circuit emulators, braid-without-transport. Heuristic gauges updated. No C move. Floquet-fracton queued as a new-pillar candidate (spacetime fractons), not auto-promoted.",
       "claimSnapshot": {
         "E-S3": "KEEP C3 (no move)",
@@ -218,15 +218,27 @@
       "date": "2026-09-21",
       "kind": "PATCH",
       "action": "INCLUDE",
-      "title": "Daily run: qLDPC coherent threshold, DIII-D RL, FQH braid-shape",
-      "summary": "INCLUDE Han qLDPC, Shutty color codes, Hartweg cultivation, Gattu–Jain FQH braid geometry, Witten CS note, Pérez-Fadón S-matrix, Faurot Connes fusion, conformal F-matrices, Subbotin DIII-D RL, RL4F benchmark. HOLD aperiodic Floquet, Floquet memory, quantized-drive Floquet. QUEUE NVQLink as qpu-gpu-control-bus (NEW PILLAR, needs contract). C unchanged on every claim. Harvest gauges are not C.",
+      "title": "Daily run: hyperbolic color codes, Connes fusion, KOBRA ELM, Rydberg bus",
+      "summary": "INCLUDE bibliography for E-QEC (hyperbolic color codes, QEC-AI threat, Rydberg bus, photonic interconnect) and E-S3 (FQH braid robustness, Connes fusion). NEW PILLAR queued: cyclic Haagerup\u2013Izumi family. No C move. Off-path harvest REJECT.",
       "claimSnapshot": {
         "E-S3": "KEEP C3 (no move)",
         "E-QEC": "KEEP C4 (no move)",
         "E-RL": "KEEP C4 (no move)",
-        "E-MZM": "WATCH C1 (no move)",
-        "E-TC": "HOLD / cut-as-clock",
-        "S-L2": "HOLD C1 (no move)"
+        "E-MZM": "WATCH C1 (no move)"
+      },
+      "runId": "run-2026-09-21-daily"
+    },
+    {
+      "version": "DBES-0.1.3",
+      "date": "2026-09-21",
+      "kind": "PATCH",
+      "action": "INCLUDE",
+      "title": "KOBRA ELM Vlasov under S-L3 methods",
+      "summary": "INCLUDE 2609.11389 KOBRA ELM transport as an S-L3 solver citation. Layer 2 remains HOLD at PRC 109 field bound. Q_eng=1000 stays a ledger stress test.",
+      "claimSnapshot": {
+        "S-L3": "KEEP methods (no move)",
+        "S-L2": "HOLD C1 (no move)",
+        "S-Q": "CUT as output"
       },
       "runId": "run-2026-09-21-daily"
     }

@@ -12,8 +12,7 @@ Never rewrite history. A reversed CUT is a new MAJOR line.
 2026-09-20  library  Daily score tab  interactive INCLUDE/WEAKEN workshop on the working freeze (C never moves from harvest gauges)
 2026-09-20  library  Engine tab  DBE/DBE-S freeze, load-bearing vs CUT, Auto-Gate prompts, year-lookback library
 
-2026-09-21  DBE-0.1.3  PATCH  INCLUDE  Han qLDPC / Shutty / Hartweg / Gattu–Jain / Witten CS / Pérez-Fadón / Faurot / Subbotin / RL4F → E-QEC, E-S3, E-RL
-2026-09-21  QUEUE  NEW PILLAR  qpu-gpu-control-bus (NVQLink) — needs interface contract
-2026-09-21  HOLD  cole-aperiodic / sahoo-floquet-mem / perez-gonzalez-floquet → E-TC, S-L2 (C unchanged)
-2026-09-21  library  Observatory UI rebuilt as interactive three-layer lab; harvest gauges still cannot raise C
-2026-09-21  library  Paper rows show Idea / Why / Limit on week, month, lookback, and catalog tabs; gauges still not C
+2026-09-21  DBE-0.1.3  PATCH  INCLUDE  hyperbolic color codes / FQH braid robustness / Connes fusion / Rydberg bus → E-QEC, E-S3 bibliography
+2026-09-21  DBES-0.1.3  PATCH  INCLUDE  KOBRA ELM Vlasov → S-L3 methods (C unchanged)
+2026-09-21  QUEUE  NEW PILLAR  cyclic-fusion-family (Haagerup–Izumi at every odd order) — needs interface contract
+2026-09-21  REJECT  25 off-path arXiv keyword hits (knots, cosmology, biomedical fusion, QKD metro)
