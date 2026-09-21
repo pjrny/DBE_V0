@@ -10,3 +10,4 @@ Never rewrite history. A reversed CUT is a new MAJOR line.
 2026-09-20  REJECT  holographic-ions-2026  → E-HOL denylist
 2026-09-20  DBE-0.1.2  PATCH  INCLUDE  DIII-D Zimmermann / kobra / NIF Q_sci / ASPT / marshall MAST-U PCS → E-RL, S-L3 bibliography
 2026-09-20  library  Daily score tab  interactive INCLUDE/WEAKEN workshop on the working freeze (C never moves from harvest gauges)
+2026-09-20  library  Engine tab  DBE/DBE-S freeze, load-bearing vs CUT, Auto-Gate prompts, year-lookback library

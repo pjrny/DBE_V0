@@ -18,7 +18,8 @@
   * { box-sizing:border-box; }
   html, body { margin:0; background:var(--bg); color:var(--ink); }
   body { font:16px/1.55 "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; }
-  h1,h2,h3,h4 { font-family:"Fraunces", Georgia, serif; font-weight:500; letter-spacing:-0.03em; }
+  h1,h2,h3,h4 { font-family:"Fraunces", Georgia, serif; font-weight:500; letter-spacing:-0.03em; text-wrap:balance; }
+  button:not(:disabled), [role="button"]:not(:disabled) { cursor:pointer; }
   header { max-width:72rem; margin:0 auto; padding:1.5rem 1.25rem 1.25rem; border-bottom:1px solid var(--border); }
   h1 { font-size:clamp(2rem,4vw,3rem); margin:0.35rem 0 0; }
   .kicker { text-transform:uppercase; letter-spacing:0.22em; font-size:0.75rem; color:var(--acc); margin:0; }
@@ -26,10 +27,12 @@
   .wrap { max-width:72rem; margin:0 auto; padding:1.25rem 1.25rem 4rem; }
   .stats { display:grid; grid-template-columns:repeat(2,1fr); gap:0.75rem; margin-top:1.25rem; }
   @media (min-width:640px) { .stats { grid-template-columns:repeat(4,1fr); } }
-  .stat, .card, .run { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:0.95rem 1.05rem; }
+  .stat, .card {
+    background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:0.95rem 1.05rem;
+  }
   .stat dt { font-size:0.75rem; text-transform:uppercase; letter-spacing:0.16em; color:var(--subtle); }
-  .stat dd { margin:0.25rem 0 0; font-family:"IBM Plex Mono", monospace; font-size:1.25rem; }
-  nav.tabs { display:flex; gap:0.25rem; overflow-x:auto; background:var(--surface); padding:0.25rem; border-radius:var(--radius); border:1px solid var(--border); }
+  .stat dd { margin:0.25rem 0 0; font-family:"IBM Plex Mono", ui-monospace, monospace; font-size:1.25rem; }
+  nav.tabs { position:sticky; top:0; z-index:10; display:flex; gap:0.25rem; overflow-x:auto; background:color-mix(in oklab, var(--bg) 95%, transparent); padding:0.5rem 0; border-bottom:1px solid var(--border); }
   nav.tabs button, .chip, select, input, .ghost, .btn {
     background:transparent; color:var(--muted); border:0; min-height:44px; padding:0 1rem; border-radius:var(--radius-sm); font:inherit;
   }
@@ -41,65 +44,56 @@
   .chip { border:1px solid var(--border); border-radius:999px; padding:0 0.85rem; font-size:0.9rem; }
   .chip.active { border-color:color-mix(in oklab, var(--acc) 40%, transparent); background:color-mix(in oklab, var(--acc) 12%, transparent); color:var(--ink); }
   .chip span { font-family:"IBM Plex Mono", monospace; font-size:0.75rem; color:var(--subtle); margin-left:0.4rem; }
-  .tag { display:inline-flex; border:1px solid var(--border); border-radius:999px; padding:0.15rem 0.6rem; font-size:0.75rem; color:var(--muted); margin:0 0.3rem 0.3rem 0; }
-  .tag.acc { color:var(--acc); border-color:color-mix(in oklab, var(--acc) 35%, transparent); }
-  .tag.warn { color:var(--warn); }
-  .tag.keep, .tag.ok { color:var(--ok); }
-  .tag.cut, .tag.danger { color:var(--danger); }
-  .meters, .harvest { display:grid; grid-template-columns:repeat(3,1fr); gap:0.75rem; min-width:13rem; }
-  .lbl { display:flex; justify-content:space-between; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.12em; color:var(--subtle); }
+  .tag { display:inline-flex; align-items:center; border:1px solid var(--border); border-radius:999px; padding:0.15rem 0.6rem; font-size:0.75rem; color:var(--muted); margin:0 0.3rem 0.3rem 0; white-space:nowrap; }
+  .tag.acc { color:var(--acc); border-color:color-mix(in oklab, var(--acc) 35%, transparent); background:color-mix(in oklab, var(--acc) 10%, transparent); }
+  .tag.warn { color:var(--warn); border-color:color-mix(in oklab, var(--warn) 45%, transparent); background:color-mix(in oklab, var(--warn) 12%, transparent); }
+  .tag.ok { color:var(--ok); border-color:color-mix(in oklab, var(--ok) 45%, transparent); background:color-mix(in oklab, var(--ok) 12%, transparent); }
+  .tag.danger { color:var(--danger); border-color:color-mix(in oklab, var(--danger) 35%, transparent); }
+  .harvest { display:grid; grid-template-columns:repeat(3,1fr); gap:0.75rem; min-width:13rem; }
+  .harvest .lbl { display:flex; justify-content:space-between; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.12em; color:var(--subtle); }
   .bar { height:6px; background:var(--bg); border-radius:999px; overflow:hidden; margin-top:0.3rem; }
   .bar i { display:block; height:100%; background:var(--acc); }
   .list { margin-top:1.25rem; border-top:1px solid var(--border); }
-  .row { width:100%; text-align:left; display:flex; flex-direction:column; gap:0.85rem; padding:1.15rem 0; border:0; border-bottom:1px solid var(--border); background:transparent; color:inherit; }
+  .row { width:100%; text-align:left; display:flex; flex-direction:column; gap:0.85rem; padding:1.15rem 0; border-bottom:1px solid var(--border); background:transparent; color:inherit; border-left:0; border-right:0; }
   @media (min-width:800px) { .row { flex-direction:row; justify-content:space-between; } }
   .row h3 { font-size:1.25rem; margin:0.35rem 0 0.2rem; }
-  .meta, .legend { color:var(--muted); font-size:0.9rem; }
+  .meta { color:var(--muted); font-size:0.9rem; }
   .grid { display:grid; gap:0.85rem; margin-top:1.25rem; }
   @media (min-width:800px) { .grid { grid-template-columns:1fr 1fr; } }
+  .grid3 { display:grid; gap:0.85rem; margin-top:1.25rem; }
+  @media (min-width:900px) { .grid3 { grid-template-columns:1fr 1fr 1fr; } }
   .overlay { position:fixed; inset:0; background:color-mix(in oklab, var(--bg) 72%, transparent); display:flex; align-items:flex-end; justify-content:center; z-index:20; }
   @media (min-width:640px) { .overlay { align-items:center; padding:1.5rem; } }
-  .panel { width:min(44rem,100%); max-height:92dvh; overflow:auto; background:var(--elevated); border:1px solid var(--border); border-radius:var(--radius-xl); padding:1.25rem; }
+  .panel { position:relative; width:min(44rem,100%); max-height:92dvh; overflow:auto; background:var(--elevated); border:1px solid var(--border); border-radius:var(--radius-xl) var(--radius-xl) 0 0; padding:1.25rem; }
+  @media (min-width:640px) { .panel { border-radius:var(--radius-xl); padding:2rem; } }
   a { color:var(--acc); }
+  .mono { font-family:"IBM Plex Mono", ui-monospace, monospace; }
   .empty { color:var(--muted); margin-top:2rem; }
-  .axes { display:flex; gap:1rem; font-family:"IBM Plex Mono", monospace; font-size:0.8rem; }
-  .tiny { font-size:0.75rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--subtle); }
-  .actions { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:0.75rem; }
+  .axis { display:inline-flex; gap:0.4rem; font-family:"IBM Plex Mono", ui-monospace, monospace; font-size:0.75rem; white-space:nowrap; }
+  .axis b { color:var(--subtle); font-weight:500; }
   .notice { border:1px dashed color-mix(in oklab, var(--acc) 35%, transparent); background:color-mix(in oklab, var(--acc) 8%, transparent); border-radius:var(--radius); padding:0.85rem 1rem; color:var(--muted); font-size:0.9rem; margin:1rem 0; }
-  .engine { margin-top:1rem; display:grid; gap:0.75rem; }
-  @media (min-width:800px) { .engine { grid-template-columns:1.2fr 1fr; } }
-  .plain { margin:0.35rem 0 0; color:var(--muted); font-size:0.92rem; }
-  .plain b { color:var(--ink); font-weight:500; }
-  .rowish { display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; }
-  .freeze { display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center; margin-top:0.75rem; color:var(--muted); }
-  .toast { position:fixed; bottom:1rem; right:1rem; background:var(--elevated); border:1px solid var(--border); padding:0.75rem 1rem; border-radius:var(--radius); z-index:30; }
+  .btn { border:1px solid var(--border); background:var(--elevated); color:var(--ink); }
+  .btn.ok { border-color:color-mix(in oklab, var(--ok) 40%, transparent); color:var(--ok); }
+  .btn.warn { border-color:color-mix(in oklab, var(--warn) 40%, transparent); color:var(--warn); }
+  .btn.danger { border-color:color-mix(in oklab, var(--danger) 40%, transparent); color:var(--danger); }
+  .toast { position:fixed; bottom:1.25rem; left:50%; transform:translateX(-50%); background:var(--elevated); border:1px solid var(--border); border-radius:var(--radius); padding:0.7rem 1rem; z-index:30; }
+  .freeze { display:flex; flex-wrap:wrap; gap:0.75rem; align-items:center; margin-top:0.85rem; color:var(--muted); font-size:0.9rem; }
+  @media (prefers-reduced-motion: reduce) { * { transition:none !important; } }
 </style>
 </head>
 <body>
 <header>
   <p class="kicker">DBE source ledger</p>
   <h1>Observatory</h1>
-  <p class="lede">Library, claims, and versions stay separate. Harvest gauges never move C. Q = 1000 is a ledger stress test, not an output.</p>
+  <p class="lede">Three layers, never mixed: a paper library with harvest gauges, a frozen C/T/D/A claim table, and a version log. Q = 1000 is a stress test of the ledger, not an output.</p>
   <dl class="stats" id="stats"></dl>
   <div class="freeze" id="freezeBar"></div>
-  <div class="engine" id="engine"></div>
 </header>
 <div class="wrap">
   <nav class="tabs" id="tabs" aria-label="Observatory layers"></nav>
-  <div class="tools" id="tools">
-    <input id="q" placeholder="Search title, author, idea, claim ID"/>
-    <select id="sort">
-      <option value="importance">Sort: importance</option>
-      <option value="confidence">Sort: confidence</option>
-      <option value="popularity">Sort: popularity</option>
-      <option value="date">Sort: date</option>
-    </select>
-  </div>
-  <div class="chips" id="chips"></div>
-  <p class="notice" id="goal" hidden></p>
+  <div id="tools"></div>
   <div id="main">Loading catalog, claims, versions, reviews, and ledger…</div>
 </div>
 <script src="lab.js"></script>
-<script src="lab-ui.js"></script>
 </body>
 </html>
