@@ -15,4 +15,4 @@ Never rewrite history. A reversed CUT is a new MAJOR line.
 2026-09-21  DBE-0.1.3  PATCH  INCLUDE  hyperbolic color codes / FQH braid robustness / Connes fusion / Rydberg bus → E-QEC, E-S3 bibliography
 2026-09-21  DBES-0.1.3  PATCH  INCLUDE  KOBRA ELM Vlasov → S-L3 methods (C unchanged)
 2026-09-21  QUEUE  NEW PILLAR  cyclic-fusion-family (Haagerup–Izumi at every odd order) — needs interface contract
-2026-09-21  REJECT  25 off-path arXiv keyword hits (knots, cosmology, biomedical fusion, QKD metro)
+2026-09-21  library  Latest-drop briefing, idea/why/limit on every row, Hide off-path toggle, current DBE/DBE-S papers on Engine

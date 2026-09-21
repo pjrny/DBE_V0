@@ -1,5 +1,5 @@
 const NOW = new Date("2026-09-21T10:22:00-05:00");
-const KEY = "dbe-observatory-freeze-v2";
+const KEY = "dbe-observatory-freeze-v3";
 const TABS = [
   ["week", "This week"],
   ["month", "Month"],
@@ -30,8 +30,8 @@ let CLAIMS = { claims: [], axes: {} };
 let VERS = { history: [], buses: [], milestones: [], lines: [], current: {} };
 let REVIEWS = { cards: [] };
 let LEDGER = {};
-let tab = "week", field = "all", q = "", sort = "importance";
-let FREEZE = { actions: [], dbe: "DBE-0.1.2", dbes: "DBES-0.1.2", log: [], parkedPaperIds: [] };
+let tab = "week", field = "all", q = "", sort = "importance", hideOffPath = true;
+let FREEZE = { actions: [], dbe: "DBE-0.1.3", dbes: "DBES-0.1.3", log: [], parkedPaperIds: [] };
 
 const esc = (s) => String(s ?? "")
   .replace(/&/g, "&").replace(/</g, "<").replace(/>/g, ">")
@@ -187,7 +187,7 @@ function pool() {
     papers = papers.filter((p) => [p.title, authors(p).join(" "), idea(p), p.whyItMatters, p.limitation, p.arxiv, ...(p.tags || []), ...(p.claimIds || [])].join(" ").toLowerCase().includes(s));
   }
   papers = papers.filter((p) => !(FREEZE.parkedPaperIds || []).includes(p.id) || tab === "catalog");
-  if (tab !== "catalog") papers = papers.filter((p) => p.role !== "off-path" && p.bindAction !== "REJECT");
+  if (hideOffPath && tab !== "catalog") papers = papers.filter((p) => p.role !== "off-path" && p.bindAction !== "REJECT");
   papers.sort((a, b) => sort === "date" ? String(pdate(b)).localeCompare(String(pdate(a))) : (b[sort] || 0) - (a[sort] || 0));
   return papers;
 }
@@ -209,7 +209,7 @@ function openPaper(id) {
   document.body.appendChild(overlay);
 }
 function paperRow(p) {
-  return "<button class=\"row\" data-id=\"" + p.id + "\"><div><div>" + (p.foundational ? "<span class=\"tag acc\">Foundational</span>" : "<span class=\"tag\">" + roleLabel(p) + "</span>") + (high(p) ? "<span class=\"tag ok\">High signal</span>" : "") + (low(p) ? "<span class=\"tag warn\">Low signal</span>" : "") + (p.claimIds || []).map((id) => "<span class=\"tag acc\">" + id + "</span>").join("") + "<span class=\"meta\"> " + esc(pdate(p)) + "</span></div><h3>" + esc(p.title) + "</h3><p class=\"meta\">" + esc(authors(p).slice(0, 4).join(", ")) + " · " + esc(p.venue || "") + "</p><p>" + esc(idea(p)) + "</p><div>" + (p.fields || []).map((f) => "<span class=\"tag\">" + esc(fieldLabel(f)) + "</span>").join("") + "</div></div>" + meters(p) + "</button>";
+  return "<button class=\"row\" data-id=\"" + p.id + "\" type=\"button\"><div><div>" + (p.foundational ? "<span class=\"tag acc\">Foundational</span>" : "<span class=\"tag\">" + roleLabel(p) + "</span>") + (high(p) ? "<span class=\"tag ok\">High signal</span>" : "") + (low(p) ? "<span class=\"tag warn\">Low signal</span>" : "") + (p.suggestedPillar ? "<span class=\"tag warn\">new pillar?</span>" : "") + (p.claimIds || []).map((id) => "<span class=\"tag acc\">" + id + "</span>").join("") + "<span class=\"meta\"> " + esc(pdate(p)) + "</span></div><h3>" + esc(p.title) + "</h3><p class=\"meta\">" + esc(authors(p).slice(0, 4).join(", ")) + " · " + esc(p.venue || "") + "</p><p><b>Idea.</b> " + esc(idea(p)) + "</p><p class=\"meta\"><b>Why.</b> " + esc(p.whyItMatters || "") + "</p><p class=\"meta\"><b>Limit.</b> " + esc(p.limitation || "") + "</p><div>" + (p.fields || []).map((f) => "<span class=\"tag\">" + esc(fieldLabel(f)) + "</span>").join("") + "</div></div>" + meters(p) + "</button>";
 }
 function renderEngine() {
   const keep = (CLAIMS.claims || []).filter((c) => c.status === "KEEP");
@@ -219,7 +219,8 @@ function renderEngine() {
   const autoC = (REVIEWS.cards || []).filter((c) => !applied(c.id) && c.action === "INCLUDE" && autoGate(c).pass);
   const cardC = (c) => "<article class=\"card\"><div style=\"display:flex;justify-content:space-between;gap:0.75rem\"><div><span class=\"mono\" style=\"font-size:0.75rem;color:var(--subtle)\">" + esc(c.id) + "</span><h3>" + esc(c.name) + "</h3><p class=\"meta\">" + esc(c.claim) + "</p></div><span class=\"tag " + statusClass(c.status) + "\">" + esc(c.status) + "</span></div><p>" + axisPills(c) + "</p><p>" + esc(c.verdict) + "</p><div>" + (c.evidence || []).map((id) => "<button class=\"chip\" data-open=\"" + id + "\">" + id + "</button>").join("") + "</div></article>";
   return "<p class=\"notice\">Three layers, never mixed. Harvest gauges cannot raise C. Q = 1000 is a ledger stress test, not an output. KEEP claims with C≥3 ride the paper; CUT sections are already out.</p>"
-    + "<div class=\"grid\"><article class=\"card\"><p class=\"kicker\">DBE " + esc(FREEZE.dbe) + "</p><h2>Dimensional Braid Engine</h2><p class=\"meta\">Modular quantum-topological processor + plasma controller</p><p>Post-cut stack: Bus A talks to a real plant. Bus B uses the anyon and QEC results we actually have. Bus C is a microphysics campaign, not a coupled engine.</p></article><article class=\"card\"><p class=\"kicker\">DBE-S " + esc(FREEZE.dbes) + "</p><h2>Dynamic Barrier Evasion</h2><p class=\"meta\">Floquet / laser-RF driven tunneling through the Coulomb barrier</p><p>L1–L4 as HOLD except L3 solvers KEEP. Q = 1000 is a stress test of the energy ledger, not an output of the current stack.</p></article></div>"
+    + "<div class=\"grid\"><article class=\"card\"><p class=\"kicker\">DBE " + esc(FREEZE.dbe) + "</p><h2>Dimensional Braid Engine</h2><p class=\"meta\">Modular quantum-topological processor + plasma controller</p><p>Post-cut stack: Bus A talks to a real plant. Bus B uses the anyon and QEC results we actually have. Bus C is a microphysics campaign, not a coupled engine.</p><button class=\"chip\" data-open=\"dbe-whitepaper\">Open current paper</button></article><article class=\"card\"><p class=\"kicker\">DBE-S " + esc(FREEZE.dbes) + "</p><h2>Dynamic Barrier Evasion</h2><p class=\"meta\">Floquet / laser-RF driven tunneling through the Coulomb barrier</p><p>L1–L4 as HOLD except L3 solvers KEEP. Q = 1000 is a stress test of the energy ledger, not an output of the current stack.</p><button class=\"chip\" data-open=\"dbe-s-revision\">Open current paper</button></article></div>"
+    + "<h2>Current papers</h2><p class=\"meta\">Live freeze plus the hardware and review pillars it rests on. Open any card for idea / why it matters / one limitation.</p><div class=\"grid\">" + ["dbe-whitepaper","dbe-s-revision","lo-2026","kitaev-1997","nayak-2008"].map((id) => { const p = paperById(id) || {}; return "<article class=\"card\"><p class=\"kicker\">" + esc(p.venue || "Program source") + "</p><h3>" + esc(p.title || id) + "</h3><p>" + esc(idea(p)) + "</p><p class=\"meta\"><b>Limitation.</b> " + esc(p.limitation || "") + "</p><button class=\"chip\" data-open=\"" + id + "\">Open paper</button></article>"; }).join("") + "</div>"
     + "<h2>Load-bearing</h2><div class=\"grid\">" + keep.map(cardC).join("") + "</div>"
     + "<h2>Hold / watch</h2><div class=\"grid\">" + hold.map(cardC).join("") + "</div>"
     + "<h2>Removed from the paper</h2><div class=\"grid3\">" + cut.map(cardC).join("") + "</div>"
@@ -278,7 +279,14 @@ function render() {
   else if (tab === "feeds") main.innerHTML = renderFeeds();
   else {
     const papers = pool();
-    main.innerHTML = papers.length ? "<div class=\"list\">" + papers.map(paperRow).join("") + "</div>" : "<p class=\"empty\">No papers in this slice.</p>";
+    const latest = papers.reduce((m, p) => String(pdate(p)) > m ? String(pdate(p)) : m, "");
+    const drop = tab === "week" ? papers.filter((p) => String(pdate(p)).slice(0, 10) === latest.slice(0, 10)).slice(0, 4) : [];
+    const brief = drop.length
+      ? "<section class=\"card\" style=\"margin-top:1.25rem\"><p class=\"kicker\">Latest drop · " + esc(latest) + "</p><h2>What landed, in plain language</h2><p class=\"meta\">Core idea, why it matters for the Q-ledger path, and one limitation.</p>" + drop.map((p) => "<button class=\"row\" data-id=\"" + p.id + "\" type=\"button\" style=\"border:0;border-top:1px solid var(--border);padding-left:0;padding-right:0\"><div><h3>" + esc(p.title) + "</h3><p><b>Idea.</b> " + esc(idea(p)) + "</p><p class=\"meta\"><b>Why.</b> " + esc(p.whyItMatters || "") + "</p><p class=\"meta\"><b>Limit.</b> " + esc(p.limitation || "") + "</p></div></button>").join("") + "</section>"
+      : "";
+    main.innerHTML = papers.length
+      ? brief + "<p class=\"meta\" style=\"margin-top:1.25rem\">" + papers.length + " sources, ranked by " + sort + ". Harvest gauges are not C.</p><div class=\"list\">" + papers.map(paperRow).join("") + "</div>"
+      : "<p class=\"empty\">No papers in this slice. Foundational pillars stay in Catalog. Off-path harvest hits are hidden by default.</p>";
   }
   main.querySelectorAll("[data-id], [data-open]").forEach((btn) => btn.addEventListener("click", () => openPaper(btn.dataset.id || btn.dataset.open)));
   main.querySelectorAll("[data-apply]").forEach((btn) => btn.addEventListener("click", () => applyCard(btn.dataset.apply)));
@@ -288,7 +296,7 @@ function setup() {
   document.getElementById("tabs").innerHTML = TABS.map(([id, label]) => "<button data-tab=\"" + id + "\" class=\"" + (id === tab ? "active" : "") + "\">" + label + "</button>").join("");
   const counts = {};
   CAT.papers.forEach((p) => (p.fields || []).forEach((f) => counts[f] = (counts[f] || 0) + 1));
-  document.getElementById("tools").innerHTML = "<div class=\"tools\"><input id=\"q\" placeholder=\"Search title, claim, idea…\"/><select id=\"sort\"><option value=\"importance\">Sort: importance</option><option value=\"confidence\">Sort: confidence</option><option value=\"popularity\">Sort: popularity</option><option value=\"date\">Sort: date</option></select></div><div class=\"chips\" id=\"chips\"></div><p class=\"meta\" id=\"goal\" hidden></p>";
+  document.getElementById("tools").innerHTML = "<div class=\"tools\"><input id=\"q\" placeholder=\"Search title, claim, idea…\"/><select id=\"sort\"><option value=\"importance\">Sort: importance</option><option value=\"confidence\">Sort: confidence</option><option value=\"popularity\">Sort: popularity</option><option value=\"date\">Sort: date</option></select><label class=\"meta\" style=\"display:flex;align-items:center;gap:0.5rem;min-height:44px\"><input id=\"hideOff\" type=\"checkbox\" " + (hideOffPath ? "checked" : "") + "/> Hide off-path</label></div><div class=\"chips\" id=\"chips\"></div><p class=\"meta\" id=\"goal\" hidden></p>";
   document.getElementById("chips").innerHTML = "<button class=\"chip " + (field === "all" ? "active" : "") + "\" data-field=\"all\">All fields<span>" + CAT.papers.length + "</span></button>" + CAT.fields.map((f) => "<button class=\"chip " + (field === f.id ? "active" : "") + "\" data-field=\"" + f.id + "\">" + f.short + "<span>" + (counts[f.id] || 0) + "</span></button>").join("");
   document.getElementById("tabs").onclick = (e) => {
     const b = e.target.closest("[data-tab]");
@@ -311,6 +319,7 @@ function setup() {
   };
   document.getElementById("q").oninput = (e) => { q = e.target.value; render(); };
   document.getElementById("sort").onchange = (e) => { sort = e.target.value; render(); };
+  document.getElementById("hideOff").onchange = (e) => { hideOffPath = e.target.checked; render(); };
   render();
 }
 Promise.all([
