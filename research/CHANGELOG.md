@@ -16,3 +16,8 @@ Never rewrite history. A reversed CUT is a new MAJOR line.
 2026-09-21  DBES-0.1.3  PATCH  INCLUDE  KOBRA ELM Vlasov → S-L3 methods (C unchanged)
 2026-09-21  QUEUE  NEW PILLAR  cyclic-fusion-family (Haagerup–Izumi at every odd order) — needs interface contract
 2026-09-21  library  Latest-drop briefing, idea/why/limit on every row, Hide off-path toggle, current DBE/DBE-S papers on Engine
+
+2026-09-21  DBE-0.2.0  MAJOR  FREEZE  retire E-TC (clock) and E-FR (hardware) from the paper; confirm cyclic fusion under E-S3; expire QUEUE new-pillars
+2026-09-21  DBES-0.2.0  MAJOR  FREEZE  approved reprint: L3 KEEP, L1/L2/L4 HOLD, S-Q CUT as output; no C move
+2026-09-21  REJECT  spacetime-fractons / floquet-majorana-codes / fracton-holography as engine pillars (couple CUT/WATCH boxes)
+2026-09-21  EXPIRE  cyclic-fusion-family / nonabelian-qldpc / topo-dynamics as new pillars (bibliography only)
