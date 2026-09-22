@@ -1,5 +1,5 @@
-const NOW = new Date("2026-09-22T09:55:00-05:00");
-const KEY = "dbe-observatory-freeze-v4";
+const NOW = new Date("2026-09-22T10:08:00-05:00");
+const KEY = "dbe-observatory-freeze-v5";
 const TABS = [
   ["week", "This week"],
   ["month", "Month"],
@@ -31,7 +31,7 @@ let VERS = { history: [], buses: [], milestones: [], lines: [], current: {} };
 let REVIEWS = { cards: [] };
 let LEDGER = {};
 let tab = "week", field = "all", q = "", sort = "importance", hideOffPath = true;
-let FREEZE = { actions: [], dbe: "DBE-0.2.1", dbes: "DBES-0.2.0", log: [], parkedPaperIds: [] };
+let FREEZE = { actions: [], dbe: "DBE-0.2.2", dbes: "DBES-0.2.0", log: [], parkedPaperIds: [] };
 
 const esc = (s) => String(s ?? "")
   .replace(/&/g, "&").replace(/</g, "<").replace(/>/g, ">")
@@ -113,7 +113,7 @@ function loadFreeze() {
   }));
   return {
     actions: published,
-    dbe: (VERS.current || {}).DBE || "DBE-0.2.1",
+    dbe: (VERS.current || {}).DBE || "DBE-0.2.2",
     dbes: (VERS.current || {}).DBES || "DBES-0.2.0",
     parkedPaperIds: [],
     log: [],

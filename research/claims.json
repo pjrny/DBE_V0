@@ -1,6 +1,6 @@
 {
   "freeze": "2026-09-22",
-  "dbeVersion": "DBE-0.2.1",
+  "dbeVersion": "DBE-0.2.2",
   "dbesVersion": "DBES-0.2.0",
   "rule": "PASS if C\u22653 and T\u22652 and D\u22652. HOLD if C=2 and T\u22652. CUT if T=0 or C\u22641 after a distinguisher or D=0. Coupling is a new claim and starts at C1. Heuristic 0\u2013100 gauges are harvest metadata and never move C.",
   "axes": {
@@ -132,7 +132,10 @@
         "han-qldpc-2026",
         "shutty-2026",
         "hartweg-2026",
-        "iacobacci-2026"
+        "iacobacci-2026",
+        "han-qldpc-coherent-2026",
+        "baldelli-qd-qldpc-2026",
+        "shutty-dense-color-2026"
       ],
       "disputer": "Threshold papers are still Abelian; they do not make non-Abelian decoding free.",
       "kill": "If a larger code makes logical error worse on the relevant platform, drop as default."
@@ -159,7 +162,9 @@
         "koshizuka-2026",
         "gaytan-2026",
         "kaltsas-2026",
-        "xie-veqdb-2026"
+        "xie-veqdb-2026",
+        "wang-invgs-2026",
+        "yang-tokaglint-2026"
       ],
       "disputer": "Loop cannot close inside tearing / Alfv\u00e9n times if I/O is a quantum job queue.",
       "kill": "Fail M2 if the module cannot beat the lab baseline on one disruption-relevant metric."
@@ -180,7 +185,9 @@
         "kitaev-2001-wires",
         "kitaev-honeycomb",
         "majorana-landscape-2026",
-        "majorana-shotnoise-2026"
+        "majorana-shotnoise-2026",
+        "roy-mzmcapp-2026",
+        "sahu-noisy-braid-2026"
       ],
       "disputer": "Trivial Andreev / YSR mimics; Nature caveat on Majorana 1; missing public X+Z logical on Majorana 2.",
       "kill": "No independent X and Z logical ops with topological-gap scaling \u2192 drop as load-bearing."

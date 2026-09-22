@@ -26,4 +26,8 @@ Never rewrite history. A reversed CUT is a new MAJOR line.
 2026-09-22  REJECT  chen-tqc-2026  → E-TC reading list (CUT as clock)
 2026-09-22  REJECT  liu-ads-2026  → E-HOL denylist
 2026-09-22  library  Fourth daily run; year lookback retained; harvest gauges still not C
-2026-09-22  library  Observatory UX: hash tabs, freeze-note links, tab counts, Escape-to-close. No claim C move.
+
+2026-09-22  DBE-0.2.2  PATCH  INCLUDE  TCV inverse-GS / qLDPC coherent threshold / quasi-dyadic qLDPC / dense 4.8.8 color / TokaGLINT → E-RL, E-QEC bibliography (C unchanged)
+2026-09-22  QUEUE  INCLUDE  roy-mzmcapp-2026  → E-MZM distinguisher (WATCH; A1 fail, no auto-bump)
+2026-09-22  REJECT  muniz-fracton-schwinger-2026  → E-FR reading list (CUT as hardware)
+2026-09-22  library  Observatory tab rebuilt: idea/why/limit on every card, freeze workshop, year lookback, current DBE/DBE-S papers

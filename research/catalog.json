@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T09:55:00-05:00",
+  "generatedAt": "2026-09-22T10:08:00-05:00",
   "lookback": "1y+",
   "northStar": "Q=1000",
   "feeds": [
@@ -5141,9 +5141,352 @@
         "E-HOL"
       ],
       "bindAction": "REJECT"
+    },
+    {
+      "id": "wang-invgs-2026",
+      "title": "An Inverse Grad-Shafranov Neural Network Approach to Tokamak Magnetic Control",
+      "authors": [
+        "Allen M. Wang",
+        "Adriano Mele",
+        "Cosmas Hei\u00df",
+        "Cristian Galperti",
+        "Zander Keith",
+        "Alessandro Pau",
+        "Antoine Merle",
+        "Olivier Sauter"
+      ],
+      "year": 2026,
+      "date": "2026-08-25",
+      "venue": "arXiv physics.plasm-ph",
+      "arxiv": "2608.23976",
+      "url": "https://arxiv.org/abs/2608.23976",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "role": "lookback",
+      "foundational": false,
+      "importance": 91,
+      "confidence": 82,
+      "popularity": 70,
+      "coreIdea": "A neural inverse Grad\u2013Shafranov map turns a requested plasma boundary into poloidal-field coil currents. On TCV it shaped plasma better than the standard discharge-prep recipe, with classical loops still enforcing constraints.",
+      "whyItMatters": "This is Bus A language on a real tokamak: desired shape in, coil currents out, latency compatible with magnetic control. M2 wants a module that beats a lab baseline on a disruption- or shape-relevant metric.",
+      "limitation": "Preprint. Improved shaping without explicit real-time shape feedback. Does not, by itself, close a disruption-avoidance loop. Bare arXiv cannot auto-raise C; E-RL stays C4.",
+      "source": "arXiv physics.plasm-ph",
+      "tags": [
+        "TCV",
+        "Grad-Shafranov",
+        "Bus A",
+        "M2",
+        "magnetic control"
+      ],
+      "pillarId": "plasma-rl",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "INCLUDE"
+    },
+    {
+      "id": "han-qldpc-coherent-2026",
+      "title": "Coherent error threshold for quantum LDPC codes",
+      "authors": [
+        "Zhengyi Han",
+        "Yuanchen Zhao",
+        "Yijia Xu",
+        "Yixu Wang",
+        "Zi-Wen Liu"
+      ],
+      "year": 2026,
+      "date": "2026-09-17",
+      "venue": "arXiv quant-ph",
+      "arxiv": "2609.20537",
+      "url": "https://arxiv.org/abs/2609.20537",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 90,
+      "confidence": 84,
+      "popularity": 68,
+      "coreIdea": "qLDPC codes are usually sold on stochastic Pauli noise. This proof shows they also have a nonzero code-capacity threshold against local coherent (unitary) noise, with logical diamond-distance error decaying exponentially in distance.",
+      "whyItMatters": "E-QEC already cites a coherent-error threshold for topological codes. Extending that to qLDPC is the actual Bus B error layer, not only the surface-code special case.",
+      "limitation": "Theory / code-capacity. Minimum-weight decoder, not a hardware shot. Complements Tamiya 2026; does not replace a device threshold.",
+      "source": "arXiv quant-ph",
+      "tags": [
+        "qLDPC",
+        "coherent error",
+        "threshold",
+        "Bus B"
+      ],
+      "pillarId": "anyon-tqc",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "INCLUDE"
+    },
+    {
+      "id": "baldelli-qd-qldpc-2026",
+      "title": "High-Rate Quasi-Dyadic Quantum LDPC Codes",
+      "authors": [
+        "Alessio Baldelli",
+        "Sisi Miao",
+        "Laurent Schmalen",
+        "Massimo Battaglioni",
+        "Marco Baldi"
+      ],
+      "year": 2026,
+      "date": "2026-09-21",
+      "venue": "arXiv quant-ph",
+      "arxiv": "2609.24201",
+      "url": "https://arxiv.org/abs/2609.24201",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 84,
+      "confidence": 76,
+      "popularity": 63,
+      "coreIdea": "A CSS qLDPC family built from quasi-dyadic matrices with Tanner-graph girth at least 6. Finite-length Monte Carlo under code-capacity and phenomenological noise is competitive with current constructions.",
+      "whyItMatters": "Rate and girth are the practical knobs on the E-QEC wrapper. High-rate qLDPC is how Bus B stays cheaper than a giant surface-code lattice.",
+      "limitation": "Construction + simulation, not a processor result. Unitarity-bounded performance still needs a circuit-level superconducting or ion decoder.",
+      "source": "arXiv quant-ph",
+      "tags": [
+        "qLDPC",
+        "CSS",
+        "girth",
+        "Bus B"
+      ],
+      "pillarId": "anyon-tqc",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "INCLUDE"
+    },
+    {
+      "id": "shutty-dense-color-2026",
+      "title": "Denser Planar Color Codes",
+      "authors": [
+        "Noah Shutty"
+      ],
+      "year": 2026,
+      "date": "2026-09-18",
+      "venue": "arXiv quant-ph",
+      "arxiv": "2609.21376",
+      "url": "https://arxiv.org/abs/2609.21376",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 86,
+      "confidence": 78,
+      "popularity": 66,
+      "coreIdea": "A 4.8.8 color code in brickwork layout on the square lattice, with periodic superdense circuits of twelve CNOT layers that appear to keep full distance. Qubit count is about two-thirds of the triangular 6.6.6 color code and half of a rotated surface code at the same distance.",
+      "whyItMatters": "Cheaper physical qubits per logical at fixed distance is a Bus B cost function. Color codes also host transversal T, which matters if we later compile magic states around E-S3.",
+      "limitation": "Circuit-level superconducting simulations, not a device. Density win is not a non-Abelian decoder.",
+      "source": "arXiv quant-ph",
+      "tags": [
+        "color code",
+        "density",
+        "Bus B"
+      ],
+      "pillarId": "anyon-tqc",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "INCLUDE"
+    },
+    {
+      "id": "yang-tokaglint-2026",
+      "title": "TokaGLINT: A Scalable GPU-Tailored Implicit Solver for Full 3D Tokamak Electromagnetic Simulations",
+      "authors": [
+        "Zifan Yang",
+        "Haoyuan Zhang",
+        "Jialin Li",
+        "Wu Yuan",
+        "Xiazhen Liu",
+        "Jian Zhang",
+        "Jianyuan Xiao",
+        "Shan Liang"
+      ],
+      "year": 2026,
+      "date": "2026-09-18",
+      "venue": "arXiv physics.plasm-ph",
+      "arxiv": "2609.21366",
+      "url": "https://arxiv.org/abs/2609.21366",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 81,
+      "confidence": 73,
+      "popularity": 58,
+      "coreIdea": "A GPU implicit Maxwell solver for full-3D tokamak electromagnetic fields, co-designed with hierarchical domain decomposition and a symplectic CN-FDTD discretisation so long runs stay stable.",
+      "whyItMatters": "Bus A and Bus C both need fast, honest EM/plasma solvers. A GPU tokamak Maxwell kernel is the classical baseline any quantum optimiser has to beat at M3.",
+      "limitation": "Solver paper. Not a controller, not a Q number, not a closed plant loop.",
+      "source": "arXiv physics.plasm-ph",
+      "tags": [
+        "GPU",
+        "Maxwell",
+        "tokamak",
+        "M3"
+      ],
+      "pillarId": "plasma-rl",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "INCLUDE"
+    },
+    {
+      "id": "roy-mzmcapp-2026",
+      "title": "Distinguishing Quantum Capacitance Signatures of a Topological Majorana Wire from a Normal Wire Segment",
+      "authors": [
+        "Binayyak Bhusan Roy",
+        "Jay Deep Sau",
+        "Sumanta Tewari"
+      ],
+      "year": 2026,
+      "date": "2026-08-27",
+      "venue": "arXiv cond-mat.mes-hall",
+      "arxiv": "2608.27452",
+      "url": "https://arxiv.org/abs/2608.27452",
+      "fields": [
+        "majorana"
+      ],
+      "role": "lookback",
+      "foundational": false,
+      "importance": 88,
+      "confidence": 80,
+      "popularity": 64,
+      "coreIdea": "A gapless trivial wire can fake Majorana-like quantum-capacitance oscillations via Aharonov\u2013Bohm interference. The paper shows an experimental distinguisher: in the trivial case the two parity signals sit on separate energy resonances because there are no generic zero-energy states.",
+      "whyItMatters": "M5 is the Majorana distinguisher-or-drop milestone. A capacitance test that splits topological wires from trivial Andreev/YSR mimics is exactly the kill-threshold language E-MZM needs.",
+      "limitation": "Theory of a proposed interferometer, not an independent X and Z logical on Majorana 2. E-MZM stays WATCH/C1. Cannot auto-merge: A1 requires KEEP or HOLD.",
+      "source": "arXiv cond-mat.mes-hall",
+      "tags": [
+        "Majorana",
+        "mimic",
+        "M5",
+        "distinguisher"
+      ],
+      "pillarId": "majorana-braids",
+      "claimIds": [
+        "E-MZM"
+      ],
+      "bindAction": "HOLD",
+      "suggestedPillar": null
+    },
+    {
+      "id": "sahu-noisy-braid-2026",
+      "title": "Noisy Braiding of Majorana Modes: A Comparison of Nanowire Trijunction and Quantum-Dot-Assisted Architectures",
+      "authors": [
+        "Dibyajyoti Sahu",
+        "Suhas Gangadharaiah"
+      ],
+      "year": 2026,
+      "date": "2026-08-10",
+      "venue": "arXiv cond-mat.mes-hall",
+      "arxiv": "2608.09416",
+      "url": "https://arxiv.org/abs/2608.09416",
+      "fields": [
+        "majorana",
+        "tqc",
+        "braid-knot"
+      ],
+      "role": "lookback",
+      "foundational": false,
+      "importance": 72,
+      "confidence": 70,
+      "popularity": 55,
+      "coreIdea": "A braid is only as robust as its hardware. Time-dependent BdG simulations of a nanowire trijunction versus a quantum-dot-assisted exchange show the dot architecture keeps a lower error under noise.",
+      "whyItMatters": "If E-MZM ever leaves WATCH, the braid primitive has to survive quasiparticle poisoning and finite-time exchange. This is a methods paper for that kill test.",
+      "limitation": "Simulation of two toy architectures. No public X+Z logical. Does not make Majorana load-bearing.",
+      "source": "arXiv cond-mat.mes-hall",
+      "tags": [
+        "Majorana",
+        "braiding",
+        "noise",
+        "WATCH"
+      ],
+      "pillarId": "majorana-braids",
+      "claimIds": [
+        "E-MZM"
+      ],
+      "bindAction": "HOLD"
+    },
+    {
+      "id": "muniz-fracton-schwinger-2026",
+      "title": "Dynamical Schwinger Production of Dipole\u2013Antidipole Pairs in a Fractonic Lattice",
+      "authors": [
+        "Celio R. Muniz",
+        "R. N. Costa Filho"
+      ],
+      "year": 2026,
+      "date": "2026-09-21",
+      "venue": "arXiv cond-mat.str-el",
+      "arxiv": "2609.24415",
+      "url": "https://arxiv.org/abs/2609.24415",
+      "fields": [
+        "fracton"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 38,
+      "confidence": 55,
+      "popularity": 32,
+      "coreIdea": "A driven dipole-conserving Bose\u2013Hubbard chain can nucleate dipole\u2013antidipole pairs from a Mott background \u2014 Schwinger production for fractons, without preparing the excitations by hand.",
+      "whyItMatters": "Interesting condensed-matter. Not a memory bit. E-FR is CUT from the hardware stack.",
+      "limitation": "1D exact diagonalization. No 3D processor. Reading-list only.",
+      "source": "arXiv cond-mat.str-el",
+      "tags": [
+        "fracton",
+        "Schwinger",
+        "CUT"
+      ],
+      "pillarId": "fracton-memory",
+      "claimIds": [
+        "E-FR"
+      ],
+      "bindAction": "REJECT"
     }
   ],
   "runs": [
+    {
+      "id": "run-2026-09-22-pm",
+      "startedAt": "2026-09-22T10:08:00-05:00",
+      "windowStart": "2026-08-10",
+      "windowEnd": "2026-09-22",
+      "kind": "daily",
+      "feeds": [
+        "https://arxiv.org/list/quant-ph/recent",
+        "https://arxiv.org/list/cond-mat.str-el/recent",
+        "https://arxiv.org/list/cond-mat.mes-hall/recent",
+        "https://arxiv.org/list/hep-th/recent",
+        "https://arxiv.org/list/physics.plasm-ph/recent",
+        "https://arxiv.org/search/advanced"
+      ],
+      "paperIds": [
+        "wang-invgs-2026",
+        "han-qldpc-coherent-2026",
+        "baldelli-qd-qldpc-2026",
+        "shutty-dense-color-2026",
+        "yang-tokaglint-2026",
+        "roy-mzmcapp-2026",
+        "sahu-noisy-braid-2026",
+        "muniz-fracton-schwinger-2026"
+      ],
+      "notes": "Fifth observatory pass (same calendar day as 0.2.1). Harvested the five arXiv recents plus lookback on Majorana distinguishers. Scored top 5 by distinguisher quality: TCV inverse-GS control, qLDPC coherent threshold, quasi-dyadic qLDPC, denser 4.8.8 color codes, TokaGLINT GPU Maxwell. INCLUDE bibliography only under E-RL and E-QEC \u2192 DBE-0.2.2 PATCH. Majorana capacitance distinguisher queued under E-MZM (WATCH, A1 fail). Fracton Schwinger REJECT as hardware. No C move. Harvest gauges are not C.",
+      "fieldCounts": {
+        "plasma": 2,
+        "tqc": 3,
+        "majorana": 2,
+        "fracton": 1,
+        "fusion-quantum": 2
+      }
+    },
     {
       "id": "run-2026-09-22-daily",
       "startedAt": "2026-09-22T09:55:00-05:00",
@@ -5403,8 +5746,8 @@
     }
   ],
   "protocol": {
-    "dbe": "DBE-0.1.3",
-    "dbes": "DBES-0.1.3",
+    "dbe": "DBE-0.2.2",
+    "dbes": "DBES-0.2.0",
     "note": "Heuristic importance/confidence/popularity are harvest metadata. They do not equal C/T/D/A and cannot raise C."
   }
 }

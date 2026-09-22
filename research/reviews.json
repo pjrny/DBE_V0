@@ -2,6 +2,203 @@
   "asOf": "2026-09-22",
   "cards": [
     {
+      "id": "2026-09-22/muniz-fracton-schwinger-2026",
+      "paperId": "muniz-fracton-schwinger-2026",
+      "date": "2026-09-22",
+      "bind": [
+        "E-FR"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "hold",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "E-FR is CUT as hardware. Reading only. G4 distinguisher does not attach to a plant or processor bit.",
+      "score": "none",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "No 3D fracton processor exists; Haah/X-cube remain theory.",
+      "ledger": "none",
+      "plain": {
+        "core": "A driven fractonic lattice can Schwinger-produce dipole pairs from a Mott background.",
+        "why": "Condensed-matter reading. Forbidden as hardware memory.",
+        "limit": "1D ED. E-FR stays CUT."
+      }
+    },
+    {
+      "id": "2026-09-22/roy-mzmcapp-2026",
+      "paperId": "roy-mzmcapp-2026",
+      "date": "2026-09-22",
+      "bind": [
+        "E-MZM"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Named distinguisher for trivial vs topological capacitance. A1 fail: E-MZM is WATCH, not KEEP/HOLD. Cannot AUTO-MERGE.",
+      "score": "C unchanged (C1)",
+      "action": "INCLUDE",
+      "route": "QUEUE",
+      "version": null,
+      "whyQueued": "WATCH claim. Distinguisher is useful for M5 but Auto-Gate A1 forbids auto-bump.",
+      "disputer": "Trivial Andreev / YSR mimics; missing public X+Z logical on Majorana 2.",
+      "ledger": "none",
+      "plain": {
+        "core": "Quantum-capacitance oscillations that look Majorana can be faked by a gapless trivial wire; the paper splits the two by resonance structure.",
+        "why": "M5 is distinguisher-or-drop. This is a proposed kill test, not a logical qubit.",
+        "limit": "Theory of an interferometer. Does not produce X and Z logicals."
+      }
+    },
+    {
+      "id": "2026-09-22/yang-tokaglint-2026",
+      "paperId": "yang-tokaglint-2026",
+      "date": "2026-09-22",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Named baseline: CPU / non-symplectic 3D EM tokamak solves. Distinguisher: GPU implicit symplectic CN-FDTD. Solver, not controller.",
+      "score": "C unchanged",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.2.2",
+      "disputer": "A solver is not a plant attach until it speaks a lab command set.",
+      "ledger": "none",
+      "plain": {
+        "core": "A GPU implicit Maxwell solver for full-3D tokamak electromagnetics that stays symplectic.",
+        "why": "M3 bake-off needs a classical HPC baseline at fixed wall-clock.",
+        "limit": "Not a controller and not a Q."
+      }
+    },
+    {
+      "id": "2026-09-22/shutty-dense-color-2026",
+      "paperId": "shutty-dense-color-2026",
+      "date": "2026-09-22",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Named baseline: triangular 6.6.6 color code and rotated surface code qubit counts. Distinguisher: 4.8.8 brickwork density at fixed distance.",
+      "score": "C unchanged",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.2.2",
+      "disputer": "Density is not non-Abelian decoding.",
+      "ledger": "none",
+      "plain": {
+        "core": "A denser planar 4.8.8 color code uses about half the qubits of a rotated surface code at the same distance.",
+        "why": "Bus B cost. Color codes also give a path to transversal T.",
+        "limit": "Circuit-level sim, superconducting-targeted."
+      }
+    },
+    {
+      "id": "2026-09-22/baldelli-qd-qldpc-2026",
+      "paperId": "baldelli-qd-qldpc-2026",
+      "date": "2026-09-22",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Named baseline: state-of-the-art finite-length qLDPC. Distinguisher: girth \u2265 6 quasi-dyadic CSS.",
+      "score": "C unchanged",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.2.2",
+      "disputer": "A nicer Tanner graph is not a logical qubit on a machine.",
+      "ledger": "none",
+      "plain": {
+        "core": "Quasi-dyadic CSS qLDPC with girth at least 6, competitive at finite length.",
+        "why": "Rate is the cost of wrapping E-S3 in an error layer.",
+        "limit": "Monte Carlo, not a processor."
+      }
+    },
+    {
+      "id": "2026-09-22/han-qldpc-coherent-2026",
+      "paperId": "han-qldpc-coherent-2026",
+      "date": "2026-09-22",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Named baseline: stochastic Pauli qLDPC thresholds. Distinguisher: coherent/local-channel diamond-distance decay. Theory; G5 caps analog C at 3; E-QEC already C4.",
+      "score": "C unchanged (C4)",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.2.2",
+      "disputer": "Code-capacity coherent thresholds are not a device-level non-Abelian decoder.",
+      "ledger": "none",
+      "plain": {
+        "core": "qLDPC codes have a nonzero threshold against local coherent noise, not only stochastic Pauli noise.",
+        "why": "The Bus B error layer is qLDPC / surface code. Coherent errors are the realistic noise.",
+        "limit": "Proof, not hardware."
+      }
+    },
+    {
+      "id": "2026-09-22/wang-invgs-2026",
+      "paperId": "wang-invgs-2026",
+      "date": "2026-09-22",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Named baseline: TCV standard discharge-prep shaping. Distinguisher: inverse-GS NN vs classical recipe. Hardware class is tokamak (G5 honest). Preprint so C stays C4.",
+      "score": "C unchanged (C4)",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.2.2",
+      "disputer": "A shaping win without real-time shape feedback is not yet a disruption-rate win.",
+      "ledger": "none",
+      "plain": {
+        "core": "A neural inverse Grad\u2013Shafranov map shaped plasma on TCV better than the usual prep recipe.",
+        "why": "Bus A is diagnostics in, actuators out. This is that interface on a real machine.",
+        "limit": "Preprint; no explicit real-time shape feedback; not M2-complete."
+      }
+    },
+    {
       "id": "2026-09-22/koshizuka-2026",
       "paperId": "koshizuka-2026",
       "date": "2026-09-22",

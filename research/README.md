@@ -6,7 +6,7 @@ Three layers, never mixed into one score bar:
 2. **Claims** — `claims.json` frozen C/T/D/A table (E-S3, E-QEC, E-RL, …). Heuristic gauges are not C.
 3. **Version log** — `versions.json` + `CHANGELOG.md`. DBE and DBE-S version separately.
 
-Current freeze: **DBE-0.2.1** / **DBES-0.2.0** (22 Sep 2026).
+Current freeze: **DBE-0.2.2** / **DBES-0.2.0** (22 Sep 2026).
 
 The viewable tab (`lab.html` + `lab.js`) hosts:
 
@@ -28,5 +28,3 @@ Fields: Anyons, TQC, Majorana, braid/knot theory, topology, fracton memory, time
 Foundational papers are pillars of any age. Live ingest never deletes them. New load-bearing ideas are queued as pillars — they need an interface contract before a MAJOR bump.
 
 High harvest rank (importance ≥ 85 and confidence ≥ 80) on a KEEP/HOLD claim prompts an INCLUDE. Low-C / CUT sections are taken out of the engine view. Coupling is a new claim and starts at C1.
-
-2026-09-22 run INCLUDE-only under E-RL and E-QEC (disruption-horizon alarms, FPGA PCS latency, GS-KAN, VEQDB, lattice-surgery flow). Photonic time quasicrystal stayed on the reading list. AdS Doppler rejected on the E-HOL denylist. No C move.

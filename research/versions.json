@@ -1,7 +1,7 @@
 {
   "scheme": "MAJOR.MINOR.PATCH. Dates live in the changelog, not the version number.",
   "current": {
-    "DBE": "DBE-0.2.1",
+    "DBE": "DBE-0.2.2",
     "DBES": "DBES-0.2.0"
   },
   "lines": [
@@ -9,7 +9,7 @@
       "id": "DBE",
       "name": "Dimensional Braid Engine",
       "meaning": "Modular quantum-topological processor + plasma controller",
-      "current": "DBE-0.2.1",
+      "current": "DBE-0.2.2",
       "freeze": "Approved paper: Bus A/B only as product. E-S3 + E-QEC + E-RL KEEP. Clock, fracton hardware, holography, five-head, Q=1000-as-output CUT."
     },
     {
@@ -199,6 +199,15 @@
       "title": "Disruption-horizon alarms, FPGA PCS latency, GS-KAN, VEQDB, lattice surgery, coherent-error proof",
       "summary": "Bibliography only under E-RL and E-QEC. C unchanged. Time-crystal photonics and AdS Doppler did not enter the paper.",
       "runId": "run-2026-09-22-daily"
+    },
+    {
+      "version": "DBE-0.2.2",
+      "date": "2026-09-22",
+      "kind": "PATCH",
+      "action": "INCLUDE",
+      "title": "TCV inverse GS control, qLDPC coherent threshold, dense color codes, TokaGLINT",
+      "summary": "Bibliography only under E-RL and E-QEC. C unchanged. Majorana capacitance distinguisher queued under E-MZM (WATCH). Fracton Schwinger rejected as hardware.",
+      "runId": "run-2026-09-22-pm"
     }
   ]
 }
