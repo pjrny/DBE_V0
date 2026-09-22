@@ -1,37 +1,204 @@
 {
   "scheme": "MAJOR.MINOR.PATCH. Dates live in the changelog, not the version number.",
-  "current": {"DBE": "DBE-0.2.0", "DBES": "DBES-0.2.0"},
+  "current": {
+    "DBE": "DBE-0.2.1",
+    "DBES": "DBES-0.2.0"
+  },
   "lines": [
-    {"id": "DBE", "name": "Dimensional Braid Engine", "meaning": "Modular quantum-topological processor + plasma controller", "current": "DBE-0.2.0", "freeze": "Approved paper: Bus A/B only as product. E-S3 + E-QEC + E-RL KEEP. Clock, fracton hardware, holography, five-head, Q=1000-as-output CUT."},
-    {"id": "DBES", "name": "Dynamic Barrier Evasion", "meaning": "Floquet / laser-RF driven tunneling through the Coulomb barrier", "current": "DBES-0.2.0", "freeze": "Approved paper: L3 solvers KEEP. L1/L2/L4 HOLD. S-Q CUT as output. No new layer."}
+    {
+      "id": "DBE",
+      "name": "Dimensional Braid Engine",
+      "meaning": "Modular quantum-topological processor + plasma controller",
+      "current": "DBE-0.2.1",
+      "freeze": "Approved paper: Bus A/B only as product. E-S3 + E-QEC + E-RL KEEP. Clock, fracton hardware, holography, five-head, Q=1000-as-output CUT."
+    },
+    {
+      "id": "DBES",
+      "name": "Dynamic Barrier Evasion",
+      "meaning": "Floquet / laser-RF driven tunneling through the Coulomb barrier",
+      "current": "DBES-0.2.0",
+      "freeze": "Approved paper: L3 solvers KEEP. L1/L2/L4 HOLD. S-Q CUT as output. No new layer."
+    }
   ],
   "buses": [
-    {"id": "A", "name": "Plant attach", "D": "D2", "C": "C4", "target": "DIII-D now, SPARC/ITER-class later, ICF pulse-shape as sibling", "interface": "Diagnostics in, actuator commands out, latency bound published, safe-hold on packet loss", "metric": "Disruption rate, tearing-onset warning time, stored-energy flattop vs lab baseline", "quantum": false},
-    {"id": "B", "name": "Compute", "D": "D3", "C": "C3–C4", "target": "Existing trapped-ion / SC / atom-array processors", "interface": "Offline and near-online optimization, not in-loop braiding of a tokamak", "metric": "Solution quality vs classical HPC at fixed wall-clock", "quantum": true},
-    {"id": "C", "name": "Microphysics", "D": "D1→D2", "C": "C2", "target": "Published FV/CN/PIC codes, then XFEL or high-intensity laser time", "interface": "Reactivity ratio R_drive / R_thermal at stated I, ω, n, T, all aux power counted", "metric": "Never writes a plant Q until Bus A’s ledger accepts auxiliary terms", "quantum": false}
+    {
+      "id": "A",
+      "name": "Plant attach",
+      "D": "D2",
+      "C": "C4",
+      "target": "DIII-D now, SPARC/ITER-class later, ICF pulse-shape as sibling",
+      "interface": "Diagnostics in, actuator commands out, latency bound published, safe-hold on packet loss",
+      "metric": "Disruption rate, tearing-onset warning time, stored-energy flattop vs lab baseline",
+      "quantum": false
+    },
+    {
+      "id": "B",
+      "name": "Compute",
+      "D": "D3",
+      "C": "C3\u2013C4",
+      "target": "Existing trapped-ion / SC / atom-array processors",
+      "interface": "Offline and near-online optimization, not in-loop braiding of a tokamak",
+      "metric": "Solution quality vs classical HPC at fixed wall-clock",
+      "quantum": true
+    },
+    {
+      "id": "C",
+      "name": "Microphysics",
+      "D": "D1\u2192D2",
+      "C": "C2",
+      "target": "Published FV/CN/PIC codes, then XFEL or high-intensity laser time",
+      "interface": "Reactivity ratio R_drive / R_thermal at stated I, \u03c9, n, T, all aux power counted",
+      "metric": "Never writes a plant Q until Bus A\u2019s ledger accepts auxiliary terms",
+      "quantum": false
+    }
   ],
   "milestones": [
-    {"id": "M0", "name": "Freeze the rubric", "status": "done", "note": "This observatory. Every paper tagged C/T/D/A and PASS/HOLD/CUT before it can change a claim."},
-    {"id": "M1", "name": "Energy ledger v1", "status": "open", "note": "Q_sci, Q_fuel, Q_eng as three numbers. Include P_coh, P_repopulate, P_drive, P_aux, conversion."},
-    {"id": "M2", "name": "Attach Bus A", "status": "open", "note": "Beat a lab baseline on one disruption-relevant metric."},
-    {"id": "M3", "name": "Bus B bake-off", "status": "open", "note": "S3 / surface-code optimizer vs classical solver on a published MHD or pulse-shape problem."},
-    {"id": "M4", "name": "Layer-2 replication", "status": "open", "note": "Reproduce PRC 109 FV vs CN on DT at 1 keV, then add Lindblad + hole-burning."},
-    {"id": "M5", "name": "Distinguishing Majorana test or drop", "status": "open", "note": "Independent X and Z logicals plus gap scaling, or remove from the engine diagram."},
-    {"id": "M6", "name": "Tabletop / XFEL driven-tunneling shot", "status": "open", "note": "A shot or an official rejected proposal. Either is a result."},
-    {"id": "M7", "name": "Coupled ledger", "status": "open", "note": "Only now may Bus C terms enter a plant Q estimate."},
-    {"id": "M8", "name": "Modular product", "status": "open", "note": "A control container a SPARC-class or stellarator team can run without DBE metaphysics."}
+    {
+      "id": "M0",
+      "name": "Freeze the rubric",
+      "status": "done",
+      "note": "This observatory. Every paper tagged C/T/D/A and PASS/HOLD/CUT before it can change a claim."
+    },
+    {
+      "id": "M1",
+      "name": "Energy ledger v1",
+      "status": "open",
+      "note": "Q_sci, Q_fuel, Q_eng as three numbers. Include P_coh, P_repopulate, P_drive, P_aux, conversion."
+    },
+    {
+      "id": "M2",
+      "name": "Attach Bus A",
+      "status": "open",
+      "note": "Beat a lab baseline on one disruption-relevant metric."
+    },
+    {
+      "id": "M3",
+      "name": "Bus B bake-off",
+      "status": "open",
+      "note": "S3 / surface-code optimizer vs classical solver on a published MHD or pulse-shape problem."
+    },
+    {
+      "id": "M4",
+      "name": "Layer-2 replication",
+      "status": "open",
+      "note": "Reproduce PRC 109 FV vs CN on DT at 1 keV, then add Lindblad + hole-burning."
+    },
+    {
+      "id": "M5",
+      "name": "Distinguishing Majorana test or drop",
+      "status": "open",
+      "note": "Independent X and Z logicals plus gap scaling, or remove from the engine diagram."
+    },
+    {
+      "id": "M6",
+      "name": "Tabletop / XFEL driven-tunneling shot",
+      "status": "open",
+      "note": "A shot or an official rejected proposal. Either is a result."
+    },
+    {
+      "id": "M7",
+      "name": "Coupled ledger",
+      "status": "open",
+      "note": "Only now may Bus C terms enter a plant Q estimate."
+    },
+    {
+      "id": "M8",
+      "name": "Modular product",
+      "status": "open",
+      "note": "A control container a SPARC-class or stellarator team can run without DBE metaphysics."
+    }
   ],
   "history": [
-    {"version": "DBE-0.0.0", "date": "2025-06-01", "kind": "HISTORICAL", "action": "PRE-CUT", "title": "Five-head engine (white paper)", "summary": "Five subsystems as one device. Q = 1000 treated as an output."},
-    {"version": "DBE-0.1.0", "date": "2026-09-19", "kind": "MAJOR", "action": "FREEZE", "title": "Cut the monolith; keep three buses"},
-    {"version": "DBES-0.1.0", "date": "2026-09-19", "kind": "MAJOR", "action": "FREEZE", "title": "Q = 1000 demoted to ledger test"},
-    {"version": "DBE-0.1.1", "date": "2026-09-20", "kind": "PATCH", "action": "INCLUDE", "title": "Daily run under existing KEEP claims"},
-    {"version": "DBES-0.1.1", "date": "2026-09-20", "kind": "PATCH", "action": "INCLUDE", "title": "Layer-2 bibliography PRC 109/110"},
-    {"version": "DBE-0.1.2", "date": "2026-09-20", "kind": "PATCH", "action": "INCLUDE", "title": "DIII-D / MAST-U PCS / ASPT bibliography"},
-    {"version": "DBES-0.1.2", "date": "2026-09-20", "kind": "PATCH", "action": "INCLUDE", "title": "kobra Vlasov + NIF Q_sci into ledger bibliography"},
-    {"version": "DBE-0.1.3", "date": "2026-09-21", "kind": "PATCH", "action": "INCLUDE", "title": "Hyperbolic color codes, Connes fusion, Rydberg bus"},
-    {"version": "DBES-0.1.3", "date": "2026-09-21", "kind": "PATCH", "action": "INCLUDE", "title": "KOBRA ELM Vlasov under S-L3 methods"},
-    {"version": "DBE-0.2.0", "date": "2026-09-21", "kind": "MAJOR", "action": "FREEZE", "title": "Approved paper: retire cut-labeled pillars; confirm cyclic fusion under E-S3", "summary": "Retired E-TC as clock and E-FR as hardware. Cyclic fusion established under E-S3, not a new bus. QUEUE new-pillars expired. C unchanged.", "runId": "weekly-freeze-2026-09-21"},
-    {"version": "DBES-0.2.0", "date": "2026-09-21", "kind": "MAJOR", "action": "FREEZE", "title": "Approved paper reprint: ledger test, not plant Q", "summary": "L3 KEEP. L1/L2/L4 HOLD. S-Q CUT as output. No C move. No new layer.", "runId": "weekly-freeze-2026-09-21"}
+    {
+      "version": "DBE-0.0.0",
+      "date": "2025-06-01",
+      "kind": "HISTORICAL",
+      "action": "PRE-CUT",
+      "title": "Five-head engine (white paper)",
+      "summary": "Five subsystems as one device. Q = 1000 treated as an output."
+    },
+    {
+      "version": "DBE-0.1.0",
+      "date": "2026-09-19",
+      "kind": "MAJOR",
+      "action": "FREEZE",
+      "title": "Cut the monolith; keep three buses"
+    },
+    {
+      "version": "DBES-0.1.0",
+      "date": "2026-09-19",
+      "kind": "MAJOR",
+      "action": "FREEZE",
+      "title": "Q = 1000 demoted to ledger test"
+    },
+    {
+      "version": "DBE-0.1.1",
+      "date": "2026-09-20",
+      "kind": "PATCH",
+      "action": "INCLUDE",
+      "title": "Daily run under existing KEEP claims"
+    },
+    {
+      "version": "DBES-0.1.1",
+      "date": "2026-09-20",
+      "kind": "PATCH",
+      "action": "INCLUDE",
+      "title": "Layer-2 bibliography PRC 109/110"
+    },
+    {
+      "version": "DBE-0.1.2",
+      "date": "2026-09-20",
+      "kind": "PATCH",
+      "action": "INCLUDE",
+      "title": "DIII-D / MAST-U PCS / ASPT bibliography"
+    },
+    {
+      "version": "DBES-0.1.2",
+      "date": "2026-09-20",
+      "kind": "PATCH",
+      "action": "INCLUDE",
+      "title": "kobra Vlasov + NIF Q_sci into ledger bibliography"
+    },
+    {
+      "version": "DBE-0.1.3",
+      "date": "2026-09-21",
+      "kind": "PATCH",
+      "action": "INCLUDE",
+      "title": "Hyperbolic color codes, Connes fusion, Rydberg bus"
+    },
+    {
+      "version": "DBES-0.1.3",
+      "date": "2026-09-21",
+      "kind": "PATCH",
+      "action": "INCLUDE",
+      "title": "KOBRA ELM Vlasov under S-L3 methods"
+    },
+    {
+      "version": "DBE-0.2.0",
+      "date": "2026-09-21",
+      "kind": "MAJOR",
+      "action": "FREEZE",
+      "title": "Approved paper: retire cut-labeled pillars; confirm cyclic fusion under E-S3",
+      "summary": "Retired E-TC as clock and E-FR as hardware. Cyclic fusion established under E-S3, not a new bus. QUEUE new-pillars expired. C unchanged.",
+      "runId": "weekly-freeze-2026-09-21"
+    },
+    {
+      "version": "DBES-0.2.0",
+      "date": "2026-09-21",
+      "kind": "MAJOR",
+      "action": "FREEZE",
+      "title": "Approved paper reprint: ledger test, not plant Q",
+      "summary": "L3 KEEP. L1/L2/L4 HOLD. S-Q CUT as output. No C move. No new layer.",
+      "runId": "weekly-freeze-2026-09-21"
+    },
+    {
+      "version": "DBE-0.2.1",
+      "date": "2026-09-22",
+      "kind": "PATCH",
+      "action": "INCLUDE",
+      "title": "Disruption-horizon alarms, FPGA PCS latency, GS-KAN, VEQDB, lattice surgery, coherent-error proof",
+      "summary": "Bibliography only under E-RL and E-QEC. C unchanged. Time-crystal photonics and AdS Doppler did not enter the paper.",
+      "runId": "run-2026-09-22-daily"
+    }
   ]
 }

@@ -21,3 +21,8 @@ Never rewrite history. A reversed CUT is a new MAJOR line.
 2026-09-21  DBES-0.2.0  MAJOR  FREEZE  approved reprint: L3 KEEP, L1/L2/L4 HOLD, S-Q CUT as output; no C move
 2026-09-21  REJECT  spacetime-fractons / floquet-majorana-codes / fracton-holography as engine pillars (couple CUT/WATCH boxes)
 2026-09-21  EXPIRE  cyclic-fusion-family / nonabelian-qldpc / topo-dynamics as new pillars (bibliography only)
+
+2026-09-22  DBE-0.2.1  PATCH  INCLUDE  disruption-horizon / FPGA PCS / GS-KAN / VEQDB / lattice-surgery / coherent-error proof → E-RL, E-QEC bibliography (C unchanged)
+2026-09-22  REJECT  chen-tqc-2026  → E-TC reading list (CUT as clock)
+2026-09-22  REJECT  liu-ads-2026  → E-HOL denylist
+2026-09-22  library  Fourth daily run; year lookback retained; harvest gauges still not C

@@ -1,6 +1,202 @@
 {
-  "asOf": "2026-09-21",
+  "asOf": "2026-09-22",
   "cards": [
+    {
+      "id": "2026-09-22/koshizuka-2026",
+      "paperId": "koshizuka-2026",
+      "date": "2026-09-22",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Named baseline: full-distribution survival / DSM. Distinguisher: finite-horizon alarm vs remaining-lifetime. Preprint; G5 caps analog C at 3, E-RL already C4.",
+      "score": "C unchanged (C4)",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.2.1",
+      "disputer": "Loop cannot close inside tearing / Alfv\u00e9n times if I/O is a quantum job queue.",
+      "ledger": "none",
+      "plain": {
+        "core": "Score disruption risk inside a finite horizon, not the whole remaining shot.",
+        "why": "M2 is a disruption-relevant metric. This is a Bus A attach language.",
+        "limit": "Preprint, not a beat-the-lab-baseline shot."
+      }
+    },
+    {
+      "id": "2026-09-22/gaytan-2026",
+      "paperId": "gaytan-2026",
+      "date": "2026-09-22",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Named baseline: PCS latency. Distinguisher: FPGA quantized RPNN vs software inference. Not a quantum-in-the-loop claim.",
+      "score": "C unchanged (C4)",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.2.1",
+      "disputer": "If the loop cannot close inside instability growth time, the module is offline only.",
+      "ledger": "none",
+      "plain": {
+        "core": "Quantized recurrent net on an FPGA estimates plasma state inside PCS latency.",
+        "why": "Latency is the E-RL kill threshold. This is how Bus A stays classical-in-the-loop.",
+        "limit": "Inference hardware, not a published disruption-rate win."
+      }
+    },
+    {
+      "id": "2026-09-22/kaltsas-2026",
+      "paperId": "kaltsas-2026",
+      "date": "2026-09-22",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Named baseline: Solov\u2019ev / mesh Grad\u2013Shafranov. Distinguisher: residual of GS PDE.",
+      "score": "C unchanged",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.2.1",
+      "disputer": "A solver is not a controller.",
+      "ledger": "none",
+      "plain": {
+        "core": "Physics-informed KANs solve Grad\u2013Shafranov equilibria, including nonlinear H-mode-like profiles.",
+        "why": "Equilibrium is the state Bus A acts on.",
+        "limit": "Fixed-boundary, not shot-validated EFIT."
+      }
+    },
+    {
+      "id": "2026-09-22/xie-veqdb-2026",
+      "paperId": "xie-veqdb-2026",
+      "date": "2026-09-22",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Named baseline: G-EQDSK grids. Distinguisher: reconstructible MXH\u2013Chebyshev vs lab-specific files.",
+      "score": "C unchanged",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.2.1",
+      "disputer": "A database is not a plant attach until it speaks a lab command set.",
+      "ledger": "none",
+      "plain": {
+        "core": "A compact, reconstructible multi-device tokamak equilibrium store.",
+        "why": "M8 needs a controller a SPARC-class team can run without one lab\u2019s file conventions.",
+        "limit": "Fixed-boundary; does not close a shot loop."
+      }
+    },
+    {
+      "id": "2026-09-22/iacobacci-2026",
+      "paperId": "iacobacci-2026",
+      "date": "2026-09-22",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Named baseline: one-gate-at-a-time lattice surgery. Distinguisher: multi-gate flow + runtime T scheduling.",
+      "score": "C unchanged (C4)",
+      "action": "INCLUDE",
+      "route": "AUTO-MERGED",
+      "version": "DBE-0.2.1",
+      "disputer": "Abelian surgery density \u2260 non-Abelian decoding.",
+      "ledger": "none",
+      "plain": {
+        "core": "Lattice-surgery compilation that routes many gates at once and schedules T gates at runtime.",
+        "why": "Cheaper Bus B wrapper around the surface-code layer.",
+        "limit": "Compiler paper, not hardware."
+      }
+    },
+    {
+      "id": "2026-09-22/chen-tqc-2026",
+      "paperId": "chen-tqc-2026",
+      "date": "2026-09-22",
+      "bind": [
+        "E-TC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "fail"
+      },
+      "gateNote": "G6: cannot raise a CUT clock because photonics looked interesting. Reading is allowed.",
+      "score": "C unchanged (CUT as clock)",
+      "action": "REJECT",
+      "route": "REJECT",
+      "version": null,
+      "disputer": "Prethermal lifetime vs required shot duration. Lifetime < control horizon \u2192 cut as clock.",
+      "ledger": "none",
+      "plain": {
+        "core": "A non-Hermitian photonic time quasicrystal with integer amplification phases.",
+        "why": "Floquet physics stays on the reading list.",
+        "limit": "Not a metronome. E-TC remains CUT as clock."
+      }
+    },
+    {
+      "id": "2026-09-22/liu-ads-2026",
+      "paperId": "liu-ads-2026",
+      "date": "2026-09-22",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "fail",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "fail"
+      },
+      "gateNote": "Denylist. Duality \u2260 reactor I/O. T=0 as a plant part.",
+      "score": "C unchanged (CUT)",
+      "action": "REJECT",
+      "route": "REJECT",
+      "version": null,
+      "disputer": "Duality \u2260 a tokamak I/O map. T=0 as a reactor part.",
+      "ledger": "none",
+      "plain": {
+        "core": "Finite-time holographic Doppler covariance in a rotating BTZ spacetime.",
+        "why": "AdS/CFT stays on the reading list.",
+        "limit": "Cannot INCLUDE. CUT reversal needs two independent C\u22654 sources."
+      }
+    },
     {
       "id": "2026-09-21/hyperbolic-color",
       "paperId": "2609.16125",

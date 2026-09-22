@@ -6,8 +6,27 @@ Three layers, never mixed into one score bar:
 2. **Claims** — `claims.json` frozen C/T/D/A table (E-S3, E-QEC, E-RL, …). Heuristic gauges are not C.
 3. **Version log** — `versions.json` + `CHANGELOG.md`. DBE and DBE-S version separately.
 
-Current freeze: **DBE-0.2.0 / DBES-0.2.0** (2026-09-21 weekly freeze). Approved papers: `research/papers/DBE-0.2.0.md`, `research/papers/DBES-0.2.0.md`.
+Current freeze: **DBE-0.2.1** / **DBES-0.2.0** (22 Sep 2026).
 
-The viewable tab (`lab.html` + `lab.js`) hosts the Engine freeze, Daily cards, and harvest gauges (ingest metadata only — they do not move C).
+The viewable tab (`lab.html` + `lab.js`) hosts:
 
-Q = 1000 is a ledger stress test, not an output.
+- **Engine (DBE · DBE-S)** — current freeze summaries, load-bearing KEEP modules, HOLD/WATCH, CUT sections already removed from the paper, buses, milestones, and a “prompt the next version” workshop.
+- **Daily cards** — Auto-Gate A1–A8. INCLUDE can PATCH. STRENGTHEN cannot raise C unless the gate passes. NEW PILLAR / CUT reversal never auto-bumps.
+- **Harvest gauges** labeled as ingest metadata. They rank the library. They do not move C.
+
+```sh
+python research/ingest.py --lookback-days 365
+python research/ingest.py --lookback-days 7
+python research/fetch_arxiv.py --days 7
+python research/score.py --bind E-S3 --action INCLUDE --paper lo-2026 --venue nature
+python cli/research_observatory.py
+cd research && python -m http.server 8000
+```
+
+Fields: Anyons, TQC, Majorana, braid/knot theory, topology, fracton memory, time crystals, plasma control, holography, fusion–quantum integration (Q = 1000 is a ledger stress test, not an output).
+
+Foundational papers are pillars of any age. Live ingest never deletes them. New load-bearing ideas are queued as pillars — they need an interface contract before a MAJOR bump.
+
+High harvest rank (importance ≥ 85 and confidence ≥ 80) on a KEEP/HOLD claim prompts an INCLUDE. Low-C / CUT sections are taken out of the engine view. Coupling is a new claim and starts at C1.
+
+2026-09-22 run INCLUDE-only under E-RL and E-QEC (disruption-horizon alarms, FPGA PCS latency, GS-KAN, VEQDB, lattice-surgery flow). Photonic time quasicrystal stayed on the reading list. AdS Doppler rejected on the E-HOL denylist. No C move.

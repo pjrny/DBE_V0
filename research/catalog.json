@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T15:30:00Z",
+  "generatedAt": "2026-09-22T09:55:00-05:00",
   "lookback": "1y+",
   "northStar": "Q=1000",
   "feeds": [
@@ -4878,9 +4878,305 @@
       "source": "arXiv API",
       "claimIds": [],
       "bindAction": "REJECT"
+    },
+    {
+      "id": "koshizuka-2026",
+      "title": "Horizon-Aware Early Event Prediction for Tokamak Disruption Alarms",
+      "authors": [
+        "Takeshi Koshizuka",
+        "Takaharu Yaguchi"
+      ],
+      "year": 2026,
+      "date": "2026-09-21",
+      "venue": "arXiv physics.plasm-ph",
+      "arxiv": "2609.24443",
+      "url": "https://arxiv.org/abs/2609.24443",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 88,
+      "confidence": 74,
+      "popularity": 61,
+      "coreIdea": "Disruption alarms should score risk inside a finite operational horizon, not the whole remaining lifetime of the shot. Recasting survival models as early-event predictors matches how a plant actually has to act.",
+      "whyItMatters": "M2 is a disruption-relevant metric on an existing machine. A horizon-aware alarm is a Bus A attach candidate: diagnostics in, warning time out.",
+      "limitation": "Preprint. Not a closed-loop DIII-D shot that beat the lab baseline. G5: processor/sim work cannot raise C above 3, and E-RL is already C4 from deployed RL control.",
+      "source": "arXiv physics.plasm-ph",
+      "tags": [
+        "disruption",
+        "survival",
+        "Bus A",
+        "M2"
+      ],
+      "pillarId": "plasma-rl",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "INCLUDE"
+    },
+    {
+      "id": "gaytan-2026",
+      "title": "Real-Time Plasma State Prediction via FPGA-Accelerated Quantized Recurrent Probabilistic Neural Networks",
+      "authors": [
+        "Daniel Gaytan-Villarreal",
+        "Aiken Xie",
+        "Tu Pham",
+        "Rohit Sonker",
+        "Chiara Amendola",
+        "Matteo Cremonesi"
+      ],
+      "year": 2026,
+      "date": "2026-09-19",
+      "venue": "arXiv physics.plasm-ph",
+      "arxiv": "2609.23141",
+      "url": "https://arxiv.org/abs/2609.23141",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 86,
+      "confidence": 76,
+      "popularity": 58,
+      "coreIdea": "A quantized recurrent probabilistic net on an FPGA can estimate tokamak plasma state inside PCS latency, using architecture shrinkage plus quantization-aware training.",
+      "whyItMatters": "The E-RL kill threshold is loop latency versus tearing / Alfv\u00e9n times. An FPGA inference path is how Bus A stays offline-quantum and still closes in time.",
+      "limitation": "Hardware-in-the-loop inference, not a published disruption-rate win on a shot. Does not put a quantum processor in the plasma loop.",
+      "source": "arXiv physics.plasm-ph",
+      "tags": [
+        "FPGA",
+        "PCS",
+        "latency",
+        "Bus A"
+      ],
+      "pillarId": "plasma-rl",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "INCLUDE"
+    },
+    {
+      "id": "kaltsas-2026",
+      "title": "Physics-Informed Kolmogorov-Arnold Networks for Grad-Shafranov Tokamak Equilibria",
+      "authors": [
+        "D. A. Kaltsas",
+        "A. Kuiroukidis",
+        "J. Liu",
+        "L. Magafas",
+        "G. N. Throumoulopoulos"
+      ],
+      "year": 2026,
+      "date": "2026-09-20",
+      "venue": "arXiv physics.plasm-ph",
+      "arxiv": "2609.23846",
+      "url": "https://arxiv.org/abs/2609.23846",
+      "fields": [
+        "plasma"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 72,
+      "confidence": 70,
+      "popularity": 50,
+      "coreIdea": "Physics-informed Kolmogorov\u2013Arnold nets can solve fixed-boundary Grad\u2013Shafranov equilibria, including nonlinear high-confinement-like pressure profiles, without a traditional mesh solver.",
+      "whyItMatters": "Equilibrium reconstruction is the state estimate Bus A acts on. A faster, differentiable GS solver helps the offline optimizer (Bus B) and the plant controller (Bus A).",
+      "limitation": "Fixed-boundary, equation-driven. Not a replacement for a shot-validated EFIT stack, and not a C raise.",
+      "source": "arXiv physics.plasm-ph",
+      "tags": [
+        "equilibrium",
+        "KAN",
+        "Grad-Shafranov"
+      ],
+      "pillarId": "plasma-rl",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "INCLUDE"
+    },
+    {
+      "id": "xie-veqdb-2026",
+      "title": "VEQDB: A Compact and Reconstructible Multi-Device Tokamak Equilibrium Database",
+      "authors": [
+        "Huasheng Xie",
+        "Ruohan Zhang",
+        "Xingyu Li",
+        "Feng Zhang",
+        "Zhengxiong Wang"
+      ],
+      "year": 2026,
+      "date": "2026-09-20",
+      "venue": "arXiv physics.plasm-ph",
+      "arxiv": "2609.23296",
+      "url": "https://arxiv.org/abs/2609.23296",
+      "fields": [
+        "plasma"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 68,
+      "confidence": 72,
+      "popularity": 48,
+      "coreIdea": "A compact equilibrium database that stores continuous MXH\u2013Chebyshev geometry instead of G-EQDSK grids, so equilibria can be compared and reconstructed across devices.",
+      "whyItMatters": "Bus A needs a shared language of plant state. A reconstructible multi-device equilibrium store is how a SPARC-class team consumes a controller without inheriting one lab\u2019s file conventions.",
+      "limitation": "Fixed-boundary database. Does not itself control a shot or close a latency loop.",
+      "source": "arXiv physics.plasm-ph",
+      "tags": [
+        "equilibrium",
+        "database",
+        "M8"
+      ],
+      "pillarId": "plasma-rl",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "INCLUDE"
+    },
+    {
+      "id": "iacobacci-2026",
+      "title": "Flow-Based Lattice Surgery Optimization with Runtime T Gate Scheduling",
+      "authors": [
+        "Raymond Iacobacci",
+        "Tianyi Hao",
+        "Neer Patel",
+        "Siyuan Niu"
+      ],
+      "year": 2026,
+      "date": "2026-09-20",
+      "venue": "arXiv quant-ph",
+      "arxiv": "2609.23756",
+      "url": "https://arxiv.org/abs/2609.23756",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 78,
+      "confidence": 72,
+      "popularity": 55,
+      "coreIdea": "Lattice-surgery compilation that routes many gates at once with a flow, and schedules T gates at runtime, instead of embedding one gate at a time inside a layer.",
+      "whyItMatters": "Bus B\u2019s default error layer is still a surface-code / qLDPC wrapper. Cheaper surgery compilation is a bibliography tighten, not a new bus.",
+      "limitation": "Compiler paper. Abelian surgery \u2260 non-Abelian decoding, and it cannot raise C.",
+      "source": "arXiv quant-ph",
+      "tags": [
+        "lattice surgery",
+        "surface code",
+        "compiler"
+      ],
+      "pillarId": "anyon-tqc",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "INCLUDE"
+    },
+    {
+      "id": "chen-tqc-2026",
+      "title": "Non-Hermitian photonic time quasicrystal",
+      "authors": [
+        "Shuhang Chen",
+        "Zhi Zheng",
+        "Qi Zhu"
+      ],
+      "year": 2026,
+      "date": "2026-09-21",
+      "venue": "arXiv quant-ph",
+      "arxiv": "2609.24327",
+      "url": "https://arxiv.org/abs/2609.24327",
+      "fields": [
+        "time-crystal"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 41,
+      "confidence": 54,
+      "popularity": 44,
+      "coreIdea": "A photonic time quasicrystal with non-Hermitian temporal modulation organizes bulk amplification into integer phases labelled by Avila\u2019s acceleration.",
+      "whyItMatters": "Floquet / time-crystal physics stays on the reading list. It is interesting many-body optics, not a system clock.",
+      "limitation": "Photonic analog. Prethermal lifetime is not a control-horizon clock. E-TC remains CUT as metronome.",
+      "source": "arXiv quant-ph",
+      "tags": [
+        "time crystal",
+        "Floquet",
+        "reading list"
+      ],
+      "pillarId": "floquet-clock",
+      "claimIds": [
+        "E-TC"
+      ],
+      "bindAction": "REJECT",
+      "suggestedPillar": null
+    },
+    {
+      "id": "liu-ads-2026",
+      "title": "Finite-Time Doppler Covariance Spectroscopy in the AdS/CFT correspondence",
+      "authors": [
+        "Feiyi Liu",
+        "Shiyang Chen",
+        "Yang Wang"
+      ],
+      "year": 2026,
+      "date": "2026-09-21",
+      "venue": "arXiv hep-th",
+      "arxiv": "2609.24806",
+      "url": "https://arxiv.org/abs/2609.24806",
+      "fields": [
+        "holography"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "importance": 24,
+      "confidence": 38,
+      "popularity": 33,
+      "coreIdea": "A finite-duration holographic covariance in a rotating BTZ spacetime turns relative boundary motion into discrete velocity resonances.",
+      "whyItMatters": "AdS/CFT remains on the reading list. Duality is not a tokamak I/O map.",
+      "limitation": "T=0 as a reactor or processor part. Denylist: E-HOL cannot INCLUDE without a CUT-reversal packet.",
+      "source": "arXiv hep-th",
+      "tags": [
+        "AdS/CFT",
+        "denylist"
+      ],
+      "pillarId": "holographic-encode",
+      "claimIds": [
+        "E-HOL"
+      ],
+      "bindAction": "REJECT"
     }
   ],
   "runs": [
+    {
+      "id": "run-2026-09-22-daily",
+      "startedAt": "2026-09-22T09:55:00-05:00",
+      "windowStart": "2026-09-15",
+      "windowEnd": "2026-09-22",
+      "kind": "daily",
+      "feeds": [
+        "https://arxiv.org/list/quant-ph/recent",
+        "https://arxiv.org/list/cond-mat.str-el/recent",
+        "https://arxiv.org/list/cond-mat.mes-hall/recent",
+        "https://arxiv.org/list/hep-th/recent",
+        "https://arxiv.org/list/physics.plasm-ph/recent",
+        "https://arxiv.org/search/advanced"
+      ],
+      "paperIds": [
+        "koshizuka-2026",
+        "gaytan-2026",
+        "kaltsas-2026",
+        "xie-veqdb-2026",
+        "iacobacci-2026",
+        "tamiya-coherent-2026",
+        "chen-tqc-2026",
+        "liu-ads-2026"
+      ],
+      "notes": "Fourth observatory day. Harvested 41 arXiv hits in 10d; scored top 5 by distinguisher quality (disruption horizon, FPGA PCS latency, GS-KAN, VEQDB, lattice-surgery flow, coherent-error threshold). INCLUDE bibliography only under E-RL and E-QEC. Photonic time quasicrystal stays reading-list (E-TC CUT as clock). AdS Doppler REJECT on E-HOL denylist. No C move. Harvest gauges are not C.",
+      "fieldCounts": {
+        "plasma": 5,
+        "tqc": 2,
+        "time-crystal": 1,
+        "holography": 1,
+        "fusion-quantum": 2
+      }
+    },
     {
       "id": "run-2026-09-21-daily",
       "startedAt": "2026-09-21T10:22:00-05:00",
