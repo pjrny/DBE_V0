@@ -26,3 +26,4 @@ Never rewrite history. A reversed CUT is a new MAJOR line.
 2026-09-22  REJECT  chen-tqc-2026  → E-TC reading list (CUT as clock)
 2026-09-22  REJECT  liu-ads-2026  → E-HOL denylist
 2026-09-22  library  Fourth daily run; year lookback retained; harvest gauges still not C
+2026-09-22  library  Observatory UX: hash tabs, freeze-note links, tab counts, Escape-to-close. No claim C move.
