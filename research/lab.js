@@ -37,8 +37,11 @@ let tab = "mission", range = "week", field = "all", q = "", sort = "importance",
 let FREEZE = { actions: [], dbe: "DBE-0.2.2", dbes: "DBES-0.2.0", log: [], parkedPaperIds: [] };
 
 const esc = (s) => String(s ?? "")
-  .replace(/&/g, "&").replace(/</g, "<").replace(/>/g, ">")
-  .replace(/"/g, """).replace(/'/g, "&#39;");
+  .replace(/&/g, "&" + "amp;")
+  .replace(/</g, "&" + "lt;")
+  .replace(/>/g, "&" + "gt;")
+  .replace(/"/g, "&" + "quot;")
+  .replace(/'/g, "&#39;");
 const idea = (p) => p.coreIdea || p.plain || "";
 const authors = (p) => Array.isArray(p.authors) ? p.authors : String(p.authors || "").split(",").map((s) => s.trim()).filter(Boolean);
 const pdate = (p) => p.date || (p.year ? p.year + "-01-01" : "");
