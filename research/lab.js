@@ -1,17 +1,18 @@
-const NOW = new Date("2026-09-22T10:08:00-05:00");
+const NOW = new Date("2026-09-22T13:20:00-05:00");
 const KEY = "dbe-observatory-freeze-v5";
 const TABS = [
+  ["mission", "Mission"],
+  ["papers", "Papers"],
+  ["daily", "Daily"],
+  ["engine", "Engine"],
+  ["ledger", "Q ledger"],
+];
+const RANGES = [
   ["week", "This week"],
   ["month", "Month"],
-  ["lookback", "Year lookback"],
-  ["catalog", "Catalog"],
-  ["engine", "DBE · DBE-S"],
-  ["claims", "Claims"],
-  ["reviews", "Daily cards"],
-  ["versions", "Versions"],
-  ["ledger", "Q ledger"],
-  ["pillars", "Pillars"],
-  ["feeds", "Feeds"],
+  ["lookback", "Year"],
+  ["catalog", "All"],
+  ["foundational", "Foundational"],
 ];
 const AUTOGATE = [
   ["A1", "Binds to exactly one existing KEEP or HOLD claim ID."],
@@ -24,13 +25,15 @@ const AUTOGATE = [
   ["A8", "Ledger terms, if touched, move in the conservative direction."],
 ];
 const DENY = new Set(["E-HOL", "E-5"]);
+const CVAL = { C0: 0, C1: 1, C2: 2, C3: 3, C4: 4, C5: 5 };
+const STATUS_W = { KEEP: 82, WATCH: 48, HOLD: 34, QUEUE: 22, CUT: 8 };
 
 let CAT = { papers: [], pillars: [], fields: [], feeds: [], runs: [] };
 let CLAIMS = { claims: [], axes: {} };
 let VERS = { history: [], buses: [], milestones: [], lines: [], current: {} };
 let REVIEWS = { cards: [] };
 let LEDGER = {};
-let tab = "week", field = "all", q = "", sort = "importance", hideOffPath = true;
+let tab = "mission", range = "week", field = "all", q = "", sort = "importance", hideOffPath = true;
 let FREEZE = { actions: [], dbe: "DBE-0.2.2", dbes: "DBES-0.2.0", log: [], parkedPaperIds: [] };
 
 const esc = (s) => String(s ?? "")
@@ -42,6 +45,7 @@ const pdate = (p) => p.date || (p.year ? p.year + "-01-01" : "");
 const fieldLabel = (id) => (CAT.fields.find((f) => f.id === id) || {}).short || id;
 const paperById = (id) => CAT.papers.find((p) => p.id === id || p.arxiv === id);
 const claimById = (id) => (CLAIMS.claims || []).find((c) => c.id === id);
+const pillarById = (id) => (CAT.pillars || []).find((p) => p.id === id);
 const inWeek = (p) => { const t = Date.parse(pdate(p)); return (Number.isFinite(t) && NOW - t <= 7 * 864e5) || p.role === "week"; };
 const inMonth = (p) => String(pdate(p)).startsWith("2026-09") || String(pdate(p)).startsWith("2026-08") || p.role === "month" || inWeek(p);
 const inLookback = (p) => pdate(p) >= "2025-09-20" || ["lookback", "week", "month"].includes(p.role);
@@ -95,11 +99,13 @@ function autoGate(card) {
 }
 function inferProposal(p) {
   const binds = p.claimIds || [];
-  if (binds.some((id) => DENY.has(id))) return { action: "REJECT", auto: false, reason: "Denylist. Reading is allowed; INCLUDE is not." };
-  if (p.suggestedPillar) return { action: "NEW PILLAR", auto: false, reason: "Needs an interface contract at the weekly freeze." };
+  if (binds.some((id) => DENY.has(id))) return { action: "CUT", auto: false, reason: "Denylist. Reading is allowed; INCLUDE is not." };
+  if (p.suggestedPillar) return { action: "HOLD", auto: false, reason: "New pillar candidate. Needs an interface contract at the weekly freeze." };
   const keep = binds.map(claimById).filter((c) => c && ["KEEP", "HOLD"].includes(c.status));
-  if (high(p) && keep.length === 1) return { action: "INCLUDE", auto: true, reason: "High harvest rank on a KEEP/HOLD claim. Bibliography only — gauges cannot raise C." };
-  if (keep.length === 1) return { action: "INCLUDE", auto: false, reason: "Binds to an existing claim. PATCH bibliography if applied." };
+  if (low(p) && binds.length) return { action: "CUT", auto: false, reason: "Low harvest rank on a bound claim. Candidate for removal from the paper view." };
+  if (high(p) && keep.length === 1) return { action: "ADD", auto: true, reason: "High harvest rank on a KEEP/HOLD claim. Bibliography only — gauges cannot raise C." };
+  if (keep.length === 1) return { action: "HOLD", auto: false, reason: "Binds to an existing claim. PATCH bibliography if applied." };
+  if (binds.length >= 2) return { action: "HOLD", auto: false, reason: "Bridge paper. Coupling is a new claim and starts at C1." };
   return { action: "HOLD", auto: false, reason: "Does not bind cleanly to one KEEP claim." };
 }
 function saveFreeze() { localStorage.setItem(KEY, JSON.stringify(FREEZE)); }
@@ -134,9 +140,10 @@ function applyCard(id) {
     FREEZE.actions.push({ reviewId: id, action, route: "QUEUE", at: new Date().toISOString(), paperId: c.paperId });
     saveFreeze(); toast("Queued " + action + " — no auto-bump"); paintFreeze(); render(); return;
   }
-  if (action === "REJECT") {
+  if (action === "REJECT" || action === "CUT") {
     FREEZE.actions.push({ reviewId: id, action, route: "REJECT", at: new Date().toISOString(), paperId: c.paperId });
-    saveFreeze(); toast("Rejected. Not in the paper."); paintFreeze(); render(); return;
+    if (c.paperId) FREEZE.parkedPaperIds = Array.from(new Set([...(FREEZE.parkedPaperIds || []), c.paperId]));
+    saveFreeze(); toast("Cut from the working paper view."); paintFreeze(); render(); return;
   }
   const line = lineFor(bind);
   const kind = action === "INCLUDE" ? "patch" : "minor";
@@ -148,7 +155,15 @@ function proposePaper(pid) {
   const p = paperById(pid);
   if (!p) return;
   const prop = inferProposal(p);
-  const syn = { id: "local/" + p.id, paperId: p.id, bind: p.claimIds || [], action: prop.action, route: prop.auto ? "AUTO-MERGED" : "QUEUE", gates: { G1: "pass", G2: "pass", G3: "pass", G4: "pass", G5: "pass", G6: "pass" } };
+  const mapped = prop.action === "ADD" ? "INCLUDE" : prop.action === "CUT" ? "REJECT" : prop.action === "HOLD" ? "INCLUDE" : prop.action;
+  const syn = {
+    id: "local/" + p.id,
+    paperId: p.id,
+    bind: p.claimIds || [],
+    action: mapped,
+    route: prop.auto ? "AUTO-MERGED" : "QUEUE",
+    gates: { G1: "pass", G2: "pass", G3: "pass", G4: "pass", G5: "pass", G6: "pass" },
+  };
   REVIEWS.cards.push(syn);
   applyCard(syn.id);
 }
@@ -158,14 +173,79 @@ function resetFreeze() {
   toast("Working freeze reset to published current");
   paintFreeze(); render();
 }
+
+function keepClaims() { return (CLAIMS.claims || []).filter((c) => c.status === "KEEP"); }
+function minKeepC() {
+  const ks = keepClaims();
+  if (!ks.length) return 0;
+  return Math.min(...ks.map((c) => CVAL[c.C] ?? 0));
+}
+function publishReady() {
+  const minC = minKeepC();
+  const openHard = (VERS.milestones || []).filter((m) => m.status !== "done" && ["M1", "M2", "M3"].includes(m.id)).length;
+  if (minC >= 4 && openHard === 0) return { label: "Publish-ready", cls: "ok", note: "KEEP stack is C≥4 and M1–M3 are closed." };
+  if (minC >= 3) return { label: "Near", cls: "warn", note: "KEEP at C3. Need hardware-class C4 plus M1–M3." };
+  return { label: "Not ready", cls: "danger", note: "Min KEEP C is " + minC + ". Q=1000 stays a ledger test." };
+}
+function waitingAuto() {
+  return (REVIEWS.cards || []).filter((c) => !applied(c.id) && c.action === "INCLUDE" && autoGate(c).pass);
+}
+function openBlockers() {
+  const ms = (VERS.milestones || []).filter((m) => m.status !== "done");
+  const watch = (CLAIMS.claims || []).filter((c) => c.status === "WATCH" || c.status === "HOLD");
+  return ms.length + watch.length;
+}
+function papersForPillar(pillar) {
+  const ids = new Set(pillar.evidence || []);
+  const claims = new Set(pillar.claimIds || []);
+  return CAT.papers.filter((p) => ids.has(p.id) || (p.claimIds || []).some((c) => claims.has(c)) || (p.pillarId === pillar.id) || (p.suggestedPillar === pillar.id));
+}
+function weekDelta(pillar) {
+  const papers = papersForPillar(pillar).filter(inWeek);
+  let up = 0, down = 0;
+  papers.forEach((p) => {
+    if (high(p) && !DENY.has((p.claimIds || [])[0])) up += 1;
+    if (low(p) || (p.bindAction === "REJECT") || (p.claimIds || []).some((id) => DENY.has(id))) down += 1;
+  });
+  (REVIEWS.cards || []).forEach((c) => {
+    if (!(c.bind || []).some((id) => (pillar.claimIds || []).includes(id))) return;
+    if (["INCLUDE", "STRENGTHEN"].includes(c.action)) up += 1;
+    if (["WEAKEN", "DISCONFIRM", "REJECT"].includes(c.action)) down += 1;
+  });
+  return { up, down, net: up - down };
+}
+function pillarStrength(pillar) {
+  const base = STATUS_W[pillar.engineStatus] || STATUS_W[String(pillar.status || "").toUpperCase()] || 20;
+  const related = papersForPillar(pillar);
+  const meanImp = related.length ? related.reduce((s, p) => s + (p.importance || 0), 0) / related.length : 40;
+  const claims = (pillar.claimIds || []).map(claimById).filter(Boolean);
+  const cBoost = claims.length ? 8 * Math.max(...claims.map((c) => CVAL[c.C] ?? 0)) : 0;
+  const d = weekDelta(pillar);
+  return Math.max(4, Math.min(100, Math.round(0.45 * base + 0.25 * (meanImp / 100) * 100 + 0.2 * cBoost + 4 * d.net)));
+}
+function bridgePapers() {
+  return CAT.papers.filter((p) => (p.claimIds || []).length >= 2 || (p.fields || []).length >= 3)
+    .sort((a, b) => (b.importance || 0) - (a.importance || 0));
+}
+function commandStats() {
+  const ready = publishReady();
+  return [
+    ["Freeze", FREEZE.dbe.replace("DBE-", "") + " / " + FREEZE.dbes.replace("DBES-", ""), "working manuscripts"],
+    ["Publish", ready.label, ready.note],
+    ["KEEP Cmin", "C" + minKeepC(), keepClaims().map((c) => c.id).join(" · ") || "none"],
+    ["This week", String(CAT.papers.filter(inWeek).length), "new harvest cards"],
+    ["Auto-add", String(waitingAuto().length), "INCLUDE passing A1–A8"],
+    ["Blockers", String(openBlockers()), "open milestones + HOLD/WATCH"],
+  ];
+}
 function paintFreeze() {
   const el = document.getElementById("freezeBar");
   if (!el) return;
-  el.innerHTML = "<code>" + esc(FREEZE.dbe) + "</code><span>/</span><code>" + esc(FREEZE.dbes) + "</code><span> " + FREEZE.actions.length + " freeze action" + (FREEZE.actions.length === 1 ? "" : "s") + "</span><button class=\"ghost\" type=\"button\" id=\"resetFreeze\">Reset freeze</button>";
+  el.innerHTML = "<code>" + esc(FREEZE.dbe) + "</code><span>/</span><code>" + esc(FREEZE.dbes) + "</code><span> " + FREEZE.actions.length + " freeze action" + (FREEZE.actions.length === 1 ? "" : "s") + "</span><a href=\"papers/DBE-0.2.2.md\">DBE note</a><a href=\"papers/DBES-0.2.0.md\">DBE-S note</a><button class=\"ghost\" type=\"button\" id=\"resetFreeze\">Reset freeze</button>";
   document.getElementById("resetFreeze").onclick = resetFreeze;
   const stats = document.getElementById("stats");
   if (stats) {
-    stats.innerHTML = [["Sources", CAT.papers.length], ["Claims", (CLAIMS.claims || []).length], ["DBE", FREEZE.dbe.replace("DBE-", "")], ["DBE-S", FREEZE.dbes.replace("DBES-", "")]].map((kv) => "<div class=\"stat\"><dt>" + kv[0] + "</dt><dd>" + kv[1] + "</dd></div>").join("");
+    stats.innerHTML = commandStats().map((kv) => "<div class=\"stat\"><dt>" + kv[0] + "</dt><dd>" + esc(kv[1]) + "<small>" + esc(kv[2]) + "</small></dd></div>").join("");
   }
 }
 function meters(p) {
@@ -177,17 +257,17 @@ function axisPills(c) {
 }
 function pool() {
   let papers = CAT.papers.slice();
-  if (tab === "week") papers = papers.filter(inWeek);
-  else if (tab === "month") papers = papers.filter(inMonth);
-  else if (tab === "lookback") papers = papers.filter(inLookback);
-  else if (tab === "pillars") papers = papers.filter(isFound);
+  if (range === "week") papers = papers.filter(inWeek);
+  else if (range === "month") papers = papers.filter(inMonth);
+  else if (range === "lookback") papers = papers.filter(inLookback);
+  else if (range === "foundational") papers = papers.filter(isFound);
   if (field !== "all") papers = papers.filter((p) => (p.fields || []).includes(field));
   if (q) {
     const s = q.toLowerCase();
     papers = papers.filter((p) => [p.title, authors(p).join(" "), idea(p), p.whyItMatters, p.limitation, p.arxiv, ...(p.tags || []), ...(p.claimIds || [])].join(" ").toLowerCase().includes(s));
   }
-  papers = papers.filter((p) => !(FREEZE.parkedPaperIds || []).includes(p.id) || tab === "catalog");
-  if (hideOffPath && tab !== "catalog") papers = papers.filter((p) => p.role !== "off-path" && p.bindAction !== "REJECT");
+  papers = papers.filter((p) => !(FREEZE.parkedPaperIds || []).includes(p.id) || range === "catalog");
+  if (hideOffPath && range !== "catalog") papers = papers.filter((p) => p.role !== "off-path" && p.bindAction !== "REJECT");
   papers.sort((a, b) => sort === "date" ? String(pdate(b)).localeCompare(String(pdate(a))) : (b[sort] || 0) - (a[sort] || 0));
   return papers;
 }
@@ -200,7 +280,7 @@ function openPaper(id) {
   const overlay = document.createElement("div");
   overlay.className = "overlay";
   overlay.setAttribute("role", "dialog");
-  overlay.innerHTML = "<article class=\"panel\"><p class=\"kicker\">" + esc(p.source || p.venue || "Library") + "</p><h2>" + esc(p.title) + "</h2><p class=\"meta\">" + esc(authors(p).join(", ")) + " · " + esc(pdate(p)) + " · " + esc(p.venue || "") + "</p><div>" + (p.fields || []).map((f) => "<span class=\"tag\">" + esc(fieldLabel(f)) + "</span>").join("") + (p.claimIds || []).map((t) => "<span class=\"tag acc\">" + esc(t) + "</span>").join("") + (p.foundational ? "<span class=\"tag acc\">Foundational</span>" : "") + "</div>" + meters(p) + "<p class=\"notice\">Harvest gauges are ingest metadata (0–100). They are not C, T, D, or A and cannot raise a frozen claim.</p>" + bound.map((c) => "<p class=\"meta\"><span class=\"tag " + statusClass(c.status) + "\">" + esc(c.status) + "</span> <b>" + esc(c.id) + "</b> " + axisPills(c) + "<br/>" + esc(c.verdict) + "</p>").join("") + "<p><b>Core idea.</b> " + esc(idea(p)) + "</p><p><b>Why it matters.</b> " + esc(p.whyItMatters || "") + "</p><p><b>One limitation.</b> " + esc(p.limitation || "") + "</p>" + (pillar ? "<p class=\"meta\"><b>" + esc(pillar.engineStatus || pillar.status) + ": " + esc(pillar.name) + "</b><br/>" + esc(pillar.engineNote || pillar.dbeGoal || "") + "</p>" : "") + "<p class=\"meta\">Next-version prompt: <b>" + esc(prop.action) + "</b> — " + esc(prop.reason) + "</p><div style=\"display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem\">" + (p.url && String(p.url).startsWith("http") ? "<a class=\"chip active\" href=\"" + esc(p.url) + "\" target=\"_blank\" rel=\"noreferrer\">Open source</a>" : "") + "<button class=\"btn ok\" type=\"button\" data-propose=\"" + esc(p.id) + "\">Prompt " + esc(prop.action) + "</button><button class=\"ghost\" type=\"button\">Close</button></div></article>";
+  overlay.innerHTML = "<article class=\"panel\"><p class=\"kicker\">" + esc(p.source || p.venue || "Library") + "</p><h2>" + esc(p.title) + "</h2><p class=\"meta\">" + esc(authors(p).join(", ")) + " · " + esc(pdate(p)) + " · " + esc(p.venue || "") + "</p><div>" + (p.fields || []).map((f) => "<span class=\"tag\">" + esc(fieldLabel(f)) + "</span>").join("") + (p.claimIds || []).map((t) => "<span class=\"tag acc\">" + esc(t) + "</span>").join("") + (p.foundational ? "<span class=\"tag acc\">Foundational</span>" : "") + "</div>" + meters(p) + "<p class=\"notice\">Harvest gauges are ingest metadata (0–100). They are not C, T, D, or A and cannot raise a frozen claim.</p>" + bound.map((c) => "<p class=\"meta\"><span class=\"tag " + statusClass(c.status) + "\">" + esc(c.status) + "</span> <b>" + esc(c.id) + "</b> " + axisPills(c) + "<br/>" + esc(c.verdict) + "</p>").join("") + "<p><b>Core idea.</b> " + esc(idea(p)) + "</p><p><b>Why it matters.</b> " + esc(p.whyItMatters || "") + "</p><p><b>One limitation.</b> " + esc(p.limitation || "") + "</p>" + (pillar ? "<p class=\"meta\"><b>" + esc(pillar.engineStatus || pillar.status) + ": " + esc(pillar.name) + "</b><br/>" + esc(pillar.engineNote || pillar.dbeGoal || "") + "</p>" : "") + "<p class=\"meta\">Next-version prompt: <b>" + esc(prop.action) + "</b> — " + esc(prop.reason) + "</p><div style=\"display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem\">" + (p.url && String(p.url).startsWith("http") ? "<a class=\"chip active\" href=\"" + esc(p.url) + "\" target=\"_blank\" rel=\"noreferrer\">Open source</a>" : "") + (String(p.url || "").endsWith(".md") ? "<a class=\"chip active\" href=\"" + esc(p.url) + "\">Open note</a>" : "") + "<button class=\"btn ok\" type=\"button\" data-propose=\"" + esc(p.id) + "\">Prompt " + esc(prop.action) + "</button><button class=\"ghost\" type=\"button\">Close</button></div></article>";
   overlay.addEventListener("click", (e) => {
     if (e.target === overlay || e.target.closest(".ghost")) overlay.remove();
     const b = e.target.closest("[data-propose]");
@@ -209,99 +289,118 @@ function openPaper(id) {
   document.body.appendChild(overlay);
 }
 function paperRow(p) {
-  return "<button class=\"row\" data-id=\"" + p.id + "\" type=\"button\"><div><div>" + (p.foundational ? "<span class=\"tag acc\">Foundational</span>" : "<span class=\"tag\">" + roleLabel(p) + "</span>") + (high(p) ? "<span class=\"tag ok\">High signal</span>" : "") + (low(p) ? "<span class=\"tag warn\">Low signal</span>" : "") + (p.suggestedPillar ? "<span class=\"tag warn\">new pillar?</span>" : "") + (p.claimIds || []).map((id) => "<span class=\"tag acc\">" + id + "</span>").join("") + "<span class=\"meta\"> " + esc(pdate(p)) + "</span></div><h3>" + esc(p.title) + "</h3><p class=\"meta\">" + esc(authors(p).slice(0, 4).join(", ")) + " · " + esc(p.venue || "") + "</p><p><b>Idea.</b> " + esc(idea(p)) + "</p><p class=\"meta\"><b>Why.</b> " + esc(p.whyItMatters || "") + "</p><p class=\"meta\"><b>Limit.</b> " + esc(p.limitation || "") + "</p><div>" + (p.fields || []).map((f) => "<span class=\"tag\">" + esc(fieldLabel(f)) + "</span>").join("") + "</div></div>" + meters(p) + "</button>";
+  const prop = inferProposal(p);
+  return "<button class=\"row\" data-id=\"" + p.id + "\" type=\"button\"><div><div>" + (p.foundational ? "<span class=\"tag acc\">Foundational</span>" : "<span class=\"tag\">" + roleLabel(p) + "</span>") + (high(p) ? "<span class=\"tag ok\">High signal</span>" : "") + (low(p) ? "<span class=\"tag warn\">Low signal</span>" : "") + ((p.claimIds || []).length >= 2 ? "<span class=\"tag acc\">bridge</span>" : "") + (p.suggestedPillar ? "<span class=\"tag warn\">new pillar?</span>" : "") + "<span class=\"tag " + statusClass(prop.action) + "\">" + esc(prop.action) + "</span>" + (p.claimIds || []).map((id) => "<span class=\"tag acc\">" + id + "</span>").join("") + "<span class=\"meta\"> " + esc(pdate(p)) + "</span></div><h3>" + esc(p.title) + "</h3><p class=\"meta\">" + esc(authors(p).slice(0, 4).join(", ")) + " · " + esc(p.venue || "") + "</p><p><b>Idea.</b> " + esc(idea(p)) + "</p><p class=\"meta\"><b>Why.</b> " + esc(p.whyItMatters || "") + "</p><p class=\"meta\"><b>Limit.</b> " + esc(p.limitation || "") + "</p><div>" + (p.fields || []).map((f) => "<span class=\"tag\">" + esc(fieldLabel(f)) + "</span>").join("") + "</div></div>" + meters(p) + "</button>";
+}
+function renderMission() {
+  const ready = publishReady();
+  const pillars = (CAT.pillars || []).slice().sort((a, b) => pillarStrength(b) - pillarStrength(a));
+  const bridges = bridgePapers().slice(0, 8);
+  const ms = VERS.milestones || [];
+  const done = ms.filter((m) => m.status === "done").length;
+  const moon = Math.round(100 * done / Math.max(1, ms.length));
+  const rows = pillars.map((p) => {
+    const s = pillarStrength(p);
+    const d = weekDelta(p);
+    const cls = d.net > 0 ? "up" : d.net < 0 ? "down" : "flat";
+    const arrow = d.net > 0 ? "▲ +" + d.net : d.net < 0 ? "▼ " + d.net : "▬ 0";
+    const deps = (p.dependsOn || []).map((id) => (pillarById(id) || {}).name || id).join(" → ");
+    const block = (p.blockers || [])[0] || p.limitation || "";
+    return "<article class=\"card\"><div class=\"srow\"><div class=\"name\"><span class=\"tag " + statusClass(p.engineStatus) + "\">" + esc(p.engineStatus || p.status) + "</span><div><b>" + esc(p.name) + "</b></div></div><div><div class=\"lbl\"><span>pillar strength</span><span>" + s + "</span></div><div class=\"bar\"><i style=\"width:" + s + "%;background:" + (p.engineStatus === "KEEP" ? "var(--ok)" : p.engineStatus === "CUT" ? "var(--danger)" : "var(--warn)") + "\"></i></div><p class=\"meta\">" + (deps ? "Depends: " + esc(deps) + ". " : "") + esc(block) + "</p></div><div class=\"delta " + cls + "\">" + arrow + "</div></div></article>";
+  }).join("");
+  const groups = {};
+  bridges.forEach((p) => {
+    const key = (p.claimIds || []).slice().sort().join(" + ") || (p.fields || []).slice(0, 3).join(" + ");
+    (groups[key] || (groups[key] = [])).push(p);
+  });
+  return "<p class=\"notice\">Moonshot Q=1000 tracks the ledger path (M0–M8), not a plant output. Pillar bars mix engine status, bound-claim C, and this week's INCLUDE vs WEAKEN cards. They are not C.</p>"
+    + "<div class=\"grid\"><article class=\"card\"><p class=\"kicker\">Moonshot</p><h2>Q = 1000 ledger</h2><div class=\"lbl\"><span>milestone path</span><span>" + done + "/" + ms.length + "</span></div><div class=\"bar\"><i style=\"width:" + moon + "%\"></i></div><p class=\"meta\">" + esc(LEDGER.northStar || "Q = 1000 is a stress test, not an output.") + "</p><p><span class=\"tag " + ready.cls + "\">" + esc(ready.label) + "</span> " + esc(ready.note) + "</p></article><article class=\"card\"><p class=\"kicker\">Current papers</p><h2>" + esc(FREEZE.dbe) + " · " + esc(FREEZE.dbes) + "</h2><p>Open the live freeze. Daily cards PATCH bibliography; they cannot invent a new bus.</p><div style=\"display:flex;flex-wrap:wrap;gap:0.5rem\"><button class=\"chip active\" data-open=\"dbe-whitepaper\">DBE summary</button><button class=\"chip active\" data-open=\"dbe-s-revision\">DBE-S summary</button><a class=\"chip\" href=\"papers/DBE-0.2.2.md\">DBE-0.2.2 note</a><a class=\"chip\" href=\"papers/DBES-0.2.0.md\">DBES-0.2.0 note</a></div></article></div>"
+    + "<h2>Pillars</h2><p class=\"meta\">KEEP lifts the paper. HOLD/WATCH stay in the lab. CUT stays out. Suggested pillars appear when a paper will not bind to one existing claim.</p><div class=\"strength\">" + rows + "</div>"
+    + "<h2>Bridges</h2><p class=\"meta\">Papers that touch two or more claims amplify confidence only as a new coupling claim starting at C1.</p>"
+    + Object.entries(groups).map(([key, list]) => "<article class=\"card bridge\"><p class=\"kicker\">" + esc(key) + "</p>" + list.map((p) => "<button class=\"row\" data-id=\"" + p.id + "\" type=\"button\" style=\"border:0;padding-left:0;padding-right:0\"><div><h3>" + esc(p.title) + "</h3><p><b>Idea.</b> " + esc(idea(p)) + "</p><p class=\"meta\"><b>Why.</b> " + esc(p.whyItMatters || "") + "</p></div></button>").join("") + "</article>").join("")
+    + "<h2>Milestones on the moonshot</h2><div class=\"grid\">" + ms.map((m) => "<article class=\"card\"><div style=\"display:flex;justify-content:space-between\"><h3>" + esc(m.id) + " · " + esc(m.name) + "</h3><span class=\"tag " + statusClass(m.status === "done" ? "KEEP" : "OPEN") + "\">" + esc(m.status) + "</span></div><p class=\"meta\">" + esc(m.note) + "</p></article>").join("") + "</div>";
 }
 function renderEngine() {
   const keep = (CLAIMS.claims || []).filter((c) => c.status === "KEEP");
   const hold = (CLAIMS.claims || []).filter((c) => c.status === "HOLD" || c.status === "WATCH");
   const cut = (CLAIMS.claims || []).filter((c) => c.status === "CUT");
   const queued = (REVIEWS.cards || []).filter((c) => c.route === "QUEUE" && !applied(c.id));
-  const autoC = (REVIEWS.cards || []).filter((c) => !applied(c.id) && c.action === "INCLUDE" && autoGate(c).pass);
-  const cardC = (c) => "<article class=\"card\"><div style=\"display:flex;justify-content:space-between;gap:0.75rem\"><div><span class=\"mono\" style=\"font-size:0.75rem;color:var(--subtle)\">" + esc(c.id) + "</span><h3>" + esc(c.name) + "</h3><p class=\"meta\">" + esc(c.claim) + "</p></div><span class=\"tag " + statusClass(c.status) + "\">" + esc(c.status) + "</span></div><p>" + axisPills(c) + "</p><p>" + esc(c.verdict) + "</p><div>" + (c.evidence || []).map((id) => "<button class=\"chip\" data-open=\"" + id + "\">" + id + "</button>").join("") + "</div></article>";
-  return "<p class=\"notice\">Three layers, never mixed. Harvest gauges cannot raise C. Q = 1000 is a ledger stress test, not an output. KEEP claims with C≥3 ride the paper; CUT sections are already out.</p>"
-    + "<div class=\"grid\"><article class=\"card\"><p class=\"kicker\">DBE " + esc(FREEZE.dbe) + "</p><h2>Dimensional Braid Engine</h2><p class=\"meta\">Modular quantum-topological processor + plasma controller</p><p>Post-cut stack: Bus A talks to a real plant. Bus B uses the anyon and QEC results we actually have. Bus C is a microphysics campaign, not a coupled engine.</p><button class=\"chip\" data-open=\"dbe-whitepaper\">Open current paper</button></article><article class=\"card\"><p class=\"kicker\">DBE-S " + esc(FREEZE.dbes) + "</p><h2>Dynamic Barrier Evasion</h2><p class=\"meta\">Floquet / laser-RF driven tunneling through the Coulomb barrier</p><p>L1–L4 as HOLD except L3 solvers KEEP. Q = 1000 is a stress test of the energy ledger, not an output of the current stack.</p><button class=\"chip\" data-open=\"dbe-s-revision\">Open current paper</button></article></div>"
-    + "<h2>Current papers</h2><p class=\"meta\">Live freeze plus the hardware and review pillars it rests on. Open any card for idea / why it matters / one limitation.</p><div class=\"grid\">" + ["dbe-whitepaper","dbe-s-revision","lo-2026","kitaev-1997","nayak-2008"].map((id) => { const p = paperById(id) || {}; return "<article class=\"card\"><p class=\"kicker\">" + esc(p.venue || "Program source") + "</p><h3>" + esc(p.title || id) + "</h3><p>" + esc(idea(p)) + "</p><p class=\"meta\"><b>Limitation.</b> " + esc(p.limitation || "") + "</p><button class=\"chip\" data-open=\"" + id + "\">Open paper</button></article>"; }).join("") + "</div>"
+  const autoC = waitingAuto();
+  const cardC = (c) => "<article class=\"card\"><div style=\"display:flex;justify-content:space-between;gap:0.75rem\"><div><span class=\"mono\" style=\"font-size:0.75rem;color:var(--subtle)\">" + esc(c.id) + "</span><h3>" + esc(c.name) + "</h3><p class=\"meta\">" + esc(c.claim) + "</p></div><span class=\"tag " + statusClass(c.status) + "\">" + esc(c.status) + "</span></div><p>" + axisPills(c) + "</p><p>" + esc(c.verdict) + "</p><p class=\"meta\"><b>Disputer.</b> " + esc(c.disputer || "") + "</p><div>" + (c.evidence || []).map((id) => "<button class=\"chip\" data-open=\"" + id + "\">" + id + "</button>").join("") + "</div></article>";
+  const hist = (VERS.history || []).slice().reverse().slice(0, 8).map((v) => "<article class=\"card\"><span class=\"tag acc\">" + esc(v.kind) + "</span> <span class=\"tag\">" + esc(v.action) + "</span><h3>" + esc(v.version) + " · " + esc(v.title) + "</h3><p class=\"meta\">" + esc(v.date) + "</p><p>" + esc(v.summary || "") + "</p></article>").join("");
+  return "<p class=\"notice\">Same repo, same manuscripts. INCLUDE patches the bibliography. STRENGTHEN cannot raise C unless Auto-Gate passes. NEW PILLAR never auto-bumps.</p>"
+    + "<div class=\"grid\"><article class=\"card\"><p class=\"kicker\">DBE " + esc(FREEZE.dbe) + "</p><h2>Dimensional Braid Engine</h2><p class=\"meta\">Modular quantum-topological processor + plasma controller</p><p>Post-cut stack: Bus A talks to a real plant. Bus B uses the anyon and QEC results we actually have. Bus C is a microphysics campaign, not a coupled engine.</p><button class=\"chip\" data-open=\"dbe-whitepaper\">Open current paper</button> <a class=\"chip\" href=\"papers/DBE-0.2.2.md\">Version note</a></article><article class=\"card\"><p class=\"kicker\">DBE-S " + esc(FREEZE.dbes) + "</p><h2>Dynamic Barrier Evasion</h2><p class=\"meta\">Floquet / laser-RF driven tunneling through the Coulomb barrier</p><p>L1–L4 as HOLD except L3 solvers KEEP. Q = 1000 is a stress test of the energy ledger, not an output of the current stack.</p><button class=\"chip\" data-open=\"dbe-s-revision\">Open current paper</button> <a class=\"chip\" href=\"papers/DBES-0.2.0.md\">Version note</a></article></div>"
     + "<h2>Load-bearing</h2><div class=\"grid\">" + keep.map(cardC).join("") + "</div>"
     + "<h2>Hold / watch</h2><div class=\"grid\">" + hold.map(cardC).join("") + "</div>"
     + "<h2>Removed from the paper</h2><div class=\"grid3\">" + cut.map(cardC).join("") + "</div>"
     + "<h2>Buses</h2><div class=\"grid3\">" + (VERS.buses || []).map((b) => "<article class=\"card\"><h3>Bus " + esc(b.id) + " · " + esc(b.name) + "</h3><p class=\"meta\">" + esc(b.C) + " · " + esc(b.D) + "</p><p>" + esc(b.target) + "</p><p class=\"meta\">" + esc(b.interface) + "</p></article>").join("") + "</div>"
-    + "<h2>Milestones</h2><div class=\"grid\">" + (VERS.milestones || []).map((m) => "<article class=\"card\"><div style=\"display:flex;justify-content:space-between\"><h3>" + esc(m.id) + " · " + esc(m.name) + "</h3><span class=\"tag " + statusClass(m.status === "done" ? "KEEP" : "OPEN") + "\">" + esc(m.status) + "</span></div><p class=\"meta\">" + esc(m.note) + "</p></article>").join("") + "</div>"
-    + "<h2>Prompt the next version</h2><p class=\"meta\">High-signal INCLUDE cards that pass Auto-Gate A1–A8 can merge as PATCH. NEW PILLAR and CUT reversals never auto-bump.</p>"
-    + (autoC.length ? autoC.map((c) => { const p = paperById(c.paperId) || {}; return "<article class=\"card\"><span class=\"tag ok\">" + esc(c.action) + "</span> " + (c.bind || []).map((id) => "<span class=\"tag acc\">" + id + "</span>").join("") + "<h3>" + esc(p.title || c.paperId) + "</h3><p>" + esc((c.plain && c.plain.core) || idea(p)) + "</p><div style=\"display:flex;gap:0.5rem\"><button class=\"chip\" data-open=\"" + c.paperId + "\">Open</button><button class=\"btn ok\" data-apply=\"" + c.id + "\">Auto-merge PATCH</button></div></article>"; }).join("") : "<p class=\"meta\">No unpublished Auto-Gate INCLUDE cards waiting.</p>")
-    + (queued.length ? "<h3>Weekly queue</h3>" + queued.map((c) => { const p = paperById(c.paperId) || {}; return "<article class=\"card\"><span class=\"tag warn\">" + esc(c.action) + "</span> <span class=\"tag\">QUEUE</span><h3>" + esc(p.title || c.paperId) + "</h3><p>" + esc((c.plain && c.plain.core) || idea(p)) + "</p><p class=\"meta\">" + esc(c.whyQueued || c.gateNote || "") + "</p><button class=\"btn warn\" data-apply=\"" + c.id + "\">Queue on freeze</button></article>"; }).join("") : "")
-    + "<h2>Suggested pillars</h2><div class=\"grid\">" + (CAT.pillars || []).filter((p) => p.status === "suggested" || p.engineStatus === "QUEUE").map((p) => "<article class=\"card\"><div style=\"display:flex;justify-content:space-between\"><h3>" + esc(p.name) + "</h3><span class=\"tag warn\">" + esc(p.engineStatus || "QUEUE") + "</span></div><p>" + esc(p.statement) + "</p><p class=\"meta\">" + esc(p.whySuggested || p.engineNote || "") + "</p></article>").join("") + "</div>";
+    + "<h2>Prompt the next version</h2><p class=\"meta\">High-signal INCLUDE cards that pass Auto-Gate A1–A8 can merge as PATCH.</p>"
+    + (autoC.length ? autoC.map((c) => { const p = paperById(c.paperId) || {}; return "<article class=\"card\"><span class=\"tag ok\">ADD</span> " + (c.bind || []).map((id) => "<span class=\"tag acc\">" + id + "</span>").join("") + "<h3>" + esc(p.title || c.paperId) + "</h3><p>" + esc((c.plain && c.plain.core) || idea(p)) + "</p><div style=\"display:flex;gap:0.5rem\"><button class=\"chip\" data-open=\"" + c.paperId + "\">Open</button><button class=\"btn ok\" data-apply=\"" + c.id + "\">Auto-merge PATCH</button></div></article>"; }).join("") : "<p class=\"meta\">No unpublished Auto-Gate INCLUDE cards waiting.</p>")
+    + (queued.length ? "<h3>Weekly queue</h3>" + queued.map((c) => { const p = paperById(c.paperId) || {}; return "<article class=\"card\"><span class=\"tag warn\">" + esc(c.action) + "</span> <span class=\"tag\">QUEUE</span><h3>" + esc(p.title || c.paperId) + "</h3><p>" + esc((c.plain && c.plain.core) || idea(p)) + "</p><button class=\"btn warn\" data-apply=\"" + c.id + "\">Queue on freeze</button></article>"; }).join("") : "")
+    + "<h2>Version log</h2>" + hist;
 }
-function renderClaims() {
-  const groups = { DBE: [], "DBE-S": [] };
-  (CLAIMS.claims || []).forEach((c) => (groups[c.doc] || (groups[c.doc] = [])).push(c));
-  return "<p class=\"notice\">" + esc(CLAIMS.rule || "") + "</p>" + Object.entries(groups).map(([doc, list]) => "<h2>" + doc + "</h2><div class=\"grid\">" + list.map((c) => "<article class=\"card\"><div style=\"display:flex;justify-content:space-between;gap:0.75rem\"><div><span class=\"mono\" style=\"font-size:0.75rem;color:var(--subtle)\">" + esc(c.id) + "</span><h3>" + esc(c.name) + "</h3><p class=\"meta\">" + esc(c.claim) + "</p></div><span class=\"tag " + statusClass(c.status) + "\">" + esc(c.status) + "</span></div><p>" + axisPills(c) + "</p><p>" + esc(c.verdict) + "</p><p class=\"meta\"><b>Disputer.</b> " + esc(c.disputer) + "</p><p class=\"meta\"><b>Kill.</b> " + esc(c.kill) + "</p><div>" + (c.evidence || []).map((id) => "<button class=\"chip\" data-open=\"" + id + "\">" + id + "</button>").join("") + "</div></article>").join("") + "</div>").join("");
-}
-function renderReviews() {
-  return "<p class=\"notice\">One card per paper. Harvest 0–100 numbers are not C. Auto-Gate A1–A8 is the only way a daily run versions the paper without a human.</p><div class=\"grid\">" + AUTOGATE.map((a) => "<p class=\"meta\"><span class=\"mono\" style=\"color:var(--acc)\">" + a[0] + "</span> " + a[1] + "</p>").join("") + "</div>" + (REVIEWS.cards || []).map((c) => {
+function renderDaily() {
+  const week = CAT.papers.filter(inWeek).sort((a, b) => (b.importance || 0) - (a.importance || 0));
+  const brief = week.slice(0, 6).map((p) => {
+    const prop = inferProposal(p);
+    return "<article class=\"card\"><span class=\"tag " + statusClass(prop.action) + "\">" + esc(prop.action) + "</span> " + (p.claimIds || []).map((id) => "<span class=\"tag acc\">" + id + "</span>").join("") + "<h3>" + esc(p.title) + "</h3><p><b>Idea.</b> " + esc(idea(p)) + "</p><p class=\"meta\"><b>Why.</b> " + esc(p.whyItMatters || "") + "</p><p class=\"meta\"><b>Limit.</b> " + esc(p.limitation || "") + "</p><p class=\"meta\">" + esc(prop.reason) + "</p><div style=\"display:flex;gap:0.5rem;margin-top:0.75rem\"><button class=\"chip\" data-open=\"" + p.id + "\">Open</button><button class=\"btn ok\" data-propose=\"" + p.id + "\">" + esc(prop.action) + "</button></div></article>";
+  }).join("");
+  const cards = (REVIEWS.cards || []).map((c) => {
     const p = paperById(c.paperId) || {};
     const g = autoGate(c);
-    return "<article class=\"card\"><span class=\"tag " + statusClass(c.action) + "\">" + esc(c.action) + "</span> <span class=\"tag " + statusClass(c.route) + "\">" + esc(c.route) + "</span> " + (c.bind || []).map((id) => "<span class=\"tag acc\">" + id + "</span>").join("") + "<h3>" + esc(p.title || c.paperId) + "</h3><p>" + esc((c.plain && c.plain.core) || idea(p)) + "</p><p class=\"meta\"><b>Why.</b> " + esc((c.plain && c.plain.why) || p.whyItMatters || "") + "</p><p class=\"meta\"><b>Limitation.</b> " + esc((c.plain && c.plain.limit) || p.limitation || "") + "</p><p class=\"meta\"><b>Disputer.</b> " + esc(c.disputer || "") + "</p><p class=\"mono\" style=\"font-size:0.75rem;color:var(--subtle)\">" + esc(c.claimDelta || c.score || "") + " · Auto-Gate " + (g.pass ? "pass" : "miss " + g.misses.join(",")) + "</p><div style=\"display:flex;gap:0.5rem;margin-top:0.75rem\"><button class=\"chip\" data-open=\"" + c.paperId + "\">Open paper</button><button class=\"btn " + (c.action === "REJECT" ? "danger" : g.pass ? "ok" : "warn") + "\" data-apply=\"" + c.id + "\" " + (applied(c.id) ? "disabled" : "") + ">" + (applied(c.id) ? "Applied" : "Apply " + c.action) + "</button></div></article>";
+    const verb = c.action === "INCLUDE" ? "ADD" : c.action === "REJECT" ? "CUT" : c.action === "NEW PILLAR" ? "HOLD" : c.action;
+    return "<article class=\"card\"><span class=\"tag " + statusClass(c.action) + "\">" + esc(verb) + "</span> <span class=\"tag " + statusClass(c.route) + "\">" + esc(c.route) + "</span> " + (c.bind || []).map((id) => "<span class=\"tag acc\">" + id + "</span>").join("") + "<h3>" + esc(p.title || c.paperId) + "</h3><p>" + esc((c.plain && c.plain.core) || idea(p)) + "</p><p class=\"meta\"><b>Why.</b> " + esc((c.plain && c.plain.why) || p.whyItMatters || "") + "</p><p class=\"meta\"><b>Limitation.</b> " + esc((c.plain && c.plain.limit) || p.limitation || "") + "</p><p class=\"meta\"><b>Disputer.</b> " + esc(c.disputer || "") + "</p><p class=\"mono\" style=\"font-size:0.75rem;color:var(--subtle)\">" + esc(c.claimDelta || c.score || "") + " · Auto-Gate " + (g.pass ? "pass" : "miss " + g.misses.join(",")) + "</p><div style=\"display:flex;gap:0.5rem;margin-top:0.75rem\"><button class=\"chip\" data-open=\"" + c.paperId + "\">Open paper</button><button class=\"btn " + (c.action === "REJECT" ? "danger" : g.pass ? "ok" : "warn") + "\" data-apply=\"" + c.id + "\" " + (applied(c.id) ? "disabled" : "") + ">" + (applied(c.id) ? "Applied" : "Apply " + verb) + "</button></div></article>";
   }).join("");
-}
-function renderVersions() {
-  const lines = (VERS.lines || []).map((l) => "<article class=\"card\"><div class=\"kicker\">" + esc(l.id) + "</div><h3>" + esc(l.name) + "</h3><p class=\"kicker\">" + esc(l.id === "DBE" ? FREEZE.dbe : FREEZE.dbes) + "</p><p>" + esc(l.meaning) + "</p><p class=\"meta\">" + esc(l.freeze) + "</p></article>").join("");
-  const hist = (VERS.history || []).slice().reverse().map((v) => "<article class=\"card\"><span class=\"tag acc\">" + esc(v.kind) + "</span> <span class=\"tag\">" + esc(v.action) + "</span><h3>" + esc(v.version) + " · " + esc(v.title) + "</h3><p class=\"meta\">" + esc(v.date) + "</p><p>" + esc(v.summary) + "</p></article>").join("");
-  return "<div class=\"grid\">" + lines + "</div><h2>Version log</h2>" + hist;
+  return "<p class=\"notice\">Daily rule: ADD only on KEEP/HOLD with Auto-Gate pass. HOLD queues a pillar or bridge. CUT removes low-C / denylist sections from the working paper. Same catalog — no rebuild.</p>"
+    + "<div class=\"grid\">" + AUTOGATE.map((a) => "<p class=\"meta\"><span class=\"mono\" style=\"color:var(--acc)\">" + a[0] + "</span> " + a[1] + "</p>").join("") + "</div>"
+    + "<h2>This week, in plain language</h2><div class=\"grid\">" + (brief || "<p class=\"meta\">No week-window papers.</p>") + "</div>"
+    + "<h2>Review cards</h2>" + cards;
 }
 function renderLedger() {
   const defs = (LEDGER.definitions || []).map((d) => "<article class=\"card\"><div class=\"kicker\">" + esc(d.id) + "</div><h3>" + esc(d.name) + "</h3><p class=\"meta\">" + esc(d.meaning) + "</p><p>" + esc(d.current) + "</p></article>").join("");
   const terms = (LEDGER.terms || []).map((t) => "<article class=\"card\"><b>" + esc(t.id) + "</b> " + esc(t.name) + "<p class=\"meta\">" + esc(t.note) + "</p></article>").join("");
-  return "<p class=\"lede\">" + esc(LEDGER.northStar || "") + "</p><div class=\"grid3\">" + defs + "</div><h2>Required terms</h2>" + terms;
+  const feeds = (CAT.feeds || []).map((f) => "<article class=\"card\"><h3>" + esc(f.label) + "</h3><a href=\"" + esc(f.url) + "\" target=\"_blank\" rel=\"noreferrer\">" + esc(String(f.url).replace("https://", "")) + "</a></article>").join("");
+  const runs = (CAT.runs || []).slice(-6).reverse().map((r) => "<article class=\"card\"><span class=\"tag acc\">" + esc(r.kind) + "</span> <span class=\"meta\">" + esc(r.startedAt || "") + "</span><p>" + esc(r.notes || "") + "</p><p class=\"meta\">" + (r.paperIds || []).length + " papers · " + esc(r.windowStart || "") + " → " + esc(r.windowEnd || "") + "</p></article>").join("");
+  return "<p class=\"lede\">" + esc(LEDGER.northStar || "") + "</p><div class=\"grid3\">" + defs + "</div><h2>Required terms</h2>" + terms + "<h2>Feeds</h2><div class=\"grid\">" + feeds + "</div><h2>Ingest runs</h2>" + runs;
 }
-function renderFeeds() {
-  const feeds = (CAT.feeds || []).map((f) => "<article class=\"card\"><h3>" + esc(f.label) + "</h3><p class=\"meta\">" + esc(f.id) + "</p><a href=\"" + esc(f.url) + "\" target=\"_blank\" rel=\"noreferrer\">" + esc(String(f.url).replace("https://", "")) + "</a></article>").join("");
-  const fields = (CAT.fields || []).map((f) => "<article class=\"card\"><div class=\"kicker\">" + esc(f.id) + "</div><h3>" + esc(f.label) + "</h3><p>" + esc(f.goal || "") + "</p><p class=\"meta\">" + esc(f.feed || "") + "</p></article>").join("");
-  const runs = (CAT.runs || []).map((r) => "<article class=\"card\"><span class=\"tag acc\">" + esc(r.kind) + "</span> <span class=\"meta\">" + esc(r.startedAt || "") + "</span><p>" + esc(r.notes || "") + "</p><p class=\"meta\">" + (r.paperIds || []).length + " papers · " + esc(r.windowStart || "") + " → " + esc(r.windowEnd || "") + "</p></article>").join("");
-  return "<h2>Live feeds</h2><div class=\"grid\">" + feeds + "</div><h2>Field goals</h2><div class=\"grid\">" + fields + "</div><h2>Ingest runs</h2>" + runs;
-}
-function renderPillars() {
-  const on = (CAT.pillars || []).filter((p) => ["KEEP", "WATCH", "HOLD", "CUT"].includes(p.engineStatus));
-  const queued = (CAT.pillars || []).filter((p) => !on.includes(p));
-  const block = (list) => "<div class=\"grid\">" + list.map((p) => "<article class=\"card\"><div style=\"display:flex;justify-content:space-between;gap:0.75rem\"><h3>" + esc(p.name) + "</h3><span class=\"tag " + statusClass(p.engineStatus || p.status) + "\">" + esc(p.engineStatus || p.status) + "</span></div><p>" + esc(p.statement || "") + "</p><p class=\"meta\">" + esc(p.engineNote || p.dbeGoal || "") + "</p><div>" + (p.evidence || []).map((id) => "<button class=\"chip\" data-open=\"" + id + "\">" + id + "</button>").join("") + "</div></article>").join("") + "</div>";
-  return "<h2>Engine</h2>" + block(on) + "<h2>Queued / suggested</h2>" + block(queued);
+function renderPapers() {
+  const papers = pool();
+  const latest = papers.reduce((m, p) => String(pdate(p)) > m ? String(pdate(p)) : m, "");
+  const drop = range === "week" ? papers.filter((p) => String(pdate(p)).slice(0, 10) === latest.slice(0, 10)).slice(0, 4) : [];
+  const brief = drop.length
+    ? "<section class=\"card\" style=\"margin-top:0.5rem\"><p class=\"kicker\">Latest drop · " + esc(latest) + "</p><h2>What landed, in plain language</h2>" + drop.map((p) => "<button class=\"row\" data-id=\"" + p.id + "\" type=\"button\" style=\"border:0;border-top:1px solid var(--border);padding-left:0;padding-right:0\"><div><h3>" + esc(p.title) + "</h3><p><b>Idea.</b> " + esc(idea(p)) + "</p><p class=\"meta\"><b>Why.</b> " + esc(p.whyItMatters || "") + "</p><p class=\"meta\"><b>Limit.</b> " + esc(p.limitation || "") + "</p></div></button>").join("") + "</section>"
+    : "";
+  return papers.length
+    ? brief + "<p class=\"meta\" style=\"margin-top:1.25rem\">" + papers.length + " sources, ranked by " + sort + ". Harvest gauges are not C.</p><div class=\"list\">" + papers.map(paperRow).join("") + "</div>"
+    : "<p class=\"empty\">No papers in this slice. Foundational pillars stay in All. Off-path harvest hits are hidden by default.</p>";
 }
 function render() {
   const main = document.getElementById("main");
   const tools = document.getElementById("tools");
-  const hideTools = ["claims", "versions", "reviews", "ledger", "pillars", "feeds", "engine"].includes(tab);
-  tools.style.display = hideTools ? "none" : "block";
-  if (tab === "engine") main.innerHTML = renderEngine();
-  else if (tab === "claims") main.innerHTML = renderClaims();
-  else if (tab === "reviews") main.innerHTML = renderReviews();
-  else if (tab === "versions") main.innerHTML = renderVersions();
+  const showTools = tab === "papers";
+  tools.style.display = showTools ? "block" : "none";
+  if (tab === "mission") main.innerHTML = renderMission();
+  else if (tab === "engine") main.innerHTML = renderEngine();
+  else if (tab === "daily") main.innerHTML = renderDaily();
   else if (tab === "ledger") main.innerHTML = renderLedger();
-  else if (tab === "pillars") main.innerHTML = renderPillars();
-  else if (tab === "feeds") main.innerHTML = renderFeeds();
-  else {
-    const papers = pool();
-    const latest = papers.reduce((m, p) => String(pdate(p)) > m ? String(pdate(p)) : m, "");
-    const drop = tab === "week" ? papers.filter((p) => String(pdate(p)).slice(0, 10) === latest.slice(0, 10)).slice(0, 4) : [];
-    const brief = drop.length
-      ? "<section class=\"card\" style=\"margin-top:1.25rem\"><p class=\"kicker\">Latest drop · " + esc(latest) + "</p><h2>What landed, in plain language</h2><p class=\"meta\">Core idea, why it matters for the Q-ledger path, and one limitation.</p>" + drop.map((p) => "<button class=\"row\" data-id=\"" + p.id + "\" type=\"button\" style=\"border:0;border-top:1px solid var(--border);padding-left:0;padding-right:0\"><div><h3>" + esc(p.title) + "</h3><p><b>Idea.</b> " + esc(idea(p)) + "</p><p class=\"meta\"><b>Why.</b> " + esc(p.whyItMatters || "") + "</p><p class=\"meta\"><b>Limit.</b> " + esc(p.limitation || "") + "</p></div></button>").join("") + "</section>"
-      : "";
-    main.innerHTML = papers.length
-      ? brief + "<p class=\"meta\" style=\"margin-top:1.25rem\">" + papers.length + " sources, ranked by " + sort + ". Harvest gauges are not C.</p><div class=\"list\">" + papers.map(paperRow).join("") + "</div>"
-      : "<p class=\"empty\">No papers in this slice. Foundational pillars stay in Catalog. Off-path harvest hits are hidden by default.</p>";
-  }
+  else main.innerHTML = renderPapers();
   main.querySelectorAll("[data-id], [data-open]").forEach((btn) => btn.addEventListener("click", () => openPaper(btn.dataset.id || btn.dataset.open)));
   main.querySelectorAll("[data-apply]").forEach((btn) => btn.addEventListener("click", () => applyCard(btn.dataset.apply)));
+  main.querySelectorAll("[data-propose]").forEach((btn) => btn.addEventListener("click", () => proposePaper(btn.dataset.propose)));
 }
 function setup() {
   paintFreeze();
   document.getElementById("tabs").innerHTML = TABS.map(([id, label]) => "<button data-tab=\"" + id + "\" class=\"" + (id === tab ? "active" : "") + "\">" + label + "</button>").join("");
   const counts = {};
   CAT.papers.forEach((p) => (p.fields || []).forEach((f) => counts[f] = (counts[f] || 0) + 1));
-  document.getElementById("tools").innerHTML = "<div class=\"tools\"><input id=\"q\" placeholder=\"Search title, claim, idea…\"/><select id=\"sort\"><option value=\"importance\">Sort: importance</option><option value=\"confidence\">Sort: confidence</option><option value=\"popularity\">Sort: popularity</option><option value=\"date\">Sort: date</option></select><label class=\"meta\" style=\"display:flex;align-items:center;gap:0.5rem;min-height:44px\"><input id=\"hideOff\" type=\"checkbox\" " + (hideOffPath ? "checked" : "") + "/> Hide off-path</label></div><div class=\"chips\" id=\"chips\"></div><p class=\"meta\" id=\"goal\" hidden></p>";
+  document.getElementById("tools").innerHTML = "<div class=\"range\" id=\"range\"></div><div class=\"tools\"><input id=\"q\" placeholder=\"Search title, claim, idea…\"/><select id=\"sort\"><option value=\"importance\">Sort: importance</option><option value=\"confidence\">Sort: confidence</option><option value=\"popularity\">Sort: popularity</option><option value=\"date\">Sort: date</option></select><label class=\"meta\" style=\"display:flex;align-items:center;gap:0.5rem;min-height:44px\"><input id=\"hideOff\" type=\"checkbox\" " + (hideOffPath ? "checked" : "") + "/> Hide off-path</label></div><div class=\"chips\" id=\"chips\"></div><p class=\"meta\" id=\"goal\" hidden></p>";
+  document.getElementById("range").innerHTML = RANGES.map(([id, label]) => "<button class=\"chip " + (range === id ? "active" : "") + "\" data-range=\"" + id + "\">" + label + "</button>").join("");
   document.getElementById("chips").innerHTML = "<button class=\"chip " + (field === "all" ? "active" : "") + "\" data-field=\"all\">All fields<span>" + CAT.papers.length + "</span></button>" + CAT.fields.map((f) => "<button class=\"chip " + (field === f.id ? "active" : "") + "\" data-field=\"" + f.id + "\">" + f.short + "<span>" + (counts[f.id] || 0) + "</span></button>").join("");
   document.getElementById("tabs").onclick = (e) => {
     const b = e.target.closest("[data-tab]");
     if (!b) return;
     tab = b.dataset.tab;
+    if (location.hash !== "#" + tab) history.replaceState(null, "", "#" + tab);
     window.scrollTo(0, 0);
     [...document.getElementById("tabs").children].forEach((x) => x.classList.toggle("active", x === b));
     render();
@@ -317,9 +416,24 @@ function setup() {
     else g.hidden = true;
     render();
   };
+  document.getElementById("range").onclick = (e) => {
+    const b = e.target.closest("[data-range]");
+    if (!b) return;
+    range = b.dataset.range;
+    [...document.getElementById("range").children].forEach((x) => x.classList.toggle("active", x === b));
+    render();
+  };
   document.getElementById("q").oninput = (e) => { q = e.target.value; render(); };
   document.getElementById("sort").onchange = (e) => { sort = e.target.value; render(); };
   document.getElementById("hideOff").onchange = (e) => { hideOffPath = e.target.checked; render(); };
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") document.querySelectorAll(".overlay").forEach((n) => n.remove());
+  });
+  const start = location.hash.replace("#", "");
+  if (TABS.some(([id]) => id === start)) {
+    tab = start;
+    [...document.getElementById("tabs").children].forEach((x) => x.classList.toggle("active", x.dataset.tab === tab));
+  }
   render();
 }
 Promise.all([

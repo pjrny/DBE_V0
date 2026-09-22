@@ -50,4 +50,16 @@ python cli/research_observatory.py --tab versions
 cd research && python -m http.server 8000   # lab.html tab
 ```
 
-`lab.html` loads catalog + claims + versions + reviews + ledger. APPLY on a review card writes a **local working freeze** (localStorage). INCLUDE patches; NEW PILLAR queues. Reset freeze restores published DBE-0.1.1 / DBES-0.1.1.
+`lab.html` loads catalog + claims + versions + reviews + ledger. Five tabs only:
+
+- **Mission** — pillar strength / week delta, blockers, bridge papers, Q=1000 milestone bar.
+- **Papers** — week / month / year / all / foundational as chips, not tabs.
+- **Daily** — KEEP/HOLD/CUT/ADD cards. Auto-Gate A1–A8.
+- **Engine** — current DBE / DBE-S freeze, claims, version log.
+- **Q ledger** — terms, feeds, ingest runs.
+
+Metrics above the tabs: working freeze, publish readiness (min KEEP C), this-week count, waiting auto-add, open blockers.
+
+APPLY on a review card writes a **local working freeze** (localStorage). INCLUDE patches; NEW PILLAR queues. Reset freeze restores published DBE-0.2.2 / DBES-0.2.0.
+
+Pillar bars mix engine status + bound-claim C + this week's INCLUDE vs WEAKEN. They are not C. A paper that binds two claims is a bridge; coupling starts at C1.

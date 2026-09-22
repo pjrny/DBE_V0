@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.4.2] - 2026-09-22
+### Changed
+- Observatory collapsed to five tabs (Mission, Papers, Daily, Engine, Q ledger). Week/month/year are chips, not tabs.
+- Command strip above tabs: freeze, publish readiness, min KEEP C, this-week count, auto-add queue, blockers.
+- Mission tab draws pillar strength, week delta, dependencies, blockers, and bridge papers that couple two or more claims.
+- Daily cards speak KEEP / HOLD / CUT / ADD against the same catalog. No rebuild.
+
 ## [0.4.1] - 2026-09-20
 ### Added
 - Follow-on harvest: DIII-D error-field ramp-up, kobra Vlasov, NIF Q_sci=4.13, ASPT on processors, MAST-U PCS integration notes.
