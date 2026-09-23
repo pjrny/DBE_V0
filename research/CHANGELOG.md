@@ -31,3 +31,5 @@ Never rewrite history. A reversed CUT is a new MAJOR line.
 2026-09-22  QUEUE  INCLUDE  roy-mzmcapp-2026  → E-MZM distinguisher (WATCH; A1 fail, no auto-bump)
 2026-09-22  REJECT  muniz-fracton-schwinger-2026  → E-FR reading list (CUT as hardware)
 2026-09-22  library  Observatory tab rebuilt: idea/why/limit on every card, freeze workshop, year lookback, current DBE/DBE-S papers
+
+2026-09-23  library  NO BUMP  sixth daily run. Gay–Jeronimo qLTCs queued (A5 bare arXiv). Staircase, HI categories, Schwinger assistance, Majorana films queued. Fracton / Floquet-clock / holography rejected. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.

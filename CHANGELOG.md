@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.4.3] - 2026-09-23
+### Added
+- Daily observatory run (lookback 7 days). No paper version bump. Gay–Jeronimo qLTCs, the plasma-staircase criterion, Haagerup–Izumi categories, and dynamically assisted Schwinger pair production are queued. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
+
+### Changed
+- Command-strip date stamp moved to 2026-09-23 so this-week counts the new harvest.
+
 ## [0.4.2] - 2026-09-22
 ### Changed
 - Observatory collapsed to five tabs (Mission, Papers, Daily, Engine, Q ledger). Week/month/year are chips, not tabs.

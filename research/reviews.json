@@ -1,6 +1,743 @@
 {
-  "asOf": "2026-09-22",
+  "asOf": "2026-09-23",
   "cards": [
+    {
+      "id": "2026-09-23/gay-qltc-2026",
+      "paperId": "gay-qltc-2026",
+      "date": "2026-09-23",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "CSS qLTC parameters are dimensionless and bounded. Platform is the qLDPC error layer, same class as prior bibliography. Falsifier: tester weight or soundness growing with block length. A5 fail for auto-merge: venue is arXiv, not a journal or replicated hardware result.",
+      "score": "E-QEC C4 stays; not applied",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Good qLDPC already exist (Panteleev\u2013Kalachev, Dinur et al.). Local testability is extra and is not a below-threshold memory experiment on a device.",
+      "ledger": "none",
+      "plain": {
+        "core": "Explicit quantum LDPC codes that are locally testable with constant rate, distance, and soundness.",
+        "why": "Bibliography for the E-QEC error layer. A constant-size test is what a scalable qLDPC check wants.",
+        "limit": "Bare arXiv. No logical-error curve. C stays C4."
+      },
+      "claimDelta": "none",
+      "math": "Explicit CSS qLDPC family: constant rate, constant relative distance, constant-weight testers, constant soundness.",
+      "whyQueued": "A5 miss. Bare arXiv cannot auto-INCLUDE and cannot raise C. Harvest is high (91/82) but Auto-Gate does not pass. Weekly freeze may PATCH against a named qLTC baseline. C4 unchanged."
+    },
+    {
+      "id": "2026-09-23/bafna-qltc-2026",
+      "paperId": "bafna-qltc-2026",
+      "date": "2026-09-23",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G5: no this-quarter falsifier of the conjecture inside the paper.",
+      "score": "C unchanged",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "The construction is conditional on a product-expansion conjecture. Gay\u2013Jeronimo claim an unconditional explicit family the same week.",
+      "ledger": "none",
+      "plain": {
+        "core": "A qLTC with constant rate and soundness, but only if a Reed\u2013Solomon product-expansion conjecture holds.",
+        "why": "Same E-QEC shelf. Do not count it as a second pass.",
+        "limit": "Code not known to exist until the conjecture falls."
+      },
+      "claimDelta": "none",
+      "whyQueued": "G5 fail. Conditional sibling of gay-qltc-2026. A4/A5 do not fire. No version.",
+      "math": "Dinur\u2013Lin\u2013Vidick high-dimensional expansion on non-Abelian cubical complexes plus Reed\u2013Solomon local codes."
+    },
+    {
+      "id": "2026-09-23/hur-surface-decoder-2026",
+      "paperId": "hur-surface-decoder-2026",
+      "date": "2026-09-23",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G3 pass: cost scaling is quadratic, not unbounded. A5 bare arXiv cannot raise C.",
+      "score": "C unchanged",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Matching a Transformer decoder on memory experiments does not beat a correlated-matching or BP-OSD baseline on logical error.",
+      "ledger": "none",
+      "plain": {
+        "core": "Mamba surface-code decoder matches a Transformer baseline and drops inference cost from quartic to quadratic in distance.",
+        "why": "Decoder cost sits next to E-QEC. It is not a threshold result.",
+        "limit": "Thesis. The other half is quantum machine learning and does not bind."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Harvest confidence 68 < 80. A4 miss: no published ledger or threshold bound tightens. C stays C4.",
+      "math": "Inference cost versus code distance, compared with a reproduced Transformer decoder."
+    },
+    {
+      "id": "2026-09-23/gannon-hi-2026",
+      "paperId": "gannon-hi-2026",
+      "date": "2026-09-23",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Evans\u2013Gannon modular data is a smashed sum with a metric group of order N^2+4.",
+      "score": "C unchanged",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "S3 universality needs a fusion measurement on a quantum double, not an abstract HI category (Freedman\u2013Larsen\u2013Wang / Levaillant). Braiding alone is not universal.",
+      "ledger": "none",
+      "plain": {
+        "core": "Haagerup\u2013Izumi categories exist at every odd order, and the Evans\u2013Gannon modular-data conjecture is proved.",
+        "why": "Cyclic fusion is why E-S3 keeps fusion in the gate set. This is more of that math, not a new pillar.",
+        "limit": "Platform is category theory, not Quantinuum H2. cyclic-fusion-family stays expired."
+      },
+      "claimDelta": "none",
+      "whyQueued": "G4 fail. A2 miss. Do not reopen cyclic-fusion-family. C3 unchanged.",
+      "math": "Barnes double-sine construction of HI(Z/N) for odd N; equivariantization to near-group ((Z/N)^2, N^2)."
+    },
+    {
+      "id": "2026-09-23/edie-neargroup-2026",
+      "paperId": "edie-neargroup-2026",
+      "date": "2026-09-23",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "",
+      "score": "C unchanged",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Same disputer as Gannon\u2013Schopieray\u2013Yadav. A planar-algebra embedding is not an anyon braid on hardware.",
+      "ledger": "none",
+      "plain": {
+        "core": "Graph-planar-algebra solutions for cyclic near-group categories at odd orders up to 13.",
+        "why": "Noisy cluster with gannon-hi-2026. One representative is enough.",
+        "limit": "Stops at order 13. Not the S3 gate set."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Noisy cluster. Park behind gannon-hi-2026. G4 fail.",
+      "math": "Q-system presentation; rational equations solved for odd cyclic groups through order 13."
+    },
+    {
+      "id": "2026-09-23/ji-fqh-parent-2026",
+      "paperId": "ji-fqh-parent-2026",
+      "date": "2026-09-23",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "",
+      "score": "C unchanged",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Moore\u2013Read is Ising anyons. Ising braiding is not universal, and it is not the S3 quantum double (Nayak et al.; Lo et al. Nature 2026).",
+      "ledger": "none",
+      "plain": {
+        "core": "Lattice parent Hamiltonians with Laughlin zero modes, and a Moore\u2013Read triplet from two-body repulsion at filling 1.",
+        "why": "Non-Abelian lattice states are adjacent reading. They do not replace S3 braid-plus-fusion.",
+        "limit": "No prepared logical state. \u201cExperimental reach\u201d is not a shot in this paper."
+      },
+      "claimDelta": "none",
+      "whyQueued": "G4 fail: wrong anyon theory and no processor. C3 unchanged.",
+      "math": "Hermitian parent Hamiltonians for LLL model states sampled on lattice sites; projected-LLL interaction scan."
+    },
+    {
+      "id": "2026-09-23/homeier-mqc-2026",
+      "paperId": "homeier-mqc-2026",
+      "date": "2026-09-23",
+      "bind": [
+        "E-S3",
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "",
+      "score": "C unchanged",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Z2 toric-code anyons are Abelian. Multiple-quantum coherences can be mimicked by local order if the correspondence is not sector-resolved. Not S3 fusion space.",
+      "ledger": "none",
+      "plain": {
+        "core": "Quantum Monte Carlo on the extended toric code: multiple-quantum coherences track Abelian anyon condensation.",
+        "why": "Bridge E-S3/E-QEC. Coupling starts at C1 and amplifies neither claim.",
+        "limit": "Simulation, not hardware. Not a universal gate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: two claim IDs. Bridge, C1 coupling only.",
+      "math": "MQC sector weights versus anyon condensation on the extended toric code."
+    },
+    {
+      "id": "2026-09-23/milovanov-staircase-2026",
+      "paperId": "milovanov-staircase-2026",
+      "date": "2026-09-23",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Falsifier this quarter: staircases that persist in a published HW or gyrokinetic run at \u03b4 < \u03c0.",
+      "score": "C unchanged",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A single Hasegawa\u2013Wakatani critical value is not a DIII-D or TCV disruption metric. M2 still requires a beat of the lab baseline controller.",
+      "ledger": "none \u2014 \u03b4 is dimensionless. Not P_aux or Q.",
+      "plain": {
+        "core": "E\u00d7B staircases in the Hasegawa\u2013Wakatani model are stable only for nonadiabaticity \u03b4 > \u03c0.",
+        "why": "Confinement structure a controller must live with. Not an actuator interface.",
+        "limit": "Importance 86 is still below an ADD: confidence 70 and G4 fails. No coils, no latency, no shot."
+      },
+      "claimDelta": "none",
+      "whyQueued": "G4 fail. High harvest importance must not auto-ADD. A2 miss.",
+      "math": "Schr\u00f6dinger\u2013Newton with renormalized interaction; exact \u03b4_c = \u03c0."
+    },
+    {
+      "id": "2026-09-23/jangir-schwinger-2026",
+      "paperId": "jangir-schwinger-2026",
+      "date": "2026-09-23",
+      "bind": [
+        "S-L2"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G6 pass only because pair yield is not smuggled in as Q_eng. G3 pass: yields stay finite as parameters vary.",
+      "score": "C unchanged",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "PRC 109, 044605: DT at 1 keV needs E ~ 10^15\u201310^16 V/m. A QED chirp scan does not move that nuclear bound. PRC 110 wants 10^27\u201310^29 W/cm^2.",
+      "ledger": "none extracted. Refused to copy pair-yield ratios into P_fusion, P_drive, or Q_eng.",
+      "plain": {
+        "core": "Chirping a weak assisting field increases Schwinger pair yield in a Dirac\u2013Heisenberg\u2013Wigner simulation. Super-Gaussian order matters less.",
+        "why": "False friend for S-L2. Dynamically assisted pair production is not dynamically assisted DT tunneling.",
+        "limit": "No nuclear intensity or frequency is extracted. Must not be written into P_fusion or Q_eng."
+      },
+      "claimDelta": "none",
+      "whyQueued": "G4 fail: QED vacuum, not a nucleus. S-L2 stays HOLD at C1. No DBES bump.",
+      "math": "(1+1)D Dirac\u2013Heisenberg\u2013Wigner; two-color dynamically assisted fields; chirp parameter and spatial scale."
+    },
+    {
+      "id": "2026-09-23/ding-mzm-film-2026",
+      "paperId": "ding-mzm-film-2026",
+      "date": "2026-09-23",
+      "bind": [
+        "E-MZM"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "",
+      "score": "C unchanged",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Trivial Andreev / YSR mimics; Nature caveat on Majorana 1; no public independent X and Z logicals on Majorana 2.",
+      "ledger": "none",
+      "plain": {
+        "core": "Thickness and exchange field turn Majorana end, hinge, edge, and corner modes into each other on a 2M-WS2-like film.",
+        "why": "E-MZM is WATCH, not load-bearing. This does not close M5.",
+        "limit": "Assumes the topological phase. No trivial-wire control."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 fail: E-MZM is WATCH, not KEEP/HOLD. G5 fail: no this-year X+Z logical protocol.",
+      "math": "C2h film plus proximity exchange; penetration depth selects corner versus hinge modes."
+    },
+    {
+      "id": "2026-09-23/ha-floquet-clifford-2026",
+      "paperId": "ha-floquet-clifford-2026",
+      "date": "2026-09-23",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "",
+      "score": "C unchanged",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Spacetime-random monitored circuits (Li\u2013Fisher\u2013Skinner, Gullans\u2013Huse) tie entanglement to purification. This Floquet repeat breaks that tie in simulation only.",
+      "ledger": "none",
+      "plain": {
+        "core": "Repeated Clifford-and-measurement patterns can show area-law entanglement while the state stays extensively mixed.",
+        "why": "A warning for measurement-based QEC, not a better code. Floquet here is a schedule, not a clock.",
+        "limit": "E-TC stays CUT. No threshold number."
+      },
+      "claimDelta": "none",
+      "whyQueued": "G4 fail: Clifford simulator is not the surface-code or qLDPC device. A4 miss.",
+      "math": "Fixed-layer Floquet monitored Clifford circuits; entanglement versus purification in 1D and 2D."
+    },
+    {
+      "id": "2026-09-23/kendall-mwbus-2026",
+      "paperId": "kendall-mwbus-2026",
+      "date": "2026-09-23",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "",
+      "score": "C unchanged",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Cavity thermal photons and finite linewidth bound the gate. A proposal is not a code below threshold.",
+      "ledger": "none",
+      "plain": {
+        "core": "A microwave cavity bus for neutral atoms, with fidelities under thermal photons, cavity loss, and Rydberg decay.",
+        "why": "Bus B connectivity sketch. Not the E-QEC error layer and not a tokamak attach.",
+        "limit": "No shot. Thermal occupancy is still an error."
+      },
+      "claimDelta": "none",
+      "whyQueued": "G4 fail. Simulation of a proposed gate. No new pillar without an interface contract.",
+      "math": "Tavis\u2013Cummings dispersive iSWAP, cavity-driven CZ, bichromatic Raman; closed-form fidelity bounds."
+    },
+    {
+      "id": "2026-09-23/andreoni-lgt-2026",
+      "paperId": "andreoni-lgt-2026",
+      "date": "2026-09-23",
+      "bind": [
+        "E-FR"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "No 3D fracton processor exists. Haah and X-cube remain theory (Bravyi\u2013Haah; Pretko).",
+      "ledger": "none",
+      "plain": {
+        "core": "Slow dynamics in 1D U(1) lattice gauge theories map to constrained fermions and are pitched as fractonic hydrodynamics for Rydberg arrays.",
+        "why": "E-FR is CUT as hardware memory. Reading only.",
+        "limit": "Does not store a control bit. Cannot INCLUDE without a CUT-reversal packet."
+      },
+      "claimDelta": "none",
+      "whyQueued": "CUT claim. Denylist-adjacent. No auto-INCLUDE.",
+      "math": "U(1) LGT with topological \u03b8 angle mapped to non-local kinetically constrained fermions plus a linear Stark potential."
+    },
+    {
+      "id": "2026-09-23/sadki-fracton-line-2026",
+      "paperId": "sadki-fracton-line-2026",
+      "date": "2026-09-23",
+      "bind": [
+        "E-FR"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Classical one-dimensional dipole conservation is not a quantum memory. Same kill as E-FR: D stays D1.",
+      "ledger": "none",
+      "plain": {
+        "core": "Classical fractons on a line have an extensive free energy only for sufficiently non-local interaction kernels.",
+        "why": "Theory shelf. Not Bus B memory.",
+        "limit": "1D classical stat-mech. E-FR stays CUT."
+      },
+      "claimDelta": "none",
+      "whyQueued": "CUT as hardware.",
+      "math": "Gibbs partition function for Machian fractons; graph-Laplacian bounds for exponential kernels."
+    },
+    {
+      "id": "2026-09-23/taravati-floquet-quad-2026",
+      "paperId": "taravati-floquet-quad-2026",
+      "date": "2026-09-23",
+      "bind": [
+        "E-TC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A microwave circulator has no prethermal lifetime compared with a plasma control horizon. Clock stays classical plus the QEC cycle.",
+      "ledger": "none",
+      "plain": {
+        "core": "A driven microwave metasurface uses a temporal quadrupole and a period-doubled corner mode as a magnet-free circulator.",
+        "why": "Floquet experiment, wrong job. E-TC is CUT as the system clock.",
+        "limit": "Does not time a shot. Not promoted back into the engine."
+      },
+      "claimDelta": "none",
+      "whyQueued": "CUT as clock. G4 and G5 fail for the metronome claim.",
+      "math": "Temporal quadrupole; corner modes at quasienergy 0 and \u03c0/T; synthetic gauge from relative modulation phase."
+    },
+    {
+      "id": "2026-09-23/gao-kicked-rotor-2026",
+      "paperId": "gao-kicked-rotor-2026",
+      "date": "2026-09-23",
+      "bind": [
+        "E-TC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Cavity-feedback Floquet phases are not a timebase. Prethermal lifetime versus control horizon is the kill.",
+      "ledger": "none",
+      "plain": {
+        "core": "A quantum kicked rotor whose kick is set by its own cavity field shows competing Floquet phases.",
+        "why": "E-TC reading list only.",
+        "limit": "Not infrastructure."
+      },
+      "claimDelta": "none",
+      "whyQueued": "CUT as clock.",
+      "math": "Self-consistent kick from cavity-mediated feedback; superradiant transition; symmetric versus antisymmetric instability."
+    },
+    {
+      "id": "2026-09-23/komargodski-anyon-crystal-2026",
+      "paperId": "komargodski-anyon-crystal-2026",
+      "date": "2026-09-23",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "An anyon crystal with screened statistics is an ordinary crystal. It has no fusion space to compute in.",
+      "ledger": "none",
+      "plain": {
+        "core": "A near-bosonic anyon gas crystallizes for statistical parameter k above a few, and is not a superfluid there.",
+        "why": "Does not bind E-S3. Off the gate set.",
+        "limit": "Abelian thermodynamics. k_c ~ 2\u20135 is not a logical-gate fidelity."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Off-path.",
+      "math": "Near-bosonic limit at fixed N/k; crystal with N/k sites; transition near k_c \u2243 2\u20135."
+    },
+    {
+      "id": "2026-09-23/wang-grothendieck-2026",
+      "paperId": "wang-grothendieck-2026",
+      "date": "2026-09-23",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Rank-6 fusion rings are not S3 and not the Haagerup\u2013Izumi family already queued under E-S3.",
+      "ledger": "none",
+      "plain": {
+        "core": "Twelve candidate Grothendieck rings at rank 6; eight realizable, four obstructed.",
+        "why": "Off-path classification. No computational primitive.",
+        "limit": "Does not change a KEEP claim."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs.",
+      "math": "Classification of strictly weakly integral fusion categories of rank 6."
+    },
+    {
+      "id": "2026-09-23/ebeling-electrolyte-2026",
+      "paperId": "ebeling-electrolyte-2026",
+      "date": "2026-09-23",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "S-L3 requires a Vlasov or kinetic solver with hole-burning. A qualitative Kelbg potential is not that solver (kobra / KOBRA remain the baseline).",
+      "ledger": "none",
+      "plain": {
+        "core": "Exponential quantum potentials in the Kelbg line, with a qualitative remark on fusion plasmas.",
+        "why": "Considered for S-L3 and refused.",
+        "limit": "No distribution function, no reactivity ratio, no code baseline."
+      },
+      "claimDelta": "none",
+      "whyQueued": "G1 and G4 fail. Off-path.",
+      "math": "Kelbg potential for exponential interactions; screening and thermodynamic stability discussed qualitatively."
+    },
+    {
+      "id": "2026-09-23/kim-gaiotto-2026",
+      "paperId": "kim-gaiotto-2026",
+      "date": "2026-09-23",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A 4d N=2 trace formula is not an anyon processor and not a holographic reactor encoding.",
+      "ledger": "none",
+      "plain": {
+        "core": "Line defects map into Wilson loops of the 3d TQFT from the Gaiotto\u2013Kim trace formula, with an algorithm for S and T.",
+        "why": "Off-path high-energy theory.",
+        "limit": "No device falsifier this year."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Not E-HOL either \u2014 do not inflate the denylist with every TQFT.",
+      "math": "Ellipsoid partition function with half-BPS line defects; modular S and T from localization."
+    },
+    {
+      "id": "2026-09-23/kasner-holo-2026",
+      "paperId": "kasner-holo-2026",
+      "date": "2026-09-23",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Duality is not a tokamak I/O map. E-HOL is CUT. Reversal needs two independent C\u22654 sources.",
+      "ledger": "none",
+      "plain": {
+        "core": "Holographic gravity calculation. Not a reactor or processor subsystem.",
+        "why": "Denylist. Readable. Not INCLUDE.",
+        "limit": "T=0 as an engine part."
+      },
+      "claimDelta": "none",
+      "whyQueued": "E-HOL denylist. A6 would void any INCLUDE.",
+      "math": "Bulk gravity. No plasma actuator map."
+    },
+    {
+      "id": "2026-09-23/ads-branes-2026",
+      "paperId": "ads-branes-2026",
+      "date": "2026-09-23",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Duality is not a tokamak I/O map. E-HOL is CUT. Reversal needs two independent C\u22654 sources.",
+      "ledger": "none",
+      "plain": {
+        "core": "Holographic gravity calculation. Not a reactor or processor subsystem.",
+        "why": "Denylist. Readable. Not INCLUDE.",
+        "limit": "T=0 as an engine part."
+      },
+      "claimDelta": "none",
+      "whyQueued": "E-HOL denylist. A6 would void any INCLUDE.",
+      "math": "Bulk gravity. No plasma actuator map."
+    },
+    {
+      "id": "2026-09-23/sasaki-holo-2026",
+      "paperId": "sasaki-holo-2026",
+      "date": "2026-09-23",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Duality is not a tokamak I/O map. E-HOL is CUT. Reversal needs two independent C\u22654 sources.",
+      "ledger": "none",
+      "plain": {
+        "core": "Holographic gravity calculation. Not a reactor or processor subsystem.",
+        "why": "Denylist. Readable. Not INCLUDE.",
+        "limit": "T=0 as an engine part."
+      },
+      "claimDelta": "none",
+      "whyQueued": "E-HOL denylist. A6 would void any INCLUDE.",
+      "math": "Bulk gravity. No plasma actuator map."
+    },
+    {
+      "id": "2026-09-23/symmergent-bh-2026",
+      "paperId": "symmergent-bh-2026",
+      "date": "2026-09-23",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Duality is not a tokamak I/O map. E-HOL is CUT. Reversal needs two independent C\u22654 sources.",
+      "ledger": "none",
+      "plain": {
+        "core": "Holographic gravity calculation. Not a reactor or processor subsystem.",
+        "why": "Denylist. Readable. Not INCLUDE.",
+        "limit": "T=0 as an engine part."
+      },
+      "claimDelta": "none",
+      "whyQueued": "E-HOL denylist. A6 would void any INCLUDE.",
+      "math": "Bulk gravity. No plasma actuator map."
+    },
     {
       "id": "2026-09-22/muniz-fracton-schwinger-2026",
       "paperId": "muniz-fracton-schwinger-2026",
