@@ -1,6 +1,1145 @@
 {
-  "asOf": "2026-09-23",
+  "asOf": "2026-09-24",
   "cards": [
+    {
+      "id": "2026-09-24/itb-rmp-2026",
+      "paperId": "itb-rmp-2026",
+      "date": "2026-09-24",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Hamiltonian map of RMP plus reversed shear. Units of coil current and safety factor are the usual tokamak ones. No unbounded gain. Platform is a map, not the DIII-D/TCV control bus, so G4 fails. Falsifier: an ITB discharge with RMP where the measured chaos threshold disagrees with the twin-island picture.",
+      "score": "E-RL C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Seo et al., Nature 2024, already avoid tearing with RL on a real device. A map that predicts an earlier loss of confinement is not that controller, and it does not beat a lab disruption baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "RMP coils that calm the edge can eat the safety margin of a reversed-shear core.",
+        "why": "Bus A has to live with those coils. This paper is the trade-off, not the attach.",
+        "limit": "No shot and no control loop. M2 stays open."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-RL KEEP) but A2 miss (G4) and A5 miss (bare arXiv). A4 miss: C stays C4 and no ledger number tightens. Not ADD.",
+      "math": "Adjustable analytic current (core + ITB + pedestal) inside a Hamiltonian magnetic map. Assumes the ITB is a localized current and the edge is a chaotic layer.",
+      "autoGate": "miss A2, A4, A5"
+    },
+    {
+      "id": "2026-09-24/sol-surrogate-2026",
+      "paperId": "sol-surrogate-2026",
+      "date": "2026-09-24",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "SOLPS-ITER mesh, conditional flow matching. No energy is created. The surrogate is bounded by the training set. Platform is the tokamak boundary, same class as Bus A diagnostics, not an in-loop PCS. Falsifier this quarter: on a published gas-puff scan the model returns one averaged state across a known bifurcation.",
+      "score": "E-RL C4 stays; not applied",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Degrave et al., Nature 2022, and Rothstein et al., Nucl. Fusion 2026, are closed control results. A boundary surrogate that is not on the actuator bus does not inherit their C.",
+      "ledger": "none \u2014 detachment branch is not P_fusion or Q_eng",
+      "plain": {
+        "core": "A fast divertor model that keeps the mesh and admits a hot branch and a cold branch.",
+        "why": "Bus A needs a boundary state that is allowed to be two-valued.",
+        "limit": "Offline. No latency budget and no disruption metric."
+      },
+      "claimDelta": "none",
+      "whyQueued": "G1\u2013G6 pass and one KEEP claim, but A4 and A5 fail. Harvest confidence is 72, under 80, so it is not an ADD. Bare arXiv cannot patch the bibliography automatically.",
+      "math": "Convolutional conditional flow-matching surrogate on three fixed image tensors of the SOLPS mesh. Assumes the mesh layout is invertible and the bifurcation is in the training distribution.",
+      "autoGate": "miss A4, A5"
+    },
+    {
+      "id": "2026-09-24/jet-hfo-gae-2026",
+      "paperId": "jet-hfo-gae-2026",
+      "date": "2026-09-24",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Frequencies in kHz tied to density, q, and elongation. Ideal MHD, no free Q. Platform is JET, the right machine class, but the output is a mode identification, not a coil command. Falsifier: CSMISH shear-Alfv\u00e9n minimum misses the measured HFO band on a held-out DT pulse.",
+      "score": "E-RL C4 stays; not applied",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A diagnostic frequency is not tearing avoidance. Seo 2024 and Rothstein 2026 remain the control evidence. JET's own Q peak is still \u2248 0.67.",
+      "ledger": "none",
+      "plain": {
+        "core": "Long-lived edge oscillations on JET are Alfv\u00e9n eigenmodes, and a MHD code matches their pitch.",
+        "why": "Edge q and density are inputs a shape controller already reads.",
+        "limit": "Not a controller. Does not close M2."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A5 miss: one-team arXiv of a JET analysis, not a journal control result and not a replicated PCS. A4 miss: no numerical ledger bound moves.",
+      "math": "n=0 global Alfv\u00e9n eigenmode at the pedestal shear-Alfv\u00e9n continuum minimum. First-order analytic branch depends on density, safety factor, and elongation.",
+      "autoGate": "miss A4, A5"
+    },
+    {
+      "id": "2026-09-24/mzm-dot-coherence-2026",
+      "paperId": "mzm-dot-coherence-2026",
+      "date": "2026-09-24",
+      "bind": [
+        "E-MZM"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Lindblad-free coherent evolution plus static disorder on a quantum-dot Kitaev chain. No unbounded scaling: the paper's result is that length does not universally help. Platform matches the Majorana-qubit watch item, not the S3 processor. Falsifier this year: a six-dot device whose Ramsey time beats the four-dot device at fixed disorder, with gap scaling.",
+      "score": "E-MZM C1 T3 D3 A2 stays. Not weakened: kill line (independent X and Z with gap scaling) is untouched.",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Trivial Andreev and Yu\u2013Shiba\u2013Rusinov states mimic zero-bias peaks. Nature's caveat on Majorana 1 still stands. This simulation does not supply the missing X and Z logicals.",
+      "ledger": "none",
+      "plain": {
+        "core": "Making a quantum-dot Majorana chain longer does not, once disorder is on, automatically make the qubit live longer.",
+        "why": "M5 needs gap scaling of real logicals. Length is the wrong dial.",
+        "limit": "Theory on top of arXiv:2607.09511. E-MZM stays WATCH, not load-bearing."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-MZM is WATCH, not KEEP or HOLD. Cannot auto-INCLUDE and cannot raise C. Not a DISCONFIRM: the public X+Z test is still absent, which is the existing kill line, not a new failure of a C\u22652 claim.",
+      "math": "Rabi and Ramsey of double N-site quantum-dot Kitaev chains. Three dephasing channels. Sweet-spot disorder fixes the four-dot Ramsey floor.",
+      "autoGate": "miss A1, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-24/kstar-ec-breakdown-2026",
+      "paperId": "kstar-ec-breakdown-2026",
+      "date": "2026-09-24",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Monte Carlo with collisions and guiding-center motion. 1 MW and 2 mPa are stated with units. No claim that startup power multiplies Q. G4 fails: the platform is gas breakdown, not the flattop control bus. Falsifier: KSTAR or ITER-relevant EC startup outside the predicted pressure window.",
+      "score": "E-RL C4 stays; not applied",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Plant-attach evidence is shape and tearing control (Seo 2024, Rothstein 2026), not ionization avalanche. Counting 1 MW of EC as fusion drive would violate the ledger.",
+      "ledger": "1 MW EC and 2 mPa D2 prefill are startup figures. They are not P_drive, P_aux, or Q_eng. Not entered.",
+      "plain": {
+        "core": "Electron-cyclotron startup on KSTAR is an ionization avalanche carried by parallel Brownian motion, and the model thinks ITER can start near 2 mPa with 1 MW.",
+        "why": "It is the same class of machine. It is not the control loop Bus A has to close.",
+        "limit": "Startup \u2260 flattop. Do not put 1 MW into the Q ledger as drive."
+      },
+      "claimDelta": "none",
+      "whyQueued": "G4 fail. A5 bare arXiv. A6 would be violated if startup were written as a new gain mechanism. Queue only.",
+      "math": "3D Monte Carlo of EC wave-particle interaction, atomic collisions, and parallel Brownian motion. Validated on the KSTAR breakdown boundary.",
+      "autoGate": "miss A2, A4, A5, A6 if misread as gain"
+    },
+    {
+      "id": "2026-09-24/dw-qdim-2026",
+      "paperId": "dw-qdim-2026",
+      "date": "2026-09-24",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Quantum dimension and rank are dimensionless and the paper proves upper envelopes rather than an unbounded scale. Platform is Dijkgraaf\u2013Witten theory, the same class as the S3 quantum double, not H2 hardware. Falsifier this quarter: an almost-simple gauge group whose total quantum dimension beats log D = O((log R)^2).",
+      "score": "E-S3 C3 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Lo et al., Nature 2026, already ran S3 braid plus fusion on 54 qubits. A rank bound does not add a gate and does not replace fusion measurement. Braiding alone is still not universal (Freedman\u2013Larsen\u2013Wang).",
+      "ledger": "none",
+      "plain": {
+        "core": "Quantum-double theories cannot hide an arbitrarily large quantum dimension inside a short anyon list. Twists change the Abelian growth; almost-simple groups grow even slower.",
+        "why": "S3 is one of these theories. The bound is a classification constraint, not a new instruction.",
+        "limit": "No braid, no fusion circuit, no processor."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A5 miss. Bare arXiv cannot auto-INCLUDE. A4 miss: C3 does not become C4, and no published device number tightens.",
+      "math": "Total quantum dimension D versus rank cutoff R. Twisted elementary Abelian groups go from \u0398(R^{1/2}) to \u0398(R). Almost-simple groups: log D = O((log R)^2).",
+      "autoGate": "miss A4, A5"
+    },
+    {
+      "id": "2026-09-24/domain-wall-ics-2026",
+      "paperId": "domain-wall-ics-2026",
+      "date": "2026-09-24",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Entanglement-bootstrap identities for quantum dimension and ground-state degeneracy. No leaked energy ledger. G4 fails: Abelian wavefunctions, not the S3 trapped-ion platform. Falsifier: a fixed-point wavefunction whose information-convex-set count disagrees with the known ground-state degeneracy.",
+      "score": "E-S3 C3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Universal S3 needs fusion of non-Abelian C2 fluxes (Lo et al., Nature 2026). Abelian domain-wall transmutation does not supply that measurement.",
+      "ledger": "none",
+      "plain": {
+        "core": "A domain wall can reshuffle Abelian anyons and the ground-state count while looking empty to a local probe.",
+        "why": "Anyon type is the measurement E-S3 cannot drop. This is the Abelian cousin, not the gate.",
+        "limit": "Not non-Abelian and not hardware."
+      },
+      "claimDelta": "none",
+      "whyQueued": "G4 fail and A5 miss. Do not couple to E-QEC or to a plant. Coupling would start at C1.",
+      "math": "Information convex sets on annuli. \u03b3_LW^max = log(D/d_\u03b1). Entanglement asymmetry \u0394S_X^max = log GSD.",
+      "autoGate": "miss A2, A4, A5"
+    },
+    {
+      "id": "2026-09-24/fci-spin-anyon-2026",
+      "paperId": "fci-spin-anyon-2026",
+      "date": "2026-09-24",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Finite-size moir\u00e9 Hamiltonian at filling 1/3. No unbounded cross-section. G4 fails: fractional Chern insulator, not a quantum-double processor. Falsifier: a spin-resolved measurement that finds only polarized 1/3 quasiparticles next to the dot.",
+      "score": "E-S3 C3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Abelian Laughlin-type quasiparticles do not give the S3 fusion space. Lo et al. 2026 is the hardware primitive; this is a material calculation.",
+      "ledger": "none",
+      "plain": {
+        "core": "Anyons in a moir\u00e9 fractional Chern insulator next to a quantum dot come out spin-unpolarized.",
+        "why": "The word anyon is real, and the object is the wrong anyon for the engine.",
+        "limit": "No braid. Not S3. Not a device."
+      },
+      "claimDelta": "none",
+      "whyQueued": "G4 fail. A5 miss. Holding it on E-S3 is a reading link, not a strengthen.",
+      "math": "Spin-unpolarized incompressible state at 1/3 in twisted bilayer MoTe2 coupled to a parabolic quantum dot. Gap weakly dependent on dot\u2013bilayer separation.",
+      "autoGate": "miss A2, A4, A5"
+    },
+    {
+      "id": "2026-09-24/fusion-boundary-2026",
+      "paperId": "fusion-boundary-2026",
+      "date": "2026-09-24",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Local Hamiltonian from a unitary spherical fusion category. Frustration-free and reflection positive. No Q claim. Platform is a lattice model in the same theory class as string nets, not H2 and not AdS. Falsifier: the boundary operator algebra fails to contain the Temperley\u2013Lieb\u2013Jones generators claimed.",
+      "score": "E-S3 C3 stays. Not bound to E-HOL.",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "E-HOL stays CUT: Maldacena duality is not an I/O map. This paper's 'holography' is a fusion-category boundary. It also does not reproduce the H2 braid-plus-fusion gate set.",
+      "ledger": "none",
+      "plain": {
+        "core": "String-net-like models whose edges are fusion spin chains.",
+        "why": "Fusion categories are the math under E-S3. The edge is not a gate and not a reactor.",
+        "limit": "Do not file the title under holographic encoding. No device."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A5 miss. A6 would fail if the title were used to reopen E-HOL or to couple Bus B to a plant. One claim only, so not a bridge.",
+      "math": "2d frustration-free spin model labeled by a fusion category and an object. Boundary algebra contains the fusion spin chain.",
+      "autoGate": "miss A4, A5"
+    },
+    {
+      "id": "2026-09-24/2609.27791",
+      "paperId": "2609.27791",
+      "date": "2026-09-24",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "Zero claim IDs. Off-path. Catalog note only.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 hardware result define the anyon primitive we actually have; this paper does not test it. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "Classical stability of a topological non-Abelian string in an SU(N)\u00d7U(1) Higgs model. The non-Abelian object is a field-theory vortex, not an anyon on a quantum processor.",
+        "why": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+        "limit": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Off-path. Catalog note only.",
+      "math": "Not a DBE rate, Hamiltonian, or control map."
+    },
+    {
+      "id": "2026-09-24/2609.27644",
+      "paperId": "2609.27644",
+      "date": "2026-09-24",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "Zero claim IDs. Off-path. Catalog note only.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 hardware result define the anyon primitive we actually have; this paper does not test it. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "We study a family of coupled geometric evolution equations describing the deformation of a Riemannian metric and a non-abelian gauge field on closed manifolds, which generalizes the Ricci--Yang--Mills flow.",
+        "why": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+        "limit": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Off-path. Catalog note only.",
+      "math": "Not a DBE rate, Hamiltonian, or control map."
+    },
+    {
+      "id": "2026-09-24/2609.27171",
+      "paperId": "2609.27171",
+      "date": "2026-09-24",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "Zero claim IDs. Off-path. Catalog note only.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 hardware result define the anyon primitive we actually have; this paper does not test it. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "We show the smallest non-abelian quotients of spherical and affine Artin groups are isomorphic to the smallest non-abelian quotients of the corresponding Coxeter groups.",
+        "why": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+        "limit": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Off-path. Catalog note only.",
+      "math": "Not a DBE rate, Hamiltonian, or control map."
+    },
+    {
+      "id": "2026-09-24/2609.26896",
+      "paperId": "2609.26896",
+      "date": "2026-09-24",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "Zero claim IDs. Off-path. Catalog note only.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 hardware result define the anyon primitive we actually have; this paper does not test it. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "Let $\\bar{X}$ be a smooth projective connected complex curve, $D \\subset \\bar X$ be a finite set of reduced points, and $X=\\bar X\\setminus D$.",
+        "why": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+        "limit": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Off-path. Catalog note only.",
+      "math": "Not a DBE rate, Hamiltonian, or control map."
+    },
+    {
+      "id": "2026-09-24/2609.26883",
+      "paperId": "2609.26883",
+      "date": "2026-09-24",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "Zero claim IDs. Off-path. Catalog note only.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 hardware result define the anyon primitive we actually have; this paper does not test it. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "We develop a non-Abelian Hodge-theoretic refinement of asymptotic limits in type-$A$ class-$\\mathcal S$ theories, enriching the geometric description of the degenerating UV curve with gauge-theoretic data encoded by the associated Hitchin system.",
+        "why": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+        "limit": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Off-path. Catalog note only.",
+      "math": "Not a DBE rate, Hamiltonian, or control map."
+    },
+    {
+      "id": "2026-09-24/2609.25940",
+      "paperId": "2609.25940",
+      "date": "2026-09-24",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "Zero claim IDs. Off-path. Catalog note only.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 hardware result define the anyon primitive we actually have; this paper does not test it. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "We prove that irreducible spherical type Artin groups are profinitely rigid within the class of all spherical type Artin groups.",
+        "why": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+        "limit": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Off-path. Catalog note only.",
+      "math": "Not a DBE rate, Hamiltonian, or control map."
+    },
+    {
+      "id": "2026-09-24/2609.24655",
+      "paperId": "2609.24655",
+      "date": "2026-09-24",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "Zero claim IDs. Off-path. Catalog note only.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 hardware result define the anyon primitive we actually have; this paper does not test it. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "We consider relatively prime integer numbers $m$ and $n$ such that each group of order $mn$ has a normal subgroup of order $m$.",
+        "why": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+        "limit": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Off-path. Catalog note only.",
+      "math": "Not a DBE rate, Hamiltonian, or control map."
+    },
+    {
+      "id": "2026-09-24/2609.24640",
+      "paperId": "2609.24640",
+      "date": "2026-09-24",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "Zero claim IDs. Off-path. Catalog note only.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 hardware result define the anyon primitive we actually have; this paper does not test it. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "Finite simple skew braces with non-abelian additive group remain largely unexplored.",
+        "why": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+        "limit": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Off-path. Catalog note only.",
+      "math": "Not a DBE rate, Hamiltonian, or control map."
+    },
+    {
+      "id": "2026-09-24/2609.27643",
+      "paperId": "2609.27643",
+      "date": "2026-09-24",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "Zero claim IDs. Off-path. Catalog note only.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 hardware result define the anyon primitive we actually have; this paper does not test it. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "We establish the extension of Milnor's inequality, relating total curvature with the bridge index, to the $C^1$-closure of a knot class, without any restriction on the self-intersections of the limit curve.",
+        "why": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+        "limit": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Off-path. Catalog note only.",
+      "math": "Not a DBE rate, Hamiltonian, or control map."
+    },
+    {
+      "id": "2026-09-24/2609.24034",
+      "paperId": "2609.24034",
+      "date": "2026-09-24",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "Zero claim IDs. Off-path. Catalog note only.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 hardware result define the anyon primitive we actually have; this paper does not test it. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "In this paper, we investigate the relation between the category of 3-crossed modules and the category of Gray-type 4-groups.",
+        "why": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+        "limit": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Off-path. Catalog note only.",
+      "math": "Not a DBE rate, Hamiltonian, or control map."
+    },
+    {
+      "id": "2026-09-24/2609.22575",
+      "paperId": "2609.22575",
+      "date": "2026-09-24",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "Zero claim IDs. Off-path. Catalog note only.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 hardware result define the anyon primitive we actually have; this paper does not test it. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "We study elastic knots obtained by minimizing the bending energy of a unit loop together with a small multiple of ropelength.",
+        "why": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+        "limit": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Off-path. Catalog note only.",
+      "math": "Not a DBE rate, Hamiltonian, or control map."
+    },
+    {
+      "id": "2026-09-24/2609.27256",
+      "paperId": "2609.27256",
+      "date": "2026-09-24",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "Zero claim IDs. Off-path. Catalog note only.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 hardware result define the anyon primitive we actually have; this paper does not test it. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "We study causal discovery where each node is a random function.",
+        "why": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+        "limit": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Off-path. Catalog note only.",
+      "math": "Not a DBE rate, Hamiltonian, or control map."
+    },
+    {
+      "id": "2026-09-24/2609.22940",
+      "paperId": "2609.22940",
+      "date": "2026-09-24",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "Zero claim IDs. Off-path. Catalog note only.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 hardware result define the anyon primitive we actually have; this paper does not test it. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "Given a directed graph with positive edge weights and two vertices s,t, a next-to-shortest s-t path is a shortest simple s-t path among those whose length is strictly larger than the shortest-path distance.",
+        "why": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+        "limit": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Off-path. Catalog note only.",
+      "math": "Not a DBE rate, Hamiltonian, or control map."
+    },
+    {
+      "id": "2026-09-24/2609.28293",
+      "paperId": "2609.28293",
+      "date": "2026-09-24",
+      "bind": [
+        "E-TC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "E-TC denylist as clock. Cannot INCLUDE.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Prethermal lifetime versus the control horizon. A classical clock plus the QEC cycle already times the machine. Nature-class time-crystal experiments do not show a longer control horizon than that cycle.",
+      "ledger": "none",
+      "plain": {
+        "core": "Overlapping laser beams write a moir\u00e9-like Floquet mass pattern into a Dirac material, folding the bands. Deep sub-wavelength contrast still runs into the diffraction limit.",
+        "why": "Floquet or photonic time-crystal physics. Reading is allowed. It is not the system clock.",
+        "limit": "E-TC is CUT as a metronome. Prethermal lifetime is not a QEC-cycle replacement."
+      },
+      "claimDelta": "none",
+      "whyQueued": "E-TC denylist as clock. Cannot INCLUDE.",
+      "math": "Floquet or Maxwell band topology. No latency budget and no shot-duration comparison."
+    },
+    {
+      "id": "2026-09-24/2609.27698",
+      "paperId": "2609.27698",
+      "date": "2026-09-24",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "Zero claim IDs. Off-path. Catalog note only.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 hardware result define the anyon primitive we actually have; this paper does not test it. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "Power swings in large Data Centers (DTCs) running Artificial Intelligence (AI) workloads can excite poorly damped modes in power systems.",
+        "why": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+        "limit": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Off-path. Catalog note only.",
+      "math": "Not a DBE rate, Hamiltonian, or control map."
+    },
+    {
+      "id": "2026-09-24/2609.27586",
+      "paperId": "2609.27586",
+      "date": "2026-09-24",
+      "bind": [
+        "E-TC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "E-TC denylist as clock. Cannot INCLUDE.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Prethermal lifetime versus the control horizon. A classical clock plus the QEC cycle already times the machine. Nature-class time-crystal experiments do not show a longer control horizon than that cycle.",
+      "ledger": "none",
+      "plain": {
+        "core": "A photonic time crystal pumps Maxwell wave action by one or two temporal cells per cycle, set by a Chern number. Energy is not the conserved cargo, because the modulation exchanges energy with the field.",
+        "why": "Floquet or photonic time-crystal physics. Reading is allowed. It is not the system clock.",
+        "limit": "E-TC is CUT as a metronome. Prethermal lifetime is not a QEC-cycle replacement."
+      },
+      "claimDelta": "none",
+      "whyQueued": "E-TC denylist as clock. Cannot INCLUDE.",
+      "math": "Floquet or Maxwell band topology. No latency budget and no shot-duration comparison."
+    },
+    {
+      "id": "2026-09-24/2609.27151",
+      "paperId": "2609.27151",
+      "date": "2026-09-24",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "Zero claim IDs. Off-path. Catalog note only.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 hardware result define the anyon primitive we actually have; this paper does not test it. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "The principal {\\it commutation formula} underlying the paper by Deift [24], is of the type \\[ - z (AB - z I)^{-1} + A (BA - z I)^{-1} B = I, \\quad z \\in [\u03c1(AB) \\cap \u03c1(BA)]\\backslash\\{0\\}, \\] where, temporarily, and for simplicity only, $A,B$ represent bounded operators in a Banac.",
+        "why": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+        "limit": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Off-path. Catalog note only.",
+      "math": "Not a DBE rate, Hamiltonian, or control map."
+    },
+    {
+      "id": "2026-09-24/2609.27109",
+      "paperId": "2609.27109",
+      "date": "2026-09-24",
+      "bind": [
+        "E-TC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "E-TC denylist as clock. Cannot INCLUDE.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Prethermal lifetime versus the control horizon. A classical clock plus the QEC cycle already times the machine. Nature-class time-crystal experiments do not show a longer control horizon than that cycle.",
+      "ledger": "none",
+      "plain": {
+        "core": "A Floquet\u2013Bloch theory for dispersive, time-varying metasurfaces keeps causality and is checked against full-wave simulations, including a photonic time-crystal example.",
+        "why": "Floquet or photonic time-crystal physics. Reading is allowed. It is not the system clock.",
+        "limit": "E-TC is CUT as a metronome. Prethermal lifetime is not a QEC-cycle replacement."
+      },
+      "claimDelta": "none",
+      "whyQueued": "E-TC denylist as clock. Cannot INCLUDE.",
+      "math": "Floquet or Maxwell band topology. No latency budget and no shot-duration comparison."
+    },
+    {
+      "id": "2026-09-24/2609.26462",
+      "paperId": "2609.26462",
+      "date": "2026-09-24",
+      "bind": [
+        "E-TC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "E-TC denylist as clock. Cannot INCLUDE.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Prethermal lifetime versus the control horizon. A classical clock plus the QEC cycle already times the machine. Nature-class time-crystal experiments do not show a longer control horizon than that cycle.",
+      "ledger": "none",
+      "plain": {
+        "core": "Quantum Fisher information of a driven, dissipative system is extracted from a Keldysh path integral. One benchmark is a boundary time crystal, which is a sensing example, not a clock for a tokamak.",
+        "why": "Floquet or photonic time-crystal physics. Reading is allowed. It is not the system clock.",
+        "limit": "E-TC is CUT as a metronome. Prethermal lifetime is not a QEC-cycle replacement."
+      },
+      "claimDelta": "none",
+      "whyQueued": "E-TC denylist as clock. Cannot INCLUDE.",
+      "math": "Floquet or Maxwell band topology. No latency budget and no shot-duration comparison."
+    },
+    {
+      "id": "2026-09-24/2609.26385",
+      "paperId": "2609.26385",
+      "date": "2026-09-24",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "Zero claim IDs. Off-path. Catalog note only.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 hardware result define the anyon primitive we actually have; this paper does not test it. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "Floquet bundle theory serves as a natural extension of the eigenvalue theory for elliptic and periodic parabolic operators to the spectral theory of non-autonomous, non-periodic parabolic operators, which provides a useful spectral tool for studying threshold dynamics in more gen.",
+        "why": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+        "limit": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Off-path. Catalog note only.",
+      "math": "Not a DBE rate, Hamiltonian, or control map."
+    },
+    {
+      "id": "2026-09-24/2609.24070",
+      "paperId": "2609.24070",
+      "date": "2026-09-24",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "Zero claim IDs. Off-path. Catalog note only.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 hardware result define the anyon primitive we actually have; this paper does not test it. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "We prove quantitative stability and instability estimates for reversible periodic solutions of strictly Legendre-convex Lagrangian systems.",
+        "why": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+        "limit": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Off-path. Catalog note only.",
+      "math": "Not a DBE rate, Hamiltonian, or control map."
+    },
+    {
+      "id": "2026-09-24/2609.23513",
+      "paperId": "2609.23513",
+      "date": "2026-09-24",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "Zero claim IDs. Off-path. Catalog note only.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 hardware result define the anyon primitive we actually have; this paper does not test it. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "Equilibrium phase transitions are conventionally categorized into first-order and continuous phase transitions.",
+        "why": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+        "limit": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Off-path. Catalog note only.",
+      "math": "Not a DBE rate, Hamiltonian, or control map."
+    },
+    {
+      "id": "2026-09-24/2609.22438",
+      "paperId": "2609.22438",
+      "date": "2026-09-24",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "Zero claim IDs. Off-path. Catalog note only.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 hardware result define the anyon primitive we actually have; this paper does not test it. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "Non-thermal cosmological histories rest on the assumption that scalars displaced during inflation undergo coherent oscillations, dominate the energy density of the universe before Big Bang Nucleosynthesis, and decay perturbatively through gravitationally suppressed interactions.",
+        "why": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+        "limit": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Off-path. Catalog note only.",
+      "math": "Not a DBE rate, Hamiltonian, or control map."
+    },
+    {
+      "id": "2026-09-24/2609.28409",
+      "paperId": "2609.28409",
+      "date": "2026-09-24",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "Zero claim IDs. Off-path. Catalog note only.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 hardware result define the anyon primitive we actually have; this paper does not test it. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "Vector Symbolic Algebras project data structures into a hyperdimensional vector space through the application of their vector algebras to randomly generated atomic vector symbols and fractional power encodings of real-valued data.",
+        "why": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+        "limit": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Off-path. Catalog note only.",
+      "math": "Not a DBE rate, Hamiltonian, or control map."
+    },
+    {
+      "id": "2026-09-24/2609.26875",
+      "paperId": "2609.26875",
+      "date": "2026-09-24",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "E-HOL denylist. A6 would void any INCLUDE.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Duality is not a tokamak I/O map. E-HOL is CUT. Reversal needs two independent C\u22654 sources.",
+      "ledger": "none",
+      "plain": {
+        "core": "A two-step quantum-gravity construction is offered to violate the classical third law for charged black holes. It is not a plasma or a processor.",
+        "why": "Denylist. Readable. Not an INCLUDE. AdS/CFT does not sit on the plant or processor bus.",
+        "limit": "T=0 as an engine part. Reversal needs two independent C\u22654 sources."
+      },
+      "claimDelta": "none",
+      "whyQueued": "E-HOL denylist. A6 would void any INCLUDE.",
+      "math": "Bulk gravity or a holographic dual. No plasma actuator map and no Q ledger."
+    },
+    {
+      "id": "2026-09-24/2609.28468",
+      "paperId": "2609.28468",
+      "date": "2026-09-24",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "Zero claim IDs. Off-path. Catalog note only.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 hardware result define the anyon primitive we actually have; this paper does not test it. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "Fast-neutron scintillators must efficiently convert neutron energy into detectable light while enabling selectivity between neutrons and the \u03b3-ray background.",
+        "why": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+        "limit": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Off-path. Catalog note only.",
+      "math": "Not a DBE rate, Hamiltonian, or control map."
+    },
+    {
+      "id": "2026-09-24/2609.27295",
+      "paperId": "2609.27295",
+      "date": "2026-09-24",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "Zero claim IDs. Off-path. Catalog note only.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 hardware result define the anyon primitive we actually have; this paper does not test it. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "Every pivotal pointed fusion category Vec(G, \u03c9, \u03c0) gets a generators-and-relations picture. Pointed means the anyons are Abelian group elements, not the non-Abelian S3 fusion space.",
+        "why": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+        "limit": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Off-path. Catalog note only.",
+      "math": "Not a DBE rate, Hamiltonian, or control map."
+    },
+    {
+      "id": "2026-09-24/mzm-hubbard-2026",
+      "paperId": "mzm-hubbard-2026",
+      "date": "2026-09-24",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "Zero claim IDs. Off-path. Catalog note only.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 hardware result define the anyon primitive we actually have; this paper does not test it. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "A fermion-bag study of the two-dimensional Majorana\u2013Hubbard model: one relativistic Majorana fermion per site and the shortest interaction the lattice allows.",
+        "why": "The harvest word is Majorana. The particle is a lattice fermion, not a zero-mode qubit and not a braid.",
+        "limit": "Does not show X or Z logicals, gap scaling, or a device. E-MZM is not moved."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Off-path. Catalog note only.",
+      "math": "Not a DBE rate, Hamiltonian, or control map."
+    },
+    {
+      "id": "2026-09-24/gam-pair-2026",
+      "paperId": "gam-pair-2026",
+      "date": "2026-09-24",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "Zero claim IDs. Off-path. Catalog note only.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 hardware result define the anyon primitive we actually have; this paper does not test it. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "A dispersion relation for geodesic acoustic modes when ions and electrons have the same mass, aimed at electron\u2013positron confinement experiments.",
+        "why": "GAMs do regulate turbulence in tokamaks. Pair plasma is not a DT or advanced-fuel plant path and is not a control policy.",
+        "limit": "No machine, no actuator, no rate. Do not file under E-RL as an attach result."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Off-path. Catalog note only.",
+      "math": "Not a DBE rate, Hamiltonian, or control map."
+    },
     {
       "id": "2026-09-23/gay-qltc-2026",
       "paperId": "gay-qltc-2026",

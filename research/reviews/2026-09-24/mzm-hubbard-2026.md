@@ -1,0 +1,11 @@
+PAPER: Fermion bag study of the two-dimensional Majorana-Hubbard model at finite hopping / mzm-hubbard-2026 / 2609.26881 / 2026-09-22
+BIND: REJECT
+GATES: G1=fail G2=pass G3=pass G4=fail G5=fail G6=pass
+MATH: Not a DBE rate, Hamiltonian, or control map.
+SCORE: C unchanged
+ACTION: REJECT
+ROUTE: QUEUE
+VERSION: none
+DISPUTER: Nayak et al. and the S3 Nature 2026 hardware result define the anyon primitive we actually have; this paper does not test it. NIF Q_sci ≈ 4.13 remains the gain baseline.
+LEDGER: none
+WHY QUEUED: Zero claim IDs. Off-path. Catalog note only.

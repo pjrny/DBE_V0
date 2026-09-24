@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T15:40:00Z",
+  "generatedAt": "2026-09-24T14:17:27.547069+00:00",
   "lookback": "1y+",
   "northStar": "Q=1000",
   "feeds": [
@@ -134,7 +134,8 @@
         "nonabelian-qldpc"
       ],
       "blockers": [
-        "Fusion measurement must stay in the gate set; braid-only S3 is not universal."
+        "Fusion measurement must stay in the gate set; braid-only S3 is not universal.",
+        "2026-09-24: DW rank bound and Abelian domain walls do not replace fusion measurement."
       ],
       "limitation": "Hardware anyons still analog-class, not a tokamak in-loop processor.",
       "milestones": [
@@ -170,7 +171,8 @@
         "floquet-majorana-codes"
       ],
       "blockers": [
-        "No independent X and Z logicals plus gap scaling (M5). Mimic-prone."
+        "No independent X and Z logicals plus gap scaling (M5). Mimic-prone.",
+        "2026-09-24: four- vs six-dot coherence simulation does not supply independent X and Z logicals."
       ],
       "limitation": "Cannot be load-bearing until a distinguisher exists.",
       "milestones": [
@@ -293,7 +295,8 @@
         "topo-dynamics"
       ],
       "blockers": [
-        "Must beat a lab baseline on one disruption-relevant metric (M2)."
+        "Must beat a lab baseline on one disruption-relevant metric (M2).",
+        "2026-09-24: ITB\u2013RMP map, SOL surrogate, JET Alfv\u00e9n ID, and KSTAR startup do not close M2."
       ],
       "limitation": "Plant attach is classical first; quantum is offline Bus B.",
       "milestones": [
@@ -6542,9 +6545,1485 @@
       ],
       "bindAction": "HOLD",
       "pillarEffect": "none"
+    },
+    {
+      "id": "2609.27791",
+      "arxiv": "2609.27791",
+      "title": "The topological non-Abelian string in the extended ${\\rm SU}(N) \\otimes {\\rm U}(1)$ gauge sector",
+      "authors": [
+        "Zhengyang Bian",
+        "Ning Chen",
+        "Mian Guo",
+        "Saurabh K. Shukla",
+        "Junyi Wei"
+      ],
+      "year": 2026,
+      "date": "2026-09-23",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.27791",
+      "fields": [
+        "anyons",
+        "topology"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "arxiv",
+        "harvest",
+        "2026-09-24",
+        "rejected"
+      ],
+      "importance": 58,
+      "confidence": 62,
+      "popularity": 66,
+      "coreIdea": "Classical stability of a topological non-Abelian string in an SU(N)\u00d7U(1) Higgs model. The non-Abelian object is a field-theory vortex, not an anyon on a quantum processor.",
+      "whyItMatters": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+      "limitation": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate.",
+      "source": "arXiv API",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.27644",
+      "arxiv": "2609.27644",
+      "title": "On the singularity formation of gauge fields coupled to Ricci flow",
+      "authors": [
+        "Andoni Royo Abrego"
+      ],
+      "year": 2026,
+      "date": "2026-09-23",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.27644",
+      "fields": [
+        "anyons",
+        "topology"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "arxiv",
+        "harvest",
+        "2026-09-24",
+        "rejected"
+      ],
+      "importance": 58,
+      "confidence": 62,
+      "popularity": 66,
+      "coreIdea": "We study a family of coupled geometric evolution equations describing the deformation of a Riemannian metric and a non-abelian gauge field on closed manifolds, which generalizes the Ricci--Yang--Mills flow.",
+      "whyItMatters": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+      "limitation": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate.",
+      "source": "arXiv API",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.27171",
+      "arxiv": "2609.27171",
+      "title": "Finite quotients of spherical Artin groups",
+      "authors": [
+        "Sam Hughes",
+        "Thomas Ng",
+        "Kaitlin Ragosta",
+        "Nancy Scherich",
+        "Yvon Verberne"
+      ],
+      "year": 2026,
+      "date": "2026-09-23",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.27171",
+      "fields": [
+        "anyons",
+        "topology"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "arxiv",
+        "harvest",
+        "2026-09-24",
+        "rejected"
+      ],
+      "importance": 58,
+      "confidence": 62,
+      "popularity": 66,
+      "coreIdea": "We show the smallest non-abelian quotients of spherical and affine Artin groups are isomorphic to the smallest non-abelian quotients of the corresponding Coxeter groups.",
+      "whyItMatters": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+      "limitation": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate.",
+      "source": "arXiv API",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "fci-spin-anyon-2026",
+      "title": "Spin Configurations of Anyonic excitations in Moir\u00e9 Fractional Chern Insulators",
+      "authors": [
+        "Vadym Apalkov",
+        "Tapash Chakraborty"
+      ],
+      "year": 2026,
+      "date": "2026-09-22",
+      "venue": "arXiv",
+      "arxiv": "2609.26991",
+      "url": "https://arxiv.org/abs/2609.26991",
+      "fields": [
+        "anyons"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 70,
+      "confidence": 64,
+      "popularity": 54,
+      "coreIdea": "A small twisted-MoTe2 fractional Chern insulator at one-third filling, sitting next to a quantum dot, prefers spin-unpolarized quasiparticles and quasiholes. The extra charge of a spin-flipped quasiparticle piles up on the dot.",
+      "whyItMatters": "These are anyonic excitations, which is why the harvest tagged them. They are Abelian fractional-Chern quasiparticles in a moir\u00e9 material, not the S3 braid-plus-fusion primitive on a processor.",
+      "limitation": "No braiding dataset. Spin texture is not a universal gate. Platform is a moir\u00e9 stack, so this cannot raise E-S3 above the H2 result (G4 miss).",
+      "source": "arXiv API",
+      "tags": [
+        "daily-run",
+        "2026-09-24",
+        "scored",
+        "FCI"
+      ],
+      "pillarId": "anyon-tqc",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.26896",
+      "arxiv": "2609.26896",
+      "title": "The non-abelian Hodge correspondence for extensions on quasi-projective curves",
+      "authors": [
+        "Quoc-Anh Tran"
+      ],
+      "year": 2026,
+      "date": "2026-09-22",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.26896",
+      "fields": [
+        "anyons",
+        "topology"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "arxiv",
+        "harvest",
+        "2026-09-24",
+        "rejected"
+      ],
+      "importance": 58,
+      "confidence": 62,
+      "popularity": 66,
+      "coreIdea": "Let $\\bar{X}$ be a smooth projective connected complex curve, $D \\subset \\bar X$ be a finite set of reduced points, and $X=\\bar X\\setminus D$.",
+      "whyItMatters": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+      "limitation": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate.",
+      "source": "arXiv API",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "domain-wall-ics-2026",
+      "title": "Transparent Domain Walls through Information Convex Sets",
+      "authors": [
+        "Jintae Kim",
+        "Amanda Gatto Lamas",
+        "Jacopo Gliozzi",
+        "Bowen Shi",
+        "Taylor L. Hughes",
+        "Jong Yeon Lee"
+      ],
+      "year": 2026,
+      "date": "2026-09-22",
+      "venue": "arXiv",
+      "arxiv": "2609.26892",
+      "url": "https://arxiv.org/abs/2609.26892",
+      "fields": [
+        "anyons",
+        "topology",
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 74,
+      "confidence": 66,
+      "popularity": 55,
+      "coreIdea": "In Abelian topological order, a transparent domain wall can be invisible to local probes and still change the ground-state degeneracy and transmute anyons that cross it. Information convex sets read that off the ground-state wavefunction, without being handed the defect category.",
+      "whyItMatters": "E-S3 is universal only because fusion tells you the anyon type. A wall that transmutes anyons is a cousin of that measurement. These walls are Abelian and extracted from a wavefunction, not braided on a device.",
+      "limitation": "Abelian fixed-point states only. No non-Abelian S3 fusion space and no hardware. Coupling this to a plant Q would be a new C1 claim.",
+      "source": "arXiv API",
+      "tags": [
+        "daily-run",
+        "2026-09-24",
+        "scored"
+      ],
+      "pillarId": "anyon-tqc",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.26883",
+      "arxiv": "2609.26883",
+      "title": "Asymptotic limits in class-$\\mathcal{S}$ theories and non-Abelian Hodge theory",
+      "authors": [
+        "Thomas W. Grimm",
+        "Amineh Mohseni"
+      ],
+      "year": 2026,
+      "date": "2026-09-22",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.26883",
+      "fields": [
+        "anyons",
+        "topology"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "arxiv",
+        "harvest",
+        "2026-09-24",
+        "rejected"
+      ],
+      "importance": 58,
+      "confidence": 62,
+      "popularity": 66,
+      "coreIdea": "We develop a non-Abelian Hodge-theoretic refinement of asymptotic limits in type-$A$ class-$\\mathcal S$ theories, enriching the geometric description of the degenerating UV curve with gauge-theoretic data encoded by the associated Hitchin system.",
+      "whyItMatters": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+      "limitation": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate.",
+      "source": "arXiv API",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.25940",
+      "arxiv": "2609.25940",
+      "title": "Smallest quotients and profinite rigidity of irreducible spherical type Artin groups",
+      "authors": [
+        "Federica Gavazzi",
+        "Igor Haladjian",
+        "Luis Paris"
+      ],
+      "year": 2026,
+      "date": "2026-09-22",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.25940",
+      "fields": [
+        "anyons",
+        "braid-knot"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "arxiv",
+        "harvest",
+        "2026-09-24",
+        "rejected"
+      ],
+      "importance": 58,
+      "confidence": 70,
+      "popularity": 66,
+      "coreIdea": "We prove that irreducible spherical type Artin groups are profinitely rigid within the class of all spherical type Artin groups.",
+      "whyItMatters": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+      "limitation": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate.",
+      "source": "arXiv API",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.24655",
+      "arxiv": "2609.24655",
+      "title": "Skew braces of size $p^2q^2$. The cyclic Sylow $q$-subgroup case",
+      "authors": [
+        "Teresa Crespo"
+      ],
+      "year": 2026,
+      "date": "2026-09-21",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.24655",
+      "fields": [
+        "anyons",
+        "topology"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "arxiv",
+        "harvest",
+        "2026-09-24",
+        "rejected"
+      ],
+      "importance": 58,
+      "confidence": 62,
+      "popularity": 66,
+      "coreIdea": "We consider relatively prime integer numbers $m$ and $n$ such that each group of order $mn$ has a normal subgroup of order $m$.",
+      "whyItMatters": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+      "limitation": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate.",
+      "source": "arXiv API",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.24640",
+      "arxiv": "2609.24640",
+      "title": "Inverse Baer deformations and finite simple skew braces of nilpotent type",
+      "authors": [
+        "Marco Damele"
+      ],
+      "year": 2026,
+      "date": "2026-09-21",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.24640",
+      "fields": [
+        "anyons",
+        "topology"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "arxiv",
+        "harvest",
+        "2026-09-24",
+        "rejected"
+      ],
+      "importance": 58,
+      "confidence": 62,
+      "popularity": 66,
+      "coreIdea": "Finite simple skew braces with non-abelian additive group remain largely unexplored.",
+      "whyItMatters": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+      "limitation": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate.",
+      "source": "arXiv API",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.27643",
+      "arxiv": "2609.27643",
+      "title": "Milnor's inequality and circular elastic knots",
+      "authors": [
+        "Tatsuya Miura"
+      ],
+      "year": 2026,
+      "date": "2026-09-23",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.27643",
+      "fields": [
+        "braid-knot"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "arxiv",
+        "harvest",
+        "2026-09-24",
+        "rejected"
+      ],
+      "importance": 50,
+      "confidence": 62,
+      "popularity": 65,
+      "coreIdea": "We establish the extension of Milnor's inequality, relating total curvature with the bridge index, to the $C^1$-closure of a knot class, without any restriction on the self-intersections of the limit curve.",
+      "whyItMatters": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+      "limitation": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate.",
+      "source": "arXiv API",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.24034",
+      "arxiv": "2609.24034",
+      "title": "From 3-crossed modules to Gray-type 4-categories",
+      "authors": [
+        "Masaki Fukuda",
+        "Tommy Shu"
+      ],
+      "year": 2026,
+      "date": "2026-09-21",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.24034",
+      "fields": [
+        "braid-knot"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "arxiv",
+        "harvest",
+        "2026-09-24",
+        "rejected"
+      ],
+      "importance": 50,
+      "confidence": 62,
+      "popularity": 65,
+      "coreIdea": "In this paper, we investigate the relation between the category of 3-crossed modules and the category of Gray-type 4-groups.",
+      "whyItMatters": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+      "limitation": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate.",
+      "source": "arXiv API",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.22575",
+      "arxiv": "2609.22575",
+      "title": "Elastic BB knots are multifold circles",
+      "authors": [
+        "Philipp Reiter",
+        "Heiko von der Mosel"
+      ],
+      "year": 2026,
+      "date": "2026-09-18",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.22575",
+      "fields": [
+        "braid-knot"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "arxiv",
+        "harvest",
+        "2026-09-24",
+        "rejected"
+      ],
+      "importance": 50,
+      "confidence": 70,
+      "popularity": 65,
+      "coreIdea": "We study elastic knots obtained by minimizing the bending energy of a unit loop together with a small multiple of ropelength.",
+      "whyItMatters": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+      "limitation": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate.",
+      "source": "arXiv API",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.27256",
+      "arxiv": "2609.27256",
+      "title": "Functional Causal Discovery via Conditional Covariance Ordering",
+      "authors": [
+        "Keyu Li",
+        "Ruoxu Tan"
+      ],
+      "year": 2026,
+      "date": "2026-09-23",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.27256",
+      "fields": [
+        "topology"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "arxiv",
+        "harvest",
+        "2026-09-24",
+        "rejected"
+      ],
+      "importance": 50,
+      "confidence": 62,
+      "popularity": 65,
+      "coreIdea": "We study causal discovery where each node is a random function.",
+      "whyItMatters": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+      "limitation": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate.",
+      "source": "arXiv API",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "dw-qdim-2026",
+      "title": "Maximal Total Quantum Dimension at Bounded Rank in Dijkgraaf-Witten Theories",
+      "authors": [
+        "Ce Shen"
+      ],
+      "year": 2026,
+      "date": "2026-09-22",
+      "venue": "arXiv",
+      "arxiv": "2609.26914",
+      "url": "https://arxiv.org/abs/2609.26914",
+      "fields": [
+        "anyons",
+        "tqc",
+        "topology"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 77,
+      "confidence": 72,
+      "popularity": 60,
+      "coreIdea": "In Dijkgraaf\u2013Witten theories, the largest total quantum dimension you can pack into a fixed number of anyon types is tightly bounded. Cocycle twists lift elementary Abelian groups from square-root growth to linear growth in the rank cutoff. Almost-simple gauge groups obey a much slower envelope, log D = O((log R)^2).",
+      "whyItMatters": "The S3 quantum double (E-S3) is a Dijkgraaf\u2013Witten theory. A rank bound constrains which anyon theories Bus B could compile. It is not a braid or a fusion measurement, and it does not move the Quantinuum H2 result.",
+      "limitation": "Classification math. No circuit, no processor, no logical error. The general quadratic-log envelope is still a conjecture. C3 stays.",
+      "source": "arXiv API",
+      "tags": [
+        "daily-run",
+        "2026-09-24",
+        "scored",
+        "quantum-double"
+      ],
+      "pillarId": "anyon-tqc",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.22940",
+      "arxiv": "2609.22940",
+      "title": "Local Representatives and Shortest Completions for Next-to-Shortest Paths in Directed Graphs",
+      "authors": [
+        "Shisheng Li"
+      ],
+      "year": 2026,
+      "date": "2026-09-19",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.22940",
+      "fields": [
+        "topology"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "arxiv",
+        "harvest",
+        "2026-09-24",
+        "rejected"
+      ],
+      "importance": 50,
+      "confidence": 70,
+      "popularity": 65,
+      "coreIdea": "Given a directed graph with positive edge weights and two vertices s,t, a next-to-shortest s-t path is a shortest simple s-t path among those whose length is strictly larger than the shortest-path distance.",
+      "whyItMatters": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+      "limitation": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate.",
+      "source": "arXiv API",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.28293",
+      "arxiv": "2609.28293",
+      "title": "Dynamic moir\u00e9-like band modulation in Dirac materials via multi-beam optical interference",
+      "authors": [
+        "Evelyn P. Sinaga",
+        "Rizky Setiawan",
+        "Herri Trilaksana",
+        "Lukas P. A. Krisna",
+        "Eddwi H. Hasdeo"
+      ],
+      "year": 2026,
+      "date": "2026-09-23",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.28293",
+      "fields": [
+        "time-crystal"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "arxiv",
+        "harvest",
+        "2026-09-24",
+        "rejected"
+      ],
+      "importance": 50,
+      "confidence": 62,
+      "popularity": 65,
+      "coreIdea": "Overlapping laser beams write a moir\u00e9-like Floquet mass pattern into a Dirac material, folding the bands. Deep sub-wavelength contrast still runs into the diffraction limit.",
+      "whyItMatters": "Floquet or photonic time-crystal physics. Reading is allowed. It is not the system clock.",
+      "limitation": "E-TC is CUT as a metronome. Prethermal lifetime is not a QEC-cycle replacement.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-TC"
+      ],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.27698",
+      "arxiv": "2609.27698",
+      "title": "Forced Oscillations in Power Systems Induced by Data Centers Hosting AI Workloads",
+      "authors": [
+        "Jovan Krajacic",
+        "Georgia Pierrou",
+        "Maitraya Desai",
+        "Gabriela Hug",
+        "Gustavo Valverde"
+      ],
+      "year": 2026,
+      "date": "2026-09-23",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.27698",
+      "fields": [
+        "time-crystal"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "arxiv",
+        "harvest",
+        "2026-09-24",
+        "rejected"
+      ],
+      "importance": 50,
+      "confidence": 62,
+      "popularity": 65,
+      "coreIdea": "Power swings in large Data Centers (DTCs) running Artificial Intelligence (AI) workloads can excite poorly damped modes in power systems.",
+      "whyItMatters": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+      "limitation": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate.",
+      "source": "arXiv API",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.27586",
+      "arxiv": "2609.27586",
+      "title": "Thouless Pumping of Wave Action in Photonic Time Crystals",
+      "authors": [
+        "Minwook Kyung",
+        "Younsung Kim",
+        "Kyungmin Lee",
+        "Hee Chul Park",
+        "Moon Jip Park",
+        "Bumki Min"
+      ],
+      "year": 2026,
+      "date": "2026-09-23",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.27586",
+      "fields": [
+        "time-crystal"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "arxiv",
+        "harvest",
+        "2026-09-24",
+        "rejected"
+      ],
+      "importance": 50,
+      "confidence": 62,
+      "popularity": 65,
+      "coreIdea": "A photonic time crystal pumps Maxwell wave action by one or two temporal cells per cycle, set by a Chern number. Energy is not the conserved cargo, because the modulation exchanges energy with the field.",
+      "whyItMatters": "Floquet or photonic time-crystal physics. Reading is allowed. It is not the system clock.",
+      "limitation": "E-TC is CUT as a metronome. Prethermal lifetime is not a QEC-cycle replacement.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-TC"
+      ],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.27151",
+      "arxiv": "2609.27151",
+      "title": "Applications of a Commutation Formula II",
+      "authors": [
+        "Percy Deift",
+        "Fritz Gesztesy"
+      ],
+      "year": 2026,
+      "date": "2026-09-22",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.27151",
+      "fields": [
+        "time-crystal"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "arxiv",
+        "harvest",
+        "2026-09-24",
+        "rejected"
+      ],
+      "importance": 50,
+      "confidence": 62,
+      "popularity": 65,
+      "coreIdea": "The principal {\\it commutation formula} underlying the paper by Deift [24], is of the type \\[ - z (AB - z I)^{-1} + A (BA - z I)^{-1} B = I, \\quad z \\in [\u03c1(AB) \\cap \u03c1(BA)]\\backslash\\{0\\}, \\] where, temporarily, and for simplicity only, $A,B$ represent bounded operators in a Banac.",
+      "whyItMatters": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+      "limitation": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate.",
+      "source": "arXiv API",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.27109",
+      "arxiv": "2609.27109",
+      "title": "Floquet-Bloch Theory for Dispersive Time-varying Metasurfaces",
+      "authors": [
+        "Mohammad Mojtaba Sadafi",
+        "Sandeep Inampudi",
+        "Hossein Mosallaei"
+      ],
+      "year": 2026,
+      "date": "2026-09-22",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.27109",
+      "fields": [
+        "time-crystal"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "arxiv",
+        "harvest",
+        "2026-09-24",
+        "rejected"
+      ],
+      "importance": 50,
+      "confidence": 58,
+      "popularity": 65,
+      "coreIdea": "A Floquet\u2013Bloch theory for dispersive, time-varying metasurfaces keeps causality and is checked against full-wave simulations, including a photonic time-crystal example.",
+      "whyItMatters": "Floquet or photonic time-crystal physics. Reading is allowed. It is not the system clock.",
+      "limitation": "E-TC is CUT as a metronome. Prethermal lifetime is not a QEC-cycle replacement.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-TC"
+      ],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.26462",
+      "arxiv": "2609.26462",
+      "title": "Quantum Fisher information of driven-dissipative systems from Keldysh path integrals",
+      "authors": [
+        "Malik Jirasek",
+        "Igor Lesanovsky",
+        "Viktoria Noel"
+      ],
+      "year": 2026,
+      "date": "2026-09-22",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.26462",
+      "fields": [
+        "time-crystal"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "arxiv",
+        "harvest",
+        "2026-09-24",
+        "rejected"
+      ],
+      "importance": 50,
+      "confidence": 62,
+      "popularity": 65,
+      "coreIdea": "Quantum Fisher information of a driven, dissipative system is extracted from a Keldysh path integral. One benchmark is a boundary time crystal, which is a sensing example, not a clock for a tokamak.",
+      "whyItMatters": "Floquet or photonic time-crystal physics. Reading is allowed. It is not the system clock.",
+      "limitation": "E-TC is CUT as a metronome. Prethermal lifetime is not a QEC-cycle replacement.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-TC"
+      ],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.26385",
+      "arxiv": "2609.26385",
+      "title": "Qualitative Properties of the Principal Floquet Bundle and Their Applications",
+      "authors": [
+        "Yun Li",
+        "Yuan Lou",
+        "Zhi-Cheng Wang"
+      ],
+      "year": 2026,
+      "date": "2026-09-22",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.26385",
+      "fields": [
+        "time-crystal",
+        "fusion-quantum"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "arxiv",
+        "harvest",
+        "2026-09-24",
+        "rejected"
+      ],
+      "importance": 68,
+      "confidence": 62,
+      "popularity": 68,
+      "coreIdea": "Floquet bundle theory serves as a natural extension of the eigenvalue theory for elliptic and periodic parabolic operators to the spectral theory of non-autonomous, non-periodic parabolic operators, which provides a useful spectral tool for studying threshold dynamics in more gen.",
+      "whyItMatters": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+      "limitation": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate.",
+      "source": "arXiv API",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.24070",
+      "arxiv": "2609.24070",
+      "title": "Morse Index, Stability and Spectral Bounds for Periodic Orbits in Reversible Lagrangian Systems",
+      "authors": [
+        "Alessandro Portaluri",
+        "Li Wu"
+      ],
+      "year": 2026,
+      "date": "2026-09-21",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.24070",
+      "fields": [
+        "time-crystal"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "arxiv",
+        "harvest",
+        "2026-09-24",
+        "rejected"
+      ],
+      "importance": 50,
+      "confidence": 70,
+      "popularity": 65,
+      "coreIdea": "We prove quantitative stability and instability estimates for reversible periodic solutions of strictly Legendre-convex Lagrangian systems.",
+      "whyItMatters": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+      "limitation": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate.",
+      "source": "arXiv API",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.23513",
+      "arxiv": "2609.23513",
+      "title": "Critical Touching of Temporal Entanglement Transitions",
+      "authors": [
+        "Ting-Long Wang",
+        "Shi-Xin Zhang",
+        "Shuai Yin",
+        "Yi-Fan Jiang"
+      ],
+      "year": 2026,
+      "date": "2026-09-20",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.23513",
+      "fields": [
+        "time-crystal"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "arxiv",
+        "harvest",
+        "2026-09-24",
+        "rejected"
+      ],
+      "importance": 50,
+      "confidence": 62,
+      "popularity": 65,
+      "coreIdea": "Equilibrium phase transitions are conventionally categorized into first-order and continuous phase transitions.",
+      "whyItMatters": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+      "limitation": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate.",
+      "source": "arXiv API",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.22438",
+      "arxiv": "2609.22438",
+      "title": "Non-Perturbative Modulus Decay and Multi-Component Dark Matter",
+      "authors": [
+        "Gordon Kane",
+        "Leia Price",
+        "Luis Rufino",
+        "Scott Watson",
+        "Fred Adams"
+      ],
+      "year": 2026,
+      "date": "2026-09-18",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.22438",
+      "fields": [
+        "time-crystal"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "arxiv",
+        "harvest",
+        "2026-09-24",
+        "rejected"
+      ],
+      "importance": 50,
+      "confidence": 62,
+      "popularity": 65,
+      "coreIdea": "Non-thermal cosmological histories rest on the assumption that scalars displaced during inflation undergo coherent oscillations, dominate the energy density of the universe before Big Bang Nucleosynthesis, and decay perturbatively through gravitationally suppressed interactions.",
+      "whyItMatters": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+      "limitation": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate.",
+      "source": "arXiv API",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "itb-rmp-2026",
+      "title": "Effects of the Internal Transport Barrier in the plasma confinement with Resonant Magnetic Perturbations",
+      "authors": [
+        "P. Haerter",
+        "L. C. Souza",
+        "R. L. Viana",
+        "I. L. Caldas"
+      ],
+      "year": 2026,
+      "date": "2026-09-22",
+      "venue": "arXiv physics.plasm-ph",
+      "arxiv": "2609.27164",
+      "url": "https://arxiv.org/abs/2609.27164",
+      "fields": [
+        "plasma"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 78,
+      "confidence": 66,
+      "popularity": 58,
+      "coreIdea": "An analytic current split into core, internal transport barrier, and pedestal is fed to a Hamiltonian map. Resonant magnetic perturbations then reach a reversed-shear core more easily: twin inner islands appear, and the margin before the whole plasma goes chaotic gets thinner, even while edge-mode control would like less coil current.",
+      "whyItMatters": "Bus A (E-RL) already assumes RMP coils on a real tokamak. This is the confinement trade-off those coils can open in an advanced-tokamak core. It is not a controller and it does not beat a disruption baseline, so M2 stays open.",
+      "limitation": "Map model, not a plasma-control shot. No latency, no safe-hold, no stored-energy flattop versus a lab controller. Bare arXiv cannot raise E-RL past C4.",
+      "source": "arXiv API",
+      "tags": [
+        "daily-run",
+        "2026-09-24",
+        "scored",
+        "RMP",
+        "ITB"
+      ],
+      "pillarId": "plasma-rl",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.28409",
+      "arxiv": "2609.28409",
+      "title": "Learning Holographic Reduced Representations with Clifford Variational Autoencoders",
+      "authors": [
+        "Mohamed Malek Abid",
+        "P. Michael Furlong"
+      ],
+      "year": 2026,
+      "date": "2026-09-23",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.28409",
+      "fields": [
+        "holography"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "arxiv",
+        "harvest",
+        "2026-09-24",
+        "rejected"
+      ],
+      "importance": 62,
+      "confidence": 62,
+      "popularity": 67,
+      "coreIdea": "Vector Symbolic Algebras project data structures into a hyperdimensional vector space through the application of their vector algebras to randomly generated atomic vector symbols and fractional power encodings of real-valued data.",
+      "whyItMatters": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+      "limitation": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate.",
+      "source": "arXiv API",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.26875",
+      "arxiv": "2609.26875",
+      "title": "Collapse to extremality: The third law of black hole thermodynamics in quantum gravity",
+      "authors": [
+        "Gustavo J. Turiaci",
+        "Chih-Hung Wu"
+      ],
+      "year": 2026,
+      "date": "2026-09-22",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.26875",
+      "fields": [
+        "holography"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "arxiv",
+        "harvest",
+        "2026-09-24",
+        "rejected"
+      ],
+      "importance": 68,
+      "confidence": 62,
+      "popularity": 68,
+      "coreIdea": "A two-step quantum-gravity construction is offered to violate the classical third law for charged black holes. It is not a plasma or a processor.",
+      "whyItMatters": "Denylist. Readable. Not an INCLUDE. AdS/CFT does not sit on the plant or processor bus.",
+      "limitation": "T=0 as an engine part. Reversal needs two independent C\u22654 sources.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-HOL"
+      ],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.28468",
+      "arxiv": "2609.28468",
+      "title": "Fast-Neutron Scintillation with Multi-Quantum-Well 2D Perovskites",
+      "authors": [
+        "Shaun Tan",
+        "Zachary Benesh",
+        "Seong Eui Chang",
+        "Shelby Elder",
+        "Haidi Jakovic",
+        "Tae-Woo Lee",
+        "Moungi G. Bawendi"
+      ],
+      "year": 2026,
+      "date": "2026-09-23",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.28468",
+      "fields": [
+        "fusion-quantum"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "arxiv",
+        "harvest",
+        "2026-09-24",
+        "rejected"
+      ],
+      "importance": 58,
+      "confidence": 62,
+      "popularity": 66,
+      "coreIdea": "Fast-neutron scintillators must efficiently convert neutron energy into detectable light while enabling selectivity between neutrons and the \u03b3-ray background.",
+      "whyItMatters": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+      "limitation": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate.",
+      "source": "arXiv API",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "fusion-boundary-2026",
+      "title": "Frustration-Free Models for Topological Holography: Fusion Spin Chains as Boundary Algebras",
+      "authors": [
+        "Zhengwei Liu",
+        "Zishuo Zhao"
+      ],
+      "year": 2026,
+      "date": "2026-09-23",
+      "venue": "arXiv",
+      "arxiv": "2609.28120",
+      "url": "https://arxiv.org/abs/2609.28120",
+      "fields": [
+        "anyons",
+        "tqc",
+        "topology"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 73,
+      "confidence": 68,
+      "popularity": 56,
+      "coreIdea": "Frustration-free two-dimensional spin models built from a fusion category generalize Levin\u2013Wen string nets. Their edges realize fusion spin chains, including the Temperley\u2013Lieb\u2013Jones algebra, as boundary algebras.",
+      "whyItMatters": "String-net and fusion-category lattices are the theory shelf under E-S3. The boundary algebra is not a braid instruction and not a reactor encoder.",
+      "limitation": "The word holography here means a bulk-boundary map for a fusion category. It is not AdS/CFT and must not be filed as E-HOL. No device. Bare arXiv.",
+      "source": "arXiv API",
+      "tags": [
+        "daily-run",
+        "2026-09-24",
+        "scored",
+        "string-net"
+      ],
+      "pillarId": "anyon-tqc",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.27295",
+      "arxiv": "2609.27295",
+      "title": "A diagrammatic presentation for every pivotal pointed fusion category",
+      "authors": [
+        "Chumeng Di",
+        "Anup Poudel"
+      ],
+      "year": 2026,
+      "date": "2026-09-23",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2609.27295",
+      "fields": [
+        "fusion-quantum"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "arxiv",
+        "harvest",
+        "2026-09-24",
+        "rejected"
+      ],
+      "importance": 58,
+      "confidence": 62,
+      "popularity": 66,
+      "coreIdea": "Every pivotal pointed fusion category Vec(G, \u03c9, \u03c0) gets a generators-and-relations picture. Pointed means the anyons are Abelian group elements, not the non-Abelian S3 fusion space.",
+      "whyItMatters": "Keyword overlap with the harvest lists. It does not bind to a KEEP or HOLD claim.",
+      "limitation": "Off-path. Not a braid, a code threshold, a plant controller, or a Layer-2 rate.",
+      "source": "arXiv API",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "sol-surrogate-2026",
+      "title": "Probabilistic and Geometry Aware Neural Surrogate of Scrape Off Layer Plasma Simulations",
+      "authors": [
+        "Gabriele Gianuzzo",
+        "Stefan Dasbach",
+        "Fleur Hendriks",
+        "Sven Wiesen",
+        "Vlado Menkovski"
+      ],
+      "year": 2026,
+      "date": "2026-09-23",
+      "venue": "arXiv physics.plasm-ph",
+      "arxiv": "2609.28116",
+      "url": "https://arxiv.org/abs/2609.28116",
+      "fields": [
+        "plasma"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 84,
+      "confidence": 72,
+      "popularity": 64,
+      "coreIdea": "A neural stand-in for SOLPS-ITER keeps the divertor mesh geometry and returns a spread of plasmas, not one average. Along a gas puff it splits into a hot branch and a cold branch instead of smearing the detachment transition.",
+      "whyItMatters": "Bus A (E-RL) needs a fast read of the boundary. A surrogate that admits two answers is closer to a real divertor than a single regressor. It is still an offline model, not a coil command.",
+      "limitation": "No control loop, no published latency, no disruption-rate comparison with a lab controller. Bare arXiv. E-RL stays C4. Detachment is not a Q_eng.",
+      "source": "arXiv API",
+      "tags": [
+        "daily-run",
+        "2026-09-24",
+        "scored",
+        "SOLPS",
+        "Bus A"
+      ],
+      "pillarId": "plasma-rl",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "jet-hfo-gae-2026",
+      "title": "Alfv\u00e9nic high-frequency oscillations at the pedestal of JET plasmas",
+      "authors": [
+        "Leonor Roque",
+        "Paulo Rodrigues",
+        "Emilia R. Solano",
+        "JET contributors"
+      ],
+      "year": 2026,
+      "date": "2026-09-23",
+      "venue": "arXiv physics.plasm-ph",
+      "arxiv": "2609.28193",
+      "url": "https://arxiv.org/abs/2609.28193",
+      "fields": [
+        "plasma"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 82,
+      "confidence": 76,
+      "popularity": 66,
+      "coreIdea": "Edge oscillations at 50\u2013450 kHz that last about ten seconds on JET are global Alfv\u00e9n eigenmodes sitting on a minimum of the shear-Alfv\u00e9n continuum. Their frequencies match the ideal-MHD code CSMISH across Ohmic, ICRH, NBI, and deuterium-tritium pulses.",
+      "whyItMatters": "Edge density and safety factor are what a Bus A equilibrium hands to the controller. A long-lived, machine-checked frequency is a diagnostic constraint. It is not an actuator and it does not avoid a tearing mode.",
+      "limitation": "Identification on JET, not a control experiment. No tearing-onset warning time and no stored-energy flattop versus the lab baseline. Does not close M2. Preprint.",
+      "source": "arXiv API",
+      "tags": [
+        "daily-run",
+        "2026-09-24",
+        "scored",
+        "JET",
+        "Alfv\u00e9n"
+      ],
+      "pillarId": "plasma-rl",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "mzm-dot-coherence-2026",
+      "title": "Scaling of qubit coherence in quantum dot based Majorana chains: Rabi and Ramsey oscillations of Majorana qubits formed by four and six quantum dots",
+      "authors": [
+        "Haining Pan",
+        "Sankar Das Sarma"
+      ],
+      "year": 2026,
+      "date": "2026-09-21",
+      "venue": "arXiv",
+      "arxiv": "2609.25223",
+      "url": "https://arxiv.org/abs/2609.25223",
+      "fields": [
+        "majorana"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 80,
+      "confidence": 68,
+      "popularity": 62,
+      "coreIdea": "A calculation of Rabi and Ramsey times for Majorana qubits built from four-dot and six-dot Kitaev chains, with realistic disorder. In the clean case Rabi does not care about length. With disorder, a longer chain does not reliably live longer. The six-dot Ramsey split that is supposed to be cleaner also leaks into the bulk.",
+      "whyItMatters": "M5 asks for independent X and Z logicals that improve as the topological gap grows. This paper says chain length is not that test. E-MZM stays a watch item at C1 and is not load-bearing next to S3.",
+      "limitation": "Simulation, following the quantum-dot experiment arXiv:2607.09511. No topological-gap scaling of a logical error rate. Does not clear the Andreev-mimic bar.",
+      "source": "arXiv API",
+      "tags": [
+        "daily-run",
+        "2026-09-24",
+        "scored",
+        "M5"
+      ],
+      "pillarId": "majorana-braids",
+      "claimIds": [
+        "E-MZM"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "kstar-ec-breakdown-2026",
+      "title": "Mechanism of Ionization Avalanche in Tokamak Microwave Gas Breakdown",
+      "authors": [
+        "Jinwoo Gwak",
+        "Yeongsun Lee",
+        "Jeongwon Lee",
+        "Won Ik Jeong",
+        "Hyun-Tae Kim",
+        "Yong-Seok Hwang"
+      ],
+      "year": 2026,
+      "date": "2026-09-18",
+      "venue": "arXiv physics.plasm-ph",
+      "arxiv": "2609.21429",
+      "url": "https://arxiv.org/abs/2609.21429",
+      "fields": [
+        "plasma"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 76,
+      "confidence": 72,
+      "popularity": 60,
+      "coreIdea": "A three-dimensional Monte Carlo of electron-cyclotron breakdown, with wave-particle kicks and collisions, finds that parallel Brownian motion runs the ionization avalanche. The predicted boundary matches KSTAR. The same model says ITER-like startup can work near 2 mPa of deuterium with 1 MW of EC power.",
+      "whyItMatters": "This is a real tokamak, so it sits next to Bus A. The attach metric is disruption rate and shape during the flattop, not whether the gas breaks down. Startup power must not be relabeled as Layer-2 drive or as Q.",
+      "limitation": "Initiation study. 1 MW and 2 mPa are startup numbers, not P_drive, P_aux, or a gain. No RL policy and no tearing metric.",
+      "source": "arXiv API",
+      "tags": [
+        "daily-run",
+        "2026-09-24",
+        "scored",
+        "KSTAR",
+        "startup"
+      ],
+      "pillarId": "plasma-rl",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "mzm-hubbard-2026",
+      "title": "Fermion bag study of the two-dimensional Majorana-Hubbard model at finite hopping",
+      "authors": [
+        "Mark Johnston",
+        "Emilie Huffman"
+      ],
+      "year": 2026,
+      "date": "2026-09-22",
+      "venue": "arXiv",
+      "arxiv": "2609.26881",
+      "url": "https://arxiv.org/abs/2609.26881",
+      "fields": [
+        "majorana"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "importance": 48,
+      "confidence": 55,
+      "popularity": 40,
+      "coreIdea": "A fermion-bag study of the two-dimensional Majorana\u2013Hubbard model: one relativistic Majorana fermion per site and the shortest interaction the lattice allows.",
+      "whyItMatters": "The harvest word is Majorana. The particle is a lattice fermion, not a zero-mode qubit and not a braid.",
+      "limitation": "Does not show X or Z logicals, gap scaling, or a device. E-MZM is not moved.",
+      "source": "arXiv API",
+      "tags": [
+        "daily-run",
+        "2026-09-24",
+        "rejected"
+      ],
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "gam-pair-2026",
+      "title": "Geodesic Acoustic Modes in pair plasmas confined in tokamak magnetic fields",
+      "authors": [
+        "Alessandro Biancalani"
+      ],
+      "year": 2026,
+      "date": "2026-09-21",
+      "venue": "arXiv",
+      "arxiv": "2609.24256",
+      "url": "https://arxiv.org/abs/2609.24256",
+      "fields": [
+        "plasma"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "importance": 46,
+      "confidence": 58,
+      "popularity": 40,
+      "coreIdea": "A dispersion relation for geodesic acoustic modes when ions and electrons have the same mass, aimed at electron\u2013positron confinement experiments.",
+      "whyItMatters": "GAMs do regulate turbulence in tokamaks. Pair plasma is not a DT or advanced-fuel plant path and is not a control policy.",
+      "limitation": "No machine, no actuator, no rate. Do not file under E-RL as an attach result.",
+      "source": "arXiv API",
+      "tags": [
+        "daily-run",
+        "2026-09-24",
+        "rejected"
+      ],
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
     }
   ],
   "runs": [
+    {
+      "id": "run-2026-09-24-daily",
+      "startedAt": "2026-09-24T09:08:00-05:00",
+      "windowStart": "2026-09-17",
+      "windowEnd": "2026-09-24",
+      "kind": "daily",
+      "feeds": [
+        "https://arxiv.org/list/quant-ph/recent",
+        "https://arxiv.org/list/cond-mat.str-el/recent",
+        "https://arxiv.org/list/cond-mat.mes-hall/recent",
+        "https://arxiv.org/list/hep-th/recent",
+        "https://arxiv.org/list/physics.plasm-ph/recent",
+        "https://arxiv.org/search/advanced"
+      ],
+      "paperIds": [
+        "itb-rmp-2026",
+        "sol-surrogate-2026",
+        "jet-hfo-gae-2026",
+        "mzm-dot-coherence-2026",
+        "kstar-ec-breakdown-2026",
+        "dw-qdim-2026",
+        "domain-wall-ics-2026",
+        "fci-spin-anyon-2026",
+        "fusion-boundary-2026",
+        "2609.27791",
+        "2609.27644",
+        "2609.27171",
+        "2609.26896",
+        "2609.26883",
+        "2609.25940",
+        "2609.24655",
+        "2609.24640",
+        "2609.27643",
+        "2609.24034",
+        "2609.22575",
+        "2609.27256",
+        "2609.22940",
+        "2609.28293",
+        "2609.27698",
+        "2609.27586",
+        "2609.27151",
+        "2609.27109",
+        "2609.26462",
+        "2609.26385",
+        "2609.24070",
+        "2609.23513",
+        "2609.22438",
+        "2609.28409",
+        "2609.26875",
+        "2609.28468",
+        "2609.27295",
+        "mzm-hubbard-2026",
+        "gam-pair-2026"
+      ],
+      "notes": "Seventh daily run. Lookback 7 days. ingest.py wrote 37 hits; fetch_arxiv.py merged 32 keyword hits, most of them off-path. Nine on-path papers scored and queued: ITB\u2013RMP map, SOLPS-ITER surrogate, JET Alfv\u00e9n pedestal modes, quantum-dot Majorana coherence, KSTAR EC startup, Dijkgraaf\u2013Witten rank bound, Abelian transparent domain walls, moir\u00e9 FCI spins, fusion-category boundary algebras. No Auto-Gate pass. No version bump. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand. Q=1000 not entered. Holography and photonic time crystals rejected. Majorana\u2013Hubbard and pair-plasma GAMs rejected as off-path. Older 2609.* library rows were left as previously scored.",
+      "fieldCounts": {
+        "plasma": 5,
+        "majorana": 2,
+        "anyons": 12,
+        "tqc": 3,
+        "topology": 12,
+        "braid-knot": 4,
+        "time-crystal": 10,
+        "fusion-quantum": 3,
+        "holography": 2
+      }
+    },
     {
       "id": "run-2026-09-23-daily",
       "startedAt": "2026-09-23T10:29:00-05:00",
