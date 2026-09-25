@@ -1,6 +1,744 @@
 {
-  "asOf": "2026-09-24",
+  "asOf": "2026-09-25",
   "cards": [
+    {
+      "id": "2026-09-25/2609.30159",
+      "paperId": "2609.30159",
+      "date": "2026-09-25",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails platform honesty: a code-family proof is not the trapped-ion or superconducting processor that justifies C4. G1\u2013G3 and G5\u2013G6 pass. Falsifier this quarter: a finite member of the family with a low-weight logical operator the cleaning argument missed.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Good qLDPC codes with linear distance already exist in the Pauli-stabilizer setting (Panteleev\u2013Kalachev and follow-ups). Google's surface-code experiment is what earned E-QEC its C4. A sheaf-gauged family is not that device, and code-capacity magic is not a fusion measurement.",
+      "ledger": "none",
+      "plain": {
+        "core": "A way to build quantum error-correcting codes from non-Abelian sheaves so the code stays sparse, keeps a constant fraction of its qubits as logical qubits, and still catches small errors. Gauging those codes can also prepare a magic state inside the code.",
+        "why": "This sits on E-QEC, the error layer Bus B already uses. It is the same shelf as qLDPC, not a new bus and not an S3 braid. It does not replace the surface-code hardware that earned C4.",
+        "limit": "Bare arXiv existence proof. No decoder on a device, no threshold number that tightens the ledger, and no fusion measurement. Cannot raise C and does not pass Auto-Gate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC KEEP). A2 miss (G4: paper platform, not the processor that carries C4). A4 miss: no published numerical bound in the ledger tightens. A5 miss: bare arXiv. Harvest confidence 74 is under 80, so it is not an ADD. Non-Abelian sheaf codes stay inside the existing QUEUE pillar; no new pillar.",
+      "math": "Cup-product gauging of sheaf codes; Knill\u2013Laflamme distance; expansion plus cleaning. Assumes a family with constant rate and linear distance, and that gauging preserves the logical constraints they solve by explicit representatives.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-25/2609.29849",
+      "paperId": "2609.29849",
+      "date": "2026-09-25",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: the platform is a computed ITER scenario, not a plasma-control system on a running device. Falsifier this year: an error-field scan on DIII-D, KSTAR, or EAST where the quasi-symmetric currents leave a larger resonant overlap than the lab's multimodal correction.",
+      "score": "E-RL C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Park, Logan, Strait and co-workers already correct resonant error fields on operating tokamaks. The paper itself says multimodal resonant correction can match its quasi-symmetric recipe. Seo et al., Nature 2024, and Rothstein et al., Nucl. Fusion 2026, are closed-loop results this scenario study does not beat.",
+      "ledger": "none",
+      "plain": {
+        "core": "After the usual resonant error-field coils have done their job, leftover non-resonant fields can still hurt a tokamak. This recipe picks coil currents that keep both the resonant response and the neoclassical torque small, and it tries that recipe on ITER target plasmas.",
+        "why": "Bus A (E-RL) has to live with error-field coils. A torque-aware correction is a candidate actuator map for ITER-class machines. It is not a closed control loop and it does not beat a lab disruption baseline, so M2 stays open.",
+        "limit": "Scenario calculation, not a shot. No latency budget, no safe-hold, no stored-energy flattop versus DIII-D or TCV. Bare arXiv cannot raise E-RL."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass. A2 miss (G4). A4 miss: torque is not a ledger term and C stays C4. A5 miss: bare arXiv. Not ADD.",
+      "math": "Neoclassical torque from self-consistent perturbed equilibria, minimized together with resonant overlap. Assumes ITER target equilibria and a specified intrinsic error field. No auxiliary power is folded into Q_eng.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-25/2609.29871",
+      "paperId": "2609.29871",
+      "date": "2026-09-25",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: resistive MHD, not the Bus A actuator API. Falsifier this quarter: a kinetic calculation in which Landau damping removes the pulsation before the distant islands form.",
+      "score": "E-RL C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Seo et al., Nature 2024, avoid tearing on a real device. A reversible island in a low-viscosity MHD box is not that controller and does not report a disruption rate.",
+      "ledger": "none",
+      "plain": {
+        "core": "In a simulated tokamak with a flat central safety factor just above 1, slow sound-speed waves can grow, then lock the core to distant surfaces and force magnetic islands there to grow and shrink in turn.",
+        "why": "E-RL cares about tearing and core-edge coupling because those end discharges. This is a mechanism the controller may have to notice. It is not itself a controller.",
+        "limit": "Resistive MHD, low viscosity, no kinetic damping. No coil command, no latency, no comparison to a lab disruption rate. M2 stays open."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass. A2 miss (G4). A4 and A5 miss. Mechanism paper, not an attach.",
+      "math": "Slow magnetoacoustic continuum \u03c9_S = k_parallel c_S on a flat q\u22731 core, coupled to forced reconnection at q\u22652. Assumes low ion viscosity and high enough resistivity. Landau damping is named and not computed.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-25/2609.28636",
+      "paperId": "2609.28636",
+      "date": "2026-09-25",
+      "bind": [
+        "E-MZM"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: the platform is a lattice model, not a wire or film with independent logical operators. Falsifier: an energy accounting in which the full vortex stays cheaper once core physics beyond Hartree\u2013Fock is kept, or a transport mimic that reproduces the zero-bias feature without a topological gap.",
+      "score": "E-MZM C1 T3 D3 A2 stays. WATCH. Not load-bearing.",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nature's editorial caveat on Majorana 1, and the still-missing public X-plus-Z logical qubit on Majorana 2, are the disputer. Half-vortex zero modes in a Hartree\u2013Fock pair-density wave are the mimic-prone class (Andreev / Yu-Shiba-Rusinov substitutes included).",
+      "ledger": "none",
+      "plain": {
+        "core": "In a honeycomb model of a pair-density-wave superconductor, half-quantum vortices can be the cheaper defect near a phase transition. Those half-vortices bind Majorana zero modes and, in a magnetic field, arrange into a lattice whose hybridization makes Dirac nodes and zero-energy lines.",
+        "why": "E-MZM stays on watch for M5. A microscopic energy argument for a Majorana lattice is a candidate platform, not a logical qubit.",
+        "limit": "Hartree\u2013Fock plus Ginzburg\u2013Landau. No independent X and Z logical operators, no topological-gap scaling, and signatures of this type are mimic-prone. Does not move C1."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-MZM is WATCH, not KEEP or HOLD. A2 miss (G4). Cannot ADD and cannot raise C. Useful reading for M5 only.",
+      "math": "Hartree\u2013Fock superfluid stiffness \u03c1 and relative-phase stiffness \u03ba, plus microscopically extracted Ginzburg\u2013Landau couplings. Assumes a spinless honeycomb pair-density wave and that \u03ba/\u03c1\u21921 near the Dirac-semimetal transition.",
+      "autoGate": "miss A1, A2, A3, A5"
+    },
+    {
+      "id": "2026-09-25/2609.29004",
+      "paperId": "2609.29004",
+      "date": "2026-09-25",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: exactly solvable spin model, not a processor. Falsifier: any local perturbation off the loop point that splits the fourfold degeneracy as a power of the system size rather than exponentially.",
+      "score": "E-QEC C4 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Kitaev's honeycomb model already produces toric-code order in a perturbative flux gap. An exact vison crystal at one tuned loop point does not move the surface-code threshold measured below threshold by Google.",
+      "ledger": "none",
+      "plain": {
+        "core": "A tuned extension of the Kitaev honeycomb model in which the flux pattern decides where Majorana fermions are allowed to hop. Their zero-point energy then selects a crystal of visons whose ground space is exactly a toric code.",
+        "why": "Toric-code order is the ancestor of E-QEC. An exact, non-perturbative example is useful theory. It is not a decoder, not a threshold, and not the S3 fusion gate.",
+        "limit": "Exists only at a special loop point of a spin model. A generic perturbation is not shown to protect the degeneracy the way a surface code on hardware does."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass. A2 miss (G4). A4/A5 miss. Not ADD. Not a new pillar.",
+      "math": "Flux-conditioned Majorana hopping; matter energy splits into a triangular Ising term plus a non-negative residual. A depth-one circuit maps one crystal onto a sheared toric code. Assumes the tuned loop point and antiferromagnetic coupling so the vacuum survives projection.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-25/2609.28735",
+      "paperId": "2609.28735",
+      "date": "2026-09-25",
+      "bind": [
+        "E-MZM"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: not a device. Falsifier this quarter: a finite-range cutoff that lifts the reported zero modes while the bulk invariant still looks nontrivial.",
+      "score": "E-MZM C1 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Same M5 disputer as the PDW paper: no public independent X and Z logicals with gap scaling. A winding number is not a logical gate.",
+      "ledger": "none",
+      "plain": {
+        "core": "Long-range hopping and pairing on a Kitaev chain with several sublattices move the critical lines and can pin Majorana or massive Dirac modes by an unusual bulk-boundary rule. Even versus odd sublattices change the winding number.",
+        "why": "Another theory phase diagram on the E-MZM watch list. Parked behind the PDW half-vortex paper from the same day so the queue does not fill with twin Kitaev variants.",
+        "limit": "One-dimensional lattice model. Power-law couplings cut off in a real wire can lift the zero modes. Not a device and not a distinguisher."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Noisy cluster with 2609.28636. One representative is enough for the weekly freeze. This card is parked, not a second pillar.",
+      "math": "Power-law SSH-Kitaev models on one, two, or three sublattices. Winding number integer or half-integer with the sublattice count. Assumes the power law is unscreened.",
+      "autoGate": "miss A1, A2, A3, A7"
+    },
+    {
+      "id": "2026-09-25/2609.30142",
+      "paperId": "2609.30142",
+      "date": "2026-09-25",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. Off-path.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "Disorder does not move the toric-code ground space, because the star and plaquette checks still commute. The paper then uses that Hamiltonian as a sensor: a probe that is not in the code space can carry more quantum Fisher information when the couplings are messy.",
+        "why": "It restates a known fact about E-QEC (stabilizers tolerate disorder) and then leaves the code space. Metrology is not the error layer and not a decoder.",
+        "limit": "No threshold, no logical error rate, no hardware. Do not file it as evidence that the surface code got better."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero KEEP/HOLD claim. Catalog note only. Not in the paper.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-25/2609.28957",
+      "paperId": "2609.28957",
+      "date": "2026-09-25",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. Off-path.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "Tambara\u2013Yamagami categories add one non-invertible object to a group of invertible ones. This paper asks what the diagrammatic calculus becomes if the group is replaced by a finite semigroup.",
+        "why": "Fusion categories are the language behind anyon fusion, but this is not the S3 quantum double and not a braid-plus-fusion gate. cyclic-fusion-family was expired as a pillar on 21 Sep 2026.",
+        "limit": "No Hilbert space of a device, no fusion measurement, no universality proof for a computational anyon."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero KEEP/HOLD claim. Catalog note only. Not in the paper.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-25/2609.29254",
+      "paperId": "2609.29254",
+      "date": "2026-09-25",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. Off-path.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "In a driven photonic scatterer, a Floquet scattering matrix can pass through an exceptional point where reflection and transmission eigenvalues split. At a special drive it can absorb a tailored input completely.",
+        "why": "The harvest tagged this as a time crystal because the medium is time-varying. It is a classical wave experiment. E-TC is already cut as a clock.",
+        "limit": "No many-body time crystal, no prethermal lifetime, no control-cycle comparison. Not a metronome."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero KEEP/HOLD claim. Catalog note only. Not in the paper.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-25/2609.29352",
+      "paperId": "2609.29352",
+      "date": "2026-09-25",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. Off-path.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "Reduced models of energetic-particle modes in a tokamak need a starting frequency. The authors find that the simulation itself shifts that frequency in the first few hundred steps, and restarting from the new frequency converges.",
+        "why": "A better seed for an Alfv\u00e9n mode is a numerics note for integrated transport codes. It is not a coil command, not a Vlasov hole-burning rate, and not a Q term.",
+        "limit": "Does not report a reactivity ratio or a disruption metric. Off the three buses."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero KEEP/HOLD claim. Catalog note only. Not in the paper.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-25/2609.30241",
+      "paperId": "2609.30241",
+      "date": "2026-09-25",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. Off-path.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "Discrete flavor symmetries in heterotic string models can come from the geometry of a non-Abelian orbifold. The authors list those symmetries for hundreds of compactifications.",
+        "why": "The word non-Abelian here is a point group of extra dimensions, not an anyon.",
+        "limit": "No topological quantum computation and no plasma. Off-path."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero KEEP/HOLD claim. Catalog note only. Not in the paper.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-25/2609.29207",
+      "paperId": "2609.29207",
+      "date": "2026-09-25",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. Off-path.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "An effective model of an axion-like field, a hidden Higgs, and an extra U(1) force, aimed at particle-physics portals.",
+        "why": "Tagged topological by the harvest. It is beyond-Standard-Model field theory, not topological order.",
+        "limit": "No code, no coil, no fusion rate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero KEEP/HOLD claim. Catalog note only. Not in the paper.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-25/2609.28992",
+      "paperId": "2609.28992",
+      "date": "2026-09-25",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. Off-path.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "A BRST-gauge-fixed nonlinear sigma model coupled to a non-Abelian gauge field, with a discussion of which states are physical.",
+        "why": "Non-Abelian gauge theory in the particle-physics sense. Not an anyon braid.",
+        "limit": "Off-path."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero KEEP/HOLD claim. Catalog note only. Not in the paper.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-25/2609.28840",
+      "paperId": "2609.28840",
+      "date": "2026-09-25",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. Off-path.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "A cosmological scenario that varies the Peccei\u2013Quinn scale so the QCD axion does not overproduce isocurvature.",
+        "why": "Axion cosmology. Not a quantum code and not a fusion ledger term.",
+        "limit": "Off-path."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero KEEP/HOLD claim. Catalog note only. Not in the paper.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-25/2609.28835",
+      "paperId": "2609.28835",
+      "date": "2026-09-25",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. Off-path.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "Lecture notes on anomalies in quantum field theory.",
+        "why": "Pedagogy. Anomalies are not the DBE gate set.",
+        "limit": "No claim to bind. Off-path."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero KEEP/HOLD claim. Catalog note only. Not in the paper.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-25/2609.28625",
+      "paperId": "2609.28625",
+      "date": "2026-09-25",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. Off-path.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "A spin-glass analysis of when reinforcement learning with checkable rewards can iterate multiplication without a glassy loss landscape.",
+        "why": "The letters RL are not plasma control. This is machine-learning theory.",
+        "limit": "No tokamak, no actuator, no E-RL metric."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero KEEP/HOLD claim. Catalog note only. Not in the paper.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-25/2609.28591",
+      "paperId": "2609.28591",
+      "date": "2026-09-25",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. Off-path.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "An essay about a claimed machine proof of Navier\u2013Stokes blowup and what it would mean if nobody can read it.",
+        "why": "Not an anyon paper and not a fusion calculation. The Navier\u2013Stokes problem is not the DBE energy ledger.",
+        "limit": "Off-path commentary."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero KEEP/HOLD claim. Catalog note only. Not in the paper.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-25/2609.28917",
+      "paperId": "2609.28917",
+      "date": "2026-09-25",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. Off-path.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "A construction of asymmetric hyperbolic L-space knots whose braid index can be any integer greater than 4.",
+        "why": "Braid index of a classical knot is not an anyon worldline and does not compile a gate.",
+        "limit": "Pure 3-manifold topology. Off-path."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero KEEP/HOLD claim. Catalog note only. Not in the paper.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-25/2609.28536",
+      "paperId": "2609.28536",
+      "date": "2026-09-25",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. Off-path.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "For certain algebraic varieties built from braids, a torus acts with a dense orbit exactly when the associated link is smoothly slice.",
+        "why": "Algebraic geometry of links. Not a fusion space.",
+        "limit": "Off-path."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero KEEP/HOLD claim. Catalog note only. Not in the paper.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-25/2609.29811",
+      "paperId": "2609.29811",
+      "date": "2026-09-25",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. Off-path.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "A model of radiation damage in a messy material that the authors call a fracton model.",
+        "why": "This is not Haah's code, the X-cube, or a quantum memory. E-FR stays cut as hardware.",
+        "limit": "Word collision. Off-path."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero KEEP/HOLD claim. Catalog note only. Not in the paper.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-25/2609.28680",
+      "paperId": "2609.28680",
+      "date": "2026-09-25",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. Off-path.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "An oscillating electric field can turn the hidden spin pattern of an altermagnet into something a magnetic impurity can feel, and the authors sketch a Kondo logic gate from that.",
+        "why": "Floquet here is a condensed-matter drive, not a system clock and not a laser on a Coulomb barrier.",
+        "limit": "Does not bind E-TC (cut as clock) or S-L2 (nuclear tunneling). Off-path."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero KEEP/HOLD claim. Catalog note only. Not in the paper.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-25/2609.28770",
+      "paperId": "2609.28770",
+      "date": "2026-09-25",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fail, G5 fail. E-HOL denylist. G6 passes only because the paper does not claim Q_eng \u2248 1000.",
+      "score": "C unchanged. E-HOL stays CUT.",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "In a holographic model of a rotating plasma, the energy of a heavy quark\u2013antiquark pair depends on whether the pair sits still in the lab or in the rotating fluid.",
+        "why": "AdS/CFT stays on the reading list. A Wilson loop in a dual black hole is not a tokamak diagnostic.",
+        "limit": "E-HOL denylist. Cannot INCLUDE."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Denylist. Readable. Cannot INCLUDE without two independent C\u22654 sources, which these are not.",
+      "math": "AdS equations may be closed. They are not a reactor part.",
+      "autoGate": "miss A1, A2, A3, A6"
+    },
+    {
+      "id": "2026-09-25/2609.28644",
+      "paperId": "2609.28644",
+      "date": "2026-09-25",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fail, G5 fail. E-HOL denylist. G6 passes only because the paper does not claim Q_eng \u2248 1000.",
+      "score": "C unchanged. E-HOL stays CUT.",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "Two holographic theories are coupled and one is traced out, so the remaining theory looks like an open quantum system.",
+        "why": "A duality construction. Not a reactor encoder and not a processor.",
+        "limit": "E-HOL denylist. Cannot INCLUDE."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Denylist. Readable. Cannot INCLUDE without two independent C\u22654 sources, which these are not.",
+      "math": "AdS equations may be closed. They are not a reactor part.",
+      "autoGate": "miss A1, A2, A3, A6"
+    },
+    {
+      "id": "2026-09-25/2609.29710",
+      "paperId": "2609.29710",
+      "date": "2026-09-25",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fail, G5 fail. E-HOL denylist. G6 passes only because the paper does not claim Q_eng \u2248 1000.",
+      "score": "C unchanged. E-HOL stays CUT.",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "Entanglement entropy and pseudo-entropy are computed for a moving holographic plasma dual to a boosted black hole.",
+        "why": "Strongly coupled toy plasma in AdS, not a confined fusion plasma.",
+        "limit": "E-HOL denylist. Cannot INCLUDE."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Denylist. Readable. Cannot INCLUDE without two independent C\u22654 sources, which these are not.",
+      "math": "AdS equations may be closed. They are not a reactor part.",
+      "autoGate": "miss A1, A2, A3, A6"
+    },
     {
       "id": "2026-09-24/itb-rmp-2026",
       "paperId": "itb-rmp-2026",

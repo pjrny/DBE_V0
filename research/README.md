@@ -6,7 +6,7 @@ Three layers, never mixed into one score bar:
 2. **Claims** — `claims.json` frozen C/T/D/A table (E-S3, E-QEC, E-RL, …). Heuristic gauges are not C.
 3. **Version log** — `versions.json` + `CHANGELOG.md`. DBE and DBE-S version separately.
 
-Current freeze: **DBE-0.2.2** / **DBES-0.2.0** (reviewed 24 Sep 2026; no version bump).
+Current freeze: **DBE-0.2.2** / **DBES-0.2.0** (reviewed 25 Sep 2026; no version bump).
 
 The viewable tab (`lab.html` + `lab.js`) hosts five layers:
 

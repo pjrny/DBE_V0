@@ -1,0 +1,1086 @@
+{
+  "startedAt": "2026-09-25T14:06:03.095920+00:00",
+  "lookbackDays": 7,
+  "feeds": [
+    "https://arxiv.org/list/quant-ph/recent",
+    "https://arxiv.org/list/cond-mat.str-el/recent",
+    "https://arxiv.org/list/cond-mat.mes-hall/recent",
+    "https://arxiv.org/list/hep-th/recent",
+    "https://arxiv.org/list/physics.plasm-ph/recent",
+    "https://arxiv.org/search/advanced"
+  ],
+  "count": 37,
+  "papers": [
+    {
+      "id": "2609.26991v1",
+      "title": "Spin Configurations of Anyonic excitations in Moir\u00e9 Fractional Chern Insulators",
+      "authors": [
+        "Vadym Apalkov",
+        "Tapash Chakraborty"
+      ],
+      "date": "2026-09-22",
+      "url": "https://arxiv.org/abs/2609.26991v1",
+      "fields": [
+        "anyons"
+      ],
+      "coreIdea": "We have examined the nature of elementary excitations in particular, their spin polarization, in recently discovered zero-field fractional Chern insulator in twisted bilayer MoTe$_2$.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "anyons"
+      ]
+    },
+    {
+      "id": "2609.26892v1",
+      "title": "Transparent Domain Walls through Information Convex Sets",
+      "authors": [
+        "Jintae Kim",
+        "Amanda Gatto Lamas",
+        "Jacopo Gliozzi",
+        "Bowen Shi",
+        "Taylor L. Hughes",
+        "Jong Yeon Lee"
+      ],
+      "date": "2026-09-22",
+      "url": "https://arxiv.org/abs/2609.26892v1",
+      "fields": [
+        "anyons",
+        "topology",
+        "fusion-quantum"
+      ],
+      "coreIdea": "In $(2+1)$-dimensional topologically ordered many-body states, transparent (topologically deformable) domain walls are invisible to local topological probes, yet can modify the ground state degeneracy (GSD) and transmute anyons transported across them.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "anyons",
+        "topology",
+        "fusion-quantum"
+      ]
+    },
+    {
+      "id": "2609.25249v1",
+      "title": "Anyon Crystallization by Statistics",
+      "authors": [
+        "Zohar Komargodski",
+        "Xuzixiang Lou",
+        "Ivri Nagar",
+        "Domenico Orlando",
+        "Susanne Reffert",
+        "Amit Sever"
+      ],
+      "date": "2026-09-21",
+      "url": "https://arxiv.org/abs/2609.25249v1",
+      "fields": [
+        "anyons"
+      ],
+      "coreIdea": "We revisit the long-standing problem of the anyon gas.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "anyons"
+      ]
+    },
+    {
+      "id": "2609.25193v1",
+      "title": "Probing quantum spin liquids with multiple quantum coherences",
+      "authors": [
+        "Lukas Homeier",
+        "Simon Linsel",
+        "Lode Pollet",
+        "Ana Maria Rey"
+      ],
+      "date": "2026-09-21",
+      "url": "https://arxiv.org/abs/2609.25193v1",
+      "fields": [
+        "anyons",
+        "topology"
+      ],
+      "coreIdea": "Quantum simulators are beginning to prepare long-sought phases of matter that remain difficult to realize cleanly in materials.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "anyons",
+        "topology"
+      ]
+    },
+    {
+      "id": "2609.26881v1",
+      "title": "Fermion bag study of the two-dimensional Majorana-Hubbard model at finite hopping",
+      "authors": [
+        "Mark Johnston",
+        "Emilie Huffman"
+      ],
+      "date": "2026-09-22",
+      "url": "https://arxiv.org/abs/2609.26881v1",
+      "fields": [
+        "majorana"
+      ],
+      "coreIdea": "The two-dimensional Majorana-Hubbard model on the $\u03c0$-flux lattice involves the most local interaction possible for a lattice with one relativistic Majorana fermion per site.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "majorana"
+      ]
+    },
+    {
+      "id": "2609.25223v1",
+      "title": "Scaling of qubit coherence in quantum dot based Majorana chains: Rabi and Ramsey oscillations of Majorana qubits formed by four and six quantum dots",
+      "authors": [
+        "Haining Pan",
+        "Sankar Das Sarma"
+      ],
+      "date": "2026-09-21",
+      "url": "https://arxiv.org/abs/2609.25223v1",
+      "fields": [
+        "majorana"
+      ],
+      "coreIdea": "We present a theoretical study of the Rabi and Ramsey coherence time of Majorana-based qubits formed by double $N$-site quantum-dot artificial Kitaev chains, following the recent experimental realization arXiv:2607.09511.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "majorana"
+      ]
+    },
+    {
+      "id": "2609.26599v1",
+      "title": "Unraveling the Emergence of Slow Dynamics in U(1) Lattice Gauge Theories",
+      "authors": [
+        "Riccardo Andreoni",
+        "Zala Lenar\u010di\u010d",
+        "Zeno Bacciconi",
+        "Antonello Scardicchio",
+        "Marcello Dalmonte",
+        "Devendra Singh Bhakuni"
+      ],
+      "date": "2026-09-22",
+      "url": "https://arxiv.org/abs/2609.26599v1",
+      "fields": [
+        "fracton"
+      ],
+      "coreIdea": "The dynamics of gauge theories is of fundamental interest, with low-dimensional systems displaying a rich phenomenology beyond the rapid thermalization typical of QCD and non-Abelian theories.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "fracton"
+      ]
+    },
+    {
+      "id": "2609.25999v1",
+      "title": "Statistical mechanics of classical fractons on a line",
+      "authors": [
+        "Ylias Sadki",
+        "Abhishodh Prakash",
+        "S. L. Sondhi"
+      ],
+      "date": "2026-09-22",
+      "url": "https://arxiv.org/abs/2609.25999v1",
+      "fields": [
+        "fracton"
+      ],
+      "coreIdea": "We study the equilibrium statistical mechanics of one-dimensional classical Machian fractons: particles whose dynamics conserves a global dipole moment and whose Hamiltonian couples momentum differences through a position-dependent pair-inertia kernel.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "fracton"
+      ]
+    },
+    {
+      "id": "2609.27586v1",
+      "title": "Thouless Pumping of Wave Action in Photonic Time Crystals",
+      "authors": [
+        "Minwook Kyung",
+        "Younsung Kim",
+        "Kyungmin Lee",
+        "Hee Chul Park",
+        "Moon Jip Park",
+        "Bumki Min"
+      ],
+      "date": "2026-09-23",
+      "url": "https://arxiv.org/abs/2609.27586v1",
+      "fields": [
+        "time-crystal"
+      ],
+      "coreIdea": "A topological pump transports a conserved quantity.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "time-crystal"
+      ]
+    },
+    {
+      "id": "2609.27109v1",
+      "title": "Floquet-Bloch Theory for Dispersive Time-varying Metasurfaces",
+      "authors": [
+        "Mohammad Mojtaba Sadafi",
+        "Sandeep Inampudi",
+        "Hossein Mosallaei"
+      ],
+      "date": "2026-09-22",
+      "url": "https://arxiv.org/abs/2609.27109v1",
+      "fields": [
+        "time-crystal"
+      ],
+      "coreIdea": "Light-matter interaction in time-varying metasurfaces brings about phenomena that transcend the limits of static systems.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "time-crystal"
+      ]
+    },
+    {
+      "id": "2609.26462v1",
+      "title": "Quantum Fisher information of driven-dissipative systems from Keldysh path integrals",
+      "authors": [
+        "Malik Jirasek",
+        "Igor Lesanovsky",
+        "Viktoria Noel"
+      ],
+      "date": "2026-09-22",
+      "url": "https://arxiv.org/abs/2609.26462v1",
+      "fields": [
+        "time-crystal"
+      ],
+      "coreIdea": "Driven-dissipative many-body quantum systems can be exploited in quantum enhanced sensing protocols.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "time-crystal"
+      ]
+    },
+    {
+      "id": "2609.25201v1",
+      "title": "Measurement-Induced Phase Transitions and Logical-Space Localization in Floquet Monitored Clifford Circuits",
+      "authors": [
+        "Hyunsoo Ha",
+        "David A. Huse"
+      ],
+      "date": "2026-09-21",
+      "url": "https://arxiv.org/abs/2609.25201v1",
+      "fields": [
+        "time-crystal"
+      ],
+      "coreIdea": "An entanglement transition can occur without a corresponding transition in purification.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "time-crystal"
+      ]
+    },
+    {
+      "id": "2609.24327v1",
+      "title": "Non-Hermitian photonic time quasicrystal",
+      "authors": [
+        "Shuhang Chen",
+        "Zhi Zheng",
+        "Qi Zhu"
+      ],
+      "date": "2026-09-21",
+      "url": "https://arxiv.org/abs/2609.24327v1",
+      "fields": [
+        "time-crystal"
+      ],
+      "coreIdea": "Photonic time crystals amplify waves through temporal modulation.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "time-crystal"
+      ]
+    },
+    {
+      "id": "2609.28770v1",
+      "title": "Frame dependence of heavy-quark observables in a rotating strongly coupled plasma",
+      "authors": [
+        "Leila Shahkarami",
+        "Farid Charmchi"
+      ],
+      "date": "2026-09-23",
+      "url": "https://arxiv.org/abs/2609.28770v1",
+      "fields": [
+        "plasma",
+        "holography"
+      ],
+      "coreIdea": "In genuinely rotating holographic backgrounds, Wilson-loop observables are usually constructed for a quark--antiquark pair static with respect to the rotating plasma.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "plasma",
+        "holography"
+      ]
+    },
+    {
+      "id": "2609.28644v1",
+      "title": "A Holographic Open Quantum System",
+      "authors": [
+        "Ignacio Quiroz Vargas",
+        "Merna Youssef"
+      ],
+      "date": "2026-09-23",
+      "url": "https://arxiv.org/abs/2609.28644v1",
+      "fields": [
+        "holography"
+      ],
+      "coreIdea": "We construct a holographic open quantum system by coupling two CFTs through a double trace deformation and tracing out the bath degrees of freedom within the Schwinger-Keldysh formalism.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "holography"
+      ]
+    },
+    {
+      "id": "2609.28331v1",
+      "title": "Entropy applications in cosmology: spacetime thermodynamics, holographic dark energy, entropic gravity and beyond - a review",
+      "authors": [
+        "Emmanuel N. Saridakis",
+        "Giuseppe Gaetano Luciano",
+        "Andreas Lymperis",
+        "Eirini C. Telali"
+      ],
+      "date": "2026-09-23",
+      "url": "https://arxiv.org/abs/2609.28331v1",
+      "fields": [
+        "holography"
+      ],
+      "coreIdea": "Entropy has emerged as a key concept at the intersection of gravity, quantum theory, and cosmology, revealing deep connections between geometry, information, and thermodynamics.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "holography"
+      ]
+    },
+    {
+      "id": "2609.26875v1",
+      "title": "Collapse to extremality: The third law of black hole thermodynamics in quantum gravity",
+      "authors": [
+        "Gustavo J. Turiaci",
+        "Chih-Hung Wu"
+      ],
+      "date": "2026-09-22",
+      "url": "https://arxiv.org/abs/2609.26875v1",
+      "fields": [
+        "holography"
+      ],
+      "coreIdea": "We present a two-step construction to violate the classical third law of black hole thermodynamics for charged black holes in four dimensions.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "holography"
+      ]
+    },
+    {
+      "id": "2609.26641v1",
+      "title": "Density-driven reversal of flavour-entanglement anisotropy in the D3-D7 holographic conductor",
+      "authors": [
+        "Fuminori Okabayashi"
+      ],
+      "date": "2026-09-22",
+      "url": "https://arxiv.org/abs/2609.26641v1",
+      "fields": [
+        "holography"
+      ],
+      "coreIdea": "We study the leading probe-flavour contribution to equal-time spatial entanglement entropy in a homogeneous 3+1-dimensional strongly coupled conductor at finite temperature and charge density, realised holographically by the D3-D7 system and driven by a constant DC electric field.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "holography"
+      ]
+    },
+    {
+      "id": "2609.25857v1",
+      "title": "Numerical Sasaki--Einstein metrics and harmonic forms on del Pezzo links",
+      "authors": [
+        "Nakwoo Kim",
+        "Sejin Kim",
+        "Hoseob Shin"
+      ],
+      "date": "2026-09-22",
+      "url": "https://arxiv.org/abs/2609.25857v1",
+      "fields": [
+        "holography"
+      ],
+      "coreIdea": "We numerically construct the Sasaki--Einstein metric on the link of the cone over the second del Pezzo surface $\\mathrm{dP}_2$ and two primitive harmonic basic $(1,1)$-forms at its irregular volume-minimizing Reeb vector.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "holography"
+      ]
+    },
+    {
+      "id": "2609.25530v1",
+      "title": "Holographic description of RN-like black hole in bumblebee gravity",
+      "authors": [
+        "Jian-Peng Zhang",
+        "Bin Chen",
+        "Jiaju Zhang",
+        "Yu Zhang"
+      ],
+      "date": "2026-09-22",
+      "url": "https://arxiv.org/abs/2609.25530v1",
+      "fields": [
+        "holography"
+      ],
+      "coreIdea": "We study the holographic description of the RN-like black hole in bumblebee gravity, which is a vector-tensor theory with spontaneous Lorentz violation.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "holography"
+      ]
+    },
+    {
+      "id": "2609.24806v1",
+      "title": "Finite-Time Doppler Covariance Spectroscopy in the AdS/CFT correspondence",
+      "authors": [
+        "Feiyi Liu",
+        "Shiyang Chen",
+        "Yang Wang"
+      ],
+      "date": "2026-09-21",
+      "url": "https://arxiv.org/abs/2609.24806v1",
+      "fields": [
+        "holography"
+      ],
+      "coreIdea": "From a holographic perspective, we formulate an exact finite-duration covariance framework that resolves chirality in the AdS/CFT correspondence.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "holography"
+      ]
+    },
+    {
+      "id": "2609.24557v1",
+      "title": "On the (In)equivalence of de Sitter and Holographic Entanglement Entropies in Lovelock Gravity",
+      "authors": [
+        "Takamasa Kanai"
+      ],
+      "date": "2026-09-21",
+      "url": "https://arxiv.org/abs/2609.24557v1",
+      "fields": [
+        "holography"
+      ],
+      "coreIdea": "We investigate the relation between de Sitter entropy and holographic entanglement entropy in higher-curvature gravity and its braneworld realization.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "holography"
+      ]
+    },
+    {
+      "id": "2609.24227v1",
+      "title": "Critical Kasner scaling from Cauchy-horizon collapse near holographic phase transitions",
+      "authors": [
+        "Ling-Long Gao",
+        "Yan Liu",
+        "Hong-Da Lyu"
+      ],
+      "date": "2026-09-21",
+      "url": "https://arxiv.org/abs/2609.24227v1",
+      "fields": [
+        "majorana",
+        "holography"
+      ],
+      "coreIdea": "We study continuous scalar-hair bifurcations from stationary black holes with a nonextremal Cauchy horizon.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "majorana",
+        "holography"
+      ]
+    },
+    {
+      "id": "2609.23776v1",
+      "title": "Where's Kasner? OPE Signature of Kasner Exponents",
+      "authors": [
+        "Nejc \u010ceplak",
+        "Samuel Valach"
+      ],
+      "date": "2026-09-20",
+      "url": "https://arxiv.org/abs/2609.23776v1",
+      "fields": [
+        "holography"
+      ],
+      "coreIdea": "At large $N$, the analytic structure of holographic thermal correlation functions contains non-trivial information about the near-singularity region of dual black holes.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "holography"
+      ]
+    },
+    {
+      "id": "2609.29710v1",
+      "title": "Analytic Holographic Pseudo-Entropy in a Boosted BTZ Geometry",
+      "authors": [
+        "M. M. Daryaei Goki",
+        "M. Ali-Akbari"
+      ],
+      "date": "2026-09-20",
+      "url": "https://arxiv.org/abs/2609.29710v1",
+      "fields": [
+        "plasma",
+        "holography"
+      ],
+      "coreIdea": "We investigate holographic entanglement entropy and its generalization to pseudo-entropy in a boosted BTZ black hole geometry, which is holographically dual to a moving strongly coupled plasma.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "plasma",
+        "holography"
+      ]
+    },
+    {
+      "id": "2609.29871v1",
+      "title": "Study of low-frequency core-edge coupling in a tokamak: III. Core-localized MHD continuum pulsations \\& distant forced reconnection",
+      "authors": [
+        "Andreas Bierwage",
+        "Panith Adulsiriswad",
+        "Gyungjin Choi",
+        "Young-chul Ghim",
+        "Masatoshi Yagi"
+      ],
+      "date": "2026-09-24",
+      "url": "https://arxiv.org/abs/2609.29871v1",
+      "fields": [
+        "plasma"
+      ],
+      "coreIdea": "Slow magnetoacoustic pulsations (SMAPs) are found in MHD simulations of a tokamak plasma whose safety factor $q$ near the center is flat and slightly above unity ($q \\gtrsim 1$).",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "plasma"
+      ]
+    },
+    {
+      "id": "2609.29849v1",
+      "title": "Quasi-symmetric error field correction and applications to ITER",
+      "authors": [
+        "Gwang-Geun Seo",
+        "Jong-Kyu Park",
+        "S. J. Han",
+        "M. Dubrov"
+      ],
+      "date": "2026-09-24",
+      "url": "https://arxiv.org/abs/2609.29849v1",
+      "fields": [
+        "plasma"
+      ],
+      "coreIdea": "Reliable correction of nonaxisymmetric error fields (EFs) is essential to the safety and performance of tokamak operation.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "plasma"
+      ]
+    },
+    {
+      "id": "2609.29352v1",
+      "title": "Frequency-inference method for reduced modeling of energetic particle modes (EPM) utilizing resonant auto-optimization remnants of imperfect time-scale separation",
+      "authors": [
+        "Andreas Bierwage",
+        "Vin\u00edcius N. Duarte",
+        "Pablo Oyola",
+        "Kouji Shinohara",
+        "Roscoe B. White"
+      ],
+      "date": "2026-09-24",
+      "url": "https://arxiv.org/abs/2609.29352v1",
+      "fields": [
+        "plasma"
+      ],
+      "coreIdea": "Integrated codes simulating interactions between Alfv\u00e9n waves and fast ions in tokamak plasmas use perturbative models for the relatively slow processes of instability growth, saturation, chirping and bursting, and transport.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "plasma"
+      ]
+    },
+    {
+      "id": "2609.28193v1",
+      "title": "Alfv\u00e9nic high-frequency oscillations at the pedestal of JET plasmas",
+      "authors": [
+        "Leonor Roque",
+        "Paulo Rodrigues",
+        "Emilia R. Solano",
+        "JET contributors",
+        "The Eurofusion Tokamak Exploitation Team"
+      ],
+      "date": "2026-09-23",
+      "url": "https://arxiv.org/abs/2609.28193v1",
+      "fields": [
+        "plasma"
+      ],
+      "coreIdea": "Long-lived ($\\sim 10$ s) high-frequency oscillations (HFOs, $50-450$ kHz) near the plasma edge have been reported and experimentally described in L-H transition studies at JET and AUG.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "plasma"
+      ]
+    },
+    {
+      "id": "2609.28116v1",
+      "title": "Probabilistic and Geometry Aware Neural Surrogate of Scrape Off Layer Plasma Simulations",
+      "authors": [
+        "Gabriele Gianuzzo",
+        "Stefan Dasbach",
+        "Fleur Hendriks",
+        "Sven Wiesen",
+        "Vlado Menkovski"
+      ],
+      "date": "2026-09-23",
+      "url": "https://arxiv.org/abs/2609.28116v1",
+      "fields": [
+        "plasma"
+      ],
+      "coreIdea": "Fast surrogates for tokamak boundary-plasma simulation are typically deterministic regressors mapping a global operating point to a flattened vector of cell values.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "plasma"
+      ]
+    },
+    {
+      "id": "2609.27164v1",
+      "title": "Effects of the Internal Transport Barrier in the plasma confinement with Resonant Magnetic Perturbations",
+      "authors": [
+        "P. Haerter",
+        "L. C. Souza",
+        "R. L. Viana",
+        "I. L. Caldas"
+      ],
+      "date": "2026-09-22",
+      "url": "https://arxiv.org/abs/2609.27164v1",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "coreIdea": "In the pursuit of steady-state fusion energy, Advanced Tokamak regimes rely on Internal Transport Barriers (ITBs) with reversed magnetic shear.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "plasma",
+        "fusion-quantum"
+      ]
+    },
+    {
+      "id": "2609.24443v1",
+      "title": "Horizon-Aware Early Event Prediction for Tokamak Disruption Alarms",
+      "authors": [
+        "Takeshi Koshizuka",
+        "Takaharu Yaguchi"
+      ],
+      "date": "2026-09-21",
+      "url": "https://arxiv.org/abs/2609.24443v1",
+      "fields": [
+        "plasma"
+      ],
+      "coreIdea": "Reliable disruption prediction is essential for the safe operation of future tokamaks.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "plasma"
+      ]
+    },
+    {
+      "id": "2609.24256v1",
+      "title": "Geodesic Acoustic Modes in pair plasmas confined in tokamak magnetic fields",
+      "authors": [
+        "Alessandro Biancalani"
+      ],
+      "date": "2026-09-21",
+      "url": "https://arxiv.org/abs/2609.24256v1",
+      "fields": [
+        "plasma"
+      ],
+      "coreIdea": "This paper is devoted to the derivation of the dispersion relation of the Geodesic Acoustic Mode in pair plasmas, i.e.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "plasma"
+      ]
+    },
+    {
+      "id": "2609.23846v1",
+      "title": "Physics-Informed Kolmogorov-Arnold Networks for Grad-Shafranov Tokamak Equilibria",
+      "authors": [
+        "D. A. Kaltsas",
+        "A. Kuiroukidis",
+        "J. Liu",
+        "L. Magafas",
+        "G. N. Throumoulopoulos"
+      ],
+      "date": "2026-09-20",
+      "url": "https://arxiv.org/abs/2609.23846v1",
+      "fields": [
+        "plasma"
+      ],
+      "coreIdea": "We employ equation-driven, physics-constrained deep learning to solve the fixed-boundary Grad-Shafranov (GS) equilibrium problem, constructing axisymmetric magnetohydrodynamic equilibria with tokamak-relevant characteristics.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "plasma"
+      ]
+    },
+    {
+      "id": "2609.23296v1",
+      "title": "VEQDB: A Compact and Reconstructible Multi-Device Tokamak Equilibrium Database",
+      "authors": [
+        "Huasheng Xie",
+        "Ruohan Zhang",
+        "Xingyu Li",
+        "Feng Zhang",
+        "Zhengxiong Wang"
+      ],
+      "date": "2026-09-20",
+      "url": "https://arxiv.org/abs/2609.23296v1",
+      "fields": [
+        "plasma"
+      ],
+      "coreIdea": "Tokamak equilibria are commonly exchanged as gridded G-EQDSK files whose conventions, resolutions, and machine-specific formats impede cross-device comparisons and data-driven modeling.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "plasma"
+      ]
+    },
+    {
+      "id": "2609.23141v1",
+      "title": "Real-Time Plasma State Prediction via FPGA-Accelerated Quantized Recurrent Probabilistic Neural Networks",
+      "authors": [
+        "Daniel Gaytan-Villarreal",
+        "Aiken Xie",
+        "Tu Pham",
+        "Rohit Sonker",
+        "Chiara Amendola",
+        "Matteo Cremonesi",
+        "Cong Hao",
+        "Jeff Schneider"
+      ],
+      "date": "2026-09-19",
+      "url": "https://arxiv.org/abs/2609.23141v1",
+      "fields": [
+        "plasma"
+      ],
+      "coreIdea": "Real time plasma state estimation for control of Tokamak devices are challenging due to the stringent latency requirements of the plasma control system (PCS).",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "plasma"
+      ]
+    },
+    {
+      "id": "2609.22915v1",
+      "title": "Interaction renormalization and the plasma staircase",
+      "authors": [
+        "Alexander V. Milovanov",
+        "Alexander Iomin",
+        "Jens Juul Rasmussen"
+      ],
+      "date": "2026-09-19",
+      "url": "https://arxiv.org/abs/2609.22915v1",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "coreIdea": "We resolve an existing question concerning dynamical and structural stability of the E {\\times} B staircases in magnetically confined fusion plasma.",
+      "whyItMatters": "Live ingest; score against DBE pillars before promotion.",
+      "limitation": "Preprint. Heuristic tags and scores; not a peer-review verdict.",
+      "source": "arXiv API",
+      "importance": 52,
+      "confidence": 58,
+      "popularity": 70,
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "live",
+        "plasma",
+        "fusion-quantum"
+      ]
+    }
+  ],
+  "notes": "Foundational pillars stay in catalog.json (any date). This run only captures the sliding lookback window. Harvest 0\u2013100 scores are ingest metadata \u2014 not C/T/D/A. Do not merge this file into the frozen claim set.",
+  "protocol": "Ingest is not a version. Bind and score via research/score.py.",
+  "scoring": {
+    "scoredIds": [
+      "2609.30159",
+      "2609.29849",
+      "2609.29871",
+      "2609.29004",
+      "2609.28636",
+      "2609.28735",
+      "2609.30142",
+      "2609.28957",
+      "2609.29254",
+      "2609.29352",
+      "2609.30241",
+      "2609.29207",
+      "2609.28992",
+      "2609.28840",
+      "2609.28835",
+      "2609.28625",
+      "2609.28591",
+      "2609.28917",
+      "2609.28536",
+      "2609.29811",
+      "2609.28680",
+      "2609.28770",
+      "2609.28644",
+      "2609.29710"
+    ],
+    "unscoredDenylist": [
+      "2609.28331",
+      "2609.26641",
+      "2609.25530",
+      "2609.24557",
+      "2609.23776"
+    ],
+    "note": "Ingest is not a version. Harvest 0-100 gauges are not C/T/D/A."
+  }
+}

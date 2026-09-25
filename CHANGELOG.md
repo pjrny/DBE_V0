@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.4.5] - 2026-09-25
+### Added
+- Daily observatory run (lookback 7 days). No paper version bump. Non-Abelian sheaf qLDPC, ITER quasi-symmetric error-field correction, and a pair-density-wave Majorana lattice are queued. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
+
+### Changed
+- Command-strip date stamp moved to 2026-09-25 so this-week counts the new harvest.
+
 ## [0.4.4] - 2026-09-24
 ### Added
 - Daily observatory run (lookback 7 days). No paper version bump. ITB–RMP confinement trade-off, a SOLPS-ITER surrogate, JET pedestal Alfvén modes, KSTAR electron-cyclotron startup, a Dijkgraaf–Witten rank bound, and a quantum-dot Majorana coherence simulation are queued. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.

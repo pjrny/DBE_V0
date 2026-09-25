@@ -35,3 +35,6 @@ Never rewrite history. A reversed CUT is a new MAJOR line.
 2026-09-23  library  NO BUMP  sixth daily run. Gay–Jeronimo qLTCs queued (A5 bare arXiv). Staircase, HI categories, Schwinger assistance, Majorana films queued. Fracton / Floquet-clock / holography rejected. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
 
 2026-09-24  library  NO BUMP  seventh daily run. ITB–RMP, SOLPS surrogate, JET Alfvén pedestal, KSTAR EC startup, DW rank bound, Abelian domain walls, moiré FCI, fusion-category boundaries, and quantum-dot Majorana coherence queued. Time-crystal photonics and holography rejected. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
+
+2026-09-25  library  NO BUMP  eighth daily run. Non-Abelian sheaf qLDPC, ITER quasi-symmetric error-field correction, core sound-wave coupling, and a flux-conditioned vison crystal queued. PDW half-vortex Majoranas queued under E-MZM (WATCH, A1 fail). Holography denylist held. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
+
