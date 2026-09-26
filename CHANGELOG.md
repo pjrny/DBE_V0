@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.6] - 2026-09-26
+### Added
+- Daily observatory run (lookback 7 days). No paper version bump. Ultra-high-rate quantum codes, chromatic dynamical decoupling, WEST ICRF edge singularities, and a gyrokinetic saturation-rule solver are queued. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
+
+### Changed
+- Command-strip date stamp moved to 2026-09-26 so this-week counts the new harvest.
+
 All notable changes to this project will be documented in this file.
 
 ## [0.4.5] - 2026-09-25

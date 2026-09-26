@@ -1,6 +1,570 @@
 {
-  "asOf": "2026-09-25",
+  "asOf": "2026-09-26",
   "cards": [
+    {
+      "id": "2026-09-26/2609.30069",
+      "paperId": "2609.30069",
+      "date": "2026-09-26",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: a code-parameter table is not the superconducting or trapped-ion processor that carries E-QEC's C4. G3 passes because column weight trades distance against check weight; nothing scales without a bound. Falsifier this quarter: a decoder at p=0.1% on one of the listed blocks whose logical error is worse than the surface-code patch with the same qubit count.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Google's below-threshold surface-code experiment is what earned E-QEC its C4. High-rate constructions already sit in the qLDPC literature (Panteleev\u2013Kalachev and follow-ups). A phenomenological table at 0.1% is not that device and is not a fusion measurement.",
+      "ledger": "Code examples only: [[90,21,11]], [[140,31,15]], [[200,43,20]], check weight 10, physical error 0.1%. Not a Q term.",
+      "plain": {
+        "core": "A design map for quantum codes that use very few physical qubits per logical qubit. Raising the column weight buys a larger distance in a short block, at the cost of heavier checks. At a 0.1% physical error rate the extra distance often wins. Examples include the non-CSS codes [[90,21,11]], [[140,31,15]], and [[200,43,20]] with check weight 10.",
+        "why": "E-QEC is the error layer on Bus B. A smaller block with a real distance is the overhead question surface-code hardware still has to answer. This is a design table, not a new bus and not an S3 fusion gate.",
+        "limit": "Bare arXiv. Noise model is phenomenological. No decoder running on a device, and no threshold number that tightens the ledger. Cannot raise C4."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC KEEP). A2 miss (G4). A3 miss (action is HOLD, not INCLUDE). A4 miss: no ledger bound tightens and C stays C4. A5 miss: bare arXiv. Harvest confidence 68 is under 80, so it is not an ADD. Not a new pillar.",
+      "math": "Pair-partition template plus a halving map. Column weight is the design knob against check weight. Assumes independent phenomenological errors at p=0.1% and that the listed distances survive the symmetry-informed logical basis they construct.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-26/2609.30175",
+      "paperId": "2609.30175",
+      "date": "2026-09-26",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: IBM state preservation under dynamical decoupling is not a surface-code or qLDPC logical-error measurement, even though the chip is the right machine class. G3 passes: pulse repetition rate is bounded by 1/C. Falsifier this year: on the same 127-qubit backend, robust CGDD fails to use fewer pulses than robust CHaDD at equal protection, or loses the idle state faster.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Viola\u2013Lloyd\u2013Knill\u2013Laflamme dynamical decoupling, and Lidar's later reviews, already define open-loop suppression. The C4 on E-QEC is Google's surface code operated below threshold, which reports a logical error, not an idle-state survival curve.",
+      "ledger": "127-qubit IBM, chromatic number C=3; CGDD pulse repetition rate 1/C. Not P_aux and not a code threshold.",
+      "plain": {
+        "core": "Multi-qubit dynamical decoupling usually pulses more often as the chip grows. Coloring the hardware graph and using binary or Gray matrices cuts how often each qubit is pulsed, down to about one pulse per color, if you accept a deeper sequence. On a 127-qubit IBM processor with three colors, the sparser sequences win at short times when the pulses are not robust; robust pulses erase most of that win, and the Gray version uses the fewest pulses.",
+        "why": "E-QEC hardware still has to keep idle qubits quiet. This is an open-loop pulse schedule on a superconducting processor, which is the same machine class as the surface-code experiments. It is not itself a surface code or a qLDPC logical qubit.",
+        "limit": "State preservation, not a logical error rate below a code threshold. Bare arXiv, so it cannot raise C. The figure of merit (pulse repetition rate) is not a term in the Q ledger."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass. A2 miss (G4: right hardware, wrong observable). A4 miss. A5 miss: bare arXiv cannot raise C, and one IBM preprint is not a replicated surface-code result. Importance 86 with confidence 72 is not an ADD (confidence < 80). No new mechanism.",
+      "math": "Hardware graph colored with C colors. CBDD and CGDD assign binary or Gray rows; depth 2^C and PRR \u2264 1/C for C>2. Assumes the coupling graph's chromatic number and that coherent over-rotation, not T1, dominates the short-time comparison.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-26/2609.30155",
+      "paperId": "2609.30155",
+      "date": "2026-09-26",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: a cold-plasma finite-element study is not a closed-loop controller on WEST or DIII-D. G3 passes: collisions replace the singularity with a finite micrometer peak; the field does not stay infinite. Falsifier this year: a WEST low-density ICRF shot whose impurity and load match the cold-plasma peak without resolving Bernstein scales.",
+      "score": "E-RL C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Seo et al., Nature 2024, and Rothstein et al., Nucl. Fusion 2026, are closed-loop plasma control. This paper is an antenna-model warning. The authors' own conclusion is the disputer: edge collisions do not remove the need for hot-plasma length scales.",
+      "ledger": "Peak scales of micrometers after collisions. No P_drive, no Q_sci, no Q_eng.",
+      "plain": {
+        "core": "A fusion plant may want a thin edge plasma so ion-cyclotron antennas do not sputter the wall. WEST has already run that way with little impurity. The usual cold-plasma formula then predicts infinite radiofrequency electric fields. Collisions make the peaks finite but only micrometers wide, which a 2D finite-element mesh can resolve. Those peaks are still as sharp as the hot-plasma physics the cold model left out.",
+        "why": "E-RL's actuators include radiofrequency heating. A controller that trusts a cold-plasma antenna model in the low-density edge will be aiming at a singularity. This is a warning for Bus A, not a closed control loop, so M2 stays open.",
+        "limit": "No coil command, no latency budget, no disruption-rate comparison with DIII-D, TCV, or WEST's own controller. Micrometer scales are not a P_drive entry."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-RL KEEP). A2 miss (G4). A4/A5 miss. Not ADD. Does not close M2.",
+      "math": "Cold-plasma dielectric with a collision term; analytic peak width at the lower-hybrid resonance and along resonance cones; 2D finite elements with exponential mesh refinement. Assumes a low edge density of the WEST low-sputtering regime and a fluid collision frequency.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-26/2609.29336",
+      "paperId": "2609.29336",
+      "date": "2026-09-26",
+      "bind": [
+        "S-L3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: a quasilinear turbulent-transport solver is not the driven-barrier Vlasov hole-burning rate S-L3 keeps in the fusion ledger. G3 passes: the saturation rule is a calibrated closure, not an unbounded cross-section. Falsifier this quarter: a published nonlinear case, already in the CGYRO set or a new one, where the Bayesian SAT3 band misses the heat flux by more than the reported model-form error.",
+      "score": "S-L3 C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nonlinear gyrokinetics (GENE, CGYRO) are the baseline the paper itself uses. Quasilinear saturation rules are known to miss avalanches and strong zonal-flow regulation. Nothing here is a reactivity ratio R_drive/R_thermal, and PRC 109, 044605 still sets the Layer-2 field cost.",
+      "ledger": "SAT3 coefficients fitted to published CGYRO cases, with a split between coefficient uncertainty and model-form uncertainty. No P_fusion, P_drive, or P_rad.",
+      "plain": {
+        "core": "Full gyrokinetic turbulence is too slow to sit inside a pulse planner, so people use a quasilinear shortcut closed by a saturation rule. PQLS is that shortcut in general geometry, electromagnetic and collisional, and it matches GENE growth rates. The saturation rule (SAT3) is fitted to published nonlinear CGYRO cases with a Bayesian split between coefficient error and model-form error, and the resulting profiles track the full simulation.",
+        "why": "S-L3 says keep the kinetic solvers in the rate. A differentiable quasilinear solver with an honest uncertainty on its closure is a methods result on that shelf. It does not compute a driven-barrier reactivity, and it does not write a plant Q.",
+        "limit": "The closure is still a fit. Zonal flows and avalanches can leave the quasilinear picture. No hole-burning, no SRS/SBS, no P_fusion. Bare arXiv."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (S-L3 KEEP). A2 miss (G4). A4 miss: transport uncertainty is not a Q-ledger term. A5 miss: bare arXiv. Not ADD. Not coupled into a plant Q (M7 still open).",
+      "math": "Linear electromagnetic gyrokinetic eigenvalue problem in general geometry, benchmarked to GENE. SAT3 closure written as Bayesian inference on published nonlinear CGYRO fluxes. Assumes the quasilinear weight remains a valid proxy for the saturated flux.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-26/2609.28924",
+      "paperId": "2609.28924",
+      "date": "2026-09-26",
+      "bind": [
+        "E-MZM"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: an effective model of a minimal quantum-dot Kitaev chain is not a wire with independent X and Z logicals and a gap that scales. Falsifier for M5 remains: those two logicals plus gap scaling. This paper does not provide them. Poor-man's modes staying gate-capable without that scaling keeps E-MZM off the load-bearing path.",
+      "score": "E-MZM C1 T3 D3 A2 stays. WATCH. Not load-bearing.",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Poor-man's Majoranas in a two- or three-site Kitaev chain are the short-chain Andreev platform, not a topological gap that grows with length (Leijnse and Flensberg; the Nature editorial caveat on Majorana 1). No public X-plus-Z logical on Majorana 2. S3 braid-plus-fusion on Quantinuum H2 remains the primitive we actually have.",
+      "ledger": "none",
+      "plain": {
+        "core": "Short quantum-dot Kitaev chains host poor-man's Majorana modes whose spin was usually ignored. The authors couple that parity qubit to an ordinary spin qubit. One chain gives an anisotropic exchange; two chains give a coupling you can tune with the superconducting phase. They then show, in the model, universal control of the parity qubit, a readout, and an entangling gate.",
+        "why": "E-MZM is on watch until M5. A gate set on poor-man's modes shows the mimic platform can look like a qubit. It does not show a topological gap that grows with wire length, and it does not supply independent X and Z logicals.",
+        "limit": "Effective model of a minimal Kitaev chain. Poor-man's end modes are the mimic class (Andreev substitutes included). Does not move C1. Not load-bearing."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-MZM is WATCH, not KEEP or HOLD. A2 miss (G4). Cannot ADD and cannot raise C. C1 stays because the mimic is real theory, not a conservation-law failure. Useful for M5 only.",
+      "math": "Spinful poor-man's Majorana wavefunctions on minimal Kitaev chains at finite Zeeman field. Parity\u2013spin coupling is an anisotropic exchange, or a phase-tunable tensor when two chains are used. Assumes the low-energy projection onto the parity and spin qubits remains valid at the drive speeds they quote.",
+      "autoGate": "miss A1, A2, A3, A5"
+    },
+    {
+      "id": "2026-09-26/2609.28331",
+      "paperId": "2609.28331",
+      "date": "2026-09-26",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. No DBE equation, wrong platform, no falsifier aimed at a KEEP claim.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "A review of entropy ideas in cosmology: holographic dark energy, entropic gravity, and spacetime thermodynamics.",
+        "why": "Holography as cosmology. E-HOL is a denylist. Not a reactor encoding.",
+        "limit": "Off-path. Not in the paper."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Denylist E-HOL. Readable, never INCLUDE.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-26/2609.26641",
+      "paperId": "2609.26641",
+      "date": "2026-09-26",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. No DBE equation, wrong platform, no falsifier aimed at a KEEP claim.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "Entanglement anisotropy of a flavored holographic conductor (D3-D7) driven by a DC electric field.",
+        "why": "AdS condensed-matter dual. Not a tokamak boundary code and not on the bus.",
+        "limit": "Off-path. Not in the paper."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Denylist E-HOL. Readable, never INCLUDE.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-26/2609.25530",
+      "paperId": "2609.25530",
+      "date": "2026-09-26",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. No DBE equation, wrong platform, no falsifier aimed at a KEEP claim.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "A holographic account of a charged black hole in a theory that breaks Lorentz symmetry with a vector field.",
+        "why": "Gravity dual. E-HOL stays cut from the engine.",
+        "limit": "Off-path. Not in the paper."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Denylist E-HOL. Readable, never INCLUDE.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-26/2609.24557",
+      "paperId": "2609.24557",
+      "date": "2026-09-26",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. No DBE equation, wrong platform, no falsifier aimed at a KEEP claim.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "Compares de Sitter entropy with holographic entanglement entropy in higher-curvature gravity.",
+        "why": "No code, no plasma, no ledger term. Denylist.",
+        "limit": "Off-path. Not in the paper."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Denylist E-HOL. Readable, never INCLUDE.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-26/2609.23776",
+      "paperId": "2609.23776",
+      "date": "2026-09-26",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. No DBE equation, wrong platform, no falsifier aimed at a KEEP claim.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "Large-N thermal correlators are used as a signature of Kasner exponents near a holographic black-hole singularity.",
+        "why": "Reading for holography. Not an INCLUDE. The denylist does not move.",
+        "limit": "Off-path. Not in the paper."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Denylist E-HOL. Readable, never INCLUDE.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-26/2609.28962",
+      "paperId": "2609.28962",
+      "date": "2026-09-26",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. No DBE equation, wrong platform, no falsifier aimed at a KEEP claim.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "A solvable evaporation model built from coupled Sachdev\u2013Ye\u2013Kitaev systems, in which a black hole is suddenly coupled to a colder bath.",
+        "why": "The word Kitaev here is a random-matrix model, not a braid. SYK evaporation is E-HOL reading.",
+        "limit": "Off-path. Not in the paper."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Denylist E-HOL. Readable, never INCLUDE.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-26/2609.29137",
+      "paperId": "2609.29137",
+      "date": "2026-09-26",
+      "bind": [
+        "E-TC"
+      ],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. No DBE equation, wrong platform, no falsifier aimed at a KEEP claim.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "Driving a non-Hermitian Kitaev chain through a broken-spectrum region amplifies the memory of how the state was prepared, for a finite time.",
+        "why": "E-TC is cut as a clock. A transient memory in a non-Hermitian chain is not a metronome and not a Majorana logical qubit.",
+        "limit": "Off-path. Not in the paper."
+      },
+      "claimDelta": "none",
+      "whyQueued": "E-TC remains CUT as a clock. Not a version.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-26/2609.29082",
+      "paperId": "2609.29082",
+      "date": "2026-09-26",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. No DBE equation, wrong platform, no falsifier aimed at a KEEP claim.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "A mean-field Bose condensate on a bosonic Kitaev chain forms a staggered phase once pairing is strong enough.",
+        "why": "Bosons, not fermion zero modes. Does not touch E-MZM's logical-qubit test.",
+        "limit": "Off-path. Not in the paper."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero KEEP/HOLD claim. Catalog note only. Not in the paper.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-26/2609.29247",
+      "paperId": "2609.29247",
+      "date": "2026-09-26",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. No DBE equation, wrong platform, no falsifier aimed at a KEEP claim.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "A bridge that seeds the nonlinear MHD code MPI-AMRVAC with linear modes from Legolas. One example is an interchange mode in a straight tokamak; the others are solar and astrophysical.",
+        "why": "A unit-test tokamak is not a disruption metric and not a coil API. E-RL is not moved.",
+        "limit": "Off-path. Not in the paper."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero KEEP/HOLD claim. Catalog note only. Not in the paper.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-26/2609.29257",
+      "paperId": "2609.29257",
+      "date": "2026-09-26",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. No DBE equation, wrong platform, no falsifier aimed at a KEEP claim.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "The quadratic density response of non-interacting fermions, with a classical limit taken from the Vlasov equation. Aimed at warm dense matter.",
+        "why": "Vlasov appears as a warm-dense-matter limit, not as hole-burning or a fusion reactivity. S-L3 is not moved.",
+        "limit": "Off-path. Not in the paper."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero KEEP/HOLD claim. Catalog note only. Not in the paper.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-26/2609.29325",
+      "paperId": "2609.29325",
+      "date": "2026-09-26",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. No DBE equation, wrong platform, no falsifier aimed at a KEEP claim.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "A sampling scheme for strong-field QED event rates in intense lasers and pulsar magnetospheres.",
+        "why": "Pair-production sampling is not laser-assisted DT tunneling. It does not beat the PRC 109 field bound and does not enter the ledger.",
+        "limit": "Off-path. Not in the paper."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero KEEP/HOLD claim. Catalog note only. Not in the paper.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-26/2609.29215",
+      "paperId": "2609.29215",
+      "date": "2026-09-26",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. No DBE equation, wrong platform, no falsifier aimed at a KEEP claim.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "Asks whether chaotic open quantum systems have eigenoperators that look Haar-random, using entanglement of Liouvillian eigenoperators.",
+        "why": "Lindblad here is a chaos diagnostic, not a plasma coherence penalty P_coh(n,T). S-L1 is not moved.",
+        "limit": "Off-path. Not in the paper."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero KEEP/HOLD claim. Catalog note only. Not in the paper.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-26/2609.30225",
+      "paperId": "2609.30225",
+      "date": "2026-09-26",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G1 fail, G4 fail, G5 fail. No DBE equation, wrong platform, no falsifier aimed at a KEEP claim.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive we have; Seo / Rothstein define the plant attach; PRC 109, 044605 defines the Layer-2 field cost. This paper tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "A variational ansatz of superposed Gaussian packets for stochastic trajectories unraveled from a bosonic master equation.",
+        "why": "An open-system solver for bosons. Not a fusion density matrix and not a code threshold.",
+        "limit": "Off-path. Not in the paper."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero KEEP/HOLD claim. Catalog note only. Not in the paper.",
+      "math": "Not a DBE rate, control map, or code threshold.",
+      "autoGate": "miss A1, A2, A3"
+    },
     {
       "id": "2026-09-25/2609.30159",
       "paperId": "2609.30159",

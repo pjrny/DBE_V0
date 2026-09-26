@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T14:45:00+00:00",
+  "generatedAt": "2026-09-26T14:10:00+00:00",
   "lookback": "1y+",
   "northStar": "Q=1000",
   "feeds": [
@@ -134,6 +134,7 @@
         "nonabelian-qldpc"
       ],
       "blockers": [
+        "2026-09-26: no new S3 braid-plus-fusion result. Fusion measurement stays in the gate set.",
         "2026-09-25: non-Abelian sheaf qLDPC stays queued under E-QEC. It does not replace fusion measurement on E-S3.",
         "Fusion measurement must stay in the gate set; braid-only S3 is not universal.",
         "2026-09-24: DW rank bound and Abelian domain walls do not replace fusion measurement."
@@ -172,6 +173,7 @@
         "floquet-majorana-codes"
       ],
       "blockers": [
+        "2026-09-26: poor-man's Majorana parity\u2013spin gates are a mimic platform. Still no topological-gap X and Z logicals.",
         "2026-09-25: PDW half-vortex Majorana lattice is Hartree\u2013Fock. Still no independent X and Z logicals.",
         "No independent X and Z logicals plus gap scaling (M5). Mimic-prone.",
         "2026-09-24: four- vs six-dot coherence simulation does not supply independent X and Z logicals."
@@ -267,6 +269,7 @@
         "fracton-holography"
       ],
       "blockers": [
+        "2026-09-26: six AdS/cosmology/SYK papers rejected, including five left unscored on 25 Sep. Denylist holds.",
         "2026-09-25: three more AdS plasma/open-system papers rejected. Denylist holds.",
         "Denylist. No energy accounting. Not a reactor/processor part."
       ],
@@ -298,6 +301,7 @@
         "topo-dynamics"
       ],
       "blockers": [
+        "2026-09-26: WEST low-density ICRF singularities do not close M2. No coil command and no latency.",
         "2026-09-25: ITER quasi-symmetric error-field correction and core sound-wave pulsations do not close M2.",
         "Must beat a lab baseline on one disruption-relevant metric (M2).",
         "2026-09-24: ITB\u2013RMP map, SOL surrogate, JET Alfv\u00e9n ID, and KSTAR startup do not close M2."
@@ -335,6 +339,7 @@
       ],
       "amplifies": [],
       "blockers": [
+        "2026-09-26: PQLS calibrates SAT3 to CGYRO. Transport solver only. No Q_eng term. M1 and M7 stay open.",
         "Q=1000 is a ledger stress test, not an output. Missing coupled P_coh/P_drive/P_rad terms (M1, M7)."
       ],
       "limitation": "Forbids naive WKB, unbounded cross-section scaling, perfect coherence.",
@@ -476,6 +481,7 @@
       ],
       "amplifies": [],
       "blockers": [
+        "2026-09-26: ultra-high-rate code templates are queued on E-QEC only. They are not an interface contract for this pillar.",
         "2026-09-25: sheaf qLDPC is a good-code proof, not an interface contract. Still QUEUE.",
         "Needs an interface contract before MAJOR."
       ],
@@ -8814,9 +8820,700 @@
         "scored",
         "MHD"
       ]
+    },
+    {
+      "id": "2609.30069",
+      "arxiv": "2609.30069",
+      "title": "Design Principles for Ultra-High-Rate Quantum Codes",
+      "authors": [
+        "Jong Yeon Lee",
+        "Koki Okada",
+        "Nishad Maskara",
+        "Kenta Kasai",
+        "Hengyun Zhou"
+      ],
+      "date": "2026-09-24",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2609.30069",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "tags": [
+        "daily-run",
+        "2026-09-26",
+        "scored",
+        "qec"
+      ],
+      "importance": 84,
+      "confidence": 68,
+      "popularity": 62,
+      "coreIdea": "A design map for quantum codes that use very few physical qubits per logical qubit. Raising the column weight buys a larger distance in a short block, at the cost of heavier checks. At a 0.1% physical error rate the extra distance often wins. Examples include the non-CSS codes [[90,21,11]], [[140,31,15]], and [[200,43,20]] with check weight 10.",
+      "whyItMatters": "E-QEC is the error layer on Bus B. A smaller block with a real distance is the overhead question surface-code hardware still has to answer. This is a design table, not a new bus and not an S3 fusion gate.",
+      "limitation": "Bare arXiv. Noise model is phenomenological. No decoder running on a device, and no threshold number that tightens the ledger. Cannot raise C4.",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false
+    },
+    {
+      "id": "2609.30175",
+      "arxiv": "2609.30175",
+      "title": "Trading Circuit Depth for Pulse Sparsity in Chromatic Dynamical Decoupling",
+      "authors": [
+        "Amy F. Brown",
+        "Daniel A. Lidar"
+      ],
+      "date": "2026-09-24",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2609.30175",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "tags": [
+        "daily-run",
+        "2026-09-26",
+        "scored",
+        "dd"
+      ],
+      "importance": 86,
+      "confidence": 72,
+      "popularity": 66,
+      "coreIdea": "Multi-qubit dynamical decoupling usually pulses more often as the chip grows. Coloring the hardware graph and using binary or Gray matrices cuts how often each qubit is pulsed, down to about one pulse per color, if you accept a deeper sequence. On a 127-qubit IBM processor with three colors, the sparser sequences win at short times when the pulses are not robust; robust pulses erase most of that win, and the Gray version uses the fewest pulses.",
+      "whyItMatters": "E-QEC hardware still has to keep idle qubits quiet. This is an open-loop pulse schedule on a superconducting processor, which is the same machine class as the surface-code experiments. It is not itself a surface code or a qLDPC logical qubit.",
+      "limitation": "State preservation, not a logical error rate below a code threshold. Bare arXiv, so it cannot raise C. The figure of merit (pulse repetition rate) is not a term in the Q ledger.",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false
+    },
+    {
+      "id": "2609.30155",
+      "arxiv": "2609.30155",
+      "title": "Singularities of the cold plasma theory: Modeling challenges for ICRF operation in low-density edge plasma",
+      "authors": [
+        "Wouter Tierens",
+        "Chris Klepper",
+        "Raymond Diab",
+        "Guillaume Urbanczyk"
+      ],
+      "date": "2026-09-24",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2609.30155",
+      "fields": [
+        "plasma"
+      ],
+      "role": "week",
+      "tags": [
+        "daily-run",
+        "2026-09-26",
+        "scored",
+        "ICRF"
+      ],
+      "importance": 78,
+      "confidence": 66,
+      "popularity": 54,
+      "coreIdea": "A fusion plant may want a thin edge plasma so ion-cyclotron antennas do not sputter the wall. WEST has already run that way with little impurity. The usual cold-plasma formula then predicts infinite radiofrequency electric fields. Collisions make the peaks finite but only micrometers wide, which a 2D finite-element mesh can resolve. Those peaks are still as sharp as the hot-plasma physics the cold model left out.",
+      "whyItMatters": "E-RL's actuators include radiofrequency heating. A controller that trusts a cold-plasma antenna model in the low-density edge will be aiming at a singularity. This is a warning for Bus A, not a closed control loop, so M2 stays open.",
+      "limitation": "No coil command, no latency budget, no disruption-rate comparison with DIII-D, TCV, or WEST's own controller. Micrometer scales are not a P_drive entry.",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "pillarId": "plasma-rl",
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false
+    },
+    {
+      "id": "2609.29336",
+      "arxiv": "2609.29336",
+      "title": "PQLS: A Quasilinear Gyrokinetic Transport Solver with a Bayesian Saturation-Rule Closure",
+      "authors": [
+        "F. Wilms",
+        "A. Agrawal",
+        "J. J. Freigang",
+        "T. F. Neiser",
+        "B. J. Frei",
+        "O. Meneghini"
+      ],
+      "date": "2026-09-24",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2609.29336",
+      "fields": [
+        "plasma"
+      ],
+      "role": "week",
+      "tags": [
+        "daily-run",
+        "2026-09-26",
+        "scored",
+        "gyrokinetic"
+      ],
+      "importance": 80,
+      "confidence": 68,
+      "popularity": 58,
+      "coreIdea": "Full gyrokinetic turbulence is too slow to sit inside a pulse planner, so people use a quasilinear shortcut closed by a saturation rule. PQLS is that shortcut in general geometry, electromagnetic and collisional, and it matches GENE growth rates. The saturation rule (SAT3) is fitted to published nonlinear CGYRO cases with a Bayesian split between coefficient error and model-form error, and the resulting profiles track the full simulation.",
+      "whyItMatters": "S-L3 says keep the kinetic solvers in the rate. A differentiable quasilinear solver with an honest uncertainty on its closure is a methods result on that shelf. It does not compute a driven-barrier reactivity, and it does not write a plant Q.",
+      "limitation": "The closure is still a fit. Zonal flows and avalanches can leave the quasilinear picture. No hole-burning, no SRS/SBS, no P_fusion. Bare arXiv.",
+      "claimIds": [
+        "S-L3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "pillarId": "fusion-q1000",
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false
+    },
+    {
+      "id": "2609.28924",
+      "arxiv": "2609.28924",
+      "title": "Quantum Gates Built on a Spin Qubit and a Kitaev Parity Qubit",
+      "authors": [
+        "Zhi-Hai Liu",
+        "Jiang Zhang",
+        "Guilu Long",
+        "H. Q. Xu"
+      ],
+      "date": "2026-09-24",
+      "venue": "arXiv cond-mat.mes-hall",
+      "url": "https://arxiv.org/abs/2609.28924",
+      "fields": [
+        "majorana"
+      ],
+      "role": "week",
+      "tags": [
+        "daily-run",
+        "2026-09-26",
+        "scored",
+        "M5"
+      ],
+      "importance": 74,
+      "confidence": 56,
+      "popularity": 50,
+      "coreIdea": "Short quantum-dot Kitaev chains host poor-man's Majorana modes whose spin was usually ignored. The authors couple that parity qubit to an ordinary spin qubit. One chain gives an anisotropic exchange; two chains give a coupling you can tune with the superconducting phase. They then show, in the model, universal control of the parity qubit, a readout, and an entangling gate.",
+      "whyItMatters": "E-MZM is on watch until M5. A gate set on poor-man's modes shows the mimic platform can look like a qubit. It does not show a topological gap that grows with wire length, and it does not supply independent X and Z logicals.",
+      "limitation": "Effective model of a minimal Kitaev chain. Poor-man's end modes are the mimic class (Andreev substitutes included). Does not move C1. Not load-bearing.",
+      "claimIds": [
+        "E-MZM"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "pillarId": "majorana-braids",
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false
+    },
+    {
+      "id": "2609.28331",
+      "arxiv": "2609.28331",
+      "title": "Entropy applications in cosmology: spacetime thermodynamics, holographic dark energy, entropic gravity and beyond - a review",
+      "authors": [
+        "Emmanuel N. Saridakis",
+        "Giuseppe Gaetano Luciano",
+        "Andreas Lymperis",
+        "Eirini C. Telali"
+      ],
+      "date": "2026-09-23",
+      "venue": "arXiv hep-th",
+      "url": "https://arxiv.org/abs/2609.28331",
+      "fields": [
+        "holography"
+      ],
+      "role": "off-path",
+      "tags": [
+        "daily-run",
+        "2026-09-26",
+        "rejected"
+      ],
+      "importance": 28,
+      "confidence": 36,
+      "popularity": 30,
+      "coreIdea": "A review of entropy ideas in cosmology: holographic dark energy, entropic gravity, and spacetime thermodynamics.",
+      "whyItMatters": "Holography as cosmology. E-HOL is a denylist. Not a reactor encoding.",
+      "limitation": "Off-path. Not in the paper.",
+      "claimIds": [
+        "E-HOL"
+      ],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false
+    },
+    {
+      "id": "2609.26641",
+      "arxiv": "2609.26641",
+      "title": "Density-driven reversal of flavour-entanglement anisotropy in the D3-D7 holographic conductor",
+      "authors": [
+        "Fuminori Okabayashi"
+      ],
+      "date": "2026-09-22",
+      "venue": "arXiv hep-th",
+      "url": "https://arxiv.org/abs/2609.26641",
+      "fields": [
+        "holography"
+      ],
+      "role": "off-path",
+      "tags": [
+        "daily-run",
+        "2026-09-26",
+        "rejected"
+      ],
+      "importance": 28,
+      "confidence": 36,
+      "popularity": 30,
+      "coreIdea": "Entanglement anisotropy of a flavored holographic conductor (D3-D7) driven by a DC electric field.",
+      "whyItMatters": "AdS condensed-matter dual. Not a tokamak boundary code and not on the bus.",
+      "limitation": "Off-path. Not in the paper.",
+      "claimIds": [
+        "E-HOL"
+      ],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false
+    },
+    {
+      "id": "2609.25530",
+      "arxiv": "2609.25530",
+      "title": "Holographic description of RN-like black hole in bumblebee gravity",
+      "authors": [
+        "Jian-Peng Zhang",
+        "Bin Chen",
+        "Jiaju Zhang",
+        "Yu Zhang"
+      ],
+      "date": "2026-09-22",
+      "venue": "arXiv hep-th",
+      "url": "https://arxiv.org/abs/2609.25530",
+      "fields": [
+        "holography"
+      ],
+      "role": "off-path",
+      "tags": [
+        "daily-run",
+        "2026-09-26",
+        "rejected"
+      ],
+      "importance": 28,
+      "confidence": 36,
+      "popularity": 30,
+      "coreIdea": "A holographic account of a charged black hole in a theory that breaks Lorentz symmetry with a vector field.",
+      "whyItMatters": "Gravity dual. E-HOL stays cut from the engine.",
+      "limitation": "Off-path. Not in the paper.",
+      "claimIds": [
+        "E-HOL"
+      ],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false
+    },
+    {
+      "id": "2609.24557",
+      "arxiv": "2609.24557",
+      "title": "On the (In)equivalence of de Sitter and Holographic Entanglement Entropies in Lovelock Gravity",
+      "authors": [
+        "Takamasa Kanai"
+      ],
+      "date": "2026-09-21",
+      "venue": "arXiv hep-th",
+      "url": "https://arxiv.org/abs/2609.24557",
+      "fields": [
+        "holography"
+      ],
+      "role": "off-path",
+      "tags": [
+        "daily-run",
+        "2026-09-26",
+        "rejected"
+      ],
+      "importance": 28,
+      "confidence": 36,
+      "popularity": 30,
+      "coreIdea": "Compares de Sitter entropy with holographic entanglement entropy in higher-curvature gravity.",
+      "whyItMatters": "No code, no plasma, no ledger term. Denylist.",
+      "limitation": "Off-path. Not in the paper.",
+      "claimIds": [
+        "E-HOL"
+      ],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false
+    },
+    {
+      "id": "2609.23776",
+      "arxiv": "2609.23776",
+      "title": "Where's Kasner? OPE Signature of Kasner Exponents",
+      "authors": [
+        "Nejc \u010ceplak",
+        "Samuel Valach"
+      ],
+      "date": "2026-09-20",
+      "venue": "arXiv hep-th",
+      "url": "https://arxiv.org/abs/2609.23776",
+      "fields": [
+        "holography"
+      ],
+      "role": "off-path",
+      "tags": [
+        "daily-run",
+        "2026-09-26",
+        "rejected"
+      ],
+      "importance": 28,
+      "confidence": 36,
+      "popularity": 30,
+      "coreIdea": "Large-N thermal correlators are used as a signature of Kasner exponents near a holographic black-hole singularity.",
+      "whyItMatters": "Reading for holography. Not an INCLUDE. The denylist does not move.",
+      "limitation": "Off-path. Not in the paper.",
+      "claimIds": [
+        "E-HOL"
+      ],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false
+    },
+    {
+      "id": "2609.28962",
+      "arxiv": "2609.28962",
+      "title": "Blast freezing a black hole",
+      "authors": [
+        "Shoaib Akhtar",
+        "Xiao-Liang Qi"
+      ],
+      "date": "2026-09-24",
+      "venue": "arXiv hep-th",
+      "url": "https://arxiv.org/abs/2609.28962",
+      "fields": [
+        "holography"
+      ],
+      "role": "off-path",
+      "tags": [
+        "daily-run",
+        "2026-09-26",
+        "rejected"
+      ],
+      "importance": 28,
+      "confidence": 36,
+      "popularity": 30,
+      "coreIdea": "A solvable evaporation model built from coupled Sachdev\u2013Ye\u2013Kitaev systems, in which a black hole is suddenly coupled to a colder bath.",
+      "whyItMatters": "The word Kitaev here is a random-matrix model, not a braid. SYK evaporation is E-HOL reading.",
+      "limitation": "Off-path. Not in the paper.",
+      "claimIds": [
+        "E-HOL"
+      ],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false
+    },
+    {
+      "id": "2609.29137",
+      "arxiv": "2609.29137",
+      "title": "Amplified Memory and Finite-Time Regularity in Driven Non-Hermitian Systems",
+      "authors": [
+        "H. Yavartanoo",
+        "R. Jafari",
+        "Alireza Akbari"
+      ],
+      "date": "2026-09-24",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2609.29137",
+      "fields": [
+        "majorana",
+        "time-crystal"
+      ],
+      "role": "off-path",
+      "tags": [
+        "daily-run",
+        "2026-09-26",
+        "rejected"
+      ],
+      "importance": 28,
+      "confidence": 36,
+      "popularity": 30,
+      "coreIdea": "Driving a non-Hermitian Kitaev chain through a broken-spectrum region amplifies the memory of how the state was prepared, for a finite time.",
+      "whyItMatters": "E-TC is cut as a clock. A transient memory in a non-Hermitian chain is not a metronome and not a Majorana logical qubit.",
+      "limitation": "Off-path. Not in the paper.",
+      "claimIds": [
+        "E-TC"
+      ],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false
+    },
+    {
+      "id": "2609.29082",
+      "arxiv": "2609.29082",
+      "title": "Nonequilibrium Dirac condensate in bosonic Kitaev chain",
+      "authors": [
+        "Kazuki Yamamoto",
+        "Youichi Yanase"
+      ],
+      "date": "2026-09-24",
+      "venue": "arXiv cond-mat.mes-hall",
+      "url": "https://arxiv.org/abs/2609.29082",
+      "fields": [
+        "majorana"
+      ],
+      "role": "off-path",
+      "tags": [
+        "daily-run",
+        "2026-09-26",
+        "rejected"
+      ],
+      "importance": 28,
+      "confidence": 36,
+      "popularity": 30,
+      "coreIdea": "A mean-field Bose condensate on a bosonic Kitaev chain forms a staggered phase once pairing is strong enough.",
+      "whyItMatters": "Bosons, not fermion zero modes. Does not touch E-MZM's logical-qubit test.",
+      "limitation": "Off-path. Not in the paper.",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false
+    },
+    {
+      "id": "2609.29247",
+      "arxiv": "2609.29247",
+      "title": "GIMLI: a toolkit connecting linear and non-linear magnetohydrodynamic regimes",
+      "authors": [
+        "Jordi De Jonghe",
+        "Nicolas Brughmans",
+        "Rony Keppens"
+      ],
+      "date": "2026-09-24",
+      "venue": "arXiv astro-ph.IM",
+      "url": "https://arxiv.org/abs/2609.29247",
+      "fields": [
+        "plasma"
+      ],
+      "role": "off-path",
+      "tags": [
+        "daily-run",
+        "2026-09-26",
+        "rejected"
+      ],
+      "importance": 28,
+      "confidence": 36,
+      "popularity": 30,
+      "coreIdea": "A bridge that seeds the nonlinear MHD code MPI-AMRVAC with linear modes from Legolas. One example is an interchange mode in a straight tokamak; the others are solar and astrophysical.",
+      "whyItMatters": "A unit-test tokamak is not a disruption metric and not a coil API. E-RL is not moved.",
+      "limitation": "Off-path. Not in the paper.",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false
+    },
+    {
+      "id": "2609.29257",
+      "arxiv": "2609.29257",
+      "title": "The quadratic density response function for non-interacting fermions at arbitrary temperature",
+      "authors": [
+        "Pontus Svensson",
+        "Jan Vorberger",
+        "Zhandos A. Moldabekov",
+        "Panagiotis Tolias",
+        "Paul Hamann"
+      ],
+      "date": "2026-09-24",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2609.29257",
+      "fields": [
+        "plasma"
+      ],
+      "role": "off-path",
+      "tags": [
+        "daily-run",
+        "2026-09-26",
+        "rejected"
+      ],
+      "importance": 28,
+      "confidence": 36,
+      "popularity": 30,
+      "coreIdea": "The quadratic density response of non-interacting fermions, with a classical limit taken from the Vlasov equation. Aimed at warm dense matter.",
+      "whyItMatters": "Vlasov appears as a warm-dense-matter limit, not as hole-burning or a fusion reactivity. S-L3 is not moved.",
+      "limitation": "Off-path. Not in the paper.",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false
+    },
+    {
+      "id": "2609.29325",
+      "arxiv": "2609.29325",
+      "title": "Monte Carlo sampling of first-order QED processes in laser and pulsar plasmas",
+      "authors": [
+        "Verneri Sarjomaa",
+        "Joonas N\u00e4ttil\u00e4"
+      ],
+      "date": "2026-09-24",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2609.29325",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "role": "off-path",
+      "tags": [
+        "daily-run",
+        "2026-09-26",
+        "rejected"
+      ],
+      "importance": 28,
+      "confidence": 36,
+      "popularity": 30,
+      "coreIdea": "A sampling scheme for strong-field QED event rates in intense lasers and pulsar magnetospheres.",
+      "whyItMatters": "Pair-production sampling is not laser-assisted DT tunneling. It does not beat the PRC 109 field bound and does not enter the ledger.",
+      "limitation": "Off-path. Not in the paper.",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false
+    },
+    {
+      "id": "2609.29215",
+      "arxiv": "2609.29215",
+      "title": "Eigenoperator Entanglement Statistics in Local Lindbladians",
+      "authors": [
+        "Ze-Kai Hong",
+        "Xu Feng",
+        "Zhi-Cheng Yang"
+      ],
+      "date": "2026-09-24",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2609.29215",
+      "fields": [
+        "tqc"
+      ],
+      "role": "off-path",
+      "tags": [
+        "daily-run",
+        "2026-09-26",
+        "rejected"
+      ],
+      "importance": 28,
+      "confidence": 36,
+      "popularity": 30,
+      "coreIdea": "Asks whether chaotic open quantum systems have eigenoperators that look Haar-random, using entanglement of Liouvillian eigenoperators.",
+      "whyItMatters": "Lindblad here is a chaos diagnostic, not a plasma coherence penalty P_coh(n,T). S-L1 is not moved.",
+      "limitation": "Off-path. Not in the paper.",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false
+    },
+    {
+      "id": "2609.30225",
+      "arxiv": "2609.30225",
+      "title": "Variational Multi-Gaussian Quantum Trajectories",
+      "authors": [
+        "Zejian Li",
+        "Jacopo Tosca"
+      ],
+      "date": "2026-09-24",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2609.30225",
+      "fields": [
+        "tqc"
+      ],
+      "role": "off-path",
+      "tags": [
+        "daily-run",
+        "2026-09-26",
+        "rejected"
+      ],
+      "importance": 28,
+      "confidence": 36,
+      "popularity": 30,
+      "coreIdea": "A variational ansatz of superposed Gaussian packets for stochastic trajectories unraveled from a bosonic master equation.",
+      "whyItMatters": "An open-system solver for bosons. Not a fusion density matrix and not a code threshold.",
+      "limitation": "Off-path. Not in the paper.",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false
     }
   ],
   "runs": [
+    {
+      "id": "run-2026-09-26-daily",
+      "startedAt": "2026-09-26T09:10:00-05:00",
+      "windowStart": "2026-09-19",
+      "windowEnd": "2026-09-26",
+      "kind": "daily",
+      "feeds": [
+        "https://arxiv.org/list/quant-ph/recent",
+        "https://arxiv.org/list/cond-mat.str-el/recent",
+        "https://arxiv.org/list/cond-mat.mes-hall/recent",
+        "https://arxiv.org/list/hep-th/recent",
+        "https://arxiv.org/list/physics.plasm-ph/recent",
+        "https://arxiv.org/search/advanced"
+      ],
+      "paperIds": [
+        "2609.30069",
+        "2609.30175",
+        "2609.30155",
+        "2609.29336",
+        "2609.28924",
+        "2609.28331",
+        "2609.26641",
+        "2609.25530",
+        "2609.24557",
+        "2609.23776",
+        "2609.28962",
+        "2609.29137",
+        "2609.29082",
+        "2609.29247",
+        "2609.29257",
+        "2609.29325",
+        "2609.29215",
+        "2609.30225"
+      ],
+      "notes": "Ninth daily run. Lookback 7 days. ingest.py wrote 35 hits; fetch_arxiv.py merged 0 keyword hits already in the catalog. arXiv's latest submission stamp is 2026-09-24 17:59 UTC; no 25 or 26 Sep announcement (weekend). Scored the late-24 Sep slice the 25 Sep keyword cap missed. Five HOLDs: ultra-high-rate code design (E-QEC), chromatic dynamical decoupling on a 127-qubit IBM chip (E-QEC, right machine, wrong observable), WEST low-density ICRF singularities (E-RL), PQLS gyrokinetic SAT3 closure (S-L3), poor-man's Majorana parity\u2013spin gates (E-MZM, A1 fail). Six holography/SYK papers rejected on the E-HOL denylist, including five left unscored on 25 Sep. No Auto-Gate pass. No version bump. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand. Q=1000 not entered.",
+      "fieldCounts": {
+        "tqc": 4,
+        "plasma": 5,
+        "majorana": 3,
+        "holography": 6,
+        "time-crystal": 1,
+        "fusion-quantum": 1
+      }
+    },
     {
       "id": "run-2026-09-25-daily",
       "startedAt": "2026-09-25T09:45:00-05:00",
