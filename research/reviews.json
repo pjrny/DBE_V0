@@ -1,6 +1,229 @@
 {
-  "asOf": "2026-09-26",
+  "asOf": "2026-09-27",
   "cards": [
+    {
+      "id": "2026-09-27/2609.29018",
+      "paperId": "2609.29018",
+      "date": "2026-09-27",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 passes: the observable is logical error on published Google d=5 XZZX surface-code memory, plus IBM repetition-code shots. G3 passes because rejection is a stated fraction (15% or 90%), not a free scale factor. Falsifier this quarter: on a fresh Google memory dataset, minimum-weight surprisal postselection fails to lower retained logical error at the same rejection rate.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Google's below-threshold surface-code experiment (the source of these memory data) is what holds E-QEC at C4. Postselection that discards 90% of shots can look like suppression without moving the physical threshold. Acharya et al. remain the baseline a decoder must beat on the shots you keep without throwing the run away.",
+      "ledger": "IBM repetition code: retained LEP \u221210.6% at d=7 and \u221228.8% at d=9, both at 15% rejection. Google d=5, 10-round XZZX: \u221275.4% retained LEP at 90% rejection. Magic-state cultivation: tomography infidelity \u221234.7% at 30% extra rejection, or +30.4% yield at 97.0% fidelity. Not a Q term.",
+      "plain": {
+        "core": "When a quantum chip drifts, the decoder's noise model goes stale, and shots that look surprising under that stale model are the ones most likely to be wrong. Throwing those shots out, using a weight the decoder already computes, cuts the logical errors you keep: about 11% and 29% on IBM repetition-code memories (distance 7 and 9, discarding 15% of shots), and about 75% on a published Google distance-5 surface-code memory if you discard 90%.",
+        "why": "E-QEC is the error layer on Bus B, and this reuses Google's own surface-code memory data plus IBM hardware. It is a postselection filter on logical error, not a new code, not an S3 fusion gate, and not a plant controller.",
+        "limit": "Bare arXiv. The headline Google drop throws away nine shots in ten. It does not move the surface-code threshold and it is not a term in the Q ledger, so it cannot raise C4."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC KEEP). A2 pass. A3 miss: action is HOLD, not INCLUDE. A4 miss: the LEP cuts are not a bound already in the energy ledger, and C stays C4. A5 miss: bare arXiv. Harvest confidence 74 is under 80, so it is not an ADD. Not a new pillar.",
+      "math": "MWPM minimum weight W used as a proxy for syndrome surprisal under a stationary detector error model. Extra rejection weight on histories unlikely under that model. Assumes the published Google and IBM syndrome records are the right noise class and that rejection rate is chosen, not fit, on the held-out set.",
+      "autoGate": "miss A3, A4, A5"
+    },
+    {
+      "id": "2026-09-27/2609.26880",
+      "paperId": "2609.26880",
+      "date": "2026-09-27",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: a planar fluxonium\u2013resonator GKP lifetime is not a surface-code or qLDPC logical-error measurement, even though the chip is superconducting. G3 passes: the reported gain is a single factor 1.59\u00b10.05, not an unbounded function of drive power. Falsifier this year: on the same device, measurement-free correction fails to extend the logical lifetime beyond the uncorrected resonator.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Sivak et al. and Campagne-Ibarcq et al. already stabilized GKP states in 3D cavities. Google's surface code below threshold is the C4. A 1.59\u00d7 lifetime on one planar pair does not replace that threshold and does not show distance scaling.",
+      "ledger": "Fluxonium bit-flip lifetime 451\u00b170 \u03bcs. Logical lifetime extended by 1.59\u00b10.05. Not P_aux and not a code threshold.",
+      "plain": {
+        "core": "A heavy fluxonium qubit, whose bit flips last about 450 microseconds, controls a tiny on-chip microwave resonator and holds a GKP grid state using measurement-free correction. The logical lifetime is about 1.6 times longer than without that correction. It is the first standalone bosonic error correction in a fully planar superconducting circuit.",
+        "why": "E-QEC cares that error correction runs on hardware labs already build. This is a real device result on a superconducting chip. It is a bosonic grid code, not the surface-code or qLDPC layer that carries the C4.",
+        "limit": "One device, one factor of 1.59, bare arXiv. No distance scaling and no surface-code threshold. Cannot raise C4 and does not enter the energy ledger."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass. A2 miss (G4: right machine family, wrong code). A3 miss (HOLD). A4 miss. A5 miss: bare arXiv, one device, not a replicated surface-code result. Confidence 76 < 80, so not an ADD.",
+      "math": "Finite-energy GKP stabilized by measurement-free correction with fast fluxonium reset. Assumes the quoted bit-flip T1 and the logical lifetime ratio are dominated by the control qubit, not by an untracked resonator dephasing channel.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-27/2609.28730",
+      "paperId": "2609.28730",
+      "date": "2026-09-27",
+      "bind": [
+        "E-RL",
+        "S-L3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "Bridge. G4 fails for both claims: a stellarator equilibrium optimizer is not a coil command inside a disruption time, and a GX heat-flux surrogate is not a driven-barrier reactivity ratio. G6 passes: no Q_eng is stated. Falsifier this quarter: held-out GX ion heat flux outside the training gradients disagrees beyond the paper's error, or the transport solver does not raise ion temperature versus the unoptimized equilibrium.",
+      "score": "E-RL C4 stays; S-L3 C4 stays; coupling C1",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Seo et al. Nature 2024 and Rothstein Nucl. Fusion 2026 are the E-RL C4: they close a control loop on a tokamak. GX and CGYRO remain the gyrokinetic baseline. A millisecond surrogate that never actuates a coil does not beat a disruption metric and does not put hole-burning into a fusion rate.",
+      "ledger": "Surrogate latency ~ms. Training set >200k adiabatic-electron GX runs, ~23k magnetic configurations. No P_fusion, P_drive, or Q_eng.",
+      "plain": {
+        "core": "A neural stand-in for a nonlinear gyrokinetic code predicts turbulent ion heat flux in milliseconds instead of a full simulation. Trained on more than 200,000 runs across about 23,000 stellarator shapes, it lets a designer optimize the magnetic equilibrium directly against that heat flux and then check the resulting ion temperature in a transport solver.",
+        "why": "This sits on both Bus A and Bus C and therefore couples them. E-RL wants a module that can attach to a machine; S-L3 wants the kinetic solver kept honest. A millisecond surrogate is a design tool. It does not command coils during a shot and it does not write a plant Q.",
+        "limit": "Offline optimization of a stellarator equilibrium, not a closed disruption loop and not a driven-barrier rate. Two claims means the coupling starts at C1. Neither E-RL nor S-L3 moves."
+      },
+      "claimDelta": "none \u2014 coupling stays C1",
+      "whyQueued": "A1 miss: two claim IDs (E-RL and S-L3). Coupling is a new claim and starts at C1. A6 miss: it would smuggle a Bus A\u2013Bus C sentence if it entered either bibliography as a gain path. A3 miss. Not an ADD. M2 and M7 stay open.",
+      "math": "Surrogate of nonlinear gyrokinetic ion heat flux from GX, adiabatic electrons, mapped into a transport solver. Assumes the training envelope of gradients and stellarator shapes covers the optimized equilibrium.",
+      "autoGate": "miss A1, A2, A3, A6"
+    },
+    {
+      "id": "2026-09-27/2609.26784",
+      "paperId": "2609.26784",
+      "date": "2026-09-27",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: circuit-level depolarizing simulations of rotated surface codes are not a processor threshold. G3 passes: link noise is scanned and the logical readout is reported as bounded, not scaled without limit. Falsifier this quarter: at the same local noise, 8-DAM logical readout is worse than ordinary lattice surgery once link error exceeds the paper's crossover.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Horsman and Litinski lattice surgery, and Google's below-threshold memory, define the surface-code baseline. A Stim-style link-noise scan is not that experiment.",
+      "ledger": "No Q term. Logical readout versus inter-QPU link error at fixed local depolarizing noise. Data patches stay at distance d.",
+      "plain": {
+        "core": "When two quantum processors are linked by a noisy connection, you do not have to enlarge every code patch. This layout enlarges only the ancilla that straddles the link and keeps the data patches at distance d. In circuit-level simulations of rotated surface codes, the logical readout error depends only weakly on how noisy that link is, and the qubit count stays below a uniform larger code.",
+        "why": "E-QEC on Bus B will eventually be modular. A surgery schedule that confines link noise is a compile-time option for surface-code patches. It is not an anyon braid and not a tokamak actuator.",
+        "limit": "Depolarizing-noise simulation, not a device. No measured threshold. Bare arXiv, so C4 stays where Google's surface-code experiment put it."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass. A2 miss (G4). A3 miss (HOLD). A4 miss. A5 miss: bare arXiv. Confidence 64 < 80. Companion 2609.26736 (seam syndrome extraction) left unscored in the run file.",
+      "math": "Eight-data-patch ancilla-mediated lattice surgery. Traveling stabilizers on the merge. Circuit-level noise, rotated surface code. Assumes link errors are depolarizing and hook errors are the dominant fault the traveling stabilizers remove.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-27/2609.24843",
+      "paperId": "2609.24843",
+      "date": "2026-09-27",
+      "bind": [
+        "E-MZM"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: ARPES plus transport on 20-unit-cell FeTe is not a Majorana logical qubit. No parity, no braid, no gap scaling of a wire. G5 passes because an STM or tunneling map this year can still show a trivial Andreev state, or show the surface state vanish, which would drop the platform claim. Does not lower C1: the paper does not fail the M5 kill test; it never attempts X and Z logicals.",
+      "score": "E-MZM C1 T3 D3 A2 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nature's caveat on Majorana 1 and the Andreev/YSR mimic literature. A topological surface state coexisting with superconductivity is not a zero mode. M5 still requires independent X and Z logicals with topological-gap scaling.",
+      "ledger": "20-unit-cell FeTe films. Shallow dxz/dyz hole band about 2 meV below the Fermi level. Not a Q term.",
+      "plain": {
+        "core": "Annealing excess iron out of a 20-layer FeTe film turns an antiferromagnetic metal into a superconductor. Photoemission shows the bands rearrange, including a topological surface state, and the authors say that combination is a place to look for Majorana bound states.",
+        "why": "E-MZM is the watch item for M5. A real superconducting film with a topological surface state is a materials candidate. It is not a parity readout, not a braid, and not an X or Z logical qubit.",
+        "limit": "No zero-bias peak, no gap scaling, no logical operation. The Majorana sentence is a prospect, not a measurement. WATCH stays C1. A1 fails because E-MZM is not KEEP or HOLD."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-MZM is WATCH, not KEEP or HOLD. A2 miss (G4). A5 miss: bare arXiv. Do not make it load-bearing. Not a CUT reversal.",
+      "math": "MBE films, ARPES, transport, DFT plus embedded DMFT. Topological surface state assigned from circular dichroism. Assumes interstitial-Fe removal is what drives the Lifshitz and topological transitions.",
+      "autoGate": "miss A1, A2, A3, A5"
+    },
+    {
+      "id": "2026-09-27/2609.29306",
+      "paperId": "2609.29306",
+      "date": "2026-09-27",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "Denylist. No DBE rate, control map, or code threshold. Cannot INCLUDE without two independent C\u22654 sources reversing the CUT.",
+      "score": "E-HOL CUT stays",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and the S3 Nature 2026 result define the anyon primitive. Seo and Rothstein define the plant attach. PRC 109, 044605 defines the Layer-2 field cost. An AdS2 diagram reduction tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "A bookkeeping method that rewrites tree-level Feynman diagrams in two-dimensional anti-de Sitter space as networks of Wilson lines, checked on five-point diagrams.",
+        "why": "It is an AdS calculation. E-HOL is cut as a reactor or processor part. Reading is allowed. It does not sit on a bus.",
+        "limit": "Denylist. No interface, no plasma, no code threshold. Cannot INCLUDE."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Denylist E-HOL. Readable, never INCLUDE. A1 miss. A2 miss. A3 miss.",
+      "math": "Wilson-line reduction of n-point AdS2 tree diagrams, demonstrated at five points. Not a fusion rate.",
+      "autoGate": "miss A1, A2, A3, A6"
+    },
+    {
+      "id": "2026-09-27/2609.23993",
+      "paperId": "2609.23993",
+      "date": "2026-09-27",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "False friend. Majorana operators in a 2-RDM integrator are not Majorana zero modes. G4 fails the qubit platform. G5 fails: the paper states no M5 distinguisher.",
+      "score": "C unchanged",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Kitaev's wire and the missing public X+Z logical on Majorana devices are the E-MZM test. A Hubbard quench written in Majorana operators does not take that test. Nayak et al. remain the anyon baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "A numerical trick that writes interacting fermions as Majorana operators so a two-particle density matrix can be stepped in time. It is tested on a Hubbard quench and on flux motion in the Kitaev honeycomb model.",
+        "why": "The word Majorana here is the fermion algebra, not a zero-mode qubit. It does not test E-MZM and must not be read as a braid or a logical gate.",
+        "limit": "Keyword collision. Off-path. Not a distinguisher for M5."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Off-path keyword collision. Not a new pillar: no interface contract.",
+      "math": "BBGKY closed at two particles with a positivity projection. Benchmarks: 1D Hubbard quench and Kitaev-honeycomb flux dynamics versus Hartree\u2013Fock. Assumes the projection's irreversibility is acceptable at the times they plot.",
+      "autoGate": "miss A1, A2, A3"
+    },
     {
       "id": "2026-09-26/2609.30069",
       "paperId": "2609.30069",

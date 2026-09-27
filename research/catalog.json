@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T14:10:00+00:00",
+  "generatedAt": "2026-09-27T14:24:07.754820+00:00",
   "lookback": "1y+",
   "northStar": "Q=1000",
   "feeds": [
@@ -134,6 +134,7 @@
         "nonabelian-qldpc"
       ],
       "blockers": [
+        "2026-09-27: no new S3 braid-plus-fusion result. Fusion measurement stays in the gate set.",
         "2026-09-26: no new S3 braid-plus-fusion result. Fusion measurement stays in the gate set.",
         "2026-09-25: non-Abelian sheaf qLDPC stays queued under E-QEC. It does not replace fusion measurement on E-S3.",
         "Fusion measurement must stay in the gate set; braid-only S3 is not universal.",
@@ -173,6 +174,7 @@
         "floquet-majorana-codes"
       ],
       "blockers": [
+        "2026-09-27: FeTe ARPES (2609.24843) is a surface state plus superconductivity, not an X or Z logical. M5 stays open. 2-RDM 'Majorana' (2609.23993) rejected as a false friend.",
         "2026-09-26: poor-man's Majorana parity\u2013spin gates are a mimic platform. Still no topological-gap X and Z logicals.",
         "2026-09-25: PDW half-vortex Majorana lattice is Hartree\u2013Fock. Still no independent X and Z logicals.",
         "No independent X and Z logicals plus gap scaling (M5). Mimic-prone.",
@@ -269,6 +271,7 @@
         "fracton-holography"
       ],
       "blockers": [
+        "2026-09-27: AdS2 Feynman reduction (2609.29306) rejected. Denylist holds. No 25\u201327 Sep announcement.",
         "2026-09-26: six AdS/cosmology/SYK papers rejected, including five left unscored on 25 Sep. Denylist holds.",
         "2026-09-25: three more AdS plasma/open-system papers rejected. Denylist holds.",
         "Denylist. No energy accounting. Not a reactor/processor part."
@@ -301,6 +304,7 @@
         "topo-dynamics"
       ],
       "blockers": [
+        "2026-09-27: stellarator GX surrogate (2609.28730) is offline optimization, not a coil command. M2 stays open.",
         "2026-09-26: WEST low-density ICRF singularities do not close M2. No coil command and no latency.",
         "2026-09-25: ITER quasi-symmetric error-field correction and core sound-wave pulsations do not close M2.",
         "Must beat a lab baseline on one disruption-relevant metric (M2).",
@@ -339,6 +343,7 @@
       ],
       "amplifies": [],
       "blockers": [
+        "2026-09-27: the same surrogate writes no Q_eng term. Bridge with E-RL stays at C1. M1 and M7 stay open.",
         "2026-09-26: PQLS calibrates SAT3 to CGYRO. Transport solver only. No Q_eng term. M1 and M7 stay open.",
         "Q=1000 is a ledger stress test, not an output. Missing coupled P_coh/P_drive/P_rad terms (M1, M7)."
       ],
@@ -481,6 +486,7 @@
       ],
       "amplifies": [],
       "blockers": [
+        "2026-09-27: Google-data decoder postselection and planar fluxonium GKP are queued on E-QEC only. Not a non-Abelian code contract.",
         "2026-09-26: ultra-high-rate code templates are queued on E-QEC only. They are not an interface contract for this pillar.",
         "2026-09-25: sheaf qLDPC is a good-code proof, not an interface contract. Still QUEUE.",
         "Needs an interface contract before MAJOR."
@@ -9467,9 +9473,329 @@
       "year": 2026,
       "source": "arXiv API",
       "foundational": false
+    },
+    {
+      "id": "2609.29018",
+      "arxiv": "2609.29018",
+      "title": "Decoder Model Compatibility Provides Information beyond the Logical Gap under Drifting and Correlated Quantum Noise",
+      "authors": [
+        "Aaron C. Hoyt",
+        "Chunshu Wu",
+        "Shuwen Kan",
+        "Sean Garner",
+        "Avimita Chatterjee",
+        "Drew Rebar",
+        "Norman M. Tubman",
+        "Katherine Klymko"
+      ],
+      "date": "2026-09-24",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2609.29018",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "tags": [
+        "daily-run",
+        "2026-09-27",
+        "scored",
+        "qec"
+      ],
+      "importance": 90,
+      "confidence": 74,
+      "popularity": 73,
+      "coreIdea": "When a quantum chip drifts, the decoder's noise model goes stale, and shots that look surprising under that stale model are the ones most likely to be wrong. Throwing those shots out, using a weight the decoder already computes, cuts the logical errors you keep: about 11% and 29% on IBM repetition-code memories (distance 7 and 9, discarding 15% of shots), and about 75% on a published Google distance-5 surface-code memory if you discard 90%.",
+      "whyItMatters": "E-QEC is the error layer on Bus B, and this reuses Google's own surface-code memory data plus IBM hardware. It is a postselection filter on logical error, not a new code, not an S3 fusion gate, and not a plant controller.",
+      "limitation": "Bare arXiv. The headline Google drop throws away nine shots in ten. It does not move the surface-code threshold and it is not a term in the Q ledger, so it cannot raise C4.",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false
+    },
+    {
+      "id": "2609.26880",
+      "arxiv": "2609.26880",
+      "title": "Bosonic Error Correction with Fluxonium",
+      "authors": [
+        "Shantanu R. Jha",
+        "Shoumik D. Chowdhury",
+        "Gabriele Rolleri",
+        "Anaida Ali",
+        "Lev-Arcady Sellem",
+        "R\u00e9ouven Assouly"
+      ],
+      "date": "2026-09-22",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2609.26880",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "tags": [
+        "daily-run",
+        "2026-09-27",
+        "scored",
+        "qec"
+      ],
+      "importance": 88,
+      "confidence": 76,
+      "popularity": 72,
+      "coreIdea": "A heavy fluxonium qubit, whose bit flips last about 450 microseconds, controls a tiny on-chip microwave resonator and holds a GKP grid state using measurement-free correction. The logical lifetime is about 1.6 times longer than without that correction. It is the first standalone bosonic error correction in a fully planar superconducting circuit.",
+      "whyItMatters": "E-QEC cares that error correction runs on hardware labs already build. This is a real device result on a superconducting chip. It is a bosonic grid code, not the surface-code or qLDPC layer that carries the C4.",
+      "limitation": "One device, one factor of 1.59, bare arXiv. No distance scaling and no surface-code threshold. Cannot raise C4 and does not enter the energy ledger.",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false
+    },
+    {
+      "id": "2609.28730",
+      "arxiv": "2609.28730",
+      "title": "AI-Accelerated Gyrokinetic Predictions of Turbulent Transport for Stellarator Design Optimization and Experimental Planning",
+      "authors": [
+        "R. Michael Churchill",
+        "Matt Landreman",
+        "Jong Youl Choi",
+        "Byoungchan Jang",
+        "Rory Conlin",
+        "Noah Mandell",
+        "Anima Anandkumar",
+        "Valentin Duruisseaux"
+      ],
+      "date": "2026-09-23",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2609.28730",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "role": "week",
+      "tags": [
+        "daily-run",
+        "2026-09-27",
+        "scored",
+        "bridge"
+      ],
+      "importance": 86,
+      "confidence": 70,
+      "popularity": 68,
+      "coreIdea": "A neural stand-in for a nonlinear gyrokinetic code predicts turbulent ion heat flux in milliseconds instead of a full simulation. Trained on more than 200,000 runs across about 23,000 stellarator shapes, it lets a designer optimize the magnetic equilibrium directly against that heat flux and then check the resulting ion temperature in a transport solver.",
+      "whyItMatters": "This sits on both Bus A and Bus C and therefore couples them. E-RL wants a module that can attach to a machine; S-L3 wants the kinetic solver kept honest. A millisecond surrogate is a design tool. It does not command coils during a shot and it does not write a plant Q.",
+      "limitation": "Offline optimization of a stellarator equilibrium, not a closed disruption loop and not a driven-barrier rate. Two claims means the coupling starts at C1. Neither E-RL nor S-L3 moves.",
+      "claimIds": [
+        "E-RL",
+        "S-L3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "bridge": "E-RL+S-L3",
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false
+    },
+    {
+      "id": "2609.26784",
+      "arxiv": "2609.26784",
+      "title": "Error Suppression in Distributed Quantum Computing with Heterogeneous-Distance Lattice Surgery",
+      "authors": [
+        "Daniel Dilley",
+        "Anastashia Jebraeilli",
+        "Rayat Roy",
+        "Shobhit Gupta",
+        "Alvin Gonzales",
+        "Zain Saleem"
+      ],
+      "date": "2026-09-22",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2609.26784",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "tags": [
+        "daily-run",
+        "2026-09-27",
+        "scored",
+        "qec"
+      ],
+      "importance": 79,
+      "confidence": 64,
+      "popularity": 60,
+      "coreIdea": "When two quantum processors are linked by a noisy connection, you do not have to enlarge every code patch. This layout enlarges only the ancilla that straddles the link and keeps the data patches at distance d. In circuit-level simulations of rotated surface codes, the logical readout error depends only weakly on how noisy that link is, and the qubit count stays below a uniform larger code.",
+      "whyItMatters": "E-QEC on Bus B will eventually be modular. A surgery schedule that confines link noise is a compile-time option for surface-code patches. It is not an anyon braid and not a tokamak actuator.",
+      "limitation": "Depolarizing-noise simulation, not a device. No measured threshold. Bare arXiv, so C4 stays where Google's surface-code experiment put it.",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false
+    },
+    {
+      "id": "2609.24843",
+      "arxiv": "2609.24843",
+      "title": "Electronic Reconstruction Towards Topological Superconductivity in FeTe",
+      "authors": [
+        "Hongtao Rong",
+        "Yang Ge",
+        "Zi-Jie Yan",
+        "Haoran Lin",
+        "Bing Xia",
+        "Xiaoda Liu",
+        "Zihao Wang",
+        "Pu Xiao"
+      ],
+      "date": "2026-09-21",
+      "venue": "arXiv cond-mat.supr-con",
+      "url": "https://arxiv.org/abs/2609.24843",
+      "fields": [
+        "majorana"
+      ],
+      "role": "week",
+      "tags": [
+        "daily-run",
+        "2026-09-27",
+        "scored",
+        "mzm"
+      ],
+      "importance": 77,
+      "confidence": 62,
+      "popularity": 58,
+      "coreIdea": "Annealing excess iron out of a 20-layer FeTe film turns an antiferromagnetic metal into a superconductor. Photoemission shows the bands rearrange, including a topological surface state, and the authors say that combination is a place to look for Majorana bound states.",
+      "whyItMatters": "E-MZM is the watch item for M5. A real superconducting film with a topological surface state is a materials candidate. It is not a parity readout, not a braid, and not an X or Z logical qubit.",
+      "limitation": "No zero-bias peak, no gap scaling, no logical operation. The Majorana sentence is a prospect, not a measurement. WATCH stays C1. A1 fails because E-MZM is not KEEP or HOLD.",
+      "claimIds": [
+        "E-MZM"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false
+    },
+    {
+      "id": "2609.29306",
+      "arxiv": "2609.29306",
+      "title": "Reduction technique for expanding the Feynman diagrams in AdS2",
+      "authors": [
+        "V. S. Khiteev"
+      ],
+      "date": "2026-09-24",
+      "venue": "arXiv hep-th",
+      "url": "https://arxiv.org/abs/2609.29306",
+      "fields": [
+        "holography"
+      ],
+      "role": "off-path",
+      "tags": [
+        "daily-run",
+        "2026-09-27",
+        "rejected",
+        "denylist"
+      ],
+      "importance": 34,
+      "confidence": 36,
+      "popularity": 30,
+      "coreIdea": "A bookkeeping method that rewrites tree-level Feynman diagrams in two-dimensional anti-de Sitter space as networks of Wilson lines, checked on five-point diagrams.",
+      "whyItMatters": "It is an AdS calculation. E-HOL is cut as a reactor or processor part. Reading is allowed. It does not sit on a bus.",
+      "limitation": "Denylist. No interface, no plasma, no code threshold. Cannot INCLUDE.",
+      "claimIds": [
+        "E-HOL"
+      ],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false
+    },
+    {
+      "id": "2609.23993",
+      "arxiv": "2609.23993",
+      "title": "A Majorana Formulation of Time-Dependent Two-Particle Reduced-Density-Matrix Dynamics",
+      "authors": [
+        "Haoran Wang",
+        "Alessandro Principi"
+      ],
+      "date": "2026-09-21",
+      "venue": "arXiv cond-mat.str-el",
+      "url": "https://arxiv.org/abs/2609.23993",
+      "fields": [
+        "majorana"
+      ],
+      "role": "off-path",
+      "tags": [
+        "daily-run",
+        "2026-09-27",
+        "rejected",
+        "false-friend"
+      ],
+      "importance": 30,
+      "confidence": 32,
+      "popularity": 28,
+      "coreIdea": "A numerical trick that writes interacting fermions as Majorana operators so a two-particle density matrix can be stepped in time. It is tested on a Hubbard quench and on flux motion in the Kitaev honeycomb model.",
+      "whyItMatters": "The word Majorana here is the fermion algebra, not a zero-mode qubit. It does not test E-MZM and must not be read as a braid or a logical gate.",
+      "limitation": "Keyword collision. Off-path. Not a distinguisher for M5.",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false
     }
   ],
   "runs": [
+    {
+      "id": "run-2026-09-27-daily",
+      "startedAt": "2026-09-27T09:16:00-05:00",
+      "windowStart": "2026-09-20",
+      "windowEnd": "2026-09-27",
+      "kind": "daily",
+      "feeds": [
+        "https://arxiv.org/list/quant-ph/recent",
+        "https://arxiv.org/list/cond-mat.str-el/recent",
+        "https://arxiv.org/list/cond-mat.mes-hall/recent",
+        "https://arxiv.org/list/hep-th/recent",
+        "https://arxiv.org/list/physics.plasm-ph/recent",
+        "https://arxiv.org/search/advanced"
+      ],
+      "paperIds": [
+        "2609.29018",
+        "2609.26880",
+        "2609.28730",
+        "2609.26784",
+        "2609.24843",
+        "2609.29306",
+        "2609.23993"
+      ],
+      "unscoredIds": [
+        "2609.26736",
+        "2609.26946",
+        "2609.26660",
+        "2609.25251",
+        "2609.25278",
+        "2609.29013",
+        "2609.25805",
+        "2609.29853"
+      ],
+      "notes": "Tenth daily run. Lookback 7 days. ingest.py wrote 31 hits, all already scored. fetch_arxiv.py merged 0 keyword hits. Category recent lists still end 2026-09-24; no 25\u201327 Sep announcement (weekend). Scored the late-24 Sep on-path slice the keyword cap missed. Five HOLDs: decoder surprisal postselection on IBM and Google memory data (E-QEC), planar fluxonium GKP (E-QEC, wrong code family), heterogeneous-distance lattice surgery simulation (E-QEC), FeTe topological surface state (E-MZM WATCH, A1 fail), and a stellarator GX turbulence surrogate bridging E-RL and S-L3 at coupling C1. AdS2 diagram reduction rejected on the E-HOL denylist. A 2-RDM 'Majorana' integrator rejected as a false friend. Eight further on-path preprints left unscored in this run. No Auto-Gate pass. No version bump. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand. Q=1000 not entered.",
+      "fieldCounts": {
+        "tqc": 3,
+        "plasma": 1,
+        "fusion-quantum": 1,
+        "majorana": 2,
+        "holography": 1
+      }
+    },
     {
       "id": "run-2026-09-26-daily",
       "startedAt": "2026-09-26T09:10:00-05:00",
