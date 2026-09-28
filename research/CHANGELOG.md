@@ -2,6 +2,9 @@
 
 Never rewrite history. A reversed CUT is a new MAJOR line.
 
+2026-09-28  library  NO BUMP  eleventh daily run. D4 twisted-sheaf qLDPC magic fountain queued under E-QEC only (D4 fails cyclic fusion; E-S3 untouched). KSTAR single-discharge H-mode error-field ID and TCV edge Er queued under E-RL. Decohered-ancilla GKP and measurement-based uncomputation queued under E-QEC. Holographic bootstrap and flat-limit AdS rejected. Floquet skin effect rejected as a clock. Photonic graph-state fusion rejected as a false friend. No 26–28 Sep listing. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
+
+
 2026-09-27  library  NO BUMP  tenth daily run. Decoder postselection on Google surface-code memory and IBM repetition codes queued under E-QEC. Planar fluxonium GKP and heterogeneous lattice surgery queued under E-QEC. Stellarator GX surrogate queued as an E-RL+S-L3 bridge at coupling C1. FeTe ARPES queued under E-MZM (WATCH, A1 fail). AdS2 diagrams rejected. A 2-RDM Majorana integrator rejected as a false friend. No 25–27 Sep listing. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
 
 

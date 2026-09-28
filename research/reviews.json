@@ -1,6 +1,292 @@
 {
-  "asOf": "2026-09-27",
+  "asOf": "2026-09-28",
   "cards": [
+    {
+      "id": "2026-09-28/2609.31541",
+      "paperId": "2609.31541",
+      "date": "2026-09-28",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: a sheaf-code construction is not a measured surface-code or qLDPC threshold on a processor. G3 passes because the magic count is a stated tradeoff with distance, not one knob sent to infinity. Falsifier this quarter: the claimed \u0398(n^{1/2}) parallel CZ count disagrees with the Golowich\u2013Tamo\u2013Zhu parameters it cites.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Lo et al., Nature 2026: D4 is outside the cyclic-fusion criterion, so braid-plus-fusion universality is an S3 statement, not a D4 one. Google's surface code below threshold is what holds E-QEC at C4. A fountain that is not measured on a device does not move that number.",
+      "ledger": "none",
+      "plain": {
+        "core": "A new family of quantum error-correcting codes is built by twisting a classical expander code with a non-Abelian D4 gauge theory. The same construction is used as a magic-state fountain: it prepares many CZ magic states at once, and with a newer algebraic code the number of those states grows almost in step with the number of qubits.",
+        "why": "E-QEC is the error layer on Bus B, and this is a qLDPC construction whose topological order is non-Abelian D4. It does not replace E-S3. The cyclic-fusion test that makes S3 universal excludes D4, so braid-plus-fusion on S3 stays the topological primitive.",
+        "limit": "Bare arXiv. No device and no measured threshold. The almost-constant magic rate still gives up distance as the slack parameter goes to zero. It is not a term in the Q ledger and cannot raise C4."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC KEEP only; not bridged to E-S3). A2 miss (G4). A3 miss: HOLD, not INCLUDE. A4 miss: no ledger bound tightens and C stays C4. A5 miss: bare arXiv. Harvest confidence 76 is under 80, so it is not an ADD. nonabelian-qldpc stays QUEUE; this is not a new pillar and not a contract.",
+      "math": "Twisted sheaf gauge theory with D4 topological order from gauging a Z2^3 0-form subcomplex symmetry. Magic fountain: \u0398(n^{1/2}) parallel CZ states from a [[n, \u0398(n), \u03a9(\u221an)]] hypergraph product, or \u0398(n^{1-\u03b5}) from a [[n, \u0398(n^{1-\u03b5}), \u03a9(n^{(1-\u03b5)/2})]] sheaf code. Assumes the cited Golowich\u2013Tamo\u2013Zhu parameters and that gauging measurement prepares the CZ without extra magic.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-28/2609.30452",
+      "paperId": "2609.30452",
+      "date": "2026-09-28",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 passes: KSTAR H-mode plasma control system, the same class of machine as Bus A. G3 passes: four discharges to one is a fixed count, not a scale factor. Falsifier this year: on a second H-mode device the single-discharge island-healing scan fails to recover a known n=1 error field.",
+      "score": "E-RL C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Seo et al. (tearing avoidance by deep RL) and Rothstein 2026 (integrated AI control on DIII-D) are the C4 attach results. A shorter compass scan is not a disruption-rate beat against the lab's own baseline controller. M2 is still that beat.",
+      "ledger": "Operational time, not P_aux. Four discharges \u2192 one. Not a Q term.",
+      "plain": {
+        "core": "On KSTAR, the plasma control system finds the magnetic error field that opens a tearing island during a single H-mode pulse, by healing the island while the coils scan. Older compass scans on DIII-D, JET, and MAST-U needed several discharges and were not done in H-mode. Cutting the scan from four shots to one is up to a 75% reduction in the time that calibration costs.",
+        "why": "E-RL is the plant-attach claim. This is a real tokamak control system doing error-field identification in H-mode, the regime a pilot plant has to live in. It is a classical coil procedure. No quantum hardware is in the loop.",
+        "limit": "One machine, bare arXiv. It shortens a calibration scan. It does not beat a lab baseline on disruption rate or tearing-onset warning, so M2 stays open. The 75% is not an energy-ledger term and cannot raise C4."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass. A2 pass. A3 miss: HOLD, not INCLUDE. A4 miss: the 4-to-1 shot cut is not a bound already in the energy ledger. A5 miss: bare arXiv, one machine, not a journal. Confidence 78 < 80, so not an ADD. No new mechanism.",
+      "math": "n=1 compass scan by island healing inside one H-mode discharge. Triggering algorithms in the KSTAR PCS. Claims up to 75% less operational time versus a four-discharge scan. Assumes the island-healing observable identifies the same error field a multi-shot Ohmic compass scan would have found.",
+      "autoGate": "miss A3, A4, A5"
+    },
+    {
+      "id": "2026-09-28/2609.31424",
+      "paperId": "2609.31424",
+      "date": "2026-09-28",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: TCV is the right machine, but the paper measures edge Er by Doppler backscattering and does not command a coil. Falsifier this year: a matched favorable/unfavorable pair on TCV with the same edge profiles shows no Er well.",
+      "score": "E-RL C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Degrave et al. and the TCV control line are the attach baseline. An Er profile, however robust across machines, is not a closed control loop and does not beat a disruption metric.",
+      "ledger": "none",
+      "plain": {
+        "core": "On TCV, Doppler backscattering shows a well in the edge radial electric field just inside the separatrix when the ion drift points the favorable way, and a weaker or missing well when the drift is reversed. The difference is still there when edge density and temperature match, and it sharpens as the plasma is heated toward H-mode.",
+        "why": "E-RL's attach surface includes TCV. This is a measured edge-field fact a shape or L-H controller would have to respect. The paper does not send a coil command.",
+        "limit": "Diagnostic only. No actuator, no latency budget, and no disruption metric. Bare arXiv. It cannot close M2 and cannot raise C4."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass. A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. Confidence 74 < 80. Not an ADD. Not a bridge.",
+      "math": "DBS Er profiles in matched L-mode discharges with opposite ion magnetic drift. Difference persists at matched edge density and temperature. Plasma current has little effect, unlike WEST. Assumes the DBS well is not a carbon-rotation artifact; the paper says it is uncorrelated with that rotation.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-28/2609.31462",
+      "paperId": "2609.31462",
+      "date": "2026-09-28",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: pure-dephasing of a GKP ancilla is not a surface-code or qLDPC logical-error measurement. G3 passes: leakage saturates with round number rather than scaling without bound. Falsifier this quarter: a motional-oscillator GKP experiment with a dephased ancilla still shows self-correction across rounds.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Google's below-threshold surface code is the C4. Sivak et al. already stabilized GKP in 3D cavities under different noise. A no-go for dephased-ancilla teleportation does not remove the surface-code result and does not supply distance scaling.",
+      "ledger": "none",
+      "plain": {
+        "core": "Standard GKP error correction assumes a perfectly quiet ancilla pair. If that ancilla is only allowed to dephase, teleportation no longer snaps the state back into the code. The correction becomes a noise process that piles up, and after a few rounds the leakage out of the code saturates instead of healing.",
+        "why": "E-QEC needs to know when a bosonic code stops correcting itself. A dephased GKP ancilla does not self-correct. The default error layer is still the surface code and qLDPC, not GKP.",
+        "limit": "Theory of one noise channel on GKP. No device, no distance scaling, and no surface-code threshold. Bare arXiv. It does not lower C4 and it writes no ledger term."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass. A2 miss (G4). A3 miss. A4 miss: this would be a reason not to raise C, and C is not lowered because the claim's platform is the surface code. A5 miss. Confidence 73 < 80. Not a WEAKEN of E-QEC.",
+      "math": "Teleportation-based GKP correction with a pure-dephasing ancilla Bell pair. The map becomes correlated Pauli-Gaussian noise; leakage out of the codespace saturates with the number of rounds. Assumes pure dephasing dominates and the ancilla is not refreshed by an unmodeled correction.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-28/2609.31605",
+      "paperId": "2609.31605",
+      "date": "2026-09-28",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: an algebraic uncomputation scheme is not a measured code on the E-QEC platform. G3 passes: success probability is the affine rank of the garbage support, not a free intensity. Falsifier this quarter: on the HHL example, zero-syndrome postselection does not match the stated rank.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Postselection that keeps zero-syndrome shots can look like a cheaper circuit without moving a threshold. Acharya et al. remain the surface-code baseline. Discarded shots are not a logical-error improvement on the shots you had to run.",
+      "ledger": "none",
+      "plain": {
+        "core": "Uncomputing scratch qubits can cost as much as the computation itself. Measuring the scratch register and keeping only the no-error outcomes throws the garbage away without running the reverse circuit. The success rate is set by how the garbage is populated, which can be much smaller than the number of garbage qubits. Other outcomes can be fixed by reusing the original uncompute only when a structural condition holds.",
+        "why": "E-QEC cares about spacetime overhead on early fault-tolerant machines. This is a postselection rule on the garbage register, not a new code and not a measured threshold.",
+        "limit": "The cheap version discards shots. The worked example is HHL, not a surface-code memory. Bare arXiv. No measured logical error and no Q term."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass. A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. Confidence 70 < 80. Not an ADD.",
+      "math": "Measurement of the garbage register induces relative phases treated as syndromes. Postselected success rate set by the affine rank of the populated garbage support. A structural condition lets the original uncompute correct nonzero syndromes. Assumes the garbage support is the affine space they model.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-28/2609.31576",
+      "paperId": "2609.31576",
+      "date": "2026-09-28",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: planar N=4 SYM bootstrap is not a tokamak, a processor, or a fusion-rate code. G5 fails: nothing in this paper can falsify E-S3, E-QEC, E-RL, or S-L2 this year.",
+      "score": "E-HOL CUT stays",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Nayak et al. and Lo et al. Nature 2026 define the anyon primitive. Seo and Rothstein define the plant attach. PRC 109, 044605 defines the Layer-2 field cost. A holographic bootstrap tests none of them. NIF Q_sci \u2248 4.13 remains the gain baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "A numerical bootstrap combined with localization puts an upper bound on the lightest single-trace operator in two holographic gauge theories, at every value of the coupling. Where integrability is known, the bound sits close to it.",
+        "why": "It is a holographic spectrum bound. E-HOL is cut as a reactor or processor part. Reading is allowed. It does not sit on a bus.",
+        "limit": "Denylist. No plasma, no code threshold, no interface. Cannot INCLUDE."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Denylist E-HOL. Readable, never INCLUDE. A1 miss (CUT, not KEEP/HOLD). A2 miss. A3 miss. A6 miss.",
+      "math": "Dispersive sum rules plus localization bounds on the lowest single-trace scalar in planar N=4 SYM and an N=2 USp(2N) theory, for all 't Hooft coupling. Not a fusion rate.",
+      "autoGate": "miss A1, A2, A3, A6"
+    },
+    {
+      "id": "2026-09-28/2609.31055",
+      "paperId": "2609.31055",
+      "date": "2026-09-28",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: In\u00f6n\u00fc\u2013Wigner contraction of AdS4 is not a plant or a code. G5 fails: no distinguisher for a KEEP claim this year.",
+      "score": "E-HOL CUT stays",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Same disputer as the holographic bootstrap: the engine's load-bearing results are S3 fusion gates, surface-code threshold, and DIII-D/TCV control. Flat-space AdS is reading. PRC 109 still sets the drive-field cost.",
+      "ledger": "none",
+      "plain": {
+        "core": "Sending the radius of anti-de Sitter space to infinity turns conformal representations into the Hilbert space of ordinary massive particles, and the inner product stays unitary through that limit.",
+        "why": "This is the flat-space limit of AdS/CFT. E-HOL is cut. It does not encode a plasma state or a logical qubit.",
+        "limit": "Denylist. No bus, no energy accounting. Cannot INCLUDE."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Denylist E-HOL. A1 miss. A2 miss. A3 miss. A6 miss. Not a CUT reversal.",
+      "math": "so(2,3) \u2192 iso(1,3) on lowest-weight representations D(\u0394, s), with m = \u0394/\u2113 held fixed as \u2113 \u2192 \u221e. Inner product converges to Wigner's. Not a plasma observable.",
+      "autoGate": "miss A1, A2, A3, A6"
+    },
+    {
+      "id": "2026-09-28/2609.31474",
+      "paperId": "2609.31474",
+      "date": "2026-09-28",
+      "bind": [
+        "E-TC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: a cold-atom skin effect is not a control clock and not a QEC cycle. G5 fails: no prethermal-lifetime comparison to a shot duration.",
+      "score": "E-TC CUT stays",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Else, Nayak, and the surface-code cycle are the timing baseline. A Floquet drive that piles amplitude on an edge does not outlast a disciplined classical clock plus QEC. Prethermal lifetime versus control horizon remains the kill test, and this paper does not take it.",
+      "ledger": "none",
+      "plain": {
+        "core": "Ultracold atoms driven in a repeating pattern show a non-Hermitian skin effect: bulk states pile up at the edge. The drive is Floquet. The result is about where the wavefunction sits, not about keeping time.",
+        "why": "E-TC as a system clock is cut. A Floquet skin effect in a cold-atom lattice is many-body physics. It does not tick a control cycle or a QEC round.",
+        "limit": "Not a metronome. No comparison to a QEC-cycle lifetime. Cannot INCLUDE."
+      },
+      "claimDelta": "none",
+      "whyQueued": "E-TC is CUT as a clock. A1 miss. A3 miss. Not a CUT reversal. Reading only.",
+      "math": "Floquet-engineered ultracold atoms showing a spatiotemporal non-Hermitian skin effect. No clock linewidth and no comparison to a QEC round.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-28/2609.30400",
+      "paperId": "2609.30400",
+      "date": "2026-09-28",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: photonic emitter ordering is not an anyon processor and not a tokamak. G5 fails: emitter-count heuristics do not falsify S3 fusion or a plant metric.",
+      "score": "no claim moved",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Lo et al. Nature 2026: universality needs fusion measurement of non-Abelian anyons, not photonic graph-state fusion. Treating the two as the same primitive would smuggle a new mechanism. Nayak et al. remain the anyon baseline.",
+      "ledger": "none",
+      "plain": {
+        "core": "Photonic graph states can be built with fewer quantum emitters if the order the photons are emitted is chosen carefully. The paper's fusion is the photonic operation that glues graph states together. It is not a measurement of non-Abelian anyons.",
+        "why": "The word fusion is a false friend for E-S3. Graph-state fusion does not braid S3 fluxes and does not read their fusion space. It is also not a plasma rate.",
+        "limit": "About a 30% emitter cut on random graphs, from a heuristic. No anyon, no plant, no energy ledger. Off-path."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. False friend on the word fusion. Not a new pillar: no interface contract. A1 miss. A3 miss.",
+      "math": "Four heuristic algorithms for emission order, aimed at linear rank-width. Up to 30% fewer emitters on random graphs and about 20% fewer two-qubit gates when combined with prior optimizers. Not an anyon fusion space.",
+      "autoGate": "miss A1, A2, A3"
+    },
     {
       "id": "2026-09-27/2609.29018",
       "paperId": "2609.29018",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T14:24:07.754820+00:00",
+  "generatedAt": "2026-09-28T14:18:00+00:00",
   "lookback": "1y+",
   "northStar": "Q=1000",
   "feeds": [
@@ -134,6 +134,7 @@
         "nonabelian-qldpc"
       ],
       "blockers": [
+        "2026-09-28: no S3 braid-plus-fusion result. D4 qLDPC (2609.31541) is outside the cyclic-fusion test and stays on E-QEC only.",
         "2026-09-27: no new S3 braid-plus-fusion result. Fusion measurement stays in the gate set.",
         "2026-09-26: no new S3 braid-plus-fusion result. Fusion measurement stays in the gate set.",
         "2026-09-25: non-Abelian sheaf qLDPC stays queued under E-QEC. It does not replace fusion measurement on E-S3.",
@@ -174,6 +175,7 @@
         "floquet-majorana-codes"
       ],
       "blockers": [
+        "2026-09-28: no independent X or Z logical. Strained-altermagnet Chern diagram (2609.30791) left unscored. M5 stays open.",
         "2026-09-27: FeTe ARPES (2609.24843) is a surface state plus superconductivity, not an X or Z logical. M5 stays open. 2-RDM 'Majorana' (2609.23993) rejected as a false friend.",
         "2026-09-26: poor-man's Majorana parity\u2013spin gates are a mimic platform. Still no topological-gap X and Z logicals.",
         "2026-09-25: PDW half-vortex Majorana lattice is Hartree\u2013Fock. Still no independent X and Z logicals.",
@@ -241,6 +243,7 @@
         "spacetime-fractons"
       ],
       "blockers": [
+        "2026-09-28: Floquet skin effect in ultracold atoms (2609.31474) is not a system clock.",
         "CUT as metronome. Does not sync plant actuators."
       ],
       "limitation": "Many-body physics, not a subsystem clock.",
@@ -271,6 +274,7 @@
         "fracton-holography"
       ],
       "blockers": [
+        "2026-09-28: planar holographic bootstrap (2609.31576) and flat-limit AdS Hilbert space (2609.31055) rejected. Denylist holds.",
         "2026-09-27: AdS2 Feynman reduction (2609.29306) rejected. Denylist holds. No 25\u201327 Sep announcement.",
         "2026-09-26: six AdS/cosmology/SYK papers rejected, including five left unscored on 25 Sep. Denylist holds.",
         "2026-09-25: three more AdS plasma/open-system papers rejected. Denylist holds.",
@@ -304,6 +308,7 @@
         "topo-dynamics"
       ],
       "blockers": [
+        "2026-09-28: KSTAR single-shot H-mode compass scan (2609.30452) and TCV edge Er (2609.31424) do not close M2. No coil-command bake-off.",
         "2026-09-27: stellarator GX surrogate (2609.28730) is offline optimization, not a coil command. M2 stays open.",
         "2026-09-26: WEST low-density ICRF singularities do not close M2. No coil command and no latency.",
         "2026-09-25: ITER quasi-symmetric error-field correction and core sound-wave pulsations do not close M2.",
@@ -343,6 +348,7 @@
       ],
       "amplifies": [],
       "blockers": [
+        "2026-09-28: no ledger term. Photonic graph-state fusion (2609.30400) rejected as a false friend. M1 and M7 stay open.",
         "2026-09-27: the same surrogate writes no Q_eng term. Bridge with E-RL stays at C1. M1 and M7 stay open.",
         "2026-09-26: PQLS calibrates SAT3 to CGYRO. Transport solver only. No Q_eng term. M1 and M7 stay open.",
         "Q=1000 is a ledger stress test, not an output. Missing coupled P_coh/P_drive/P_rad terms (M1, M7)."
@@ -486,6 +492,7 @@
       ],
       "amplifies": [],
       "blockers": [
+        "2026-09-28: Zhu et al. D4 twisted-sheaf qLDPC (2609.31541) queued under E-QEC only. Not an interface contract. D4 does not move E-S3.",
         "2026-09-27: Google-data decoder postselection and planar fluxonium GKP are queued on E-QEC only. Not a non-Abelian code contract.",
         "2026-09-26: ultra-high-rate code templates are queued on E-QEC only. They are not an interface contract for this pillar.",
         "2026-09-25: sheaf qLDPC is a good-code proof, not an interface contract. Still QUEUE.",
@@ -9751,9 +9758,402 @@
       "year": 2026,
       "source": "arXiv API",
       "foundational": false
+    },
+    {
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false,
+      "pillarEffect": "none",
+      "role": "week",
+      "id": "2609.31541",
+      "title": "Sipser-Spielman meets Dijkgraaf-Witten: non-Abelian qLDPC codes via twisted sheaf gauge theory and almost-constant-overhead magic state fountain",
+      "authors": [
+        "Guanyu Zhu",
+        "Shi Jie Samuel Tan",
+        "Ryohei Kobayashi",
+        "Po-Shen Hsin"
+      ],
+      "date": "2026-09-25",
+      "venue": "arXiv quant-ph",
+      "fields": [
+        "tqc",
+        "anyons",
+        "topology"
+      ],
+      "tags": [
+        "daily-run",
+        "2026-09-28",
+        "scored",
+        "qec"
+      ],
+      "importance": 92,
+      "confidence": 76,
+      "popularity": 74,
+      "coreIdea": "A new family of quantum error-correcting codes is built by twisting a classical expander code with a non-Abelian D4 gauge theory. The same construction is used as a magic-state fountain: it prepares many CZ magic states at once, and with a newer algebraic code the number of those states grows almost in step with the number of qubits.",
+      "whyItMatters": "E-QEC is the error layer on Bus B, and this is a qLDPC construction whose topological order is non-Abelian D4. It does not replace E-S3. The cyclic-fusion test that makes S3 universal excludes D4, so braid-plus-fusion on S3 stays the topological primitive.",
+      "limitation": "Bare arXiv. No device and no measured threshold. The almost-constant magic rate still gives up distance as the slack parameter goes to zero. It is not a term in the Q ledger and cannot raise C4.",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "arxiv": "2609.31541",
+      "url": "https://arxiv.org/abs/2609.31541"
+    },
+    {
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false,
+      "pillarEffect": "none",
+      "role": "week",
+      "id": "2609.30452",
+      "title": "Demonstration of H-mode Error Field Identification in a Single Discharge via Island Healing",
+      "authors": [
+        "E. M. Bursch",
+        "A. Xie",
+        "J. L. Barr",
+        "S. K. Kim",
+        "N. C. Logan",
+        "S. M. Yang",
+        "J. G. Bak",
+        "W. Choi"
+      ],
+      "date": "2026-09-24",
+      "venue": "arXiv physics.plasm-ph",
+      "fields": [
+        "plasma"
+      ],
+      "tags": [
+        "daily-run",
+        "2026-09-28",
+        "scored",
+        "control"
+      ],
+      "importance": 90,
+      "confidence": 78,
+      "popularity": 76,
+      "coreIdea": "On KSTAR, the plasma control system finds the magnetic error field that opens a tearing island during a single H-mode pulse, by healing the island while the coils scan. Older compass scans on DIII-D, JET, and MAST-U needed several discharges and were not done in H-mode. Cutting the scan from four shots to one is up to a 75% reduction in the time that calibration costs.",
+      "whyItMatters": "E-RL is the plant-attach claim. This is a real tokamak control system doing error-field identification in H-mode, the regime a pilot plant has to live in. It is a classical coil procedure. No quantum hardware is in the loop.",
+      "limitation": "One machine, bare arXiv. It shortens a calibration scan. It does not beat a lab baseline on disruption rate or tearing-onset warning, so M2 stays open. The 75% is not an energy-ledger term and cannot raise C4.",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "HOLD",
+      "arxiv": "2609.30452",
+      "url": "https://arxiv.org/abs/2609.30452"
+    },
+    {
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false,
+      "pillarEffect": "none",
+      "role": "week",
+      "id": "2609.31424",
+      "title": "Impact of magnetic drift configuration on the edge radial electric field in the TCV tokamak",
+      "authors": [
+        "S. Rien\u00e4cker",
+        "L. Vermare",
+        "P. Hennequin",
+        "C. Honor\u00e9",
+        "B. Labit",
+        "S. Coda",
+        "L. Frassinetti",
+        "B. Vincent"
+      ],
+      "date": "2026-09-25",
+      "venue": "arXiv physics.plasm-ph",
+      "fields": [
+        "plasma"
+      ],
+      "tags": [
+        "daily-run",
+        "2026-09-28",
+        "scored",
+        "control"
+      ],
+      "importance": 86,
+      "confidence": 74,
+      "popularity": 70,
+      "coreIdea": "On TCV, Doppler backscattering shows a well in the edge radial electric field just inside the separatrix when the ion drift points the favorable way, and a weaker or missing well when the drift is reversed. The difference is still there when edge density and temperature match, and it sharpens as the plasma is heated toward H-mode.",
+      "whyItMatters": "E-RL's attach surface includes TCV. This is a measured edge-field fact a shape or L-H controller would have to respect. The paper does not send a coil command.",
+      "limitation": "Diagnostic only. No actuator, no latency budget, and no disruption metric. Bare arXiv. It cannot close M2 and cannot raise C4.",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "HOLD",
+      "arxiv": "2609.31424",
+      "url": "https://arxiv.org/abs/2609.31424"
+    },
+    {
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false,
+      "pillarEffect": "none",
+      "role": "week",
+      "id": "2609.31462",
+      "title": "Gottesman-Kitaev-Preskill error-correction with decohered resources",
+      "authors": [
+        "Rajendra S. Bhati",
+        "T. Bazylewicz",
+        "Jaros\u0142aw K. Korbicz"
+      ],
+      "date": "2026-09-25",
+      "venue": "arXiv quant-ph",
+      "fields": [
+        "tqc"
+      ],
+      "tags": [
+        "daily-run",
+        "2026-09-28",
+        "scored",
+        "qec"
+      ],
+      "importance": 87,
+      "confidence": 73,
+      "popularity": 68,
+      "coreIdea": "Standard GKP error correction assumes a perfectly quiet ancilla pair. If that ancilla is only allowed to dephase, teleportation no longer snaps the state back into the code. The correction becomes a noise process that piles up, and after a few rounds the leakage out of the code saturates instead of healing.",
+      "whyItMatters": "E-QEC needs to know when a bosonic code stops correcting itself. A dephased GKP ancilla does not self-correct. The default error layer is still the surface code and qLDPC, not GKP.",
+      "limitation": "Theory of one noise channel on GKP. No device, no distance scaling, and no surface-code threshold. Bare arXiv. It does not lower C4 and it writes no ledger term.",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "arxiv": "2609.31462",
+      "url": "https://arxiv.org/abs/2609.31462"
+    },
+    {
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false,
+      "pillarEffect": "none",
+      "role": "week",
+      "id": "2609.31605",
+      "title": "Measurement-Based Uncomputation from an Error Correction Perspective",
+      "authors": [
+        "Minjun Jeon",
+        "Po-Wei Huang",
+        "Zhenyu Cai"
+      ],
+      "date": "2026-09-25",
+      "venue": "arXiv quant-ph",
+      "fields": [
+        "tqc"
+      ],
+      "tags": [
+        "daily-run",
+        "2026-09-28",
+        "scored",
+        "qec"
+      ],
+      "importance": 84,
+      "confidence": 70,
+      "popularity": 66,
+      "coreIdea": "Uncomputing scratch qubits can cost as much as the computation itself. Measuring the scratch register and keeping only the no-error outcomes throws the garbage away without running the reverse circuit. The success rate is set by how the garbage is populated, which can be much smaller than the number of garbage qubits. Other outcomes can be fixed by reusing the original uncompute only when a structural condition holds.",
+      "whyItMatters": "E-QEC cares about spacetime overhead on early fault-tolerant machines. This is a postselection rule on the garbage register, not a new code and not a measured threshold.",
+      "limitation": "The cheap version discards shots. The worked example is HHL, not a surface-code memory. Bare arXiv. No measured logical error and no Q term.",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "arxiv": "2609.31605",
+      "url": "https://arxiv.org/abs/2609.31605"
+    },
+    {
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false,
+      "pillarEffect": "none",
+      "role": "off-path",
+      "id": "2609.31576",
+      "title": "Bootstrapping Holographic Theories in the Planar Limit",
+      "authors": [
+        "Shai M. Chester",
+        "Daniele R. Pavarini",
+        "Alessandro Piazza"
+      ],
+      "date": "2026-09-25",
+      "venue": "arXiv hep-th",
+      "fields": [
+        "holography"
+      ],
+      "tags": [
+        "daily-run",
+        "2026-09-28",
+        "rejected",
+        "denylist"
+      ],
+      "importance": 36,
+      "confidence": 38,
+      "popularity": 32,
+      "coreIdea": "A numerical bootstrap combined with localization puts an upper bound on the lightest single-trace operator in two holographic gauge theories, at every value of the coupling. Where integrability is known, the bound sits close to it.",
+      "whyItMatters": "It is a holographic spectrum bound. E-HOL is cut as a reactor or processor part. Reading is allowed. It does not sit on a bus.",
+      "limitation": "Denylist. No plasma, no code threshold, no interface. Cannot INCLUDE.",
+      "claimIds": [
+        "E-HOL"
+      ],
+      "bindAction": "REJECT",
+      "arxiv": "2609.31576",
+      "url": "https://arxiv.org/abs/2609.31576"
+    },
+    {
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false,
+      "pillarEffect": "none",
+      "role": "off-path",
+      "id": "2609.31055",
+      "title": "Hilbert space in the flat limit of AdS/CFT. I. Massive particles",
+      "authors": [
+        "Kevin Nguyen"
+      ],
+      "date": "2026-09-25",
+      "venue": "arXiv hep-th",
+      "fields": [
+        "holography"
+      ],
+      "tags": [
+        "daily-run",
+        "2026-09-28",
+        "rejected",
+        "denylist"
+      ],
+      "importance": 34,
+      "confidence": 36,
+      "popularity": 30,
+      "coreIdea": "Sending the radius of anti-de Sitter space to infinity turns conformal representations into the Hilbert space of ordinary massive particles, and the inner product stays unitary through that limit.",
+      "whyItMatters": "This is the flat-space limit of AdS/CFT. E-HOL is cut. It does not encode a plasma state or a logical qubit.",
+      "limitation": "Denylist. No bus, no energy accounting. Cannot INCLUDE.",
+      "claimIds": [
+        "E-HOL"
+      ],
+      "bindAction": "REJECT",
+      "arxiv": "2609.31055",
+      "url": "https://arxiv.org/abs/2609.31055"
+    },
+    {
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false,
+      "pillarEffect": "none",
+      "role": "off-path",
+      "id": "2609.31474",
+      "title": "Spatiotemporal Non-Hermitian Skin Effect with Floquet-Engineered Ultracold Atoms",
+      "authors": [
+        "Weijie Liang",
+        "Weiping Zhang",
+        "Keye Zhang"
+      ],
+      "date": "2026-09-25",
+      "venue": "arXiv cond-mat.quant-gas",
+      "fields": [
+        "time-crystal"
+      ],
+      "tags": [
+        "daily-run",
+        "2026-09-28",
+        "rejected",
+        "clock"
+      ],
+      "importance": 38,
+      "confidence": 40,
+      "popularity": 34,
+      "coreIdea": "Ultracold atoms driven in a repeating pattern show a non-Hermitian skin effect: bulk states pile up at the edge. The drive is Floquet. The result is about where the wavefunction sits, not about keeping time.",
+      "whyItMatters": "E-TC as a system clock is cut. A Floquet skin effect in a cold-atom lattice is many-body physics. It does not tick a control cycle or a QEC round.",
+      "limitation": "Not a metronome. No comparison to a QEC-cycle lifetime. Cannot INCLUDE.",
+      "claimIds": [
+        "E-TC"
+      ],
+      "bindAction": "REJECT",
+      "arxiv": "2609.31474",
+      "url": "https://arxiv.org/abs/2609.31474"
+    },
+    {
+      "year": 2026,
+      "source": "arXiv API",
+      "foundational": false,
+      "pillarEffect": "none",
+      "role": "off-path",
+      "id": "2609.30400",
+      "title": "Generation of Photonic Graph States with minimal number of quantum emitters",
+      "authors": [
+        "Konstantinos-Rafail Revis",
+        "Nils Tomke Ottink",
+        "Pierre-Emmanuel Emeriau",
+        "Paul Hilaire"
+      ],
+      "date": "2026-09-24",
+      "venue": "arXiv quant-ph",
+      "fields": [
+        "fusion-quantum",
+        "tqc"
+      ],
+      "tags": [
+        "daily-run",
+        "2026-09-28",
+        "rejected",
+        "false-friend"
+      ],
+      "importance": 36,
+      "confidence": 34,
+      "popularity": 32,
+      "coreIdea": "Photonic graph states can be built with fewer quantum emitters if the order the photons are emitted is chosen carefully. The paper's fusion is the photonic operation that glues graph states together. It is not a measurement of non-Abelian anyons.",
+      "whyItMatters": "The word fusion is a false friend for E-S3. Graph-state fusion does not braid S3 fluxes and does not read their fusion space. It is also not a plasma rate.",
+      "limitation": "About a 30% emitter cut on random graphs, from a heuristic. No anyon, no plant, no energy ledger. Off-path.",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "arxiv": "2609.30400",
+      "url": "https://arxiv.org/abs/2609.30400"
     }
   ],
   "runs": [
+    {
+      "id": "run-2026-09-28-daily",
+      "startedAt": "2026-09-28T09:18:00-05:00",
+      "windowStart": "2026-09-21",
+      "windowEnd": "2026-09-28",
+      "kind": "daily",
+      "feeds": [
+        "https://arxiv.org/list/quant-ph/recent",
+        "https://arxiv.org/list/cond-mat.str-el/recent",
+        "https://arxiv.org/list/cond-mat.mes-hall/recent",
+        "https://arxiv.org/list/hep-th/recent",
+        "https://arxiv.org/list/physics.plasm-ph/recent",
+        "https://arxiv.org/search/advanced"
+      ],
+      "paperIds": [
+        "2609.31541",
+        "2609.30452",
+        "2609.31424",
+        "2609.31462",
+        "2609.31605",
+        "2609.31576",
+        "2609.31055",
+        "2609.31474",
+        "2609.30400"
+      ],
+      "unscoredIds": [
+        "2609.30363",
+        "2609.30368",
+        "2609.30380",
+        "2609.30406",
+        "2609.31365",
+        "2609.31020",
+        "2609.30791",
+        "2609.31312",
+        "2609.31280",
+        "2609.31391",
+        "2609.31052"
+      ],
+      "notes": "Eleventh daily run. Lookback 7 days. ingest.py wrote 32 hits. fetch_arxiv.py merged 16 keyword stubs; the off-path stubs were removed from the catalog and left unscored here so harvest boilerplate cannot enter the paper. Category lists now reach the 2026-09-25 announcement (no 26\u201328 Sep listing yet). Five HOLDs: D4 twisted-sheaf qLDPC magic fountain under E-QEC only (D4 fails the cyclic-fusion test, so not E-S3), KSTAR single-discharge H-mode error-field identification under E-RL, TCV edge-Er drift comparison under E-RL (diagnostic, G4 fail), GKP correction with a dephased ancilla under E-QEC (wrong code family), and measurement-based uncomputation under E-QEC. Holographic bootstrap and flat-limit AdS rejected on the E-HOL denylist. Floquet skin effect rejected as a clock. Photonic graph-state fusion rejected as a false friend for anyon fusion. Strongest unscored neighbor: Gioia\u2013Pace\u2013Verresen\u2013Shao\u2013Thorngren, finite ancilla cannot disentangle the toric code (2609.30363). No Auto-Gate pass. No version bump. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand. Q=1000 not entered.",
+      "fieldCounts": {
+        "tqc": 4,
+        "anyons": 1,
+        "topology": 1,
+        "plasma": 2,
+        "holography": 2,
+        "time-crystal": 1,
+        "fusion-quantum": 1
+      }
+    },
     {
       "id": "run-2026-09-27-daily",
       "startedAt": "2026-09-27T09:16:00-05:00",

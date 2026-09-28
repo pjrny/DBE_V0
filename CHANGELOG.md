@@ -1,11 +1,11 @@
 # Changelog
 
-## [0.4.7] - 2026-09-27
+## [0.4.8] - 2026-09-28
 ### Added
-- Daily observatory run (lookback 7 days). No paper version bump. Decoder postselection on published Google surface-code data, a planar fluxonium GKP device, a stellarator gyrokinetic surrogate, and an FeTe topological-surface-state paper are queued. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
+- Daily observatory run (lookback 7 days). No paper version bump. D4 twisted-sheaf qLDPC, KSTAR single-shot H-mode error-field identification, TCV edge-Er drift, decohered GKP correction, and measurement-based uncomputation are queued. Holography, a Floquet skin effect, and photonic graph-state fusion are rejected. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
 
 ### Changed
-- Command-strip date stamp moved to 2026-09-27 so this-week counts the new harvest.
+- Command-strip date stamp moved to 2026-09-28 so this-week counts the new harvest.
 
 All notable changes to this project will be documented in this file.
 
