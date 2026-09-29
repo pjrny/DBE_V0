@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T14:18:00+00:00",
+  "generatedAt": "2026-09-29T14:30:00+00:00",
   "lookback": "1y+",
   "northStar": "Q=1000",
   "feeds": [
@@ -134,6 +134,7 @@
         "nonabelian-qldpc"
       ],
       "blockers": [
+        "2026-09-29: Read-Rezayi numerics (2609.31846) and Laughlin co-tunneling (2609.35480) do not replace S3 fusion measurement. No braid on hardware.",
         "2026-09-28: no S3 braid-plus-fusion result. D4 qLDPC (2609.31541) is outside the cyclic-fusion test and stays on E-QEC only.",
         "2026-09-27: no new S3 braid-plus-fusion result. Fusion measurement stays in the gate set.",
         "2026-09-26: no new S3 braid-plus-fusion result. Fusion measurement stays in the gate set.",
@@ -175,6 +176,7 @@
         "floquet-majorana-codes"
       ],
       "blockers": [
+        "2026-09-29: Kitaev-Heisenberg toric-code region (2609.33454) is Abelian e/m. No X or Z logical. M5 stays open.",
         "2026-09-28: no independent X or Z logical. Strained-altermagnet Chern diagram (2609.30791) left unscored. M5 stays open.",
         "2026-09-27: FeTe ARPES (2609.24843) is a surface state plus superconductivity, not an X or Z logical. M5 stays open. 2-RDM 'Majorana' (2609.23993) rejected as a false friend.",
         "2026-09-26: poor-man's Majorana parity\u2013spin gates are a mimic platform. Still no topological-gap X and Z logicals.",
@@ -243,6 +245,7 @@
         "spacetime-fractons"
       ],
       "blockers": [
+        "2026-09-29: kicked-Ising time crystal (2609.33574), N\u226416, is not a system clock.",
         "2026-09-28: Floquet skin effect in ultracold atoms (2609.31474) is not a system clock.",
         "CUT as metronome. Does not sync plant actuators."
       ],
@@ -274,6 +277,7 @@
         "fracton-holography"
       ],
       "blockers": [
+        "2026-09-29: integrable holography (2609.34909) rejected. Denylist holds. The rest of the cluster was not scored.",
         "2026-09-28: planar holographic bootstrap (2609.31576) and flat-limit AdS Hilbert space (2609.31055) rejected. Denylist holds.",
         "2026-09-27: AdS2 Feynman reduction (2609.29306) rejected. Denylist holds. No 25\u201327 Sep announcement.",
         "2026-09-26: six AdS/cosmology/SYK papers rejected, including five left unscored on 25 Sep. Denylist holds.",
@@ -308,6 +312,7 @@
         "topo-dynamics"
       ],
       "blockers": [
+        "2026-09-29: EXL-50U MPC (2609.34076) is a free-boundary simulation versus PID, not a shot. Packet twin (2609.33994) stops at 91.6 \u00b5s shared memory. M2 stays open.",
         "2026-09-28: KSTAR single-shot H-mode compass scan (2609.30452) and TCV edge Er (2609.31424) do not close M2. No coil-command bake-off.",
         "2026-09-27: stellarator GX surrogate (2609.28730) is offline optimization, not a coil command. M2 stays open.",
         "2026-09-26: WEST low-density ICRF singularities do not close M2. No coil command and no latency.",
@@ -348,6 +353,7 @@
       ],
       "amplifies": [],
       "blockers": [
+        "2026-09-29: Vlasov SLDG (2609.32206) and ITG s_crit (2609.33341) write no Q_eng. p-11B alpha source is not Layer 2. M1, M4, and M7 stay open.",
         "2026-09-28: no ledger term. Photonic graph-state fusion (2609.30400) rejected as a false friend. M1 and M7 stay open.",
         "2026-09-27: the same surrogate writes no Q_eng term. Bridge with E-RL stays at C1. M1 and M7 stay open.",
         "2026-09-26: PQLS calibrates SAT3 to CGYRO. Transport solver only. No Q_eng term. M1 and M7 stay open.",
@@ -492,6 +498,7 @@
       ],
       "amplifies": [],
       "blockers": [
+        "2026-09-29: GKP-concatenated BB/tricycle circuits (2609.35282) queued under E-QEC only. Not an interface contract.",
         "2026-09-28: Zhu et al. D4 twisted-sheaf qLDPC (2609.31541) queued under E-QEC only. Not an interface contract. D4 does not move E-S3.",
         "2026-09-27: Google-data decoder postselection and planar fluxonium GKP are queued on E-QEC only. Not a non-Abelian code contract.",
         "2026-09-26: ultra-high-rate code templates are queued on E-QEC only. They are not an interface contract for this pillar.",
@@ -10102,9 +10109,683 @@
       "bindAction": "REJECT",
       "arxiv": "2609.30400",
       "url": "https://arxiv.org/abs/2609.30400"
+    },
+    {
+      "id": "2609.34076",
+      "arxiv": "2609.34076",
+      "title": "Observer-Based Model Predictive Control for Isoflux Regulation in the EXL-50U Spherical Tokamak",
+      "authors": [
+        "Chang Lu",
+        "Jiayi Zhi",
+        "Xian Guo",
+        "Tianyuan Liu"
+      ],
+      "year": 2026,
+      "date": "2026-09-28",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2609.34076",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-09-29",
+        "queued"
+      ],
+      "importance": 86,
+      "confidence": 74,
+      "popularity": 58,
+      "coreIdea": "A model-predictive controller for the EXL-50U spherical tokamak is asked to hold plasma current and the plasma boundary at the same time, with coil voltage limits written in. On a computer model of the machine it tracks those targets more tightly than a standard PID loop or a linear-quadratic regulator, and the sum is done in under a millisecond.",
+      "whyItMatters": "E-RL is the plant-attach claim. This is the right kind of machine and the right kind of job: shape and current, coils, a latency number. It is still a simulation of EXL-50U, not a shot. It does not beat a lab baseline on disruptions, so M2 stays open.",
+      "limitation": "No plasma was controlled. The paper says the runs are a basis for future experiments. The error numbers (1.126 kA, 0.0164 m, 2.463 mWb) are against PID inside a Grad\u2013Shafranov model. They are not a Q term and cannot raise C4.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.33994",
+      "arxiv": "2609.33994",
+      "title": "A packet-level digital hardware twin for commissioning megahertz diagnostic edge AI and plasma control system integration in tokamaks",
+      "authors": [
+        "Semin Joung",
+        "Abhilasha Dave",
+        "Luca Scomparin",
+        "Filipp Khabanov",
+        "Zheng Yan",
+        "Benedikt Geiger"
+      ],
+      "year": 2026,
+      "date": "2026-09-27",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2609.33994",
+      "fields": [
+        "plasma"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-09-29",
+        "queued"
+      ],
+      "importance": 84,
+      "confidence": 71,
+      "popularity": 54,
+      "coreIdea": "Fast cameras and beam-emission diagnostics are too quick to bolt onto a plasma control system by hand. This paper builds a packet-level twin of that path: a 64-channel, 1 MHz diagnostic, dropped packets, and a 1 kHz control cycle. A missing packet is caught and the bad windows are thrown out instead of being filled in.",
+      "whyItMatters": "E-RL needs a latency budget and a safe-hold when data is lost. The twin measures a median handoff of 91.6 microseconds into shared memory. That is the diagnostic side of Bus A. It never moved a coil on a plasma.",
+      "limitation": "Commissioning simulator, not a tokamak shot. 91.6 \u00b5s is last-input to shared memory, not actuator-to-plasma. A 1 kHz cycle can still be slower than a tearing mode. No disruption metric, so M2 stays open. Not a Q term.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.33500",
+      "arxiv": "2609.33500",
+      "title": "A Rapid Integrated Tokamak Modelling Approach for Coupled Profile and Equilibrium Evolution",
+      "authors": [
+        "Ruohan Zhang",
+        "Huasheng Xie",
+        "Feng Wang",
+        "Zheng-Xiong Wang"
+      ],
+      "year": 2026,
+      "date": "2026-09-27",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2609.33500",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-09-29",
+        "queued"
+      ],
+      "importance": 78,
+      "confidence": 70,
+      "popularity": 48,
+      "coreIdea": "During a current ramp the plasma's heat and its magnetic field change on different clocks. This paper ties a fixed-boundary equilibrium to a fast particle-and-energy balance and to current diffusion, and runs an ITER-like deuterium pulse (10 to 15 MA, 80 MW of electron-cyclotron heating) in seconds on a laptop.",
+      "whyItMatters": "E-RL's offline twin has to be fast enough to sit next to a controller. The stored-energy check against an independent code (FUSE) is 0.02 percent at 60 s. That is a solver benchmark. It is not a coil command and it is not a plant gain.",
+      "limitation": "Fixed boundary, pure deuterium, one scenario. The largest disagreement with FUSE is the core current, which is what a controller would care about. Stored energy 185.52 to 252.70 MJ is a model output under a prescribed 80 MW, not Q_eng. M2 stays open.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.32206",
+      "arxiv": "2609.32206",
+      "title": "Positivity-preserving semi-Lagrangian discontinuous Galerkin methods for multi-species Vlasov-Amp\u00e8re models of plasma",
+      "authors": [
+        "Dauda Gambo",
+        "James A. Rossmanith"
+      ],
+      "year": 2026,
+      "date": "2026-09-26",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2609.32206",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-09-29",
+        "queued"
+      ],
+      "importance": 83,
+      "confidence": 73,
+      "popularity": 46,
+      "coreIdea": "A kinetic plasma code has to keep the particle distribution from going negative when ions and electrons live on very different scales. This paper builds a high-order Vlasov\u2013Amp\u00e8re solver that enforces that positivity, and checks it on standard waves: Landau damping, two-stream instability, and KEEN waves.",
+      "whyItMatters": "S-L3 says the Vlasov piece must sit in any fusion-rate claim. A positivity-preserving multi-species solver is a method the ledger is allowed to use later. It does not contain hole-burning, SRS, or SBS, and it does not report a reactivity.",
+      "limitation": "Test problems only. No fusion cross-section, no drive laser, no auxiliary power. Keeping the distribution positive is not a gain. C4 on S-L3 stays where it was; this does not move it.",
+      "source": "arXiv API",
+      "claimIds": [
+        "S-L3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.33341",
+      "arxiv": "2609.33341",
+      "title": "Ion-temperature-gradient turbulence from finite to weak magnetic shear regime",
+      "authors": [
+        "Zihao Wang",
+        "Tiannan Wu",
+        "Shaojie Wang"
+      ],
+      "year": 2026,
+      "date": "2026-09-27",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2609.33341",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-09-29",
+        "queued"
+      ],
+      "importance": 82,
+      "confidence": 70,
+      "popularity": 50,
+      "coreIdea": "Hot tokamak plasma leaks heat because of a turbulence called the ion temperature gradient. This paper says that when the magnetic shear gets weaker than about 1 over 2\u03c0, that turbulence changes shape and, in their simulations, an internal barrier forms and the turbulence drops inside that region.",
+      "whyItMatters": "S-L3 is the kinetic transport layer the rate is not allowed to ignore. A geometric criterion checked on DIII-D, JET, and ITER parameters is a transport result. It is not a reactivity ratio and it is not a control attach.",
+      "limitation": "Gyrokinetic simulations, not a shot. Real internal barriers have more than one cause. The paper does not compute fusion power, drive power, or Q. A confinement story must not be copied into the ledger as a gain.",
+      "source": "arXiv API",
+      "claimIds": [
+        "S-L3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.33677",
+      "arxiv": "2609.33677",
+      "title": "Implicit-Explicit time integration scheme with Physics-based preconditioning for two-fluid tokamak boundary simulations",
+      "authors": [
+        "Micol Bassanini",
+        "Simone Deparis",
+        "Paolo Ricci",
+        "Brenno De Lucca",
+        "Davide Mancini",
+        "Louis Stenger"
+      ],
+      "year": 2026,
+      "date": "2026-09-27",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2609.33677",
+      "fields": [
+        "plasma"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-09-29",
+        "queued"
+      ],
+      "importance": 74,
+      "confidence": 68,
+      "popularity": 42,
+      "coreIdea": "The edge of a tokamak is stiff: Alfv\u00e9n waves want a tiny time step. This paper puts those fast pieces in an implicit solver inside the GBS boundary code and leaves the slower pieces explicit, so the step can be longer without paying for a fully implicit run.",
+      "whyItMatters": "Boundary turbulence is part of the loss stack next to S-L3. A faster GBS step is a method improvement. It is not a Vlasov solver and it is not a fusion rate.",
+      "limitation": "Two-fluid, not kinetic. Manufactured-solution checks. No hole-burning, no SRS/SBS, no Q. A bigger time step is not a gain.",
+      "source": "arXiv API",
+      "claimIds": [
+        "S-L3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.35282",
+      "arxiv": "2609.35282",
+      "title": "Circuit-level benchmarks of GKP-concatenated qLDPC Codes",
+      "authors": [
+        "Yuan Yao",
+        "Ruipeng Xing",
+        "Jianshuo Gao",
+        "Xiao Yuan"
+      ],
+      "year": 2026,
+      "date": "2026-09-28",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2609.35282",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-09-29",
+        "queued"
+      ],
+      "importance": 81,
+      "confidence": 69,
+      "popularity": 52,
+      "coreIdea": "A GKP code stores a qubit in a harmonic oscillator and can pass analog clues to the decoder. This paper wraps two qLDPC families (BB and tricycle) around that inner code and simulates noisy circuits. Using the analog clue raises the noise level the code can stand, on paper, and the BB family needs less squeezing than the tricycle family in their setup.",
+      "whyItMatters": "E-QEC is the error layer on Bus B. A circuit-level comparison of qLDPC outer codes is in the right literature. It is a simulation of a bosonic stack, not a measured surface-code threshold, and it is not an S3 gate.",
+      "limitation": "Bare arXiv. Finite-size crossings under shared assumptions: about 0.212 and 0.142, quoted as 10.46 dB and 13.94 dB of squeezing. No device. Does not move the Google surface-code result that holds C4.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.30363",
+      "arxiv": "2609.30363",
+      "title": "Disentangling the Toric Code",
+      "authors": [
+        "Lei Gioia",
+        "Salvatore D. Pace",
+        "Ruben Verresen",
+        "Shu-Heng Shao",
+        "Ryan Thorngren"
+      ],
+      "year": 2026,
+      "date": "2026-09-24",
+      "venue": "arXiv cond-mat.str-el",
+      "url": "https://arxiv.org/abs/2609.30363",
+      "fields": [
+        "topology",
+        "tqc",
+        "anyons"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-09-29",
+        "queued"
+      ],
+      "importance": 80,
+      "confidence": 76,
+      "popularity": 55,
+      "coreIdea": "The toric code can be thought of as a symmetry that is not a simple on-site spin flip, because its excitations are anyons. The paper proves that no finite extra quantum system can turn that symmetry into an on-site one. Infinite-dimensional extras can, but only if their energy is not bounded from below.",
+      "whyItMatters": "E-QEC's memory is the toric code and its surface-code descendants. A proof that finite ancillas cannot erase the anyons is a structural fact about that memory. It is not a threshold, not a decoder, and not the S3 fusion gate.",
+      "limitation": "Theorem, not a device. The infinite-ancilla loophole needs an unbounded Hamiltonian, so it is not a hardware recipe. Abelian toric-code order does not make S3 universal. C4 is untouched.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.31846",
+      "arxiv": "2609.31846",
+      "title": "Read-Rezayi fractional Chern insulators in modulated Bernal graphene",
+      "authors": [
+        "Ruth Mora-Soto",
+        "Andr\u00e9 Grossi Fonseca",
+        "Raul Perea-Causin",
+        "Hui Liu",
+        "Emil J. Bergholtz",
+        "Marin Solja\u010di\u0107"
+      ],
+      "year": 2026,
+      "date": "2026-09-25",
+      "venue": "arXiv cond-mat.str-el",
+      "url": "https://arxiv.org/abs/2609.31846",
+      "fields": [
+        "anyons",
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-09-29",
+        "queued"
+      ],
+      "importance": 79,
+      "confidence": 62,
+      "popularity": 57,
+      "coreIdea": "Fibonacci anyons can, in theory, do universal quantum computing by braiding alone. They show up in a fractional quantum Hall state called Read-Rezayi. This paper searches a model of modulated bilayer graphene at zero magnetic field and finds a parameter region whose ground state looks like that state, plus a Moore-Read-like state at another filling.",
+      "whyItMatters": "E-S3 is universal only because fusion measurement is kept. Fibonacci braid-only universality is a different route. A numerical ground state in a graphene model does not replace the S3 primitive that has already run on trapped ions, and it does not open a new bus.",
+      "limitation": "Band-projected exact diagonalization. 'Consistent with' is not a braid and not a fusion measurement. No device. Zero-field non-Abelian order in graphene remains a hypothesis. C3 on E-S3 stays on the Quantinuum result.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.35480",
+      "arxiv": "2609.35480",
+      "title": "Extracting the anyonic exchange phase from co-tunneling through an open quantum dot",
+      "authors": [
+        "Felix Puster",
+        "Matthias Thamm",
+        "Bernd Rosenow"
+      ],
+      "year": 2026,
+      "date": "2026-09-28",
+      "venue": "arXiv cond-mat.mes-hall",
+      "url": "https://arxiv.org/abs/2609.35480",
+      "fields": [
+        "anyons",
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-09-29",
+        "queued"
+      ],
+      "importance": 77,
+      "confidence": 64,
+      "popularity": 49,
+      "coreIdea": "Abelian anyons in a fractional quantum Hall fluid pick up a phase when they trade places. The paper designs a small interferometer where an open quantum dot makes that swap show up as a shift between two interference patterns, and writes a formula for the current at finite temperature.",
+      "whyItMatters": "Readout of an anyon is part of topological computing. This proposal is for Laughlin quasiparticles, which are Abelian. E-S3 needs the fusion space of non-Abelian S3 fluxes. An Abelian phase plateau does not provide that space.",
+      "limitation": "Keldysh calculation, not a device. The exchange phase is \u03b8=\u03c0\u03bd for Laughlin states. Screening of the area, or a two-drain subtraction, has to be good to a few percent. No non-Abelian braid. Cannot raise C3.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.33454",
+      "arxiv": "2609.33454",
+      "title": "Kitaev-Heisenberg model on the square-hexagon-dodecagon lattice",
+      "authors": [
+        "Saeed Barari",
+        "Yasir Iqbal",
+        "Ganapathy Baskaran",
+        "Saeed S. Jahromi",
+        "Chunxiao Liu",
+        "Julien Vidal"
+      ],
+      "year": 2026,
+      "date": "2026-09-27",
+      "venue": "arXiv cond-mat.str-el",
+      "url": "https://arxiv.org/abs/2609.33454",
+      "fields": [
+        "majorana",
+        "anyons",
+        "topology"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-09-29",
+        "queued",
+        "watch"
+      ],
+      "importance": 68,
+      "confidence": 64,
+      "popularity": 44,
+      "coreIdea": "A Kitaev magnet can be rewritten with Majorana fermions moving in a gauge field. On this lattice the pure Kitaev model is gapped almost everywhere, and that gapped phase is a toric code. Which plaquette carries which Abelian anyon depends on the couplings. Adding Heisenberg exchange produces ordinary magnetic order.",
+      "whyItMatters": "E-MZM is the watch item for Majorana qubits. This is a spin-liquid calculation whose topological phase is Abelian. It does not show a non-Abelian logical qubit, and it does not pass the M5 test.",
+      "limitation": "Lattice model. The anyons are e and m of a toric code, assigned by fermion parity of vortices. No wire, no gap scaling, no X and Z logicals. E-MZM stays at C1 and is not load-bearing.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-MZM"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.33483",
+      "arxiv": "2609.33483",
+      "title": "Continuous Laser-Driven \u03b1 Source",
+      "authors": [
+        "Noam Popper",
+        "Griffin D. Glenn",
+        "Girik Jain",
+        "Raz Halifa Levi",
+        "Tomer Catabi",
+        "Michal Elkind"
+      ],
+      "year": 2026,
+      "date": "2026-09-27",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2609.33483",
+      "fields": [
+        "fusion-quantum",
+        "plasma"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-09-29",
+        "queued"
+      ],
+      "importance": 72,
+      "confidence": 66,
+      "popularity": 51,
+      "coreIdea": "A laser knocks protons out of a thin water jet, and those protons hit boron nitride and make alpha particles from proton-boron fusion. Because the water keeps flowing, they fired 18,000 shots at 10 hertz without replacing a solid target.",
+      "whyItMatters": "S-L2 is Floquet-assisted tunneling of DT at extreme fields. This experiment is a laser-driven proton-boron source for alphas. It is not a driven Coulomb barrier, it quotes no electric field, and it is not a reactor gain.",
+      "limitation": "Target-normal sheath acceleration into a converter. Yield is benchmarked against particle transport, not against a thermal DT rate. No P_drive in the ledger, no Q. Eighteen thousand shots do not move the 10^15 V/m bound.",
+      "source": "arXiv API",
+      "claimIds": [
+        "S-L2"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.33574",
+      "arxiv": "2609.33574",
+      "title": "Interactions Protect Periodically Driven Time Crystals Against Dephasing but Destabilise Multipolar-Driven Order",
+      "authors": [
+        "Karthikeya Machiraju",
+        "Kaustav Bhowmick"
+      ],
+      "year": 2026,
+      "date": "2026-09-27",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2609.33574",
+      "fields": [
+        "time-crystal"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-09-29",
+        "rejected",
+        "cut-as-clock"
+      ],
+      "importance": 55,
+      "confidence": 58,
+      "popularity": 40,
+      "coreIdea": "In a small kicked spin chain, turning up the interactions helps a periodically driven time crystal survive dephasing. The same interactions hurt the order when the drive is a more irregular multipolar sequence. The chains have 12 or 16 spins.",
+      "whyItMatters": "E-TC as a system clock is already cut. A 16-spin diagonalization does not outlast a QEC cycle and does not time a plasma shot. The physics can be read. It is not timing infrastructure.",
+      "limitation": "Exact diagonalization at N\u226416. Coherence time scales as about 1 over the dephasing rate for the periodic drive. No comparison to a control horizon. Not a metronome.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-TC"
+      ],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.34909",
+      "arxiv": "2609.34909",
+      "title": "Holography for integrable field theories",
+      "authors": [
+        "Kevin Costello",
+        "Joaquin Liniado"
+      ],
+      "year": 2026,
+      "date": "2026-09-28",
+      "venue": "arXiv hep-th",
+      "url": "https://arxiv.org/abs/2609.34909",
+      "fields": [
+        "holography"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-09-29",
+        "rejected",
+        "denylist"
+      ],
+      "importance": 48,
+      "confidence": 62,
+      "popularity": 46,
+      "coreIdea": "Some integrable field theories have a holographic twin: a topological string whose shape is a spectral curve. The paper describes how that curve changes under the renormalization flow and matches known results up to two loops.",
+      "whyItMatters": "E-HOL is cut. A duality between a spectral curve and a field theory is not a sensor, a coil command, or a processor bus. It stays on the reading list.",
+      "limitation": "No plasma, no qubit, no energy accounting. Matching a two-loop RG flow does not encode a reactor. Denylist holds.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-HOL"
+      ],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.35655",
+      "arxiv": "2609.35655",
+      "title": "Optimal performance in a chaotic Floquet quantum battery",
+      "authors": [
+        "Lakshmija N K",
+        "Uma Divakaran"
+      ],
+      "year": 2026,
+      "date": "2026-09-28",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2609.35655",
+      "fields": [
+        "time-crystal"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-09-29",
+        "rejected",
+        "off-path"
+      ],
+      "importance": 34,
+      "confidence": 36,
+      "popularity": 28,
+      "coreIdea": "A handful of qubits, kicked on a schedule and disordered, can store energy and give most of it back. In the very disordered limit the stored energy is predictable and the waste looks small, so the authors say the extractable fraction approaches one.",
+      "whyItMatters": "A closed spin model with unit extractable fraction is not a fusion gain. S-Q is cut as an output. Ergotropy is not Q_eng. The word efficiency must not enter the ledger.",
+      "limitation": "Permutation-symmetric qubits plus disorder. No plasma, no Bremsstrahlung, no drive laser, no wall plug. Low signal for this program.",
+      "source": "arXiv API",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.32266",
+      "arxiv": "2609.32266",
+      "title": "Symmetry-permuting entanglers for non-invertible symmetry-protected topological phases",
+      "authors": [
+        "Minyoung You"
+      ],
+      "year": 2026,
+      "date": "2026-09-26",
+      "venue": "arXiv cond-mat.str-el",
+      "url": "https://arxiv.org/abs/2609.32266",
+      "fields": [
+        "topology",
+        "tqc"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-09-29",
+        "rejected",
+        "off-path"
+      ],
+      "importance": 58,
+      "confidence": 60,
+      "popularity": 36,
+      "coreIdea": "Some one-dimensional phases protected by a non-invertible symmetry cannot be connected by a circuit that respects the symmetry. The paper shows they can still be connected if the circuit is allowed to permute the symmetry, and writes an explicit example for Rep(D8).",
+      "whyItMatters": "E-S3 is a two-dimensional quantum double with fusion measurement. A one-dimensional Rep(D8) entangler is not that gate set. D8 is also outside the cyclic-fusion test that picks S3. The paper is not load-bearing.",
+      "limitation": "Matrix-product unitary in 1+1D. No anyon braid, no fusion measurement, no processor. Not a new pillar and not a bus.",
+      "source": "arXiv API",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
     }
   ],
   "runs": [
+    {
+      "id": "run-2026-09-29-daily",
+      "startedAt": "2026-09-29T09:16:00-05:00",
+      "windowStart": "2026-09-22",
+      "windowEnd": "2026-09-29",
+      "kind": "daily",
+      "feeds": [
+        "https://arxiv.org/list/quant-ph/recent",
+        "https://arxiv.org/list/cond-mat.str-el/recent",
+        "https://arxiv.org/list/cond-mat.mes-hall/recent",
+        "https://arxiv.org/list/hep-th/recent",
+        "https://arxiv.org/list/physics.plasm-ph/recent",
+        "https://arxiv.org/search/advanced"
+      ],
+      "paperIds": [
+        "2609.34076",
+        "2609.33994",
+        "2609.33500",
+        "2609.32206",
+        "2609.33341",
+        "2609.33677",
+        "2609.35282",
+        "2609.30363",
+        "2609.31846",
+        "2609.35480",
+        "2609.33454",
+        "2609.33483",
+        "2609.33574",
+        "2609.34909",
+        "2609.35655",
+        "2609.32266"
+      ],
+      "unscoredIds": [
+        "2609.31831",
+        "2609.30380",
+        "2609.30368",
+        "2609.30406",
+        "2609.31824",
+        "2609.31391",
+        "2609.31052",
+        "2609.32125",
+        "2609.33272",
+        "2609.32265",
+        "2609.35592",
+        "2609.35495",
+        "2609.34529",
+        "2609.34073",
+        "2609.33908",
+        "2609.33690",
+        "2609.32866",
+        "2609.32748",
+        "2609.31867",
+        "2609.30369",
+        "2609.34644",
+        "2609.35098",
+        "2609.33285",
+        "2609.33175",
+        "2609.34559"
+      ],
+      "notes": "Twelfth daily run. Lookback 7 days. ingest.py wrote 39 hits. fetch_arxiv.py merged 46 keyword stubs; those stubs were removed from the catalog and left unscored so harvest boilerplate cannot enter the paper. The 26\u201328 Sep listing is in (the 28 Sep run had stopped at the 25 Sep announcement). Twelve HOLDs: EXL-50U isoflux MPC (simulation), BES-to-PCS packet twin, rapid fixed-boundary ITER-like transport, Vlasov\u2013Amp\u00e8re SLDG, ITG weak-shear criterion, GBS IMEX timestep, GKP-concatenated qLDPC circuits, toric-code disentangling no-go, Read-Rezayi FCI numerics, Laughlin co-tunneling phase, Kitaev-Heisenberg toric code (E-MZM WATCH), and a 10 Hz p-11B alpha source that is not Floquet DT. Rejected: kicked-Ising time crystal as a clock, Costello integrable holography (denylist representative), a Floquet quantum battery (ergotropy \u2260 Q_eng), and a 1+1D Rep(D8) entangler. No Auto-Gate pass. No version bump. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand. Q=1000 not entered. Harvest gauges are not C.",
+      "fieldCounts": {
+        "plasma": 7,
+        "fusion-quantum": 5,
+        "tqc": 5,
+        "topology": 3,
+        "anyons": 4,
+        "majorana": 1,
+        "time-crystal": 2,
+        "holography": 1
+      }
+    },
     {
       "id": "run-2026-09-28-daily",
       "startedAt": "2026-09-28T09:18:00-05:00",

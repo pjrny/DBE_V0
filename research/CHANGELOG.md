@@ -2,6 +2,9 @@
 
 Never rewrite history. A reversed CUT is a new MAJOR line.
 
+2026-09-29  library  NO BUMP  twelfth daily run. 26–28 Sep listing scored. EXL-50U isoflux MPC, BES packet twin, and a fast ITER-like transport model queued under E-RL (simulation or twin; M2 open). Vlasov–Ampère SLDG and ITG weak-shear criterion queued under S-L3 (no Q_eng). GKP-qLDPC circuits and the toric-code disentangling no-go queued under E-QEC. Read-Rezayi numerics and Laughlin co-tunneling queued under E-S3 without replacing fusion measurement. Kitaev-Heisenberg toric code queued under E-MZM (WATCH). 10 Hz p-11B alpha source queued under S-L2 as not Floquet DT. Time-crystal clock, integrable holography, Floquet battery, and Rep(D8) entangler rejected. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
+
+
 2026-09-28  library  NO BUMP  eleventh daily run. D4 twisted-sheaf qLDPC magic fountain queued under E-QEC only (D4 fails cyclic fusion; E-S3 untouched). KSTAR single-discharge H-mode error-field ID and TCV edge Er queued under E-RL. Decohered-ancilla GKP and measurement-based uncomputation queued under E-QEC. Holographic bootstrap and flat-limit AdS rejected. Floquet skin effect rejected as a clock. Photonic graph-state fusion rejected as a false friend. No 26–28 Sep listing. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
 
 

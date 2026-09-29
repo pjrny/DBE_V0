@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.4.9] - 2026-09-29
+### Added
+- Daily observatory run (lookback 7 days). No paper version bump. The 26–28 Sep listing is scored: EXL-50U isoflux MPC, a diagnostic packet twin, Vlasov and ITG solvers, GKP-qLDPC circuits, and a toric-code no-go are queued. A laser p-11B alpha source is queued as not Floquet tunneling. Time crystals, holography, a qubit battery, and a Rep(D8) entangler are rejected. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
+
+### Changed
+- Command-strip date stamp moved to 2026-09-29 so this-week counts the new harvest.
+
+All notable changes to this project will be documented in this file.
+
 ## [0.4.8] - 2026-09-28
 ### Added
 - Daily observatory run (lookback 7 days). No paper version bump. D4 twisted-sheaf qLDPC, KSTAR single-shot H-mode error-field identification, TCV edge-Er drift, decohered GKP correction, and measurement-based uncomputation are queued. Holography, a Floquet skin effect, and photonic graph-state fusion are rejected. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.

@@ -1,6 +1,514 @@
 {
-  "asOf": "2026-09-28",
+  "asOf": "2026-09-29",
   "cards": [
+    {
+      "id": "2026-09-29/2609.34076",
+      "paperId": "2609.34076",
+      "date": "2026-09-29",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: the platform of the result is a free-boundary simulation, not an EXL-50U discharge. G3 passes: the comparison is three named controllers on one scenario, not a knob sent to infinity. Falsifier this year: the same MPC on the machine loses to the existing PCS on boundary error or misses the voltage limits.",
+      "score": "E-RL C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Seo et al. (tearing avoidance by deep RL) and Rothstein 2026 (integrated AI control on DIII-D) are the C4 attach results, taken on real plasmas. A simulated win over PID is not a disruption-rate beat. M2 is still that beat.",
+      "ledger": "Compute time 0.413\u20130.441 ms mean, 99th percentile under 1 ms. Not P_aux and not Q.",
+      "plain": {
+        "core": "A model-predictive controller for the EXL-50U spherical tokamak is asked to hold plasma current and the plasma boundary at the same time, with coil voltage limits written in. On a computer model of the machine it tracks those targets more tightly than a standard PID loop or a linear-quadratic regulator, and the sum is done in under a millisecond.",
+        "why": "E-RL is the only KEEP claim that already speaks to a tokamak. A millisecond isoflux loop is the shape of Bus A. It does not close the bus.",
+        "limit": "Bare arXiv. Simulation only. No disruption metric. Harvest confidence 74 is under 80, so it is not an ADD."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-RL only). A2 miss (G4). A3 miss: HOLD, not INCLUDE. A4 miss: no energy-ledger bound tightens. A5 miss: bare arXiv, not a shot. A6 pass. A7 pass. A8 n/a.",
+      "math": "538-state linearized vessel model coarsened to 40 states. Kalman observer plus constrained MPC on current and boundary flux with explicit voltage bounds. Nonlinear free-boundary GS evolutive tests versus PID and LQR, including noise and a one-step delay. Assumes the reduced model keeps the control-relevant response.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-29/2609.33994",
+      "paperId": "2609.33994",
+      "date": "2026-09-29",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: the platform is a digital twin of the data path, not a plasma. G1 passes: channel count, sample rate, packet rate, and latency are stated with units. Falsifier this year: on a real PCS the dropped-packet logic silently interpolates, or the handoff exceeds the published tearing growth time.",
+      "score": "E-RL C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "The kill test for a quantum or classical loop is whether it closes inside the instability growth time. This twin stops at shared memory. Rothstein 2026 and Seo 2024 acted on plasmas. A 1 kHz PCS-like cycle is not that result.",
+      "ledger": "Median last-input-to-shared-memory latency 91.6 \u00b5s; 99th percentile 108.1 \u00b5s. 1 kHz control cycle. 100 MB/s payload. Not P_aux.",
+      "plain": {
+        "core": "Fast cameras and beam-emission diagnostics are too quick to bolt onto a plasma control system by hand. This paper builds a packet-level twin of that path: a 64-channel, 1 MHz diagnostic, dropped packets, and a 1 kHz control cycle. A missing packet is caught and the bad windows are thrown out instead of being filled in.",
+        "why": "Bus A is diagnostics in, commands out, fail-safe on packet loss. This is a concrete fail-safe for the diagnostic half. It is not the attach.",
+        "limit": "Bare arXiv. No coil command and no plasma. Cannot raise C4."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass. A2 miss (G4). A3 miss. A4 miss: 91.6 \u00b5s is not a term already in the energy ledger. A5 miss. A6 pass: no new fuel or coupling.",
+      "math": "64-channel 1 MHz BES in a 96-channel dual-carrier 10 GbE path. 20 samples/packet, 50,000 packets/s/carrier. Dropped 20-sample packet invalidates two overlapping 128-sample windows. Latency model on a 110 ms reference of 11,000 packets.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-29/2609.33500",
+      "paperId": "2609.33500",
+      "date": "2026-09-29",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: an ITER-like scenario in a fixed-boundary code is not a control shot on a machine. G6 passes: 80 MW and stored energy are not converted into Q_eng. Falsifier this quarter: a free-boundary run or a second transport code moves stored energy by more than the stated 0.02 percent for the same heating.",
+      "score": "E-RL C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "M2 asks for a disruption-relevant metric against the lab's own controller. A 9-second laptop pulse that matches FUSE on stored energy does not attach to DIII-D, EXL-50U, or ITER. Speed is not authority.",
+      "ledger": "80 MW electron-cyclotron heating prescribed. Thermal stored energy 185.52 \u2192 252.70 MJ in the model. Not entered as Q_sci, Q_fuel, or Q_eng. P_aux of the real plant is not counted.",
+      "plain": {
+        "core": "During a current ramp the plasma's heat and its magnetic field change on different clocks. This paper ties a fixed-boundary equilibrium to a fast particle-and-energy balance and to current diffusion, and runs an ITER-like deuterium pulse (10 to 15 MA, 80 MW of electron-cyclotron heating) in seconds on a laptop.",
+        "why": "Bus A will need a fast equilibrium. This is a candidate offline model. It does not speak the actuator command set.",
+        "limit": "Bare arXiv. Fixed boundary. Core current is the weak comparison. Cannot raise C."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass. A2 miss (G4). A3 miss. A4 miss. A5 miss. A8: the stored-energy number is not copied into the ledger.",
+      "math": "Variational fixed-boundary Grad\u2013Shafranov, sparse flux matching, weak-form current diffusion. 600 coupling steps of 0.1 s. Halving the coupling interval moves stored energy by at most 0.006 percent at the chosen radial grid.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-29/2609.32206",
+      "paperId": "2609.32206",
+      "date": "2026-09-29",
+      "bind": [
+        "S-L3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 passes: S-L3's platform is a kinetic solver, and this is a Vlasov\u2013Amp\u00e8re method. G6 passes: no plant Q is stated. Falsifier this quarter: the limiter destroys the Landau damping rate or the KEEN wave on a published baseline mesh.",
+      "score": "S-L3 C4 T2 D2 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "S-L3's kill is a rate that assumes an infinite Maxwellian refill. This paper never forms that rate. Positivity is necessary bookkeeping. It is not spectral hole-burning and it is not a win over a PIC baseline on a driven Coulomb barrier.",
+      "ledger": "none. No I, \u03c9, n, T, or P_aux.",
+      "plain": {
+        "core": "A kinetic plasma code has to keep the particle distribution from going negative when ions and electrons live on very different scales. This paper builds a high-order Vlasov\u2013Amp\u00e8re solver that enforces that positivity, and checks it on standard waves: Landau damping, two-stream instability, and KEEN waves.",
+        "why": "Bus C is not allowed to skip the kinetic solver. This is a solver. It is not a rate and not a plant number.",
+        "limit": "Bare arXiv. Standard kinetic tests only. Hole-burning and parametric scatter are absent. Cannot raise C and cannot enter M7."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (S-L3 KEEP only). A2 pass. A3 miss: HOLD, not INCLUDE. A4 miss: no published numerical bound in the ledger tightens. A5 miss: bare arXiv. A6 pass. Confidence 73 < 80, so not an ADD.",
+      "math": "Semi-Lagrangian discontinuous Galerkin on the multi-species Vlasov\u2013Amp\u00e8re system. Operator-split 1D updates. Local positivity limiters on cell averages. Species may use different phase-space meshes. Verified on manufactured solutions, two-stream, Landau damping, ion-acoustic waves, and KEEN waves.",
+      "autoGate": "miss A3, A4, A5"
+    },
+    {
+      "id": "2026-09-29/2609.33341",
+      "paperId": "2609.33341",
+      "date": "2026-09-29",
+      "bind": [
+        "S-L3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 passes for the methods claim: global gyrokinetics is the class of tool S-L3 keeps. G6 passes only because Q is not stated; a reader who treats the barrier as a Q multiplier would fail G6. Falsifier this quarter: CGYRO or GENE at the same |s| does not form the barrier.",
+      "score": "S-L3 C4 T2 D2 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Experimental internal transport barriers are not uniquely fixed by s \u2248 1/(2\u03c0). One gyrokinetic family does not set the fusion rate. Hole-burning and SRS/SBS are still absent. No number here enters Q_eng.",
+      "ledger": "none. s_crit \u2248 1/(2\u03c0) is a magnetic-shear threshold, not a power.",
+      "plain": {
+        "core": "Hot tokamak plasma leaks heat because of a turbulence called the ion temperature gradient. This paper says that when the magnetic shear gets weaker than about 1 over 2\u03c0, that turbulence changes shape and, in their simulations, an internal barrier forms and the turbulence drops inside that region.",
+        "why": "Bus C has to know when turbulence shuts off. This is a candidate criterion. It is not an energy term.",
+        "limit": "Bare arXiv. Simulation. Not a plant controller and not Layer 2. Cannot raise C."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass. A2 pass. A3 miss. A4 miss. A5 miss. A6 pass: no new fuel. Not bridged to E-RL.",
+      "math": "ITG radial width set by parallel Landau damping and by perpendicular micro-isotropy. Weak-shear critical value s_crit \u2248 1/(2\u03c0). Global gyrokinetic scans at DIII-D, JET, and ITER parameters. Nonlinear heated runs form a barrier where |s| < s_crit.",
+      "autoGate": "miss A3, A4, A5"
+    },
+    {
+      "id": "2026-09-29/2609.33677",
+      "paperId": "2609.33677",
+      "date": "2026-09-29",
+      "bind": [
+        "S-L3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: S-L3 names Vlasov, hole-burning, and SRS/SBS. GBS here is a two-fluid boundary timestep. G6 passes. Falsifier this quarter: the implicit Alfv\u00e9n step fails the manufactured solution or changes a published GBS blob heat flux.",
+      "score": "S-L3 C4 T2 D2 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A CFL-limited explicit step is a numerical constraint, not a plasma loss channel. Skipping Vlasov because a fluid code got faster would void the rate. This paper does not replace S-L3.",
+      "ledger": "none.",
+      "plain": {
+        "core": "The edge of a tokamak is stiff: Alfv\u00e9n waves want a tiny time step. This paper puts those fast pieces in an implicit solver inside the GBS boundary code and leaves the slower pieces explicit, so the step can be longer without paying for a fully implicit run.",
+        "why": "Edge losses matter to the ledger later. The method is queued as reading under the solvers, not as a source.",
+        "limit": "Bare arXiv. Wrong equation set for the named S-L3 tests. Cannot raise C."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass. A2 miss (G4). A3 miss. A5 miss. Not a bridge to E-RL.",
+      "math": "Globally stiffly accurate IMEX Runge\u2013Kutta in GBS. Shear Alfv\u00e9n waves and parallel diffusion implicit; the rest explicit. Three-dimensional physics-based preconditioner. Verified by manufactured solutions.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-29/2609.35282",
+      "paperId": "2609.35282",
+      "date": "2026-09-29",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: the platform that holds E-QEC at C4 is a measured surface code or qLDPC memory, not a GKP circuit simulation. G3 passes: two named code families, three named noise models. Falsifier this quarter: the BB-versus-tricycle ordering flips when the displacement schedule changes.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Google's surface code below threshold is the C4 anchor. A squeezing requirement near 10 dB is a different hardware bet and is not measured here. Analog help for BP-OSD does not create a logical qubit.",
+      "ledger": "none.",
+      "plain": {
+        "core": "A GKP code stores a qubit in a harmonic oscillator and can pass analog clues to the decoder. This paper wraps two qLDPC families (BB and tricycle) around that inner code and simulates noisy circuits. Using the analog clue raises the noise level the code can stand, on paper, and the BB family needs less squeezing than the tricycle family in their setup.",
+        "why": "Bus B may use qLDPC. This is a decoder comparison inside a GKP concatenation. It does not replace the surface-code layer and it does not touch E-S3.",
+        "limit": "Simulation. Wrong code family for the default layer. nonabelian-qldpc stays QUEUE: there is no interface contract."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only, not bridged to E-S3). A2 miss (G4). A3 miss. A4 miss. A5 miss. A6 pass. A7 pass.",
+      "math": "BB and tricycle outer codes. Noise ladder: code capacity, repeated noisy syndrome extraction, schedule-resolved displacement propagation. Analog-informed BP-OSD versus hard decision. Circuit-level finite-size crossings \u03c3_th \u2243 0.212 (BB, ~10.46 dB) and 0.142 (tricycle, ~13.94 dB).",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-29/2609.30363",
+      "paperId": "2609.30363",
+      "date": "2026-09-29",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: a no-go theorem is not a measured code on a processor. G5 passes: a finite-dimensional circuit that on-sites the toric code would refute the claim. G6 passes.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Kitaev's toric code is an Abelian stabilizer memory. Lo et al. (Nature 2026) needed non-Abelian S3 fluxes plus fusion measurement for a universal topological gate set. Protecting toric-code anyons from finite ancillas does not supply that gate set and does not move a surface-code threshold.",
+      "ledger": "none.",
+      "plain": {
+        "core": "The toric code can be thought of as a symmetry that is not a simple on-site spin flip, because its excitations are anyons. The paper proves that no finite extra quantum system can turn that symmetry into an on-site one. Infinite-dimensional extras can, but only if their energy is not bounded from below.",
+        "why": "It says the topological obstruction is physical for any finite register. That is why the error layer is not a classical repetition code. It does not change the layer we already keep.",
+        "limit": "Bare arXiv. Not bridged to E-S3. Infinite ancilla is not a machine. Cannot raise C."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass. A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv, even though the argument is a proof. A6 pass.",
+      "math": "Commuting-projector Hamiltonians with integer spectrum as non-on-site U(1) generators. Finite-dimensional ancillae cannot on-site the 2+1d toric code because of fractionalized excitations. Infinite-dimensional ancillae (rotors) can, and the ancilla Hamiltonian is unbounded below.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-29/2609.31846",
+      "paperId": "2609.31846",
+      "date": "2026-09-29",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: a graphene model diagonalization is not the S3 quantum-double processor. G5 passes: a second method (DMRG or a larger torus) that misses the Read-Rezayi overlap would drop the identification. G6 passes.",
+      "score": "E-S3 C3 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Lo et al., Nature 2026, prepared S3 topological order on 54 qubits and used braiding plus fusion. Nayak et al.: Fibonacci is braid-universal and is also the phase that has no scalable preparation. A target-phase overlap is not that preparation. Cyclic fusion stays under E-S3. No new pillar.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Fibonacci anyons can, in theory, do universal quantum computing by braiding alone. They show up in a fractional quantum Hall state called Read-Rezayi. This paper searches a model of modulated bilayer graphene at zero magnetic field and finds a parameter region whose ground state looks like that state, plus a Moore-Read-like state at another filling.",
+        "why": "It is the competing universality story. It stays reading. It must not be coupled into Bus A or written as a plant term.",
+        "limit": "Bare arXiv. No anyon moved. Filling \u03bd=3/5 and \u03bd=1/2 identifications are numerical. Cannot raise C above 3, and this result is not even a processor."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass. A2 miss (G4). A3 miss. A5 miss. A6 holds only because no new mechanism is added to the paper. A7 pass: cyclic-fusion-family is not reopened.",
+      "math": "Periodically modulated Bernal bilayer graphene, gate-screened Coulomb interaction. Target-phase optimization plus band-projected exact diagonalization. \u03bd=3/5 region consistent with Z3 Read-Rezayi; \u03bd=1/2 consistent with Moore-Read. Two-band complex mimics Landau-level geometry.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-29/2609.35480",
+      "paperId": "2609.35480",
+      "date": "2026-09-29",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: an FQH edge formula is not the S3 trapped-ion platform. G5 passes: a measured phase-plateau difference that is not \u03c0\u03bd, after the stated screening cuts, would refute the readout. G6 passes.",
+      "score": "E-S3 C3 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Laughlin anyons are Abelian. Braiding them multiplies by a phase. It does not span a fusion space. Lo et al. kept fusion measurement in the S3 gate set precisely because braid-only S3 is not universal. This readout does not change that.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Abelian anyons in a fractional quantum Hall fluid pick up a phase when they trade places. The paper designs a small interferometer where an open quantum dot makes that swap show up as a shift between two interference patterns, and writes a formula for the current at finite temperature.",
+        "why": "Measurement is already required to read anyons. The proposal is a cousin of that fact. It is not the primitive we load.",
+        "limit": "Bare arXiv. Abelian. No hardware. Not a bridge."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass. A2 miss (G4). A3 miss. A5 miss. A6 pass.",
+      "math": "Three chiral edges joined by three quantum point contacts. Co-tunneling to third order in the tunneling amplitudes. For Laughlin states the exchange phase \u03b8=\u03c0\u03bd is the shift between Aharonov-Bohm oscillations in two voltage settings. Two-drain subtraction avoids the area-screening assumption, with a stated few-percent systematic error.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-29/2609.33454",
+      "paperId": "2609.33454",
+      "date": "2026-09-29",
+      "bind": [
+        "E-MZM"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: a 2D spin model is not a Majorana device. G5 fails: nothing in the paper is an X-versus-Z logical test that could be run this year on the hardware M5 names. G6 passes.",
+      "score": "E-MZM C1 T3 D3 A2 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Trivial Andreev and YSR states still mimic Majorana transport. A toric-code assignment of e and m is Abelian. Nature's caveat on Majorana 1 stands. No independent X and Z logical with gap scaling, so M5 does not move.",
+      "ledger": "none.",
+      "plain": {
+        "core": "A Kitaev magnet can be rewritten with Majorana fermions moving in a gauge field. On this lattice the pure Kitaev model is gapped almost everywhere, and that gapped phase is a toric code. Which plaquette carries which Abelian anyon depends on the couplings. Adding Heisenberg exchange produces ordinary magnetic order.",
+        "why": "The Majorana mapping is real Kitaev physics. The phase they find is the Abelian code we already do not use as the universal primitive. S3 remains the braid path.",
+        "limit": "WATCH, so A1 fails. Not a CUT reversal. Not load-bearing."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-MZM is WATCH, not KEEP or HOLD. A2 miss (G4, G5). A3 miss. A5 miss. Do not auto-bump.",
+      "math": "Spin-1/2 Kitaev-Heisenberg on the square-hexagon-dodecagon lattice with a tri-coloring. Pure Kitaev limit maps to Majorana fermions in a Z2 gauge field. Gapped toric-code phase except one Dirac point. Vortex fermion parity fixes the e/m assignment. Heisenberg side: PEPS, exact diagonalization, spin wave; four collinear magnetic phases.",
+      "autoGate": "miss A1, A2, A3, A5"
+    },
+    {
+      "id": "2026-09-29/2609.33483",
+      "paperId": "2609.33483",
+      "date": "2026-09-29",
+      "bind": [
+        "S-L2"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: TNSA p-11B is not the Floquet DT platform of S-L2. G6 passes: the paper does not claim Q_eng \u2248 1000. G2 passes because no conservation law is broken; the ledger is simply absent. Falsifier for using this as Layer 2: the shot must state E and \u03c9 and beat the thermal DT rate after hole-burning. It does not.",
+      "score": "S-L2 C1 T2 D1 A2 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Qi, Fu, and collaborators, Phys. Rev. C 109, 044605 (2024): DT enhancement at 1 keV needs fields ~10^15\u201310^16 V/m. A 10 Hz water-jet alpha source does not quote that field and does not calculate a tunneling enhancement. PRC 110's intensity window is likewise untouched.",
+      "ledger": "10 Hz, 18,000 shots. No laser energy, no V/m, no P_drive, no P_rad. Not entered.",
+      "plain": {
+        "core": "A laser knocks protons out of a thin water jet, and those protons hit boron nitride and make alpha particles from proton-boron fusion. Because the water keeps flowing, they fired 18,000 shots at 10 hertz without replacing a solid target.",
+        "why": "Laser-plus-fusion language is the slogan neighborhood of DBE-S. This result is a particle source. It keeps Layer 2 on HOLD at the published field bound.",
+        "limit": "Wrong reaction, wrong mechanism, no energy ledger. Cannot be cited as barrier evasion."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (S-L2 is HOLD). A2 miss (G4). A3 miss. A4 miss: the field bound does not tighten, and it does not move conservatively either because no field is given. A5 miss. A6 pass: p-11B is not added as a DBE-S fuel.",
+      "math": "TNSA protons from a replenished water-leaf jet onto BN. 11B(p,\u03b1)8Be, three alphas. Spectrum flattening attributed to depth-dependent yield and stopping. Compared with particle-transport simulations. No Floquet Hamiltonian.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-29/2609.33574",
+      "paperId": "2609.33574",
+      "date": "2026-09-29",
+      "bind": [
+        "E-TC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: a kicked Ising model is not a clock in the control stack. G5 fails: there is no this-year comparison of the lifetime to a QEC round or a shot duration. G6 passes.",
+      "score": "E-TC CUT stays",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "The kill test is prethermal lifetime versus the control horizon. Else, Nayak, and a surface-code cycle are the timing baseline. N=16 with a 1/\u03b3 coherence time does not take that test. E-TC stays cut as a clock.",
+      "ledger": "none.",
+      "plain": {
+        "core": "In a small kicked spin chain, turning up the interactions helps a periodically driven time crystal survive dephasing. The same interactions hurt the order when the drive is a more irregular multipolar sequence. The chains have 12 or 16 spins.",
+        "why": "Time-crystal papers keep arriving. They stay on the reading list. They do not re-enter the engine.",
+        "limit": "Not a CUT reversal. One representative this week. Other Floquet preprints in the harvest stay unscored."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-TC is CUT. A3 miss: REJECT is not INCLUDE and is not a reversal. Reading only.",
+      "math": "Disordered kicked Ising, N=12 and 16, imperfect \u03c0 pulses, per-site dephasing. Periodic drive versus multipolar drives n=0,1,2 and Thue-Morse. At equal total coupling the grid outlives the ring. Ratios of coherence times are given under three definitions.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-29/2609.34909",
+      "paperId": "2609.34909",
+      "date": "2026-09-29",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: hep-th holography is not a reactor or processor part. G5 fails: there is no this-year tokamak or processor test, because the claim is not a device claim. G6 passes: Q=1000 is not smuggled.",
+      "score": "E-HOL CUT stays",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "AdS/CFT and its cousins are not a tokamak I/O map. The denylist needs two independent C\u22654 sources to reverse. One spectral-curve paper is not that packet.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Some integrable field theories have a holographic twin: a topological string whose shape is a spectral curve. The paper describes how that curve changes under the renormalization flow and matches known results up to two loops.",
+        "why": "The week's holography cluster is large. This is the representative. The rest stay unscored.",
+        "limit": "Readable. Not INCLUDE. Not a pillar."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-HOL is CUT. A3 miss. Not a CUT reversal.",
+      "math": "Holographic dual of integrable theories from 4d Chern-Simons, encoded in a planar spectral curve. RG flow as a geometric flow on that moduli space, checked to two loops against the principal chiral model with a Wess\u2013Zumino term and a class of U(N)\u00d7U(N) sigma models.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-29/2609.35655",
+      "paperId": "2609.35655",
+      "date": "2026-09-29",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "fail",
+        "G3": "fail",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "fail"
+      },
+      "gateNote": "G6 fails if the unit efficiency is read as a plant figure. G2 fails for the ledger: the accounting has no P_fusion, P_rad, or P_aux. G4 fails: a kicked Ising battery is not a tokamak or an XFEL. The paper is rejected rather than repaired.",
+      "score": "no claim moved",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "NIF Q_sci is about 4 on a laser shot that counts target energy. A qubit battery that returns its own stored energy is a different quotient. Unit ergotropy does not stress the Q=1000 ledger and must not be cited as one.",
+      "ledger": "none. Refused.",
+      "plain": {
+        "core": "A handful of qubits, kicked on a schedule and disordered, can store energy and give most of it back. In the very disordered limit the stored energy is predictable and the waste looks small, so the authors say the extractable fraction approaches one.",
+        "why": "Off-path. Kept out of the engine view so a harvest gauge cannot be mistaken for a gain.",
+        "limit": "Does not bind. Does not weaken a KEEP claim. Catalog note only."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Zero claim IDs. Off-path. Not a new pillar: no interface.",
+      "math": "N qubits, all-to-all coupling, transverse kicks, disorder. Large-disorder charging described by random matrix theory. Storage under dephasing. Ergotropy approaches stored energy. No plasma units.",
+      "autoGate": "miss A1, A2, A3, A6"
+    },
+    {
+      "id": "2026-09-29/2609.32266",
+      "paperId": "2609.32266",
+      "date": "2026-09-29",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: 1+1D SPT circuits are not the S3 platform. G5 fails: there is no this-year fusion-space measurement that would confirm or kill E-S3. G6 passes.",
+      "score": "E-S3 untouched",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Lo et al. needed braiding plus fusion of S3 fluxes on a torus. A symmetry-permuting entangler for Rep(D8) does not compile a qutrit gate and does not replace fusion measurement. D4 was already excluded by the cyclic test; D8 is not a back door.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Some one-dimensional phases protected by a non-invertible symmetry cannot be connected by a circuit that respects the symmetry. The paper shows they can still be connected if the circuit is allowed to permute the symmetry, and writes an explicit example for Rep(D8).",
+        "why": "Non-invertible symmetry is adjacent vocabulary. It is not the instruction set.",
+        "limit": "Off-path for the engine. Reading allowed."
+      },
+      "claimDelta": "none",
+      "whyQueued": "Does not bind cleanly to one KEEP claim without smuggling a new mechanism. Rejected rather than bridged.",
+      "math": "Symmetric finite-depth local unitaries versus symmetry-permuting ones. Three Rep(D8) SPT phases. Explicit matrix-product unitary. Action on string order matches the anyon permutation of the TQFT duality.",
+      "autoGate": "miss A1, A2, A3, A6"
+    },
     {
       "id": "2026-09-28/2609.31541",
       "paperId": "2609.31541",
