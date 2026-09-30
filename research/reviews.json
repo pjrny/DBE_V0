@@ -1,6 +1,230 @@
 {
-  "asOf": "2026-09-29",
+  "asOf": "2026-09-30",
   "cards": [
+    {
+      "id": "2026-09-30/2609.37629",
+      "paperId": "2609.37629",
+      "date": "2026-09-30",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G1\u2013G6 pass on the decoder claim: code, noise, and cost factor are stated; no energy is invented; the search fraction is not sent to infinity; qLDPC on a trapped-ion processor matches the error-layer platform; a matched-budget comparison can still kill the routing rule this year; Q_eng is absent. Auto-Gate still fails on venue and on the ledger.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Google's below-threshold surface-code memory is the C4 result: a larger code made the logical error smaller. A single H2 Z-memory, where a classical flag stays predictive, is not that plot. Bare arXiv cannot raise C.",
+      "ledger": "none. Decoding cost is not P_aux.",
+      "plain": {
+        "core": "A quantum error-correcting decoder usually runs an expensive search on every syndrome. This paper uses a cheap internal disagreement, the quick guess versus a syndrome-consistent guess, to mark the hard cases. Spending that search on only the riskiest fifth of cases recovers most of the accuracy, and the same flag still predicts trouble on a small memory experiment on Quantinuum's H2 ion trap.",
+        "why": "E-QEC is the error layer. Spending classical time only where the decoder is unsure is how a qLDPC memory stays practical. It does not move C.",
+        "limit": "Bare arXiv. Harvest confidence 78 is under 80, so it is not an ADD. The H2 piece is one Z-memory, not a scaling demonstration."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 pass. A3 miss: HOLD, not INCLUDE. A4 miss: no energy-ledger bound tightens and C is not raised. A5 miss: bare arXiv, one device, not a journal and not a replicated result. A6 pass. A7 pass. A8 n/a.",
+      "math": "[[144,12,12]] bivariate bicycle code, circuit-level depolarising noise. Disagreement between BP hard decision and syndrome-consistent OSD-0 routes the top 20% of syndromes into a one-free-variable OSD sweep. That slice recovers 85\u201392% of the logical-error improvement of sweeping every instance, at 3.6\u00d7 lower mean serial cost. Same pattern on a lifted-product radial code (87\u201394%). H2 Z-memory implements both X and Z checks; the flag stays predictive under device noise.",
+      "autoGate": "miss A3, A4, A5"
+    },
+    {
+      "id": "2026-09-30/2609.36536",
+      "paperId": "2609.36536",
+      "date": "2026-09-30",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: the platform is equilibrium reconstruction under a synthetic mask, not a coil command or a disruption-rate controller. G1 passes: 37 shots, 124 channels, dropout 0 to 0.9, and relative current error in percent. Falsifier this year: on a held-out campaign a second equilibrium code (not LIUQE) is closer than the diffusion prior at high dropout.",
+      "score": "E-RL C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Seo et al. (tearing avoidance by deep RL) and Rothstein 2026 (integrated AI control on DIII-D) acted on plasmas. A closer current profile under deleted sensors is not a disruption-rate beat. M2 is still that beat. At low dropout, LIUQE wins on most shots.",
+      "ledger": "Median relative J_phi distance 3.22\u20134.07% across dropout settings, versus LIUQE at 11.89% when dropout is 0.9. Not P_aux and not Q.",
+      "plain": {
+        "core": "Magnetic sensors do not fix the plasma current profile, and missing sensors make the gap larger. A diffusion model learns only that current profile and is tied to KSTAR's sensor response. On 37 real shots, with as many as 90 percent of the channels switched off in the analysis, its profile stays closer to the full-sensor fit than the standard LIUQE reconstruction does.",
+        "why": "E-RL is the plant-attach claim. A dropout-tolerant equilibrium is the diagnostic half of Bus A. It does not close the bus.",
+        "limit": "Bare arXiv. Dropout is applied in software after the shot. No actuator. Cannot raise C4."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-RL only). A2 miss (G4). A3 miss. A4 miss: J_phi error is not a term already in the energy ledger. A5 miss: bare arXiv. A6 pass. A7 pass. A8 n/a.",
+      "math": "Diffusion prior on J_phi only, conditioned on coil currents, plasma current, and R*B_t. Linear forward operator from LIUQE sensor-response matrices. Decoupled annealing posterior sampling with a closed-form linear correction. 37 KSTAR shots, 124 magnetic channels, dropout fraction 0.0 to 0.9. Label is full-sensor LIUQE. At dropout 0.5\u20130.9 the prior is closer on 27\u201337 shots. High-dropout flux error is attributed to the vessel current, not the prior.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-30/2609.36528",
+      "paperId": "2609.36528",
+      "date": "2026-09-30",
+      "bind": [
+        "S-L3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: S-L3's platform is the Vlasov/PIC/hole-burning solvers that must sit in a rate. This is a two-beam Kunwu shot. G6 passes: the paper does not write Q_eng. Falsifier this year: in a multi-beam geometry the 0.6% bandwidth does not reduce SBS once specular reflection is separated, or the ray-trace misses the calorimeter by more than the quoted drop.",
+      "score": "S-L3 C4 T2 D2 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "PRC 109, 044605 needs fields around 10^15\u201310^16 V/m before laser-assisted DT tunneling matters at 1 keV. 2.6\u00d710^14 W/cm^2 of CBET smoothing is a different experiment and does not move that bound. Residual scatter is a loss term, not a source. S-Q stays cut as an output.",
+      "ledger": "Symmetric scattered-energy fraction 7.57% \u2192 4.64%. Asymmetric SBS 3.75% \u2192 0.46%; specular reflection about 2.2% \u2192 1.3%. Bandwidth 0.6%. Up to 550 J. Intensity ~2.6\u00d710^14 W/cm^2. Count as scatter, not as P_fusion.",
+      "plain": {
+        "core": "In laser fusion, one beam can hand energy to another and bounce light out of the plasma. At the Kunwu laser, two crossed broadband beams, 0.6 percent bandwidth and up to 550 joules, sent less light back than narrowband beams. In the geometry that separates Brillouin scatter from an ordinary reflection, the Brillouin share fell from 3.75 percent to 0.46 percent.",
+        "why": "S-L3 says stimulated scatter has to be in the rate. This is a measured scatter channel. It is not a driven-barrier gain and it does not enter a plant Q.",
+        "limit": "Bare arXiv. Two beams, not a capsule. Harvest confidence 74 is under 80, so it is not an ADD. Intensity is not the Floquet threshold."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (S-L3 only). A2 miss (G4). A3 miss. A4 miss: the scatter fractions are new measurements, not a tightening of a number already in the ledger, and they are not conservative plant-Q inputs yet. A5 miss: single-facility preprint. A6 pass: no new fuel and no coupling into Q_eng. A7 pass. A8 n/a until M7.",
+      "math": "Kunwu low-coherence laser, two crossed beams, 0.6% bandwidth, up to 550 J, ~2.6\u00d710^14 W/cm^2. Coupled ray-trace of CBET. Symmetric orthogonal incidence: total scattered fraction 7.57% to 4.64%. Asymmetric incidence separates SBS (3.75% to 0.46%) from specular reflection (~2.2% to 1.3%).",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-30/2609.37231",
+      "paperId": "2609.37231",
+      "date": "2026-09-30",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: the certificate is combinatorial. E-QEC's C4 evidence is a processor memory, not a distance proof. G3 passes: circuit distance multiplies by the amplifier distance under stated gate-ordering conditions; it is not an unbounded function of one free parameter. Falsifier this quarter: a circuit-level noise model where the flagged product distance is strict less than the product.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "The surface-code threshold experiments already define the default error layer. A certified qLDPC circuit distance, with no device, does not replace that measurement and does not raise C.",
+      "ledger": "none.",
+      "plain": {
+        "core": "A large code distance does not by itself protect a memory, because faults during the parity checks can spread. This paper glues a small quantum code to an amplifier so the certified circuit distance multiplies, and it proves when that product holds. Four rounds turn an 18-qubit seed into a code with 13,320 physical qubits, 64 logical qubits, check weight at most 14, and circuit distance at least 48.",
+        "why": "E-QEC needs to know the distance of the circuit, not only the ideal code. This is a certificate. It is not a measured logical error.",
+        "limit": "Bare arXiv theorem. Abelian qLDPC. No processor. Not a new pillar."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass. A2 miss (G4). A3 miss. A4 miss. A5 miss. A6 pass: no new mechanism beyond qLDPC amplification. A7 pass.",
+      "math": "Distance amplifier tensors a base qLDPC code with a flagged [[4,2,2]], a hypergraph-product, or a rotated surface code, and adapts syndrome extraction. Fault-response certificate: under stated gate order and flags, circuit distance equals the product of the constituent circuit distances, recursively. Example: four [[4,2,2]] amplifications of a [[18,4,4]] seed give [[13320,64,64]], d_circ \u2265 48, check weight \u2264 14.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-30/2609.36554",
+      "paperId": "2609.36554",
+      "date": "2026-09-30",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: a 1D optical-lattice Anyon-Hubbard model is not the S3 quantum double on a processor. G5 passes: a momentum distribution that stays symmetric when the statistical phase changes sign would kill the claimed reconstruction, and that comparison is a simulation this quarter. G6 passes.",
+      "score": "E-S3 C3 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Lo et al., Nature 2026: S3 on 54 qubits is universal only with braiding plus fusion measurement of non-Abelian fluxes. A 1D fractional exchange phase has no fusion space and is not that gate set. Freedman\u2013Larsen\u2013Wang: braid-only is not enough, and this paper does not braid.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Particles on a one-dimensional lattice can pick up a fractional phase when they pass through each other. This paper computes how that phase reshapes the spin and charge patterns of a multi-component gas, and how it changes the way the cloud expands after a kick. The phase is a one-dimensional exchange statistic.",
+        "why": "The word anyon is not the E-S3 primitive. Fusion measurement has to stay in the gate set. This paper does not supply it.",
+        "limit": "Theory. No C2 flux, no fusion measurement, no hardware. Companion 2609.36555 left unscored. Cannot raise C3."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-S3 only). A2 miss (G4). A3 miss. A4 miss. A5 miss. A6 pass: not promoted to a new bus. A7 pass.",
+      "math": "Anyon-Hubbard model on a 1D lattice. Statistical parameter enters spin and charge correlations and quench expansion. Pseudoboson limit loses the zero-momentum peak of a Tonks-Girardeau gas. Spin structure factor shows antiferromagnetic order whose magnitude depends on the exchange phase. Dipole oscillations cross from underdamped to overdamped as that phase is tuned.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-09-30/2609.37269",
+      "paperId": "2609.37269",
+      "date": "2026-09-30",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: holographic superfluid turbulence is not a reactor or processor part. G5 fails: there is no this-year tokamak test, because the claim is not a device claim. G6 passes: Q=1000 is not smuggled. The normal-fluid statistics are a cold-atom prediction.",
+      "score": "E-HOL CUT stays",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "The denylist needs two independent C\u22654 sources to reverse. One holographic turbulence simulation is not that packet. AdS/CFT stays on the reading list.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Superfluid turbulence is usually split into two fluids that drag on each other through vortices, with the drag put in by hand. This paper replaces that knob with a holographic gravity model, so the normal fluid and the superfluid push back on each other from the equations. The target experiments are cold atoms, not a tokamak.",
+        "why": "E-HOL is cut. This is the holography representative for the 29 Sep listing. The rest of that cluster stays unscored.",
+        "limit": "Readable. Not INCLUDE. Not a pillar."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-HOL is CUT. A3 miss. Not a CUT reversal.",
+      "math": "Fully backreacted holographic model of a finite-temperature two-fluid superfluid. Mutual friction is not an input. Driven versus freely decaying turbulence. Normal-fluid velocity statistics show non-Gaussian tails and anisotropy from vortex backreaction. Raising temperature suppresses those fluctuations while vortex density rises, traced to condensate depletion.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-09-30/2609.37523",
+      "paperId": "2609.37523",
+      "date": "2026-09-30",
+      "bind": [
+        "E-TC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: pseudospectra of a dissipative Floquet chain are not a control clock. G5 fails: there is no comparison of a prethermal lifetime to a shot duration. G6 passes.",
+      "score": "E-TC CUT stays",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "The clock is already cut in favor of a classical clock plus a QEC cycle. A geometric classification of pseudospectral residuals does not outlive a control horizon and is not timing infrastructure.",
+      "ledger": "none.",
+      "plain": {
+        "core": "In a driven, lossy quantum chain, the usual list of frequencies stops describing how observables move once the chain is large. The paper sorts the almost-spectrum into regions and shows, on two solvable models, that those regions can swap which signal lasts longer.",
+        "why": "E-TC as a system clock is cut. Open-system Floquet math can be read. It does not re-enter the engine.",
+        "limit": "Not a CUT reversal. Other Floquet preprints in the harvest stay unscored."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-TC is CUT. A3 miss: REJECT is not INCLUDE and is not a reversal. Reading only.",
+      "math": "Non-normal Floquet operators in the thermodynamic limit. Unit disk partitioned by the size-scaling of pseudospectral residuals into exponential, algebraic, and bounded accuracy. Solvable cases: a dissipative shift chain, where parameter tuning moves the geometry and shows up in spin-wave observables; a chiral XY model, where two correlation signals exchange retention order.",
+      "autoGate": "miss A1, A2, A3"
+    },
     {
       "id": "2026-09-29/2609.34076",
       "paperId": "2609.34076",

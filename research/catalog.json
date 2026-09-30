@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T14:30:00+00:00",
+  "generatedAt": "2026-09-30T14:20:00+00:00",
   "lookback": "1y+",
   "northStar": "Q=1000",
   "feeds": [
@@ -134,6 +134,7 @@
         "nonabelian-qldpc"
       ],
       "blockers": [
+        "2026-09-30: 1D Anyon-Hubbard gas (2609.36554) is a fractional exchange phase, not an S3 fusion space. Fusion measurement stays in the gate set.",
         "2026-09-29: Read-Rezayi numerics (2609.31846) and Laughlin co-tunneling (2609.35480) do not replace S3 fusion measurement. No braid on hardware.",
         "2026-09-28: no S3 braid-plus-fusion result. D4 qLDPC (2609.31541) is outside the cyclic-fusion test and stays on E-QEC only.",
         "2026-09-27: no new S3 braid-plus-fusion result. Fusion measurement stays in the gate set.",
@@ -176,6 +177,7 @@
         "floquet-majorana-codes"
       ],
       "blockers": [
+        "2026-09-30: no Majorana distinguisher in the 29 Sep listing. M5 stays open.",
         "2026-09-29: Kitaev-Heisenberg toric-code region (2609.33454) is Abelian e/m. No X or Z logical. M5 stays open.",
         "2026-09-28: no independent X or Z logical. Strained-altermagnet Chern diagram (2609.30791) left unscored. M5 stays open.",
         "2026-09-27: FeTe ARPES (2609.24843) is a surface state plus superconductivity, not an X or Z logical. M5 stays open. 2-RDM 'Majorana' (2609.23993) rejected as a false friend.",
@@ -245,6 +247,7 @@
         "spacetime-fractons"
       ],
       "blockers": [
+        "2026-09-30: dissipative Floquet pseudospectra (2609.37523) are not a system clock.",
         "2026-09-29: kicked-Ising time crystal (2609.33574), N\u226416, is not a system clock.",
         "2026-09-28: Floquet skin effect in ultracold atoms (2609.31474) is not a system clock.",
         "CUT as metronome. Does not sync plant actuators."
@@ -277,6 +280,7 @@
         "fracton-holography"
       ],
       "blockers": [
+        "2026-09-30: holographic two-fluid turbulence (2609.37269) rejected. Denylist holds. Wormhole and compact-object holography left unscored.",
         "2026-09-29: integrable holography (2609.34909) rejected. Denylist holds. The rest of the cluster was not scored.",
         "2026-09-28: planar holographic bootstrap (2609.31576) and flat-limit AdS Hilbert space (2609.31055) rejected. Denylist holds.",
         "2026-09-27: AdS2 Feynman reduction (2609.29306) rejected. Denylist holds. No 25\u201327 Sep announcement.",
@@ -312,6 +316,7 @@
         "topo-dynamics"
       ],
       "blockers": [
+        "2026-09-30: KSTAR diffusion prior (2609.36536) reconstructs J_phi on 37 shots under synthetic dropout. It does not command a coil. M2 stays open.",
         "2026-09-29: EXL-50U MPC (2609.34076) is a free-boundary simulation versus PID, not a shot. Packet twin (2609.33994) stops at 91.6 \u00b5s shared memory. M2 stays open.",
         "2026-09-28: KSTAR single-shot H-mode compass scan (2609.30452) and TCV edge Er (2609.31424) do not close M2. No coil-command bake-off.",
         "2026-09-27: stellarator GX surrogate (2609.28730) is offline optimization, not a coil command. M2 stays open.",
@@ -353,6 +358,7 @@
       ],
       "amplifies": [],
       "blockers": [
+        "2026-09-30: Kunwu broadband CBET (2609.36528) cuts an SBS fraction from 3.75% to 0.46% at about 2.6e14 W/cm^2. Residual scatter remains. No Q_eng. Not Floquet DT. M1, M4, and M7 stay open.",
         "2026-09-29: Vlasov SLDG (2609.32206) and ITG s_crit (2609.33341) write no Q_eng. p-11B alpha source is not Layer 2. M1, M4, and M7 stay open.",
         "2026-09-28: no ledger term. Photonic graph-state fusion (2609.30400) rejected as a false friend. M1 and M7 stay open.",
         "2026-09-27: the same surrogate writes no Q_eng term. Bridge with E-RL stays at C1. M1 and M7 stay open.",
@@ -498,6 +504,7 @@
       ],
       "amplifies": [],
       "blockers": [
+        "2026-09-30: disagreement-routed BP-OSD (2609.37629) and qLDPC distance amplifiers (2609.37231) queued under E-QEC only. Not an interface contract. The H2 check does not move E-S3.",
         "2026-09-29: GKP-concatenated BB/tricycle circuits (2609.35282) queued under E-QEC only. Not an interface contract.",
         "2026-09-28: Zhu et al. D4 twisted-sheaf qLDPC (2609.31541) queued under E-QEC only. Not an interface contract. D4 does not move E-S3.",
         "2026-09-27: Google-data decoder postselection and planar fluxonium GKP are queued on E-QEC only. Not a non-Abelian code contract.",
@@ -10712,9 +10719,329 @@
       "claimIds": [],
       "bindAction": "REJECT",
       "pillarEffect": "none"
+    },
+    {
+      "id": "2609.37629",
+      "arxiv": "2609.37629",
+      "title": "Adaptive decoding of quantum LDPC codes through decoder disagreement",
+      "authors": [
+        "Maida Wang",
+        "Peter V. Coveney"
+      ],
+      "year": 2026,
+      "date": "2026-09-29",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2609.37629",
+      "fields": [
+        "tqc",
+        "topology"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-09-30",
+        "queued"
+      ],
+      "importance": 88,
+      "confidence": 78,
+      "popularity": 64,
+      "coreIdea": "A quantum error-correcting decoder usually runs an expensive search on every syndrome. This paper uses a cheap internal disagreement, the quick guess versus a syndrome-consistent guess, to mark the hard cases. Spending that search on only the riskiest fifth of cases recovers most of the accuracy, and the same flag still predicts trouble on a small memory experiment on Quantinuum's H2 ion trap.",
+      "whyItMatters": "E-QEC is the error layer. A decoder that spends classical time only where it helps is part of running qLDPC on a real processor. One H2 memory run does not show that a larger code has a smaller logical error, so C stays at C4.",
+      "limitation": "Bare arXiv. The hardware piece is a Z-memory on H2, not a below-threshold scaling plot. Harvest confidence 78 is under 80, so it is not an ADD. Circuit-distance certificates are not this paper's result.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.36536",
+      "arxiv": "2609.36536",
+      "title": "Diffusion prior for KSTAR equilibrium reconstruction under sensor dropout",
+      "authors": [
+        "Hyungkeun Nam",
+        "Jaemin Seo"
+      ],
+      "year": 2026,
+      "date": "2026-09-29",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2609.36536",
+      "fields": [
+        "plasma"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-09-30",
+        "queued"
+      ],
+      "importance": 84,
+      "confidence": 73,
+      "popularity": 58,
+      "coreIdea": "Magnetic sensors do not fix the plasma current profile, and missing sensors make the gap larger. A diffusion model learns only that current profile and is tied to KSTAR's sensor response. On 37 real shots, with as many as 90 percent of the channels switched off in the analysis, its profile stays closer to the full-sensor fit than the standard LIUQE reconstruction does.",
+      "whyItMatters": "E-RL attaches to a machine that already exists. KSTAR shots and a dropout prior are the diagnostic half of Bus A. They do not send a coil command, and they do not beat a disruption baseline. M2 stays open.",
+      "limitation": "The dropout is applied after the shot, in software. At low dropout, LIUQE is closer on most shots. The high-dropout error is in the vessel current, not a solved control problem. No actuator. Cannot raise C4.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.36528",
+      "arxiv": "2609.36528",
+      "title": "Experimental demonstration of broadband-laser suppression of cross-beam energy transfer",
+      "authors": [
+        "Guoxiao Xu",
+        "Xiaoran Li",
+        "Ning Kang",
+        "Huiya Liu",
+        "Liang Hao",
+        "Zhiyuan Li",
+        "Guowei Yang",
+        "Honghai An"
+      ],
+      "year": 2026,
+      "date": "2026-09-29",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2609.36528",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-09-30",
+        "queued"
+      ],
+      "importance": 86,
+      "confidence": 74,
+      "popularity": 60,
+      "coreIdea": "In laser fusion, one beam can hand energy to another and bounce light out of the plasma. At the Kunwu laser, two crossed broadband beams, 0.6 percent bandwidth and up to 550 joules, sent less light back than narrowband beams. In the geometry that separates Brillouin scatter from an ordinary reflection, the Brillouin share fell from 3.75 percent to 0.46 percent.",
+      "whyItMatters": "S-L3 says stimulated scatter has to sit in the rate. This is a measured scatter channel, not a Vlasov solver and not a reactivity ratio. Less reflected light is a smaller loss. It is not a fusion gain and it is not Floquet tunneling.",
+      "limitation": "Two-beam table, not a capsule implosion. Intensity about 2.6 times 10 to the 14 watts per square centimeter, far below the published driven-tunneling intensities. Symmetric scatter is still 4.64 percent. Harvest confidence 74 is under 80, so it is not an ADD. No Q_eng.",
+      "source": "arXiv API",
+      "claimIds": [
+        "S-L3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.37231",
+      "arxiv": "2609.37231",
+      "title": "Ultra-high-distance quantum memories from amplified qLDPC codes",
+      "authors": [
+        "Zijian Liang",
+        "Boren Gu",
+        "Yu-An Chen",
+        "Jens Eisert",
+        "Zongyuan Wang"
+      ],
+      "year": 2026,
+      "date": "2026-09-29",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2609.37231",
+      "fields": [
+        "tqc",
+        "topology"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-09-30",
+        "queued"
+      ],
+      "importance": 80,
+      "confidence": 68,
+      "popularity": 52,
+      "coreIdea": "A large code distance does not by itself protect a memory, because faults during the parity checks can spread. This paper glues a small quantum code to an amplifier so the certified circuit distance multiplies, and it proves when that product holds. Four rounds turn an 18-qubit seed into a code with 13,320 physical qubits, 64 logical qubits, check weight at most 14, and circuit distance at least 48.",
+      "whyItMatters": "E-QEC needs codes whose circuit distance is known, not just the ideal distance. This is a certificate for qLDPC memories. It is not a measured logical error on a processor, so it does not move C4.",
+      "limitation": "Proof and examples. No device. The seed is Abelian qLDPC, not an S3 fusion space. Not an interface contract for a new pillar.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.36554",
+      "arxiv": "2609.36554",
+      "title": "Multicomponent anyons in one-dimensional optical lattices",
+      "authors": [
+        "Sagarika Basak",
+        "Xi-Wen Guan",
+        "Han Pu"
+      ],
+      "year": 2026,
+      "date": "2026-09-29",
+      "venue": "arXiv cond-mat.quant-gas",
+      "url": "https://arxiv.org/abs/2609.36554",
+      "fields": [
+        "anyons"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-09-30",
+        "queued"
+      ],
+      "importance": 72,
+      "confidence": 66,
+      "popularity": 48,
+      "coreIdea": "Particles on a one-dimensional lattice can pick up a fractional phase when they pass through each other. This paper computes how that phase reshapes the spin and charge patterns of a multi-component gas, and how it changes the way the cloud expands after a kick. The phase is a one-dimensional exchange statistic.",
+      "whyItMatters": "E-S3 stores information in the fusion space of non-Abelian fluxes in two dimensions, and universality needs a fusion measurement. A one-dimensional Anyon-Hubbard phase does not provide that space and does not replace the fusion gate.",
+      "limitation": "Optical-lattice theory. No braid of C2 fluxes, no fusion measurement, no processor. The companion spin-chain paper (2609.36555) is the same setting and is left unscored. Cannot raise C3.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.37269",
+      "arxiv": "2609.37269",
+      "title": "Active normal-fluid feedback in quantum turbulence from holography",
+      "authors": [
+        "Yu-Ping An",
+        "Li Li",
+        "Makoto Tsubota",
+        "Sebastian Waeber",
+        "Hua-Bi Zeng"
+      ],
+      "year": 2026,
+      "date": "2026-09-29",
+      "venue": "arXiv hep-th",
+      "url": "https://arxiv.org/abs/2609.37269",
+      "fields": [
+        "holography"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-09-30",
+        "rejected",
+        "denylist"
+      ],
+      "importance": 50,
+      "confidence": 60,
+      "popularity": 42,
+      "coreIdea": "Superfluid turbulence is usually split into two fluids that drag on each other through vortices, with the drag put in by hand. This paper replaces that knob with a holographic gravity model, so the normal fluid and the superfluid push back on each other from the equations. The target experiments are cold atoms, not a tokamak.",
+      "whyItMatters": "E-HOL is cut. A duality for quantum turbulence is not a sensor, a coil command, or a processor bus. The author list says Tusbota in one database spelling and Tsubota in the literature; the physics claim does not change.",
+      "limitation": "Readable. Not INCLUDE. Wormhole-moduli and compact-object holography in the same listing stay unscored. Denylist holds.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-HOL"
+      ],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.37523",
+      "arxiv": "2609.37523",
+      "title": "Asymptotic Pseudospectra in Dissipative Floquet Quantum Systems: Geometric Structures and Observable Dynamics",
+      "authors": [
+        "Yuncheng Xie",
+        "Haozhe Shi",
+        "Zhuocheng Ma",
+        "Weibin Chu",
+        "Xin-Gao Gong"
+      ],
+      "year": 2026,
+      "date": "2026-09-29",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2609.37523",
+      "fields": [
+        "time-crystal"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-09-30",
+        "rejected",
+        "cut-as-clock"
+      ],
+      "importance": 46,
+      "confidence": 55,
+      "popularity": 34,
+      "coreIdea": "In a driven, lossy quantum chain, the usual list of frequencies stops describing how observables move once the chain is large. The paper sorts the almost-spectrum into regions and shows, on two solvable models, that those regions can swap which signal lasts longer.",
+      "whyItMatters": "E-TC as a system clock is already cut. Pseudospectra of a dissipative Floquet chain are not a metronome and do not time a plasma shot. The sentence about quantum-computing observables does not name a gate.",
+      "limitation": "Two exactly solvable models. No prethermal lifetime compared with a control horizon. Not a CUT reversal.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-TC"
+      ],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
     }
   ],
   "runs": [
+    {
+      "id": "run-2026-09-30-daily",
+      "startedAt": "2026-09-30T09:16:00-05:00",
+      "windowStart": "2026-09-23",
+      "windowEnd": "2026-09-30",
+      "kind": "daily",
+      "feeds": [
+        "https://arxiv.org/list/quant-ph/recent",
+        "https://arxiv.org/list/cond-mat.str-el/recent",
+        "https://arxiv.org/list/cond-mat.mes-hall/recent",
+        "https://arxiv.org/list/hep-th/recent",
+        "https://arxiv.org/list/physics.plasm-ph/recent",
+        "https://arxiv.org/search/advanced"
+      ],
+      "paperIds": [
+        "2609.37629",
+        "2609.36536",
+        "2609.36528",
+        "2609.37231",
+        "2609.36554",
+        "2609.37269",
+        "2609.37523"
+      ],
+      "unscoredIds": [
+        "2609.38139",
+        "2609.37699",
+        "2609.38160",
+        "2609.36555",
+        "2609.37296",
+        "2609.37609",
+        "2609.37766",
+        "2609.37210",
+        "2609.36542",
+        "2609.37806",
+        "2609.37394",
+        "2609.37990",
+        "2609.38085",
+        "2609.38038",
+        "2609.37890",
+        "2609.38060",
+        "2609.37199",
+        "2609.36408"
+      ],
+      "notes": "Thirteenth daily run. Lookback 7 days. ingest.py wrote 43 hits. fetch_arxiv.py merged 44 keyword stubs; those stubs were removed from the catalog and left unscored so harvest boilerplate cannot enter the paper. The new slice is the 29 Sep listing (the 30 Sep announcement has not dropped). Five HOLDs: disagreement-routed qLDPC decoding with an H2 Z-memory check (E-QEC), KSTAR equilibrium reconstruction under sensor dropout (E-RL, no coil command), Kunwu broadband CBET/SBS suppression (S-L3, not a reactivity gain), amplified qLDPC circuit-distance certificates (E-QEC), and 1D multicomponent anyons (E-S3, not fusion). Holographic quantum turbulence rejected on the E-HOL denylist. Dissipative Floquet pseudospectra rejected as a clock. Strongest unscored neighbor: Midha-Abanin, local autonomous inference for qLDPC and toric codes (2609.38139). No Auto-Gate pass. No version bump. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand. Q=1000 not entered. Harvest gauges are not C.",
+      "fieldCounts": {
+        "tqc": 2,
+        "plasma": 2,
+        "fusion-quantum": 1,
+        "anyons": 1,
+        "holography": 1,
+        "time-crystal": 1,
+        "topology": 2
+      }
+    },
     {
       "id": "run-2026-09-29-daily",
       "startedAt": "2026-09-29T09:16:00-05:00",
