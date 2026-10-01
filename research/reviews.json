@@ -1,6 +1,263 @@
 {
-  "asOf": "2026-09-30",
+  "asOf": "2026-10-01",
   "cards": [
+    {
+      "id": "2026-10-01/2609.39879",
+      "paperId": "2609.39879",
+      "date": "2026-10-01",
+      "bind": [
+        "E-S3",
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: the platform is a classification of noisy shallow circuits, not the H2 S3 processor and not a surface-code threshold plot. G1 passes: finite-depth local channels, a recovery threshold, and point-like versus extended syndromes are the objects. G5 passes: a fault-tolerant point-like-syndrome preparation of a solvable non-Abelian order would refute the no-go this year. G6 passes: no Q_eng.",
+      "score": "E-S3 C3 T3 D3 A3 stays; E-QEC C4 T3 D3 A3 stays; coupling C1",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Lo et al., Nature 2026, prepared the S3 quantum double on 54 qubits of Quantinuum H2 and used fusion as a gate. That demonstration is not a fault-tolerance threshold, and this no-go does not delete it. Bare arXiv cannot raise C. Two claims make a bridge, which starts at C1.",
+      "ledger": "none.",
+      "plain": {
+        "core": "A quantum memory is fault tolerant only if the information can still be moved after the gates and the measurements are a little noisy. This paper groups memories into phases by that test. Two- and three-dimensional color codes can sit in one phase. It also shows that a wide family of shallow circuits that only measure point-like syndromes, including ordinary preparation of two-dimensional topological codes and of non-Abelian orders with solvable anyon theories, is not fault tolerant.",
+        "why": "E-S3 and E-QEC both feel this. S3 is a solvable non-Abelian order. The sentence does not erase the 54-qubit H2 demonstration and it does not drop fusion measurement. It does say a shallow point-like prep is not automatically fault tolerant. The pair is a bridge, so coupling stays at C1. Neither C moves.",
+        "limit": "Bare arXiv. Not a device. Harvest confidence 76 is under 80, so it is not an ADD. The no-go is for point-like syndromes, not for every adaptive circuit."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: two claim IDs, and the pair is coupling. A2 miss (G4). A3 miss: HOLD, not INCLUDE. A4 miss. A5 miss: bare arXiv. A6 miss: the solvable-anyon sentence couples E-S3 to a circuit no-go. A7 pass. A8 n/a.",
+      "math": "Phase equivalence by shallow local channels plus local measurements and global classical communication, with every quantum operation robust to noise. A nonzero local-noise recovery threshold is a phase property. Finite-depth local channel circuits preserve the phase. Subsystem-code classification does not pick a gauge state. 2D and 3D color codes are equivalent by dimensional jumps inside the 3D gauge color code. Qudit stabilizer codes with extended syndromes allow single-shot preparation. A broad class of shallow circuits that measure only point-like syndromes, including 2D topological-code preparation and non-Abelian topological orders with solvable anyon theories, is not fault tolerant.",
+      "autoGate": "miss A1, A2, A3, A4, A5, A6"
+    },
+    {
+      "id": "2026-10-01/2609.40313",
+      "paperId": "2609.40313",
+      "date": "2026-10-01",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G1\u2013G6 pass on the code claim: radius approaching the quantum Singleton bound, constant list size, near-linear time in block length, LDPC by quantum AEL amplification. No energy is invented. The rate is not sent to infinity. qLDPC is the error-layer platform. An explicit expander instance can be checked this quarter. Q_eng is absent. Auto-Gate still fails on action and venue.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Google's below-threshold surface-code memory is the C4 result: a larger code made the logical error smaller on the device. An explicit list-decodable qLDPC family is not that plot. Panteleev\u2013Kalachev (STOC 2022) already supplied good qLDPC codes; this paper adds an explicit capacity-approaching list decoder, still on paper.",
+      "ledger": "none. Decoding time is not P_aux.",
+      "plain": {
+        "core": "Sparse quantum codes, where each check touches only a few qubits, were hard to write down and still decode near the best possible radius. This paper gives an explicit sparse family whose list decoder corrects almost out to the quantum Singleton bound, returns a short list, and runs in time that grows only slightly faster than the length of the code.",
+        "why": "E-QEC is the error layer. An explicit qLDPC code with a fast list decoder is a compiler target. It is not a below-threshold memory experiment, so C stays at C4.",
+        "limit": "Bare arXiv. No processor. Harvest confidence 74 is under 80, so it is not an ADD. The sibling LCL construction (2609.40252) stays unscored."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 pass. A3 miss: HOLD, not INCLUDE. A4 miss: the Singleton radius is not a term already in the energy ledger, and C is not raised. A5 miss: bare arXiv. A6 pass. A7 pass. A8 n/a.",
+      "math": "Explicit qLDPC via the quantum Alon\u2013Edmonds\u2013Luby amplification of Bergamaschi, Golowich, and Gunn (STOC 2024). List-decoding radius approaches the quantum Singleton bound at constant list size. Decoder generalizes expander weak-regularity list decoding (Srivastava\u2013Tulsiani, FOCS 2025; Jeronimo\u2013Singh, 2025) and runs in near-linear time in the block length.",
+      "autoGate": "miss A3, A4, A5"
+    },
+    {
+      "id": "2026-10-01/2609.40319",
+      "paperId": "2609.40319",
+      "date": "2026-10-01",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G1 passes: two-qubit depth equals the number of colors in a proper ordered edge-coloring with the even-overlap parity constraint. The 6-layer degree lower bound is stated and missed for published weight-6 IBM bivariate bicycle codes. G4 passes: syndrome extraction is the qLDPC error layer. G5 passes: a schedule that hits 6 layers on those IBM instances, or a shallower schedule than LocalASC on the same codes, is a this-quarter falsifier. G6 passes.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A below-threshold scaling experiment, not a Tanner-graph coloring, is what holds E-QEC at C4. Missing the 6-layer bound on the published IBM weight-6 bicycle codes is a limitation of this scheduler, not a device result.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Measuring the checks of a sparse quantum code has an ordering rule: wherever an X check and a Z check share qubits, the X interactions must come first an even number of times. This paper searches that ordering on a symmetry-reduced copy of the code and lifts the answer. It does not reach the six-layer lower bound on the published weight-6 IBM bicycle codes, and it does reach the bound on some other sparse codes.",
+        "why": "E-QEC needs a shallow syndrome circuit or the measurement schedule can dominate the logical error. A schedule on a Tanner graph is not a threshold plot. C stays at C4.",
+        "limit": "Bare arXiv. Depth is a circuit count, not a device run. Bivariate-bicycle metachecks (2609.39121) stay unscored."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 pass. A3 miss. A4 miss: circuit depth is not an energy-ledger bound. A5 miss: bare arXiv. A6 pass. A7 pass. A8 n/a.",
+      "math": "CSS syndrome extraction as a proper ordered edge-coloring. For every overlapping X/Z pair the number of shared data qubits on which X precedes Z is even. Minimum colors equal minimum two-qubit depth with one ancilla per check. LocalASC reduces the system to edge orbits under a Tanner-graph automorphism subgroup. Weight-6 IBM bivariate bicycle codes do not attain the 6-layer degree lower bound. Several odd-weight two-block CSS codes and some quantum Tanner codes saturate their lower bound.",
+      "autoGate": "miss A3, A4, A5"
+    },
+    {
+      "id": "2026-10-01/2609.40132",
+      "paperId": "2609.40132",
+      "date": "2026-10-01",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: the platform is wall-temperature screening under runaway electrons, not a coil command and not a disruption-rate controller. G1 passes: Geant4 volumetric deposition plus a 1D heat-diffusion solve per wall element, up to the melting threshold. G2 passes: deposited energy heats the wall; no fusion power is invented. G5 passes: a screened scenario can be compared with a published 3D thermomechanical case this year. G6 passes.",
+      "score": "E-RL C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Seo et al. and Rothstein 2026 acted on plasmas. A faster melt map does not beat a lab disruption-rate baseline. M2 is still that beat.",
+      "ledger": "none. Wall temperature to melting is not P_rad, P_aux, or Q_eng. M1 stays open.",
+      "plain": {
+        "core": "A runaway-electron beam during a disruption can melt a small patch of the tokamak wall. Full three-dimensional heat calculations are too slow to scan many shots. FIREWALL keeps a library of how those electrons deposit energy in the metal and then runs a one-dimensional heat calculation on each wall tile, fast enough to screen scenarios and to aim the expensive calculation at tiles that approach melting.",
+        "why": "E-RL is the plant-attach claim. A wall-damage screen sits next to Bus A. It does not command a coil and it does not beat a disruption-rate baseline, so M2 stays open. Wall heat is not entered as P_rad and it is not a Q.",
+        "limit": "Bare arXiv. No actuator. Melting is a damage flag, not an energy-ledger term."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-RL only). A2 miss (G4). A3 miss. A4 miss: no ledger term tightens. A5 miss: bare arXiv. A6 pass. A7 pass. A8 n/a.",
+      "math": "Surrogate: a database of Geant4 volumetric energy-deposition profiles, retaining runaway energy and incident angle, plus a one-dimensional heat-diffusion solver on each wall element of a three-dimensional geometry. Output is spatiotemporal temperature up to melting. Intended to screen disruption scenarios and to restrict high-fidelity thermomechanics to the tiles that approach melt.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-10-01/2609.39475",
+      "paperId": "2609.39475",
+      "date": "2026-10-01",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: the platform is a Rydberg blockade Hamiltonian in the toric-code phase, not the H2 braid-plus-fusion gate set. G1 passes: a finite excitation gap in the thermodynamic limit, built from gap-stability plus local symmetry. G5 passes: a closing gap in the same family, or a failed extension to the cited non-Abelian quantum-double Hamiltonians, is checkable this quarter. G6 passes. Fusion measurement is not replaced.",
+      "score": "E-S3 C3 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Lo et al., Nature 2026, is the C3 result: S3 anyons braided and fused on H2. A spectral gap for a Z2 blockade model does not compile a gate. Braiding alone is still not universal for S3.",
+      "ledger": "none.",
+      "plain": {
+        "core": "A grid of atoms that block their neighbors can sit in the same phase as the toric code. Proving that excitations still cost a fixed energy in a huge system is usually out of reach. This paper proves a finite gap for one such blockade model, and says the same argument covers a wider family proposed to host non-Abelian quantum-double phases.",
+        "why": "E-S3 is the non-Abelian quantum double we run by braiding and by fusion on ions. A gap in a Rydberg Hamiltonian is evidence a phase can exist. It is not a braid, and it is not a fusion measurement. Fusion stays in the gate set. C stays at C3.",
+        "limit": "The non-Abelian sentence points at models proposed elsewhere (B\u00fcchler et al., Phys. Rev. B 114, 065113, 2026). This paper does not braid them. Bare arXiv."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-S3 only). A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass: no new fuel and no new bus; the non-Abelian sentence is a cited extension, not a coupling into plant Q. A7 pass. A8 n/a.",
+      "math": "Finite spectral gap for the two-body blockade Hamiltonian of Maier et al., PRX Quantum 6, 030340 (2025), whose ground state is in the toric-code phase. The argument uses existing gap stability and the local symmetry of the model. The same bound is claimed for a broader blockade family realizing non-Abelian quantum-double phases, proposed in B\u00fcchler et al., Phys. Rev. B 114, 065113 (2026).",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-10-01/2609.39959",
+      "paperId": "2609.39959",
+      "date": "2026-10-01",
+      "bind": [
+        "E-FR"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G1\u2013G6 pass on the cubic code itself: Davies generator, decay of correlations, modified log-Sobolev inequality, rapid mixing at every T>0. The platform is the memory the claim named. A memory time that grows with size at fixed T>0 would refute the proof. No Q_eng. The claim is already CUT, so the card cannot INCLUDE and does not move C.",
+      "score": "E-FR C2 T2 D1 A2 stays (CUT)",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Bravyi and Haah introduced the cubic code as a self-correcting memory because it has no string logical operators. This proof says that obstruction is not enough: the code thermalizes at every positive temperature. That confirms the hardware cut. It is not two C\u22654 sources for a reversal, and bare arXiv does not move C.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Haah's cubic code was a candidate for a three-dimensional quantum memory that corrects itself, because errors cannot line up into long strings. This paper proves that at every temperature above zero the code forgets its state quickly. It is the first analytic proof of that kind of rapid mixing for a fracton code.",
+        "why": "E-FR is already cut as hardware memory. The proof agrees with the cut. It does not put the cubic code on the bus, and it does not change C. A control bit still does not live on a 3D multi-body Hamiltonian.",
+        "limit": "One code. X-cube is not this proof. Not a CUT reversal. Bare arXiv, so C is not moved even downward."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-FR is CUT, not KEEP or HOLD. A3 miss: REJECT is not INCLUDE and is not a CUT reversal. Gates on the proof pass; they do not authorize a version bump.",
+      "math": "Haah cubic code. No string logical operators. Memory time had numerical studies and no analytic upper bound. Rapid thermalization at every T>0 by converting a decay-of-correlations condition into a modified logarithmic Sobolev inequality for the Davies generator, using the framework of Commun. Math. Phys. 407, 195 (2026). Claimed as the first such proof for any fracton code.",
+      "autoGate": "miss A1, A3"
+    },
+    {
+      "id": "2026-10-01/2609.39201",
+      "paperId": "2609.39201",
+      "date": "2026-10-01",
+      "bind": [
+        "E-TC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: a classical orbit in a parabolic well is not a control clock. G5 fails: there is no prethermal lifetime compared with a shot duration. G1 passes: piecewise-parabolic kinetic energy minimized at nonzero speed, periodic solutions with speed discontinuities. G6 passes.",
+      "score": "E-TC CUT stays",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "The clock is already cut in favor of a classical clock plus a QEC cycle. A closed-form classical orbit does not outlive a control horizon and is not timing infrastructure.",
+      "ledger": "none.",
+      "plain": {
+        "core": "A classical particle in a parabolic well can be given a kinetic energy that prefers a nonzero speed. The motion is periodic and the speed jumps. The paper writes those orbits in closed form.",
+        "why": "E-TC as a system clock is cut. A classical periodic orbit does not time a QEC cycle or a plasma shot.",
+        "limit": "No quantum prethermal lifetime and no comparison to a control horizon. Not a CUT reversal."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-TC is CUT. A2 miss (G4, G5). A3 miss. Not a CUT reversal.",
+      "math": "Classical particle in a parabolic potential. Kinetic energy piecewise parabolic in speed and minimized at a nonzero speed. Periodic orbits; speed has periodic discontinuities; stability on the lower-action branches. A quartic kinetic energy is emulated by a piecewise-parabolic one.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-10-01/2609.39598",
+      "paperId": "2609.39598",
+      "date": "2026-10-01",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: holographic V-QCD for dense matter and heavy-ion freeze-out is not a reactor or processor encoder. G5 fails: RHIC net-proton cumulants are not a tokamak or QEC falsifier. G6 passes. The denylist holds.",
+      "score": "E-HOL CUT stays",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "The denylist needs two independent C\u22654 sources to reverse. One holographic QCD phase diagram is not that packet. AdS/CFT stays on the reading list.",
+      "ledger": "none. A critical endpoint density is not Q_eng.",
+      "plain": {
+        "core": "A holographic model of dense nuclear matter moves its critical endpoint when the mix of quark flavors changes. The first-order transition that appears in neutron-star matter disappears in the mix used for heavy-ion collisions.",
+        "why": "E-HOL is cut. A QCD phase diagram is not a tokamak state encoder and not a processor bus. This is the holography representative for the 30 Sep listing. The rest of that cluster stays unscored.",
+        "limit": "Readable. Not INCLUDE. Reversing the cut would take two independent C\u22654 sources. This is not one of them."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-HOL is CUT. A3 miss. Not a CUT reversal.",
+      "math": "Flavor-dependent holographic V-QCD. Two massless light quarks and a massive strange quark. Beta-equilibrated matter versus strangeness-neutral matter at n_Q/n_B = 0.4. Preferred fit: first-order transition in beta-equilibrated matter ends at a critical endpoint at lower density than earlier holographic studies; the transition disappears under heavy-ion conditions. Cumulant ratios along the chemical freeze-out curve. Global diagrams matched to Hadron Resonance Gas models in Thermal-FIST.",
+      "autoGate": "miss A1, A2, A3"
+    },
     {
       "id": "2026-09-30/2609.37629",
       "paperId": "2609.37629",

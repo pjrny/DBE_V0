@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T14:20:00+00:00",
+  "generatedAt": "2026-10-01T14:14:00+00:00",
   "lookback": "1y+",
   "northStar": "Q=1000",
   "feeds": [
@@ -134,6 +134,7 @@
         "nonabelian-qldpc"
       ],
       "blockers": [
+        "2026-10-01: Rydberg blockade gap (2609.39475) is a Z2 toric-code phase, with a cited extension to non-Abelian quantum doubles. Not a braid and not a fusion measurement. Kubica (2609.39879) says shallow point-like-syndrome prep of solvable non-Abelian orders is not fault tolerant. H2 fusion gate set stays. Coupling with E-QEC is C1.",
         "2026-09-30: 1D Anyon-Hubbard gas (2609.36554) is a fractional exchange phase, not an S3 fusion space. Fusion measurement stays in the gate set.",
         "2026-09-29: Read-Rezayi numerics (2609.31846) and Laughlin co-tunneling (2609.35480) do not replace S3 fusion measurement. No braid on hardware.",
         "2026-09-28: no S3 braid-plus-fusion result. D4 qLDPC (2609.31541) is outside the cyclic-fusion test and stays on E-QEC only.",
@@ -177,6 +178,7 @@
         "floquet-majorana-codes"
       ],
       "blockers": [
+        "2026-10-01: no X or Z logical and no gap scaling in the 30 Sep listing. Fermionic-shadow 'Majorana degree' (2609.40173) left unscored as a false friend. M5 stays open.",
         "2026-09-30: no Majorana distinguisher in the 29 Sep listing. M5 stays open.",
         "2026-09-29: Kitaev-Heisenberg toric-code region (2609.33454) is Abelian e/m. No X or Z logical. M5 stays open.",
         "2026-09-28: no independent X or Z logical. Strained-altermagnet Chern diagram (2609.30791) left unscored. M5 stays open.",
@@ -217,6 +219,7 @@
         "fracton-holography"
       ],
       "blockers": [
+        "2026-10-01: Haah cubic code thermalizes at every T>0 (2609.39959). Self-correction fails analytically. CUT as hardware stands. C unchanged.",
         "No 3D hardware path; CUT as reactor memory."
       ],
       "limitation": "Theory workstream only.",
@@ -247,6 +250,7 @@
         "spacetime-fractons"
       ],
       "blockers": [
+        "2026-10-01: classical time-crystal orbits (2609.39201) are not a system clock.",
         "2026-09-30: dissipative Floquet pseudospectra (2609.37523) are not a system clock.",
         "2026-09-29: kicked-Ising time crystal (2609.33574), N\u226416, is not a system clock.",
         "2026-09-28: Floquet skin effect in ultracold atoms (2609.31474) is not a system clock.",
@@ -280,6 +284,7 @@
         "fracton-holography"
       ],
       "blockers": [
+        "2026-10-01: holographic QCD critical endpoint (2609.39598) rejected. Denylist holds. Tripartite minimal surfaces and the rest of the AdS cluster left unscored.",
         "2026-09-30: holographic two-fluid turbulence (2609.37269) rejected. Denylist holds. Wormhole and compact-object holography left unscored.",
         "2026-09-29: integrable holography (2609.34909) rejected. Denylist holds. The rest of the cluster was not scored.",
         "2026-09-28: planar holographic bootstrap (2609.31576) and flat-limit AdS Hilbert space (2609.31055) rejected. Denylist holds.",
@@ -316,6 +321,7 @@
         "topo-dynamics"
       ],
       "blockers": [
+        "2026-10-01: FIREWALL (2609.40132) screens runaway-electron wall melting. It does not command a coil. M2 stays open. Stellarator alpha chaos (2609.39376) left unscored.",
         "2026-09-30: KSTAR diffusion prior (2609.36536) reconstructs J_phi on 37 shots under synthetic dropout. It does not command a coil. M2 stays open.",
         "2026-09-29: EXL-50U MPC (2609.34076) is a free-boundary simulation versus PID, not a shot. Packet twin (2609.33994) stops at 91.6 \u00b5s shared memory. M2 stays open.",
         "2026-09-28: KSTAR single-shot H-mode compass scan (2609.30452) and TCV edge Er (2609.31424) do not close M2. No coil-command bake-off.",
@@ -358,6 +364,7 @@
       ],
       "amplifies": [],
       "blockers": [
+        "2026-10-01: FIREWALL writes no P_rad, P_aux, or Q_eng. Not Floquet DT. M1, M4, and M7 stay open.",
         "2026-09-30: Kunwu broadband CBET (2609.36528) cuts an SBS fraction from 3.75% to 0.46% at about 2.6e14 W/cm^2. Residual scatter remains. No Q_eng. Not Floquet DT. M1, M4, and M7 stay open.",
         "2026-09-29: Vlasov SLDG (2609.32206) and ITG s_crit (2609.33341) write no Q_eng. p-11B alpha source is not Layer 2. M1, M4, and M7 stay open.",
         "2026-09-28: no ledger term. Photonic graph-state fusion (2609.30400) rejected as a false friend. M1 and M7 stay open.",
@@ -402,6 +409,7 @@
         "cyclic-fusion-family"
       ],
       "blockers": [
+        "2026-10-01: Kubica no-go (2609.39879) constrains point-like shallow prep of solvable anyon theories. It does not remove fusion measurement and it does not open a new bus.",
         "Already folded under E-S3; do not open a new bus."
       ],
       "limitation": "Universality reason, not a product line.",
@@ -504,6 +512,7 @@
       ],
       "amplifies": [],
       "blockers": [
+        "2026-10-01: capacity-approaching qLDPC list decoding (2609.40313) and LocalASC syndrome schedules (2609.40319) queued under E-QEC only. Not an interface contract. Kubica is a bridge at C1, not a new pillar.",
         "2026-09-30: disagreement-routed BP-OSD (2609.37629) and qLDPC distance amplifiers (2609.37231) queued under E-QEC only. Not an interface contract. The H2 check does not move E-S3.",
         "2026-09-29: GKP-concatenated BB/tricycle circuits (2609.35282) queued under E-QEC only. Not an interface contract.",
         "2026-09-28: Zhu et al. D4 twisted-sheaf qLDPC (2609.31541) queued under E-QEC only. Not an interface contract. D4 does not move E-S3.",
@@ -10985,9 +10994,366 @@
       ],
       "bindAction": "REJECT",
       "pillarEffect": "none"
+    },
+    {
+      "id": "2609.39879",
+      "arxiv": "2609.39879",
+      "title": "Fault Tolerant Quantum Phases of Matter",
+      "authors": [
+        "Colin V. Coane",
+        "Shouzhen Gu",
+        "Aleksander Kubica"
+      ],
+      "year": 2026,
+      "date": "2026-09-30",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2609.39879",
+      "fields": [
+        "tqc",
+        "topology",
+        "anyons"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-01",
+        "queued",
+        "bridge"
+      ],
+      "importance": 90,
+      "confidence": 76,
+      "popularity": 62,
+      "coreIdea": "A quantum memory is fault tolerant only if the information can still be moved after the gates and the measurements are a little noisy. This paper groups memories into phases by that test. Two- and three-dimensional color codes can sit in one phase. It also shows that a wide family of shallow circuits that only measure point-like syndromes, including ordinary preparation of two-dimensional topological codes and of non-Abelian orders with solvable anyon theories, is not fault tolerant.",
+      "whyItMatters": "E-S3 and E-QEC both feel this. S3 is a solvable non-Abelian order. The sentence does not erase the 54-qubit H2 demonstration and it does not drop fusion measurement. It does say a shallow point-like prep is not automatically fault tolerant. The pair is a bridge, so coupling stays at C1. Neither C moves.",
+      "limitation": "Bare arXiv. Not a device. Harvest confidence 76 is under 80, so it is not an ADD. The no-go is for point-like syndromes, not for every adaptive circuit.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-S3",
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.40313",
+      "arxiv": "2609.40313",
+      "title": "Explicit Capacity-Achieving Quantum LDPC Codes List Decodable in Near-linear Time",
+      "authors": [
+        "William Gay",
+        "Fernando Granha Jeronimo",
+        "Abhi Shukul"
+      ],
+      "year": 2026,
+      "date": "2026-09-30",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2609.40313",
+      "fields": [
+        "tqc",
+        "topology"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-01",
+        "queued"
+      ],
+      "importance": 86,
+      "confidence": 74,
+      "popularity": 58,
+      "coreIdea": "Sparse quantum codes, where each check touches only a few qubits, were hard to write down and still decode near the best possible radius. This paper gives an explicit sparse family whose list decoder corrects almost out to the quantum Singleton bound, returns a short list, and runs in time that grows only slightly faster than the length of the code.",
+      "whyItMatters": "E-QEC is the error layer. An explicit qLDPC code with a fast list decoder is a compiler target. It is not a below-threshold memory experiment, so C stays at C4.",
+      "limitation": "Bare arXiv. No processor. Harvest confidence 74 is under 80, so it is not an ADD. The sibling LCL construction (2609.40252) stays unscored.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.40319",
+      "arxiv": "2609.40319",
+      "title": "Local Automorphism-Aware Syndrome Compilation for General Quantum LDPC Codes",
+      "authors": [
+        "Eugenio Durazo Rocha",
+        "Olai \u00c5. Mostad",
+        "Hsuan-Yin Lin",
+        "Eirik Rosnes"
+      ],
+      "year": 2026,
+      "date": "2026-09-30",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2609.40319",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-01",
+        "queued"
+      ],
+      "importance": 84,
+      "confidence": 72,
+      "popularity": 54,
+      "coreIdea": "Measuring the checks of a sparse quantum code has an ordering rule: wherever an X check and a Z check share qubits, the X interactions must come first an even number of times. This paper searches that ordering on a symmetry-reduced copy of the code and lifts the answer. It does not reach the six-layer lower bound on the published weight-6 IBM bicycle codes, and it does reach the bound on some other sparse codes.",
+      "whyItMatters": "E-QEC needs a shallow syndrome circuit or the measurement schedule can dominate the logical error. A schedule on a Tanner graph is not a threshold plot. C stays at C4.",
+      "limitation": "Bare arXiv. Depth is a circuit count, not a device run. Bivariate-bicycle metachecks (2609.39121) stay unscored.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.40132",
+      "arxiv": "2609.40132",
+      "title": "FIREWALL: A surrogate model for the rapid assessment of tokamak wall loading and melting by runaway electrons",
+      "authors": [
+        "Victor Johan Svensson",
+        "Tommaso Rizzi",
+        "Svetlana Ratynskaia",
+        "Hannes Bergstr\u00f6m",
+        "Luca Venerando Greco",
+        "Matthias Hoelzl",
+        "Panagiotis Tolias"
+      ],
+      "year": 2026,
+      "date": "2026-09-30",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2609.40132",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-01",
+        "queued"
+      ],
+      "importance": 79,
+      "confidence": 68,
+      "popularity": 50,
+      "coreIdea": "A runaway-electron beam during a disruption can melt a small patch of the tokamak wall. Full three-dimensional heat calculations are too slow to scan many shots. FIREWALL keeps a library of how those electrons deposit energy in the metal and then runs a one-dimensional heat calculation on each wall tile, fast enough to screen scenarios and to aim the expensive calculation at tiles that approach melting.",
+      "whyItMatters": "E-RL is the plant-attach claim. A wall-damage screen sits next to Bus A. It does not command a coil and it does not beat a disruption-rate baseline, so M2 stays open. Wall heat is not entered as P_rad and it is not a Q.",
+      "limitation": "Bare arXiv. No actuator. Melting is a damage flag, not an energy-ledger term.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.39475",
+      "arxiv": "2609.39475",
+      "title": "Excitation gap of a blockade structure with Z2 topological order",
+      "authors": [
+        "Simon Fell",
+        "Tobias F. Maier",
+        "Hans Peter B\u00fcchler",
+        "Nicolai Lang"
+      ],
+      "year": 2026,
+      "date": "2026-09-30",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2609.39475",
+      "fields": [
+        "anyons",
+        "topology",
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-01",
+        "queued"
+      ],
+      "importance": 83,
+      "confidence": 71,
+      "popularity": 48,
+      "coreIdea": "A grid of atoms that block their neighbors can sit in the same phase as the toric code. Proving that excitations still cost a fixed energy in a huge system is usually out of reach. This paper proves a finite gap for one such blockade model, and says the same argument covers a wider family proposed to host non-Abelian quantum-double phases.",
+      "whyItMatters": "E-S3 is the non-Abelian quantum double we run by braiding and by fusion on ions. A gap in a Rydberg Hamiltonian is evidence a phase can exist. It is not a braid, and it is not a fusion measurement. Fusion stays in the gate set. C stays at C3.",
+      "limitation": "The non-Abelian sentence points at models proposed elsewhere (B\u00fcchler et al., Phys. Rev. B 114, 065113, 2026). This paper does not braid them. Bare arXiv.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.39959",
+      "arxiv": "2609.39959",
+      "title": "Haah's 3D cubic code thermalizes rapidly",
+      "authors": [
+        "Sebastian Stengele",
+        "Libor Caha",
+        "\u00c1ngela Capel",
+        "Simone Warzel"
+      ],
+      "year": 2026,
+      "date": "2026-09-30",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2609.39959",
+      "fields": [
+        "fracton",
+        "topology"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-01",
+        "rejected",
+        "cut-as-hardware"
+      ],
+      "importance": 87,
+      "confidence": 77,
+      "popularity": 55,
+      "coreIdea": "Haah's cubic code was a candidate for a three-dimensional quantum memory that corrects itself, because errors cannot line up into long strings. This paper proves that at every temperature above zero the code forgets its state quickly. It is the first analytic proof of that kind of rapid mixing for a fracton code.",
+      "whyItMatters": "E-FR is already cut as hardware memory. The proof agrees with the cut. It does not put the cubic code on the bus, and it does not change C. A control bit still does not live on a 3D multi-body Hamiltonian.",
+      "limitation": "One code. X-cube is not this proof. Not a CUT reversal. Bare arXiv, so C is not moved even downward.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-FR"
+      ],
+      "bindAction": "REJECT",
+      "pillarEffect": "weaken"
+    },
+    {
+      "id": "2609.39201",
+      "arxiv": "2609.39201",
+      "title": "Exact analytic solutions of classical time crystals",
+      "authors": [
+        "Stavros Theodorakis",
+        "Athina Hadjizorzi"
+      ],
+      "year": 2026,
+      "date": "2026-09-30",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2609.39201",
+      "fields": [
+        "time-crystal"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-01",
+        "rejected",
+        "cut-as-clock"
+      ],
+      "importance": 44,
+      "confidence": 58,
+      "popularity": 30,
+      "coreIdea": "A classical particle in a parabolic well can be given a kinetic energy that prefers a nonzero speed. The motion is periodic and the speed jumps. The paper writes those orbits in closed form.",
+      "whyItMatters": "E-TC as a system clock is cut. A classical periodic orbit does not time a QEC cycle or a plasma shot.",
+      "limitation": "No quantum prethermal lifetime and no comparison to a control horizon. Not a CUT reversal.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-TC"
+      ],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.39598",
+      "arxiv": "2609.39598",
+      "title": "The holographic QCD critical point is sensitive to quark flavors",
+      "authors": [
+        "Niko Jokela",
+        "Matti J\u00e4rvinen",
+        "Toshali Mitra",
+        "Aleksi Piispa"
+      ],
+      "year": 2026,
+      "date": "2026-09-30",
+      "venue": "arXiv hep-th",
+      "url": "https://arxiv.org/abs/2609.39598",
+      "fields": [
+        "holography"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-01",
+        "rejected",
+        "denylist"
+      ],
+      "importance": 48,
+      "confidence": 55,
+      "popularity": 36,
+      "coreIdea": "A holographic model of dense nuclear matter moves its critical endpoint when the mix of quark flavors changes. The first-order transition that appears in neutron-star matter disappears in the mix used for heavy-ion collisions.",
+      "whyItMatters": "E-HOL is cut. A QCD phase diagram is not a tokamak state encoder and not a processor bus. This is the holography representative for the 30 Sep listing. The rest of that cluster stays unscored.",
+      "limitation": "Readable. Not INCLUDE. Reversing the cut would take two independent C\u22654 sources. This is not one of them.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-HOL"
+      ],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
     }
   ],
   "runs": [
+    {
+      "id": "run-2026-10-01-daily",
+      "startedAt": "2026-10-01T09:14:00-05:00",
+      "windowStart": "2026-09-24",
+      "windowEnd": "2026-10-01",
+      "kind": "daily",
+      "feeds": [
+        "https://arxiv.org/list/quant-ph/recent",
+        "https://arxiv.org/list/cond-mat.str-el/recent",
+        "https://arxiv.org/list/cond-mat.mes-hall/recent",
+        "https://arxiv.org/list/hep-th/recent",
+        "https://arxiv.org/list/physics.plasm-ph/recent",
+        "https://arxiv.org/search/advanced"
+      ],
+      "paperIds": [
+        "2609.39879",
+        "2609.40313",
+        "2609.40319",
+        "2609.40132",
+        "2609.39475",
+        "2609.39959",
+        "2609.39201",
+        "2609.39598"
+      ],
+      "unscoredIds": [
+        "2609.40279",
+        "2609.39121",
+        "2609.40252",
+        "2609.39376",
+        "2609.40173",
+        "2609.39780",
+        "2609.38815",
+        "2609.39597",
+        "2609.40220",
+        "2609.39299",
+        "2609.39817",
+        "2609.39556"
+      ],
+      "notes": "Fourteenth daily run. Lookback 7 days. ingest.py wrote 42 hits. fetch_arxiv.py merged 54 keyword stubs; those stubs were removed from the catalog and left unscored so harvest boilerplate cannot enter the paper. The new slice is the 30 Sep listing (no 1 Oct announcement at 09:14 CDT). Five HOLDs: Kubica fault-tolerant phases as an E-S3+E-QEC bridge at coupling C1 (point-like shallow prep of solvable anyon theories is not fault tolerant; fusion measurement stays), Gay\u2013Jeronimo explicit qLDPC list decoding to near the quantum Singleton bound (E-QEC), LocalASC syndrome schedules that miss 6 layers on IBM weight-6 bicycle codes (E-QEC), a Rydberg Z2 gap with a cited non-Abelian quantum-double extension (E-S3, not a braid), and FIREWALL runaway-electron wall screening (E-RL, no coil command, no Q_eng). Haah cubic-code rapid thermalization rejected under E-FR; the hardware cut stands and C stays C2. Classical time-crystal orbits rejected as a clock. Holographic QCD critical endpoint rejected on the denylist. Strongest unscored neighbors: Darmawan coherent ZZ crosstalk in the surface code (2609.40279), Rowshan bivariate-bicycle metachecks (2609.39121), Lachmann stellarator alpha-particle chaos (2609.39376). No Auto-Gate pass. No version bump. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand. Q=1000 not entered. Harvest gauges are not C.",
+      "fieldCounts": {
+        "tqc": 4,
+        "topology": 4,
+        "anyons": 2,
+        "plasma": 1,
+        "fusion-quantum": 1,
+        "fracton": 1,
+        "time-crystal": 1,
+        "holography": 1
+      }
+    },
     {
       "id": "run-2026-09-30-daily",
       "startedAt": "2026-09-30T09:16:00-05:00",
