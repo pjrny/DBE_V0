@@ -1,6 +1,294 @@
 {
-  "asOf": "2026-10-01",
+  "asOf": "2026-10-02",
   "cards": [
+    {
+      "id": "2026-10-02/2610.00845",
+      "paperId": "2610.00845",
+      "date": "2026-10-02",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: the platform is an inference-time benchmark of models already used on DIII-D, not a coil or gyrotron command and not a disruption-rate beat. G1 passes: parameter count and wall-clock milliseconds, CPU versus GPU. G2 passes: no fusion power is invented. G3 passes: latency does not scale a cross section. G5 passes: a published tearing or control-cycle time on DIII-D can be set next to these millisecond numbers this year. G6 passes: no Q_eng.",
+      "score": "E-RL C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Seo et al., Nature 2024, and Rothstein et al., Nucl. Fusion 2026, already acted on plasmas. Rothstein and Kolemen are authors here. A timing table does not beat a lab disruption baseline. M2 is still that beat. A quantum processor in the same loop remains slower than the GPU path.",
+      "ledger": "Latency only: models above about 5 million parameters, CPU tens to thousands of milliseconds. Not written as P_aux, P_drive, or Q_eng. M1 stays open.",
+      "plain": {
+        "core": "Models already used to help control the DIII-D tokamak were timed on CPU and GPU backends. Once a network is larger than about five million parameters, a CPU takes tens to thousands of milliseconds. A GPU is much faster. The backend has to be chosen together with the control-cycle budget.",
+        "why": "E-RL dies if the loop cannot close inside the instability growth time. This paper measures that budget on the machine Bus A attaches to. It does not command a coil and it does not beat a disruption-rate baseline, so M2 stays open. A quantum job in that same loop is slower than the GPU path already under test. C stays at C4.",
+        "limit": "Bare arXiv. No new shot. No actuator command. Harvest confidence 76 is under 80, so it is not an ADD. Latency is not entered as P_aux or Q_eng."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-RL only). A2 miss (G4). A3 miss: HOLD, not INCLUDE. A4 miss: latency is not a term already in the energy ledger, and C is not raised. A5 miss: bare arXiv. A6 pass. A7 pass. A8 n/a.",
+      "math": "Benchmark of ten neural networks and model pieces from fusion control and diagnostic pipelines, deployed-class models on DIII-D. For parameter count greater than about 5e6, CPU backends take tens to thousands of milliseconds; GPU inference is substantially faster. Claim: the deployment backend must be chosen with the model and the control-cycle budget.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-10-02/2610.02137",
+      "paperId": "2610.02137",
+      "date": "2026-10-02",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G1 passes: logical failure O(T n) exp[-Omega(m^alpha)] below a constant joint noise threshold p_RG, local decoder in O(log m) parallel time. G2 passes: no energy ledger is touched. G3 passes: the failure probability is exponentially bounded in the thickening m, not an unbounded rate. G4 passes: qLDPC single-shot correction is the error-layer platform. G5 passes: an explicit code whose logical error grows with m below the stated noise is a this-quarter simulation check. G6 passes. Auto-Gate still fails on action and venue.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Google's below-threshold surface-code memory is the C4 result: a larger code made the logical error smaller on the device. A transform from any CSS qLDPC code to a single-shot code is not that plot. Bomb\u00edn's single-shot and the quantum LDPC constructions of Panteleev\u2013Kalachev remain the published baseline this theorem extends, still on paper.",
+      "ledger": "none. A threshold p_RG is not P_aux.",
+      "plain": {
+        "core": "Any sparse quantum code can be thickened into a code that corrects itself in one shot. Below a fixed noise level, the chance of a logical failure falls exponentially as that thickening grows, even when the measurements are noisy. A code that was already single-shot gets a stronger suppression and keeps a threshold that does not depend on which decoder you started with.",
+        "why": "E-QEC is the error layer. A construction that turns any qLDPC code into a single-shot code is a compiler target for Bus B. It is not a below-threshold memory experiment, so C stays at C4. It is not an interface contract for a new non-Abelian pillar.",
+        "limit": "Bare arXiv. The threshold p_RG is not a measured device number. Harvest confidence 74 is under 80, so it is not an ADD."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 pass. A3 miss: HOLD, not INCLUDE. A4 miss: p_RG is not an energy-ledger bound, and C is not raised. A5 miss: bare arXiv. A6 pass: no new bus. A7 pass. A8 n/a.",
+      "math": "Any single-shot code is self-correcting. Any [[n,k]] CSS qLDPC code becomes an [[nm,k]] CSS qLDPC code with single-shot correction and a local decoder in O(log m) parallel time. Below a constant threshold p_RG for joint local stochastic physical and measurement noise, logical failure over T rounds is O(T n) exp[-Omega(m^alpha)]. If the input code already has single-shot threshold p_c and suppression Omega(n^beta), the output enhances suppression to Omega(m^alpha n^beta) while keeping the decoder-independent threshold p_RG.",
+      "autoGate": "miss A3, A4, A5"
+    },
+    {
+      "id": "2026-10-02/2610.01923",
+      "paperId": "2610.01923",
+      "date": "2026-10-02",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G1 passes: 50% interface-erasure threshold at zero local noise; merge-observable interface distance from d+1 to 2d+1; perpendicular distance from floor((d+1)/2) to d; local error 10^-3 versus 10^-4. G4 passes: rotated surface-code lattice surgery is the error layer. Photon fusion is not treated as an S3 anyon. G5 passes: the 50% erasure number is a stabilizer-simulation check this quarter. G6 passes. The word fusion is not a coupling sentence into E-S3.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "The C4 surface-code result is local circuit noise on one processor, with logical error falling as the code grows. A 50% interface-erasure threshold with local noise set to zero is not that experiment. The paper states that at 10^-3 local error the local noise masks the interface-distance advantage.",
+      "ledger": "none. An erasure threshold is not Q_eng.",
+      "plain": {
+        "core": "Joining two quantum chips with photons is noisy, because photons get lost and optical operations sometimes fail. This paper builds syndrome checks for lattice surgery on the rotated surface code that tolerate that loss. With no local noise, several of the checks still work when half the interface operations are erased. The word fusion here means joining photons, not fusing anyons.",
+        "why": "E-QEC needs a way to stitch surface-code patches. A 50% interface-erasure threshold is a compiler number for that stitch. It is not the Google below-threshold plot, so C stays at C4. It does not bind E-S3: photon fusion is not an S3 fusion measurement.",
+        "limit": "Bare arXiv. At local error 10^-3 the paper says local noise hides the interface-distance gain. Harvest confidence 72 is under 80, so it is not an ADD."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 pass. A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass: photonic fusion is named as not an S3 measurement and no new fuel or bus is added. A7 pass. A8 n/a.",
+      "math": "ZX constructions of hybrid syndrome extraction for distributed rotated surface-code lattice surgery. Several protocols, including circuit lattice surgery on fused Bell pairs and hybrid linear cluster states, reach a 50% interface-erasure threshold at zero local noise. Relative to a straight Bell-pair geometry the merge-observable interface distance goes from d+1 to 2d+1 and the perpendicular observable from floor((d+1)/2) to d. At circuit and resource-state error 10^-3, local errors mask that distance gain. At 10^-4 and below, linear-chain protocols improve faster as erasure falls.",
+      "autoGate": "miss A3, A4, A5"
+    },
+    {
+      "id": "2026-10-02/2610.01402",
+      "paperId": "2610.01402",
+      "date": "2026-10-02",
+      "bind": [
+        "E-MZM"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: the platform is a bosonized chiral-Majorana edge interferometer, not a qubit with independent X and Z logicals and not gap scaling. G1 passes: DC conductance versus low-frequency capacitance, thermal length l_T = hbar v / (pi k_B T). G5 passes: a capacitance that does not track topological spin when the arms match within l_T would refute the signature. G6 passes. The claim is WATCH, so A1 fails.",
+      "score": "E-MZM C1 T3 D3 A2 stays (WATCH)",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Trivial Andreev and Yu-Shiba-Rusinov states mimic zero-bias peaks. The public record still lacks independent X and Z logicals with topological-gap scaling on a Majorana device. An effective capacitance is not those two logicals. M5 stays open.",
+      "ledger": "none. Thermal length is not P_coh or P_aux.",
+      "plain": {
+        "core": "A pair of Majorana edge modes can be wired as an interferometer. The steady electrical conductance does not show the interference of the edge vortices. At low frequency that interference shows up as an effective capacitance, and that capacitance knows the topological spin of the vortices, as long as the two arms match within a thermal length.",
+        "why": "E-MZM is WATCH. A capacitance that tracks topological spin is a proposed electrical signature. It is not an independent X logical and a Z logical, and it does not show a topological gap scaling. M5 stays open. C stays at C1. Not load-bearing.",
+        "limit": "Bare arXiv theory. No device. Arm mismatch larger than the thermal length washes the signature out. Not an ADD: E-MZM is not KEEP or HOLD."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-MZM is WATCH, not KEEP or HOLD. A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass. A7 pass: no new HOLD item; the claim stays WATCH. A8 n/a.",
+      "math": "Two-arm co-propagating chiral Majorana interferometer, bosonized with a replica sector, asymmetric arms allowed. DC conductance shows no edge-vortex interference. At low frequency the interference is an effective capacitance sensitive to topological spin and the conformal dimension of the edge vortices. Scale l_T = hbar v / (pi k_B T). The signature survives when arm lengths match within l_T.",
+      "autoGate": "miss A1, A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-10-02/2610.00452",
+      "paperId": "2610.00452",
+      "date": "2026-10-02",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: the platform is Chern-Simons Higgsing via conformal embeddings, not the H2 braid-plus-fusion gate set. G1 passes: SO(N)_2 into SU(N)_1, anyon condensation, odd-N Laughlin to charge-2e anyon superconductivity with the same chiral Z_N order. G5 passes: a small anyon model whose topological order shrinks across the named Higgsing transition would refute the enlargement claim this quarter. G6 passes. Fusion measurement is not replaced.",
+      "score": "E-S3 C3 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Lo et al., Nature 2026, braided and fused S3 anyons on 54 qubits of Quantinuum H2. Braiding alone is not universal for S3. A conformal-embedding transition does not compile either primitive and does not delete the fusion measurement.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Higgsing a Chern-Simons gauge theory can keep or even enlarge the topological order instead of destroying it. In one family, an Abelian state becomes a non-Abelian one by anyon condensation. For odd N the story is a fermionic Laughlin state turning into a charge-2e anyon superconductor that still carries the same chiral Z_N order.",
+        "why": "E-S3 is a non-Abelian quantum double, and fusion measurement is why braiding it is universal. This paper is about anyon condensation in a field theory. It does not braid, it does not fuse on a processor, and it does not replace that measurement. C stays at C3. Not a new bus.",
+        "limit": "Bare arXiv. Condensable anyons are proposed by branching rules, not measured. Harvest confidence 68 is under 80, so it is not an ADD. Fusion measurement stays in the gate set."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-S3 only). A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass: condensation is not a new bus or a new fuel. A7 pass. A8 n/a.",
+      "math": "Chern-Simons Higgsing from conformal embeddings. Topological order is preserved or enlarged while the gauge group shrinks. Enlargement differs by anyon condensation and can take an Abelian order to a non-Abelian one. Family SO(N)_2 into SU(N)_1, N>=3. For odd N: fermionic 1/N Laughlin to charge-2e anyon superconductivity coexisting with the same chiral Z_N order. Scalar representations are non-integrable at the UV level and do not directly label un-Higgsed anyons. Also a Spin(16)_1 to Spin(9)_2 transition whose condensable algebra contains a non-Abelian anyon.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-10-02/2610.01131",
+      "paperId": "2610.01131",
+      "date": "2026-10-02",
+      "bind": [
+        "S-L3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G1 passes: zeroth-order equivalent tokamak fixed by aspect ratio, rotational transform, and magnetic shear; first order not universal. G2 passes: ITG heat flux, no invented fusion power. G3 passes: no unbounded cross-section scaling. G4 passes as a kinetic-transport method in the S-L3 solver class. It is ITG, not hole-burning and not SRS/SBS, and that limit is on the card. G5 passes: a quasi-symmetric configuration whose ITG flux disagrees with its equivalent tokamak at the stated order is a this-quarter gyrokinetic check. G6 passes: no Q_eng.",
+      "score": "S-L3 C4 T2 D2 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "S-L3 is kept because Vlasov and PIC solvers have to sit in the rate, not because a geometry map is a reactor. PRC 109, 044605 still sets the Floquet field bound. This paper does not add a drive, a hole, or an auxiliary power, and it does not write Q_eng.",
+      "ledger": "none. No P_fusion, P_drive, P_rad, or Q_eng. M1, M4, and M7 stay open.",
+      "plain": {
+        "core": "A quasi-symmetric stellarator can be matched to a simpler tokamak when you only ask about slow particle drifts. This paper asks the same question for turbulence. To lowest order the match is a circular tokamak fixed by aspect ratio, twist, and magnetic shear. Gyrokinetic runs of the ion-temperature-gradient mode agree quantitatively for some configurations. Not every stellarator has such a twin once you ask for the next order.",
+        "why": "S-L3 keeps the kinetic solvers in the rate. An equivalent-tokamak map is a way to check an ITG heat flux against a published tokamak baseline. It is not hole-burning, not SRS or SBS, and it writes no Q_eng. C stays at C4. The ledger does not gain a plant number.",
+        "limit": "Bare arXiv. First-order equivalence is not general. Harvest confidence 70 is under 80, so it is not an ADD. No drive field and no P_aux."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (S-L3 only). A2 pass. A3 miss: HOLD, not INCLUDE. A4 miss: no published ledger number tightens. A5 miss: bare arXiv. A6 pass. A7 pass. A8 n/a.",
+      "math": "Local gyrokinetics plus near-axis expansion. To zeroth order in minor radius the equivalent tokamak has circular flux surfaces and is fixed by aspect ratio, rotational transform, and magnetic shear. First-order equivalence does not exist for every quasi-symmetric stellarator. Local and global ITG simulations on selected configurations show quantitative agreement in turbulent transport between the stellarator and the equivalent tokamak.",
+      "autoGate": "miss A3, A4, A5"
+    },
+    {
+      "id": "2026-10-02/2610.02168",
+      "paperId": "2610.02168",
+      "date": "2026-10-02",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "fail",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: booklet AdS pages are not a reactor or processor encoder. G5 fails: approximate recovery of a Gaussian cosmology state is not a tokamak or surface-code falsifier this year. G2 fails as an engine term: there is no energy accounting that would let the baby universe sit on a bus. G6 passes: Q_eng is not claimed. The denylist holds.",
+      "score": "E-HOL CUT stays",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Reversing the holography cut needs two independent C>=4 sources. One Gaussian model of three AdS pages is not that packet. Almheiri\u2013Dong\u2013Harlow stays on the reading list. It is not a surface-code threshold.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Several holographic theories can be glued into a booklet. In a heavy limit the middle of the bulk pinches off into a closed baby universe. In a Gaussian toy of three pages, a small code hidden in the middle can be approximately recovered from any two pages.",
+        "why": "E-HOL is cut. A recovery sentence about AdS pages is not a surface-code memory and not a tokamak encoder. The denylist holds. It does not raise E-QEC.",
+        "limit": "No energy ledger. No device falsifier this year. Not a CUT reversal."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-HOL is CUT. A2 miss (G2, G4, G5). A3 miss: REJECT is not INCLUDE and is not a CUT reversal. A5 miss. A6 miss if read as coupling holography to E-QEC; the card voids that reading.",
+      "math": "Extension of Antonini\u2013Sasieta\u2013Swingle cosmological states to three or more holographic CFTs glued at a multiway junction. Heavy insertion produces a closed universe. A circular complex Gaussian random tensor models the three-page insertion. For equal output dimension b, a code of dimension K is approximately recoverable from any two arms with high probability as K/b goes to 0.",
+      "autoGate": "miss A1, A2, A3, A6"
+    },
+    {
+      "id": "2026-10-02/2610.01954",
+      "paperId": "2610.01954",
+      "date": "2026-10-02",
+      "bind": [
+        "E-MZM"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: Majorana-propagation here is a fermionic operator compilation for molecular electronic structure, not a Majorana zero mode. G5 fails: chemical accuracy against DMRG is not the M5 distinguisher (independent X and Z plus gap scaling). G1 passes: energy error versus a DMRG reference, CNOT and depth counts. G6 passes.",
+      "score": "E-MZM C1 stays (WATCH)",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A topological qubit needs independent X and Z logicals whose splitting tracks a topological gap. A chemistry ansatz that happens to use Majorana operators does not supply them. The Nature caveat on Majorana 1 still stands.",
+      "ledger": "none. A molecular energy error is not Q_eng.",
+      "plain": {
+        "core": "Preparing the ground state of a molecule on a quantum computer can be pre-trained classically. This paper does that pre-training with a compressed circuit whose gates are written as Majorana operators, and it reports chemical accuracy on a ruthenium complex and on acenes up to 60 qubits.",
+        "why": "The word Majorana here is a bookkeeping trick for electrons, not a zero mode. E-MZM does not move. There is no topological gap and no X or Z logical. M5 stays open.",
+        "limit": "Chemistry benchmark. Not a topological qubit. Low harvest signal and a false friend."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-MZM is WATCH. A2 miss (G4, G5). A3 miss. False friend. Not a CUT reversal and not a load-bearing result.",
+      "math": "Variational imaginary-time Majorana evolution (VIME) extends operator-projected variational quantum imaginary-time evolution to a single compiled Majorana-propagation surrogate, paired with a compressed tiled unitary product state. TLD-1411 active space up to 52 qubits, chemical precision versus DMRG, energy errors about 400 times smaller than ADAPT-VMPE. Acenes up to heptacene, 60 qubits, up to 26 times fewer CNOTs and 167 times lower two-qubit depth than the comparison points.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-10-02/2610.01878",
+      "paperId": "2610.01878",
+      "date": "2026-10-02",
+      "bind": [
+        "E-TC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: Floquet-universal Hamiltonian simulation is not a control clock. G5 fails: there is no prethermal lifetime compared with a shot duration or a QEC cycle. G1 passes: a set S Floquet-simulates Lie(S), with O(1) local strengths and drive frequencies polynomial in system size for k-local lattices. G6 passes.",
+      "score": "E-TC CUT stays",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "The clock is already cut in favor of a classical clock plus a QEC cycle. A BQP-completeness theorem for periodic drives does not outlive a control horizon and is not timing infrastructure.",
+      "ledger": "none.",
+      "plain": {
+        "core": "A periodically driven quantum system can imitate a system that does not change in time. The paper shows which sets of interactions are enough to imitate any Hamiltonian in their algebra, using only fixed-size interaction strengths and a range of drive frequencies that grows as a power of the system size.",
+        "why": "E-TC as a system clock is cut. A theorem about Floquet simulation is not a tick for a QEC cycle or a plasma shot. It does not go back on the bus.",
+        "limit": "No prethermal lifetime and no comparison to a control horizon. Not a CUT reversal."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-TC is CUT. A2 miss (G4, G5). A3 miss. Not a CUT reversal. Not a new pillar: no interface contract.",
+      "math": "Periodically driven Hamiltonians synthesize time-independent targets. A set of interactions S can Floquet-simulate every Hamiltonian in Lie(S). Floquet-universal families are characterized constructively. Local interaction strengths stay O(1). Drive frequencies scale polynomially with system size for k-local lattice Hamiltonians. Complexity consequences include BQP-completeness and QMA-hardness.",
+      "autoGate": "miss A1, A2, A3"
+    },
     {
       "id": "2026-10-01/2609.39879",
       "paperId": "2609.39879",

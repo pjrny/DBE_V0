@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T14:14:00+00:00",
+  "generatedAt": "2026-10-02T14:20:00+00:00",
   "lookback": "1y+",
   "northStar": "Q=1000",
   "feeds": [
@@ -134,6 +134,7 @@
         "nonabelian-qldpc"
       ],
       "blockers": [
+        "2026-10-02: anyon proliferation under Higgsing (2610.00452) can enlarge topological order, including a non-Abelian channel for odd N. It is Chern-Simons, not an H2 braid, and it does not replace fusion measurement. Composite-fermion Chern-band anyons (2610.01217) left unscored.",
         "2026-10-01: Rydberg blockade gap (2609.39475) is a Z2 toric-code phase, with a cited extension to non-Abelian quantum doubles. Not a braid and not a fusion measurement. Kubica (2609.39879) says shallow point-like-syndrome prep of solvable non-Abelian orders is not fault tolerant. H2 fusion gate set stays. Coupling with E-QEC is C1.",
         "2026-09-30: 1D Anyon-Hubbard gas (2609.36554) is a fractional exchange phase, not an S3 fusion space. Fusion measurement stays in the gate set.",
         "2026-09-29: Read-Rezayi numerics (2609.31846) and Laughlin co-tunneling (2609.35480) do not replace S3 fusion measurement. No braid on hardware.",
@@ -178,6 +179,7 @@
         "floquet-majorana-codes"
       ],
       "blockers": [
+        "2026-10-02: two-arm Majorana interferometer (2610.01402) predicts a low-frequency capacitance tied to edge-vortex topological spin. Not an X or Z logical. VIME chemistry 'Majorana' (2610.01954) rejected as a false friend. M5 stays open.",
         "2026-10-01: no X or Z logical and no gap scaling in the 30 Sep listing. Fermionic-shadow 'Majorana degree' (2609.40173) left unscored as a false friend. M5 stays open.",
         "2026-09-30: no Majorana distinguisher in the 29 Sep listing. M5 stays open.",
         "2026-09-29: Kitaev-Heisenberg toric-code region (2609.33454) is Abelian e/m. No X or Z logical. M5 stays open.",
@@ -219,6 +221,7 @@
         "fracton-holography"
       ],
       "blockers": [
+        "2026-10-02: no fracton-code result. Carrollian gravity wording (2610.01976) left unscored. CUT as hardware stands.",
         "2026-10-01: Haah cubic code thermalizes at every T>0 (2609.39959). Self-correction fails analytically. CUT as hardware stands. C unchanged.",
         "No 3D hardware path; CUT as reactor memory."
       ],
@@ -250,6 +253,7 @@
         "spacetime-fractons"
       ],
       "blockers": [
+        "2026-10-02: Floquet-universal Hamiltonian simulation (2610.01878) rejected as a clock. O(1) drive strengths are not a QEC cycle.",
         "2026-10-01: classical time-crystal orbits (2609.39201) are not a system clock.",
         "2026-09-30: dissipative Floquet pseudospectra (2609.37523) are not a system clock.",
         "2026-09-29: kicked-Ising time crystal (2609.33574), N\u226416, is not a system clock.",
@@ -284,6 +288,7 @@
         "fracton-holography"
       ],
       "blockers": [
+        "2026-10-02: booklet-cosmology recovery (2610.02168) rejected. The QEC sentence is an AdS page, not a processor. Denylist holds. Axionic holographic superconductors and the driven holographic superfluid left unscored.",
         "2026-10-01: holographic QCD critical endpoint (2609.39598) rejected. Denylist holds. Tripartite minimal surfaces and the rest of the AdS cluster left unscored.",
         "2026-09-30: holographic two-fluid turbulence (2609.37269) rejected. Denylist holds. Wormhole and compact-object holography left unscored.",
         "2026-09-29: integrable holography (2609.34909) rejected. Denylist holds. The rest of the cluster was not scored.",
@@ -321,6 +326,7 @@
         "topo-dynamics"
       ],
       "blockers": [
+        "2026-10-02: DIII-D inference benchmark (2610.00845, Rothstein/Kolemen) times control models. Above about 5 million parameters a CPU takes tens to thousands of milliseconds. It does not command a coil. M2 stays open. Resonant island chains on DIII-D #171491 (2610.00919) left unscored.",
         "2026-10-01: FIREWALL (2609.40132) screens runaway-electron wall melting. It does not command a coil. M2 stays open. Stellarator alpha chaos (2609.39376) left unscored.",
         "2026-09-30: KSTAR diffusion prior (2609.36536) reconstructs J_phi on 37 shots under synthetic dropout. It does not command a coil. M2 stays open.",
         "2026-09-29: EXL-50U MPC (2609.34076) is a free-boundary simulation versus PID, not a shot. Packet twin (2609.33994) stops at 91.6 \u00b5s shared memory. M2 stays open.",
@@ -364,6 +370,7 @@
       ],
       "amplifies": [],
       "blockers": [
+        "2026-10-02: equivalent-tokamak ITG (2610.01131) writes no Q_eng. Inference latency is not P_aux. Not Floquet DT. M1, M4, and M7 stay open.",
         "2026-10-01: FIREWALL writes no P_rad, P_aux, or Q_eng. Not Floquet DT. M1, M4, and M7 stay open.",
         "2026-09-30: Kunwu broadband CBET (2609.36528) cuts an SBS fraction from 3.75% to 0.46% at about 2.6e14 W/cm^2. Residual scatter remains. No Q_eng. Not Floquet DT. M1, M4, and M7 stay open.",
         "2026-09-29: Vlasov SLDG (2609.32206) and ITG s_crit (2609.33341) write no Q_eng. p-11B alpha source is not Layer 2. M1, M4, and M7 stay open.",
@@ -409,6 +416,7 @@
         "cyclic-fusion-family"
       ],
       "blockers": [
+        "2026-10-02: Higgsing anyon proliferation (2610.00452) does not remove fusion measurement and does not open a new bus. Photonic fusion in lattice surgery (2610.01923) is not anyon fusion.",
         "2026-10-01: Kubica no-go (2609.39879) constrains point-like shallow prep of solvable anyon theories. It does not remove fusion measurement and it does not open a new bus.",
         "Already folded under E-S3; do not open a new bus."
       ],
@@ -512,6 +520,7 @@
       ],
       "amplifies": [],
       "blockers": [
+        "2026-10-02: one-shot qLDPC lift (2610.02137) and photonic-fusion lattice surgery (2610.01923) queued under E-QEC only. Photon fusion is not S3 fusion. Clifford EM-duality no-go (2610.02097) and learned BP (2610.01068) left unscored. Not an interface contract.",
         "2026-10-01: capacity-approaching qLDPC list decoding (2609.40313) and LocalASC syndrome schedules (2609.40319) queued under E-QEC only. Not an interface contract. Kubica is a bridge at C1, not a new pillar.",
         "2026-09-30: disagreement-routed BP-OSD (2609.37629) and qLDPC distance amplifiers (2609.37231) queued under E-QEC only. Not an interface contract. The H2 check does not move E-S3.",
         "2026-09-29: GKP-concatenated BB/tricycle circuits (2609.35282) queued under E-QEC only. Not an interface contract.",
@@ -11301,9 +11310,400 @@
       ],
       "bindAction": "REJECT",
       "pillarEffect": "none"
+    },
+    {
+      "id": "2610.00845",
+      "arxiv": "2610.00845",
+      "title": "Is Your AI Fast Enough to Run a Fusion Reactor?",
+      "authors": [
+        "Nathaniel Chen",
+        "Andrew Rothstein",
+        "Ricardo Shousha",
+        "Hiro Farre-Kaga",
+        "Peter Steiner",
+        "Azarakhsh Jalalvand",
+        "Egemen Kolemen"
+      ],
+      "year": 2026,
+      "date": "2026-10-01",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2610.00845",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-02",
+        "queued"
+      ],
+      "importance": 92,
+      "confidence": 76,
+      "popularity": 70,
+      "coreIdea": "Models already used to help control the DIII-D tokamak were timed on CPU and GPU backends. Once a network is larger than about five million parameters, a CPU takes tens to thousands of milliseconds. A GPU is much faster. The backend has to be chosen together with the control-cycle budget.",
+      "whyItMatters": "E-RL dies if the loop cannot close inside the instability growth time. This paper measures that budget on the machine Bus A attaches to. It does not command a coil and it does not beat a disruption-rate baseline, so M2 stays open. A quantum job in that same loop is slower than the GPU path already under test. C stays at C4.",
+      "limitation": "Bare arXiv. No new shot. No actuator command. Harvest confidence 76 is under 80, so it is not an ADD. Latency is not entered as P_aux or Q_eng.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2610.02137",
+      "arxiv": "2610.02137",
+      "title": "One-Shot any Code",
+      "authors": [
+        "Andrew C. Yuan"
+      ],
+      "year": 2026,
+      "date": "2026-10-01",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.02137",
+      "fields": [
+        "tqc",
+        "topology"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-02",
+        "queued"
+      ],
+      "importance": 90,
+      "confidence": 74,
+      "popularity": 64,
+      "coreIdea": "Any sparse quantum code can be thickened into a code that corrects itself in one shot. Below a fixed noise level, the chance of a logical failure falls exponentially as that thickening grows, even when the measurements are noisy. A code that was already single-shot gets a stronger suppression and keeps a threshold that does not depend on which decoder you started with.",
+      "whyItMatters": "E-QEC is the error layer. A construction that turns any qLDPC code into a single-shot code is a compiler target for Bus B. It is not a below-threshold memory experiment, so C stays at C4. It is not an interface contract for a new non-Abelian pillar.",
+      "limitation": "Bare arXiv. The threshold p_RG is not a measured device number. Harvest confidence 74 is under 80, so it is not an ADD.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2610.01923",
+      "arxiv": "2610.01923",
+      "title": "Loss-tolerant distributed lattice surgery using fusion networks",
+      "authors": [
+        "Felix Burt",
+        "Richard Meister",
+        "Sheng-Ku Lin",
+        "Kuan-Cheng Chen",
+        "Michael Hanks",
+        "Roberto Bondesan"
+      ],
+      "year": 2026,
+      "date": "2026-10-01",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.01923",
+      "fields": [
+        "tqc",
+        "topology"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-02",
+        "queued"
+      ],
+      "importance": 88,
+      "confidence": 72,
+      "popularity": 66,
+      "coreIdea": "Joining two quantum chips with photons is noisy, because photons get lost and optical operations sometimes fail. This paper builds syndrome checks for lattice surgery on the rotated surface code that tolerate that loss. With no local noise, several of the checks still work when half the interface operations are erased. The word fusion here means joining photons, not fusing anyons.",
+      "whyItMatters": "E-QEC needs a way to stitch surface-code patches. A 50% interface-erasure threshold is a compiler number for that stitch. It is not the Google below-threshold plot, so C stays at C4. It does not bind E-S3: photon fusion is not an S3 fusion measurement.",
+      "limitation": "Bare arXiv. At local error 10^-3 the paper says local noise hides the interface-distance gain. Harvest confidence 72 is under 80, so it is not an ADD.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2610.01402",
+      "arxiv": "2610.01402",
+      "title": "Transport theory for a generic two-arm co-propagating Majorana interferometer with Majorana fermion and edge vortex tunneling",
+      "authors": [
+        "Domenico Giuliano",
+        "Andrea Nava",
+        "Fabian Hassler",
+        "Reinhold Egger"
+      ],
+      "year": 2026,
+      "date": "2026-10-01",
+      "venue": "arXiv cond-mat.mes-hall",
+      "url": "https://arxiv.org/abs/2610.01402",
+      "fields": [
+        "majorana",
+        "anyons"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-02",
+        "queued"
+      ],
+      "importance": 82,
+      "confidence": 66,
+      "popularity": 58,
+      "coreIdea": "A pair of Majorana edge modes can be wired as an interferometer. The steady electrical conductance does not show the interference of the edge vortices. At low frequency that interference shows up as an effective capacitance, and that capacitance knows the topological spin of the vortices, as long as the two arms match within a thermal length.",
+      "whyItMatters": "E-MZM is WATCH. A capacitance that tracks topological spin is a proposed electrical signature. It is not an independent X logical and a Z logical, and it does not show a topological gap scaling. M5 stays open. C stays at C1. Not load-bearing.",
+      "limitation": "Bare arXiv theory. No device. Arm mismatch larger than the thermal length washes the signature out. Not an ADD: E-MZM is not KEEP or HOLD.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-MZM"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2610.00452",
+      "arxiv": "2610.00452",
+      "title": "Anyon Proliferation and Anyon Superconductivity in Higgsing Transitions via Conformal Embeddings",
+      "authors": [
+        "Diego Garc\u00eda-Sep\u00falveda",
+        "Da-Chuan Lu"
+      ],
+      "year": 2026,
+      "date": "2026-09-30",
+      "venue": "arXiv cond-mat.str-el",
+      "url": "https://arxiv.org/abs/2610.00452",
+      "fields": [
+        "anyons",
+        "topology"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-02",
+        "queued"
+      ],
+      "importance": 86,
+      "confidence": 68,
+      "popularity": 60,
+      "coreIdea": "Higgsing a Chern-Simons gauge theory can keep or even enlarge the topological order instead of destroying it. In one family, an Abelian state becomes a non-Abelian one by anyon condensation. For odd N the story is a fermionic Laughlin state turning into a charge-2e anyon superconductor that still carries the same chiral Z_N order.",
+      "whyItMatters": "E-S3 is a non-Abelian quantum double, and fusion measurement is why braiding it is universal. This paper is about anyon condensation in a field theory. It does not braid, it does not fuse on a processor, and it does not replace that measurement. C stays at C3. Not a new bus.",
+      "limitation": "Bare arXiv. Condensable anyons are proposed by branching rules, not measured. Harvest confidence 68 is under 80, so it is not an ADD. Fusion measurement stays in the gate set.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2610.01131",
+      "arxiv": "2610.01131",
+      "title": "Theory of Equivalent Tokamaks for Characterizing Turbulent Transport in Quasi-symmetric Stellarators",
+      "authors": [
+        "Hongxuan Zhu",
+        "R. Gaur",
+        "X. Wei",
+        "Z. Lin",
+        "A. Bhattacharjee"
+      ],
+      "year": 2026,
+      "date": "2026-10-01",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2610.01131",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-02",
+        "queued"
+      ],
+      "importance": 84,
+      "confidence": 70,
+      "popularity": 58,
+      "coreIdea": "A quasi-symmetric stellarator can be matched to a simpler tokamak when you only ask about slow particle drifts. This paper asks the same question for turbulence. To lowest order the match is a circular tokamak fixed by aspect ratio, twist, and magnetic shear. Gyrokinetic runs of the ion-temperature-gradient mode agree quantitatively for some configurations. Not every stellarator has such a twin once you ask for the next order.",
+      "whyItMatters": "S-L3 keeps the kinetic solvers in the rate. An equivalent-tokamak map is a way to check an ITG heat flux against a published tokamak baseline. It is not hole-burning, not SRS or SBS, and it writes no Q_eng. C stays at C4. The ledger does not gain a plant number.",
+      "limitation": "Bare arXiv. First-order equivalence is not general. Harvest confidence 70 is under 80, so it is not an ADD. No drive field and no P_aux.",
+      "source": "arXiv API",
+      "claimIds": [
+        "S-L3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2610.02168",
+      "arxiv": "2610.02168",
+      "title": "A baby universe from a large family: booklet cosmology states and quantum error correction",
+      "authors": [
+        "Jingshu Dai",
+        "Binye Dong",
+        "Cheng Peng"
+      ],
+      "year": 2026,
+      "date": "2026-10-01",
+      "venue": "arXiv hep-th",
+      "url": "https://arxiv.org/abs/2610.02168",
+      "fields": [
+        "holography",
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-02",
+        "rejected",
+        "denylist"
+      ],
+      "importance": 48,
+      "confidence": 55,
+      "popularity": 40,
+      "coreIdea": "Several holographic theories can be glued into a booklet. In a heavy limit the middle of the bulk pinches off into a closed baby universe. In a Gaussian toy of three pages, a small code hidden in the middle can be approximately recovered from any two pages.",
+      "whyItMatters": "E-HOL is cut. A recovery sentence about AdS pages is not a surface-code memory and not a tokamak encoder. The denylist holds. It does not raise E-QEC.",
+      "limitation": "No energy ledger. No device falsifier this year. Not a CUT reversal.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-HOL"
+      ],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2610.01954",
+      "arxiv": "2610.01954",
+      "title": "Hardware-Efficient Ground-State Preparation using Variational Imaginary-Time Majorana Evolution",
+      "authors": [
+        "Federico Santona",
+        "Manuel G. Algaba",
+        "Aeishah Ameera Anuar",
+        "Anna M. Wernbacher",
+        "Prachi Sharma",
+        "Fedor \u0160imkovic"
+      ],
+      "year": 2026,
+      "date": "2026-10-01",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.01954",
+      "fields": [
+        "majorana"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-02",
+        "rejected",
+        "false-friend"
+      ],
+      "importance": 36,
+      "confidence": 34,
+      "popularity": 30,
+      "coreIdea": "Preparing the ground state of a molecule on a quantum computer can be pre-trained classically. This paper does that pre-training with a compressed circuit whose gates are written as Majorana operators, and it reports chemical accuracy on a ruthenium complex and on acenes up to 60 qubits.",
+      "whyItMatters": "The word Majorana here is a bookkeeping trick for electrons, not a zero mode. E-MZM does not move. There is no topological gap and no X or Z logical. M5 stays open.",
+      "limitation": "Chemistry benchmark. Not a topological qubit. Low harvest signal and a false friend.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-MZM"
+      ],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2610.01878",
+      "arxiv": "2610.01878",
+      "title": "Floquet-Universal Hamiltonian Simulation",
+      "authors": [
+        "Emilio Onorati",
+        "Harriet Apel",
+        "Michael M. Wolf",
+        "Toby Cubitt"
+      ],
+      "year": 2026,
+      "date": "2026-10-01",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.01878",
+      "fields": [
+        "time-crystal"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-02",
+        "rejected"
+      ],
+      "importance": 58,
+      "confidence": 64,
+      "popularity": 48,
+      "coreIdea": "A periodically driven quantum system can imitate a system that does not change in time. The paper shows which sets of interactions are enough to imitate any Hamiltonian in their algebra, using only fixed-size interaction strengths and a range of drive frequencies that grows as a power of the system size.",
+      "whyItMatters": "E-TC as a system clock is cut. A theorem about Floquet simulation is not a tick for a QEC cycle or a plasma shot. It does not go back on the bus.",
+      "limitation": "No prethermal lifetime and no comparison to a control horizon. Not a CUT reversal.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-TC"
+      ],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
     }
   ],
   "runs": [
+    {
+      "id": "run-2026-10-02-daily",
+      "startedAt": "2026-10-02T09:20:00-05:00",
+      "windowStart": "2026-09-25",
+      "windowEnd": "2026-10-02",
+      "kind": "daily",
+      "feeds": [
+        "https://arxiv.org/list/quant-ph/recent",
+        "https://arxiv.org/list/cond-mat.str-el/recent",
+        "https://arxiv.org/list/cond-mat.mes-hall/recent",
+        "https://arxiv.org/list/hep-th/recent",
+        "https://arxiv.org/list/physics.plasm-ph/recent",
+        "https://arxiv.org/search/advanced"
+      ],
+      "paperIds": [
+        "2610.00845",
+        "2610.02137",
+        "2610.01923",
+        "2610.01402",
+        "2610.00452",
+        "2610.01131",
+        "2610.02168",
+        "2610.01954",
+        "2610.01878"
+      ],
+      "unscoredIds": [
+        "2610.00919",
+        "2610.02097",
+        "2610.01068",
+        "2610.01217",
+        "2610.00536",
+        "2610.01976",
+        "2610.02063",
+        "2610.01455"
+      ],
+      "notes": "Fifteenth daily run. Lookback 7 days. ingest.py wrote 44 hits. fetch_arxiv.py merged 59 keyword stubs; those stubs were removed from the catalog and left unscored so harvest boilerplate cannot enter the paper. The new slice is the 1 Oct listing. Six HOLDs: DIII-D control-model latency (2610.00845, E-RL, no coil command, M2 open), one-shot lift of any CSS qLDPC (2610.02137, E-QEC), photonic-fusion lattice surgery at a 50% interface-erasure threshold (2610.01923, E-QEC only; not S3 anyon fusion), Majorana-edge capacitance (2610.01402, E-MZM WATCH, not X+Z), anyon proliferation under Higgsing (2610.00452, E-S3, fusion measurement stays), equivalent-tokamak ITG (2610.01131, S-L3, no Q_eng). Booklet holography rejected on the denylist. VIME 'Majorana' chemistry rejected as a false friend. Floquet-universal simulation rejected as a clock. No Auto-Gate pass. No version bump. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand. Q=1000 remains a ledger stress test.",
+      "fieldCounts": {
+        "plasma": 2,
+        "fusion-quantum": 2,
+        "tqc": 3,
+        "topology": 3,
+        "majorana": 2,
+        "anyons": 2,
+        "holography": 1,
+        "time-crystal": 1
+      }
+    },
     {
       "id": "run-2026-10-01-daily",
       "startedAt": "2026-10-01T09:14:00-05:00",

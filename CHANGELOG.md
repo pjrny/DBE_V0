@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.12] - 2026-10-02
+### Added
+- Daily observatory run (lookback 7 days). No paper version bump. The 1 Oct listing is scored: DIII-D control-model latency is queued, a one-shot qLDPC lift and photonic lattice surgery are queued under the error layer only, a Majorana-edge capacitance is queued as not an X+Z logical, anyon proliferation is queued without replacing fusion, and an equivalent-tokamak ITG map is queued with no plant Q. Booklet holography, a chemistry Majorana ansatz, and Floquet simulation-as-clock are rejected. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
+
+### Changed
+- Command-strip date stamp moved to 2026-10-02 so this-week counts the new harvest.
+
 ## [0.4.11] - 2026-10-01
 ### Added
 - Daily observatory run (lookback 7 days). No paper version bump. The 30 Sep listing is scored: a fault-tolerant-phase no-go for solvable anyon orders is queued as a bridge, qLDPC list decoding and syndrome schedules are queued, a Rydberg gap is queued without replacing fusion, and a runaway-electron wall screen is queued. Haah-code thermalization, a classical time crystal, and holographic QCD are rejected. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
