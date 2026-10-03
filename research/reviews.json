@@ -1,6 +1,262 @@
 {
-  "asOf": "2026-10-02",
+  "asOf": "2026-10-03",
   "cards": [
+    {
+      "id": "2026-10-03/2506.04221",
+      "paperId": "2506.04221",
+      "date": "2026-10-03",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: three information axioms for mixed states are not a surface-code or qLDPC processor. G1\u2013G3 pass: no dimension error, no invented power, no unbounded cross section. G5 passes: the axioms can be checked on a known toric-code mixed state this year. G6 passes.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Google Willow is the below-threshold surface-code experiment on the relevant machine. An axiomatic phase label does not replace that measurement and does not raise C.",
+      "ledger": "none. No P_fusion, P_drive, P_rad, or Q_eng. M1 stays open.",
+      "plain": {
+        "core": "Ordinary topological order is a story about pure ground states. A real device is mixed: it has leaked into the environment. This paper writes three rules \u2014 a patch can be repaired from its boundary, correlations die with distance, and the state looks the same everywhere \u2014 and calls two mixed states the same phase when coarse-graining makes both obey the rules. Logical memories fall out of those rules.",
+        "why": "E-QEC already has a measured surface-code memory below threshold. A journal classification of mixed-state phases does not replace that shot and does not tighten a code threshold. It also does not give S3 a new fusion measurement. C stays at C4. Coupling is not opened.",
+        "limit": "Phys. Rev. X, 2 Oct 2026, from a June 2025 preprint. Axioms, not a processor. Harvest confidence 78 is under 80, so it is not an ADD. No ledger number moves."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss: HOLD, not INCLUDE. A4 miss: C stays C4 and no published ledger bound tightens. A5 pass: Phys. Rev. X 16, 041002. A6 pass. A7 pass. A8 n/a.",
+      "math": "Three axioms: local recoverability, absence of long-range correlations, spatial uniformity. Fixed points of the axioms, promoted to phases by coarse-graining (mixed-state bootstrap). Locally indistinguishable classical and quantum logical memories with distinct responses to topological operations. Phys. Rev. X 16, 041002 (2 Oct 2026), DOI 10.1103/3bpt-f9pd. Preprint arXiv:2506.04221 (4 Jun 2025, revised 9 Oct 2025).",
+      "autoGate": "miss A2, A3, A4"
+    },
+    {
+      "id": "2026-10-03/2610.00464",
+      "paperId": "2610.00464",
+      "date": "2026-10-03",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: a stabilizer rewrite of twisted abelian quantum doubles is not a qLDPC memory experiment. G5 passes: the Clifford level of a small qudit code is a finite check this quarter. G6 passes.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Bravyi\u2013K\u00f6nig says transversal gates on a 2D Pauli stabilizer code are Clifford. Code switching into a non-Pauli phase is a compiler route, not a measured threshold, and it is not S3 fusion.",
+      "ledger": "none. Magic-state preparation here is not a plant term.",
+      "plain": {
+        "core": "Pauli checks cannot name every topological code. This paper lets the checks include diagonal gates from one level of the Clifford hierarchy, which is enough to write many twisted quantum doubles of abelian groups as stabilizer states. Measuring those extra checks can also put a pair of qudit toric codes into a logical magic state.",
+        "why": "E-QEC is the error layer. This is a language for abelian twisted doubles and a magic-state trick on qudit toric codes. It is not an S3 fusion measurement and it does not replace the H2 gate set. C stays at C4. Not a new bus.",
+        "limit": "Bare arXiv. No device. The magic state is two qudit toric codes, not the three-dimensional fusion space of a C2 pair. Harvest confidence 74 is under 80."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass: no new bus; S3 is not claimed. A7 pass. A8 n/a.",
+      "math": "XC^{(k)}_d stabilizers: Pauli X plus diagonal operators from Clifford-hierarchy level k on prime qudits. Classification as uniform superpositions over affine subspaces. Every 2D twisted quantum double D^\u03c9(Z_p^n) with \u03c9 a product of type-III cocycles and p an odd prime is Clifford (k=2). Type-I or type-II cocycles are conjectured to need level p. A pair of qudit toric codes is prepared in a logical magic state by measuring these stabilizers.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-10-03/2609.39874",
+      "paperId": "2609.39874",
+      "date": "2026-10-03",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: the platform in the claim is a demonstrated memory; this is a shuttling schedule on paper. G5 passes: depth versus code size can be compared with a published atom-array compiler this quarter. G6 passes.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Bluvstein et al., Nature 2024, already moved atoms to run logical circuits. A constant shuttling-depth protocol is not that experiment and does not move C4.",
+      "ledger": "none. Shuttling depth is not P_aux or Q_eng.",
+      "plain": {
+        "core": "Atom arrays can move qubits, but a logical measurement on a high-rate code can waste the shot on shuttling. This paper designs the code, the auxiliary measurement, and the move list together so a batch of logical Paulis is read with a shuttling depth that stays constant, provided the code has a cyclic symmetry.",
+        "why": "E-QEC on reconfigurable atoms is already a hardware class under the error layer. Constant shuttling depth is a compiler result. It is not a measured logical error, so C stays at C4. It is not an S3 interface and not a new pillar.",
+        "limit": "Protocol only. No atom-array shot. Bare arXiv. Cyclic symmetry limits which logicals can be named. Harvest confidence 73 is under 80."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass. A7 pass. A8 n/a.",
+      "math": "Algebraic surgery for lifted-product codes. Logical measurements, auxiliary codes, and atom shuttling co-designed. Parallel Pauli-product measurements with shuttling depth independent of code size, subject to cyclic symmetry. Addressability includes overlapping canonical logicals.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-10-03/2610.02097",
+      "paperId": "2610.02097",
+      "date": "2026-10-03",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: a no-go inside the Clifford group is not a surface-code shot. G5 passes: the order of a candidate local Clifford can be checked on a small toric code this quarter. G6 passes.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Electric-magnetic exchange is a logical Hadamard on the toric code. Kitaev\u2019s code still stores the qubit without that Clifford. The no-go does not increase logical error.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Trading electric anyons for magnetic anyons in the toric code is a logical Hadamard, and doing it twice should be the identity. The paper proves that no Clifford circuit which preserves locality can do that trade and still square to one. The obstruction is the crossing of an electric string with a magnetic string.",
+        "why": "E-QEC still uses the toric code as the reference memory. A missing order-two local Clifford for electric-magnetic exchange does not raise the logical error and does not remove the surface code. It is not an S3 fusion gate. C stays at C4.",
+        "limit": "Proof for the Z2 toric code. Bare arXiv. A non-Clifford or a non-local circuit is not forbidden. Harvest confidence 78 is under 80."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass. A7 pass. A8 n/a.",
+      "math": "For the Z2 toric code, any locality-preserving Clifford realization of electric-magnetic exchange fails to have order two. No translation symmetry and no fixed vertex-plaquette pairing are assumed. The proof emulates the crossing of electric and magnetic strings.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-10-03/2610.00919",
+      "paperId": "2610.00919",
+      "date": "2026-10-03",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: field-line tracing of DIII-D #171491 is not a coil command and not a disruption-rate beat. G1 passes: discharge number, n=3 RMP, transport versus a stochastic baseline. G2 passes. G3 passes: no cross section is scaled. G5 passes: the same shot can be compared with a stochastic-field model this year. G6 passes.",
+      "score": "E-RL C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Degrave et al., Nature 2022, and Seo et al., Nature 2024, commanded plasmas. A slower field-line escape through island chains does not beat a disruption baseline. M2 is still that beat.",
+      "ledger": "No Q_eng. Island-chain slowing is not P_aux, P_rad, or P_drive. M1 stays open.",
+      "plain": {
+        "core": "Edge transport is often drawn as diffusion through a fully scrambled magnetic layer. On DIII-D discharge 171491, with strong n=3 resonant magnetic perturbations, nested island chains and their invariant manifolds keep field lines from mixing that fast. The scrambled model overestimates the transport.",
+        "why": "E-RL attaches to DIII-D. A transport barrier changes what a coil perturbation does to the heat, but this paper does not command a coil and does not beat a disruption rate. M2 stays open. Nothing is written as Q_eng. C stays at C4.",
+        "limit": "One discharge, field-line tracing. No actuator loop. Bare arXiv. Harvest confidence 74 is under 80. Not a ledger term."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-RL only). A2 miss (G4). A3 miss. A4 miss: no ledger bound tightens. A5 miss: bare arXiv. A6 pass. A7 pass. A8 n/a.",
+      "math": "DIII-D discharge 171491, strong n=3 resonant magnetic perturbations. Field-line tracing and Poincar\u00e9 sections. Nested resonant island chains and their invariant manifolds regulate edge transport below the fully stochastic rate.",
+      "autoGate": "miss A2, A3, A4, A5"
+    },
+    {
+      "id": "2026-10-03/2610.01486",
+      "paperId": "2610.01486",
+      "date": "2026-10-03",
+      "bind": [
+        "E-MZM"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: an edge calculation for a polarized fractional Chern insulator is not a Majorana-wire or quantum-dot qubit. G5 fails: a trench with independent X and Z logicals is not an existing tabletop this year. G6 passes. G1\u2013G3 pass.",
+      "score": "E-MZM C1 T3 D3 A2 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "M5 still requires independent X and Z logicals with topological-gap scaling. A change in which bilinears have zero conformal spin is not that pair of logicals. Andreev and YSR mimics remain the disputers.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Designs for Z3 parafermions mostly assumed an unpolarized fractional quantum Hall edge. The fractional Chern insulators in twisted MoTe2 and rhombohedral graphene look spin-polarized. In a trench between two polarized \u03bd=2/3 edges, the pairing and tunneling terms that are still allowed are not the same ones as in the unpolarized case.",
+        "why": "E-MZM is a watch item, not load-bearing. A change in which edge operators are allowed is not an independent X logical and Z logical, and it is not a measured topological gap. M5 stays open. It does not replace the S3 fusion gate set on H2.",
+        "limit": "Edge theory. No device. A1 fails because E-MZM is WATCH, not KEEP or HOLD. Not a distinguisher."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-MZM is WATCH, not KEEP or HOLD. A2 miss (G4, G5). A3 miss. A5 miss: bare arXiv. Not a CUT reversal and not a new pillar.",
+      "math": "Polarized \u03bd=2/3 Jain edge versus the unpolarized Halperin (1,1,2) edge. Trench between two edges. Exactly two pairing bilinears and two tunneling bilinears have zero conformal spin. Pairing only in the neutral-mode superconductivity channel; tunneling only as neutral-mode backscattering.",
+      "autoGate": "miss A1, A2, A3, A5"
+    },
+    {
+      "id": "2026-10-03/2609.39299",
+      "paperId": "2609.39299",
+      "date": "2026-10-03",
+      "bind": [
+        "E-FR"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: a classical multipole fluid is not a fracton code on a processor. G5 fails: there is no hardware falsifier for reactor memory this year. G6 passes. G2 passes: no fusion power is claimed.",
+      "score": "E-FR CUT stays",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "E-FR was cut as hardware on 21 Sep. Haah-code thermalization (30 Sep) already says self-correction fails at any T>0. A slower classical droplet does not reverse that cut.",
+      "ledger": "none. Not a source term.",
+      "plain": {
+        "core": "If a fluid remembers not only how much stuff is in a region but also the dipole of that stuff, droplets merge more slowly. Driving the fluid out of equilibrium quiets the interface and makes new droplets harder to start. The paper is a continuum calculation plus simulations.",
+        "why": "E-FR as a hardware memory is cut. A classical fluid with extra conservation laws is not a quantum memory and not a store for a plasma snapshot. The hardware cut stands.",
+        "limit": "Not a code. Not a device. Reversing the cut would take two independent C\u22654 sources. This is not one of them."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-FR is CUT. A3 miss. Not a CUT reversal.",
+      "math": "Fluids conserving higher multipoles of a scalar density. Coarsening, nucleation, and interfacial fluctuations slow under the extra conservation laws. Nonequilibrium violations of the fluctuation-dissipation theorem suppress density and interfacial fluctuations and hinder nucleation. Simulations agree.",
+      "autoGate": "miss A1, A2, A3"
+    },
+    {
+      "id": "2026-10-03/2610.02063",
+      "paperId": "2610.02063",
+      "date": "2026-10-03",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass"
+      },
+      "gateNote": "G4 fails: AdS4 versus Lifshitz5 condensation is not a reactor or processor encoder. G5 fails: no tokamak or QEC falsifier. G6 passes. Denylist holds.",
+      "score": "E-HOL CUT stays",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "The denylist needs two independent C\u22654 sources to reverse. One holographic superconductor is not that packet.",
+      "ledger": "none.",
+      "plain": {
+        "core": "A holographic model of a superconductor is spun and stretched so the scaling is not the same in every direction. The question is whether condensation starts sooner in an AdS4 bulk or in a Lifshitz5 bulk. The answer is a comparison of two gravity models.",
+        "why": "E-HOL is cut. A rotating holographic superconductor is not a tokamak encoder and not a processor bus. This is the holography representative for the papers left unscored on 2 Oct. The denylist holds.",
+        "limit": "Readable. Not INCLUDE. The driven holographic superfluid in the same listing stays unscored. Reversing the cut needs two independent C\u22654 sources."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-HOL is CUT. A3 miss. Not a CUT reversal.",
+      "math": "Axionic holographic superconductors. Rotation plus anisotropic (non-relativistic) scaling. Onset of condensation compared between an AdS4 bulk and a Lifshitz5 bulk.",
+      "autoGate": "miss A1, A2, A3"
+    },
     {
       "id": "2026-10-02/2610.00845",
       "paperId": "2610.00845",

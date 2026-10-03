@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T14:20:00+00:00",
+  "generatedAt": "2026-10-03T09:20:00-05:00",
   "lookback": "1y+",
   "northStar": "Q=1000",
   "feeds": [
@@ -134,6 +134,7 @@
         "nonabelian-qldpc"
       ],
       "blockers": [
+        "2026-10-03: no new S3 braid-plus-fusion result. Twisted abelian quantum doubles (2610.00464) and the toric-code electric-magnetic Clifford no-go (2610.02097) stay on E-QEC. PRX mixed-state axioms (2506.04221) are not a fusion measurement. H2 gate set stays.",
         "2026-10-02: anyon proliferation under Higgsing (2610.00452) can enlarge topological order, including a non-Abelian channel for odd N. It is Chern-Simons, not an H2 braid, and it does not replace fusion measurement. Composite-fermion Chern-band anyons (2610.01217) left unscored.",
         "2026-10-01: Rydberg blockade gap (2609.39475) is a Z2 toric-code phase, with a cited extension to non-Abelian quantum doubles. Not a braid and not a fusion measurement. Kubica (2609.39879) says shallow point-like-syndrome prep of solvable non-Abelian orders is not fault tolerant. H2 fusion gate set stays. Coupling with E-QEC is C1.",
         "2026-09-30: 1D Anyon-Hubbard gas (2609.36554) is a fractional exchange phase, not an S3 fusion space. Fusion measurement stays in the gate set.",
@@ -179,6 +180,7 @@
         "floquet-majorana-codes"
       ],
       "blockers": [
+        "2026-10-03: polarized FCI parafermion trench (2610.01486) changes which edge terms are allowed. Not an X or Z logical. M5 stays open.",
         "2026-10-02: two-arm Majorana interferometer (2610.01402) predicts a low-frequency capacitance tied to edge-vortex topological spin. Not an X or Z logical. VIME chemistry 'Majorana' (2610.01954) rejected as a false friend. M5 stays open.",
         "2026-10-01: no X or Z logical and no gap scaling in the 30 Sep listing. Fermionic-shadow 'Majorana degree' (2609.40173) left unscored as a false friend. M5 stays open.",
         "2026-09-30: no Majorana distinguisher in the 29 Sep listing. M5 stays open.",
@@ -221,6 +223,7 @@
         "fracton-holography"
       ],
       "blockers": [
+        "2026-10-03: fractonic-fluid phase separation (2609.39299) rejected. A classical multipole fluid is not a memory. CUT as hardware stands.",
         "2026-10-02: no fracton-code result. Carrollian gravity wording (2610.01976) left unscored. CUT as hardware stands.",
         "2026-10-01: Haah cubic code thermalizes at every T>0 (2609.39959). Self-correction fails analytically. CUT as hardware stands. C unchanged.",
         "No 3D hardware path; CUT as reactor memory."
@@ -253,6 +256,7 @@
         "spacetime-fractons"
       ],
       "blockers": [
+        "2026-10-03: no new clock candidate in the empty Fri\u2013Sat window. CUT as metronome stands.",
         "2026-10-02: Floquet-universal Hamiltonian simulation (2610.01878) rejected as a clock. O(1) drive strengths are not a QEC cycle.",
         "2026-10-01: classical time-crystal orbits (2609.39201) are not a system clock.",
         "2026-09-30: dissipative Floquet pseudospectra (2609.37523) are not a system clock.",
@@ -288,6 +292,7 @@
         "fracton-holography"
       ],
       "blockers": [
+        "2026-10-03: axionic holographic superconductor (2610.02063) rejected. Denylist holds. Driven holographic superfluid (2610.01455) left unscored.",
         "2026-10-02: booklet-cosmology recovery (2610.02168) rejected. The QEC sentence is an AdS page, not a processor. Denylist holds. Axionic holographic superconductors and the driven holographic superfluid left unscored.",
         "2026-10-01: holographic QCD critical endpoint (2609.39598) rejected. Denylist holds. Tripartite minimal surfaces and the rest of the AdS cluster left unscored.",
         "2026-09-30: holographic two-fluid turbulence (2609.37269) rejected. Denylist holds. Wormhole and compact-object holography left unscored.",
@@ -326,6 +331,7 @@
         "topo-dynamics"
       ],
       "blockers": [
+        "2026-10-03: no Friday or Saturday listing. Resonant island chains on DIII-D #171491 (2610.00919) slow field-line transport. No coil command. M2 stays open. Vacuum response (2610.00536) and loss-cone learning (2609.36123) left unscored.",
         "2026-10-02: DIII-D inference benchmark (2610.00845, Rothstein/Kolemen) times control models. Above about 5 million parameters a CPU takes tens to thousands of milliseconds. It does not command a coil. M2 stays open. Resonant island chains on DIII-D #171491 (2610.00919) left unscored.",
         "2026-10-01: FIREWALL (2609.40132) screens runaway-electron wall melting. It does not command a coil. M2 stays open. Stellarator alpha chaos (2609.39376) left unscored.",
         "2026-09-30: KSTAR diffusion prior (2609.36536) reconstructs J_phi on 37 shots under synthetic dropout. It does not command a coil. M2 stays open.",
@@ -370,6 +376,7 @@
       ],
       "amplifies": [],
       "blockers": [
+        "2026-10-03: island-chain transport writes no Q_eng. Not Floquet DT. M1, M4, and M7 stay open.",
         "2026-10-02: equivalent-tokamak ITG (2610.01131) writes no Q_eng. Inference latency is not P_aux. Not Floquet DT. M1, M4, and M7 stay open.",
         "2026-10-01: FIREWALL writes no P_rad, P_aux, or Q_eng. Not Floquet DT. M1, M4, and M7 stay open.",
         "2026-09-30: Kunwu broadband CBET (2609.36528) cuts an SBS fraction from 3.75% to 0.46% at about 2.6e14 W/cm^2. Residual scatter remains. No Q_eng. Not Floquet DT. M1, M4, and M7 stay open.",
@@ -416,6 +423,7 @@
         "cyclic-fusion-family"
       ],
       "blockers": [
+        "2026-10-03: fusion measurement stays. Algebraic surgery and twisted doubles are not S3 fusion and do not open a new bus.",
         "2026-10-02: Higgsing anyon proliferation (2610.00452) does not remove fusion measurement and does not open a new bus. Photonic fusion in lattice surgery (2610.01923) is not anyon fusion.",
         "2026-10-01: Kubica no-go (2609.39879) constrains point-like shallow prep of solvable anyon theories. It does not remove fusion measurement and it does not open a new bus.",
         "Already folded under E-S3; do not open a new bus."
@@ -520,6 +528,7 @@
       ],
       "amplifies": [],
       "blockers": [
+        "2026-10-03: algebraic surgery (2609.39874), twisted-double stabilizers (2610.00464), the e\u2013m no-go (2610.02097), and PRX mixed-state axioms (2506.04221) queued under E-QEC only. Not an interface contract. Learned BP (2610.01068) and the GNN decoder (2610.01683) left unscored.",
         "2026-10-02: one-shot qLDPC lift (2610.02137) and photonic-fusion lattice surgery (2610.01923) queued under E-QEC only. Photon fusion is not S3 fusion. Clifford EM-duality no-go (2610.02097) and learned BP (2610.01068) left unscored. Not an interface contract.",
         "2026-10-01: capacity-approaching qLDPC list decoding (2609.40313) and LocalASC syndrome schedules (2609.40319) queued under E-QEC only. Not an interface contract. Kubica is a bridge at C1, not a new pillar.",
         "2026-09-30: disagreement-routed BP-OSD (2609.37629) and qLDPC distance amplifiers (2609.37231) queued under E-QEC only. Not an interface contract. The H2 check does not move E-S3.",
@@ -11654,9 +11663,358 @@
       ],
       "bindAction": "REJECT",
       "pillarEffect": "none"
+    },
+    {
+      "id": "2506.04221",
+      "arxiv": "2506.04221",
+      "doi": "10.1103/3bpt-f9pd",
+      "title": "Topological Mixed States: Phases of Matter from Axiomatic Approaches",
+      "authors": [
+        "Tai-Hsuan Yang",
+        "Bowen Shi",
+        "Jong Yeon Lee"
+      ],
+      "year": 2026,
+      "date": "2026-10-02",
+      "venue": "Phys. Rev. X 16, 041002",
+      "url": "https://doi.org/10.1103/3bpt-f9pd",
+      "fields": [
+        "tqc",
+        "topology"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-03",
+        "queued",
+        "journal"
+      ],
+      "importance": 90,
+      "confidence": 78,
+      "popularity": 74,
+      "coreIdea": "Ordinary topological order is a story about pure ground states. A real device is mixed: it has leaked into the environment. This paper writes three rules \u2014 a patch can be repaired from its boundary, correlations die with distance, and the state looks the same everywhere \u2014 and calls two mixed states the same phase when coarse-graining makes both obey the rules. Logical memories fall out of those rules.",
+      "whyItMatters": "E-QEC already has a measured surface-code memory below threshold. A journal classification of mixed-state phases does not replace that shot and does not tighten a code threshold. It also does not give S3 a new fusion measurement. C stays at C4. Coupling is not opened.",
+      "limitation": "Phys. Rev. X, 2 Oct 2026, from a June 2025 preprint. Axioms, not a processor. Harvest confidence 78 is under 80, so it is not an ADD. No ledger number moves.",
+      "source": "Phys. Rev. X / arXiv cond-mat.str-el",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2610.00464",
+      "arxiv": "2610.00464",
+      "title": "Clifford-hierarchy stabilizer formalism with applications to twisted quantum doubles",
+      "authors": [
+        "Christopher Fechisin",
+        "Kieran Cooney",
+        "Mathi Raja",
+        "Victor V. Albert",
+        "Dominic J. Williamson",
+        "Kyle Kawagoe",
+        "Seth Musser"
+      ],
+      "year": 2026,
+      "date": "2026-09-30",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.00464",
+      "fields": [
+        "tqc",
+        "topology",
+        "anyons"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-03",
+        "queued"
+      ],
+      "importance": 86,
+      "confidence": 74,
+      "popularity": 60,
+      "coreIdea": "Pauli checks cannot name every topological code. This paper lets the checks include diagonal gates from one level of the Clifford hierarchy, which is enough to write many twisted quantum doubles of abelian groups as stabilizer states. Measuring those extra checks can also put a pair of qudit toric codes into a logical magic state.",
+      "whyItMatters": "E-QEC is the error layer. This is a language for abelian twisted doubles and a magic-state trick on qudit toric codes. It is not an S3 fusion measurement and it does not replace the H2 gate set. C stays at C4. Not a new bus.",
+      "limitation": "Bare arXiv. No device. The magic state is two qudit toric codes, not the three-dimensional fusion space of a C2 pair. Harvest confidence 74 is under 80.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.39874",
+      "arxiv": "2609.39874",
+      "title": "Parallel algebraic surgery for qLDPC codes with constant shuttling depth",
+      "authors": [
+        "Tian-Gang Zhou",
+        "Boren Gu",
+        "Jens Eisert",
+        "Chen Zhao"
+      ],
+      "year": 2026,
+      "date": "2026-09-30",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2609.39874",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-03",
+        "queued"
+      ],
+      "importance": 88,
+      "confidence": 73,
+      "popularity": 64,
+      "coreIdea": "Atom arrays can move qubits, but a logical measurement on a high-rate code can waste the shot on shuttling. This paper designs the code, the auxiliary measurement, and the move list together so a batch of logical Paulis is read with a shuttling depth that stays constant, provided the code has a cyclic symmetry.",
+      "whyItMatters": "E-QEC on reconfigurable atoms is already a hardware class under the error layer. Constant shuttling depth is a compiler result. It is not a measured logical error, so C stays at C4. It is not an S3 interface and not a new pillar.",
+      "limitation": "Protocol only. No atom-array shot. Bare arXiv. Cyclic symmetry limits which logicals can be named. Harvest confidence 73 is under 80.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2610.02097",
+      "arxiv": "2610.02097",
+      "title": "A No-Go Theorem for Order-Two Clifford Electric-Magnetic Duality",
+      "authors": [
+        "Shunta Takahashi",
+        "Zhi Li",
+        "Beni Yoshida"
+      ],
+      "year": 2026,
+      "date": "2026-10-01",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.02097",
+      "fields": [
+        "tqc",
+        "topology",
+        "anyons"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-03",
+        "queued"
+      ],
+      "importance": 84,
+      "confidence": 78,
+      "popularity": 58,
+      "coreIdea": "Trading electric anyons for magnetic anyons in the toric code is a logical Hadamard, and doing it twice should be the identity. The paper proves that no Clifford circuit which preserves locality can do that trade and still square to one. The obstruction is the crossing of an electric string with a magnetic string.",
+      "whyItMatters": "E-QEC still uses the toric code as the reference memory. A missing order-two local Clifford for electric-magnetic exchange does not raise the logical error and does not remove the surface code. It is not an S3 fusion gate. C stays at C4.",
+      "limitation": "Proof for the Z2 toric code. Bare arXiv. A non-Clifford or a non-local circuit is not forbidden. Harvest confidence 78 is under 80.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2610.00919",
+      "arxiv": "2610.00919",
+      "title": "Transport Impacts of Resonant Island Chains in Fusion Plasmas",
+      "authors": [
+        "Sidney D. V. Williams",
+        "Kevin Mitchell",
+        "Ethan Custodio",
+        "Dmitri M. Orlov"
+      ],
+      "year": 2026,
+      "date": "2026-10-01",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2610.00919",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-03",
+        "queued"
+      ],
+      "importance": 86,
+      "confidence": 74,
+      "popularity": 62,
+      "coreIdea": "Edge transport is often drawn as diffusion through a fully scrambled magnetic layer. On DIII-D discharge 171491, with strong n=3 resonant magnetic perturbations, nested island chains and their invariant manifolds keep field lines from mixing that fast. The scrambled model overestimates the transport.",
+      "whyItMatters": "E-RL attaches to DIII-D. A transport barrier changes what a coil perturbation does to the heat, but this paper does not command a coil and does not beat a disruption rate. M2 stays open. Nothing is written as Q_eng. C stays at C4.",
+      "limitation": "One discharge, field-line tracing. No actuator loop. Bare arXiv. Harvest confidence 74 is under 80. Not a ledger term.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2610.01486",
+      "arxiv": "2610.01486",
+      "title": "Parafermions in fractional Chern insulator-superconductor heterostructures: the role of spin polarization",
+      "authors": [
+        "Aaron Amire"
+      ],
+      "year": 2026,
+      "date": "2026-10-01",
+      "venue": "arXiv cond-mat.str-el",
+      "url": "https://arxiv.org/abs/2610.01486",
+      "fields": [
+        "majorana",
+        "anyons"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-03",
+        "queued"
+      ],
+      "importance": 78,
+      "confidence": 64,
+      "popularity": 55,
+      "coreIdea": "Designs for Z3 parafermions mostly assumed an unpolarized fractional quantum Hall edge. The fractional Chern insulators in twisted MoTe2 and rhombohedral graphene look spin-polarized. In a trench between two polarized \u03bd=2/3 edges, the pairing and tunneling terms that are still allowed are not the same ones as in the unpolarized case.",
+      "whyItMatters": "E-MZM is a watch item, not load-bearing. A change in which edge operators are allowed is not an independent X logical and Z logical, and it is not a measured topological gap. M5 stays open. It does not replace the S3 fusion gate set on H2.",
+      "limitation": "Edge theory. No device. A1 fails because E-MZM is WATCH, not KEEP or HOLD. Not a distinguisher.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-MZM"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2609.39299",
+      "arxiv": "2609.39299",
+      "title": "Phase Separation in Fractonic Fluids: Coarsening, Interfaces, Nucleation, and Hyperuniformity in and out of Equilibrium",
+      "authors": [
+        "Raphael Maire"
+      ],
+      "year": 2026,
+      "date": "2026-09-30",
+      "venue": "arXiv cond-mat.stat-mech",
+      "url": "https://arxiv.org/abs/2609.39299",
+      "fields": [
+        "fracton"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-03",
+        "rejected",
+        "cut-as-hardware"
+      ],
+      "importance": 44,
+      "confidence": 52,
+      "popularity": 30,
+      "coreIdea": "If a fluid remembers not only how much stuff is in a region but also the dipole of that stuff, droplets merge more slowly. Driving the fluid out of equilibrium quiets the interface and makes new droplets harder to start. The paper is a continuum calculation plus simulations.",
+      "whyItMatters": "E-FR as a hardware memory is cut. A classical fluid with extra conservation laws is not a quantum memory and not a store for a plasma snapshot. The hardware cut stands.",
+      "limitation": "Not a code. Not a device. Reversing the cut would take two independent C\u22654 sources. This is not one of them.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-FR"
+      ],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
+    },
+    {
+      "id": "2610.02063",
+      "arxiv": "2610.02063",
+      "title": "Rotation and Anisotropic Scaling in Axionic Holographic Superconductors: AdS4 versus Lifshitz5",
+      "authors": [
+        "Mois\u00e9s Bravo-Gaete"
+      ],
+      "year": 2026,
+      "date": "2026-10-01",
+      "venue": "arXiv hep-th",
+      "url": "https://arxiv.org/abs/2610.02063",
+      "fields": [
+        "holography"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-03",
+        "rejected",
+        "denylist"
+      ],
+      "importance": 42,
+      "confidence": 55,
+      "popularity": 36,
+      "coreIdea": "A holographic model of a superconductor is spun and stretched so the scaling is not the same in every direction. The question is whether condensation starts sooner in an AdS4 bulk or in a Lifshitz5 bulk. The answer is a comparison of two gravity models.",
+      "whyItMatters": "E-HOL is cut. A rotating holographic superconductor is not a tokamak encoder and not a processor bus. This is the holography representative for the papers left unscored on 2 Oct. The denylist holds.",
+      "limitation": "Readable. Not INCLUDE. The driven holographic superfluid in the same listing stays unscored. Reversing the cut needs two independent C\u22654 sources.",
+      "source": "arXiv API",
+      "claimIds": [
+        "E-HOL"
+      ],
+      "bindAction": "REJECT",
+      "pillarEffect": "none"
     }
   ],
   "runs": [
+    {
+      "id": "run-2026-10-03-daily",
+      "startedAt": "2026-10-03T09:20:00-05:00",
+      "windowStart": "2026-09-26",
+      "windowEnd": "2026-10-03",
+      "kind": "daily",
+      "feeds": [
+        "https://arxiv.org/list/quant-ph/recent",
+        "https://arxiv.org/list/cond-mat.str-el/recent",
+        "https://arxiv.org/list/cond-mat.mes-hall/recent",
+        "https://arxiv.org/list/hep-th/recent",
+        "https://arxiv.org/list/physics.plasm-ph/recent",
+        "https://arxiv.org/search/advanced"
+      ],
+      "paperIds": [
+        "2506.04221",
+        "2610.00464",
+        "2609.39874",
+        "2610.02097",
+        "2610.00919",
+        "2610.01486",
+        "2609.39299",
+        "2610.02063"
+      ],
+      "unscoredIds": [
+        "2610.01068",
+        "2610.01683",
+        "2609.39522",
+        "2609.40279",
+        "2609.40252",
+        "2610.00504",
+        "2610.00536",
+        "2609.36123",
+        "2609.36299",
+        "2610.01217",
+        "2609.40259",
+        "2610.01455"
+      ],
+      "notes": "Sixteenth daily run. Lookback 7 days. ingest.py wrote 42 hits; none submitted on 2 or 3 Oct. fetch_arxiv.py merged 31 keyword stubs; those stubs were removed so harvest boilerplate cannot enter the paper. No Friday or Saturday arXiv announcement (listings are Sun\u2013Thu). The new decision is the 2 Oct Phys. Rev. X mixed-state axioms (2506.04221), queued under E-QEC only, plus leftovers the 2 Oct run left unscored. Four HOLDs on E-QEC: mixed-state axioms, twisted-double stabilizers, constant-depth atom-array surgery, and the toric-code electric-magnetic Clifford no-go. DIII-D island chains queued under E-RL with no coil command. Polarized parafermion trench queued under E-MZM (WATCH, not X+Z). Fractonic-fluid phase separation rejected as hardware. Axionic holographic superconductor rejected on the denylist. Decoder pile (learned BP, GNN, layer-code circuits) left unscored. No Auto-Gate pass. No version bump. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand. Q=1000 remains a ledger stress test.",
+      "fieldCounts": {
+        "tqc": 4,
+        "topology": 3,
+        "anyons": 3,
+        "plasma": 1,
+        "fusion-quantum": 1,
+        "majorana": 1,
+        "fracton": 1,
+        "holography": 1
+      }
+    },
     {
       "id": "run-2026-10-02-daily",
       "startedAt": "2026-10-02T09:20:00-05:00",

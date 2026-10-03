@@ -1,3 +1,5 @@
+2026-10-03  library  NO BUMP  sixteenth daily run. No Fri–Sat arXiv listing. PRX mixed-state axioms queued under E-QEC (journal, C unchanged). Twisted-double stabilizers, atom-array surgery, and the toric-code e–m Clifford no-go queued under E-QEC only. DIII-D island chains queued under E-RL (no coil command, M2 open). Polarized parafermion trench queued under E-MZM (WATCH, not X+Z). Fractonic fluid rejected as hardware. Axionic holographic superconductor rejected. Decoder pile left unscored. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
+
 # Research observatory version log (paper appendix)
 
 Never rewrite history. A reversed CUT is a new MAJOR line.
