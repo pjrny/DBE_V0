@@ -1,0 +1,631 @@
+{
+  "id": "run-2026-10-04-daily",
+  "kind": "weekly",
+  "startedAt": "2026-10-04T09:18:41-05:00",
+  "finishedAt": "2026-10-04T09:37:28-05:00",
+  "windowStart": "2026-09-27",
+  "windowEnd": "2026-10-04",
+  "sources": [
+    {
+      "id": "arxiv-yesterday-ids",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 12,
+      "new": 12,
+      "ms": 179,
+      "error": null
+    },
+    {
+      "id": "arxiv-ingest-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 7,
+      "returned": 84,
+      "new": 78,
+      "ms": 2191,
+      "error": null,
+      "note": "ingest.py QUERIES, 3.2 s gap. ingest.py itself was not executed in burst mode."
+    },
+    {
+      "id": "arxiv-fetch-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 10,
+      "returned": 80,
+      "new": 48,
+      "ms": 3522,
+      "error": null,
+      "note": "fetch_arxiv.py QUERIES as search only. Not run in write mode."
+    },
+    {
+      "id": "arxiv-recent-window",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 3,
+      "returned": 0,
+      "new": 0,
+      "ms": 504,
+      "error": null,
+      "note": "submittedDate 2026-10-02 to 2026-10-04 in plasm-ph, quant-ph+code, and str-el/mes-hall anyon/Majorana/fracton returned no hits. Sunday morning, before the evening listing."
+    },
+    {
+      "id": "arxiv-oai",
+      "url": "https://oaipmh.arxiv.org/oai",
+      "status": "ok",
+      "http": 200,
+      "requests": 15,
+      "returned": 15,
+      "new": 0,
+      "ms": 1700,
+      "error": null,
+      "note": "GetRecord metadataPrefix=arXiv for the 15 scored ids. Licence recorded. No PDF cached."
+    },
+    {
+      "id": "openalex",
+      "url": null,
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "OPENALEX_API_KEY unset"
+    },
+    {
+      "id": "crossref",
+      "url": null,
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "DBE_CONTACT_EMAIL unset; mailto not invented"
+    },
+    {
+      "id": "unpaywall",
+      "url": null,
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "DBE_CONTACT_EMAIL unset"
+    },
+    {
+      "id": "inspire-hep",
+      "url": "https://inspirehep.net/api/literature",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 20,
+      "new": 20,
+      "ms": 1163,
+      "error": null,
+      "note": "Cap 20. Most hits already catalogued or older than the window. New on-path ids left unscored or scored if selected."
+    },
+    {
+      "id": "osti",
+      "url": "https://www.osti.gov/api/v1/records",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 5,
+      "new": 5,
+      "ms": 288,
+      "error": null,
+      "note": "One quasisymmetric-field DOI carried unscored. Genesis report and LiH scattering not catalogued."
+    },
+    {
+      "id": "inis",
+      "url": "https://inis.iaea.org/api/records",
+      "status": "failed",
+      "http": 403,
+      "requests": 1,
+      "returned": 0,
+      "new": 0,
+      "ms": 66,
+      "error": "HTTP 403 challenge page"
+    },
+    {
+      "id": "eurofusion-news",
+      "url": "https://euro-fusion.org/feed/",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 10,
+      "new": 10,
+      "ms": 845,
+      "error": null,
+      "note": "News tier. Titles only. Not catalogued."
+    },
+    {
+      "id": "eurofusion-scipub",
+      "url": "https://scipub.euro-fusion.org/",
+      "status": "partial",
+      "http": 200,
+      "requests": 1,
+      "returned": 0,
+      "new": 0,
+      "ms": 991,
+      "error": null,
+      "note": "HTML landing page. No record list."
+    },
+    {
+      "id": "iter-news",
+      "url": "https://www.iter.org/news",
+      "status": "partial",
+      "http": 200,
+      "requests": 1,
+      "returned": 0,
+      "new": 0,
+      "ms": 738,
+      "error": null,
+      "note": "HTML page. No item records parsed."
+    },
+    {
+      "id": "fia-feed",
+      "url": "https://www.fusionindustryassociation.org/feed/",
+      "status": "failed",
+      "http": 200,
+      "requests": 2,
+      "returned": 0,
+      "new": 0,
+      "ms": 129,
+      "error": "First request HTTP 415; retry HTTP 200 loader interstitial, no RSS items"
+    },
+    {
+      "id": "semantic-scholar",
+      "url": null,
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "S2_API_KEY unset"
+    },
+    {
+      "id": "core",
+      "url": "https://api.core.ac.uk/v3/search/works",
+      "status": "partial",
+      "http": 200,
+      "requests": 4,
+      "returned": 5,
+      "new": 0,
+      "ms": 1800,
+      "error": null,
+      "note": "Two 429s, then a hit list dominated by travel-disruption and older fusion items. CORE yearPublished not trusted. None added."
+    },
+    {
+      "id": "europe-pmc",
+      "url": null,
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "usually skip; no biophysics target"
+    },
+    {
+      "id": "jstage",
+      "url": "https://api.jstage.jst.go.jp/searchapi/do",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 10,
+      "new": 0,
+      "ms": 914,
+      "error": null,
+      "note": "All 10 publication dates are 2007-2024, outside the window. Two titles are Japanese and were not translated and not bound."
+    },
+    {
+      "id": "kci",
+      "url": null,
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "KCI_API_KEY unset"
+    },
+    {
+      "id": "hf-daily-papers",
+      "url": "https://huggingface.co/api/daily_papers",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 20,
+      "new": 0,
+      "ms": 78,
+      "error": null,
+      "note": "Cap 20. Not promoted; daily papers are not a claim bind without a separate reading."
+    },
+    {
+      "id": "hf-models-decoder",
+      "url": "https://huggingface.co/api/models",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 2,
+      "new": 2,
+      "ms": 61,
+      "error": null,
+      "note": "Dreamworldsmile/ntu-surface-code-decoder and Bauxitiego/surface-code-neural-decoder. Repo/model tier. Not scored."
+    },
+    {
+      "id": "hf-models-plasma",
+      "url": "https://huggingface.co/api/models",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 0,
+      "new": 0,
+      "ms": 53,
+      "error": null
+    },
+    {
+      "id": "hf-datasets-plasma",
+      "url": "https://huggingface.co/api/datasets",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 0,
+      "new": 0,
+      "ms": 50,
+      "error": null
+    },
+    {
+      "id": "github-qldpc",
+      "url": "https://api.github.com/search/repositories",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 10,
+      "new": 10,
+      "ms": 496,
+      "error": null,
+      "note": "Cap reached at 10. Licences and push times recorded in notes. Not scored. Not evidence."
+    },
+    {
+      "id": "github-vlasov",
+      "url": "https://api.github.com/search/repositories",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 0,
+      "new": 0,
+      "ms": 173,
+      "error": null
+    },
+    {
+      "id": "nsf-awards",
+      "url": "https://api.nsf.gov/services/v1/awards.json",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 10,
+      "new": 0,
+      "ms": 208,
+      "error": null,
+      "note": "Keyword hit HAQIN and laser user facilities dated 2026-10-01. Funding tier context only. Not a QEC device award. Not catalogued."
+    },
+    {
+      "id": "usaspending",
+      "url": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 0,
+      "new": 0,
+      "ms": 454,
+      "error": null
+    },
+    {
+      "id": "cordis",
+      "url": "https://cordis.europa.eu/search",
+      "status": "partial",
+      "http": 200,
+      "requests": 1,
+      "returned": 0,
+      "new": 0,
+      "ms": 1006,
+      "error": null,
+      "note": "JSON header returned; no project rows extracted. Not catalogued."
+    },
+    {
+      "id": "epo-ops",
+      "url": null,
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "EPO_OPS_KEY/SECRET unset"
+    },
+    {
+      "id": "lens",
+      "url": null,
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "LENS_TOKEN unset"
+    }
+  ],
+  "counts": {
+    "harvested": 43,
+    "duplicates": 70,
+    "merged": 0,
+    "new": 15,
+    "scored": 15,
+    "unscored": 17,
+    "add": 0,
+    "strengthen": 0,
+    "weaken": 0,
+    "hold": 14,
+    "newPillar": 0,
+    "reject": 1
+  },
+  "paperIds": [
+    "2609.36123",
+    "2609.36299",
+    "2609.40279",
+    "2609.40252",
+    "2609.40259",
+    "2609.39522",
+    "2610.00504",
+    "2610.00536",
+    "2610.01217",
+    "2610.01683",
+    "2610.01455",
+    "2610.01068",
+    "2609.36555",
+    "2609.39980",
+    "2609.39016"
+  ],
+  "unscoredIds": [
+    {
+      "id": "2609.38085",
+      "reason": "older carry-over from 2026-09-30; 'anyonic' in the abstract is invariance up to a global phase, not braid statistics; do not bind E-S3 on the word; score cap"
+    },
+    {
+      "id": "2609.39597",
+      "reason": "continuous QEC thermodynamics on the repetition code; controller power is not Q_eng; score cap"
+    },
+    {
+      "id": "2609.38129",
+      "reason": "lattice-Boltzmann conservation syndrome; not plant attach and not the surface-code layer; score cap"
+    },
+    {
+      "id": "2609.40004",
+      "reason": "deformed toric-code norm as a tensor-network phase diagram; score cap"
+    },
+    {
+      "id": "2609.35287",
+      "reason": "dimension bound for spherical fusion categories; not an S3 fusion measurement; score cap"
+    },
+    {
+      "id": "2609.39817",
+      "reason": "graphene Floquet-gap theory; not a clock reversal; score cap"
+    },
+    {
+      "id": "2609.37296",
+      "reason": "transmon leakage-suppressed exchange pulse; not a code and not a clock; score cap"
+    },
+    {
+      "id": "2609.37806",
+      "reason": "E-HOL cluster, reading list, denylist; not scored (cap)"
+    },
+    {
+      "id": "2609.38302",
+      "reason": "E-HOL cluster, reading list, denylist; not scored (cap)"
+    },
+    {
+      "id": "2609.38313",
+      "reason": "E-HOL cluster, reading list, denylist; not scored (cap)"
+    },
+    {
+      "id": "2609.38318",
+      "reason": "E-HOL cluster, reading list, denylist; not scored (cap)"
+    },
+    {
+      "id": "2609.38336",
+      "reason": "E-HOL cluster, reading list, denylist; not scored (cap)"
+    },
+    {
+      "id": "2609.38815",
+      "reason": "E-HOL cluster, reading list, denylist; not scored (cap)"
+    },
+    {
+      "id": "2609.39720",
+      "reason": "E-HOL cluster, reading list, denylist; not scored (cap)"
+    },
+    {
+      "id": "2610.00478",
+      "reason": "E-HOL cluster, reading list, denylist; not scored (cap)"
+    },
+    {
+      "id": "2610.00670",
+      "reason": "E-HOL cluster, reading list, denylist; not scored (cap)"
+    },
+    {
+      "id": "10.1063/5.0341763",
+      "reason": "OSTI record, Periodic KdV potentials and quasisymmetric magnetic fields, 2026-09-29; not a control loop and not a Vlasov rate; score cap"
+    }
+  ],
+  "offPathNotCarried": [
+    "2609.38915",
+    "2609.36542",
+    "2610.01366",
+    "2609.40260",
+    "2610.02086",
+    "2610.00409",
+    "2610.01374",
+    "2610.00505",
+    "2610.01976",
+    "2610.01703",
+    "2609.38771",
+    "2609.37364",
+    "2610.01774",
+    "2609.38702",
+    "2609.37990"
+  ],
+  "fieldCounts": {
+    "plasma": 3,
+    "tqc": 9,
+    "topology": 4,
+    "anyons": 2,
+    "holography": 1
+  },
+  "gateMisses": {
+    "A1": 1,
+    "A2": 15,
+    "A3": 15,
+    "A4": 15,
+    "A5": 15,
+    "A6": 1,
+    "A7": 0,
+    "A8": 0,
+    "G1": 0,
+    "G2": 0,
+    "G3": 0,
+    "G4": 15,
+    "G5": 1,
+    "G6": 0
+  },
+  "claimDelta": "none",
+  "versionBump": null,
+  "fulltext": {
+    "cached": 0,
+    "privateOnly": 0,
+    "noOA": 0
+  },
+  "tests": {
+    "command": "PYTHONPATH=. python -m pytest -q tests/test_research.py tests/test_claims.py tests/test_api.py tests/test_plasma.py tests/test_transport.py",
+    "result": "pass",
+    "summary": "19 passed, 30 subtests passed"
+  },
+  "branch": "observatory/2026-10-04",
+  "pr": null,
+  "suspiciousContent": [],
+  "scoreRoutes": [
+    {
+      "paper": "2609.36123",
+      "bind": "E-RL",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL"
+    },
+    {
+      "paper": "2609.36299",
+      "bind": "S-L3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL"
+    },
+    {
+      "paper": "2609.40279",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL"
+    },
+    {
+      "paper": "2609.40252",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL"
+    },
+    {
+      "paper": "2609.40259",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL"
+    },
+    {
+      "paper": "2609.39522",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL"
+    },
+    {
+      "paper": "2610.00504",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL"
+    },
+    {
+      "paper": "2610.00536",
+      "bind": "E-RL",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL"
+    },
+    {
+      "paper": "2610.01217",
+      "bind": "E-S3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL"
+    },
+    {
+      "paper": "2610.01683",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL"
+    },
+    {
+      "paper": "2610.01455",
+      "bind": "E-HOL",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "a5": "FAIL"
+    },
+    {
+      "paper": "2610.01068",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL"
+    },
+    {
+      "paper": "2609.36555",
+      "bind": "E-S3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL"
+    },
+    {
+      "paper": "2609.39980",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL"
+    },
+    {
+      "paper": "2609.39016",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL"
+    }
+  ],
+  "notes": "Seventeenth run, Sunday weekly sources included. Lookback 7 days (2026-09-27 to 2026-10-04). No arXiv hits with submittedDate from 2 Oct through 4 Oct in the category queries: Sunday morning, before the evening listing. Yesterday's 12 unscored ids were scored first, oldest first, then three older on-path preprints (1D anyons, surface-code loss localisation, entropy threshold). 14 HOLD, 1 REJECT. No ADD, no STRENGTHEN, no bridge, no new pillar, no CUT reversal. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand. Q=1000 remains a ledger stress test. Harvest confidence uses round(raw x 0.88) for preprint tier 0.7. Popularity is 40 because Semantic Scholar was skipped; it is not a citation count. OpenAlex, Crossref, Unpaywall, Semantic Scholar, KCI, EPO, and Lens skipped for missing keys or missing contact email. INIS 403. FIA feed did not return items. CORE was partial and not used. Off-path arXiv ids inside the window and not carried: 2609.38915, 2609.36542, 2610.01366, 2609.40260, 2610.02086, 2610.00409, 2610.01374, 2610.00505, 2610.01976, 2610.01703, 2609.38771, 2609.37364, 2610.01774, 2609.38702, 2609.37990. GitHub qLDPC repos (licence / last push, not evidence): acatspirit/realtime_decoding_qldpc (no licence, pushed 2026-10-02); sparkainlp-x/qldpc_decoder_cpp (AGPL-3.0, 2026-09-30); antsouchlos/rust-qldpc-sliding-window-decoding (MIT, 2026-09-29); stannum13/qldpc-fno (no licence, 2026-09-27); ghilasaissou/RL-CBP-QLDPC (no licence, 2026-09-23); GuillaumeLessard/QECTOR-Mega-v3.7.5-Public-Verification-Data-and-Extended-Report (no licence, 2026-09-23, not read as evidence); Fencing-Giulio/stabilizer-inactivation-decoding (MIT, 2026-09-20); Anil077476/qldpc-bivariate-bicycle (MIT, 2026-09-18); ramanuj02fr/qldpc-cross-layer-decoder-eval (no licence, 2026-09-13); amitb-quantum/qldpc-decoder-bench (MIT, 2026-09-02). EUROfusion news titles were tier news only (JT-60SA, digital twins, JET energy record, Project WISER). Prompt freeze text matches the files: DBE-0.2.2 / DBES-0.2.0, claims freeze 2026-10-02. No suspicious instructions in fetched abstracts."
+}
