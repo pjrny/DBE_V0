@@ -2,10 +2,12 @@
 
 ## [Unreleased]
 ### Fixed
+- `research/score.py` venue gate. The venue is now normalised for case and whitespace before routing, so `--venue arXiv`, `ARXIV` and `arxiv` are all a bare preprint. Before, the case-sensitive check treated `arXiv` as a journal and printed "AUTO-MERGED PATCH" for an arXiv INCLUDE. A bare arXiv or preprint venue now never passes A5 and never raises C. Unit tests in `tests/test_research.py` cover the three spellings. Tooling only: no paper version bump, C unchanged, DBE-0.2.2 / DBES-0.2.0 stand.
 - Research catalog metadata. Rothstein 2026 has the correct Nuclear Fusion DOI and title. The Nat. Commun. placeholder is now Minev et al. 2025 (Fibonacci anyon braiding). PRC 109 and PRC 110 carry their real titles and authors. The Floquet-tunnelling entry is Phys. Rev. Research 6, 023056 (2024). Levaillant's venue is PRA 92, 012301. Jennings has its DOI and is no longer bound to E-RL. Bravyi–Haah and Almheiri carry their publication years. Crossref DOIs were added to the pillar papers, and Ashwin is corrected to Ashvin Vishwanath.
 - Duplicate catalog rows merged with aliases, so old ids still resolve (Han, Shutty, Gattu–Jain, Floquet-fracton/Soule). The Seo duplicate review card is marked. No claim or pillar evidence id dangles.
 
 ### Added
+- `research/OBSERVATORY_PROMPT.md`, the canonical daily Observatory prompt (v2). The automation reads it at the start of every run, and it is edited only by PR. `research/OBSERVATORY_STARTER.md` holds a copy of the short starter text for the automation prompt box, which points the agent at this file. Tooling only: no paper version bump.
 - 15 catalog rows: 5 restored rows that claim evidence cited but the 84383ff rebuild had dropped (including perez-fadon-2026), 8 triaged ADD papers queued as HOLD, and 2 reading-list papers. Inferred gauges and bindings are listed in each row's `inferred` field.
 
 ### Changed
