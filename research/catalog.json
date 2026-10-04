@@ -733,6 +733,7 @@
       "date": "2008-03-28",
       "venue": "Reviews of Modern Physics 80, 1083",
       "arxiv": "0707.1889",
+      "doi": "10.1103/RevModPhys.80.1083",
       "url": "https://arxiv.org/abs/0707.1889",
       "fields": [
         "anyons",
@@ -771,6 +772,7 @@
       "date": "2006-01-01",
       "venue": "Annals of Physics 321, 2",
       "arxiv": "cond-mat/0506438",
+      "doi": "10.1016/j.aop.2005.10.005",
       "url": "https://arxiv.org/abs/cond-mat/0506438",
       "fields": [
         "anyons",
@@ -807,6 +809,7 @@
       "date": "2001-10-22",
       "venue": "Physics-Uspekhi 44, 131",
       "arxiv": "cond-mat/0010440",
+      "doi": "10.1070/1063-7869/44/10S/S29",
       "url": "https://arxiv.org/abs/cond-mat/0010440",
       "fields": [
         "majorana",
@@ -843,6 +846,7 @@
       "date": "1997-11-27",
       "venue": "Adv. Theor. Math. Phys. 2, 231",
       "arxiv": "hep-th/9711200",
+      "doi": "10.4310/ATMP.1998.v2.n2.a1",
       "url": "https://arxiv.org/abs/hep-th/9711200",
       "fields": [
         "holography"
@@ -876,6 +880,7 @@
       "date": "2012-02-12",
       "venue": "Physical Review Letters 109, 160401",
       "arxiv": "1202.2539",
+      "doi": "10.1103/PhysRevLett.109.160401",
       "url": "https://arxiv.org/abs/1202.2539",
       "fields": [
         "time-crystal"
@@ -910,6 +915,7 @@
       "date": "2014-10-08",
       "venue": "Physical Review Letters 114, 251603",
       "arxiv": "1410.2143",
+      "doi": "10.1103/PhysRevLett.114.251603",
       "url": "https://arxiv.org/abs/1410.2143",
       "fields": [
         "time-crystal"
@@ -945,6 +951,7 @@
       "date": "2016-03-25",
       "venue": "Physical Review Letters 117, 090402",
       "arxiv": "1603.08001",
+      "doi": "10.1103/PhysRevLett.117.090402",
       "url": "https://arxiv.org/abs/1603.08001",
       "fields": [
         "time-crystal"
@@ -971,13 +978,13 @@
     },
     {
       "id": "bravyi-haah-2011",
-      "title": "Analytic and numerical demonstration of quantum self-correction in the 3D Cubic Code",
+      "title": "Quantum self-correction in the 3D cubic code model",
       "authors": [
         "Sergey Bravyi",
         "Jeongwan Haah"
       ],
-      "year": 2011,
-      "date": "2011-12-14",
+      "year": 2013,
+      "date": "2013-11-12",
       "venue": "Physical Review Letters 111, 200501",
       "arxiv": "1112.3252",
       "doi": "10.1103/PhysRevLett.111.200501",
@@ -1017,8 +1024,9 @@
       ],
       "year": 2020,
       "date": "2020-01-06",
-      "venue": "International Journal of Modern Physics A",
+      "venue": "International Journal of Modern Physics A 35, 2030003",
       "arxiv": "2001.01722",
+      "doi": "10.1142/S0217751X20300033",
       "url": "https://arxiv.org/abs/2001.01722",
       "fields": [
         "fracton",
@@ -1052,8 +1060,8 @@
         "Xi Dong",
         "Daniel Harlow"
       ],
-      "year": 2014,
-      "date": "2014-11-25",
+      "year": 2015,
+      "date": "2015-04-29",
       "venue": "JHEP 04 (2015) 163",
       "arxiv": "1411.7041",
       "doi": "10.1007/JHEP04(2015)163",
@@ -1086,12 +1094,17 @@
       "id": "levaillant-2015",
       "title": "Universal gates via fusion and measurement operations on SU(2)\u2084 anyons",
       "authors": [
-        "Claire Levaillant"
+        "Claire Levaillant",
+        "Bela Bauer",
+        "Michael Freedman",
+        "Zhenghan Wang",
+        "Parsa Bonderson"
       ],
       "year": 2015,
       "date": "2015-04-08",
-      "venue": "Quantum Information Processing",
+      "venue": "Physical Review A 92, 012301",
       "arxiv": "1504.02098",
+      "doi": "10.1103/PhysRevA.92.012301",
       "url": "https://arxiv.org/abs/1504.02098",
       "fields": [
         "anyons",
@@ -1429,8 +1442,9 @@
       ],
       "year": 2022,
       "date": "2022-09-08",
-      "venue": "Physical Review Letters",
+      "venue": "Physical Review Letters 131, 060405 (2023)",
       "arxiv": "2209.03964",
+      "doi": "10.1103/PhysRevLett.131.060405",
       "url": "https://arxiv.org/abs/2209.03964",
       "fields": [
         "anyons",
@@ -1468,7 +1482,8 @@
       "year": 2022,
       "date": "2022-11-30",
       "venue": "Nature 612, 51",
-      "url": "https://arxiv.org/abs/2205.14022",
+      "doi": "10.1038/s41586-022-05424-3",
+      "url": "https://doi.org/10.1038/s41586-022-05424-3",
       "fields": [
         "holography",
         "tqc"
@@ -1480,7 +1495,7 @@
       "popularity": 91,
       "coreIdea": "A tiny SYK-inspired circuit on Sycamore was interpreted as a traversable-wormhole teleportation protocol \u2014 holographic dynamics shrunk onto a handful of qubits.",
       "whyItMatters": "It is a proof-of-attitude: holographic encoding is something you can put on hardware, not only on a blackboard. The DBE encoder should stay this honest about scale.",
-      "limitation": "The system is extremely small; whether it is \u2018gravity\u2019 or a clever teleportation circuit is still argued. Do not overclaim.",
+      "limitation": "The system is extremely small; whether it is \u2018gravity\u2019 or a clever teleportation circuit is still argued. Do not overclaim. Author Correction: Nature 640, E32 (2025), doi:10.1038/s41586-025-08788-4.",
       "source": "program library / Nature",
       "tags": [
         "SYK",
@@ -1659,7 +1674,7 @@
         "Maxwell D. Urmey",
         "Nathanan Tantivasadakarn",
         "Henrik Dreyer",
-        "Ashwin Vishwanath",
+        "Ashvin Vishwanath",
         "Ruben Verresen",
         "Mohsin Iqbal"
       ],
@@ -2181,15 +2196,24 @@
     },
     {
       "id": "rothstein-2026",
-      "title": "Integrated AI plasma control on DIII-D",
+      "title": "Enabling integrated AI control on DIII-D: a control system design with state-of-the-art experiments",
       "authors": [
-        "Rothstein et al."
+        "A. Rothstein",
+        "H.J. Farre-Kaga",
+        "J. Butt",
+        "R. Shousha",
+        "K. Erickson",
+        "T. Wakatsuki",
+        "P. Steiner",
+        "S.K. Kim",
+        "A. Jalalvand",
+        "E. Kolemen"
       ],
       "year": 2026,
       "date": "2026-07-01",
       "venue": "Nuclear Fusion 66, 076050",
-      "doi": "10.1088/1741-4326/66/7/076050",
-      "url": "https://doi.org/10.1088/1741-4326/66/7/076050",
+      "doi": "10.1088/1741-4326/ae7f9d",
+      "url": "https://doi.org/10.1088/1741-4326/ae7f9d",
       "fields": [
         "plasma",
         "fusion-quantum"
@@ -2216,17 +2240,26 @@
     },
     {
       "id": "natcomms-2025",
-      "title": "Nature Communications 16, 61493 (2025)",
+      "title": "Realizing string-net condensation: Fibonacci anyon braiding for universal gates and sampling chromatic polynomials",
       "authors": [
-        "Various"
+        "Zlatko K. Minev",
+        "Khadijeh Najafi",
+        "Swarnadeep Majumder",
+        "Juven Wang",
+        "Ady Stern",
+        "Eun-Ah Kim",
+        "Chao-Ming Jian",
+        "Guanyu Zhu"
       ],
       "year": 2025,
-      "date": "2025-08-01",
-      "venue": "Nature Communications",
+      "date": "2025-07-06",
+      "venue": "Nature Communications 16, 6225 (2025)",
       "doi": "10.1038/s41467-025-61493-8",
       "url": "https://doi.org/10.1038/s41467-025-61493-8",
       "fields": [
+        "anyons",
         "tqc",
+        "braid-knot",
         "topology"
       ],
       "role": "lookback",
@@ -2234,17 +2267,27 @@
       "importance": 68,
       "confidence": 82,
       "popularity": 60,
-      "coreIdea": "A 2025 Nature Communications paper in the program library on quantum / topological matter, retained as a lookback pillar-adjacent source.",
-      "whyItMatters": "Year-back corpus: the observatory\u2019s first runs are not allowed to be only this week\u2019s arXiv.",
-      "limitation": "Secondary to the S\u2083 / RL / holography flagships for DBE scoring.",
-      "source": "program library / Nature Communications",
+      "coreIdea": "A scalable dynamical string-net preparation builds the Fibonacci string-net condensate and its anyons on reconfigurable graphs of a superconducting processor. Charge measurements reach 94% accuracy, exchanging the anyons gives the golden ratio with 98% average accuracy, and sampling the condensate estimates chromatic polynomials.",
+      "whyItMatters": "Fibonacci anyons are universal by braiding alone, so this is the braid-only alternative to S3 braid plus fusion on hardware. It is context for E-S3, not a replacement: DBE's gate set keeps fusion measurement.",
+      "limitation": "Error-mitigated deep circuits on a NISQ processor, not a fault-tolerant logical qubit. Proof of principle; does not raise E-S3 above C3.",
+      "source": "Nature Communications",
       "tags": [
-        "lookback"
+        "Fibonacci anyons",
+        "string-net",
+        "braiding",
+        "superconducting processor"
       ],
+      "pillarId": "anyon-tqc",
       "claimIds": [
-        "E-QEC"
+        "E-S3"
       ],
-      "bindAction": "INCLUDE"
+      "bindAction": "INCLUDE",
+      "inferred": [
+        "fields",
+        "whyItMatters",
+        "pillarId",
+        "claimIds"
+      ]
     },
     {
       "id": "tamiya-2026",
@@ -2471,12 +2514,18 @@
       "title": "End-to-end quantum algorithm for nonlinear fluid dynamics with bounded quantum advantage",
       "authors": [
         "David Jennings",
-        "et al."
+        "Kamil Korzekwa",
+        "Matteo Lostaglio",
+        "Richard Ashworth",
+        "Emanuele Marsili",
+        "Stephen Rolston"
       ],
       "year": 2026,
       "date": "2026-09-18",
       "venue": "PRX Quantum 7, 033060",
-      "url": "https://doi.org/10.1103/PRXQuantum.7.033060",
+      "arxiv": "2512.03758",
+      "doi": "10.1103/xysy-q3fp",
+      "url": "https://doi.org/10.1103/xysy-q3fp",
       "fields": [
         "fusion-quantum",
         "plasma"
@@ -2488,18 +2537,18 @@
       "popularity": 67,
       "coreIdea": "A sober resource analysis of quantum algorithms for nonlinear fluids: where a speedup can exist, and which I/O and chaos bottlenecks eat it.",
       "whyItMatters": "DBE-S and the plasma controller will be tempted to claim quantum CFD. This paper is the adult supervision: bounded advantage, explicit bottlenecks \u2014 exactly the \u2018don\u2019t overclaim\u2019 discipline the program asked for.",
-      "limitation": "Does not model a tokamak, and a bounded speedup is not a Q = 1000 plan.",
+      "limitation": "Does not model a tokamak, and a bounded speedup is not a Q = 1000 plan. Bound to no claim: a Bus B / M3 quantum-CFD context paper, not E-RL plasma-control evidence.",
       "source": "PRX Quantum / this week",
       "tags": [
         "CFD",
         "quantum advantage",
-        "chaos"
+        "chaos",
+        "Bus B",
+        "M3"
       ],
       "suggestedPillar": "topo-dynamics",
       "pillarId": "fusion-q1000",
-      "claimIds": [
-        "E-RL"
-      ],
+      "claimIds": [],
       "bindAction": "INCLUDE"
     },
     {
@@ -2714,7 +2763,8 @@
       "id": "floquet-fracton-2026",
       "title": "Fractalizing spacetime: Floquet codes with fractonic excitations that are immobile in space and time",
       "authors": [
-        "arXiv:2609.03703"
+        "Juliette Soule",
+        "Dominic J. Williamson"
       ],
       "year": 2026,
       "date": "2026-09-03",
@@ -2918,12 +2968,15 @@
     },
     {
       "id": "prc109-2024",
-      "title": "Laser-assisted deuterium\u2013tritium fusion in strong fields",
+      "title": "Dynamically assisted nuclear fusion in the strong-field regime",
       "authors": [
-        "Stanford / SLAC / Marvel Fusion collaboration"
+        "Martin Louis Lindsey",
+        "John Jasper Bekx",
+        "Karl-Georg Schlesinger",
+        "Siegfried Heinz Glenzer"
       ],
       "year": 2024,
-      "date": "2024-04-01",
+      "date": "2024-04-02",
       "venue": "Phys. Rev. C 109, 044605",
       "doi": "10.1103/PhysRevC.109.044605",
       "url": "https://doi.org/10.1103/PhysRevC.109.044605",
@@ -2954,12 +3007,14 @@
     },
     {
       "id": "prc110-2024",
-      "title": "High-intensity laser enhancement of DT fusion: 7\u201370% at extreme irradiance",
+      "title": "Laser-assisted deuterium-tritium fusion: A quantum dynamical model",
       "authors": [
-        "Phys. Rev. C 110, 034614"
+        "N. Thomson",
+        "L. Moschini",
+        "A. Diaz-Torres"
       ],
       "year": 2024,
-      "date": "2024-09-01",
+      "date": "2024-09-19",
       "venue": "Phys. Rev. C 110, 034614",
       "doi": "10.1103/PhysRevC.110.034614",
       "url": "https://doi.org/10.1103/PhysRevC.110.034614",
@@ -2997,6 +3052,7 @@
       "date": "2019-02-12",
       "venue": "Phys. Rev. C 100, 041601(R)",
       "arxiv": "1902.04905",
+      "doi": "10.1103/PhysRevC.100.041601",
       "url": "https://arxiv.org/abs/1902.04905",
       "fields": [
         "fusion-quantum"
@@ -3024,13 +3080,17 @@
       "id": "floquet-tunneling-2023",
       "title": "Dynamically assisted tunneling in the Floquet picture",
       "authors": [
-        "arXiv:2309.12205"
+        "Daniil Ryndyk",
+        "Christian Kohlf\u00fcrst",
+        "Friedemann Queisser",
+        "Ralf Sch\u00fctzhold"
       ],
-      "year": 2023,
-      "date": "2023-09-21",
-      "venue": "arXiv preprint",
+      "year": 2024,
+      "date": "2024-04-16",
+      "venue": "Phys. Rev. Research 6, 023056",
       "arxiv": "2309.12205",
-      "url": "https://arxiv.org/abs/2309.12205",
+      "doi": "10.1103/PhysRevResearch.6.023056",
+      "url": "https://doi.org/10.1103/PhysRevResearch.6.023056",
       "fields": [
         "fusion-quantum",
         "time-crystal"
@@ -3043,10 +3103,11 @@
       "coreIdea": "Tunneling through a time-periodic barrier is rewritten in Floquet language so multiphoton channels are explicit instead of being faked by a static WKB shift.",
       "whyItMatters": "The DBE-S revision\u2019s first complaint was naive WKB. This is the textbook correction those notebooks omitted.",
       "limitation": "Single-particle theory. Plasma Lindblad, hole burning, and radiation are not in the Hamiltonian.",
-      "source": "arXiv",
+      "source": "Phys. Rev. Research",
       "tags": [
         "Floquet",
-        "WKB critique"
+        "WKB critique",
+        "DT tunneling"
       ],
       "claimIds": [
         "S-L2",
