@@ -1,5 +1,16 @@
 # Changelog
 
+## [Unreleased]
+### Fixed
+- Research catalog metadata. Rothstein 2026 has the correct Nuclear Fusion DOI and title. The Nat. Commun. placeholder is now Minev et al. 2025 (Fibonacci anyon braiding). PRC 109 and PRC 110 carry their real titles and authors. The Floquet-tunnelling entry is Phys. Rev. Research 6, 023056 (2024). Levaillant's venue is PRA 92, 012301. Jennings has its DOI and is no longer bound to E-RL. Bravyi–Haah and Almheiri carry their publication years. Crossref DOIs were added to the pillar papers, and Ashwin is corrected to Ashvin Vishwanath.
+- Duplicate catalog rows merged with aliases, so old ids still resolve (Han, Shutty, Gattu–Jain, Floquet-fracton/Soule). The Seo duplicate review card is marked. No claim or pillar evidence id dangles.
+
+### Added
+- 15 catalog rows: 5 restored rows that claim evidence cited but the 84383ff rebuild had dropped (including perez-fadon-2026), 8 triaged ADD papers queued as HOLD, and 2 reading-list papers. Inferred gauges and bindings are listed in each row's `inferred` field.
+
+### Changed
+- Catalog status now matches the claim freeze. The floquet-clock and fracton-memory pillars are CUT. The spacetime-fractons, spacetime-fracton-codes and fracton-holography pillars are CUT. Five E-HOL papers and floquet-fracton-2026 are REJECT (reading list). No paper version bump. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
+
 ## [0.4.13] - 2026-10-03
 ### Added
 - Daily observatory run (lookback 7 days). No paper version bump. No Friday or Saturday arXiv listing. Phys. Rev. X mixed-state axioms are queued under the error layer only. Twisted quantum-double stabilizers, constant-depth atom-array surgery, and a toric-code electric-magnetic Clifford no-go are queued under the same layer. DIII-D island-chain transport is queued with no coil command. A polarized parafermion trench is queued as not an X+Z logical. A fractonic fluid and an axionic holographic superconductor are rejected. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
