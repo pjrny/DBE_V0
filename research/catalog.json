@@ -4391,7 +4391,7 @@
       "bindAction": "HOLD"
     },
     {
-      "id": "2609.21741",
+      "id": "perez-gonzalez-floquet-2026",
       "arxiv": "2609.21741",
       "title": "Floquet physics from quantized light-matter interaction: geometric phases, gauge consistency, and entanglement",
       "authors": [
@@ -4422,9 +4422,13 @@
       "limitation": "Theory of light-matter, not a prethermal lifetime vs control-horizon measurement.",
       "source": "arXiv API",
       "claimIds": [
+        "S-L2",
         "E-TC"
       ],
-      "bindAction": "HOLD"
+      "bindAction": "HOLD",
+      "aliases": [
+        "2609.21741"
+      ]
     },
     {
       "id": "2609.21586",
@@ -4571,7 +4575,7 @@
       "bindAction": "HOLD"
     },
     {
-      "id": "2609.19348",
+      "id": "cole-aperiodic-2026",
       "arxiv": "2609.19348",
       "title": "Time-resolved topology of aperiodically driven systems",
       "authors": [
@@ -4606,7 +4610,10 @@
       "claimIds": [
         "E-TC"
       ],
-      "bindAction": "HOLD"
+      "bindAction": "HOLD",
+      "aliases": [
+        "2609.19348"
+      ]
     },
     {
       "id": "2609.19117",
@@ -5030,7 +5037,7 @@
       "bindAction": "REJECT"
     },
     {
-      "id": "2609.20725",
+      "id": "faurot-2026",
       "arxiv": "2609.20725",
       "title": "Superselection theory for 2D braided quantum spin systems via Connes fusion",
       "authors": [
@@ -5066,7 +5073,10 @@
       "claimIds": [
         "E-S3"
       ],
-      "bindAction": "INCLUDE"
+      "bindAction": "INCLUDE",
+      "aliases": [
+        "2609.20725"
+      ]
     },
     {
       "id": "2609.20153",
@@ -12034,6 +12044,203 @@
       ],
       "bindAction": "REJECT",
       "pillarEffect": "none"
+    },
+    {
+      "id": "perez-fadon-2026",
+      "title": "Extracting Anyon Statistics from Neural Network Fractional Quantum Hall States",
+      "authors": [
+        "Andres Perez Fadon",
+        "David Pfau",
+        "James S. Spencer",
+        "Wan Tong Lou",
+        "Titus Neupert",
+        "W. M. C. Foulkes"
+      ],
+      "year": 2026,
+      "date": "2026-09-08",
+      "venue": "PRX Intelligence 1, 013018",
+      "doi": "10.1103/sb8g-qvn6",
+      "url": "https://doi.org/10.1103/sb8g-qvn6",
+      "fields": [
+        "anyons",
+        "topology"
+      ],
+      "role": "month",
+      "foundational": false,
+      "importance": 81,
+      "confidence": 79,
+      "popularity": 60,
+      "coreIdea": "Train a neural-network wavefunction for a fractional quantum Hall state, then read the modular S-matrix from entanglement interferometry. From S you get quantum dimensions, fusion rules, and braid phases.",
+      "whyItMatters": "A journal method for certifying that a prepared state is the anyon theory you think it is. Complements the S3 hardware demo, which certified cyclic fusion by trapping a single non-Abelian anyon on a torus.",
+      "limitation": "Numerical FQH, not a processor and not a plant. Journal venue can INCLUDE; still cannot raise C above 3 on the wrong platform.",
+      "source": "PRX Intelligence",
+      "tags": [
+        "S-matrix",
+        "neural wavefunction",
+        "FQH"
+      ],
+      "pillarId": "anyon-tqc",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "INCLUDE"
+    },
+    {
+      "id": "witten-cs-2026",
+      "title": "The Chern-Simons Function and the Quantum Hall Effect",
+      "authors": [
+        "Edward Witten"
+      ],
+      "year": 2026,
+      "date": "2026-09-18",
+      "venue": "arXiv",
+      "arxiv": "2609.21182",
+      "url": "https://arxiv.org/abs/2609.21182",
+      "fields": [
+        "topology",
+        "anyons"
+      ],
+      "role": "week",
+      "foundational": true,
+      "importance": 91,
+      "confidence": 94,
+      "popularity": 88,
+      "coreIdea": "Witten walks through what is special about the Chern-Simons invariant of a gauge connection on a three-manifold and why that object sits underneath the quantum Hall effect.",
+      "whyItMatters": "A living foundational note, not a 1989 reprint. It is a pillar of the topology field the observatory tracks. INCLUDE as reading, not as a reactor encoding.",
+      "limitation": "Pedagogical field theory. Duality is not a tokamak I/O map. Must not be used to un-cut E-HOL.",
+      "source": "arXiv hep-th",
+      "tags": [
+        "Chern-Simons",
+        "QHE",
+        "foundational"
+      ],
+      "pillarId": "anyon-tqc",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "INCLUDE"
+    },
+    {
+      "id": "hartweg-2026",
+      "title": "Comparing magic state cultivation methods using matrix product states",
+      "authors": [
+        "Tom Hartweg",
+        "Asier Pi\u00f1eiro Orioli"
+      ],
+      "year": 2026,
+      "date": "2026-09-16",
+      "venue": "arXiv",
+      "arxiv": "2609.19116",
+      "url": "https://arxiv.org/abs/2609.19116",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "importance": 80,
+      "confidence": 78,
+      "popularity": 58,
+      "coreIdea": "Magic-state cultivation is how you get non-Clifford gates cheaply. The authors compare cultivation schemes with matrix product states so the space-time cost is no longer a guess.",
+      "whyItMatters": "Lo 2026 already prepared a topological magic state with S3 fusion. Cultivation is the competing (non-topological) route to the same resource. Bus B should know both numbers.",
+      "limitation": "MPS on modest sizes. Not a demonstration that cultivation beats fusion, and not a C raise for E-S3.",
+      "source": "arXiv quant-ph",
+      "tags": [
+        "magic state",
+        "cultivation",
+        "MPS"
+      ],
+      "pillarId": "anyon-tqc",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "INCLUDE"
+    },
+    {
+      "id": "subbotin-2026",
+      "title": "Demonstration of reconstruction-free static magnetic control of DIII-D plasma with deep reinforcement learning",
+      "authors": [
+        "G.F. Subbotin",
+        "D.I. Sorokin",
+        "M.R. Nurgaliev",
+        "A.A. Granovskiy",
+        "I.P. Kharitonov",
+        "E.V. Adishchev",
+        "E.N. Khairutdinov",
+        "R. Clark",
+        "H. Shen",
+        "W. Choi",
+        "J. Barr",
+        "D.M. Orlov"
+      ],
+      "year": 2026,
+      "date": "2026-01-21",
+      "venue": "Nucl. Fusion 66, 026040 (2026)",
+      "doi": "10.1088/1741-4326/ae34c6",
+      "url": "https://doi.org/10.1088/1741-4326/ae34c6",
+      "fields": [
+        "plasma"
+      ],
+      "role": "lookback",
+      "foundational": false,
+      "importance": 92,
+      "confidence": 86,
+      "popularity": 75,
+      "coreIdea": "An RL controller on DIII-D maps raw magnetic diagnostics straight to coils, skipping equilibrium reconstruction. Shape error stayed within 1.5\u20132 cm and radial position within 1 cm across L- and H-mode, including pellets and L\u2013H transitions.",
+      "whyItMatters": "This is Bus A in the language of a machine that already exists: diagnostics in, actuators out, published errors versus the isoflux baseline. Journal + tokamak \u2192 Auto-Gate INCLUDE is legal. C stays C4.",
+      "limitation": "Static shape, not tearing avoidance, and not a quantum-in-the-loop result. Sub-millisecond VDEs remain out of scope, same caveat as PACMAN.",
+      "source": "Nuclear Fusion",
+      "tags": [
+        "DIII-D",
+        "RL",
+        "isoflux",
+        "magnetic control"
+      ],
+      "pillarId": "plasma-rl",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "INCLUDE"
+    },
+    {
+      "id": "rl4f-2026",
+      "title": "Offline Reinforcement Learning for Plasma Control in Nuclear Fusion: Codebase and Benchmark",
+      "authors": [
+        "Yang Fu",
+        "Haomin Bao",
+        "Rohit Sonker",
+        "Xiaoyan Hu",
+        "Aravind Venugopal",
+        "Jeff Schneider",
+        "Jiayu Chen"
+      ],
+      "year": 2026,
+      "date": "2026-05-19",
+      "venue": "arXiv",
+      "arxiv": "2606.07550",
+      "url": "https://arxiv.org/abs/2606.07550",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "role": "lookback",
+      "foundational": false,
+      "importance": 90,
+      "confidence": 84,
+      "popularity": 72,
+      "coreIdea": "RL4F is a public offline-RL benchmark for tokamak profile tracking (rotation, density, temperature, pressure) built from DIII-D historical discharges. Model-based offline RL wins on average; no single algorithm wins every task.",
+      "whyItMatters": "Bus A needs a named baseline. A DIII-D dataset plus closed-loop eval is exactly the attach surface M2 asked for. INCLUDE under E-RL. C already C4 from Seo / Rothstein; this does not raise it.",
+      "limitation": "Offline benchmark, not a disruption-avoidance shot. Dynamics are learned from history, so they inherit diagnostic coverage and do not replace a tearing-onset latency test.",
+      "source": "arXiv cs.LG",
+      "tags": [
+        "offline RL",
+        "DIII-D",
+        "benchmark"
+      ],
+      "pillarId": "plasma-rl",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "INCLUDE"
     }
   ],
   "runs": [
