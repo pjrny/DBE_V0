@@ -1,3 +1,17 @@
+2026-10-03  REJECT  maldacena-1997  → E-HOL denylist (lab rule; kept on the reading list)
+
+2026-10-03  REJECT  jennings-2026  → no claim (quantum fluid-dynamics algorithm; supports no claim; reading list)
+
+2026-10-03  REJECT  dbe-whitepaper  → E-5 denylist (CUT; kept in the catalog as the audit source, role internal)
+
+2026-10-03  library  NO BUMP  pillar status aligned with the record: floquet-majorana-codes QUEUE → CUT (2026-09-21 REJECT as engine pillar); cyclic-fusion-family / nonabelian-qldpc / topo-dynamics QUEUE → CUT (2026-09-21 EXPIRE, bibliography only). tamiya-coherent-2026 resolved as an alias of tamiya-2026 (2609.20708). README and OBSERVATORY freeze text now read E-TC and E-FR CUT. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
+
+2026-10-03  library  NO BUMP  catalog metadata fix (branch fix/catalog-metadata). Bibliography corrected from Crossref/arXiv/PDFs: Rothstein NF DOI 10.1088/1741-4326/ae7f9d and title; Nat. Commun. placeholder is Minev et al. 2025 Fibonacci anyons (16, 6225); PRC 109 Lindsey et al. and PRC 110 Thomson et al. titles/authors; Floquet tunnelling is Ryndyk et al. PRR 6, 023056 (2024); Levaillant PRA 92, 012301; Jennings PRX Quantum 7, 033060 (DOI 10.1103/xysy-q3fp) unbound from E-RL (fluid-dynamics algorithm, not plasma control); Bravyi–Haah 2013, Almheiri 2015; pillar DOIs added; Ashvin Vishwanath. Duplicates merged by alias (Han, Shutty, Gattu–Jain, Floquet-fracton/Soule; Seo card marked duplicate). 11 claim-evidence ids given rows. 10 triaged papers added (8 HOLD queued, 2 reading list). Pillars floquet-clock and fracton-memory set to CUT with E-TC/E-FR; spacetime-fractons, spacetime-fracton-codes and fracton-holography set to CUT per the 2026-09-21 REJECT. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
+
+2026-10-03  REJECT  stangier-2026 / biswas-2026 / almheiri-2015 / wormhole-2022 / hu-2026-fth  → E-HOL denylist (lab rule; kept on the reading list)
+
+2026-10-03  REJECT  floquet-fracton-2026  → E-TC/E-FR reading list (NEW PILLAR closed at DBE-0.2.0; both claims CUT)
+
 2026-10-03  library  NO BUMP  sixteenth daily run. No Fri–Sat arXiv listing. PRX mixed-state axioms queued under E-QEC (journal, C unchanged). Twisted-double stabilizers, atom-array surgery, and the toric-code e–m Clifford no-go queued under E-QEC only. DIII-D island chains queued under E-RL (no coil command, M2 open). Polarized parafermion trench queued under E-MZM (WATCH, not X+Z). Fractonic fluid rejected as hardware. Axionic holographic superconductor rejected. Decoder pile left unscored. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
 
 # Research observatory version log (paper appendix)

@@ -26,15 +26,17 @@ Fields: Anyons, TQC, Majorana, braid/knot theory, topology, fracton memory, time
 
 First runs use `--lookback-days 365`. Foundational pillars are never aged out. Program manuscripts (DBE white paper, DBE-S revision) sit in the catalog as `role: internal` with lower harvest confidence on purpose.
 
-## Freeze (2026-09-19 / 2026-09-20 PATCH)
+## Freeze (DBE-0.2.2 / DBES-0.2.0)
+
+The 2026-09-19 freeze and its 2026-09-20 PATCH, as amended by DBE-0.2.0 (2026-09-21), which cut E-TC as a clock and E-FR as hardware. See `research/CHANGELOG.md`.
 
 KEEP: E-S3 (S₃ braid+fusion), E-QEC (surface-code / qLDPC), E-RL (plant-attach control), S-L3 (Vlasov / hole-burning methods).
 
 WATCH: E-MZM (Majorana — not load-bearing).
 
-HOLD: E-TC (time crystal as physics, cut as metronome), E-FR (fracton as theory, cut as hardware), S-L1, S-L2, S-L4.
+HOLD: S-L1, S-L2, S-L4.
 
-CUT: E-HOL (holography as reactor/processor part), E-5 (five-head monolith), S-Q as an output. Consciousness benchmarks stay off the engine.
+CUT: E-TC (time crystal as clock/metronome; the physics stays on the reading list), E-FR (fracton as hardware; fracton codes stay a theory workstream), E-HOL (holography as reactor/processor part), E-5 (five-head monolith), S-Q as an output. Consciousness benchmarks stay off the engine.
 
 Q_sci, Q_fuel, and Q_eng are different numbers. DBE-S forbids naive WKB, unbounded cross-section scaling, perfect coherence, and missing Bremsstrahlung. Q = 1000 is a ledger stress test, not an output of the current stack.
 
