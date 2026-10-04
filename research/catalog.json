@@ -626,8 +626,7 @@
       "dbeGoal": "One dynamical object instead of a separate memory and clock \u2014 only if it attaches to Bus B without 3D hardware.",
       "status": "suggested",
       "evidence": [
-        "floquet-fracton-2026",
-        "soule-2026"
+        "floquet-fracton-2026"
       ],
       "whySuggested": "Unifies two HOLD/CUT boxes. Queued; Auto-Gate forbids opening it automatically.",
       "claimIds": [
@@ -2795,7 +2794,10 @@
         "E-TC"
       ],
       "suggestedPillar": "spacetime-fractons",
-      "bindAction": "HOLD"
+      "bindAction": "HOLD",
+      "aliases": [
+        "soule-2026"
+      ]
     },
     {
       "id": "fusion-eq-2026",
@@ -3717,7 +3719,7 @@
       "bindAction": "HOLD"
     },
     {
-      "id": "2609.20985",
+      "id": "gattu-jain-2026",
       "arxiv": "2609.20985",
       "title": "Shape Deformation and Braid Statistics of Fractional Quantum Hall Quasiparticles",
       "authors": [
@@ -3751,7 +3753,10 @@
       "claimIds": [
         "E-S3"
       ],
-      "bindAction": "INCLUDE"
+      "bindAction": "INCLUDE",
+      "aliases": [
+        "2609.20985"
+      ]
     },
     {
       "id": "2609.20401",
@@ -5579,7 +5584,10 @@
       "claimIds": [
         "E-QEC"
       ],
-      "bindAction": "INCLUDE"
+      "bindAction": "INCLUDE",
+      "aliases": [
+        "han-qldpc-2026"
+      ]
     },
     {
       "id": "baldelli-qd-qldpc-2026",
@@ -5652,7 +5660,10 @@
       "claimIds": [
         "E-QEC"
       ],
-      "bindAction": "INCLUDE"
+      "bindAction": "INCLUDE",
+      "aliases": [
+        "shutty-2026"
+      ]
     },
     {
       "id": "yang-tokaglint-2026",
