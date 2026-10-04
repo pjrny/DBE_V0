@@ -20,7 +20,7 @@ python cli/research_observatory.py --tab versions
 
 Tabs: This week / This month / Year lookback / Catalog / Claims / Versions / Reviews / Ledger / Pillars / Daily runs. Each paper is tagged, segmented, and carries a plain-language core idea, why it matters, and one limitation. Foundational papers are pillars of any age; new load-bearing ideas are queued as pillars (NEW PILLAR never auto-bumps). Reviews can APPLY INCLUDE (PATCH) or queue STRENGTHEN / NEW PILLAR against a local working freeze.
 
-**2026-09-19 freeze (claim table of record):** KEEP S3 braid+fusion, surface-code QEC, RL plant control. WATCH Majorana. HOLD fracton-as-hardware and time-crystal-as-clock. CUT holography and the five-head engine. Q = 1000 is a ledger stress test, not an output.
+**Claim table of record (DBE-0.2.2 / DBES-0.2.0; 2026-09-19 freeze as amended at DBE-0.2.0 on 2026-09-21):** KEEP S3 braid+fusion, surface-code QEC, RL plant control. WATCH Majorana. CUT fracton-as-hardware and time-crystal-as-clock (both cut at DBE-0.2.0; reading list only). CUT holography and the five-head engine. Q = 1000 is a ledger stress test, not an output.
 
 Feeds: [quant-ph](https://arxiv.org/list/quant-ph/recent), [cond-mat.str-el](https://arxiv.org/list/cond-mat.str-el/recent), [cond-mat.mes-hall](https://arxiv.org/list/cond-mat.mes-hall/recent), [hep-th](https://arxiv.org/list/hep-th/recent), [physics.plasm-ph](https://arxiv.org/list/physics.plasm-ph/recent), [advanced search](https://arxiv.org/search/advanced).
 

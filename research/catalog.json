@@ -448,8 +448,8 @@
         "sun-2026-floquet-majorana"
       ],
       "whySuggested": "Unifies two DBE subsystems that the white paper treats as separate boxes.",
-      "engineStatus": "QUEUE",
-      "engineNote": "Would couple E-MZM and E-TC. Coupling starts at C1.",
+      "engineStatus": "CUT",
+      "engineNote": "Rejected as an engine pillar at DBE-0.2.0 (2026-09-21): couples E-MZM (WATCH) with E-TC (CUT as clock). Reading list only; the evidence paper stays as bibliography.",
       "claimIds": [
         "E-MZM",
         "E-TC"
@@ -517,8 +517,8 @@
         "2609.30159"
       ],
       "whySuggested": "Removes a hidden 3D overhead that would break DBE\u2019s modular, planar control story.",
-      "engineStatus": "QUEUE",
-      "engineNote": "Interesting Bus B research; not a new engine pillar until an interface contract exists.",
+      "engineStatus": "CUT",
+      "engineNote": "Expired as a new pillar at DBE-0.2.0 (2026-09-21); bibliography only. Its papers keep their own claim binds. Interesting Bus B research; not a new engine pillar until an interface contract exists.",
       "claimIds": [
         "E-QEC",
         "E-S3"
@@ -560,8 +560,8 @@
         "jennings-2026"
       ],
       "whySuggested": "This is the first credible path from \u2018quantum subsystem stub\u2019 to actual dynamics simulation inside the engine.",
-      "engineStatus": "QUEUE",
-      "engineNote": "Bus B simulation path. Fail if slower than classical HPC.",
+      "engineStatus": "CUT",
+      "engineNote": "Expired as a new pillar at DBE-0.2.0 (2026-09-21); bibliography only. Its papers keep their own claim binds. Bus B simulation path. Fail if slower than classical HPC.",
       "claimIds": [
         "E-S3",
         "E-RL"
@@ -655,8 +655,8 @@
       "statement": "Cyclic fusion categories a\u00d7a=a+\u2026 exist at every odd order, so braid+fusion universality is a family, not a one-off S3 trick.",
       "dbeGoal": "A broader compiler target than S3, still with integer quantum dimension.",
       "status": "suggested",
-      "engineStatus": "QUEUE",
-      "engineNote": "Needs an interface contract. S3 remains the load-bearing primitive (E-S3). Do not displace KEEP.",
+      "engineStatus": "CUT",
+      "engineNote": "Expired as a new pillar at DBE-0.2.0 (2026-09-21); bibliography only. Its papers keep their own claim binds. Needs an interface contract. S3 remains the load-bearing primitive (E-S3). Do not displace KEEP.",
       "whySuggested": "2609.15986 constructs cyclic Haagerup\u2013Izumi fusion at every odd n\u22653.",
       "evidence": [
         "2609.15986",
@@ -858,17 +858,20 @@
       "popularity": 100,
       "coreIdea": "A quantum field theory on a boundary can be dual to gravity in a higher-dimensional bulk. Information about the interior is encoded, redundantly, on the surface.",
       "whyItMatters": "This is the physical metaphor for DBE holographic compression: store a high-dimensional plasma interior as a lower-dimensional boundary code.",
-      "limitation": "AdS/CFT is a duality for specific supersymmetric theories, not a drop-in compressor for tokamak MHD. The engine uses the error-correction reading, not the string-theory one.",
+      "limitation": "AdS/CFT is a duality for specific supersymmetric theories, not a drop-in compressor for tokamak MHD. The engine uses the error-correction reading, not the string-theory one. CUT (lab rule): binds the E-HOL denylist. Reading is allowed; INCLUDE is not. Stays on the reading list.",
       "source": "arXiv hep-th",
       "tags": [
         "AdS/CFT",
-        "duality"
+        "duality",
+        "CUT",
+        "denylist",
+        "reading list"
       ],
       "pillarId": "holographic-encode",
       "claimIds": [
         "E-HOL"
       ],
-      "bindAction": "INCLUDE"
+      "bindAction": "REJECT"
     },
     {
       "id": "wilczek-2012",
@@ -1541,12 +1544,15 @@
       "popularity": 40,
       "coreIdea": "Five subsystems \u2014 Majorana braids, fracton memory, Floquet clock, holographic encoder, plasma actuators \u2014 should be one processor whose computational benchmark is extreme robustness and whose physical target is live fusion control.",
       "whyItMatters": "This is the integration contract of DBE V0 / V1. Every other paper in the observatory is scored against these boxes and the Q = 1000 north star.",
-      "limitation": "Visionary, not a demonstrated machine. Quantum modules in the current simulator are stubs. Treat as a requirements document, not a result.",
+      "limitation": "Visionary, not a demonstrated machine. Quantum modules in the current simulator are stubs. Treat as a requirements document, not a result. CUT (lab rule): binds the E-5 denylist (five-head monolith). Kept in the catalog, role internal, as the audit source every claim is scored against; it is not evidence for any claim.",
       "source": "program manuscript",
       "tags": [
         "DBE V1",
         "modular stack",
-        "Q=1000"
+        "Q=1000",
+        "CUT",
+        "denylist",
+        "audit source"
       ],
       "pillarId": "fusion-q1000",
       "claimIds": [
@@ -1554,7 +1560,7 @@
         "E-S3",
         "E-RL"
       ],
-      "bindAction": "HOLD"
+      "bindAction": "REJECT"
     },
     {
       "id": "dbe-s-revision",
@@ -2334,7 +2340,10 @@
       "claimIds": [
         "E-QEC"
       ],
-      "bindAction": "INCLUDE"
+      "bindAction": "INCLUDE",
+      "aliases": [
+        "tamiya-coherent-2026"
+      ]
     },
     {
       "id": "polley-2026",
@@ -2549,19 +2558,20 @@
       "popularity": 67,
       "coreIdea": "A sober resource analysis of quantum algorithms for nonlinear fluids: where a speedup can exist, and which I/O and chaos bottlenecks eat it.",
       "whyItMatters": "DBE-S and the plasma controller will be tempted to claim quantum CFD. This paper is the adult supervision: bounded advantage, explicit bottlenecks \u2014 exactly the \u2018don\u2019t overclaim\u2019 discipline the program asked for.",
-      "limitation": "Does not model a tokamak, and a bounded speedup is not a Q = 1000 plan. Bound to no claim: a Bus B / M3 quantum-CFD context paper, not E-RL plasma-control evidence.",
+      "limitation": "Does not model a tokamak, and a bounded speedup is not a Q = 1000 plan. REJECT: quantum fluid-dynamics algorithm; supports no claim. Stays on the reading list as Bus B / M3 quantum-CFD context.",
       "source": "PRX Quantum / this week",
       "tags": [
         "CFD",
         "quantum advantage",
         "chaos",
         "Bus B",
-        "M3"
+        "M3",
+        "reading list"
       ],
       "suggestedPillar": "topo-dynamics",
       "pillarId": "fusion-q1000",
       "claimIds": [],
-      "bindAction": "INCLUDE"
+      "bindAction": "REJECT"
     },
     {
       "id": "glittum-2026",

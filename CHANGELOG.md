@@ -9,7 +9,8 @@
 - 15 catalog rows: 5 restored rows that claim evidence cited but the 84383ff rebuild had dropped (including perez-fadon-2026), 8 triaged ADD papers queued as HOLD, and 2 reading-list papers. Inferred gauges and bindings are listed in each row's `inferred` field.
 
 ### Changed
-- Catalog status now matches the claim freeze. The floquet-clock and fracton-memory pillars are CUT. The spacetime-fractons, spacetime-fracton-codes and fracton-holography pillars are CUT. Five E-HOL papers and floquet-fracton-2026 are REJECT (reading list). No paper version bump. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
+- Catalog status now matches the claim freeze. The floquet-clock and fracton-memory pillars are CUT. The spacetime-fractons, spacetime-fracton-codes and fracton-holography pillars are CUT. All six E-HOL papers (including Maldacena 1997) and floquet-fracton-2026 are REJECT (reading list). Jennings is REJECT because it supports no claim. The DBE white paper is CUT on the E-5 denylist and kept as the audit source. The floquet-majorana-codes pillar (rejected 2026-09-21) and the expired cyclic-fusion-family, nonabelian-qldpc and topo-dynamics pillars are CUT. `tamiya-coherent-2026` resolves as an alias of tamiya-2026. No paper version bump. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
+- README and docs/research/OBSERVATORY.md freeze text now read E-TC and E-FR as CUT (DBE-0.2.0).
 
 ## [0.4.13] - 2026-10-03
 ### Added
