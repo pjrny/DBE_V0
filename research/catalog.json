@@ -12241,6 +12241,494 @@
         "E-RL"
       ],
       "bindAction": "INCLUDE"
+    },
+    {
+      "id": "chen-detachment-2026",
+      "title": "Regulation compliant AI for fusion: explainable image-based feedback control of divertor detachment in DIII-D tokamak",
+      "authors": [
+        "Nathaniel Chen",
+        "Cheolsik Byun",
+        "Azarakhsh Jalalvand",
+        "Sangkyeun Kim",
+        "Andrew Rothstein",
+        "Filippo Scotti",
+        "Steve Allen",
+        "David Eldon",
+        "Keith Erickson",
+        "Egemen Kolemen"
+      ],
+      "year": 2026,
+      "date": "2026-02-02",
+      "venue": "Nuclear Fusion 66, 036014",
+      "doi": "10.1088/1741-4326/ae3972",
+      "url": "https://doi.org/10.1088/1741-4326/ae3972",
+      "fields": [
+        "plasma"
+      ],
+      "role": "lookback",
+      "foundational": false,
+      "importance": 86,
+      "confidence": 86,
+      "popularity": 58,
+      "coreIdea": "An interpretable, camera-based feedback controller holds the DIII-D divertor detachment state at a requested target in real time, with about 2% mean absolute difference from target.",
+      "whyItMatters": "First peer-reviewed learned/interpretable control aimed at the heat-exhaust blocker. Same Bus A shape as Seo and Rothstein: diagnostics in, actuator commands out, error published against the target.",
+      "limitation": "Detachment control, not disruption avoidance or tearing warning. Classical controller; no quantum hardware in the loop. E-RL stays C4. Queued, not applied: triage proposes ADD (citation), so the catalog shows HOLD until a review card INCLUDEs it. No version bump.",
+      "source": "Nuclear Fusion",
+      "tags": [
+        "DIII-D",
+        "detachment",
+        "explainable AI",
+        "Bus A",
+        "heat exhaust",
+        "triage-ADD"
+      ],
+      "pillarId": "plasma-rl",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "HOLD",
+      "inferred": [
+        "importance",
+        "confidence",
+        "popularity",
+        "fields",
+        "role",
+        "pillarId",
+        "bindAction"
+      ]
+    },
+    {
+      "id": "sivak-rlqec-2026",
+      "title": "Reinforcement learning control of quantum error correction",
+      "authors": [
+        "Volodymyr Sivak",
+        "Alexis Morvan",
+        "Michael Broughton",
+        "Rodrigo G. Corti\u00f1as",
+        "Johannes Bausch",
+        "Andrew W. Senior",
+        "Matthew Neeley",
+        "Alec Eickbusch",
+        "et al."
+      ],
+      "year": 2026,
+      "date": "2026-07-08",
+      "venue": "Nature 655, 879",
+      "doi": "10.1038/s41586-026-10759-2",
+      "url": "https://doi.org/10.1038/s41586-026-10759-2",
+      "fields": [
+        "tqc"
+      ],
+      "role": "lookback",
+      "foundational": false,
+      "importance": 88,
+      "confidence": 92,
+      "popularity": 80,
+      "coreIdea": "Error-detection events from a running surface code double as a learning signal: a reinforcement-learning agent keeps steering the control parameters of a Willow processor during computation. Logical stability against drift improves 2.4x (3.5x with decoder steering), with a further ~20% logical-error suppression on a calibrated device.",
+      "whyItMatters": "Journal hardware evidence on the relevant class of machine for E-QEC, and the same 'learned agent on a classical control loop' pattern as Bus A. It does not couple the buses.",
+      "limitation": "E-QEC is already C4, so it cannot raise C. Abelian surface and colour codes; non-Abelian decoding is still not free. Coupling with E-RL would start at C1 and is not opened. Queued, not applied: triage proposes ADD (citation), so the catalog shows HOLD until a review card INCLUDEs it. No version bump.",
+      "source": "Nature",
+      "tags": [
+        "RL",
+        "surface code",
+        "Willow",
+        "drift",
+        "Bus B",
+        "triage-ADD"
+      ],
+      "pillarId": "anyon-tqc",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "inferred": [
+        "importance",
+        "confidence",
+        "popularity",
+        "fields",
+        "role",
+        "pillarId",
+        "bindAction"
+      ]
+    },
+    {
+      "id": "ren-solvable-2025",
+      "title": "Efficient Preparation of Solvable Anyons with Adaptive Quantum Circuits",
+      "authors": [
+        "Yuanjie Ren",
+        "Nathanan Tantivasadakarn",
+        "Dominic J. Williamson"
+      ],
+      "year": 2025,
+      "date": "2025-08-29",
+      "venue": "Physical Review X 15, 031060",
+      "doi": "10.1103/b9hf-gx4f",
+      "url": "https://doi.org/10.1103/b9hf-gx4f",
+      "fields": [
+        "anyons",
+        "tqc",
+        "topology"
+      ],
+      "role": "lookback",
+      "foundational": false,
+      "importance": 84,
+      "confidence": 88,
+      "popularity": 60,
+      "coreIdea": "Every solvable anyon theory with a gapped boundary, including non-Abelian Ising anyons, can be prepared with adaptive finite-depth circuits (local unitaries plus measurement and global classical feed-forward) by sequential gauging.",
+      "whyItMatters": "Journal context for how Lo 2026 prepared S3: adaptive circuits put a whole family of non-Abelian orders within reach of current processors.",
+      "limitation": "Theory. State preparation is not a fusion-measurement gate set; E-S3 stays C3. Queued, not applied: triage proposes ADD (citation), so the catalog shows HOLD until a review card INCLUDEs it. No version bump.",
+      "source": "Phys. Rev. X",
+      "tags": [
+        "adaptive circuits",
+        "solvable anyons",
+        "Ising",
+        "state preparation",
+        "triage-ADD"
+      ],
+      "pillarId": "anyon-tqc",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "HOLD",
+      "inferred": [
+        "importance",
+        "confidence",
+        "popularity",
+        "fields",
+        "role",
+        "pillarId",
+        "bindAction"
+      ]
+    },
+    {
+      "id": "zheltikov-2025",
+      "title": "Keldysh parameter for laser-nucleus interactions",
+      "authors": [
+        "A. M. Zheltikov"
+      ],
+      "year": 2025,
+      "date": "2025-12-01",
+      "venue": "Physical Review A 112, 063501",
+      "doi": "10.1103/9fsl-qldk",
+      "url": "https://doi.org/10.1103/9fsl-qldk",
+      "fields": [
+        "fusion-quantum"
+      ],
+      "role": "lookback",
+      "foundational": false,
+      "importance": 80,
+      "confidence": 82,
+      "popularity": 45,
+      "coreIdea": "Defines a nuclear Keldysh parameter for laser-nucleus interactions; near unity the Gamow tunnelling picture fails. Near-IR (1.55 eV) WKB/Volkov estimates give a DT enhancement factor of about 90 at E0 = 10 keV and 6x10^22 W cm^-2.",
+      "whyItMatters": "The optimistic disputer for S-L2. Its near-IR route at 10^21-10^22 W cm^-2 sits outside the DBE-S manuscript's EUV-X-ray band, and it says the X-ray route needs about 10^23 W cm^-2.",
+      "limitation": "WKB/Volkov estimates that TDSE calculations (PRC 110 / PRC 112) do not reproduce. No hole burning, parametric scatter or finite-pulse penalty. S-L2 stays HOLD at C1. Queued, not applied: triage proposes ADD (citation), so the catalog shows HOLD until a review card INCLUDEs it. No version bump.",
+      "source": "Phys. Rev. A",
+      "tags": [
+        "DBE-S",
+        "Layer 2",
+        "Keldysh",
+        "near-IR",
+        "disputer",
+        "triage-ADD"
+      ],
+      "pillarId": "fusion-q1000",
+      "claimIds": [
+        "S-L2"
+      ],
+      "bindAction": "HOLD",
+      "inferred": [
+        "importance",
+        "confidence",
+        "popularity",
+        "fields",
+        "role",
+        "pillarId",
+        "bindAction"
+      ]
+    },
+    {
+      "id": "thomson-prc112-2025",
+      "title": "Enhancing the creation of elements in laser-assisted heavy-ion fusion reactions",
+      "authors": [
+        "N. Thomson",
+        "L. Moschini",
+        "A. Diaz-Torres"
+      ],
+      "year": 2025,
+      "date": "2025-07-01",
+      "venue": "Phys. Rev. C 112, 014604",
+      "doi": "10.1103/myjj-z2j7",
+      "url": "https://doi.org/10.1103/myjj-z2j7",
+      "fields": [
+        "fusion-quantum"
+      ],
+      "role": "lookback",
+      "foundational": false,
+      "importance": 82,
+      "confidence": 84,
+      "popularity": 45,
+      "coreIdea": "Coupled-channels TDSE for laser-assisted 16O + 238U fusion: 6-60% enhancement of the sub-barrier fusion probability for quasistatic fields of 10^27-10^29 W cm^-2 with 1 eV photons. Femtosecond pulses cut this by many orders of magnitude.",
+      "whyItMatters": "Finite-pulse caveat for the S-L2 kill test: Vulcan-like parameters (10^23 W cm^-2, 500 fs) give about 0.05%. Same group and method as PRC 110.",
+      "limitation": "Heavy-ion fusion, not DT. Theory, no gain shot. Moves the ledger only in the conservative direction. Queued, not applied: triage proposes ADD (citation), so the catalog shows HOLD until a review card INCLUDEs it. No version bump.",
+      "source": "Phys. Rev. C",
+      "tags": [
+        "DBE-S",
+        "Layer 2",
+        "TDSE",
+        "finite pulse",
+        "triage-ADD"
+      ],
+      "pillarId": "fusion-q1000",
+      "claimIds": [
+        "S-L2"
+      ],
+      "bindAction": "HOLD",
+      "inferred": [
+        "importance",
+        "confidence",
+        "popularity",
+        "fields",
+        "role",
+        "pillarId",
+        "bindAction"
+      ]
+    },
+    {
+      "id": "wang-ysr-mimic-2026",
+      "title": "Distinguishing Majorana zero modes from trivial defect states in an iron-based superconductor",
+      "authors": [
+        "Dongfei Wang",
+        "Jon Ortuzar",
+        "Freek Massee",
+        "Ruidan Zhong",
+        "Genda Gu",
+        "Wende Xiao",
+        "Yugui Yao",
+        "Roland Wiesendanger"
+      ],
+      "year": 2026,
+      "date": "2026-09-07",
+      "venue": "Communications Physics (article in press)",
+      "doi": "10.1038/s42005-026-02832-z",
+      "url": "https://doi.org/10.1038/s42005-026-02832-z",
+      "fields": [
+        "majorana"
+      ],
+      "role": "month",
+      "foundational": false,
+      "importance": 80,
+      "confidence": 84,
+      "popularity": 55,
+      "coreIdea": "Spin-polarized STM on Fe(Te,Se) shows that near-zero-energy states at step edges and line defects are trivial Yu-Shiba-Rusinov states, and zero-energy states away from defects cannot be attributed to Majorana bound states either.",
+      "whyItMatters": "A documented Majorana mimic on a second platform. Supports E-MZM WATCH and the M5 distinguisher-or-drop rule.",
+      "limitation": "In press: no volume or pages yet (Crossref, 2026-10-03). A negative result for one material; it does not test a nanowire X+Z logical. E-MZM stays WATCH at C1. Queued, not applied: triage proposes ADD (citation), so the catalog shows HOLD until a review card INCLUDEs it. No version bump.",
+      "source": "Communications Physics",
+      "tags": [
+        "Majorana",
+        "mimic",
+        "YSR",
+        "Fe(Te,Se)",
+        "M5",
+        "triage-ADD"
+      ],
+      "pillarId": "majorana-braids",
+      "claimIds": [
+        "E-MZM"
+      ],
+      "bindAction": "HOLD",
+      "inferred": [
+        "importance",
+        "confidence",
+        "popularity",
+        "fields",
+        "role",
+        "pillarId",
+        "bindAction"
+      ]
+    },
+    {
+      "id": "llnl-str-future-ignition-2025",
+      "title": "The Future of Ignition",
+      "authors": [
+        "Lawrence Livermore National Laboratory"
+      ],
+      "year": 2025,
+      "date": "2025-07-08",
+      "venue": "LLNL Science & Technology Review, July/August 2025",
+      "url": "https://str.llnl.gov/str-julyaugust-2025/future-ignition",
+      "fields": [
+        "fusion-quantum",
+        "plasma"
+      ],
+      "role": "lookback",
+      "foundational": false,
+      "importance": 80,
+      "confidence": 88,
+      "popularity": 60,
+      "coreIdea": "LLNL's account of NIF after ignition: target gain 4.13 on 7 Apr 2025 (8.6 MJ from 2.08 MJ), eight ignition shots by late May 2025, burnup approaching 12%, and the Enhanced Yield Capability upgrade (2.2 to 2.6 MJ) for yields up to about 30 MJ. 100 MJ is not possible on NIF.",
+      "whyItMatters": "Second source for the NIF Q_sci = 4.13 baseline in the Q ledger, next to the lab shot record (nif-qsci-2025).",
+      "limitation": "Lab magazine, not peer-reviewed. Q_sci (target gain) is not Q_eng. S-Q stays CUT as output. Queued, not applied: triage proposes ADD (citation), so the catalog shows HOLD until a review card INCLUDEs it. No version bump.",
+      "source": "LLNL S&TR",
+      "tags": [
+        "NIF",
+        "ledger",
+        "Q_sci",
+        "ICF",
+        "triage-ADD"
+      ],
+      "pillarId": "fusion-q1000",
+      "claimIds": [
+        "S-Q"
+      ],
+      "bindAction": "HOLD",
+      "inferred": [
+        "importance",
+        "confidence",
+        "popularity",
+        "fields",
+        "role",
+        "pillarId",
+        "bindAction"
+      ]
+    },
+    {
+      "id": "llnl-str-ignition-energy-2025",
+      "title": "From Ignition to Energy",
+      "authors": [
+        "Lawrence Livermore National Laboratory"
+      ],
+      "year": 2025,
+      "date": "2025-07-08",
+      "venue": "LLNL Science & Technology Review, July/August 2025",
+      "url": "https://str.llnl.gov/str-julyaugust-2025/ignition-energy",
+      "fields": [
+        "fusion-quantum",
+        "plasma"
+      ],
+      "role": "lookback",
+      "foundational": false,
+      "importance": 82,
+      "confidence": 80,
+      "popularity": 55,
+      "coreIdea": "LLNL's plant-level view: a viable inertial fusion energy plant needs target gain of at least 30 (50-100 ideal) at 10-20 shots per second, with diode-pumped lasers and a closed power cycle. NIF is at gain 4.13 and about one shot a day.",
+      "whyItMatters": "Sources plant gain and repetition rate for the ICF side of the Q ledger (M1). It narrows, but does not close, the driver-efficiency marker.",
+      "limitation": "Lab magazine. No driver wall-plug efficiency number and no recirculating-power breakdown. Q = 1000 stays a ledger stress test. Queued, not applied: triage proposes ADD (citation), so the catalog shows HOLD until a review card INCLUDEs it. No version bump.",
+      "source": "LLNL S&TR",
+      "tags": [
+        "IFE",
+        "ledger",
+        "plant gain",
+        "repetition rate",
+        "triage-ADD"
+      ],
+      "pillarId": "fusion-q1000",
+      "claimIds": [
+        "S-Q"
+      ],
+      "bindAction": "HOLD",
+      "inferred": [
+        "importance",
+        "confidence",
+        "popularity",
+        "fields",
+        "role",
+        "pillarId",
+        "bindAction"
+      ]
+    },
+    {
+      "id": "bousso-2026",
+      "title": "Quantum State of a Gravitating Spacetime Region",
+      "authors": [
+        "Raphael Bousso",
+        "Sami Kaya",
+        "Guanda Lin",
+        "Arvin Shahbazi-Moghaddam"
+      ],
+      "year": 2026,
+      "date": "2026-09-09",
+      "venue": "arXiv hep-th",
+      "arxiv": "2609.10684",
+      "url": "https://arxiv.org/abs/2609.10684",
+      "fields": [
+        "holography"
+      ],
+      "role": "month",
+      "foundational": false,
+      "importance": 40,
+      "confidence": 55,
+      "popularity": 38,
+      "coreIdea": "Associates a gravitational Hilbert space and quantum states with compact spatial regions using the gravitational path integral; when one saddle dominates, the state has a classical Lorentzian spacetime interpretation.",
+      "whyItMatters": "Holography and quantum gravity stay on the reading list. Duality is not a tokamak I/O map.",
+      "limitation": "CUT (lab rule): binds the E-HOL denylist. Reading is allowed; INCLUDE is not. Triage READING-LIST: kept in the library on the reading list, cut from the engine.",
+      "source": "arXiv hep-th",
+      "tags": [
+        "holography",
+        "denylist",
+        "reading list",
+        "CUT",
+        "triage-READING-LIST"
+      ],
+      "claimIds": [
+        "E-HOL"
+      ],
+      "bindAction": "REJECT",
+      "inferred": [
+        "importance",
+        "confidence",
+        "popularity",
+        "role"
+      ]
+    },
+    {
+      "id": "lesko-floquet-ti-2026",
+      "title": "Optical control of electrons in a Floquet topological insulator",
+      "authors": [
+        "Daniel M. B. Lesko",
+        "Tobias Weitz",
+        "Simon Wittigschlager",
+        "Weizhe Li",
+        "Christian Heide",
+        "Ofer Neufeld",
+        "Peter Hommelhoff"
+      ],
+      "year": 2026,
+      "date": "2026-08-31",
+      "venue": "Nature Physics (online first)",
+      "doi": "10.1038/s41567-026-03429-7",
+      "url": "https://doi.org/10.1038/s41567-026-03429-7",
+      "fields": [
+        "time-crystal",
+        "topology"
+      ],
+      "role": "month",
+      "foundational": false,
+      "importance": 55,
+      "confidence": 80,
+      "popularity": 60,
+      "coreIdea": "Circularly polarized femtosecond pulses at 1,550 nm turn monolayer graphene into a Floquet topological insulator; a phase-locked second harmonic then steers electrons in the light-dressed bands (photocurrent circular dichroism, an all-optical anomalous Hall effect, valley-polarized currents).",
+      "whyItMatters": "Floquet physics stays on the reading list. This is driven topology in a real material, not a system clock.",
+      "limitation": "Femtosecond light-dressed states, not a prethermal lifetime against a control horizon. E-TC stays CUT as metronome. Triage READING-LIST: kept in the library on the reading list, cut from the engine.",
+      "source": "Nature Physics",
+      "tags": [
+        "Floquet",
+        "graphene",
+        "reading list",
+        "cut-as-clock",
+        "triage-READING-LIST"
+      ],
+      "pillarId": "floquet-clock",
+      "claimIds": [
+        "E-TC"
+      ],
+      "bindAction": "REJECT",
+      "inferred": [
+        "importance",
+        "confidence",
+        "popularity",
+        "role",
+        "pillarId"
+      ]
     }
   ],
   "runs": [
