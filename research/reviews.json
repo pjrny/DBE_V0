@@ -5276,7 +5276,8 @@
         "core": "Quantum-capacitance oscillations that look Majorana can be faked by a gapless trivial wire; the paper splits the two by resonance structure.",
         "why": "M5 is distinguisher-or-drop. This is a proposed kill test, not a logical qubit.",
         "limit": "Theory of an interferometer. Does not produce X and Z logicals."
-      }
+      },
+      "resolution": "Still queued. INCLUDE cannot auto-merge because E-MZM is WATCH (Auto-Gate A1) and no board decision is recorded, so the catalog keeps bindAction HOLD (tag queued-INCLUDE). Triage lists it only as an optional main.tex citation (Roy2026capacitance)."
     },
     {
       "id": "2026-09-22/yang-tokaglint-2026",
@@ -6305,7 +6306,8 @@
         "core": "A measured Floquet code whose quasiparticles cannot move in space or in time.",
         "why": "The prettiest unification of two things we already cut as infrastructure.",
         "limit": "Reading is allowed. Load-bearing is not. Queue, do not bump."
-      }
+      },
+      "resolution": "Closed at DBE-0.2.0 (2026-09-21): QUEUE new-pillars expired and spacetime-fractons was rejected as an engine pillar. Both bound claims (E-FR, E-TC) are CUT, so the catalog now shows REJECT (reading list). This card is kept as the proposal of record."
     },
     {
       "id": "rev-2026-09-20-holions",

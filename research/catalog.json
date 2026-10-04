@@ -212,8 +212,8 @@
         "pretko-2020",
         "hopkin-2026"
       ],
-      "engineStatus": "HOLD",
-      "engineNote": "Theory workstream. CUT from hardware stack.",
+      "engineStatus": "CUT",
+      "engineNote": "Maps to E-FR, CUT from the hardware stack at DBE-0.2.0. Fracton codes stay a theory workstream.",
       "claimIds": [
         "E-FR"
       ],
@@ -245,8 +245,8 @@
         "else-2016",
         "watanabe-2014"
       ],
-      "engineStatus": "HOLD",
-      "engineNote": "Many-body physics study. CUT as metronome.",
+      "engineStatus": "CUT",
+      "engineNote": "Maps to E-TC, CUT as metronome at DBE-0.2.0. Many-body physics study; time-crystal physics stays on the reading list.",
       "claimIds": [
         "E-TC"
       ],
@@ -483,8 +483,8 @@
         "canossa-2026"
       ],
       "whySuggested": "Connects two existing pillars with a shared bulk-boundary language.",
-      "engineStatus": "QUEUE",
-      "engineNote": "Couples two non-KEEP items. Denylist-adjacent.",
+      "engineStatus": "CUT",
+      "engineNote": "Rejected as an engine pillar at DBE-0.2.0: couples E-FR (CUT as hardware) with the E-HOL denylist. Reading list only.",
       "claimIds": [
         "E-FR",
         "E-HOL"
@@ -591,8 +591,8 @@
       "statement": "Floquet codes can host excitations immobile in both space and time, unifying memory and clock as one object.",
       "dbeGoal": "Only if an interface contract exists. Currently a monthly NEW PILLAR candidate.",
       "status": "suggested",
-      "engineStatus": "QUEUE",
-      "engineNote": "Queued 2026-09-20. Needs in/out/latency/fail-safe. Opportunity cost: attention on E-S3 / E-RL / S-L2.",
+      "engineStatus": "CUT",
+      "engineNote": "Queued 2026-09-20; rejected as an engine pillar at DBE-0.2.0 (couples two CUT boxes, E-FR and E-TC). Reading list only.",
       "evidence": [
         "floquet-fracton-2026"
       ],
@@ -642,7 +642,8 @@
       ],
       "limitation": "Suggested, not frozen.",
       "milestones": [],
-      "engineStatus": "QUEUE"
+      "engineStatus": "CUT",
+      "engineNote": "Same proposal as spacetime-fractons (Soule & Williamson, 2609.03703). Rejected with it at DBE-0.2.0. Reading list only."
     },
     {
       "id": "cyclic-fusion-family",
@@ -1076,18 +1077,21 @@
       "popularity": 88,
       "coreIdea": "The holographic dictionary is a quantum error-correcting code: bulk operators are reconstructable from different boundary patches the way logical qubits are reconstructable from different subsets of physical qubits.",
       "whyItMatters": "It turns holography from poetry into an encoder specification for the DBE compression block.",
-      "limitation": "The code properties are proven in toy models (and argued in AdS/CFT), not in a plasma-state tensor network with real diagnostic noise.",
+      "limitation": "The code properties are proven in toy models (and argued in AdS/CFT), not in a plasma-state tensor network with real diagnostic noise. CUT (lab rule): binds the E-HOL denylist. Reading is allowed; INCLUDE is not. Stays on the reading list.",
       "source": "program library / arXiv hep-th",
       "tags": [
         "QEC",
         "HaPPY",
-        "bulk reconstruction"
+        "bulk reconstruction",
+        "CUT",
+        "denylist",
+        "reading list"
       ],
       "pillarId": "holographic-encode",
       "claimIds": [
         "E-HOL"
       ],
-      "bindAction": "INCLUDE"
+      "bindAction": "REJECT"
     },
     {
       "id": "levaillant-2015",
@@ -1494,18 +1498,21 @@
       "popularity": 91,
       "coreIdea": "A tiny SYK-inspired circuit on Sycamore was interpreted as a traversable-wormhole teleportation protocol \u2014 holographic dynamics shrunk onto a handful of qubits.",
       "whyItMatters": "It is a proof-of-attitude: holographic encoding is something you can put on hardware, not only on a blackboard. The DBE encoder should stay this honest about scale.",
-      "limitation": "The system is extremely small; whether it is \u2018gravity\u2019 or a clever teleportation circuit is still argued. Do not overclaim. Author Correction: Nature 640, E32 (2025), doi:10.1038/s41586-025-08788-4.",
+      "limitation": "The system is extremely small; whether it is \u2018gravity\u2019 or a clever teleportation circuit is still argued. Do not overclaim. Author Correction: Nature 640, E32 (2025), doi:10.1038/s41586-025-08788-4. CUT (lab rule): binds the E-HOL denylist. Reading is allowed; INCLUDE is not. Stays on the reading list.",
       "source": "program library / Nature",
       "tags": [
         "SYK",
         "teleportation",
-        "toy holography"
+        "toy holography",
+        "CUT",
+        "denylist",
+        "reading list"
       ],
       "pillarId": "holographic-encode",
       "claimIds": [
         "E-HOL"
       ],
-      "bindAction": "INCLUDE"
+      "bindAction": "REJECT"
     },
     {
       "id": "dbe-whitepaper",
@@ -1850,19 +1857,22 @@
       "popularity": 55,
       "coreIdea": "Topological holography (SymTFT) is extended from liquid topological order to fracton stabilizer codes: symmetries and dualities of the memory become boundary data of a higher-dimensional bulk.",
       "whyItMatters": "This is the missing dictionary between two DBE boxes that currently do not talk: fracton memory and holographic compression.",
-      "limitation": "Formal bulk-boundary construction. Not yet an encoder you can drop onto a plasma profile.",
+      "limitation": "Formal bulk-boundary construction. Not yet an encoder you can drop onto a plasma profile. CUT (lab rule): binds the E-HOL denylist. Reading is allowed; INCLUDE is not. Stays on the reading list.",
       "source": "program library / arXiv quant-ph",
       "tags": [
         "SymTFT",
         "fracton",
-        "holography"
+        "holography",
+        "CUT",
+        "denylist",
+        "reading list"
       ],
       "suggestedPillar": "fracton-holography",
       "claimIds": [
         "E-FR",
         "E-HOL"
       ],
-      "bindAction": "INCLUDE"
+      "bindAction": "REJECT"
     },
     {
       "id": "hopkin-2026",
@@ -1962,18 +1972,21 @@
       "popularity": 68,
       "coreIdea": "The HaPPY holographic code, a hyperbolic tensor-network QEC, was run on trapped ions and showed gravity-like signatures in the code\u2019s entanglement geometry.",
       "whyItMatters": "Moves holographic encoding from analogy to a device-level experiment. Directly relevant to replacing the simulator\u2019s block-average \u2018encoder\u2019.",
-      "limitation": "Toy code, small system. \u2018Gravity-like\u2019 is a diagnostic, not laboratory gravity.",
+      "limitation": "Toy code, small system. \u2018Gravity-like\u2019 is a diagnostic, not laboratory gravity. CUT (lab rule): binds the E-HOL denylist. Reading is allowed; INCLUDE is not. Stays on the reading list.",
       "source": "program library / arXiv quant-ph",
       "tags": [
         "HaPPY",
         "trapped ions",
-        "tensor network"
+        "tensor network",
+        "CUT",
+        "denylist",
+        "reading list"
       ],
       "pillarId": "holographic-encode",
       "claimIds": [
         "E-HOL"
       ],
-      "bindAction": "INCLUDE"
+      "bindAction": "REJECT"
     },
     {
       "id": "xu-2026-fqh",
@@ -2608,17 +2621,20 @@
       "popularity": 47,
       "coreIdea": "A spectral look at why pairing in a Yukawa-SYK model organises itself as an AdS\u2082 problem \u2014 holography showing up inside a condensed-matter Hamiltonian.",
       "whyItMatters": "Keeps the holography pillar connected to pairing/superconductivity, not only to toy QEC codes.",
-      "limitation": "Not a plasma compressor and not a fault-tolerant encoder.",
+      "limitation": "Not a plasma compressor and not a fault-tolerant encoder. CUT (lab rule): binds the E-HOL denylist. Reading is allowed; INCLUDE is not. Stays on the reading list.",
       "source": "program library / arXiv hep-th",
       "tags": [
         "SYK",
         "AdS2",
-        "pairing"
+        "pairing",
+        "CUT",
+        "denylist",
+        "reading list"
       ],
       "claimIds": [
         "E-HOL"
       ],
-      "bindAction": "INCLUDE"
+      "bindAction": "REJECT"
     },
     {
       "id": "dehghani-2026",
@@ -2782,19 +2798,23 @@
       "popularity": 54,
       "coreIdea": "A Floquet (periodically measured) code whose excitations cannot move in space or in time \u2014 a spacetime fracton. Memory and clock become the same object on paper.",
       "whyItMatters": "This is the cleanest 2026 argument for unifying two HOLD items (fracton memory and time-crystal clock). The protocol still forbids making either load-bearing hardware.",
-      "limitation": "Circuit theory. Does not beat the D1 / cut-as-hardware rule. Queued as a new-pillar candidate, not auto-promoted.",
+      "limitation": "Circuit theory. Binds E-FR and E-TC, both CUT at DBE-0.2.0; its NEW PILLAR proposal (spacetime-fractons) expired and was rejected at that freeze. Reading list only.",
       "source": "arXiv quant-ph / month window",
       "tags": [
         "new-pillar-candidate",
         "Floquet",
-        "fracton"
+        "fracton",
+        "CUT",
+        "reading list",
+        "cut-as-hardware",
+        "cut-as-clock"
       ],
       "claimIds": [
         "E-FR",
         "E-TC"
       ],
       "suggestedPillar": "spacetime-fractons",
-      "bindAction": "HOLD",
+      "bindAction": "REJECT",
       "aliases": [
         "soule-2026"
       ]
@@ -5747,7 +5767,8 @@
         "Majorana",
         "mimic",
         "M5",
-        "distinguisher"
+        "distinguisher",
+        "queued-INCLUDE"
       ],
       "pillarId": "majorana-braids",
       "claimIds": [
