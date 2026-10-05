@@ -14,6 +14,13 @@
 - Catalog status now matches the claim freeze. The floquet-clock and fracton-memory pillars are CUT. The spacetime-fractons, spacetime-fracton-codes and fracton-holography pillars are CUT. All six E-HOL papers (including Maldacena 1997) and floquet-fracton-2026 are REJECT (reading list). Jennings is REJECT because it supports no claim. The DBE white paper is CUT on the E-5 denylist and kept as the audit source. The floquet-majorana-codes pillar (rejected 2026-09-21) and the expired cyclic-fusion-family, nonabelian-qldpc and topo-dynamics pillars are CUT. `tamiya-coherent-2026` resolves as an alias of tamiya-2026. No paper version bump. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
 - README and docs/research/OBSERVATORY.md freeze text now read E-TC and E-FR as CUT (DBE-0.2.0).
 
+
+## [0.4.15] - 2026-10-05
+### Added
+- Daily observatory run (lookback 7 days). No paper version bump. The 2 Oct listing is in; yesterday's unscored pile is scored first. Continuous QEC thermodynamics and a deformed toric-code norm are queued under the error layer only. Seven holographic papers are rejected on the denylist. A fusion-category dimension bound, a transmon exchange pulse, a phase-only symmetry, a lattice-Boltzmann syndrome, a graphene Floquet gap, and a quasisymmetric-field construction are rejected as not the bound claim. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
+
+### Changed
+- Command-strip date stamp moved to 2026-10-05 so this-week counts the new harvest.
 ## [0.4.13] - 2026-10-03
 ### Added
 - Daily observatory run (lookback 7 days). No paper version bump. No Friday or Saturday arXiv listing. Phys. Rev. X mixed-state axioms are queued under the error layer only. Twisted quantum-double stabilizers, constant-depth atom-array surgery, and a toric-code electric-magnetic Clifford no-go are queued under the same layer. DIII-D island-chain transport is queued with no coil command. A polarized parafermion trench is queued as not an X+Z logical. A fractonic fluid and an axionic holographic superconductor are rejected. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
