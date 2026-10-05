@@ -1,6 +1,566 @@
 {
-  "asOf": "2026-10-03",
+  "asOf": "2026-10-05",
   "cards": [
+    {
+      "id": "rev-2026-10-05-2609.35287",
+      "paperId": "2609.35287",
+      "date": "2026-10-05",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass",
+        "note": "G1 passes: the bound is dimensionless. G3 passes: it is an upper bound, not a scale-up. G4 fails: a spherical fusion category is not the S3 processor. G5 fails: there is no engine falsifier this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: the bound is dimensionless. G3 passes: it is an upper bound, not a scale-up. G4 fails: a spherical fusion category is not the S3 processor. G5 fails: there is no engine falsifier this quarter. G6 passes.",
+      "score": "E-S3 C3 T3 D3 A3 stays",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A bound on Galois twists of the global dimension is not an S3 fusion measurement, and it does not put fusion back into a gate set.",
+      "ledger": "none.",
+      "plain": {
+        "core": "For a spherical fusion category, the Galois conjugates of the dimension character fill a block of the S-matrix of the Drinfeld center. The paper bounds a twisted sum of those dimensions and lists the global dimensions allowed below sqrt(5).",
+        "why": "E-S3 is braid plus fusion measurement. This is a dimension classification. C stays at C3. Nothing is queued onto the claim.",
+        "limit": "Bare arXiv, CC BY 4.0. Classification theorem. Not a processor shot."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: no KEEP or HOLD claim. A2 miss (G4, G5). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass. A7 pass. A8 n/a. Not an S3 fusion measurement.",
+      "math": "Spherical fusion category of global dimension D. For every character chi of Gal(Q(D)/Q), the twisted sum of sigma(D) has absolute value at most e^{-1} times f(chi)^{-1/2}, with f the conductor and e the order of the dimensional grading group. Application: possible global dimensions below sqrt(5), extending Ostrik and Etingof up to 4 sqrt(3)/5. Author Andrew Schopieray. arXiv:2609.35287v1, submitted 2026-09-28, math.QA. No DOI in the OAI record.",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 48,
+        "confidence": 53,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-05-2609.37296",
+      "paperId": "2609.37296",
+      "date": "2026-10-05",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: the quoted rates are frequencies and dimensionless leakage. G3 passes: the 5.27e5 factor is one pulse family, not an unbounded gain. G4 fails: a transmon exchange pulse is not the surface-code or qLDPC platform. G5 passes: the pulse can be re-simulated this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: the quoted rates are frequencies and dimensionless leakage. G3 passes: the 5.27e5 factor is one pulse family, not an unbounded gain. G4 fails: a transmon exchange pulse is not the surface-code or qLDPC platform. G5 passes: the pulse can be re-simulated this quarter. G6 passes.",
+      "score": "no claim; E-QEC considered and refused",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A leakage-suppressed exchange pulse on a transmon is not a surface-code or qLDPC memory, and Floquet return interference in the calibration is not a time-crystal clock.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Fast exchange in a weakly anharmonic transmon leaks out of the computational states. Parametric DRAG adds first- and second-derivative corrections through one frequency command and cuts that leakage in Duffing simulations.",
+        "why": "Useful pulse craft. It does not bind E-QEC and it does not reopen E-TC. C unchanged.",
+        "limit": "Bare arXiv. Duffing and charge-Hamiltonian simulations. Not a code and not a device memory."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: supports no KEEP or HOLD claim. A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass. A7 pass. A8 n/a.",
+      "math": "At g/2pi = 100 MHz, the abstract reports a geometric-mean leakage reduction of 5.27e5 versus the base pulse across 12.5-35 ns in Duffing simulations, and endpoint leakage 1.98e-7 at 13 ns for the calibrated full-exchange pulse. Transfer to a charge Hamiltonian is a mean 893-fold reduction over 12.5-22 ns after recalibration. Authors Yiwen Li, Xinsheng Tan, Yang Yu. arXiv:2609.37296v1, submitted 2026-09-29. No DOI in the OAI record.",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 55,
+        "confidence": 55,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-05-2609.37806",
+      "paperId": "2609.37806",
+      "date": "2026-10-05",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass",
+        "note": "G4 fails: AdS compact objects are not a reactor or processor encoder. G5 fails: Love numbers are not a tokamak or QEC falsifier this year. G6 passes. No plant term is entered."
+      },
+      "gateNote": "G4 fails: AdS compact objects are not a reactor or processor encoder. G5 fails: Love numbers are not a tokamak or QEC falsifier this year. G6 passes. No plant term is entered.",
+      "score": "E-HOL CUT stays",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "The denylist needs two independent C>=4 sources to reverse. Worldline EFT for holographic compact objects is not that packet.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Heavy operators dual to compact objects in AdS are described by a worldline effective theory. Tidal Love numbers in that theory are read off from CFT dimensions and OPE coefficients.",
+        "why": "E-HOL stays CUT. Reading is allowed. INCLUDE is not.",
+        "limit": "Readable. Not INCLUDE. Reversal is not requested."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-HOL is CUT. A2 miss (G4, G5). A3 miss. A4 miss. A5 miss: bare arXiv. A6 miss: denylist. Not a CUT reversal.",
+      "math": "Heavy-heavy-light-light correlators. Worldline EFT for a compact object smaller than the AdS radius. Witten diagrams reorganize into a Born series. Authors Miguel Correia, Vasco Gon\u00e7alves, Filipe Serrano. arXiv:2609.37806v1, submitted 2026-09-29, hep-th. No DOI in the OAI record.",
+      "autoGate": "miss A1, A2, A3, A4, A5, A6",
+      "scoreHeuristic": {
+        "importance": 42,
+        "confidence": 44,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-05-2609.38085",
+      "paperId": "2609.38085",
+      "date": "2026-10-05",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G4 fails: phase invariance is not the S3 platform. G5 passes: the reduction can be checked in a simulator this quarter. G6 passes."
+      },
+      "gateNote": "G4 fails: phase invariance is not the S3 platform. G5 passes: the reduction can be checked in a simulator this quarter. G6 passes.",
+      "score": "no claim; E-S3 considered and refused",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Invariance up to a global phase is not braid statistics and not an S3 fusion measurement. Do not bind E-S3 on the word anyonic.",
+      "ledger": "none.",
+      "plain": {
+        "core": "The paper gives quantum algorithms for the state hidden-subgroup problem when the hidden subgroup is normal. It then defines an 'anyonic' symmetry as invariance of a pure state up to a global phase, and reduces that task to the same problem.",
+        "why": "A false friend on the word anyonic. C stays at C3. E-QEC is not bound either.",
+        "limit": "Bare arXiv, CC BY 4.0, version v2. No fusion measurement and no braid statistics in the abstract."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: supports no KEEP or HOLD claim. A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass. A7 pass. A8 n/a.",
+      "math": "Non-abelian StateHSP for a normal hidden subgroup. Anyonic state symmetry, as defined here, is invariance up to global phase, reduced to StateHSP via linearisations of projective representations and linear codes. Application stated: stabiliser groups of mixed qudit states. Authors Isaac Holt, Sathyawageeswar Subramanian. arXiv:2609.38085v2, submitted 2026-09-29. No DOI in the OAI record.",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 46,
+        "confidence": 51,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-05-2609.38129",
+      "paperId": "2609.38129",
+      "date": "2026-10-05",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 and G2 pass on the stated mass and momentum residuals. G3 passes: one D2Q9 alphabet and one D3Q19 injection, not an unbounded reactor scaling. G4 fails: not the surface-code platform and not a tokamak controller. G5 passes: the 18-qubit check can be repeated this quarter. G6 passes. The 1.75e4 figure is a classical injection count, not Q_eng."
+      },
+      "gateNote": "G1 and G2 pass on the stated mass and momentum residuals. G3 passes: one D2Q9 alphabet and one D3Q19 injection, not an unbounded reactor scaling. G4 fails: not the surface-code platform and not a tokamak controller. G5 passes: the 18-qubit check can be repeated this quarter. G6 passes. The 1.75e4 figure is a classical injection count, not Q_eng.",
+      "score": "no claim; E-QEC considered and refused",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A mass-momentum residual on a D2Q9 register is not a surface-code syndrome and not a coil command.",
+      "ledger": "none. 1.75e4 is an injection count, not Q_eng.",
+      "plain": {
+        "core": "If an ideal lattice-Boltzmann collision keeps mass and momentum, a fault that moves one population leaves a mass-momentum residual that can be used as a syndrome. An 18-qubit statevector check on D2Q9 recovers one family of bit flips.",
+        "why": "Off the error layer and off the plant attach. No bridge. C unchanged.",
+        "limit": "Bare arXiv. Ideal charge-preserving collision and a reliable reference, as the abstract states. Not a plant attach."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: supports no KEEP or HOLD claim. A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass. A7 pass. A8 n/a. Not a two-claim bridge.",
+      "math": "D2Q9 statevector on eighteen data qubits recovers a single-bit family to double-precision roundoff, assuming an ideal charge-preserving collision. D3Q19 still has a fifteen-dimensional kinetic nullspace. A classical decaying-flow run injects about 1.75e4 selected single-population shifts per realization. Author Muhammad Idrees Khan. arXiv:2609.38129v1, submitted 2026-09-29. No DOI in the OAI record.",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 58,
+        "confidence": 56,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-05-2609.38302",
+      "paperId": "2609.38302",
+      "date": "2026-10-05",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass",
+        "note": "G4 fails: a Dp-brane background is not a reactor or processor encoder. G5 fails: a holographic free energy is not a tokamak or QEC falsifier. G6 passes."
+      },
+      "gateNote": "G4 fails: a Dp-brane background is not a reactor or processor encoder. G5 fails: a holographic free energy is not a tokamak or QEC falsifier. G6 passes.",
+      "score": "E-HOL CUT stays",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "The denylist needs two independent C>=4 sources to reverse. New D2-brane backgrounds are not that packet.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Dp-brane backreaction can leave an AdS factor plus a running dilaton. The paper builds supersymmetric examples, holographic RG flows, and a thermal free energy for the dual non-conformal theory.",
+        "why": "E-HOL stays CUT. Reading is allowed. INCLUDE is not.",
+        "limit": "Readable. Not INCLUDE. Reversal is not requested."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-HOL is CUT. A2 miss (G4, G5). A3 miss. A4 miss. A5 miss: bare arXiv. A6 miss: denylist. Not a CUT reversal.",
+      "math": "Scale-covariant string backgrounds from Dp-branes. Holographic RG flows and the spectrum of low-lying operators. Thermal free energy and scalar two-point functions are predicted for lattice checks of the dual theory, not of a tokamak. Authors Nikolay Bobev, Pieter Bomans, Fridrik Freyr Gautason. arXiv:2609.38302v1, submitted 2026-09-29. No DOI in the OAI record.",
+      "autoGate": "miss A1, A2, A3, A4, A5, A6",
+      "scoreHeuristic": {
+        "importance": 42,
+        "confidence": 44,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-05-2609.38313",
+      "paperId": "2609.38313",
+      "date": "2026-10-05",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass",
+        "note": "G4 fails: an AdS soliton probe is not a reactor or processor encoder. G5 fails: oscillatory complexity is not a QEC or tokamak falsifier. G6 passes."
+      },
+      "gateNote": "G4 fails: an AdS soliton probe is not a reactor or processor encoder. G5 fails: oscillatory complexity is not a QEC or tokamak falsifier. G6 passes.",
+      "score": "E-HOL CUT stays",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "The denylist needs two independent C>=4 sources to reverse. Holographic spread complexity is not that packet.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Spread complexity of local operators is read from the proper momentum of a probe falling into a confining AdS soliton. Radial and rotating probes both show oscillatory complexity in the numerics.",
+        "why": "E-HOL stays CUT. Reading is allowed. INCLUDE is not.",
+        "limit": "Readable. Not INCLUDE. Reversal is not requested."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-HOL is CUT. A2 miss (G4, G5). A3 miss. A4 miss. A5 miss: bare arXiv. A6 miss: denylist. Not a CUT reversal.",
+      "math": "Type IIB dual of a deformation of N=4 super Yang-Mills flowing to a confining (2+1)-dimensional theory. Complexity rate tied to proper momentum of an infalling probe. Numerical trajectories oscillate. Authors Dimitrios Chatzis, Madison Hammond, Ricardo T. Santamaria, Jonathan Whittle. arXiv:2609.38313v1, submitted 2026-09-29. No DOI in the OAI record.",
+      "autoGate": "miss A1, A2, A3, A4, A5, A6",
+      "scoreHeuristic": {
+        "importance": 42,
+        "confidence": 44,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-05-2609.38318",
+      "paperId": "2609.38318",
+      "date": "2026-10-05",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass",
+        "note": "G2 passes because the coefficient is not adopted as plant energy accounting. G4 fails: a holographic interface is not a reactor encoder. G5 fails: the transmission coefficient is not a tokamak falsifier. G6 passes: it is not Q_eng."
+      },
+      "gateNote": "G2 passes because the coefficient is not adopted as plant energy accounting. G4 fails: a holographic interface is not a reactor encoder. G5 fails: the transmission coefficient is not a tokamak falsifier. G6 passes: it is not Q_eng.",
+      "score": "E-HOL CUT stays",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "The denylist needs two independent C>=4 sources to reverse. A holographic transmission coefficient is not a plant power term and not that packet.",
+      "ledger": "none. The transmission coefficient is not P_fusion, eta_conv, or Q_eng.",
+      "plain": {
+        "core": "For a class of AdS-sliced domain walls, the energy transmission across a conformal interface is a closed function of the bulk warp factor. In that class it does not depend on the angle of incidence.",
+        "why": "E-HOL stays CUT. Reading is allowed. INCLUDE is not.",
+        "limit": "Readable. Not INCLUDE. Reversal is not requested."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-HOL is CUT. A2 miss (G4, G5). A3 miss. A4 miss. A5 miss: bare arXiv. A6 miss: denylist. Not a CUT reversal.",
+      "math": "Energy transmission across conformal interfaces from AdS_d-sliced domain walls, as a function of the warp factor. The abstract says transmission in this class is independent of incidence angle and of the incident profile, and is bounded by central-charge-like counts. Authors Igal Arav, Theodore Bertrand, Shira Chapman, Giuseppe Policastro, Sebastian Waeber. arXiv:2609.38318v1, submitted 2026-09-29. No DOI in the OAI record. No ledger term is copied.",
+      "autoGate": "miss A1, A2, A3, A4, A5, A6",
+      "scoreHeuristic": {
+        "importance": 42,
+        "confidence": 44,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-05-2609.38336",
+      "paperId": "2609.38336",
+      "date": "2026-10-05",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass",
+        "note": "G4 fails: D2-brane holography is not a reactor or processor encoder. G5 fails: a generalised RG flow is not a QEC or tokamak falsifier. G6 passes."
+      },
+      "gateNote": "G4 fails: D2-brane holography is not a reactor or processor encoder. G5 fails: a generalised RG flow is not a QEC or tokamak falsifier. G6 passes.",
+      "score": "E-HOL CUT stays",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "The denylist needs two independent C>=4 sources to reverse. Generalised conformal symmetry on the D2-brane theory is not that packet.",
+      "ledger": "none.",
+      "plain": {
+        "core": "The massless IIA truncation dual to three-dimensional super Yang-Mills has a scaling similarity. The paper builds generalised RG flows and revisits Coulomb-branch singularities in that frame.",
+        "why": "E-HOL stays CUT. Reading is allowed. INCLUDE is not.",
+        "limit": "Readable. Not INCLUDE. Reversal is not requested."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-HOL is CUT. A2 miss (G4, G5). A3 miss. A4 miss. A5 miss: bare arXiv. A6 miss: denylist. Not a CUT reversal.",
+      "math": "Dilatonic sector of four-dimensional maximal ISO(7) gauged supergravity, a truncation of massless IIA on S^6. Scaling similarity and generalised RG flows constructed numerically. Authors Andrea Conti, Adolfo Guarino, Ricardo Stuardo. arXiv:2609.38336v1, submitted 2026-09-29. No DOI in the OAI record.",
+      "autoGate": "miss A1, A2, A3, A4, A5, A6",
+      "scoreHeuristic": {
+        "importance": 42,
+        "confidence": 44,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-05-sengupta-kdv-2026",
+      "paperId": "sengupta-kdv-2026",
+      "date": "2026-10-05",
+      "bind": [],
+      "gates": {
+        "G1": "fail",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 fails: the OSTI payload has no abstract, so units were not checked. None were invented. G4 fails: an equilibrium construction is not Bus A attach and not an S-L3 rate. G5 passes: a quasisymmetric field from a KdV potential can be checked in an equilibrium code this quarter. G6 passes."
+      },
+      "gateNote": "G1 fails: the OSTI payload has no abstract, so units were not checked. None were invented. G4 fails: an equilibrium construction is not Bus A attach and not an S-L3 rate. G5 passes: a quasisymmetric field from a KdV potential can be checked in an equilibrium code this quarter. G6 passes.",
+      "score": "no claim; E-RL considered and refused",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A KdV potential that builds a quasisymmetric field is an equilibrium construction. It is not a feedback loop on a coil and not a Vlasov growth rate.",
+      "ledger": "none. No abstract, so no power term was available to mis-file.",
+      "plain": {
+        "core": "The OSTI record is a Physics of Plasmas article whose title says periodic Korteweg\u2013de Vries potentials generate quasisymmetric magnetic fields. The record returned no abstract.",
+        "why": "Stellarator equilibrium theory on the reading list. Not plant attach and not the Vlasov method claim. C unchanged.",
+        "limit": "OSTI record 17033582 has no abstract field. Dimensions were not checked and no number was invented. Accepted manuscript; licence not stated in the record."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: supports no KEEP or HOLD claim. A2 miss (G1, G4). A3 miss. A4 miss. A5 pass: Physics of Plasmas is a journal, and that still does not raise C without A1-A8. A6 pass. A7 pass. A8 n/a.",
+      "math": "OSTI API v1 record osti:17033582, DOI 10.1063/5.0341763, Physics of Plasmas volume 33 issue 9, publication_date 2026-09-29, product type Journal Article, language English, article_type Accepted Manuscript. No description or abstract field in the payload. Authors as returned: Sengupta, Nikulsin, Buller, Madan, Paul, Nies. Full text link on OSTI: https://www.osti.gov/servlets/purl/17033582. PDF not cached.",
+      "autoGate": "miss A1, A2, A3, A4",
+      "scoreHeuristic": {
+        "importance": 52,
+        "confidence": 55,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-05-2609.38815",
+      "paperId": "2609.38815",
+      "date": "2026-10-05",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass",
+        "note": "G4 fails: a holographic entanglement formula is not a reactor or processor encoder. G5 fails: it is not a tokamak or device-QEC falsifier. G6 passes: the area law is not Q_eng."
+      },
+      "gateNote": "G4 fails: a holographic entanglement formula is not a reactor or processor encoder. G5 fails: it is not a tokamak or device-QEC falsifier. G6 passes: the area law is not Q_eng.",
+      "score": "E-HOL CUT stays",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "The denylist needs two independent C>=4 sources to reverse. One holographic entropy proposal is not that packet, and a bulk area is not a ledger output.",
+      "ledger": "none. The area formula is not Q_eng.",
+      "plain": {
+        "core": "The paper proposes a holographic dual for the relative entropy of entanglement of a boundary tripartition, as a difference of bulk areas. Random tensor networks are used for the matching bounds.",
+        "why": "E-HOL stays CUT. Reading is allowed. INCLUDE is not.",
+        "limit": "Readable. Not INCLUDE. Reversal is not requested."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-HOL is CUT. A2 miss (G4, G5). A3 miss. A4 miss. A5 miss: bare arXiv. A6 miss: denylist. Not a CUT reversal.",
+      "math": "Proposal: relative entropy of entanglement equals (1/(4 G_N)) times (area of the minimal tripartition surface minus area of the surface homologous to AB), at leading order. Upper bound for a general random tensor network; matching lower bound stated for one, two, and three Haar-random tensors. Authors Takato Mori, Beni Yoshida. arXiv:2609.38815v1, submitted 2026-09-30. No DOI in the OAI record. The formula is not copied onto the ledger.",
+      "autoGate": "miss A1, A2, A3, A4, A5, A6",
+      "scoreHeuristic": {
+        "importance": 42,
+        "confidence": 44,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-05-2609.39597",
+      "paperId": "2609.39597",
+      "date": "2026-10-05",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 and G2 pass: system-side and controller-side power are separated, and neither is entered on the plant ledger. G3 passes: stronger feedback is one simulation trend, not an unbounded plant gain. G4 fails: a repetition code is not the surface-code or qLDPC platform. G5 passes: the tradeoff can be re-simulated this quarter. G6 passes."
+      },
+      "gateNote": "G1 and G2 pass: system-side and controller-side power are separated, and neither is entered on the plant ledger. G3 passes: stronger feedback is one simulation trend, not an unbounded plant gain. G4 fails: a repetition code is not the surface-code or qLDPC platform. G5 passes: the tradeoff can be re-simulated this quarter. G6 passes.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Controller-side power on a repetition code is not Q_eng, and a three-qubit simulation is not a surface-code or qLDPC shot.",
+      "ledger": "none. Controller power is not Q_eng.",
+      "plain": {
+        "core": "Continuous error correction is treated as an information engine. System-side power, from the feedback field into the protected qubit, is kept separate from controller-side power in the feedback Hamiltonian. The worked example is the three-qubit repetition code.",
+        "why": "E-QEC already has a measured surface-code threshold. A repetition-code energy split does not tighten C. C stays at C4.",
+        "limit": "Bare arXiv. One-qubit ADL protocol and a three-qubit repetition code. Fidelity saturates while the powers keep growing, in the simulations they report. Not hardware."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass: no ledger term moved.",
+      "math": "Measurement-based continuous QEC as an information engine. System-side power versus controller-side power. Extended from the one-qubit Ahn-Doherty-Landahl protocol to the three-qubit repetition code under continuous stabilizer monitoring. Simulations: stronger feedback raises steady-state fidelity and lowers conditional entropy, while both energetic terms still grow after fidelity saturates. Authors Juan Garcia-Nila, Pedro B. Melo, Lucas Johns. arXiv:2609.39597v1, submitted 2026-09-30. No DOI in the OAI record. No numeric power is quoted in the abstract, so none is entered.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 84,
+        "confidence": 69,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-05-2609.39720",
+      "paperId": "2609.39720",
+      "date": "2026-10-05",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass",
+        "note": "G4 fails: AdS/QCD for the muon moment is not a reactor or processor encoder. G5 fails: BELLE or BESIII meson data are not a tokamak or QEC falsifier. G6 passes."
+      },
+      "gateNote": "G4 fails: AdS/QCD for the muon moment is not a reactor or processor encoder. G5 fails: BELLE or BESIII meson data are not a tokamak or QEC falsifier. G6 passes.",
+      "score": "E-HOL CUT stays",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "The denylist needs two independent C>=4 sources to reverse. A holographic muon g-2 term is not a fusion rate and not that packet.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Hard-wall AdS/QCD is used for the pseudoscalar, axial-vector, and tensor pieces of hadronic light-by-light scattering, and thus for a piece of the muon anomalous magnetic moment.",
+        "why": "E-HOL stays CUT. Reading is allowed. INCLUDE is not.",
+        "limit": "Readable. Not INCLUDE. Reversal is not requested."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-HOL is CUT. A2 miss (G4, G5). A3 miss. A4 miss. A5 miss: bare arXiv. A6 miss: denylist. Not a CUT reversal.",
+      "math": "Hard-wall AdS/QCD for pseudoscalar and axial-vector contributions to hadronic light-by-light, plus a minimal tensor-meson model compared with BELLE and preliminary low-Q^2 BESIII data. Authors Jonas Mager, Luigi Cappiello, Josef Leutgeb, Anton Rebhan. arXiv:2609.39720v1, submitted 2026-09-30, hep-ph. No DOI in the OAI record. No cross-section is copied.",
+      "autoGate": "miss A1, A2, A3, A4, A5, A6",
+      "scoreHeuristic": {
+        "importance": 42,
+        "confidence": 44,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-05-2609.39817",
+      "paperId": "2609.39817",
+      "date": "2026-10-05",
+      "bind": [
+        "E-TC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G3 passes: 'about half' is one material calculation, not an unbounded drive. G4 fails: graphene Floquet bands are not the engine clock. G5 passes: the gap prediction is a photoemission target. G6 passes."
+      },
+      "gateNote": "G3 passes: 'about half' is one material calculation, not an unbounded drive. G4 fails: graphene Floquet bands are not the engine clock. G5 passes: the gap prediction is a photoemission target. G6 passes.",
+      "score": "E-TC CUT stays",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A phonon-narrowed Floquet gap in graphene does not reopen E-TC. Two independent C>=4 sources and an interface contract would be required, and this paper has neither.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Circular drive on graphene is predicted to open topological Floquet gaps, which have not been seen cleanly. The paper finds that electron-phonon coupling broadens those bands and that Gamma-point optical phonons cut the gaps by about half.",
+        "why": "Material Floquet theory. The clock stays cut. C unchanged. Not a CUT reversal.",
+        "limit": "Bare arXiv, CC BY 4.0. Theory plus a proposed photoemission mitigation. Not a clock and not a plant."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-TC is CUT. A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass: no clock is added. A7 pass. A8 n/a. Not a CUT reversal.",
+      "math": "Graphene plus circular laser drive with electron-phonon coupling. Larger-displacement Gamma optical phonons reduce Floquet gaps by about half even without instrumentation broadening, and non-Gamma phonons close the gap in this calculation. Authors Royi Ledermann, Rave Hanoch Saadon, Adam Herling, Ofer Neufeld. arXiv:2609.39817v1, submitted 2026-09-30. No DOI in the OAI record.",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 50,
+        "confidence": 53,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-05-2609.40004",
+      "paperId": "2609.40004",
+      "date": "2026-10-05",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G4 fails: a tensor-network phase diagram is not a surface-code or qLDPC memory. G5 passes: the Z2 indicator can be recomputed this quarter. G6 passes. The central charge is a critical exponent, not a plant gain."
+      },
+      "gateNote": "G4 fails: a tensor-network phase diagram is not a surface-code or qLDPC memory. G5 passes: the Z2 indicator can be recomputed this quarter. G6 passes. The central charge is a critical exponent, not a plant gain.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A deformed toric-code norm used as a phase diagram is not a decoder threshold and not a below-threshold device run.",
+      "ledger": "none.",
+      "plain": {
+        "core": "A two-parameter parity-preserving tensor network is at once a fermion partition function, a loop gas, a deformed toric-code norm, and an Ising model. Inside the phase diagram the authors mark a topological island with a boundary-twist Z2 indicator.",
+        "why": "E-QEC already has a measured surface-code threshold. A toric-code norm in a tensor network does not tighten C. C stays at C4.",
+        "limit": "Bare arXiv, CC BY 4.0. Tensor-network numerics and a c=1 multicritical point. Not a memory experiment."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass. A7 pass. A8 n/a.",
+      "math": "Minimal two-parameter parity-preserving tensor network. Topological island diagnosed by a boundary-twist Z2 indicator that reduces to Chern-number parity. Self-dual line with a c=1 four-state-Potts multicritical point. Authors Maksimilian Usoltcev, Nguyen Hanh Dung, Carolin Wille, Matteo Rizzi, Alexander Altland. arXiv:2609.40004v1, submitted 2026-09-30. No DOI in the OAI record.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 80,
+        "confidence": 67,
+        "popularity": 40
+      }
+    },
     {
       "id": "2026-10-03/2506.04221",
       "paperId": "2506.04221",
