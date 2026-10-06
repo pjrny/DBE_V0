@@ -2,6 +2,8 @@
 
 2026-10-05  library  NO BUMP  eighteenth daily run (Monday; weekly sources off). The 2 Oct listing is in and left mostly unscored. Yesterday's pile scored first: two HOLDs under E-QEC (repetition-code continuous-QEC thermodynamics; a deformed toric-code norm) and thirteen REJECTs (seven E-HOL, six off-path including a Physics of Plasmas quasisymmetric-field paper with no abstract on the OSTI record). No Auto-Gate pass. No version bump. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
 
+2026-10-04  library  NO BUMP  seventeenth run (Sunday weekly sources on). No 2-4 Oct arXiv listing yet. Yesterday's unscored pile scored first: fourteen HOLDs (E-QEC decoders and code theory, E-RL loss-cone and vacuum response, E-S3 anyons, S-L3 zonal-flow formula) and one denylist REJECT (driven holographic superfluid). No Auto-Gate pass. No version bump. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
+
 2026-10-04  tooling  NO BUMP  Observatory v2 prompt is now research/OBSERVATORY_PROMPT.md, the canonical daily prompt read at the start of every run and edited only by PR. research/OBSERVATORY_STARTER.md holds the short starter text for the automation box. score.py venue fix: the venue is normalised for case and whitespace, so arXiv / ARXIV / arxiv are all a bare preprint that never passes A5 or raises C (before, "arXiv" printed AUTO-MERGED PATCH). Unit tests added. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
 
 2026-10-03  REJECT  maldacena-1997  → E-HOL denylist (lab rule; kept on the reading list)

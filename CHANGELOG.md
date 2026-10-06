@@ -28,6 +28,13 @@
 
 ### Changed
 - Command-strip date stamp moved to 2026-10-05 so this-week counts the new harvest.
+## [0.4.14] - 2026-10-04
+### Added
+- Weekly observatory run (lookback 7 days, Sunday sources on). No paper version bump. No 2-4 Oct arXiv listing yet. The 3 Oct unscored pile is scored: qLDPC and surface-code papers are queued under the error layer only, loss-cone learning and a vacuum response are queued with no coil command, Chern-band composite fermions and a 1D anyon chain are queued without replacing fusion, and a zonal-flow formula is queued with no plant Q. A driven holographic superfluid is rejected. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
+
+### Changed
+- Command-strip date stamp moved to 2026-10-04 so this-week counts the new harvest.
+
 ## [0.4.13] - 2026-10-03
 ### Added
 - Daily observatory run (lookback 7 days). No paper version bump. No Friday or Saturday arXiv listing. Phys. Rev. X mixed-state axioms are queued under the error layer only. Twisted quantum-double stabilizers, constant-depth atom-array surgery, and a toric-code electric-magnetic Clifford no-go are queued under the same layer. DIII-D island-chain transport is queued with no coil command. A polarized parafermion trench is queued as not an X+Z logical. A fractonic fluid and an axionic holographic superconductor are rejected. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.

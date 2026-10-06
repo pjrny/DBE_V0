@@ -134,6 +134,7 @@
         "nonabelian-qldpc"
       ],
       "blockers": [
+        "2026-10-04: composite-fermion Chern-band Jain states (2610.01217) and a 1D multicomponent anyon spin chain (2609.36555) queued under E-S3. Neither replaces fusion measurement. H2 gate set stays.",
         "2026-10-03: no new S3 braid-plus-fusion result. Twisted abelian quantum doubles (2610.00464) and the toric-code electric-magnetic Clifford no-go (2610.02097) stay on E-QEC. PRX mixed-state axioms (2506.04221) are not a fusion measurement. H2 gate set stays.",
         "2026-10-02: anyon proliferation under Higgsing (2610.00452) can enlarge topological order, including a non-Abelian channel for odd N. It is Chern-Simons, not an H2 braid, and it does not replace fusion measurement. Composite-fermion Chern-band anyons (2610.01217) left unscored.",
         "2026-10-01: Rydberg blockade gap (2609.39475) is a Z2 toric-code phase, with a cited extension to non-Abelian quantum doubles. Not a braid and not a fusion measurement. Kubica (2609.39879) says shallow point-like-syndrome prep of solvable non-Abelian orders is not fault tolerant. H2 fusion gate set stays. Coupling with E-QEC is C1.",
@@ -180,6 +181,7 @@
         "floquet-majorana-codes"
       ],
       "blockers": [
+        "2026-10-04: no new Majorana card. INSPIRE overlap was already catalogued or left outside the scored slice. M5 stays open.",
         "2026-10-03: polarized FCI parafermion trench (2610.01486) changes which edge terms are allowed. Not an X or Z logical. M5 stays open.",
         "2026-10-02: two-arm Majorana interferometer (2610.01402) predicts a low-frequency capacitance tied to edge-vortex topological spin. Not an X or Z logical. VIME chemistry 'Majorana' (2610.01954) rejected as a false friend. M5 stays open.",
         "2026-10-01: no X or Z logical and no gap scaling in the 30 Sep listing. Fermionic-shadow 'Majorana degree' (2609.40173) left unscored as a false friend. M5 stays open.",
@@ -256,6 +258,7 @@
         "spacetime-fractons"
       ],
       "blockers": [
+        "2026-10-04: no clock candidate scored. Graphene Floquet-gap theory (2609.39817) left unscored. CUT stands.",
         "2026-10-03: no new clock candidate in the empty Fri–Sat window. CUT as metronome stands.",
         "2026-10-02: Floquet-universal Hamiltonian simulation (2610.01878) rejected as a clock. O(1) drive strengths are not a QEC cycle.",
         "2026-10-01: classical time-crystal orbits (2609.39201) are not a system clock.",
@@ -292,6 +295,7 @@
         "fracton-holography"
       ],
       "blockers": [
+        "2026-10-04: driven holographic superfluid (2610.01455) rejected. Denylist holds. The other 29-30 Sep holography preprints stay unscored.",
         "2026-10-03: axionic holographic superconductor (2610.02063) rejected. Denylist holds. Driven holographic superfluid (2610.01455) left unscored.",
         "2026-10-02: booklet-cosmology recovery (2610.02168) rejected. The QEC sentence is an AdS page, not a processor. Denylist holds. Axionic holographic superconductors and the driven holographic superfluid left unscored.",
         "2026-10-01: holographic QCD critical endpoint (2609.39598) rejected. Denylist holds. Tripartite minimal surfaces and the rest of the AdS cluster left unscored.",
@@ -331,6 +335,7 @@
         "topo-dynamics"
       ],
       "blockers": [
+        "2026-10-04: loss-cone active learning (2609.36123) and a non-axisymmetric vacuum response (2610.00536) queued under E-RL. No coil command. M2 stays open.",
         "2026-10-03: no Friday or Saturday listing. Resonant island chains on DIII-D #171491 (2610.00919) slow field-line transport. No coil command. M2 stays open. Vacuum response (2610.00536) and loss-cone learning (2609.36123) left unscored.",
         "2026-10-02: DIII-D inference benchmark (2610.00845, Rothstein/Kolemen) times control models. Above about 5 million parameters a CPU takes tens to thousands of milliseconds. It does not command a coil. M2 stays open. Resonant island chains on DIII-D #171491 (2610.00919) left unscored.",
         "2026-10-01: FIREWALL (2609.40132) screens runaway-electron wall melting. It does not command a coil. M2 stays open. Stellarator alpha chaos (2609.39376) left unscored.",
@@ -376,6 +381,7 @@
       ],
       "amplifies": [],
       "blockers": [
+        "2026-10-04: no ledger term moved. Lost-ion energy and zonal-flow drive are not Q_eng. Q=1000 stays a stress test.",
         "2026-10-03: island-chain transport writes no Q_eng. Not Floquet DT. M1, M4, and M7 stay open.",
         "2026-10-02: equivalent-tokamak ITG (2610.01131) writes no Q_eng. Inference latency is not P_aux. Not Floquet DT. M1, M4, and M7 stay open.",
         "2026-10-01: FIREWALL writes no P_rad, P_aux, or Q_eng. Not Floquet DT. M1, M4, and M7 stay open.",
@@ -423,6 +429,7 @@
         "cyclic-fusion-family"
       ],
       "blockers": [
+        "2026-10-04: fusion measurement stays. Chern-band composite fermions and 1D anyons are not S3 fusion and do not open a new bus.",
         "2026-10-03: fusion measurement stays. Algebraic surgery and twisted doubles are not S3 fusion and do not open a new bus.",
         "2026-10-02: Higgsing anyon proliferation (2610.00452) does not remove fusion measurement and does not open a new bus. Photonic fusion in lattice surgery (2610.01923) is not anyon fusion.",
         "2026-10-01: Kubica no-go (2609.39879) constrains point-like shallow prep of solvable anyon theories. It does not remove fusion measurement and it does not open a new bus.",
@@ -528,6 +535,7 @@
       ],
       "amplifies": [],
       "blockers": [
+        "2026-10-04: layer-code circuits, an entropy-threshold proxy, and qLDPC decoders queued under E-QEC only. Not an interface contract. CUT as an engine pillar stands.",
         "2026-10-03: algebraic surgery (2609.39874), twisted-double stabilizers (2610.00464), the e–m no-go (2610.02097), and PRX mixed-state axioms (2506.04221) queued under E-QEC only. Not an interface contract. Learned BP (2610.01068) and the GNN decoder (2610.01683) left unscored.",
         "2026-10-02: one-shot qLDPC lift (2610.02137) and photonic-fusion lattice surgery (2610.01923) queued under E-QEC only. Photon fusion is not S3 fusion. Clifford EM-duality no-go (2610.02097) and learned BP (2610.01068) left unscored. Not an interface contract.",
         "2026-10-01: capacity-approaching qLDPC list decoding (2609.40313) and LocalASC syndrome schedules (2609.40319) queued under E-QEC only. Not an interface contract. Kubica is a bridge at C1, not a new pillar.",
@@ -14096,6 +14104,671 @@
         "role",
         "pillarId"
       ]
+    },
+    {
+      "id": "2609.36123",
+      "arxiv": "2609.36123",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Bayesian Active Learning of Ion Loss-Cone Boundaries in Tokamaks",
+      "authors": [
+        "Omar E. Lopez",
+        "Minglei Yang",
+        "Mark Cianciosa",
+        "Gary M. Staebler"
+      ],
+      "year": 2026,
+      "date": "2026-09-28",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2609.36123",
+      "fields": [
+        "plasma"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-04",
+        "queued",
+        "preprint"
+      ],
+      "importance": 74,
+      "confidence": 62,
+      "popularity": 40,
+      "coreIdea": "A tokamak loss-cone boundary is learned instead of being filled in by brute force. A Bayesian logistic model spends a fixed budget of guiding-center orbits, then stores a loss probability and its uncertainty on a mesh of launch points.",
+      "whyItMatters": "E-RL is plant attach. This is an orbit-loss database, not a coil command and not a disruption shot. M2 stays open. C stays at C4.",
+      "limitation": "Bare arXiv. One analytic equilibrium. Harvest confidence is a preprint gauge, not C.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2609.36123v1",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2609.36299",
+      "arxiv": "2609.36299",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Resonant and Ponderomotive Pumping of Zonal Flows by Turbulence, Alfvén Eigenmodes, and Radiofrequency Waves",
+      "authors": [
+        "C. M. Gallaro",
+        "I. Y. Dodin"
+      ],
+      "year": 2026,
+      "date": "2026-09-28",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2609.36299",
+      "fields": [
+        "plasma"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-04",
+        "queued",
+        "preprint"
+      ],
+      "importance": 66,
+      "confidence": 55,
+      "popularity": 40,
+      "coreIdea": "Zonal flows can be pumped by drift-wave turbulence, Alfvén eigenmodes, or radiofrequency waves. The drive is a short formula in the wave's canonical momentum and the power it dissipates, covering the ponderomotive push and quasilinear diffusion.",
+      "whyItMatters": "S-L3 keeps Vlasov, hole-burning, and SRS-SBS inside the rate. This formula does not replace those solvers and it does not write a reactivity. C stays at C4. It is not an E-RL attach, so no bridge is opened.",
+      "limitation": "Analytic preprint. Not a Vlasov run and not a laser-plasma scatter shot. Q_eng is not an output.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2609.36299v1",
+      "claimIds": [
+        "S-L3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2609.40279",
+      "arxiv": "2609.40279",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Classical simulation of coherent crosstalk in surface codes",
+      "authors": [
+        "Andrew S. Darmawan",
+        "Yelyzaveta Kolesnyk",
+        "Robert Koenig"
+      ],
+      "year": 2026,
+      "date": "2026-09-30",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2609.40279",
+      "fields": [
+        "tqc",
+        "topology"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-04",
+        "queued",
+        "preprint"
+      ],
+      "importance": 78,
+      "confidence": 65,
+      "popularity": 40,
+      "coreIdea": "Nearest-neighbor ZZ crosstalk on a surface-code state has a syndrome distribution a classical computer can sample in polynomial time. Add coherent single-qubit noise as well and that efficient sampling disappears unless the polynomial hierarchy collapses.",
+      "whyItMatters": "E-QEC is the error layer. A limit on simulating coherent crosstalk is not a measured memory and does not move the hardware threshold. C stays at C4.",
+      "limitation": "Bare arXiv. Complexity, not a device. No new hardware threshold.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2609.40279v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2609.40252",
+      "arxiv": "2609.40252",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "From Random Quantum Codes to Explicit qLDPC Codes via Local Properties",
+      "authors": [
+        "Fernando Granha Jeronimo",
+        "Xiaojuan Ma",
+        "Nikhil Shagrithaya"
+      ],
+      "year": 2026,
+      "date": "2026-09-30",
+      "venue": "arXiv cs.IT",
+      "url": "https://arxiv.org/abs/2609.40252",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-04",
+        "queued",
+        "preprint"
+      ],
+      "importance": 76,
+      "confidence": 62,
+      "popularity": 40,
+      "coreIdea": "Random codes have parameters that explicit codes rarely match, and a quantum code is asked to be LDPC as well. This paper gives nested CSS spaces a local-witness language and, from it, explicit qLDPC constructions for quantum list decoding and list recovery.",
+      "whyItMatters": "E-QEC wants explicit qLDPC, not only random existence. A rate-threshold theorem and a list-decoding construction are not a memory experiment and do not tighten the C4 hardware bound. C stays at C4.",
+      "limitation": "Bare arXiv, primary category cs.IT. No physical-error threshold and no named code distance in the abstract. No device.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2609.40252v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2609.40259",
+      "arxiv": "2609.40259",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Self-testing the toric code against classical communication",
+      "authors": [
+        "Gustavo Fróes",
+        "Amanda Wei",
+        "Carlos de Gois",
+        "Denis Rochette",
+        "Marc-Olivier Renou"
+      ],
+      "year": 2026,
+      "date": "2026-09-30",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2609.40259",
+      "fields": [
+        "tqc",
+        "topology"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-04",
+        "queued",
+        "preprint"
+      ],
+      "importance": 74,
+      "confidence": 60,
+      "popularity": 40,
+      "coreIdea": "The toric-code space, spread over a network shaped like a torus, can be self-tested from correlations alone. The honest parties never talk. The certificate still holds if the devices secretly exchange classical messages out to a distance that grows with the network.",
+      "whyItMatters": "E-QEC's evidence is a memory that runs, not a device-independent certificate. Self-testing the code space does not replace a threshold shot. C stays at C4.",
+      "limitation": "Bare arXiv. No processor and no decoder benchmark.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2609.40259v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2609.39522",
+      "arxiv": "2609.39522",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Layer codes as quantum memories: syndrome extraction, thresholds and idle robustness",
+      "authors": [
+        "Zhu Sun",
+        "Zhenyu Cai"
+      ],
+      "year": 2026,
+      "date": "2026-09-30",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2609.39522",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-04",
+        "queued",
+        "preprint"
+      ],
+      "importance": 88,
+      "confidence": 74,
+      "popularity": 40,
+      "coreIdea": "Layer codes are three-dimensional local CSS codes with check weight at most six, made by quasi-concatenating an input code with surface-code patches. This paper builds the syndrome circuits, including the junctions a borrowed surface-code schedule cannot handle, and compares eighteen of them with surface codes of the same distance under circuit-level noise.",
+      "whyItMatters": "E-QEC is where a memory either holds or it does not. The [[4,2,2]] family reaches a simulated circuit-level threshold of 5.06(7)e-3 and idles longer than a rotated surface code of the same distance, at the cost of more operations and about five times as many physical qubits per logical qubit. That is a simulation, not a below-threshold hardware run. C stays at C4. Importance 88 is still a harvest gauge.",
+      "limitation": "Bare arXiv. The threshold and the idle-time factors are circuit simulations at fixed distance, not a device, and not a license to scale one parameter without bound. Harvest confidence 74 is under 80.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2609.39522v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.00504",
+      "arxiv": "2610.00504",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Graph Neural Post-selection for Quantum Error Correction",
+      "authors": [
+        "Conor Carty",
+        "Tamas Noszko",
+        "Joschka Roffe",
+        "Roberto Bondesan"
+      ],
+      "year": 2026,
+      "date": "2026-09-30",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.00504",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-04",
+        "queued",
+        "preprint"
+      ],
+      "importance": 86,
+      "confidence": 70,
+      "popularity": 40,
+      "coreIdea": "A graph net looks at the syndrome, and at belief-propagation posteriors for high-rate qLDPC codes, and rejects shots that look like logical failures, without running the decoder again.",
+      "whyItMatters": "E-QEC may use post-selection as a tool. These factors are simulations under circuit-level depolarizing noise. They do not raise C. C stays at C4.",
+      "limitation": "Bare arXiv. The gain is at one keep-rate and one noise model. Not a hardware shot.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.00504v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.00536",
+      "arxiv": "2610.00536",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Rapid Vacuum Response Calculations for Non-axisymmetric Plasma Geometries",
+      "authors": [
+        "Jacob Halpern",
+        "Nikolas Logan",
+        "Carolin Nührenberg",
+        "Elizabeth Paul",
+        "Carlos Paz-Soldan"
+      ],
+      "year": 2026,
+      "date": "2026-09-30",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2610.00536",
+      "fields": [
+        "plasma"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-04",
+        "queued",
+        "preprint"
+      ],
+      "importance": 72,
+      "confidence": 60,
+      "popularity": 40,
+      "coreIdea": "Free-boundary ideal MHD needs the magnetic energy in the vacuum outside the plasma. This paper computes that response, and the surface inductance, for non-axisymmetric walls, fast enough for on the order of 10^5 boundary points on a laptop.",
+      "whyItMatters": "E-RL attaches commands to a plant. A vacuum matrix is an input to three-dimensional stability, not a coil command. M2 stays open. C stays at C4.",
+      "limitation": "Bare arXiv. No plasma shot and no disruption metric. License is CC BY 4.0; the PDF is not committed.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.00536v1",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.01217",
+      "arxiv": "2610.01217",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Composite fermions in ideal Chern bands",
+      "authors": [
+        "Songyang Pu",
+        "Liangtao Peng",
+        "Shaffique Adam"
+      ],
+      "year": 2026,
+      "date": "2026-10-01",
+      "venue": "arXiv cond-mat.mes-hall",
+      "url": "https://arxiv.org/abs/2610.01217",
+      "fields": [
+        "anyons",
+        "topology"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-04",
+        "queued",
+        "preprint"
+      ],
+      "importance": 70,
+      "confidence": 58,
+      "popularity": 40,
+      "coreIdea": "Composite fermions turn a fractional quantum Hall fluid into an integer state in a weaker field. This paper asks what changes when the uniform field is replaced by the uneven Berry curvature of a Chern band, and it writes Jain states and their quasiparticles for Aharonov-Casher bands.",
+      "whyItMatters": "E-S3 needs non-Abelian braid plus a fusion measurement. These are composite-fermion quasiparticles in an ideal Chern band. An isolated quasiparticle band whose Berry flux differs from a Landau level is not an S3 fusion space and not a braid on hardware. Fusion measurement stays in the gate set. C stays at C3. No new bus.",
+      "limitation": "Bare arXiv. No device. The abstract's claim about an isolated quasiparticle is not turned into a gate.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.01217v1",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.01683",
+      "arxiv": "2610.01683",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "A Code-Agnostic Graph Neural Network Decoder from the Detection Error Model",
+      "authors": [
+        "Federico Alberto Astolfi",
+        "Guido Pupillo"
+      ],
+      "year": 2026,
+      "date": "2026-10-01",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.01683",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-04",
+        "queued",
+        "preprint"
+      ],
+      "importance": 84,
+      "confidence": 69,
+      "popularity": 40,
+      "coreIdea": "POLYMECHANON is a graph-net decoder whose only input is the detection error model of a code: detectors, error mechanisms, and logical observables. The same architecture is meant to decode any stabilizer code once that graph is known.",
+      "whyItMatters": "E-QEC's C4 is a measured memory, not a better simulated decoder. Up to 25% fewer logical failures than correlated matching on the rotated surface code, and up to 16% fewer on [[130,4,6]], does not raise C. It is not an S3 decoder. C stays at C4.",
+      "limitation": "Bare arXiv, CC BY 4.0. The [[130,4,6]] comparison is a simulation. The same abstract says a model trained across families tends to fail on unseen codes, especially larger ones. No hardware.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.01683v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.01455",
+      "arxiv": "2610.01455",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "From Modal Memory to Topological Relaxation in a Driven Holographic Superfluid",
+      "authors": [
+        "Yan Peng",
+        "Bo-Xuan Ge"
+      ],
+      "year": 2026,
+      "date": "2026-10-01",
+      "venue": "arXiv hep-th",
+      "url": "https://arxiv.org/abs/2610.01455",
+      "fields": [
+        "holography"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-04",
+        "rejected",
+        "preprint"
+      ],
+      "importance": 44,
+      "confidence": 44,
+      "popularity": 40,
+      "coreIdea": "A driven holographic superfluid is brought to the same present drive by different histories, then run on the same future protocol. The histories end in the same winding sector, but the time spent in the previous sector changes by about a factor of 3.7, organized by a modal imbalance.",
+      "whyItMatters": "E-HOL is cut. A holographic superfluid is not a tokamak encoder and not a processor bus. The rest of that holography cluster stays unscored. The denylist holds.",
+      "limitation": "Readable. Not INCLUDE. Reversal is not requested.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.01455v1",
+      "claimIds": [
+        "E-HOL"
+      ],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.01068",
+      "arxiv": "2610.01068",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Learned Parallel Bit-Flipping Sequential Belief Propagation Decoding of Quantum LDPC Codes",
+      "authors": [
+        "Mohsen Moradi",
+        "Taejoon Kim",
+        "Remi A. Chou"
+      ],
+      "year": 2026,
+      "date": "2026-10-01",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.01068",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-04",
+        "queued",
+        "preprint"
+      ],
+      "importance": 80,
+      "confidence": 65,
+      "popularity": 40,
+      "coreIdea": "Belief propagation on qLDPC codes often fails to settle, because of short cycles and degeneracy. This paper learns an update order, then, if the syndrome is still wrong, tries several Pauli flips and continues those tries in parallel.",
+      "whyItMatters": "E-QEC needs fast decoders. A learned schedule is still a preprint method, not a change to C4. C stays at C4.",
+      "limitation": "Bare arXiv. License is CC BY-NC-ND 4.0, so the PDF is not mirrored. The abstract text used here does not quote a logical-error rate, and none is added.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.01068v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2609.36555",
+      "arxiv": "2609.36555",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Generalized Effective Spin-Chain formalism for multicomponent anyons in one-dimensional optical lattices",
+      "authors": [
+        "Sagarika Basak",
+        "Xi-Wen Guan",
+        "Han Pu"
+      ],
+      "year": 2026,
+      "date": "2026-09-29",
+      "venue": "arXiv cond-mat.quant-gas",
+      "url": "https://arxiv.org/abs/2609.36555",
+      "fields": [
+        "anyons"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-04",
+        "queued",
+        "preprint"
+      ],
+      "importance": 68,
+      "confidence": 56,
+      "popularity": 40,
+      "coreIdea": "Strongly interacting multicomponent anyons in a one-dimensional optical lattice are mapped to a spin chain. The charge motion becomes spinless fermions. The statistical phase shows up in the spin exchange, not in the leading charge Hamiltonian. Out of equilibrium, successive exchanges pick up a direction-dependent phase.",
+      "whyItMatters": "E-S3 is braid plus fusion for a topological qubit, not a one-dimensional exchange phase. This does not replace fusion measurement. C stays at C3. It was left unscored on 30 Sep.",
+      "limitation": "Bare arXiv. One-dimensional lattice. No braid experiment and no fusion readout.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2609.36555v1",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2609.39980",
+      "arxiv": "2609.39980",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Logical information localisation in stabiliser codes via single-qubit measurements",
+      "authors": [
+        "Jelena Mackeprang",
+        "Hemant Sharma",
+        "Jonas Helsen"
+      ],
+      "year": 2026,
+      "date": "2026-09-30",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2609.39980",
+      "fields": [
+        "tqc",
+        "topology"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-04",
+        "queued",
+        "preprint"
+      ],
+      "importance": 82,
+      "confidence": 67,
+      "popularity": 40,
+      "coreIdea": "When a stabilizer code loses qubits, stabiliser path finding tries to park the logical information on one chosen qubit using a single round of single-qubit measurements. This paper lets the target be any set of at most g qubits, and proves that random loss below one half still localises on a large enough planar surface code.",
+      "whyItMatters": "E-QEC cares about loss. The C4 evidence is a running memory. A localisation threshold does not raise C. The abstract's 'logical fusion' is a stabilizer communication step, not an S3 fusion measurement, so no bridge is opened. C stays at C4.",
+      "limitation": "Bare arXiv, CC BY 4.0. The proof is for planar surface codes. Not a qLDPC hardware result.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2609.39980v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2609.39016",
+      "arxiv": "2609.39016",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Entropy threshold: A simple proxy for performance of quantum error correction",
+      "authors": [
+        "Diego Ruiz",
+        "Aleksander Kubica"
+      ],
+      "year": 2026,
+      "date": "2026-09-30",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2609.39016",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-04",
+        "queued",
+        "preprint"
+      ],
+      "importance": 84,
+      "confidence": 69,
+      "popularity": 40,
+      "coreIdea": "Thresholds of error-correcting protocols are expensive to simulate. This paper estimates them by comparing the entropy of the noise with the information gained from stabilizer measurements, spacetime detectors, or flag qubits.",
+      "whyItMatters": "E-QEC already has a measured surface-code threshold. A back-of-the-envelope proxy does not replace that shot and does not tighten C. C stays at C4.",
+      "limitation": "Bare arXiv, CC BY 4.0. The abstract says the proxy tracks numerical thresholds. It does not quote a threshold value in the text used here, so none is entered.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2609.39016v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
     }
   ],
   "runs": [
@@ -15299,6 +15972,637 @@
         }
       ],
       "notes": "Eighteenth run, Monday, weekly sources off. Lookback 7 days (2026-09-28 to 2026-10-05). The Sunday evening listing is in: 121 quant-ph submissions dated 2026-10-02 were retrieved. Yesterday's 17 unscored ids were ordered by date, then by id, and the oldest 15 were scored. Two HOLD (E-QEC only): continuous QEC thermodynamics on the repetition code, and a deformed toric-code norm. Thirteen REJECT: seven on the E-HOL denylist, and six off-path (fusion-category dimensions, a transmon exchange pulse, phase-only 'anyonic' symmetry, a lattice-Boltzmann syndrome, a graphene Floquet gap, and a Physics of Plasmas quasisymmetric-field paper). The OSTI record for 10.1063/5.0341763 returned no abstract; no number was invented. No ADD, no STRENGTHEN, no bridge, no new pillar, no CUT reversal. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand. Q=1000 remains a ledger stress test. ingest.py was not executed: it fires seven arXiv requests with no sleep and would break the 1 request / 3 s rule. Its QUERIES were run with a 3.2 s gap. fetch_arxiv.py was not run in write mode. OpenAlex, Crossref, and Unpaywall skipped (OPENALEX_API_KEY and DBE_CONTACT_EMAIL unset). Dedupe included the 15 papers on unmerged PR #4 (observatory/2026-10-04) so this branch, cut from feature/research-grade-physics, does not open a second row for them. The two pull requests will both edit catalog.json. Harvest confidence uses round(raw x 0.88) for preprint tier 0.7 and round(raw x 1) for the journal. Popularity is 40 because Semantic Scholar was skipped; it is not a citation count. No PDF cached (DBE_FULLTEXT_STORE unset). Prompt freeze text matches the files: DBE-0.2.2 / DBES-0.2.0, claims freeze 2026-10-02. No suspicious instructions in fetched abstracts. Changelog section is 0.4.15 because unmerged PR #4 already used 0.4.14."
+    },
+    {
+      "id": "run-2026-10-04-daily",
+      "kind": "weekly",
+      "startedAt": "2026-10-04T09:18:41-05:00",
+      "finishedAt": "2026-10-04T09:37:28-05:00",
+      "windowStart": "2026-09-27",
+      "windowEnd": "2026-10-04",
+      "sources": [
+        {
+          "id": "arxiv-yesterday-ids",
+          "url": "https://export.arxiv.org/api/query",
+          "status": "ok",
+          "http": 200,
+          "requests": 1,
+          "returned": 12,
+          "new": 12,
+          "ms": 179,
+          "error": null
+        },
+        {
+          "id": "arxiv-ingest-queries",
+          "url": "https://export.arxiv.org/api/query",
+          "status": "ok",
+          "http": 200,
+          "requests": 7,
+          "returned": 84,
+          "new": 78,
+          "ms": 2191,
+          "error": null,
+          "note": "ingest.py QUERIES, 3.2 s gap. ingest.py itself was not executed in burst mode."
+        },
+        {
+          "id": "arxiv-fetch-queries",
+          "url": "https://export.arxiv.org/api/query",
+          "status": "ok",
+          "http": 200,
+          "requests": 10,
+          "returned": 80,
+          "new": 48,
+          "ms": 3522,
+          "error": null,
+          "note": "fetch_arxiv.py QUERIES as search only. Not run in write mode."
+        },
+        {
+          "id": "arxiv-recent-window",
+          "url": "https://export.arxiv.org/api/query",
+          "status": "ok",
+          "http": 200,
+          "requests": 3,
+          "returned": 0,
+          "new": 0,
+          "ms": 504,
+          "error": null,
+          "note": "submittedDate 2026-10-02 to 2026-10-04 in plasm-ph, quant-ph+code, and str-el/mes-hall anyon/Majorana/fracton returned no hits. Sunday morning, before the evening listing."
+        },
+        {
+          "id": "arxiv-oai",
+          "url": "https://oaipmh.arxiv.org/oai",
+          "status": "ok",
+          "http": 200,
+          "requests": 15,
+          "returned": 15,
+          "new": 0,
+          "ms": 1700,
+          "error": null,
+          "note": "GetRecord metadataPrefix=arXiv for the 15 scored ids. Licence recorded. No PDF cached."
+        },
+        {
+          "id": "openalex",
+          "url": null,
+          "status": "skipped",
+          "http": null,
+          "requests": 0,
+          "returned": 0,
+          "new": 0,
+          "ms": 0,
+          "error": "OPENALEX_API_KEY unset"
+        },
+        {
+          "id": "crossref",
+          "url": null,
+          "status": "skipped",
+          "http": null,
+          "requests": 0,
+          "returned": 0,
+          "new": 0,
+          "ms": 0,
+          "error": "DBE_CONTACT_EMAIL unset; mailto not invented"
+        },
+        {
+          "id": "unpaywall",
+          "url": null,
+          "status": "skipped",
+          "http": null,
+          "requests": 0,
+          "returned": 0,
+          "new": 0,
+          "ms": 0,
+          "error": "DBE_CONTACT_EMAIL unset"
+        },
+        {
+          "id": "inspire-hep",
+          "url": "https://inspirehep.net/api/literature",
+          "status": "ok",
+          "http": 200,
+          "requests": 1,
+          "returned": 20,
+          "new": 20,
+          "ms": 1163,
+          "error": null,
+          "note": "Cap 20. Most hits already catalogued or older than the window. New on-path ids left unscored or scored if selected."
+        },
+        {
+          "id": "osti",
+          "url": "https://www.osti.gov/api/v1/records",
+          "status": "ok",
+          "http": 200,
+          "requests": 1,
+          "returned": 5,
+          "new": 5,
+          "ms": 288,
+          "error": null,
+          "note": "One quasisymmetric-field DOI carried unscored. Genesis report and LiH scattering not catalogued."
+        },
+        {
+          "id": "inis",
+          "url": "https://inis.iaea.org/api/records",
+          "status": "failed",
+          "http": 403,
+          "requests": 1,
+          "returned": 0,
+          "new": 0,
+          "ms": 66,
+          "error": "HTTP 403 challenge page"
+        },
+        {
+          "id": "eurofusion-news",
+          "url": "https://euro-fusion.org/feed/",
+          "status": "ok",
+          "http": 200,
+          "requests": 1,
+          "returned": 10,
+          "new": 10,
+          "ms": 845,
+          "error": null,
+          "note": "News tier. Titles only. Not catalogued."
+        },
+        {
+          "id": "eurofusion-scipub",
+          "url": "https://scipub.euro-fusion.org/",
+          "status": "partial",
+          "http": 200,
+          "requests": 1,
+          "returned": 0,
+          "new": 0,
+          "ms": 991,
+          "error": null,
+          "note": "HTML landing page. No record list."
+        },
+        {
+          "id": "iter-news",
+          "url": "https://www.iter.org/news",
+          "status": "partial",
+          "http": 200,
+          "requests": 1,
+          "returned": 0,
+          "new": 0,
+          "ms": 738,
+          "error": null,
+          "note": "HTML page. No item records parsed."
+        },
+        {
+          "id": "fia-feed",
+          "url": "https://www.fusionindustryassociation.org/feed/",
+          "status": "failed",
+          "http": 200,
+          "requests": 2,
+          "returned": 0,
+          "new": 0,
+          "ms": 129,
+          "error": "First request HTTP 415; retry HTTP 200 loader interstitial, no RSS items"
+        },
+        {
+          "id": "semantic-scholar",
+          "url": null,
+          "status": "skipped",
+          "http": null,
+          "requests": 0,
+          "returned": 0,
+          "new": 0,
+          "ms": 0,
+          "error": "S2_API_KEY unset"
+        },
+        {
+          "id": "core",
+          "url": "https://api.core.ac.uk/v3/search/works",
+          "status": "partial",
+          "http": 200,
+          "requests": 4,
+          "returned": 5,
+          "new": 0,
+          "ms": 1800,
+          "error": null,
+          "note": "Two 429s, then a hit list dominated by travel-disruption and older fusion items. CORE yearPublished not trusted. None added."
+        },
+        {
+          "id": "europe-pmc",
+          "url": null,
+          "status": "skipped",
+          "http": null,
+          "requests": 0,
+          "returned": 0,
+          "new": 0,
+          "ms": 0,
+          "error": "usually skip; no biophysics target"
+        },
+        {
+          "id": "jstage",
+          "url": "https://api.jstage.jst.go.jp/searchapi/do",
+          "status": "ok",
+          "http": 200,
+          "requests": 1,
+          "returned": 10,
+          "new": 0,
+          "ms": 914,
+          "error": null,
+          "note": "All 10 publication dates are 2007-2024, outside the window. Two titles are Japanese and were not translated and not bound."
+        },
+        {
+          "id": "kci",
+          "url": null,
+          "status": "skipped",
+          "http": null,
+          "requests": 0,
+          "returned": 0,
+          "new": 0,
+          "ms": 0,
+          "error": "KCI_API_KEY unset"
+        },
+        {
+          "id": "hf-daily-papers",
+          "url": "https://huggingface.co/api/daily_papers",
+          "status": "ok",
+          "http": 200,
+          "requests": 1,
+          "returned": 20,
+          "new": 0,
+          "ms": 78,
+          "error": null,
+          "note": "Cap 20. Not promoted; daily papers are not a claim bind without a separate reading."
+        },
+        {
+          "id": "hf-models-decoder",
+          "url": "https://huggingface.co/api/models",
+          "status": "ok",
+          "http": 200,
+          "requests": 1,
+          "returned": 2,
+          "new": 2,
+          "ms": 61,
+          "error": null,
+          "note": "Dreamworldsmile/ntu-surface-code-decoder and Bauxitiego/surface-code-neural-decoder. Repo/model tier. Not scored."
+        },
+        {
+          "id": "hf-models-plasma",
+          "url": "https://huggingface.co/api/models",
+          "status": "ok",
+          "http": 200,
+          "requests": 1,
+          "returned": 0,
+          "new": 0,
+          "ms": 53,
+          "error": null
+        },
+        {
+          "id": "hf-datasets-plasma",
+          "url": "https://huggingface.co/api/datasets",
+          "status": "ok",
+          "http": 200,
+          "requests": 1,
+          "returned": 0,
+          "new": 0,
+          "ms": 50,
+          "error": null
+        },
+        {
+          "id": "github-qldpc",
+          "url": "https://api.github.com/search/repositories",
+          "status": "ok",
+          "http": 200,
+          "requests": 1,
+          "returned": 10,
+          "new": 10,
+          "ms": 496,
+          "error": null,
+          "note": "Cap reached at 10. Licences and push times recorded in notes. Not scored. Not evidence."
+        },
+        {
+          "id": "github-vlasov",
+          "url": "https://api.github.com/search/repositories",
+          "status": "ok",
+          "http": 200,
+          "requests": 1,
+          "returned": 0,
+          "new": 0,
+          "ms": 173,
+          "error": null
+        },
+        {
+          "id": "nsf-awards",
+          "url": "https://api.nsf.gov/services/v1/awards.json",
+          "status": "ok",
+          "http": 200,
+          "requests": 1,
+          "returned": 10,
+          "new": 0,
+          "ms": 208,
+          "error": null,
+          "note": "Keyword hit HAQIN and laser user facilities dated 2026-10-01. Funding tier context only. Not a QEC device award. Not catalogued."
+        },
+        {
+          "id": "usaspending",
+          "url": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+          "status": "ok",
+          "http": 200,
+          "requests": 1,
+          "returned": 0,
+          "new": 0,
+          "ms": 454,
+          "error": null
+        },
+        {
+          "id": "cordis",
+          "url": "https://cordis.europa.eu/search",
+          "status": "partial",
+          "http": 200,
+          "requests": 1,
+          "returned": 0,
+          "new": 0,
+          "ms": 1006,
+          "error": null,
+          "note": "JSON header returned; no project rows extracted. Not catalogued."
+        },
+        {
+          "id": "epo-ops",
+          "url": null,
+          "status": "skipped",
+          "http": null,
+          "requests": 0,
+          "returned": 0,
+          "new": 0,
+          "ms": 0,
+          "error": "EPO_OPS_KEY/SECRET unset"
+        },
+        {
+          "id": "lens",
+          "url": null,
+          "status": "skipped",
+          "http": null,
+          "requests": 0,
+          "returned": 0,
+          "new": 0,
+          "ms": 0,
+          "error": "LENS_TOKEN unset"
+        }
+      ],
+      "counts": {
+        "harvested": 43,
+        "duplicates": 70,
+        "merged": 0,
+        "new": 15,
+        "scored": 15,
+        "unscored": 17,
+        "add": 0,
+        "strengthen": 0,
+        "weaken": 0,
+        "hold": 14,
+        "newPillar": 0,
+        "reject": 1
+      },
+      "paperIds": [
+        "2609.36123",
+        "2609.36299",
+        "2609.40279",
+        "2609.40252",
+        "2609.40259",
+        "2609.39522",
+        "2610.00504",
+        "2610.00536",
+        "2610.01217",
+        "2610.01683",
+        "2610.01455",
+        "2610.01068",
+        "2609.36555",
+        "2609.39980",
+        "2609.39016"
+      ],
+      "unscoredIds": [
+        {
+          "id": "2609.38085",
+          "reason": "older carry-over from 2026-09-30; 'anyonic' in the abstract is invariance up to a global phase, not braid statistics; do not bind E-S3 on the word; score cap"
+        },
+        {
+          "id": "2609.39597",
+          "reason": "continuous QEC thermodynamics on the repetition code; controller power is not Q_eng; score cap"
+        },
+        {
+          "id": "2609.38129",
+          "reason": "lattice-Boltzmann conservation syndrome; not plant attach and not the surface-code layer; score cap"
+        },
+        {
+          "id": "2609.40004",
+          "reason": "deformed toric-code norm as a tensor-network phase diagram; score cap"
+        },
+        {
+          "id": "2609.35287",
+          "reason": "dimension bound for spherical fusion categories; not an S3 fusion measurement; score cap"
+        },
+        {
+          "id": "2609.39817",
+          "reason": "graphene Floquet-gap theory; not a clock reversal; score cap"
+        },
+        {
+          "id": "2609.37296",
+          "reason": "transmon leakage-suppressed exchange pulse; not a code and not a clock; score cap"
+        },
+        {
+          "id": "2609.37806",
+          "reason": "E-HOL cluster, reading list, denylist; not scored (cap)"
+        },
+        {
+          "id": "2609.38302",
+          "reason": "E-HOL cluster, reading list, denylist; not scored (cap)"
+        },
+        {
+          "id": "2609.38313",
+          "reason": "E-HOL cluster, reading list, denylist; not scored (cap)"
+        },
+        {
+          "id": "2609.38318",
+          "reason": "E-HOL cluster, reading list, denylist; not scored (cap)"
+        },
+        {
+          "id": "2609.38336",
+          "reason": "E-HOL cluster, reading list, denylist; not scored (cap)"
+        },
+        {
+          "id": "2609.38815",
+          "reason": "E-HOL cluster, reading list, denylist; not scored (cap)"
+        },
+        {
+          "id": "2609.39720",
+          "reason": "E-HOL cluster, reading list, denylist; not scored (cap)"
+        },
+        {
+          "id": "2610.00478",
+          "reason": "E-HOL cluster, reading list, denylist; not scored (cap)"
+        },
+        {
+          "id": "2610.00670",
+          "reason": "E-HOL cluster, reading list, denylist; not scored (cap)"
+        },
+        {
+          "id": "10.1063/5.0341763",
+          "reason": "OSTI record, Periodic KdV potentials and quasisymmetric magnetic fields, 2026-09-29; not a control loop and not a Vlasov rate; score cap"
+        }
+      ],
+      "offPathNotCarried": [
+        "2609.38915",
+        "2609.36542",
+        "2610.01366",
+        "2609.40260",
+        "2610.02086",
+        "2610.00409",
+        "2610.01374",
+        "2610.00505",
+        "2610.01976",
+        "2610.01703",
+        "2609.38771",
+        "2609.37364",
+        "2610.01774",
+        "2609.38702",
+        "2609.37990"
+      ],
+      "fieldCounts": {
+        "plasma": 3,
+        "tqc": 9,
+        "topology": 4,
+        "anyons": 2,
+        "holography": 1
+      },
+      "gateMisses": {
+        "A1": 1,
+        "A2": 15,
+        "A3": 15,
+        "A4": 15,
+        "A5": 15,
+        "A6": 1,
+        "A7": 0,
+        "A8": 0,
+        "G1": 0,
+        "G2": 0,
+        "G3": 0,
+        "G4": 15,
+        "G5": 1,
+        "G6": 0
+      },
+      "claimDelta": "none",
+      "versionBump": null,
+      "fulltext": {
+        "cached": 0,
+        "privateOnly": 0,
+        "noOA": 0
+      },
+      "tests": {
+        "command": "PYTHONPATH=. python -m pytest -q tests/test_research.py tests/test_claims.py tests/test_api.py tests/test_plasma.py tests/test_transport.py",
+        "result": "pass",
+        "summary": "19 passed, 30 subtests passed"
+      },
+      "branch": "observatory/2026-10-04",
+      "pr": "https://github.com/pjrny/DBE_V0/pull/4",
+      "suspiciousContent": [],
+      "scoreRoutes": [
+        {
+          "paper": "2609.36123",
+          "bind": "E-RL",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL"
+        },
+        {
+          "paper": "2609.36299",
+          "bind": "S-L3",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL"
+        },
+        {
+          "paper": "2609.40279",
+          "bind": "E-QEC",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL"
+        },
+        {
+          "paper": "2609.40252",
+          "bind": "E-QEC",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL"
+        },
+        {
+          "paper": "2609.40259",
+          "bind": "E-QEC",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL"
+        },
+        {
+          "paper": "2609.39522",
+          "bind": "E-QEC",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL"
+        },
+        {
+          "paper": "2610.00504",
+          "bind": "E-QEC",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL"
+        },
+        {
+          "paper": "2610.00536",
+          "bind": "E-RL",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL"
+        },
+        {
+          "paper": "2610.01217",
+          "bind": "E-S3",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL"
+        },
+        {
+          "paper": "2610.01683",
+          "bind": "E-QEC",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL"
+        },
+        {
+          "paper": "2610.01455",
+          "bind": "E-HOL",
+          "action": "REJECT",
+          "route": "QUEUE",
+          "a5": "FAIL"
+        },
+        {
+          "paper": "2610.01068",
+          "bind": "E-QEC",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL"
+        },
+        {
+          "paper": "2609.36555",
+          "bind": "E-S3",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL"
+        },
+        {
+          "paper": "2609.39980",
+          "bind": "E-QEC",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL"
+        },
+        {
+          "paper": "2609.39016",
+          "bind": "E-QEC",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL"
+        }
+      ],
+      "notes": "Seventeenth run, Sunday weekly sources included. Lookback 7 days (2026-09-27 to 2026-10-04). No arXiv hits with submittedDate from 2 Oct through 4 Oct in the category queries: Sunday morning, before the evening listing. Yesterday's 12 unscored ids were scored first, oldest first, then three older on-path preprints (1D anyons, surface-code loss localisation, entropy threshold). 14 HOLD, 1 REJECT. No ADD, no STRENGTHEN, no bridge, no new pillar, no CUT reversal. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand. Q=1000 remains a ledger stress test. Harvest confidence uses round(raw x 0.88) for preprint tier 0.7. Popularity is 40 because Semantic Scholar was skipped; it is not a citation count. OpenAlex, Crossref, Unpaywall, Semantic Scholar, KCI, EPO, and Lens skipped for missing keys or missing contact email. INIS 403. FIA feed did not return items. CORE was partial and not used. Off-path arXiv ids inside the window and not carried: 2609.38915, 2609.36542, 2610.01366, 2609.40260, 2610.02086, 2610.00409, 2610.01374, 2610.00505, 2610.01976, 2610.01703, 2609.38771, 2609.37364, 2610.01774, 2609.38702, 2609.37990. GitHub qLDPC repos (licence / last push, not evidence): acatspirit/realtime_decoding_qldpc (no licence, pushed 2026-10-02); sparkainlp-x/qldpc_decoder_cpp (AGPL-3.0, 2026-09-30); antsouchlos/rust-qldpc-sliding-window-decoding (MIT, 2026-09-29); stannum13/qldpc-fno (no licence, 2026-09-27); ghilasaissou/RL-CBP-QLDPC (no licence, 2026-09-23); GuillaumeLessard/QECTOR-Mega-v3.7.5-Public-Verification-Data-and-Extended-Report (no licence, 2026-09-23, not read as evidence); Fencing-Giulio/stabilizer-inactivation-decoding (MIT, 2026-09-20); Anil077476/qldpc-bivariate-bicycle (MIT, 2026-09-18); ramanuj02fr/qldpc-cross-layer-decoder-eval (no licence, 2026-09-13); amitb-quantum/qldpc-decoder-bench (MIT, 2026-09-02). EUROfusion news titles were tier news only (JT-60SA, digital twins, JET energy record, Project WISER). Prompt freeze text matches the files: DBE-0.2.2 / DBES-0.2.0, claims freeze 2026-10-02. No suspicious instructions in fetched abstracts."
     },
     {
       "id": "run-2026-10-03-daily",
