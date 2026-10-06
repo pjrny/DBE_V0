@@ -1,0 +1,608 @@
+{
+  "id": "run-2026-10-06-daily",
+  "kind": "daily",
+  "startedAt": "2026-10-06T09:20:00-05:00",
+  "finishedAt": "2026-10-06T09:35:07-05:00",
+  "windowStart": "2026-09-29",
+  "windowEnd": "2026-10-06",
+  "sources": [
+    {
+      "id": "arxiv-yesterday-ids",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 18,
+      "new": 18,
+      "ms": 204,
+      "error": null
+    },
+    {
+      "id": "arxiv-recent-window",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 6,
+      "returned": 190,
+      "new": 173,
+      "ms": 1567,
+      "error": null,
+      "note": "submittedDate 2026-10-05 through 2026-10-06. quant-ph totalResults 129, cond-mat.str-el totalResults 16, cond-mat.mes-hall totalResults 20, hep-th totalResults 19, physics.plasm-ph totalResults 6. All dated 2026-10-05. Cross-list duplicates removed in the unique-new count."
+    },
+    {
+      "id": "arxiv-ingest-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 7,
+      "returned": 48,
+      "new": 20,
+      "ms": 1675,
+      "error": null,
+      "note": "ingest.py QUERIES with a 3.2 s gap and submittedDate 2026-09-29 to 2026-10-06. ingest.py was not executed."
+    },
+    {
+      "id": "arxiv-fetch-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 10,
+      "returned": 70,
+      "new": 46,
+      "ms": 2771,
+      "error": null,
+      "note": "fetch_arxiv.py QUERIES as search only. Not run in write mode."
+    },
+    {
+      "id": "arxiv-oai",
+      "url": "https://oaipmh.arxiv.org/oai",
+      "status": "ok",
+      "http": 200,
+      "requests": 15,
+      "returned": 15,
+      "new": 0,
+      "ms": 941,
+      "error": null,
+      "note": "GetRecord metadataPrefix=arXiv for the 15 scored preprints. No PDF cached."
+    },
+    {
+      "id": "openalex",
+      "url": null,
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "OPENALEX_API_KEY unset"
+    },
+    {
+      "id": "crossref",
+      "url": null,
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "DBE_CONTACT_EMAIL unset; mailto not invented"
+    },
+    {
+      "id": "unpaywall",
+      "url": null,
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "DBE_CONTACT_EMAIL unset"
+    },
+    {
+      "id": "inspire-hep",
+      "url": "https://inspirehep.net/api/literature",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "Tuesday; weekly sources run Sunday only"
+    },
+    {
+      "id": "osti",
+      "url": "https://www.osti.gov/api/v1/records",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "Tuesday; weekly sources run Sunday only"
+    },
+    {
+      "id": "inis",
+      "url": "https://inis.iaea.org/api/records",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "Tuesday; weekly sources run Sunday only"
+    },
+    {
+      "id": "eurofusion-news",
+      "url": "https://euro-fusion.org/feed/",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "Tuesday; weekly sources run Sunday only"
+    },
+    {
+      "id": "eurofusion-scipub",
+      "url": "https://scipub.euro-fusion.org/",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "Tuesday; weekly sources run Sunday only"
+    },
+    {
+      "id": "iter-news",
+      "url": "https://www.iter.org/news",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "Tuesday; weekly sources run Sunday only"
+    },
+    {
+      "id": "fia-feed",
+      "url": "https://www.fusionindustryassociation.org/feed/",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "Tuesday; weekly sources run Sunday only"
+    },
+    {
+      "id": "semantic-scholar",
+      "url": null,
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "S2_API_KEY unset; also Tuesday, so the weekly citation pass is off"
+    },
+    {
+      "id": "core",
+      "url": null,
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "Tuesday; weekly sources run Sunday only"
+    },
+    {
+      "id": "europe-pmc",
+      "url": null,
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "Tuesday; usually skip anyway"
+    },
+    {
+      "id": "jstage",
+      "url": null,
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "Tuesday; weekly sources run Sunday only"
+    },
+    {
+      "id": "kci",
+      "url": null,
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "KCI_API_KEY unset; Tuesday"
+    },
+    {
+      "id": "hf-hub",
+      "url": null,
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "Tuesday; weekly sources run Sunday only"
+    },
+    {
+      "id": "github-search",
+      "url": null,
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "Tuesday; weekly sources run Sunday only"
+    },
+    {
+      "id": "nsf-awards",
+      "url": null,
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "Tuesday; weekly sources run Sunday only"
+    },
+    {
+      "id": "usaspending",
+      "url": null,
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "Tuesday; weekly sources run Sunday only"
+    },
+    {
+      "id": "cordis",
+      "url": null,
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "Tuesday; weekly sources run Sunday only"
+    },
+    {
+      "id": "epo-ops",
+      "url": null,
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "EPO_OPS_KEY/SECRET unset; Tuesday"
+    },
+    {
+      "id": "lens",
+      "url": null,
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "LENS_TOKEN unset; Tuesday"
+    }
+  ],
+  "counts": {
+    "harvested": 229,
+    "duplicates": 31,
+    "merged": 0,
+    "new": 15,
+    "scored": 15,
+    "unscored": 20,
+    "add": 0,
+    "strengthen": 0,
+    "weaken": 0,
+    "hold": 13,
+    "newPillar": 0,
+    "reject": 2
+  },
+  "paperIds": [
+    "2610.00478",
+    "2610.00670",
+    "2610.02310",
+    "2610.02515",
+    "2610.02621",
+    "2610.02648",
+    "2610.02734",
+    "2610.03133",
+    "2610.03399",
+    "2610.03429",
+    "2610.03433",
+    "2610.03545",
+    "2610.03594",
+    "2610.03610",
+    "2610.03677"
+  ],
+  "unscoredIds": [
+    {
+      "id": "2610.03682",
+      "reason": "yesterday's queue, 2026-10-02 boundary-connected planar modules; E-QEC; score next"
+    },
+    {
+      "id": "2610.03684",
+      "reason": "yesterday's queue, 2026-10-02 single-shot spacetime-cost correction; E-QEC; score next"
+    },
+    {
+      "id": "2610.03714",
+      "reason": "yesterday's queue, 2026-10-02 SpiderCSS fault-tolerant CSS preparation; E-QEC; score next"
+    },
+    {
+      "id": "2610.03864",
+      "reason": "2026-10-02 braided fusion 2-categories as mixed-state order; possible E-S3; not a new pillar; score cap"
+    },
+    {
+      "id": "2610.04704",
+      "reason": "2026-10-03 peeling off Abelian anyons; possible E-S3; fusion measurement stays; score cap"
+    },
+    {
+      "id": "2610.05307",
+      "reason": "2026-10-04 lifted surgery for non-Abelian two-block codes; possible E-QEC/E-S3 bridge, not ADD; score cap"
+    },
+    {
+      "id": "2610.05395",
+      "reason": "2026-10-04 Kitaev honeycomb entanglement from tensor networks; check E-S3 versus E-MZM before any bind; score cap"
+    },
+    {
+      "id": "2610.05901",
+      "reason": "2026-10-05 fusion-assisted decoding of non-Abelian order; possible E-S3+E-QEC bridge, not ADD; score cap"
+    },
+    {
+      "id": "2610.05928",
+      "reason": "2026-10-05 QEC primitives on processors; possible E-QEC; read the platform before any C talk; score cap"
+    },
+    {
+      "id": "2610.06036",
+      "reason": "2026-10-05 symmetries of 2D translation-invariant codes; possible E-QEC; score cap"
+    },
+    {
+      "id": "2610.06059",
+      "reason": "2026-10-05 XZZX versus rotated surface-code thresholds under correlated noise; E-QEC; score cap"
+    },
+    {
+      "id": "2610.06189",
+      "reason": "2026-10-05 tokamak disruption feedback; possible E-RL; no coil-command read yet; score cap"
+    },
+    {
+      "id": "2610.06203",
+      "reason": "2026-10-05 interferometric braiding of non-Abelian anyons; possible E-S3; fusion measurement must stay; score cap"
+    },
+    {
+      "id": "2610.06606",
+      "reason": "2026-10-05 shot-free logical-error predictor for concatenated codes; E-QEC; score cap"
+    },
+    {
+      "id": "2610.06692",
+      "reason": "2026-10-05 fusion-tree decoding of non-Abelian mixed states; possible bridge, not ADD; score cap"
+    },
+    {
+      "id": "2610.06697",
+      "reason": "2026-10-05 measurement-free surface-code preparation; E-QEC; score cap"
+    },
+    {
+      "id": "2610.06749",
+      "reason": "2026-10-05 logic for ultra-high-rate quantum codes; E-QEC; score cap"
+    },
+    {
+      "id": "2610.06775",
+      "reason": "2026-10-05 logical gates from irrep surface codes; E-QEC; score cap"
+    },
+    {
+      "id": "2610.06811",
+      "reason": "2026-10-05 polynomial-time simulation of non-Clifford QEC; E-QEC; score cap"
+    },
+    {
+      "id": "2610.06845",
+      "reason": "2026-10-05 rewire-and-reset for non-Abelions; possible E-S3; not a fusion measurement yet; score cap"
+    }
+  ],
+  "offPathNotCarried": [
+    "2610.05946",
+    "2610.05208",
+    "2610.03929",
+    "2610.06849",
+    "2610.06085",
+    "2610.05992",
+    "2610.06157",
+    "2610.05953",
+    "2610.06245",
+    "2610.06753",
+    "2610.04729",
+    "2610.04958"
+  ],
+  "fieldCounts": {
+    "holography": 2,
+    "tqc": 9,
+    "topology": 4,
+    "plasma": 2,
+    "majorana": 1,
+    "anyons": 2
+  },
+  "gateMisses": {
+    "A1": 4,
+    "A2": 15,
+    "A3": 15,
+    "A4": 15,
+    "A5": 15,
+    "A6": 3,
+    "A7": 0,
+    "A8": 0,
+    "G1": 0,
+    "G2": 0,
+    "G3": 0,
+    "G4": 15,
+    "G5": 5,
+    "G6": 0
+  },
+  "claimDelta": "none",
+  "versionBump": null,
+  "fulltext": {
+    "cached": 0,
+    "privateOnly": 0,
+    "noOA": 0
+  },
+  "tests": {
+    "command": "PYTHONPATH=. python -m pytest -q tests/test_research.py tests/test_claims.py tests/test_api.py tests/test_plasma.py tests/test_transport.py",
+    "result": "pass",
+    "summary": "19 passed, 30 subtests passed"
+  },
+  "branch": "observatory/2026-10-06",
+  "pr": null,
+  "suspiciousContent": [],
+  "scoreRoutes": [
+    {
+      "paper": "2610.00478",
+      "bind": "E-HOL",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv hep-th"
+    },
+    {
+      "paper": "2610.00670",
+      "bind": "E-HOL",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv hep-th"
+    },
+    {
+      "paper": "2610.02310",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph"
+    },
+    {
+      "paper": "2610.02515",
+      "bind": "E-RL",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv physics.plasm-ph"
+    },
+    {
+      "paper": "2610.02621",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph"
+    },
+    {
+      "paper": "2610.02648",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv cs.IT"
+    },
+    {
+      "paper": "2610.02734",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph"
+    },
+    {
+      "paper": "2610.03133",
+      "bind": "E-MZM",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph"
+    },
+    {
+      "paper": "2610.03399",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph"
+    },
+    {
+      "paper": "2610.03429",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph"
+    },
+    {
+      "paper": "2610.03433",
+      "bind": "S-L3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv physics.plasm-ph"
+    },
+    {
+      "paper": "2610.03545",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph"
+    },
+    {
+      "paper": "2610.03594",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph"
+    },
+    {
+      "paper": "2610.03610",
+      "bind": "E-S3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv cond-mat.str-el"
+    },
+    {
+      "paper": "2610.03677",
+      "bind": "E-S3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph"
+    },
+    {
+      "paper": "2610.03677",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph"
+    }
+  ],
+  "notes": "Nineteenth run, Tuesday, weekly sources off. Lookback 7 days (2026-09-29 to 2026-10-06). Yesterday's 18 unscored ids were already oldest-first; the oldest 15 were scored. Thirteen HOLD and two REJECT. The HOLDs are ten under E-QEC only (including a Hastings-Haah Floquet-code circuit scored as an error-correcting circuit, not as a clock), one DIII-D world model under E-RL with no coil command, one Vlasov-Maxwell PT-symmetry note under S-L3 with no Q_eng, one Majorana-shutter scattering note under E-MZM (WATCH, so A1 fails; not an X and Z logical), one sixteenfold-way decoherence note under E-S3 only (Walker-Wang bulk, not an AdS encoder, so not E-HOL), and one E-S3+E-QEC bridge on exact recovery for non-Abelian D(G) surface codes. Coupling stays C1. Two REJECT on the E-HOL denylist. No ADD, no STRENGTHEN, no new pillar, no CUT reversal. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand. Q=1000 remains a ledger stress test. The Monday evening listing is in and left mostly unscored: quant-ph 129, str-el 16, mes-hall 20, hep-th 19, plasm-ph 6, all dated 2026-10-05. ingest.py was not executed: it fires seven arXiv requests with no sleep and would break the 1 request / 3 s rule. Its QUERIES were run with a 3.2 s gap and a submittedDate filter. fetch_arxiv.py was not run in write mode. OpenAlex, Crossref, and Unpaywall skipped (OPENALEX_API_KEY and DBE_CONTACT_EMAIL unset). No PDF cached (DBE_FULLTEXT_STORE unset; research/fulltext.json still does not exist and was not created). Popularity is 40 because Semantic Scholar was skipped; it is not a citation count. Harvest confidence is round(raw x 0.88) for preprint tier 0.7. Dedupe treated the 15 papers on unmerged PR #4 as already taken, so this branch does not open a second row for them. Prompt freeze text matches the files: DBE-0.2.2 / DBES-0.2.0, claims freeze 2026-10-02. No suspicious instructions in fetched abstracts."
+}

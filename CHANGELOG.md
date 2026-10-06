@@ -15,6 +15,13 @@
 - README and docs/research/OBSERVATORY.md freeze text now read E-TC and E-FR as CUT (DBE-0.2.0).
 
 
+## [0.4.16] - 2026-10-06
+### Added
+- Daily observatory run (lookback 7 days). No paper version bump. Yesterday's unscored pile is scored first. Ten error-layer notes are queued under E-QEC only, including a Floquet-code circuit that is not used as a clock. A DIII-D world model is queued with no coil command. A Vlasov-Maxwell symmetry note is queued with no plant Q. A Majorana shutter is queued as not an X+Z logical. Sixteenfold-way decoherence is queued under the braid claim only. Exact recovery for non-Abelian surface codes is queued as a bridge, so the coupling stays at C1. Two holographic tensor-network papers are rejected on the denylist. The 5 Oct listing is in and left mostly unscored. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
+
+### Changed
+- Command-strip date stamp moved to 2026-10-06 so this-week counts the new harvest.
+
 ## [0.4.15] - 2026-10-05
 ### Added
 - Daily observatory run (lookback 7 days). No paper version bump. The 2 Oct listing is in; yesterday's unscored pile is scored first. Continuous QEC thermodynamics and a deformed toric-code norm are queued under the error layer only. Seven holographic papers are rejected on the denylist. A fusion-category dimension bound, a transmon exchange pulse, a phase-only symmetry, a lattice-Boltzmann syndrome, a graphene Floquet gap, and a quasisymmetric-field construction are rejected as not the bound claim. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand.
