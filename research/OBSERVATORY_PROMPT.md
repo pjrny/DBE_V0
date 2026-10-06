@@ -190,6 +190,11 @@ quarter  G6 does not smuggle Q_eng ≈ 1000 as an output
 8. PROCEDURE
 1. git fetch; create branch observatory/YYYY-MM-DD from origin/feature/research-grade-physics.
    If a branch or open PR for today already exists, reuse it (idempotent re-run).
+   If yesterday's (or any older) observatory/* PR is still open, resolve it first: land it under
+   section 9, resolving conflicts additively only (keep the base, add its non-duplicate papers,
+   cards, runs and dated lines; delete nothing). If it cannot be landed, build on it: create
+   today's branch from that PR's head, dedupe against it, and say so in the PR body. Never
+   leave an open predecessor that today's branch conflicts with.
 2. Read claims.json, versions.json, catalog.json (protocol, pillars, last run in catalog.runs),
    last review folder research/reviews/YYYY-MM-DD/, current paper notes.
 3. Harvest: python research/ingest.py --lookback-days 7 (writes research/runs/YYYY-MM-DD.json).
@@ -238,6 +243,12 @@ quarter  G6 does not smuggle Q_eng ≈ 1000 as an output
     only if something changed), Mission blockers, generatedAt (CT with offset).
 11. Validate and test (all must pass before commit):
     python -m json.tool on every edited JSON file (no trailing commas, UTF-8);
+    serialization, so diffs stay readable: catalog.json and every new JSON file are UTF-8,
+    json.dumps(indent=2, ensure_ascii=False), trailing newline. Any other existing JSON file
+    keeps its current style (reviews.json and claims.json are ASCII-escaped today); never
+    re-encode or re-indent a whole file in a run. Append new catalog.papers rows at the END
+    in decisions-table order; never reorder or prepend existing rows. catalog.runs and
+    reviews.json cards stay newest-first. Review JSON diffs with git diff --diff-algorithm=histogram;
     PYTHONPATH=. python -m pytest -q tests/test_research.py tests/test_claims.py tests/test_api.py tests/test_plasma.py tests/test_transport.py
     (same set as CI; if pytest is unavailable:
      python -m unittest tests.test_research tests.test_claims -q)
@@ -259,10 +270,24 @@ quarter  G6 does not smuggle Q_eng ≈ 1000 as an output
   pillar change, NEW PILLAR suggestion, CUT reversal request, failed checks.
   (On 2026-10-04 neither label existed in the repo. If a label is missing, do not create it;
   write "Labels: observatory[, needs-oscar]" as the first line of the PR body instead.)
-- Auto-merge (squash) is allowed ONLY when CI is green AND no needs-oscar label applies.
-  Otherwise leave the PR open for Oscar. Never force-push, never rewrite merged history.
-  Repo auto-merge is off (allow_auto_merge=false on 2026-10-04), so gh pr merge --auto fails;
-  if CI is not green when the run ends, leave the PR open.
+- Self-merge (gh pr merge --squash; never --auto, never --admin) is allowed ONLY when ALL hold:
+  (a) both CI jobs, build (3.10) and build (3.11), concluded success on the PR's CURRENT head
+      SHA (gh pr checks); a run on an older commit does not count;
+  (b) the PR is mergeable and clean (mergeable MERGEABLE, mergeStateStatus CLEAN);
+  (c) no older observatory/* PR is still open. If one is, resolve and land it first (additive
+      conflict resolution only, as in 8.1; it must meet (a)-(e) itself), or leave your own PR open;
+  (d) the automated code review (Codex) has posted on the current head, or 15 minutes have
+      passed since the last push, and no P1/P2 review comment is unaddressed (fix it on the
+      branch and re-check (a)-(d), or leave the PR open);
+  (e) no needs-oscar trigger applies.
+  Otherwise leave the PR open for Oscar. If CI or review has not finished when the run ends,
+  leave the PR open.
+- After a self-merge, update the PR body so it matches the final state: remove any "left open"
+  or "not merged" line and end with "Merged by the run at <time CT>, head <sha>, CI green on
+  both jobs, review: <posted, no P1/P2 | none after 15 min>". If the PR stays open, end with
+  which of (a)-(e) failed.
+- Never force-push, never rewrite merged history. Repo auto-merge is off (allow_auto_merge=false)
+  and the base branch is unprotected, so only these rules stop a bad merge.
 
 10. RUN LOG (catalog.runs entry; also mirrored at the top of research/runs/YYYY-MM-DD.json)
 { "id": "run-YYYY-MM-DD-daily", "kind": "daily|weekly|lookback|rerun",
@@ -302,3 +327,4 @@ Changes from the 2026-10-03 v2 draft (`observatory_prompt_v2.txt`), made only to
 - Section 8.9: `research/score.py` now normalises the venue. The "always lowercase" workaround for the old bug is gone.
 - Section 9: the `observatory` and `needs-oscar` labels and repo auto-merge did not exist on 2026-10-04.
 - Section 10: the example test summary is the current CI count (19 passed).
+- 2026-10-06 (Oscar-approved follow-up PR): section 8.1 now resolves or builds on an open older observatory PR (after #5 forked past open #4); section 8.11 states one JSON serialization and append-only paper order (after #5/#6 prepended rows and re-encoded catalog.json); section 9 self-merge needs both CI jobs green on the current head, a clean mergeable PR, no older open observatory PR, the code review posted or 15 min with no open P1/P2, and a PR body updated after merge (after #5 merged 46 s after opening with a stale "left open" body).

@@ -1,6 +1,6 @@
 # DBE Observatory starter (automation prompt box)
 
-Copy of the starter text pasted into the Grok automation prompt box (4622 characters by `wc -m`; the box takes at most 8000). It only points the agent at `research/OBSERVATORY_PROMPT.md`, which is the canonical prompt and takes precedence. Change this copy and the box text together, via PR. The starter is everything inside the block.
+Copy of the starter text pasted into the Grok automation prompt box (4989 characters by `wc -m`; the box takes at most 8000). It only points the agent at `research/OBSERVATORY_PROMPT.md`, which is the canonical prompt and takes precedence. Change this copy and the box text together, via PR. The starter is everything inside the block.
 
 ```text
 DBE OBSERVATORY: DAILY RUN STARTER
@@ -40,7 +40,8 @@ STEP 2: NON-NEGOTIABLE RULES (the file has them in full; where it is stricter, i
 STEP 3: BRANCH, TESTS, PULL REQUEST
 - Never commit or push to feature/research-grade-physics or main. Work on branch
   observatory/YYYY-MM-DD (CT date), created from origin/feature/research-grade-physics. If today's
-  branch or PR exists, reuse it (idempotent re-run).
+  branch or PR exists, reuse it (idempotent re-run). If an older observatory/* PR is still open,
+  land it first (additive conflict resolution only) or build today's branch on it (section 8.1).
 - Before any commit, run python -m json.tool on every edited JSON file, then the CI test set:
   PYTHONPATH=. python -m pytest -q tests/test_research.py tests/test_claims.py tests/test_api.py tests/test_plasma.py tests/test_transport.py
   (no pytest: python -m unittest tests.test_research tests.test_claims -q)
@@ -48,8 +49,11 @@ STEP 3: BRANCH, TESTS, PULL REQUEST
   allowed is the file's failure path (draft PR "Observatory YYYY-MM-DD: FAILED checks" with the
   failure pasted). Then stop.
 - Push only the daily branch and open a PR into feature/research-grade-physics using the file's
-  message, body and label rules. Merge only under the file's auto-merge conditions (CI green, no
-  needs-oscar trigger); otherwise leave the PR open for Oscar. Never force-push.
+  message, body and label rules. Self-merge (squash) only if ALL of section 9 hold: build (3.10)
+  and build (3.11) green on the current head; PR mergeable and clean; no older observatory/* PR
+  open; the code review posted (or 15 min passed) with no unaddressed P1/P2; no needs-oscar
+  trigger. After merging, update the PR body to say merged. Otherwise leave the PR open for
+  Oscar. Never force-push.
 
 STEP 4: PER-RUN CAPS
 - At most 60 new records and at most 15 fully scored cards. List the rest in unscoredIds with a

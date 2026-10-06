@@ -2,6 +2,310 @@
   "asOf": "2026-10-06",
   "cards": [
     {
+      "id": "rev-2026-10-06-sorbom-arc-2015",
+      "paperId": "sorbom-arc-2015",
+      "date": "2026-10-06",
+      "bind": [
+        "S-Q"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "fail",
+        "G6": "pass",
+        "note": "G1 and G2 pass: 283 MW electric minus 190 MW net closes to a 93 MW recirculating load. G3 passes: no single-parameter scaling. G4 passes: a plant power balance is the platform S-Q is stated on. G5 fails: no ARC-class plant data exist this year. G6 passes: the paper makes Q_eng = 1000 harder, not easier."
+      },
+      "gateNote": "G1 and G2 pass: 283 MW electric minus 190 MW net closes to a 93 MW recirculating load. G3 passes: no single-parameter scaling. G4 passes: a plant power balance is the platform S-Q is stated on. G5 fails: no ARC-class plant data exist this year. G6 passes: the paper makes Q_eng = 1000 harder, not easier.",
+      "score": "S-Q C1 T2 D0 A0 stays (CUT as output; ledger stress test)",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "ARC's Q_e = 3 is a design estimate for the power core only; the authors say the full-plant Q_e is lower. Designs are not plants, and SPARC has not yet run.",
+      "ledger": "P_recirc = P_e \u2212 P_net = 283 \u2212 190 = 93 MW; f_recirc \u2248 1/3; Q_e = 3.0 (FPC Brayton estimate). Conservative direction only.",
+      "plain": {
+        "core": "MIT's ARC conceptual design is a compact, high-field HTS tokamak with demountable magnets. Its design point is 525 MW of fusion power, 708 MW of total thermal power, a plant thermal efficiency of 0.40, 283 MW of total electric and 190 MW of net electric output, so Q_e = 3.0. The lower-hybrid chain draws 69.6 MW from the wall to launch 25.0 MW.",
+        "why": "Second, independent anchor for the MCF recirculating-power term of the Q ledger: P_recirc = 283 \u2212 190 = 93 MW, f_recirc \u2248 1/3. Even the 'aggressive Pilot' case (Brayton ~50%, 261 MW net, Q_e = 3.8) is about 260 times above the f_recirc = 1e-3 that Q_eng = 1000 needs.",
+        "limit": "Conceptual design, not a built plant. The authors say Q_e is a Brayton estimate for the fusion power core alone and the whole-plant Q_e is lower. Tokamak, not stellarator. Binds S-Q, which is CUT as an output, so it can never be an ADD; ledger input only. No version bump."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: S-Q is CUT. A2 miss (G5). A3 miss: HOLD. A4 pass: a published power balance tightens the ledger conservatively. A5 pass: journal. A6 pass. A7 miss: one more HOLD. A8 pass. Oscar-approved bibliography / ledger-input row for the DBE paper (Phase 5 source check, primary PDF read). Bibliography only: no claims.json edit, no versions.json bump in this PR; INCLUDE (PATCH) is left to the weekly freeze review.",
+      "math": "Table 1: P_f = 525 MW, P_tot = 708 MW, eta_elec = 0.40, P_e = 283 MW, P_net = 190 MW, Q_e = 3.0, Q_p \u2248 13.6, bootstrap fraction ~63%. Coupled aux: LHCD 25 MW, ICRF 13.6 MW. Table 2: LH wall-plug 69.6 MW \u2192 25.0 MW at the launcher; ICRF wall-plug ~19 MW. Aggressive Pilot: eta ~50%, P_net = 261 MW, Q_e = 3.8.",
+      "autoGate": "miss A1, A2, A3, A7",
+      "scoreHeuristic": {
+        "importance": 86,
+        "confidence": 88,
+        "popularity": 85
+      }
+    },
+    {
+      "id": "rev-2026-10-06-crump-diode-ife-2025",
+      "paperId": "crump-diode-ife-2025",
+      "date": "2026-10-06",
+      "bind": [
+        "S-Q"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "fail",
+        "G6": "pass",
+        "note": "G1 and G2 pass: wall-plug efficiency includes cooling power. G3 passes. G4 passes: an IFE driver is the ICF ledger platform. G5 fails: no \u226510% beamline demonstration is scheduled this year. G6 passes."
+      },
+      "gateNote": "G1 and G2 pass: wall-plug efficiency includes cooling power. G3 passes. G4 passes: an IFE driver is the ICF ledger platform. G5 fails: no \u226510% beamline demonstration is scheduled this year. G6 passes.",
+      "score": "S-Q C1 T2 D0 A0 stays (CUT as output; ledger stress test)",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A \u226510% wall-plug requirement is a target restated from earlier LIFE/HiPER studies, not a measurement; the demonstrated DPSSL number (Mercury) is 4.6%.",
+      "ledger": "eta_D requirement \u2265 10% beamline wall-plug (incl. cooling), first demo possibly 7%. Requirement, not demonstration. Conservative direction only.",
+      "plain": {
+        "core": "A status review of diode-laser pumps for diode-pumped solid-state IFE drivers. It restates the beamline wall-plug efficiency requirement, including cooling, as at least 10% at a repetition rate of at least 10 Hz, and notes that a first IFE DPSSL demonstration may run at a relaxed 7%. Diode electrical-to-optical efficiency of at least 70% is a separate, component-level number.",
+        "why": "Sources the driver-efficiency term eta_D of the ICF side of the Q ledger as a requirement. Paired with the Mercury demonstration (4.6% electrical-to-optical at 33.4 J, a separate LLNL source), it shows the gap between required and demonstrated driver efficiency.",
+        "limit": "A requirement and a review, not a demonstrated plant eta_D. The \u226570% figure is diode electrical-to-optical, not driver wall-plug. Binds S-Q, which is CUT as an output; ledger input only. No version bump."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: S-Q is CUT. A2 miss (G5). A3 miss: HOLD. A4 miss: a requirement, not a measured bound. A5 pass: journal. A6 pass. A7 miss. A8 pass. Oscar-approved bibliography / ledger-input row for the DBE paper (Phase 5 source check, primary PDF read). Bibliography only: no claims.json edit, no versions.json bump in this PR; INCLUDE (PATCH) is left to the weekly freeze review.",
+      "math": "Requirement: repetition rate \u2265 10 Hz and beamline wall-plug efficiency \u2265 10%; first IFE DPSSL demonstration may use relaxed values from 7%. Table 1: diode electrical-to-optical efficiency \u2265 70% (diode level, not driver eta_D).",
+      "autoGate": "miss A1, A2, A3, A4, A7",
+      "scoreHeuristic": {
+        "importance": 80,
+        "confidence": 84,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-06-huba-nrl-formulary-2007",
+      "paperId": "huba-nrl-formulary-2007",
+      "date": "2026-10-06",
+      "bind": [
+        "S-L1"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: cgs density and eV temperature, rate in s^-1. G2 passes. G3 passes: standard T^-3/2 dependence within the stated range. G4 passes: a thermal fusion plasma is the S-L1 platform. G5 passes: the rate is recomputable now and checkable against any collisional plasma. G6 passes."
+      },
+      "gateNote": "G1 passes: cgs density and eV temperature, rate in s^-1. G2 passes. G3 passes: standard T^-3/2 dependence within the stated range. G4 passes: a thermal fusion plasma is the S-L1 platform. G5 passes: the rate is recomputable now and checkable against any collisional plasma. G6 passes.",
+      "score": "S-L1 C2 T2 D1 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Formulary rates are order-of-magnitude Spitzer-type estimates; a dense or strongly coupled plasma needs a better ln\u039b, and polarized-fuel survival (Kulsrud 1982) is a different question from pair coherence.",
+      "ledger": "none. Not a plant term; sets the S-L1 coherence-time comparison.",
+      "plain": {
+        "core": "The standard plasma-physics formulary. Page 28 gives the electron collision rate nu_e = 2.91e-6 n_e ln\u039b T_e^-3/2 s^-1 and the ion collision rate nu_i = 4.80e-8 Z^4 mu^-1/2 n_i ln\u039b T_i^-3/2 s^-1 (n in cm^-3, T in eV); the ion\u2013ion Coulomb logarithm is on page 34.",
+        "why": "Sets the collision time that the Layer 1 coherence target (decoherence time above 1e-9 s) has to beat. At n_i = 1e20 cm^-3 and T_i = 1 keV the ion collision time is of order a nanosecond or less, so 'maintained phase coherence' between colliding pairs has no margin.",
+        "limit": "Textbook formulas with order-unity coefficients; the result depends on the Coulomb logarithm chosen. The edition consulted is 2007 (an earlier candidate said 2013). Government reference, not a journal (A5 fails). Moves no C. No version bump."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (S-L1 only, HOLD). A2 pass. A3 miss: HOLD. A4 miss: a textbook rate does not move C. A5 miss: government reference, not journal. A6 pass. A7 miss. A8 pass. Oscar-approved bibliography / ledger-input row for the DBE paper (Phase 5 source check, primary PDF read). Bibliography only: no claims.json edit, no versions.json bump in this PR; INCLUDE (PATCH) is left to the weekly freeze review.",
+      "math": "p. 28: nu_e = 2.91e-6 n_e ln\u039b T_e^(-3/2) s^-1; nu_i = 4.80e-8 Z^4 mu^(-1/2) n_i ln\u039b T_i^(-3/2) s^-1 (n in cm^-3, T in eV, mu = m_i/m_p). Ion\u2013ion Coulomb logarithm p. 34. Collisions and transport section from p. 31.",
+      "autoGate": "miss A3, A4, A5, A7",
+      "scoreHeuristic": {
+        "importance": 74,
+        "confidence": 84,
+        "popularity": 95
+      }
+    },
+    {
+      "id": "rev-2026-10-06-consoli-pb11-2020",
+      "paperId": "consoli-pb11-2020",
+      "date": "2026-10-06",
+      "bind": [
+        "S-L3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 and G2 pass: channel Q values sum to 8.68 MeV, consistent with 8.7 MeV. G3 passes. G4 passes: p-11B kinetics is the platform of the S-L3 alpha-energy statement. G5 passes: alpha spectra are measured in current laser campaigns (e.g. the 2025 petawatt study). G6 passes."
+      },
+      "gateNote": "G1 and G2 pass: channel Q values sum to 8.68 MeV, consistent with 8.7 MeV. G3 passes. G4 passes: p-11B kinetics is the platform of the S-L3 alpha-energy statement. G5 passes: alpha spectra are measured in current laser campaigns (e.g. the 2025 petawatt study). G6 passes.",
+      "score": "S-L3 C4 T2 D2 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Channel energies are kinematic estimates; measured laser-plasma alpha spectra are broadened and diagnostic-limited (CR-39, Thomson parabola), so the 5.7 / 3.76 MeV lines are indicative, not measured peaks.",
+      "ledger": "none. Fixes the alpha-energy input (8.7 MeV over 3 alphas; alpha_0 \u2248 5.7 MeV, alpha_1 \u2248 3.76 MeV); no plant term moved.",
+      "plain": {
+        "core": "Review of diagnostics for laser-initiated p-11B fusion. p + 11B \u2192 3\u03b1 + 8.7 MeV proceeds mainly via 8Be: through the 8Be ground state (alpha_0 + 8Be, channel Q = 8.59 MeV; 8Be \u2192 2\u03b1 with Q = 91.8 keV) or through 8Be* (alpha_1 channel Q = 5.65 MeV, width 1.5 MeV; 8Be* \u2192 2\u03b1 with Q = 3.028 MeV). In laser plasmas alpha_0 and alpha_1 are estimated at about 5.7 and 3.76 MeV; the secondary alphas spread from 0 to above 5 MeV.",
+        "why": "Corrects the Layer 3 alpha-energy premise: 8.7 MeV is shared by three alphas, so no single alpha carries '2.9 to 8.7 MeV'. The alpha spectrum is the input for any phase-space repopulation or direct-conversion term.",
+        "limit": "Diagnostics review with channel energies from kinematics, not a new nuclear-data measurement. Laser-driven, not a thermal burn. 91.8 keV is the 8Be ground-state decay Q, not the primary fusion Q. Moves no C. No version bump."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (S-L3 only, KEEP). A2 pass. A3 miss: HOLD (bibliography only by instruction; no PATCH in this PR). A4 pass: C unchanged and a published number corrects the manuscript. A5 pass: journal. A6 pass. A7 miss. A8 pass. Oscar-approved bibliography / ledger-input row for the DBE paper (Phase 5 source check, primary PDF read). Bibliography only: no claims.json edit, no versions.json bump in this PR; INCLUDE (PATCH) is left to the weekly freeze review.",
+      "math": "p + 11B \u2192 3\u03b1 + 8.7 MeV. Channel 1: p + 11B \u2192 alpha_0 + 8Be (Q = 8.59 MeV), 8Be \u2192 2\u03b1 (Q = 91.8 keV). Channel 2: p + 11B \u2192 alpha_1 + 8Be* (Q = 5.65 MeV, width 1.5 MeV), 8Be* \u2192 2alpha_12 (Q = 3.028 MeV). alpha_0 \u2248 5.7 MeV, alpha_1 \u2248 3.76 MeV; alpha_12 from 0 to > 5 MeV.",
+      "autoGate": "miss A3, A7",
+      "scoreHeuristic": {
+        "importance": 72,
+        "confidence": 86,
+        "popularity": 45
+      }
+    },
+    {
+      "id": "rev-2026-10-06-barr-moir-kinney-dec-1977",
+      "paperId": "barr-moir-kinney-dec-1977",
+      "date": "2026-10-06",
+      "bind": [
+        "S-L4"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 and G2 pass: recovered over incident power, predicted versus measured. G3 passes: the authors state the space-charge limit. G4 fails as support: H-ion beams below MeV, not p-11B alphas. G5 passes: any DEC bench test can falsify the >90% claim this year. G6 passes."
+      },
+      "gateNote": "G1 and G2 pass: recovered over incident power, predicted versus measured. G3 passes: the authors state the space-charge limit. G4 fails as support: H-ion beams below MeV, not p-11B alphas. G5 passes: any DEC bench test can falsify the >90% claim this year. G6 passes.",
+      "score": "S-L4 C1 T1 D1 A1 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A low-density hydrogen-beam bench result does not carry over to a reactor exhaust or to MeV alphas; space charge lowers efficiency at higher density.",
+      "ledger": "eta_DEC measured 86.5 \u00b1 1.5% (predicted 88.6 \u00b1 1.5%) on a low-density beam. Bounds the 'DEC > 90%' assumption; conservative direction only.",
+      "plain": {
+        "core": "A 22-stage electrostatic periodic-focusing direct converter, fed by a hydrogen plasma source through a magnetic expander, recovered 86.5 \u00b1 1.5% of the beam energy at low beam density, against a predicted 88.6 \u00b1 1.5%. Efficiency fell as space charge rose, and the authors judged the scheme probably economical only for mean ion energies above about 500 keV.",
+        "why": "The best measured electrostatic DEC number. It bounds the manuscript's 'DEC > 90%' for Layer 4: lab beams reach about 86.5%, not above 90%.",
+        "limit": "Low-density hydrogen beam test, not reactor plasma and not MeV p-11B alphas (G4 fails as support). Usable as a bound, not as evidence for S-L4. Moves no C. No version bump. Separate entry from Barr & Moir 1983 (different converter, experiment and DOI)."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (S-L4 only, HOLD). A2 miss (G4). A3 miss: HOLD. A4 pass: a published bound tightens the DEC number. A5 pass: journal. A6 pass. A7 miss. A8 pass: conservative. Oscar-approved bibliography / ledger-input row for the DBE paper (Phase 5 source check, primary PDF read). Bibliography only: no claims.json edit, no versions.json bump in this PR; INCLUDE (PATCH) is left to the weekly freeze review.",
+      "math": "22-stage electrostatic periodic-focusing converter + magnetic expander + hydrogen plasma source. Measured average efficiency 86.5 \u00b1 1.5% versus predicted 88.6 \u00b1 1.5% at low beam density. Economical only if mean ion energy \u2273 500 keV.",
+      "autoGate": "miss A2, A3, A7",
+      "scoreHeuristic": {
+        "importance": 80,
+        "confidence": 88,
+        "popularity": 50
+      }
+    },
+    {
+      "id": "rev-2026-10-06-barr-moir-pdc-1983",
+      "paperId": "barr-moir-pdc-1983",
+      "date": "2026-10-06",
+      "bind": [
+        "S-L4"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 and G2 pass: 79 W recovered minus 12 W suppressor power over 138 W incident gives 48% net. G3 passes. G4 fails as support: mirror end-loss plasma, not p-11B alphas. G5 passes. G6 passes."
+      },
+      "gateNote": "G1 and G2 pass: 79 W recovered minus 12 W suppressor power over 138 W incident gives 48% net. G3 passes. G4 fails as support: mirror end-loss plasma, not p-11B alphas. G5 passes. G6 passes.",
+      "score": "S-L4 C1 T1 D1 A1 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A watt-scale, single-stage converter on TMX end loss says little about a multi-stage converter for MeV alphas; it bounds, it does not support, the >90% claim.",
+      "ledger": "eta_DEC measured 48% net (single-stage plasma DEC on TMX; calculated 47%). Conservative direction only.",
+      "plain": {
+        "core": "A single-stage plasma direct converter on the end wall of the Tandem Mirror Experiment (TMX). Of 138 W incident, 79 W were recovered and 12 W powered the suppressor grid, a net efficiency of 48%, in agreement with the calculated 47%.",
+        "why": "The measured plasma (not beam) DEC number: 48% net. With Barr, Moir & Kinney 1977 it gives the measured 48\u201386.5% range that replaces the manuscript's unsourced 'DEC > 90%' in Layer 4.",
+        "limit": "Watt-level single-stage converter on a mirror end loss, not MeV p-11B alphas (G4 fails as support). Not the 1982 beam converter (65 \u00b1 7%). Moves no C. No version bump. Separate entry from the 1977 paper."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (S-L4 only, HOLD). A2 miss (G4). A3 miss: HOLD. A4 pass: published bound. A5 pass: journal. A6 pass. A7 miss. A8 pass. Oscar-approved bibliography / ledger-input row for the DBE paper (Phase 5 source check, primary PDF read). Bibliography only: no claims.json edit, no versions.json bump in this PR; INCLUDE (PATCH) is left to the weekly freeze review.",
+      "math": "Of the 138 W incident on the direct converter, 79 W were recovered and 12 W were used to power the suppressor grid: net efficiency 48%. A net 67 W recovered of ~140 W: eta = 0.48 \u00b1 0.02; calculated 47%.",
+      "autoGate": "miss A2, A3, A7",
+      "scoreHeuristic": {
+        "importance": 74,
+        "confidence": 85,
+        "popularity": 35
+      }
+    },
+    {
+      "id": "rev-2026-10-06-fukai-pb11-neutron-1990",
+      "paperId": "fukai-pb11-neutron-1990",
+      "date": "2026-10-06",
+      "bind": [
+        "S-L4"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 and G2 pass: neutrons per reaction with stated mean energies. G3 passes: two temperature ratios, no extrapolation. G4 passes: a p-11B plasma is the S-L4 fuel. G5 passes: recomputable from current cross sections now. G6 passes."
+      },
+      "gateNote": "G1 and G2 pass: neutrons per reaction with stated mean energies. G3 passes: two temperature ratios, no extrapolation. G4 passes: a p-11B plasma is the S-L4 fuel. G5 passes: recomputable from current cross sections now. G6 passes.",
+      "score": "S-L4 C1 T1 D1 A1 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A 1990 calculation with 1990 cross sections; the fraction depends strongly on T_i/T_e and impurity content, and HB11-affiliated work (Hora 2021) argues lower (\u03b1,n) fractions for laser-driven spectra.",
+      "ledger": "Neutron fraction 2.27e-3 per reaction at T_i = 300 keV, T_i/T_e = 1 (9.62e-5 at T_i/T_e = 200). Not aneutronic; conservative direction only.",
+      "plain": {
+        "core": "Estimates the neutron yield of a p-11B plasma from its side reactions: 2.27e-3 neutrons per fusion reaction (mean 2.49 MeV) at T_i = 300 keV and T_i/T_e = 1, and 9.62e-5 (mean 3.93 MeV) at T_i/T_e = 200. 11B(p,n)11C and 11B(\u03b1,n)14N dominate; (\u03b3,n) in stainless structure and 11B(d,n)12C on deuterium impurity complete the four main channels; the rest are below 1e-7.",
+        "why": "Puts a number on 'nearly aneutronic': about 0.2% neutrons per reaction at equal temperatures. Contradicts the manuscript's 'fully aneutronic' premise for Layer 4 and the shielding-free plant it implies.",
+        "limit": "Body in Japanese; the numbers are from the author's English abstract (not machine-translated). Calculation, not a measurement. Moves no C. No version bump."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (S-L4 only, HOLD). A2 pass. A3 miss: HOLD. A4 pass: a published number tightens 'aneutronic'. A5 pass: journal. A6 pass. A7 miss. A8 pass. English abstract by the author; not machine-translated; verify the Japanese body before any STRENGTHEN. Oscar-approved bibliography / ledger-input row for the DBE paper (Phase 5 source check, primary PDF read). Bibliography only: no claims.json edit, no versions.json bump in this PR; INCLUDE (PATCH) is left to the weekly freeze review.",
+      "math": "Neutron yield from four main side reactions: 2.27e-3 (mean E_n = 2.49 MeV) at T_i = 300 keV, T_i/T_e = 1; 9.62e-5 (mean E_n = 3.93 MeV) at T_i/T_e = 200. Dominant: 11B(p,n)11C, 11B(\u03b1,n)14N; also (\u03b3,n) in stainless steel and 11B(d,n)12C on D impurity; others < 1e-7.",
+      "autoGate": "miss A3, A7",
+      "scoreHeuristic": {
+        "importance": 72,
+        "confidence": 80,
+        "popularity": 25
+      }
+    },
+    {
+      "id": "rev-2026-10-06-nevins-advanced-fuels-1998",
+      "paperId": "nevins-advanced-fuels-1998",
+      "date": "2026-10-06",
+      "bind": [
+        "S-L4"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 to G3 pass: no number is taken from the review. G4 passes: p-11B burn is the S-L4 fuel. G5 passes: neutron production is checkable in any p-11B experiment. G6 passes."
+      },
+      "gateNote": "G1 to G3 pass: no number is taken from the review. G4 passes: p-11B burn is the S-L4 fuel. G5 passes: neutron production is checkable in any p-11B experiment. G6 passes.",
+      "score": "S-L4 C1 T1 D1 A1 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A review statement, not a calculation; the residual neutron fraction itself comes from Fukai 1990 or later cross-section work.",
+      "ledger": "none numerically. Qualitative: residual neutrons from 11B(\u03b1,n)14N and 11B(p,n)11C.",
+      "plain": {
+        "core": "A review of the confinement needed to burn advanced fuels. p-11B is described as nearly aneutronic, with residual neutron production from 11B(\u03b1,n)14N and 11B(p,n)11C.",
+        "why": "Qualitative, peer-reviewed statement that p-11B is not fully aneutronic, alongside Fukai 1990 for the number. Used against the manuscript's 'fully aneutronic' premise in Layer 4.",
+        "limit": "No neutron percentage in the opened text; qualitative only. Moves no C. No version bump."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (S-L4 only, HOLD). A2 pass. A3 miss: HOLD. A4 miss: no number. A5 pass: journal. A6 pass. A7 miss. A8 pass. Oscar-approved bibliography / ledger-input row for the DBE paper (Phase 5 source check, primary PDF read). Bibliography only: no claims.json edit, no versions.json bump in this PR; INCLUDE (PATCH) is left to the weekly freeze review.",
+      "math": "Fuel is 'nearly aneutronic'; residual neutron production from 11B(\u03b1,n)14N and 11B(p,n)11C. No percentage in the opened text.",
+      "autoGate": "miss A3, A4, A7",
+      "scoreHeuristic": {
+        "importance": 72,
+        "confidence": 85,
+        "popularity": 45
+      }
+    },
+    {
       "id": "rev-2026-10-06-2610.00478",
       "paperId": "2610.00478",
       "date": "2026-10-06",

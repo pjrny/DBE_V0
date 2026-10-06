@@ -14769,6 +14769,454 @@
       "bindAction": "HOLD",
       "pillarEffect": "none",
       "lang": "en"
+    },
+    {
+      "id": "sorbom-arc-2015",
+      "title": "ARC: A compact, high-field, fusion nuclear science facility and demonstration power plant with demountable magnets",
+      "authors": [
+        "B. N. Sorbom",
+        "J. Ball",
+        "T. R. Palmer",
+        "F. J. Mangiarotti",
+        "J. M. Sierchio",
+        "P. Bonoli",
+        "C. Kasten",
+        "D. A. Sutherland",
+        "H. S. Barnard",
+        "C. B. Haakonsen",
+        "J. Goh",
+        "C. Sung",
+        "D. G. Whyte"
+      ],
+      "year": 2015,
+      "date": "2015-11-01",
+      "venue": "Fusion Engineering and Design 100, 378–405 (2015)",
+      "arxiv": "1409.3540",
+      "doi": "10.1016/j.fusengdes.2015.07.008",
+      "url": "https://doi.org/10.1016/j.fusengdes.2015.07.008",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "role": "lookback",
+      "foundational": true,
+      "importance": 86,
+      "confidence": 88,
+      "popularity": 85,
+      "coreIdea": "MIT's ARC conceptual design is a compact, high-field HTS tokamak with demountable magnets. Its design point is 525 MW of fusion power, 708 MW of total thermal power, a plant thermal efficiency of 0.40, 283 MW of total electric and 190 MW of net electric output, so Q_e = 3.0. The lower-hybrid chain draws 69.6 MW from the wall to launch 25.0 MW.",
+      "whyItMatters": "Second, independent anchor for the MCF recirculating-power term of the Q ledger: P_recirc = 283 − 190 = 93 MW, f_recirc ≈ 1/3. Even the 'aggressive Pilot' case (Brayton ~50%, 261 MW net, Q_e = 3.8) is about 260 times above the f_recirc = 1e-3 that Q_eng = 1000 needs.",
+      "limitation": "Conceptual design, not a built plant. The authors say Q_e is a Brayton estimate for the fusion power core alone and the whole-plant Q_e is lower. Tokamak, not stellarator. Binds S-Q, which is CUT as an output, so it can never be an ADD; ledger input only. No version bump.",
+      "source": "Fusion Engineering and Design / arXiv 1409.3540",
+      "tags": [
+        "ledger",
+        "reference",
+        "recirculating power",
+        "Q_e",
+        "HTS tokamak",
+        "phase5-verified",
+        "oscar-approved"
+      ],
+      "pillarId": "fusion-q1000",
+      "claimIds": [
+        "S-Q"
+      ],
+      "bindAction": "HOLD",
+      "sourceTier": "journal",
+      "licence": null,
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/abs/1409.3540",
+      "inferred": [
+        "importance",
+        "confidence",
+        "popularity",
+        "fields",
+        "role",
+        "pillarId",
+        "bindAction",
+        "date",
+        "oaStatus"
+      ]
+    },
+    {
+      "id": "crump-diode-ife-2025",
+      "title": "Diode laser pumps for future inertial fusion energy systems: status and perspectives",
+      "authors": [
+        "P. Crump",
+        "W. Fenwick",
+        "M. Elattar",
+        "I. Tamer",
+        "K. Häusler",
+        "M. Nelson",
+        "J. E. Boschker",
+        "A. Knigge",
+        "R. J. Deri"
+      ],
+      "year": 2025,
+      "date": "2025-10-23",
+      "venue": "Optics Express 33(22), 46456–46470 (2025)",
+      "doi": "10.1364/OE.575048",
+      "url": "https://doi.org/10.1364/OE.575048",
+      "fields": [
+        "fusion-quantum",
+        "plasma"
+      ],
+      "role": "lookback",
+      "foundational": false,
+      "importance": 80,
+      "confidence": 84,
+      "popularity": 40,
+      "coreIdea": "A status review of diode-laser pumps for diode-pumped solid-state IFE drivers. It restates the beamline wall-plug efficiency requirement, including cooling, as at least 10% at a repetition rate of at least 10 Hz, and notes that a first IFE DPSSL demonstration may run at a relaxed 7%. Diode electrical-to-optical efficiency of at least 70% is a separate, component-level number.",
+      "whyItMatters": "Sources the driver-efficiency term eta_D of the ICF side of the Q ledger as a requirement. Paired with the Mercury demonstration (4.6% electrical-to-optical at 33.4 J, a separate LLNL source), it shows the gap between required and demonstrated driver efficiency.",
+      "limitation": "A requirement and a review, not a demonstrated plant eta_D. The ≥70% figure is diode electrical-to-optical, not driver wall-plug. Binds S-Q, which is CUT as an output; ledger input only. No version bump.",
+      "source": "Optics Express (accepted manuscript LLNL-JRNL-2008670)",
+      "tags": [
+        "ledger",
+        "reference",
+        "eta_D",
+        "IFE driver",
+        "diode pumps",
+        "phase5-verified",
+        "oscar-approved"
+      ],
+      "pillarId": "fusion-q1000",
+      "claimIds": [
+        "S-Q"
+      ],
+      "bindAction": "HOLD",
+      "sourceTier": "journal",
+      "licence": "https://doi.org/10.1364/OA_License_v2#VOR-OA",
+      "oaStatus": "gold",
+      "fulltextUrl": "https://doi.org/10.1364/OE.575048",
+      "inferred": [
+        "importance",
+        "confidence",
+        "popularity",
+        "fields",
+        "role",
+        "pillarId",
+        "bindAction",
+        "oaStatus"
+      ]
+    },
+    {
+      "id": "huba-nrl-formulary-2007",
+      "title": "NRL Plasma Formulary (2007 edition)",
+      "authors": [
+        "J. D. Huba"
+      ],
+      "year": 2007,
+      "date": "2007-01-01",
+      "venue": "Naval Research Laboratory, Beam Physics Branch, Plasma Physics Division, Washington, DC (2007 edition)",
+      "url": "https://www.govinfo.gov/content/pkg/GOVPUB-D210-PURL-LPS83689/pdf/GOVPUB-D210-PURL-LPS83689.pdf",
+      "fields": [
+        "plasma"
+      ],
+      "role": "lookback",
+      "foundational": true,
+      "importance": 74,
+      "confidence": 84,
+      "popularity": 95,
+      "coreIdea": "The standard plasma-physics formulary. Page 28 gives the electron collision rate nu_e = 2.91e-6 n_e lnΛ T_e^-3/2 s^-1 and the ion collision rate nu_i = 4.80e-8 Z^4 mu^-1/2 n_i lnΛ T_i^-3/2 s^-1 (n in cm^-3, T in eV); the ion–ion Coulomb logarithm is on page 34.",
+      "whyItMatters": "Sets the collision time that the Layer 1 coherence target (decoherence time above 1e-9 s) has to beat. At n_i = 1e20 cm^-3 and T_i = 1 keV the ion collision time is of order a nanosecond or less, so 'maintained phase coherence' between colliding pairs has no margin.",
+      "limitation": "Textbook formulas with order-unity coefficients; the result depends on the Coulomb logarithm chosen. The edition consulted is 2007 (an earlier candidate said 2013). Government reference, not a journal (A5 fails). Moves no C. No version bump.",
+      "source": "NRL / govinfo",
+      "tags": [
+        "reference",
+        "collision time",
+        "Coulomb logarithm",
+        "phase5-verified",
+        "oscar-approved"
+      ],
+      "pillarId": "fusion-q1000",
+      "claimIds": [
+        "S-L1"
+      ],
+      "bindAction": "HOLD",
+      "sourceTier": "government/lab report",
+      "licence": null,
+      "oaStatus": "bronze",
+      "fulltextUrl": "https://www.govinfo.gov/content/pkg/GOVPUB-D210-PURL-LPS83689/pdf/GOVPUB-D210-PURL-LPS83689.pdf",
+      "inferred": [
+        "importance",
+        "confidence",
+        "popularity",
+        "fields",
+        "role",
+        "pillarId",
+        "bindAction",
+        "date",
+        "oaStatus"
+      ]
+    },
+    {
+      "id": "consoli-pb11-2020",
+      "title": "Diagnostic Methodologies of Laser-Initiated 11B(p,α)2α Fusion Reactions",
+      "authors": [
+        "F. Consoli",
+        "R. De Angelis",
+        "P. Andreoli",
+        "A. Bonasera",
+        "M. Cipriani",
+        "G. Cristofari",
+        "G. Di Giorgio",
+        "D. Giulietti",
+        "M. Salvadori"
+      ],
+      "year": 2020,
+      "date": "2020-11-12",
+      "venue": "Frontiers in Physics 8, 561492 (2020)",
+      "doi": "10.3389/fphy.2020.561492",
+      "url": "https://doi.org/10.3389/fphy.2020.561492",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "role": "lookback",
+      "foundational": false,
+      "importance": 72,
+      "confidence": 86,
+      "popularity": 45,
+      "coreIdea": "Review of diagnostics for laser-initiated p-11B fusion. p + 11B → 3α + 8.7 MeV proceeds mainly via 8Be: through the 8Be ground state (alpha_0 + 8Be, channel Q = 8.59 MeV; 8Be → 2α with Q = 91.8 keV) or through 8Be* (alpha_1 channel Q = 5.65 MeV, width 1.5 MeV; 8Be* → 2α with Q = 3.028 MeV). In laser plasmas alpha_0 and alpha_1 are estimated at about 5.7 and 3.76 MeV; the secondary alphas spread from 0 to above 5 MeV.",
+      "whyItMatters": "Corrects the Layer 3 alpha-energy premise: 8.7 MeV is shared by three alphas, so no single alpha carries '2.9 to 8.7 MeV'. The alpha spectrum is the input for any phase-space repopulation or direct-conversion term.",
+      "limitation": "Diagnostics review with channel energies from kinematics, not a new nuclear-data measurement. Laser-driven, not a thermal burn. 91.8 keV is the 8Be ground-state decay Q, not the primary fusion Q. Moves no C. No version bump.",
+      "source": "Frontiers in Physics",
+      "tags": [
+        "reference",
+        "p-11B",
+        "alpha spectrum",
+        "laser-driven fusion",
+        "phase5-verified",
+        "oscar-approved"
+      ],
+      "pillarId": "fusion-q1000",
+      "claimIds": [
+        "S-L3"
+      ],
+      "bindAction": "HOLD",
+      "sourceTier": "journal",
+      "licence": "https://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "gold",
+      "fulltextUrl": "https://doi.org/10.3389/fphy.2020.561492",
+      "inferred": [
+        "importance",
+        "confidence",
+        "popularity",
+        "fields",
+        "role",
+        "pillarId",
+        "bindAction"
+      ]
+    },
+    {
+      "id": "barr-moir-kinney-dec-1977",
+      "title": "Experimental and computational results on direct energy conversion for mirror fusion reactors",
+      "authors": [
+        "W. L. Barr",
+        "R. W. Moir",
+        "J. D. Kinney"
+      ],
+      "year": 1977,
+      "date": "1977-10-01",
+      "venue": "Nuclear Fusion 17(5), 1015–1022 (1977)",
+      "doi": "10.1088/0029-5515/17/5/012",
+      "url": "https://doi.org/10.1088/0029-5515/17/5/012",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "role": "lookback",
+      "foundational": true,
+      "importance": 80,
+      "confidence": 88,
+      "popularity": 50,
+      "coreIdea": "A 22-stage electrostatic periodic-focusing direct converter, fed by a hydrogen plasma source through a magnetic expander, recovered 86.5 ± 1.5% of the beam energy at low beam density, against a predicted 88.6 ± 1.5%. Efficiency fell as space charge rose, and the authors judged the scheme probably economical only for mean ion energies above about 500 keV.",
+      "whyItMatters": "The best measured electrostatic DEC number. It bounds the manuscript's 'DEC > 90%' for Layer 4: lab beams reach about 86.5%, not above 90%.",
+      "limitation": "Low-density hydrogen beam test, not reactor plasma and not MeV p-11B alphas (G4 fails as support). Usable as a bound, not as evidence for S-L4. Moves no C. No version bump. Separate entry from Barr & Moir 1983 (different converter, experiment and DOI).",
+      "source": "Nuclear Fusion (IOP)",
+      "tags": [
+        "reference",
+        "direct conversion",
+        "DEC",
+        "mirror",
+        "phase5-verified",
+        "oscar-approved"
+      ],
+      "pillarId": "fusion-q1000",
+      "claimIds": [
+        "S-L4"
+      ],
+      "bindAction": "HOLD",
+      "sourceTier": "journal",
+      "licence": null,
+      "oaStatus": null,
+      "fulltextUrl": null,
+      "inferred": [
+        "importance",
+        "confidence",
+        "popularity",
+        "fields",
+        "role",
+        "pillarId",
+        "bindAction"
+      ]
+    },
+    {
+      "id": "barr-moir-pdc-1983",
+      "title": "Test Results on Plasma Direct Converters",
+      "authors": [
+        "W. L. Barr",
+        "R. W. Moir"
+      ],
+      "year": 1983,
+      "date": "1983-01-01",
+      "venue": "Nuclear Technology/Fusion 3(1), 98–111 (1983)",
+      "doi": "10.13182/FST83-A20820",
+      "url": "https://doi.org/10.13182/FST83-A20820",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "role": "lookback",
+      "foundational": false,
+      "importance": 74,
+      "confidence": 85,
+      "popularity": 35,
+      "coreIdea": "A single-stage plasma direct converter on the end wall of the Tandem Mirror Experiment (TMX). Of 138 W incident, 79 W were recovered and 12 W powered the suppressor grid, a net efficiency of 48%, in agreement with the calculated 47%.",
+      "whyItMatters": "The measured plasma (not beam) DEC number: 48% net. With Barr, Moir & Kinney 1977 it gives the measured 48–86.5% range that replaces the manuscript's unsourced 'DEC > 90%' in Layer 4.",
+      "limitation": "Watt-level single-stage converter on a mirror end loss, not MeV p-11B alphas (G4 fails as support). Not the 1982 beam converter (65 ± 7%). Moves no C. No version bump. Separate entry from the 1977 paper.",
+      "source": "Nuclear Technology/Fusion (ANS)",
+      "tags": [
+        "reference",
+        "direct conversion",
+        "plasma direct converter",
+        "TMX",
+        "phase5-verified",
+        "oscar-approved"
+      ],
+      "pillarId": "fusion-q1000",
+      "claimIds": [
+        "S-L4"
+      ],
+      "bindAction": "HOLD",
+      "sourceTier": "journal",
+      "licence": null,
+      "oaStatus": null,
+      "fulltextUrl": null,
+      "inferred": [
+        "importance",
+        "confidence",
+        "popularity",
+        "fields",
+        "role",
+        "pillarId",
+        "bindAction",
+        "date"
+      ]
+    },
+    {
+      "id": "fukai-pb11-neutron-1990",
+      "title": "Neutron Yield from p11B Fusion Plasma",
+      "authors": [
+        "Y. Fukai"
+      ],
+      "year": 1990,
+      "date": "1990-01-01",
+      "venue": "Kakuyūgō Kenkyū (J. Plasma Fusion Res.) 63(4), 248–270 (1990)",
+      "doi": "10.1585/jspf1958.63.248",
+      "url": "https://doi.org/10.1585/jspf1958.63.248",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "role": "lookback",
+      "foundational": false,
+      "importance": 72,
+      "confidence": 80,
+      "popularity": 25,
+      "coreIdea": "Estimates the neutron yield of a p-11B plasma from its side reactions: 2.27e-3 neutrons per fusion reaction (mean 2.49 MeV) at T_i = 300 keV and T_i/T_e = 1, and 9.62e-5 (mean 3.93 MeV) at T_i/T_e = 200. 11B(p,n)11C and 11B(α,n)14N dominate; (γ,n) in stainless structure and 11B(d,n)12C on deuterium impurity complete the four main channels; the rest are below 1e-7.",
+      "whyItMatters": "Puts a number on 'nearly aneutronic': about 0.2% neutrons per reaction at equal temperatures. Contradicts the manuscript's 'fully aneutronic' premise for Layer 4 and the shielding-free plant it implies.",
+      "limitation": "Body in Japanese; the numbers are from the author's English abstract (not machine-translated). Calculation, not a measurement. Moves no C. No version bump.",
+      "source": "Kakuyūgō Kenkyū (JSPF)",
+      "tags": [
+        "reference",
+        "p-11B",
+        "neutron fraction",
+        "aneutronic",
+        "phase5-verified",
+        "oscar-approved"
+      ],
+      "pillarId": "fusion-q1000",
+      "claimIds": [
+        "S-L4"
+      ],
+      "bindAction": "HOLD",
+      "sourceTier": "journal",
+      "licence": null,
+      "oaStatus": null,
+      "fulltextUrl": null,
+      "lang": "ja",
+      "inferred": [
+        "importance",
+        "confidence",
+        "popularity",
+        "fields",
+        "role",
+        "pillarId",
+        "bindAction",
+        "date"
+      ]
+    },
+    {
+      "id": "nevins-advanced-fuels-1998",
+      "title": "A Review of Confinement Requirements for Advanced Fuels",
+      "authors": [
+        "W. M. Nevins"
+      ],
+      "year": 1998,
+      "date": "1998-03-01",
+      "venue": "Journal of Fusion Energy 17(1), 25–32 (1998)",
+      "doi": "10.1023/A:1022513215080",
+      "url": "https://doi.org/10.1023/A:1022513215080",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "role": "lookback",
+      "foundational": false,
+      "importance": 72,
+      "confidence": 85,
+      "popularity": 45,
+      "coreIdea": "A review of the confinement needed to burn advanced fuels. p-11B is described as nearly aneutronic, with residual neutron production from 11B(α,n)14N and 11B(p,n)11C.",
+      "whyItMatters": "Qualitative, peer-reviewed statement that p-11B is not fully aneutronic, alongside Fukai 1990 for the number. Used against the manuscript's 'fully aneutronic' premise in Layer 4.",
+      "limitation": "No neutron percentage in the opened text; qualitative only. Moves no C. No version bump.",
+      "source": "Journal of Fusion Energy (Springer)",
+      "tags": [
+        "reference",
+        "advanced fuels",
+        "p-11B",
+        "aneutronic",
+        "phase5-verified",
+        "oscar-approved"
+      ],
+      "pillarId": "fusion-q1000",
+      "claimIds": [
+        "S-L4"
+      ],
+      "bindAction": "HOLD",
+      "sourceTier": "journal",
+      "licence": null,
+      "oaStatus": null,
+      "fulltextUrl": null,
+      "inferred": [
+        "importance",
+        "confidence",
+        "popularity",
+        "fields",
+        "role",
+        "pillarId",
+        "bindAction",
+        "date"
+      ]
     }
   ],
   "runs": [
@@ -15378,7 +15826,7 @@
           "venue": "arXiv quant-ph"
         }
       ],
-      "notes": "Nineteenth run, Tuesday, weekly sources off. Lookback 7 days (2026-09-29 to 2026-10-06). Yesterday's 18 unscored ids were already oldest-first; the oldest 15 were scored. Thirteen HOLD and two REJECT. The HOLDs are ten under E-QEC only (including a Hastings-Haah Floquet-code circuit scored as an error-correcting circuit, not as a clock), one DIII-D world model under E-RL with no coil command, one Vlasov-Maxwell PT-symmetry note under S-L3 with no Q_eng, one Majorana-shutter scattering note under E-MZM (WATCH, so A1 fails; not an X and Z logical), one sixteenfold-way decoherence note under E-S3 only (Walker-Wang bulk, not an AdS encoder, so not E-HOL), and one E-S3+E-QEC bridge on exact recovery for non-Abelian D(G) surface codes. Coupling stays C1. Two REJECT on the E-HOL denylist. No ADD, no STRENGTHEN, no new pillar, no CUT reversal. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand. Q=1000 remains a ledger stress test. The Monday evening listing is in and left mostly unscored: quant-ph 129, str-el 16, mes-hall 20, hep-th 19, plasm-ph 6, all dated 2026-10-05. ingest.py was not executed: it fires seven arXiv requests with no sleep and would break the 1 request / 3 s rule. Its QUERIES were run with a 3.2 s gap and a submittedDate filter. fetch_arxiv.py was not run in write mode. OpenAlex, Crossref, and Unpaywall skipped (OPENALEX_API_KEY and DBE_CONTACT_EMAIL unset). No PDF cached (DBE_FULLTEXT_STORE unset; research/fulltext.json still does not exist and was not created). Popularity is 40 because Semantic Scholar was skipped; it is not a citation count. Harvest confidence is round(raw x 0.88) for preprint tier 0.7. Dedupe treated the 15 papers on unmerged PR #4 as already taken, so this branch does not open a second row for them. Prompt freeze text matches the files: DBE-0.2.2 / DBES-0.2.0, claims freeze 2026-10-02. No suspicious instructions in fetched abstracts."
+      "notes": "Nineteenth run, Tuesday, weekly sources off. Lookback 7 days (2026-09-29 to 2026-10-06). Yesterday's 18 unscored ids were already oldest-first; the oldest 15 were scored. Thirteen HOLD and two REJECT. The HOLDs are eight under E-QEC only (including a Hastings-Haah Floquet-code circuit scored as an error-correcting circuit, not as a clock), one DIII-D world model under E-RL with no coil command, one Vlasov-Maxwell PT-symmetry note under S-L3 with no Q_eng, one Majorana-shutter scattering note under E-MZM (WATCH, so A1 fails; not an X and Z logical), one sixteenfold-way decoherence note under E-S3 only (Walker-Wang bulk, not an AdS encoder, so not E-HOL), and one E-S3+E-QEC bridge on exact recovery for non-Abelian D(G) surface codes. Coupling stays C1. Two REJECT on the E-HOL denylist. No ADD, no STRENGTHEN, no new pillar, no CUT reversal. C unchanged. DBE-0.2.2 / DBES-0.2.0 stand. Q=1000 remains a ledger stress test. The Monday evening listing is in and left mostly unscored: quant-ph 129, str-el 16, mes-hall 20, hep-th 19, plasm-ph 6, all dated 2026-10-05. ingest.py was not executed: it fires seven arXiv requests with no sleep and would break the 1 request / 3 s rule. Its QUERIES were run with a 3.2 s gap and a submittedDate filter. fetch_arxiv.py was not run in write mode. OpenAlex, Crossref, and Unpaywall skipped (OPENALEX_API_KEY and DBE_CONTACT_EMAIL unset). No PDF cached (DBE_FULLTEXT_STORE unset; research/fulltext.json still does not exist and was not created). Popularity is 40 because Semantic Scholar was skipped; it is not a citation count. Harvest confidence is round(raw x 0.88) for preprint tier 0.7. Dedupe treated the 15 papers on unmerged PR #4 as already taken, so this branch does not open a second row for them. Prompt freeze text matches the files: DBE-0.2.2 / DBES-0.2.0, claims freeze 2026-10-02. No suspicious instructions in fetched abstracts."
     },
     {
       "id": "run-2026-10-05-daily",
