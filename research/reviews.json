@@ -1,6 +1,577 @@
 {
-  "asOf": "2026-10-05",
+  "asOf": "2026-10-06",
   "cards": [
+    {
+      "id": "rev-2026-10-06-2610.00478",
+      "paperId": "2610.00478",
+      "date": "2026-10-06",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass",
+        "note": "G1 passes: the algebraic entropy is compared with generalized gravitational entropy, and no plant unit is introduced. G3 passes: large bond dimension is the toy-model limit, not a scale-up of a reactor. G4 fails: a holographic tensor network is not a reactor or processor encoder. G5 fails: there is no engine falsifier this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: the algebraic entropy is compared with generalized gravitational entropy, and no plant unit is introduced. G3 passes: large bond dimension is the toy-model limit, not a scale-up of a reactor. G4 fails: a holographic tensor network is not a reactor or processor encoder. G5 fails: there is no engine falsifier this quarter. G6 passes.",
+      "score": "E-HOL CUT stays",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "The denylist needs two independent C>=4 sources to reverse. A tensor-network toy model of generalized entanglement wedges is not that packet.",
+      "ledger": "none.",
+      "plain": {
+        "core": "The authors test an algebraic picture of generalized entanglement wedges inside holographic tensor networks. A region that no larger region beats on boundary-leg count is given a boundary subalgebra, and the algebra's intersections and commutants are compared with the geometry of the network.",
+        "why": "E-HOL stays CUT. Reading is allowed. INCLUDE is not. This is not an AdS map onto a tokamak or a processor.",
+        "limit": "Readable. Not INCLUDE. Reversal is not requested. Version v2 adds a reference; it is still a bare preprint."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-HOL is CUT. A2 miss (G4, G5). A3 miss. A4 miss. A5 miss: bare arXiv, version v2. A6 miss: denylist. Not a CUT reversal.",
+      "math": "Tensor-network toy models of generalized entanglement wedges. In the large-bond-dimension limit the authors associate a boundary subalgebra, and a family of unitarily related von Neumann factor subalgebras, to a region that no containing region beats on boundary-leg count. They compare intersections, joins, and commutants with geometric operations, and they discuss an alternative entropy S(omega || omega composed with a conditional expectation). Authors Abhisek Sahu, Jeremy van der Heijden, Mark Van Raamsdonk, Rana Zibakhsh. arXiv:2610.00478v2, submitted 2026-09-30, updated 2026-10-02, hep-th. Comment: 57 pages plus appendices. No number is copied from the figures.",
+      "autoGate": "miss A1, A2, A3, A4, A5, A6",
+      "scoreHeuristic": {
+        "importance": 44,
+        "confidence": 44,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-06-2610.00670",
+      "paperId": "2610.00670",
+      "date": "2026-10-06",
+      "bind": [
+        "E-HOL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass",
+        "note": "G1 and G2 pass: mutual information is dimensionless here, and no fusion power is entered. G3 passes: extensivity of a bulk kernel is not a plant gain. G4 fails: AdS mutual information is not a reactor encoder. G5 fails: a half-disk CFT calculation is not a tokamak or QEC falsifier this quarter. G6 passes."
+      },
+      "gateNote": "G1 and G2 pass: mutual information is dimensionless here, and no fusion power is entered. G3 passes: extensivity of a bulk kernel is not a plant gain. G4 fails: AdS mutual information is not a reactor encoder. G5 fails: a half-disk CFT calculation is not a tokamak or QEC falsifier this quarter. G6 passes.",
+      "score": "E-HOL CUT stays",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "The denylist needs two independent C>=4 sources to reverse. Quantum corrections to holographic mutual information are not a fusion rate and not that packet.",
+      "ledger": "none.",
+      "plain": {
+        "core": "A bulk mutual-information model in anti-de Sitter space is used for the leading quantum correction to holographic mutual information. Extensivity of that bulk quantity is argued to be enough for the corrected boundary entropy vector to stay inside the holographic entropy cone.",
+        "why": "E-HOL stays CUT. Reading is allowed. INCLUDE is not.",
+        "limit": "Readable. Not INCLUDE. Reversal is not requested. The half-disk formula is not quoted in the abstract, so it is not copied."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-HOL is CUT. A2 miss (G4, G5). A3 miss. A4 miss. A5 miss: bare arXiv. A6 miss: denylist. Not a CUT reversal.",
+      "math": "An extensive bulk mutual-information model in AdS, built from a covariantly conserved current-current kernel and realized by a free massive Dirac fermion. The authors say extensivity is enough for the quantum-corrected boundary entropy vector to obey monogamy of mutual information and the other holographic entropy-cone inequalities. They illustrate disjoint half-disks in AdS3 and say an exact result is given there. The abstract does not quote that result, so no number is entered. Authors C\u00e9sar A. Ag\u00f3n, Javier Molina-Vilaplana, Javier Moreno. arXiv:2610.00670v1, submitted 2026-09-30, hep-th.",
+      "autoGate": "miss A1, A2, A3, A4, A5, A6",
+      "scoreHeuristic": {
+        "importance": 44,
+        "confidence": 44,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-06-2610.02310",
+      "paperId": "2610.02310",
+      "date": "2026-10-06",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: thresholds and critical exponents are dimensionless. The abstract gives no exponent value, so none is entered. G2 passes: no energy ledger. G3 passes: two percolation classes, not a gain that grows without a bound. G4 fails: million-qubit stabilizer simulations of toric and color codes are not a surface-code shot on a processor. G5 passes: the monitoring threshold can be re-simulated this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: thresholds and critical exponents are dimensionless. The abstract gives no exponent value, so none is entered. G2 passes: no energy ledger. G3 passes: two percolation classes, not a gain that grows without a bound. G4 fails: million-qubit stabilizer simulations of toric and color codes are not a surface-code shot on a processor. G5 passes: the monitoring threshold can be re-simulated this quarter. G6 passes.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A monitored-code percolation threshold, even above one million simulated qubits, is not the below-threshold surface-code memory that already sets C4.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Random one-round Pauli measurements on stabilizer codes fall into two threshold classes. The toric code tracks geometric percolation and the color code tracks homological percolation. The authors simulate the distinction on systems with over one million qubits.",
+        "why": "E-QEC is the error layer. A monitored-code threshold is a decoder-theory input. It is not a new logical-memory experiment, so C stays at C4. Floquet codes appear only as another stabilizer family, not as a clock.",
+        "limit": "Bare arXiv. Simulation, not hardware. The abstract does not quote the critical exponents."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss. A4 miss: C stays C4 and no journal bound is tightened. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass: no ledger term moved.",
+      "math": "One round of independent single-qubit Pauli measurements on stabilizer codes. The authors split the threshold into geometric percolation (toric code) and homological percolation (color code), and they report stabilizer simulations of systems with over one million qubits. The framework is said to cover non-CSS, subsystem, higher-dimensional, and Floquet stabilizer codes, and the gross code is discussed as an application. No critical exponent is stated in the abstract, so none is entered. Authors Yoshito Watanabe, Daiki Sasamoto, Bo Han, Simon Trebst. arXiv:2610.02310v1, submitted 2026-10-01, quant-ph.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 82,
+        "confidence": 67,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-06-2610.02515",
+      "paperId": "2610.02515",
+      "date": "2026-10-06",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass",
+        "note": "G1 and G2 pass: no discharge metric is given a unit in the abstract, and no power term is added to the ledger. G3 passes: the 'infinite horizon' is a stated model capacity, not a measured disruption-rate scaling. G4 fails: DIII-D is the right machine, but a world model that replays actuator trajectories is not a coil command on Bus A. G5 fails: M2, beating a lab baseline on one disruption metric, is not reported. G6 passes: no Q_eng."
+      },
+      "gateNote": "G1 and G2 pass: no discharge metric is given a unit in the abstract, and no power term is added to the ledger. G3 passes: the 'infinite horizon' is a stated model capacity, not a measured disruption-rate scaling. G4 fails: DIII-D is the right machine, but a world model that replays actuator trajectories is not a coil command on Bus A. G5 fails: M2, beating a lab baseline on one disruption metric, is not reported. G6 passes: no Q_eng.",
+      "score": "E-RL C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A self-supervised world model of DIII-D does not close M2. There is no coil command and no disruption-rate comparison in the abstract.",
+      "ledger": "none. No Q_eng.",
+      "plain": {
+        "core": "IGNITE is a world model of DIII-D. It is trained on unlabeled experimental data and is meant to roll a discharge forward once it is given actuator trajectories, which can also be proposed from text or from a requested outcome.",
+        "why": "E-RL attaches a controller to a plant. A DIII-D world model is a planning tool on the right machine. It does not yet send a coil command or beat a disruption baseline, so C stays at C4 and M2 stays open.",
+        "limit": "Bare arXiv. No coil command, no latency, no safe-hold, no disruption-rate number in the abstract."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-RL only). A2 miss (G4, G5). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass: no new bus. A7 pass. A8 pass: no ledger term moved.",
+      "math": "IGNITE is a self-supervised dynamics model trained on more than a decade of unlabeled DIII-D data. Actuator trajectories can be supplied or proposed from a text prompt or from a requested outcome. Tokenizers cover time series, images, and spectrograms. The abstract claims the model can roll a discharge forward from a latent state plus actuator trajectories. No disruption rate, latency, or safe-hold behavior is stated, so none is entered. Authors Peter Steiner, Azarakhsh Jalalvand, Nathaniel Chen, Kouroche Bouchiat, Ricardo Shousha, SangKyeun Kim, Egemen Kolemen. arXiv:2610.02515v1, submitted 2026-10-01, physics.plasm-ph.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 78,
+        "confidence": 63,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-06-2610.02621",
+      "paperId": "2610.02621",
+      "date": "2026-10-06",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: the quoted objects are qubit counts, distance, and measurement weight. G2 passes: no energy. G3 passes: the tradeoff is inside a stated budget of 10,000 data qubits, not an unbounded gain. G4 fails: a proved subsystem-code family is not a surface-code or qLDPC shot. G5 passes: the Lean snippets can be rechecked this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: the quoted objects are qubit counts, distance, and measurement weight. G2 passes: no energy. G3 passes: the tradeoff is inside a stated budget of 10,000 data qubits, not an unbounded gain. G4 fails: a proved subsystem-code family is not a surface-code or qLDPC shot. G5 passes: the Lean snippets can be rechecked this quarter. G6 passes.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A distance proof for line-measured subsystem codes, even with Lean snippets, is not the Willow-class memory experiment that holds C4.",
+      "ledger": "none.",
+      "plain": {
+        "core": "A family of subsystem codes measures operators along the lines of a grid. For every code in the family the authors prove how many logical qubits are protected and what the dressed distance is, and they list the rate-versus-weight tradeoff under a 10,000-qubit budget.",
+        "why": "E-QEC can use a code with a proved distance and low-weight checks as a compiler target. A proof is not a memory experiment, so C stays at C4.",
+        "limit": "Bare arXiv. The Lean check was not re-run in this observatory pass. Not hardware."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass: no ledger term moved.",
+      "math": "Subsystem codes on rectangular grids of any dimension, even side length at least 4, with checks along coordinate lines. Inside a budget of at most 10,000 data qubits the authors state: at distance 16, 4,096 logical qubits among 10,000 data qubits with weight-ten measurements; at distance 32, 1,024 logical qubits among 7,776 data qubits with weight-six measurements; at distance 64, 256 logical qubits among 9,216 data qubits with weight-six measurements. Dressed distance is proved, and Lean snippets are included. Authors Kishor Bharti, Tobias Haug, Runzhou Tao, Kevin Ye. arXiv:2610.02621v1, submitted 2026-10-02, quant-ph.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 80,
+        "confidence": 65,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-06-2610.02648",
+      "paperId": "2610.02648",
+      "date": "2026-10-06",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: rate, check weight, and normalized distance are the objects. G2 passes: no energy. G3 passes: the distance approaches the Gilbert-Varshamov expression minus epsilon; it is not a free scale-up. G4 fails: an existence ensemble is not a qLDPC device. G5 passes: the construction can be checked on paper this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: rate, check weight, and normalized distance are the objects. G2 passes: no energy. G3 passes: the distance approaches the Gilbert-Varshamov expression minus epsilon; it is not a free scale-up. G4 fails: an existence ensemble is not a qLDPC device. G5 passes: the construction can be checked on paper this quarter. G6 passes.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A random qLDPC ensemble near the Gilbert-Varshamov bound does not move the experimental threshold that holds C4.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Random quantum LDPC codes are built so that a typical draw sits near the quantum Gilbert-Varshamov bound, with constant-weight checks, while keeping quantitative control of degeneracy.",
+        "why": "E-QEC cares that good sparse codes exist. An ensemble theorem is not a decoded memory on hardware, so C stays at C4.",
+        "limit": "Bare arXiv. Existence and a random ensemble. No device, and no finite-length number in the abstract."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass: no ledger term moved.",
+      "math": "For any rate R>0, any epsilon>0, and any prime p>=2, the authors claim an infinite family of p-ary qLDPC codes of rate R, check weight O_epsilon(1), and normalized distance at least the quantum Gilbert-Varshamov value minus epsilon. A random code from their ensemble is said to lie near that bound with high probability and to approach the erasure-channel quantum capacity and the hashing bound on memoryless Pauli channels. The construction concatenates low-degeneracy qLDPC codes with a random inner code. No finite-length table is quoted in the abstract, so none is entered. Authors Tushant Mittal, Shashank Srivastava, Madhur Tulsiani, Mary Wootters. arXiv:2610.02648v1, submitted 2026-10-02, cs.IT.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 78,
+        "confidence": 63,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-06-2610.02734",
+      "paperId": "2610.02734",
+      "date": "2026-10-06",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: the reported objects are logical-failure ratios. G2 passes: no energy. G3 passes: 77.8% and 35.5% are single reported reductions, not a law that grows with one knob. G4 fails: re-decoding published Willow shots, plus color-code and gate-circuit simulations, is not a new surface-code experiment. G5 passes: the motif front-end can be re-run this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: the reported objects are logical-failure ratios. G2 passes: no energy. G3 passes: 77.8% and 35.5% are single reported reductions, not a law that grows with one knob. G4 fails: re-decoding published Willow shots, plus color-code and gate-circuit simulations, is not a new surface-code experiment. G5 passes: the motif front-end can be re-run this quarter. G6 passes.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A better decoder on existing Willow shots does not by itself tighten the logical-error threshold that already sets C4. The largest quoted gains are simulations.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Hyperedge faults are hard for a matching decoder because a matching graph only sees pairs. Syndrome Motif Projection treats a local syndrome pattern as evidence for one hyperedge fault, then hands the rest to a matching decoder.",
+        "why": "E-QEC already has a measured surface-code memory. A lightweight decoder front-end, including a re-decode of Willow data, is a software note on that layer. It does not raise C. The 77.8% and 35.5% figures are the authors' reported ratios, not a new threshold.",
+        "limit": "Bare arXiv. Willow numbers are a re-decode of published shots. The color-code and six-CNOT figures are the authors' simulations."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss. A4 miss: author-reported preprint ratios do not tighten a journal bound. A5 miss: bare arXiv. Importance 86 is at least 85, but harvest confidence 72 is under 80, so the ADD rank fails before the gates. A6 pass. A7 pass. A8 pass.",
+      "math": "Syndrome Motif Projection reads a local syndrome motif as evidence for a hyperedge fault, with linear preprocessing, and leaves a matching decoder in place. On Google Willow surface-code data the authors say SMP improves standard and correlated matching and beats the belief-matching baseline they tested. With Chromobius on color-code memories they report logical-failure reductions of up to 77.8%. On a six-CNOT logical-gate circuit they report a 35.5% failure reduction relative to logical observable matching. Authors Siying Wang, Yue Yan, Zhixin Xia, Canwei Shi, Hannuo Yuan, Xiang-Bin Wang. arXiv:2610.02734v1, submitted 2026-10-02, quant-ph.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 86,
+        "confidence": 72,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-06-2610.03133",
+      "paperId": "2610.03133",
+      "date": "2026-10-06",
+      "bind": [
+        "E-MZM"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass",
+        "note": "G1 passes: scattering angle, orthogonality exponent, and entanglement are the objects. No coefficient is copied because the abstract does not quote one. G2 passes: no energy ledger. G3 passes: infrared logarithms are the stated asymptotics, not a device yield. G4 fails: a scattering defect is not a Majorana qubit with X and Z logicals. G5 fails: M5, an independent X and Z logical with gap scaling, is not this calculation. G6 passes."
+      },
+      "gateNote": "G1 passes: scattering angle, orthogonality exponent, and entanglement are the objects. No coefficient is copied because the abstract does not quote one. G2 passes: no energy ledger. G3 passes: infrared logarithms are the stated asymptotics, not a device yield. G4 fails: a scattering defect is not a Majorana qubit with X and Z logicals. G5 fails: M5, an independent X and Z logical with gap scaling, is not this calculation. G6 passes.",
+      "score": "E-MZM C1 T3 D3 A2 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Infrared memory of a Majorana shutter is a scattering calculation. It does not show an X logical and a Z logical, so it does not move M5.",
+      "ledger": "none.",
+      "plain": {
+        "core": "A Majorana shutter is treated as a smooth scattering defect. Several infrared observables, vacuum overlap, quasiparticle number, and entanglement, are argued to remember only the change in the low-frequency scattering matrix.",
+        "why": "E-MZM stays WATCH until there is an X logical and a Z logical with gap scaling. A shutter's infrared memory is not that test, so C stays at C1.",
+        "limit": "Bare arXiv. One scattering model. Percent-level agreement is the author's description; the abstract does not quote the fit. Not a qubit."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-MZM is WATCH, not KEEP or HOLD. A2 miss (G4, G5). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass: not a CUT reversal and not a new bus. A7 pass. A8 pass.",
+      "math": "A finite-width Majorana shutter as a time-dependent scattering defect. The zero-frequency scattering matrix of a smooth shutter is fixed by the integrated coupling. A switch produces an infrared Bogoliubov kernel set by the change in that matrix. The vacuum overlap shows Anderson orthogonality with an exponent set by the scattering angle. A lattice count of quasiparticles is said to reach the predicted logarithmic coefficient in a slow-switch test. Entanglement through the shutter is said to match a conformal-defect central charge at the percent level. A local bilinear is said to follow a Majorana power law with no stable logarithmic piece. No coefficient is printed in the abstract, so none is entered. Author Ali Vahedi. arXiv:2610.03133v1, submitted 2026-10-02, quant-ph.",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 64,
+        "confidence": 53,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-06-2610.03399",
+      "paperId": "2610.03399",
+      "date": "2026-10-06",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: the objects are fractions of circuit locations and logical-error ratios. G2 passes: no energy. G3 passes: halving noise on 5 to 7 percent of locations is one intervention, not an unbounded scale-up. G4 fails: rotated-surface and lifted-product simulations are not a processor shot. G5 passes: the attribution estimator can be re-run this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: the objects are fractions of circuit locations and logical-error ratios. G2 passes: no energy. G3 passes: halving noise on 5 to 7 percent of locations is one intervention, not an unbounded scale-up. G4 fails: rotated-surface and lifted-product simulations are not a processor shot. G5 passes: the attribution estimator can be re-run this quarter. G6 passes.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A Monte Carlo map of which circuit locations hurt the logical error is a design aid. It is not a new below-threshold memory.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Logical error is only a total. The authors assign each circuit location a share of that total from the same Monte Carlo samples, then spend a small noise-reduction budget on the worst locations.",
+        "why": "E-QEC can use a hotspot map when a device budget is limited. The map in this paper is a simulation on rotated surface codes and lifted-product codes, so C stays at C4.",
+        "limit": "Bare arXiv. The 15% to 25% band is the authors' simulation, not a measured device."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass.",
+      "math": "An attribution estimator scores every circuit location's effect on the logical error from the same Monte Carlo samples used for the logical error itself. In simulations of rotated surface-code memories and high-rate lifted-product codes, halving the noise on about 5% to 7% of locations chosen by that map reduces the logical error by approximately 15% to 25%, about twice the mean reduction from the same budget on random locations. Authors Yuguo Shao, Zi-Wen Liu. arXiv:2610.03399v1, submitted 2026-10-02, quant-ph.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 80,
+        "confidence": 65,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-06-2610.03429",
+      "paperId": "2610.03429",
+      "date": "2026-10-06",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: circuit distance and a pseudothreshold bound are dimensionless or are ratios. No pseudothreshold number is stated, so none is entered. G2 passes: no plant energy. G3 passes: LP upper bounds are caps, not a scale-up. G4 fails: an algebraic certificate for a finite circuit is not a surface-code device. G5 passes: the distance-four certificate can be rechecked this quarter. G6 passes. E-TC is not bound."
+      },
+      "gateNote": "G1 passes: circuit distance and a pseudothreshold bound are dimensionless or are ratios. No pseudothreshold number is stated, so none is entered. G2 passes: no plant energy. G3 passes: LP upper bounds are caps, not a scale-up. G4 fails: an algebraic certificate for a finite circuit is not a surface-code device. G5 passes: the distance-four certificate can be rechecked this quarter. G6 passes. E-TC is not bound.",
+      "score": "E-QEC C4 T3 D3 A3 stays; E-TC CUT stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Certifying distance four on one finite Hastings-Haah circuit does not make a Floquet code into a system clock, and it does not replace the surface-code memory experiment.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Fault tolerance of a circuit is turned into an algebra problem. For stabilizer circuits the authors build matrices that say which errors are seen and which errors flip the logical state. On one finite Hastings-Haah Floquet-code circuit those matrices are said to certify two logical qubits at distance four.",
+        "why": "E-QEC can use a circuit-distance certificate. The Floquet code here is the circuit under test, not a metronome, so E-TC stays CUT and is not up for reversal. C on E-QEC stays at C4.",
+        "limit": "Bare arXiv. One finite circuit. Distance four is the authors' certificate, not a device lifetime."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only; E-TC is not bound). A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass: not a clock reversal. A7 pass. A8 pass.",
+      "math": "An SDP whose infeasibility says no recovery map restores a circuit under a stated noise model. For non-adaptive stabilizer circuits, symplectic geometry gives detection and logical-effect matrices. On one finite Hastings-Haah honeycomb Floquet-code circuit those matrices are said to certify two logical qubits and distance four under Pauli noise that includes measurement errors. Weight enumerators then upper-bound finite-circuit pseudothresholds under i.i.d. depolarizing noise. A CSS Hamming-code benchmark is said to meet a tight distance-three bound via the Chao-Reichardt one-flag circuit. No pseudothreshold value is printed in the abstract, so none is entered. Authors Soham Ghosh, Holger Boche, Andrew Tanggara. arXiv:2610.03429v1, submitted 2026-10-02, quant-ph.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 76,
+        "confidence": 62,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-06-2610.03433",
+      "paperId": "2610.03433",
+      "date": "2026-10-06",
+      "bind": [
+        "S-L3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: the susceptibility identity is a symmetry of the response tensor. G2 passes: no power term is added. G3 passes: instabilities are tied to Krein collisions, not to an unbounded cross section. G4 fails: a symmetry of homogeneous Vlasov-Maxwell theory is not an FV-versus-CN rate benchmark. G5 passes: the Dory-Guest-Harris threshold derivation can be rechecked this quarter. G6 passes: fusion is mentioned only as a place kinetic instabilities matter. No Q_eng."
+      },
+      "gateNote": "G1 passes: the susceptibility identity is a symmetry of the response tensor. G2 passes: no power term is added. G3 passes: instabilities are tied to Krein collisions, not to an unbounded cross section. G4 fails: a symmetry of homogeneous Vlasov-Maxwell theory is not an FV-versus-CN rate benchmark. G5 passes: the Dory-Guest-Harris threshold derivation can be rechecked this quarter. G6 passes: fusion is mentioned only as a place kinetic instabilities matter. No Q_eng.",
+      "score": "S-L3 C4 T2 D2 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "PT symmetry of the Vlasov-Maxwell operator does not put hole-burning or SRS-SBS into a reactivity, and it does not write a plant Q.",
+      "ledger": "none. No Q_eng. Q_sci, Q_fuel, and Q_eng stay distinct.",
+      "plain": {
+        "core": "The susceptibility of a uniform magnetized plasma is PT-symmetric, and that symmetry is traced to the linearized Vlasov-Maxwell operator. Kinetic instabilities in the paper are spontaneous breaking of that symmetry at a Krein collision.",
+        "why": "S-L3 says the Vlasov piece has to sit in the rate. A symmetry of that operator is context for the solvers. It is not a hole-burning or SRS-SBS calculation, and it is not a plant Q, so C stays at C4.",
+        "limit": "Bare arXiv. Homogeneous linear theory. The Dory-Guest-Harris threshold is not quoted in the abstract, so it is not copied. No reactivity."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (S-L3 only). A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass: no new fuel and no coupling into a plant Q. A7 pass. A8 pass: the ledger was not touched.",
+      "math": "For a stationary gyrotropic equilibrium the kinetic susceptibility is said to obey chi(omega*, k) = R chi(omega, k)* R with R = diag(1, -1, 1). The linearized Vlasov-Maxwell Hamiltonian is said to be PT-symmetric, and the same claim is made for homogeneous Vlasov-Poisson. Instabilities of nonmonotonic, ring, loss-cone, and energetic-particle distributions are identified with spontaneous PT breaking through Krein collisions. Definite-sign cyclotron residues are said to protect thermal Bernstein modes. An analytical threshold and growth rate are claimed for the Dory-Guest-Harris distribution, but the abstract does not print them, so they are not entered. Author Hong Qin. arXiv:2610.03433v1, submitted 2026-10-02, physics.plasm-ph.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 74,
+        "confidence": 62,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-06-2610.03545",
+      "paperId": "2610.03545",
+      "date": "2026-10-06",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: fidelity loss is a dimensionless gap between two recoveries. G2 passes: no energy. G3 passes: the loss approaching 1/2 is a worst-case gap for one pair of models, not a scale-up. G4 fails: CSS examples, including rotated surface codes, are on paper. G5 passes: the calibration scaling can be re-derived this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: fidelity loss is a dimensionless gap between two recoveries. G2 passes: no energy. G3 passes: the loss approaching 1/2 is a worst-case gap for one pair of models, not a scale-up. G4 fails: CSS examples, including rotated surface codes, are on paper. G5 passes: the calibration scaling can be re-derived this quarter. G6 passes.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Two noise models with the same syndrome and different logical corrections are a warning to the decoder. They are not a new measured threshold.",
+      "ledger": "none.",
+      "plain": {
+        "core": "A decoder that sees the full syndrome can still apply the wrong logical fix if the time correlations come in two flavors that twirl to the same Pauli process. The paper bounds how many calibrated intervals it takes to tell those flavors apart.",
+        "why": "E-QEC's decoder has to know which time correlations are in the experiment. This is a calibration theorem for CSS memories, not a new device result, so C stays at C4.",
+        "limit": "Bare arXiv. The fidelity gap approaching 1/2 is the authors' worst-case statement for this pair of models."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass.",
+      "math": "Fixed stabilizer memories with known system-bath coupling. The worked pair is weak coherent X rotations on CSS codes, including Shor, Steane, and odd-distance rotated surface codes. A shared sign is either fixed for the run or redrawn each interval. Syndrome statistics and the Pauli-twirled process match, but the logical correction need not. Without the model, the best final recovery is said to suffer a worst-case fidelity loss approaching 1/2 relative to the noise-aware optimum. With logical preparation and readout, the number of noise intervals needed scales as the inverse rotation angle to the power of the X distance; two uninterrupted intervals before one extraction improve that to inverse-square. Authors Danesh Morales-Hashemi, Graeme Smith, Ningping Cao. arXiv:2610.03545v1, submitted 2026-10-02, quant-ph.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 82,
+        "confidence": 67,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-06-2610.03594",
+      "paperId": "2610.03594",
+      "date": "2026-10-06",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: the objects are circuit depth and logical error scaling. No fitted slope is stated, so none is entered. G2 passes: no energy. G3 passes: sparsification is a finite rewrite of a round-robin circuit, not an unbounded gain. G4 fails: numerical circuits on toric, hypergraph-product, color, gross, and directional codes are not a processor. G5 passes: the CZ circuits can be re-simulated this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: the objects are circuit depth and logical error scaling. No fitted slope is stated, so none is entered. G2 passes: no energy. G3 passes: sparsification is a finite rewrite of a round-robin circuit, not an unbounded gain. G4 fails: numerical circuits on toric, hypergraph-product, color, gross, and directional codes are not a processor. G5 passes: the CZ circuits can be re-simulated this quarter. G6 passes.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Addressable Clifford circuits in simulation do not change the experimental status of the surface-code layer.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Sparse quantum codes are more useful if one logical qubit can be gated without touching the others. The authors sparsify round-robin circuits so that addressable two-qubit Cliffords stay low depth and fault tolerant on several two-dimensional qLDPC families.",
+        "why": "E-QEC needs logical gates, not only a memory. These gates are numerical circuits, so C stays at C4.",
+        "limit": "Bare arXiv. Clifford gates only. Scaling is described as memory-like; the abstract does not quote a rate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass.",
+      "math": "Round-robin circuits are sparsified with a geometric pattern to give low-depth transversal, addressable, fault-tolerant two-qubit Clifford gates on a subset of two-dimensional translation-invariant qLDPC codes. The authors report numerical addressable CZ gates on toric, cyclic hypergraph-product, color, gross, and directional codes, with logical error scaling that looks like a memory. No numerical slope is printed in the abstract, so none is entered. Authors Kaavya Sahay, Cody Jones. arXiv:2610.03594v1, submitted 2026-10-02, quant-ph.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 84,
+        "confidence": 69,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-06-2610.03610",
+      "paperId": "2610.03610",
+      "date": "2026-10-06",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass",
+        "note": "G1 and G2 pass: the objects are topological orders and a partial trace, with no energy. G3 passes: the claim is a three-step rewriting, not a scale-up. G4 fails: Walker-Wang models of the sixteenfold way are not the S3 processor, and the word holographic here is a bulk-boundary lift, not AdS. G5 fails: nothing in the abstract falsifies the fusion-measurement requirement this quarter. G6 passes. E-HOL is not bound."
+      },
+      "gateNote": "G1 and G2 pass: the objects are topological orders and a partial trace, with no energy. G3 passes: the claim is a three-step rewriting, not a scale-up. G4 fails: Walker-Wang models of the sixteenfold way are not the S3 processor, and the word holographic here is a bulk-boundary lift, not AdS. G5 fails: nothing in the abstract falsifies the fusion-measurement requirement this quarter. G6 passes. E-HOL is not bound.",
+      "score": "E-S3 C3 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Decohering the fermion in Kitaev's sixteenfold way does not put an S3 fusion measurement into the gate set, and a Walker-Wang lift is not an AdS encoder.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Chiral topological orders are hard to decohere directly because they lack a commuting-projector Hamiltonian. The authors lift Kitaev's sixteenfold way to a Walker-Wang bulk, let that bulk change, and read the mixed state off the boundary.",
+        "why": "E-S3 is an S3 braid plus a fusion measurement. Anyon decoherence is adjacent reading. It does not replace fusion measurement, so C stays at C3. The bulk construction is not AdS/CFT, so E-HOL stays off the card.",
+        "limit": "Bare arXiv. A conjecture about a rewriting. Not an S3 device, and not a licence to bind holography."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-S3 only). A2 miss (G4, G5). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass: holography is not smuggled in as a mechanism. A7 pass. A8 pass.",
+      "math": "Fermion decoherence inside Kitaev's sixteenfold way. The authors conjecture that the mixed state after the transition is the boundary of a three-step bulk process: lift to a Walker-Wang model, transit to another Walker-Wang model, trace out the bulk. Decohering the fermion in each of the sixteen states is said to land on an intrinsically mixed-state order because the bulk lands on the 3D fermionic toric code. Authors Shuyu Zhang, Linhao Li, Zhen Bi, Tzu-Chieh Wei, Zijian Song. arXiv:2610.03610v1, submitted 2026-10-02, cond-mat.str-el.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 70,
+        "confidence": 58,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-06-2610.03677",
+      "paperId": "2610.03677",
+      "date": "2026-10-06",
+      "bind": [
+        "E-S3",
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: the error basis is group multiplication and irreducible-representation operators. G2 passes: no energy. G3 passes: recovery is stated only for predetermined neutral clusters, which is a restriction, not a scale-up. G4 fails: the protocol is not an H2 S3 shot and not a surface-code threshold plot. G5 passes: the transfer circuits can be checked on a small quantum double this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: the error basis is group multiplication and irreducible-representation operators. G2 passes: no energy. G3 passes: recovery is stated only for predetermined neutral clusters, which is a restriction, not a scale-up. G4 fails: the protocol is not an H2 S3 shot and not a surface-code threshold plot. G5 passes: the transfer circuits can be checked on a small quantum double this quarter. G6 passes.",
+      "score": "E-S3 C3 T3 D3 A3 stays; E-QEC C4 T3 D3 A3 stays; coupling C1",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Exact recovery for every finite-group quantum double, including non-Abelian groups, still assumes the bad clusters are already known and neutral. That is not an S3 fusion measurement and not a surface-code threshold. Two claims make a bridge, which starts at C1. Bare arXiv cannot raise C.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Non-Abelian surface codes built from the quantum double of a finite group get an exact recovery step. Errors that sit in known neutral clusters are moved onto ancillas and projected out, for every finite group, including non-Abelian ones.",
+        "why": "E-S3 and E-QEC both feel this. S3 is one finite group, so D(S3) is inside the family, but the paper does not show an S3 fusion measurement and does not show a surface-code threshold. The pair is a bridge, so coupling stays at C1. Neither C moves. The cut non-Abelian qLDPC pillar is not reopened.",
+        "limit": "Bare arXiv. The clusters have to be handed to the protocol already neutral and correctable. Not a device. Harvest confidence 70 is under 80, so it is not an ADD."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: two claim IDs, and the pair is coupling. A2 miss (G4). A3 miss: HOLD, not INCLUDE. A4 miss. A5 miss: bare arXiv. A6 miss: the non-Abelian quantum double couples E-S3 to a recovery protocol. A7 pass. A8 pass. Not a new pillar and not a CUT reversal.",
+      "math": "Quantum-double surface codes D(G) for any finite group G. The error basis is group multiplication and irreducible-representation operators. Closed-loop errors are redundant with stabilizers; a gauge fixing makes the basis complete and orthogonal on the code space. Given predetermined neutral correctable clusters, charge and flux are moved onto ancillas and projected out. The authors say the protocol is exact and deterministic for every finite group, including non-Abelian groups. They do not report an S3 device. Authors Alison Warman, Nathanan Tantivasadakarn, Sakura Schafer-Nameki. arXiv:2610.03677v1, submitted 2026-10-02, quant-ph.",
+      "autoGate": "miss A1, A2, A3, A4, A5, A6",
+      "scoreHeuristic": {
+        "importance": 88,
+        "confidence": 70,
+        "popularity": 40
+      }
+    },
     {
       "id": "rev-2026-10-05-2609.35287",
       "paperId": "2609.35287",

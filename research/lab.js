@@ -1,4 +1,4 @@
-const NOW = new Date("2026-10-05T09:23:22-05:00");
+const NOW = new Date("2026-10-06T09:20:00-05:00");
 const KEY = "dbe-observatory-freeze-v5";
 const TABS = [
   ["mission", "Mission"],
