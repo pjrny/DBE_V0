@@ -1,0 +1,108 @@
+{
+  "schema_name": "SDBES_V2_claim_intake_template",
+  "schema_status": "draft_template_not_validator",
+  "version": "2",
+  "source": {
+    "source_id": null,
+    "source_type": null,
+    "title": null,
+    "authors": [],
+    "publication_date": null,
+    "url_or_doi": null,
+    "version": null,
+    "status": "active",
+    "event_time": null,
+    "knowledge_time": null
+  },
+  "study_or_proof": {
+    "study_id": null,
+    "kind": null,
+    "system_or_population": null,
+    "dataset_lineage": [],
+    "shared_assumptions": [],
+    "notes": null
+  },
+  "result": {
+    "result_id": null,
+    "result_type": null,
+    "statement": null,
+    "variables": [],
+    "units": [],
+    "conditions": [],
+    "uncertainty": null,
+    "verification_status": null,
+    "validation_status": null
+  },
+  "claim": {
+    "claim_id": null,
+    "statement": null,
+    "subject_family": [],
+    "logical_form": [],
+    "scope": {
+      "system_or_population": null,
+      "operating_regime": null,
+      "parameter_range": null,
+      "spatial_scope": null,
+      "temporal_scope": null
+    },
+    "variables": [],
+    "units": [],
+    "outcome": null,
+    "baseline_or_comparator": null,
+    "threshold_or_decision_criterion": null,
+    "time_horizon": null,
+    "origin": null,
+    "version": 1
+  },
+  "claim_assessment": {
+    "assessment_id": null,
+    "assessment_method": null,
+    "scope_match": null,
+    "evidence_direction": null,
+    "evidence_state": {
+      "formal": null,
+      "empirical": null,
+      "applied": null
+    },
+    "fea_matrix": {
+      "formal": {
+        "validated": null,
+        "independent": null,
+        "generalized": null
+      },
+      "empirical": {
+        "validated": null,
+        "independent": null,
+        "generalized": null
+      },
+      "applied": {
+        "validated": null,
+        "independent": null,
+        "generalized": null
+      }
+    },
+    "mathematical_methods": [],
+    "formal_verification": {
+      "formalized_statement": null,
+      "assumptions": [],
+      "proof_artifact": null,
+      "checker": null,
+      "status": null
+    },
+    "independence_lineage": [],
+    "checks_performed": [],
+    "unresolved_questions": [],
+    "claim_states": [],
+    "probability": {
+      "value": null,
+      "model": null,
+      "prior": null,
+      "assumptions": [],
+      "status": "unavailable_unless_justified"
+    },
+    "assessor": null,
+    "assessment_time": null,
+    "ruleset_version": "SDBES_V2",
+    "notes": null
+  }
+}
