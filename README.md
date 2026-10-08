@@ -1,35 +1,134 @@
-# DBE Fusion Stability Simulator (Research Grade)
+# SDBES — Search for Dimensions Beyond Energy Scarcity
 
-This project implements a research‑grade simulation of a fusion plasma discharge controlled by a **Dimensional Braid Engine (DBE)**. It combines a simplified magnetohydrodynamic (MHD) transport model with models of advanced quantum subsystems and realistic actuators to explore how a DBE might stabilise tokamak plasmas by predicting and mitigating instabilities.
+This branch is the continuously versioned framework branch for **SDBES: the Search for Dimensions Beyond Energy Scarcity**.
 
-## Highlights
+It grows out of the DBE project but has a different job from the repository's simulation and paper-research branches: **SDBES defines the evidence ledger, claim taxonomy, dependency mathematics, visualization grammar, and eventual simulation rules used to organize and connect the research.**
 
-- **Physics core:** A 1‑D radial grid with analytic temperature, density and safety‑factor profiles evolves under a finite‑difference transport equation. A shear‑dependent diffusivity suppresses turbulence, and built‑in triggers simulate edge localised modes (ELMs) and other instabilities.
-- **Actuators:** Models of resonant magnetic perturbation (RMP) coils and pellet injection change the edge stability and temperature profile. Actuator limits (current, pellet size and rate) are respected.
-- **Quantum subsystems:** Topological quantum compute with Majorana braids, fracton memory for robust state storage, a Floquet time crystal for synchronised timing, and a holographic encoder for compressing high‑dimensional plasma states.
-- **DBE controller:** The `DBEController` coordinates quantum subsystems and actuators based on plasma stability. It stores compressed profiles in fracton memory, decides coil currents and pellet injections, and synchronises actions on the time crystal tick.
-- **Risk analysis:** A `RiskAnalyzer` monitors stability, actuator saturation and memory errors, producing a risk score and explanatory notes for each event.
-- **Batch runs:** The script in `cli/run_batch.py` runs many randomised scenarios, collects risk scores and outputs a CSV dataset for analysis.
-- **Integration API:** The `simulate_event()` function in `dbe_simulation.py` allows embedding the simulation into other frameworks (e.g. web applications).
+## Why this branch exists
 
-## Getting started
+Other branches in this repository are being used to explore or collect research in areas such as:
 
-Clone this repository and install Python 3. No external packages are required. To run an interactive simulation:
-```sh
-python dbe_simulation.py
+- ignition-barrier / fusion research
+- nuclear fusion
+- topology and advanced mathematics
+- quantum computing
+- research-grade physics
+- ongoing observatory/research pulls
+
+The `SDBES` branch is intended to become the **common framework those research streams can eventually feed into**.
+
+It should not treat a paper count as knowledge, a graph score as truth, or a speculative relationship as a causal law.
+
+## Thread summary
+
+The framework began with a visualization idea:
+
+- classify papers and concepts by scientific field
+- represent mathematical, empirical, and applied confidence in a visual matrix/vector
+- allow evidence supporting and refuting a claim to interact
+- identify "pillar" claims that many other claims depend upon
+- connect apparently separate research areas such as AI, quantum computing, materials, and fusion
+- use matrix powers to expose possible bridge pathways
+- eventually simulate how breakthroughs, failures, or bottlenecks propagate across the network
+- visualize the entire system in linked 2D/3D views using glyph size, color, opacity, edge width, animation, and time
+
+The framework was then stress-tested for mathematical failure modes.
+
+That review preserved the overall architecture but changed several critical assumptions:
+
+1. **Evidence quality and evidence direction must be separate.**
+2. **A score in [0,1] is not automatically a probability.**
+3. **Formal, empirical, and engineering evidence establish different things.**
+4. **A paper is not necessarily one independent unit of evidence.**
+5. **Claims require explicit scope before evidence can truly support or refute them.**
+6. **Dependency, causation, similarity, and graph importance require different mathematical types.**
+7. **A failed derivation premise does not automatically falsify a conclusion.**
+8. **AND/OR and alternative pathways must be represented explicitly.**
+9. **Matrix powers expose walks/candidate pathways, not automatic causal effects.**
+10. **Eigenvectors are useful for selected dynamical/structural questions but are not universal pathway detectors.**
+11. **What the project knows and what physical reality is doing are separate states.**
+12. **Time and revision history must be preserved from the beginning.**
+
+## Version history on this branch
+
+### V1 — Typed Evidence & Dependency Ledger
+
+File:
+
+- `docs/SDBES/V1_TYPED_EVIDENCE_DEPENDENCY_LEDGER.md`
+
+Defines the safe mathematical architecture, typed values, evidence profile, dependencies, influence layers, time, graph rules, and project invariants.
+
+### V2 — Claim Evaluation Rules
+
+File:
+
+- `docs/SDBES/V2_CLAIM_EVALUATION_RULES.md`
+
+Defines how individual claims are specified and how formal, empirical, numerical, engineering, causal, and forecast claims are evaluated without forcing them through one universal confidence formula.
+
+### V3 — not yet committed
+
+V3 will be conceptualized and reviewed in conversation first.
+
+The planned subject is **dependency mathematics and structural semantics**: exact relationship types, AND/OR/k-of-n gates, alternative pathways, structural centrality, bottlenecks, circular dependencies, and the rules needed before research examples can safely populate the dependency network.
+
+No V3 framework should be committed until it is reviewed.
+
+## Development sequence
+
+Current planned sequence:
+
+```text
+V1  Typed ledger and mathematical safety rules
+V2  Claim evaluation rules
+V3  Dependency mathematics and structural semantics
+V4  Influence / causal schema
+V5  Glyphs and linked visualization system
+V6  Real-paper pilot
+V7  Failure-mode and consistency tests at scale
+V8  Probabilistic inference layer
+V9  Early simulation layer
+V1.0 Validated research platform milestone
 ```
-Follow the prompts to allocate qubits and memory, engage subsystems and execute mitigations. The game will report your cumulative energy gain and risk at the end.
 
-To run a batch of random scenarios and save the results:
-```sh
-python cli/run_batch.py
-```
-This will produce `outputs/batch_runs.csv` with one row per run and columns `run_id, stability, coil_fraction, pellet_available, memory_errors, risk_score, notes`. You can adjust the number of runs and parameter ranges in the script.
+Version labels here describe SDBES framework progression. They do not imply that the underlying scientific claims have been validated.
 
-## Scientific notes
+## Pilot strategy
 
-This repository is inspired by the DBE white paper and related literature. The plasma model uses simplified MHD and transport equations and is not intended for operational predictions. The quantum subsystem models demonstrate timing and error‑resilience rather than performing real quantum computation. See `docs/THEORY.md` for details and references to original research.
+The framework should be tested in stages rather than waiting for a perfect schema.
 
-## Contributing
+### Design examples
 
-Contributions are welcome. See the open issues for planned work and feel free to open new issues or pull requests.
+Use a small diverse set of real papers/results to challenge the schema while it is still changing.
+
+Target: approximately **3–5 source papers** yielding **10–20 useful scoped claims**, chosen for diversity rather than quantity.
+
+### Operational pilot
+
+After the schema and dependency/influence rules stabilize, expand toward approximately **100 reviewed, scoped claims** across several research areas.
+
+The unit counted should be the **reviewed claim**, while papers, studies, results, concepts, and ideas remain separate counts.
+
+## Fundamental SDBES rule
+
+> **Preserve the source and meaning of every value before aggregating it.**
+
+The long-term objective is not merely a literature database. It is a research-navigation and scenario-analysis system capable of showing:
+
+- what is known
+- what is uncertain
+- what contradicts what
+- what depends upon what
+- where the bottlenecks are
+- which unresolved claims have large downstream consequences
+- which cross-field pathways deserve investigation
+- and, only when a defensible causal model exists, what may happen under defined interventions
+
+## Relationship to the existing DBE simulator
+
+The repository's existing simulator on `main` explores a specific fusion/DBE implementation and explicitly uses simplified models.
+
+SDBES is a broader evidence and research architecture. It should eventually be capable of evaluating and contextualizing models like the existing simulator rather than inheriting their assumptions as established facts.
+
+For the original repository simulator documentation, see the `main` branch.
