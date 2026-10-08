@@ -1,0 +1,208 @@
+{
+  "schema_name": "SDBES_V1_V2_10_paper_stress_test",
+  "date": "2026-10-08",
+  "corpus_branch": "dimensions-beyond-energy",
+  "corpus_paths": [
+    "docs/research/phase1/DBE_RESEARCH_ATLAS.md",
+    "docs/research/phase1/SOURCE_LIBRARY.md"
+  ],
+  "framework_branch": "SDBES",
+  "framework_versions": [
+    "V1",
+    "V2"
+  ],
+  "independently_reproduced": false,
+  "numeric_fea_scores_assigned": false,
+  "papers": [
+    {
+      "id": "N01",
+      "title": "The SPARC Toroidal Field Model Coil Program",
+      "type": [
+        "experimental",
+        "engineering"
+      ],
+      "candidate": "DBE-A01",
+      "direct_claim": "Representative-scale REBCO toroidal-field model coil was built and tested at approximately 20 T peak field on the conductor under reported conditions.",
+      "application_claim": "A compact high-field tokamak can export dependable net electricity.",
+      "application_relation": "COMPONENT_EVIDENCE_FOR",
+      "framework_result": "PASS_WITH_SCHEMA_EXTENSION",
+      "stress": [
+        "application_relation",
+        "demonstration_context"
+      ]
+    },
+    {
+      "id": "C02",
+      "title": "Self-Organizing Knotted Magnetic Structures in Plasma",
+      "type": [
+        "simulation",
+        "analytic_model"
+      ],
+      "candidate": "DBE-C03",
+      "direct_claim": "Full-MHD simulations produce quasistable linked/knotted configurations with nested toroidal surfaces under modeled conditions.",
+      "application_claim": "Topology-informed magnetic design can improve fusion confinement without unacceptable transport or control costs.",
+      "application_relation": "MECHANISM_SEED_FOR",
+      "framework_result": "PASS_WITH_SCHEMA_EXTENSION",
+      "stress": [
+        "simulation_world_correspondence",
+        "application_relation"
+      ]
+    },
+    {
+      "id": "C09",
+      "title": "Superabsorption in an organic microcavity: Toward a quantum battery",
+      "type": [
+        "experimental",
+        "theoretical_model"
+      ],
+      "candidate": "DBE-C13",
+      "direct_claim": "The tested organic microcavity exhibits collective/superextensive charging behavior and energy-storage dynamics.",
+      "application_claim": "Collective quantum effects can provide useful repeated storage service after charging, discharge and wall-plug losses.",
+      "application_relation": "COMPONENT_EVIDENCE_FOR",
+      "framework_result": "PASS_WITH_SCHEMA_EXTENSION",
+      "stress": [
+        "demonstration_context",
+        "application_relation"
+      ]
+    },
+    {
+      "id": "I01",
+      "title": "Avoiding fusion plasma tearing instability with deep reinforcement learning",
+      "type": [
+        "experimental",
+        "causal_intervention",
+        "control"
+      ],
+      "candidate": "DBE-D01",
+      "direct_claim": "A learned predictive/control workflow was experimentally used on DIII-D to avoid tearing instability within the tested regime.",
+      "application_claim": "Learned controllers can improve plasma performance and robustness against defined baselines.",
+      "application_relation": "DIRECT_EVIDENCE_FOR_BOUNDED_CLAIM",
+      "framework_result": "PASS",
+      "stress": [
+        "generalization_status"
+      ]
+    },
+    {
+      "id": "I02",
+      "title": "Scaling deep learning for materials discovery",
+      "type": [
+        "computational",
+        "empirical_crosscheck"
+      ],
+      "candidate": "DBE-D03",
+      "direct_claim": "Learned models and first-principles calculations enable large-scale computational prediction of candidate stable crystal structures.",
+      "application_claim": "AI-guided discovery increases the rate of independently verified useful energy materials.",
+      "application_relation": "COMPONENT_EVIDENCE_FOR",
+      "framework_result": "PASS_WITH_SCHEMA_EXTENSION",
+      "stress": [
+        "composite_claim_decomposition",
+        "application_relation"
+      ]
+    },
+    {
+      "id": "I03",
+      "title": "An autonomous laboratory for the accelerated synthesis of inorganic materials",
+      "type": [
+        "experimental",
+        "autonomous_workflow",
+        "corrected"
+      ],
+      "candidate": "DBE-D04",
+      "direct_claim": "The corrected article reports autonomous realization of 36 compounds from 57 targets in the campaign.",
+      "application_claim": "Closed-loop autonomous laboratories can produce reproducible discoveries more efficiently than strong baselines.",
+      "application_relation": "COMPONENT_EVIDENCE_FOR",
+      "framework_result": "PASS_SCHEMA_AMENDMENT_REQUIRED",
+      "stress": [
+        "assessment_supersession",
+        "external_challenge",
+        "verification_provenance",
+        "claim_specific_correction"
+      ]
+    },
+    {
+      "id": "I04",
+      "title": "Quantum error correction below the surface code threshold",
+      "type": [
+        "experimental",
+        "quantum_hardware",
+        "corrected"
+      ],
+      "candidate": "DBE-D10",
+      "direct_claim": "The tested surface-code memories operate below threshold with logical-error suppression as code distance increases and real-time decoding.",
+      "application_claim": "Error correction and decoding can reduce total overhead enough for useful fault-tolerant quantum computation and scientific simulation.",
+      "application_relation": "COMPONENT_EVIDENCE_FOR",
+      "framework_result": "PASS_WITH_SCHEMA_EXTENSION",
+      "stress": [
+        "composite_claim_decomposition",
+        "demonstration_context",
+        "assessment_versioning"
+      ]
+    },
+    {
+      "id": "I07",
+      "title": "Quantum Self-Correction in the 3D Cubic Code Model",
+      "type": [
+        "formal",
+        "numerical",
+        "model"
+      ],
+      "candidate": "DBE-D12",
+      "direct_claim": "The specified 3D cubic-code model has proved lower-bound and numerical evidence for finite-size/temperature-dependent memory-lifetime enhancement.",
+      "application_claim": "Self-correcting quantum memories are practically useful and implementable at realistic hardware cost.",
+      "application_relation": "MODEL_EVIDENCE_FOR",
+      "framework_result": "PASS",
+      "stress": [
+        "formal_result_subtype"
+      ]
+    },
+    {
+      "id": "E03",
+      "title": "Absence of Quantum Time Crystals",
+      "type": [
+        "formal",
+        "no_go_theorem"
+      ],
+      "candidate": "DBE-D13",
+      "direct_claim": "Under stated definitions and assumptions, the specified equilibrium time-crystal behavior is ruled out.",
+      "application_claim": "Driven/Floquet time-crystalline phases can provide useful synchronization or reliability.",
+      "application_relation": "SCOPE_LIMIT_ON",
+      "framework_result": "STRONG_PASS",
+      "stress": []
+    },
+    {
+      "id": "E04",
+      "title": "Quantum Energy Teleportation in Spin Chain Systems",
+      "type": [
+        "theoretical_model",
+        "protocol"
+      ],
+      "candidate": "DBE-E04",
+      "direct_claim": "A spin-chain model protocol permits distant local energy extraction using local operations, classical communication and ground-state correlations while respecting causality and local energy conservation.",
+      "application_claim": "QET can provide a useful practical energy-control or transmission function after all resource costs.",
+      "application_relation": "MODEL_EVIDENCE_FOR",
+      "framework_result": "PASS_WITH_SCHEMA_EXTENSION",
+      "stress": [
+        "capability_separation",
+        "demonstration_context",
+        "application_relation"
+      ]
+    }
+  ],
+  "p0_findings": [],
+  "p1_findings": [
+    "typed application relevance relation missing",
+    "composite application claims require decomposition",
+    "F/E/A matrix cells need structured multi-field semantics",
+    "assessment-to-assessment provenance/version relations required",
+    "source-reported versus SDBES-verified state must be explicit",
+    "demonstration context/integration level should be first-class"
+  ],
+  "p2_findings": [
+    "formal result subtypes should be explicit"
+  ],
+  "verdict": {
+    "v1": "PASS_WITH_AMENDMENTS",
+    "v2": "PASS_WITH_AMENDMENTS",
+    "v3_gate": "READY_FOR_PRO_REVIEW_AFTER_P1_AMENDMENTS_ARE_CARRIED_INTO_V3"
+  }
+}
