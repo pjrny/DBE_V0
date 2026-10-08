@@ -1,0 +1,320 @@
+{
+  "schema_name": "SDBES_V3_structural_schema_template",
+  "schema_status": "formalized_template_not_json_schema_validator",
+  "ruleset_version": "SDBES_V3",
+  "enums": {
+    "structural_predicate_subtype": [
+      "CAPABILITY",
+      "CONDITION",
+      "RESOURCE_AVAILABILITY",
+      "CONSTRAINT_SATISFIED",
+      "OUTCOME"
+    ],
+    "knowledge_status": [
+      "NEITHER",
+      "TRUE_ONLY",
+      "FALSE_ONLY",
+      "BOTH"
+    ],
+    "scenario_state": [
+      "TRUE",
+      "FALSE",
+      "UNKNOWN"
+    ],
+    "gate_operator": [
+      "ALL",
+      "ANY",
+      "K_OF_N",
+      "THRESHOLD",
+      "CUSTOM"
+    ],
+    "closure_status": [
+      "OPEN_WORLD",
+      "CLOSED_WITHIN_DEFINED_ARCHITECTURE",
+      "CLAIMED_COMPLETE_UNVERIFIED"
+    ],
+    "decomposition_status": [
+      "EXACT_LOGICAL",
+      "NECESSARY_ONLY",
+      "SUFFICIENT_ONLY",
+      "PARTIAL",
+      "HEURISTIC",
+      "SEQUENTIAL_APPLICATION_CHAIN",
+      "UNKNOWN"
+    ],
+    "translation_relation_type": [
+      "COMPONENT_EVIDENCE_FOR",
+      "MECHANISM_SEED_FOR",
+      "MODEL_EVIDENCE_FOR",
+      "CONSTRAINT_ON",
+      "SCOPE_LIMIT_ON",
+      "BACKGROUND_FOR",
+      "ADJACENT_TO"
+    ],
+    "assessment_relation_type": [
+      "SUPERSEDES",
+      "CORRECTS",
+      "CHALLENGES",
+      "NARROWS",
+      "BROADENS",
+      "REANALYZES",
+      "REPLICATES",
+      "FAILS_TO_REPLICATE",
+      "RETRACTS_SUPPORT_FOR",
+      "RESTORES_SUPPORT_FOR"
+    ],
+    "verification_activity_type": [
+      "SOURCE_REPORTED",
+      "SOURCE_TEXT_SCREENED",
+      "SOURCE_METHODS_SCREENED",
+      "SDBES_DERIVATION_CHECKED",
+      "SDBES_CODE_EXECUTED",
+      "SDBES_NUMERICAL_RESULT_REPRODUCED",
+      "SDBES_DATA_REANALYZED",
+      "INDEPENDENT_REPLICATION_SCREENED",
+      "INDEPENDENT_REPLICATION_CONFIRMED",
+      "FORMALLY_MACHINE_CHECKED"
+    ],
+    "demonstration_artifact_type": [
+      "FORMAL_MODEL",
+      "ANALYTIC_MODEL",
+      "NUMERICAL_SIMULATION",
+      "BENCH_EXPERIMENT",
+      "COMPONENT_PROTOTYPE",
+      "INTEGRATED_SUBSYSTEM",
+      "FULL_SYSTEM",
+      "OPERATIONAL_DEPLOYMENT"
+    ],
+    "translation_gap_state": [
+      "NONE",
+      "MINOR",
+      "MATERIAL",
+      "MAJOR",
+      "UNKNOWN",
+      "NOT_APPLICABLE"
+    ],
+    "constraint_type": [
+      "MUTUAL_EXCLUSION",
+      "RESOURCE_LIMIT",
+      "BOUNDARY_LIMIT",
+      "REGULATORY_LIMIT",
+      "CONSERVATION_CONSTRAINT",
+      "DESIGN_INCOMPATIBILITY"
+    ],
+    "inference_rule_type": [
+      "DEDUCTIVE",
+      "INDUCTIVE",
+      "STATISTICAL",
+      "MODEL_DERIVED",
+      "ANALOGICAL",
+      "EXPERT_INFERENCE"
+    ],
+    "context_compatibility_status": [
+      "COMPATIBLE",
+      "PARTIALLY_OVERLAPPING",
+      "INCOMPATIBLE",
+      "UNRESOLVED"
+    ]
+  },
+  "fea_cell": {
+    "applicability": null,
+    "availability": null,
+    "outcome": null,
+    "verification_activity_ids": [],
+    "scope": {},
+    "notes": null
+  },
+  "verification_activity": {
+    "activity_id": null,
+    "activity_type": null,
+    "performed_by": null,
+    "method": null,
+    "input_artifact_ids": [],
+    "output_artifact_ids": [],
+    "started_at": null,
+    "ended_at": null,
+    "outcome": null,
+    "limitations": [],
+    "ruleset_version": "SDBES_V3"
+  },
+  "assessment_relation": {
+    "relation_id": null,
+    "source_assessment_id": null,
+    "target_assessment_id": null,
+    "relation_type": null,
+    "scope": {},
+    "rationale": null,
+    "valid_time": null,
+    "knowledge_time": null,
+    "version": 1
+  },
+  "demonstration_context": {
+    "artifact_type": null,
+    "scale": null,
+    "operating_environment": null,
+    "duration_or_cycles": null,
+    "integration_scope": null,
+    "performance_metrics": [],
+    "resource_inputs": [],
+    "replication_context": null,
+    "failure_envelope": null
+  },
+  "structural_predicate": {
+    "predicate_id": null,
+    "canonical_identity": null,
+    "name": null,
+    "subtype": null,
+    "description": null,
+    "predicate_expression": null,
+    "variables": [],
+    "units": [],
+    "comparison_operator": null,
+    "threshold_or_target": null,
+    "scope": {},
+    "operating_conditions": [],
+    "valid_time": null,
+    "knowledge_time": null,
+    "version": 1
+  },
+  "structural_assessment": {
+    "structural_assessment_id": null,
+    "predicate_id": null,
+    "knowledge_status": null,
+    "supporting_claim_assessment_ids": [],
+    "refuting_claim_assessment_ids": [],
+    "translation_link_ids": [],
+    "demonstration_context": {},
+    "scope": {},
+    "scenario_id": null,
+    "valid_time": null,
+    "knowledge_time": null,
+    "assessor": null,
+    "verification_activity_ids": [],
+    "ruleset_version": "SDBES_V3",
+    "rationale": null,
+    "limitations": [],
+    "version": 1,
+    "evaluation_context_id": null,
+    "context_compatibility_status": null
+  },
+  "scenario_state": {
+    "scenario_state_id": null,
+    "predicate_id": null,
+    "scenario_id": null,
+    "state_value": null,
+    "numeric_value": null,
+    "units": null,
+    "source": null,
+    "valid_time": null,
+    "version": 1
+  },
+  "translation_link": {
+    "translation_link_id": null,
+    "source_id": null,
+    "source_type": null,
+    "target_predicate_id": null,
+    "relation_type": null,
+    "scope_match": null,
+    "translation_gaps": {
+      "scale_gap": null,
+      "environment_gap": null,
+      "duration_gap": null,
+      "integration_gap": null,
+      "performance_gap": null,
+      "resource_gap": null,
+      "manufacturing_gap": null,
+      "economics_gap": null,
+      "validation_gap": null
+    },
+    "verification_activity_ids": [],
+    "version": 1
+  },
+  "inference": {
+    "inference_id": null,
+    "premise_claim_ids": [],
+    "conclusion_claim_id": null,
+    "rule_type": null,
+    "logical_form": null,
+    "scope": {},
+    "assumptions": [],
+    "validity_status": null,
+    "verification_activity_ids": [],
+    "version": 1
+  },
+  "requirement_gate": {
+    "gate_id": null,
+    "operator": null,
+    "input_predicate_ids": [],
+    "output_predicate_id": null,
+    "route_id": null,
+    "k_if_applicable": null,
+    "threshold_expression_if_applicable": null,
+    "custom_evaluator_if_applicable": null,
+    "scope": {},
+    "operating_conditions": [],
+    "decomposition_status": null,
+    "supporting_claim_ids": [],
+    "assertion_status": null,
+    "valid_time": null,
+    "knowledge_time": null,
+    "version": 1,
+    "evaluation_context_requirements": {
+      "scenario": null,
+      "architecture": null,
+      "operating_regime": null,
+      "spatial_scope": null,
+      "temporal_scope": null,
+      "parameter_range": null
+    }
+  },
+  "route": {
+    "route_id": null,
+    "name": null,
+    "target_predicate_id": null,
+    "gate_ids": [],
+    "architecture_scope": {},
+    "scenario_scope": {},
+    "closure_status": null,
+    "sequence_constraints": [],
+    "alternative_group_id": null,
+    "supporting_claim_ids": [],
+    "status": null,
+    "version": 1
+  },
+  "alternative_group": {
+    "alternative_group_id": null,
+    "target_predicate_id": null,
+    "route_ids": [],
+    "coverage_status": null,
+    "scope": {},
+    "version": 1
+  },
+  "constraint": {
+    "constraint_id": null,
+    "constraint_type": null,
+    "member_ids": [],
+    "expression": null,
+    "scope": {},
+    "operating_conditions": [],
+    "supporting_claim_ids": [],
+    "status": null,
+    "version": 1
+  },
+  "derived_diagnostic_run": {
+    "derivation_run_id": null,
+    "graph_snapshot_id": null,
+    "snapshot_hash": null,
+    "ruleset_version": "SDBES_V3",
+    "algorithm": null,
+    "algorithm_version": null,
+    "parameters": {},
+    "scope": {},
+    "scenario_id": null,
+    "closure_status": null,
+    "started_at": null,
+    "completed_at": null,
+    "completion_status": null,
+    "outputs": [],
+    "limitations": []
+  }
+}

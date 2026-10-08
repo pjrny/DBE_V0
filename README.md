@@ -67,13 +67,23 @@ File:
 
 Defines how individual claims are specified and how formal, empirical, numerical, engineering, causal, and forecast claims are evaluated without forcing them through one universal confidence formula.
 
-### V3 — not yet committed
+### V3 — Dependency Mathematics & Structural Semantics
 
-V3 will be conceptualized and reviewed in conversation first.
+Files:
 
-The planned subject is **dependency mathematics and structural semantics**: exact relationship types, AND/OR/k-of-n gates, alternative pathways, structural centrality, bottlenecks, circular dependencies, and the rules needed before research examples can safely populate the dependency network.
+- `docs/SDBES/V3_DEPENDENCY_MATHEMATICS_STRUCTURAL_SEMANTICS.md`
+- `docs/SDBES/V3_STRUCTURAL_SCHEMA_TEMPLATE.json`
+- `tests/sdbes_v3_core_logic_checks.py`
 
-No V3 framework should be committed until it is reviewed.
+V3 was formalized after the V1/V2 10-paper stress test and Pro mathematical review. It introduces Structural Predicates, Structural Assessments, typed translation links, epistemic versus structural dependency layers, gate-aware ALL/ANY/k-of-n semantics, four-valued knowledge state, three-valued scenario state, alternative routes, minimal path/cut analysis, SCC/bootstrap handling, and snapshot-versioned structural diagnostics.
+
+The required core-logic verification passed with `ALL_CHECKS_PASSED`.
+
+V4 is next and must preserve the V3 invariant:
+
+```text
+Structural Requirement ≠ Causal Effect
+```
 
 ## Development sequence
 
@@ -82,8 +92,8 @@ Current planned sequence:
 ```text
 V1  Typed ledger and mathematical safety rules
 V2  Claim evaluation rules
-V3  Dependency mathematics and structural semantics
-V4  Influence / causal schema
+V3  Dependency mathematics and structural semantics — committed
+V4  Influence, causality & dynamic-state semantics — next
 V5  Glyphs and linked visualization system
 V6  Real-paper pilot
 V7  Failure-mode and consistency tests at scale
