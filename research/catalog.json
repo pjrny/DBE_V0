@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T09:20:00-05:00",
+  "generatedAt": "2026-10-07T18:53:00-05:00",
   "lookback": "1y+",
   "northStar": "Q=1000",
   "feeds": [
@@ -134,6 +134,7 @@
         "nonabelian-qldpc"
       ],
       "blockers": [
+        "2026-10-07: fusion measurement stays. Braided fusion 2-categories (2610.03864), Abelian anyon peeling (2610.04704), and an Ising/Fibonacci impurity braid (2610.06203) queued under E-S3 only. D4 fusion-assisted decoding (2610.05901) and the S3 fusion-tree decoder (2610.06692) are E-S3+E-QEC bridges at coupling C1. No new bus.",
         "2026-10-04: composite-fermion Chern-band Jain states (2610.01217) and a 1D multicomponent anyon spin chain (2609.36555) queued under E-S3. Neither replaces fusion measurement. H2 gate set stays.",
         "2026-10-03: no new S3 braid-plus-fusion result. Twisted abelian quantum doubles (2610.00464) and the toric-code electric-magnetic Clifford no-go (2610.02097) stay on E-QEC. PRX mixed-state axioms (2506.04221) are not a fusion measurement. H2 gate set stays.",
         "2026-10-02: anyon proliferation under Higgsing (2610.00452) can enlarge topological order, including a non-Abelian channel for odd N. It is Chern-Simons, not an H2 braid, and it does not replace fusion measurement. Composite-fermion Chern-band anyons (2610.01217) left unscored.",
@@ -335,6 +336,7 @@
         "topo-dynamics"
       ],
       "blockers": [
+        "2026-10-07: Strauss magnetic-feedback simulations of a DIII-D locked-mode criterion (2610.06189) queued under E-RL. No coil command and no learned policy. M2 stays open.",
         "2026-10-04: loss-cone active learning (2609.36123) and a non-axisymmetric vacuum response (2610.00536) queued under E-RL. No coil command. M2 stays open.",
         "2026-10-03: no Friday or Saturday listing. Resonant island chains on DIII-D #171491 (2610.00919) slow field-line transport. No coil command. M2 stays open. Vacuum response (2610.00536) and loss-cone learning (2609.36123) left unscored.",
         "2026-10-02: DIII-D inference benchmark (2610.00845, Rothstein/Kolemen) times control models. Above about 5 million parameters a CPU takes tens to thousands of milliseconds. It does not command a coil. M2 stays open. Resonant island chains on DIII-D #171491 (2610.00919) left unscored.",
@@ -429,6 +431,7 @@
         "cyclic-fusion-family"
       ],
       "blockers": [
+        "2026-10-07: fusion measurement stays. Braided fusion 2-categories (2610.03864), Abelian anyon peeling (2610.04704), and an Ising/Fibonacci impurity braid (2610.06203) queued under E-S3 only. D4 fusion-assisted decoding (2610.05901) and the S3 fusion-tree decoder (2610.06692) are E-S3+E-QEC bridges at coupling C1. No new bus.",
         "2026-10-04: fusion measurement stays. Chern-band composite fermions and 1D anyons are not S3 fusion and do not open a new bus.",
         "2026-10-03: fusion measurement stays. Algebraic surgery and twisted doubles are not S3 fusion and do not open a new bus.",
         "2026-10-02: Higgsing anyon proliferation (2610.00452) does not remove fusion measurement and does not open a new bus. Photonic fusion in lattice surgery (2610.01923) is not anyon fusion.",
@@ -15217,9 +15220,1029 @@
         "bindAction",
         "date"
       ]
+    },
+    {
+      "id": "2610.03682",
+      "arxiv": "2610.03682",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Low-Overhead Quantum Error Correction with Boundary-Connected Planar Modules",
+      "authors": [
+        "Oscar Higgott",
+        "Hasan Sayginel",
+        "Francisco J. H. Heras",
+        "Zhiyang He",
+        "Tomas Jochym-O'Connor",
+        "Andrew W. Senior",
+        "Lei M. Zhang",
+        "Thomas Edlich",
+        "James S. Spencer",
+        "Matt McEwen",
+        "Craig Gidney",
+        "Johannes Bausch",
+        "Pushmeet Kohli",
+        "Hartmut Neven"
+      ],
+      "year": 2026,
+      "date": "2026-10-02",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.03682",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-07",
+        "preprint"
+      ],
+      "importance": 84,
+      "confidence": 63,
+      "popularity": 48,
+      "coreIdea": "Sparse static wires between flat modules make hyperbolic surface and color codes whose syndrome circuits stay mostly nearest-neighbor inside each module. The authors' circuit-level simulations claim a tenfold or larger drop in physical-qubit overhead versus the planar surface code, and a projection past the [[288,12,18]] bivariate bicycle code.",
+      "whyItMatters": "E-QEC is the error layer. A modular surface or color code is still that layer. It is not a new bus, and a simulation cannot move C.",
+      "limitation": "Bare arXiv. Simulation and a projection to d>=22, not hardware. Inter-module seam errors are an assumption, not a measured plant.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.03682v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.03684",
+      "arxiv": "2610.03684",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Single-Shot Error Correction at Optimal Spacetime Cost",
+      "authors": [
+        "Kishor Bharti",
+        "Tobias Haug",
+        "Derek Khu",
+        "Andrew Tanggara"
+      ],
+      "year": 2026,
+      "date": "2026-10-02",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.03684",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-07",
+        "preprint"
+      ],
+      "importance": 76,
+      "confidence": 60,
+      "popularity": 40,
+      "coreIdea": "For independent erasures, storing K logical qubits for S steps at error at most epsilon needs spacetime cost of order S times (K plus log of S over epsilon). The authors give a noisy quantum-Tanner-code circuit, counting preparation, gates, measurement, and waits, that meets that scaling when the hardware has long-range links.",
+      "whyItMatters": "E-QEC only. A spacetime lower bound is a decoder-theory input. It does not replace the surface-code or qLDPC layer, and it does not raise C.",
+      "limitation": "Bare arXiv. The construction assumes long-range connectivity. No device result is reported.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.03684v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.03714",
+      "arxiv": "2610.03714",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "SpiderCSS: Scalable Fault-Tolerant CSS State Preparation",
+      "authors": [
+        "Boldizsár Poór",
+        "Andrey Boris Khesin",
+        "Sarah Meng Li",
+        "Benjamin Rodatz",
+        "John van de Wetering",
+        "Richie Yeung"
+      ],
+      "year": 2026,
+      "date": "2026-10-02",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.03714",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-07",
+        "preprint"
+      ],
+      "importance": 74,
+      "confidence": 58,
+      "popularity": 40,
+      "coreIdea": "SpiderCSS turns an ideal CSS state into a fault-tolerant preparation circuit with ZX rewrites that the authors say stay fault-equivalent, so the output circuit does not need a separate verifier. Monte Carlo runs up to distance 15 report a lower logical error rate and a higher acceptance rate than the scalable methods they compare.",
+      "whyItMatters": "E-QEC only. State preparation is part of the error layer. It is not a new code family and it does not move C.",
+      "limitation": "Bare arXiv. Simulation to distance 15. The abstract's 33.7 percent and 9.5 percent are averages, not a device.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.03714v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.03864",
+      "arxiv": "2610.03864",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Realizing Braided Fusion 2-Categories as (3+1)D Mixed-State Topological Orders",
+      "authors": [
+        "Ryohei Kobayashi",
+        "Abhinav Prem",
+        "Matthew Yu"
+      ],
+      "year": 2026,
+      "date": "2026-10-02",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.03864",
+      "fields": [
+        "anyons",
+        "braid-knot"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-07",
+        "preprint"
+      ],
+      "importance": 70,
+      "confidence": 53,
+      "popularity": 42,
+      "coreIdea": "The authors build large families of (3+1)D mixed-state topological orders, including ones they say cannot appear in any gapped ground state, by matching braided fusion 2-categories to higher-form symmetries. Some of those orders braid non-degenerately and still carry a gravitational anomaly.",
+      "whyItMatters": "E-S3 only, as topological-order reading. Fusion measurement stays. This is not a new pillar and it is not E-HOL: the bulk is a mixed-state order, not an AdS map onto a plant.",
+      "limitation": "Bare arXiv. Bosonic lattice constructions. No S3 compilation and no processor.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.03864v1",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.04704",
+      "arxiv": "2610.04704",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Peeling off Abelian Anyons and Proliferation Transitions",
+      "authors": [
+        "Meng Cheng",
+        "Nathan Seiberg"
+      ],
+      "year": 2026,
+      "date": "2026-10-03",
+      "venue": "arXiv cond-mat.str-el",
+      "url": "https://arxiv.org/abs/2610.04704",
+      "fields": [
+        "anyons"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-07",
+        "preprint"
+      ],
+      "importance": 78,
+      "confidence": 62,
+      "popularity": 48,
+      "coreIdea": "A (2+1)D TQFT has an invertible one-form symmetry that the authors say peels every Abelian anyon off the rest of the theory. They then couple those Abelian anyons, written as U(1) Chern-Simons fields, to a scalar, and describe a transition out of the original TQFT.",
+      "whyItMatters": "E-S3 only. It is a symmetry fact about Abelian anyons. The non-Abelian content, and fusion measurement, stay where they were. C stays C3.",
+      "limitation": "Bare arXiv. Continuum TQFT. The abstract does not treat S3 or a device.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.04704v1",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.05307",
+      "arxiv": "2610.05307",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Lifted surgery for non-Abelian two-block group-algebra codes",
+      "authors": [
+        "Tushar Pandey"
+      ],
+      "year": 2026,
+      "date": "2026-10-04",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.05307",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-07",
+        "preprint"
+      ],
+      "importance": 73,
+      "confidence": 56,
+      "popularity": 40,
+      "coreIdea": "Lifted surgery measures an orbit of logical operators in one merged qLDPC block. Extended to two-block codes over non-Abelian groups, the extra gain is at most the index of a largest Abelian subgroup. Some codes still let one merged block read every logical qubit, with two to three times fewer rounds in the simulations they report.",
+      "whyItMatters": "E-QEC only. Group-algebra surgery stays inside the error layer. Binding E-S3 would be a false friend. C stays C4.",
+      "limitation": "Bare arXiv. Exact distances up to 13 and circuit-level Relay-BP, not hardware.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.05307v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.05395",
+      "arxiv": "2610.05395",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Complete Entanglement Structure of the Kitaev Honeycomb Spin Liquid from Exact Tensor Networks",
+      "authors": [
+        "Hidehiro Saito",
+        "Chisa Hotta"
+      ],
+      "year": 2026,
+      "date": "2026-10-04",
+      "venue": "arXiv cond-mat.str-el",
+      "url": "https://arxiv.org/abs/2610.05395",
+      "fields": [
+        "topology"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-07",
+        "preprint",
+        "reading list"
+      ],
+      "importance": 48,
+      "confidence": 44,
+      "popularity": 36,
+      "coreIdea": "An exact tensor network for the Kitaev honeycomb, built by quantum-number projection and a Gutzwiller projection, is used to argue that topological entanglement entropy shows up for every eigenstate only after the projection onto the physical spins.",
+      "whyItMatters": "No KEEP or HOLD claim fits. E-S3 is S3 braid plus fusion, not Z2. E-MZM is a device distinguisher, not a parton. Reading list only. Not INCLUDE.",
+      "limitation": "Bare arXiv. Spin-liquid theory. Off-path for the engine. Not a CUT reversal.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.05395v1",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.05901",
+      "arxiv": "2610.05901",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Fusion-assisted decoding of non-Abelian topological order",
+      "authors": [
+        "Rohith Sajith",
+        "Yabo Li",
+        "Zijian Song",
+        "Tsung-Cheng Lu",
+        "Carolyn Zhang"
+      ],
+      "year": 2026,
+      "date": "2026-10-05",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.05901",
+      "fields": [
+        "anyons",
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-07",
+        "preprint"
+      ],
+      "importance": 80,
+      "confidence": 63,
+      "popularity": 44,
+      "coreIdea": "Maximum-likelihood decoding of non-Abelian anyons is harder because fusion is not deterministic. The authors add fusion-outcome measurements to the syndrome and build an explicit decoder for the D4 quantum double under charge noise, with a nonzero threshold in the stat-mech model.",
+      "whyItMatters": "Bridge, not ADD. Fusion-aware decoding touches E-S3 and E-QEC together. That coupling is a new claim and starts at C1. It does not raise either C.",
+      "limitation": "Bare arXiv. D4, not S3. No numeric threshold is printed in the abstract, so none is copied. Not hardware.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.05901v1",
+      "claimIds": [
+        "E-S3",
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.05928",
+      "arxiv": "2610.05928",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Evaluating the performance of QEC primitives on quantum processors at large width and depth",
+      "authors": [
+        "J. A. Montanez-Barrera; Kristel Michielsen"
+      ],
+      "year": 2026,
+      "date": "2026-10-05",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.05928",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-07",
+        "preprint"
+      ],
+      "importance": 83,
+      "confidence": 67,
+      "popularity": 52,
+      "coreIdea": "A short mid-circuit-measurement circuit, shaped like a code's checks, is run as a benchmark on ten processors from IBM, IQM, and Quantinuum. On Quantinuum the authors use surface-code, color-code, and bivariate-bicycle check patterns, and on one IBM device they compare the benchmark with logical-memory runs.",
+      "whyItMatters": "E-QEC only, and the platform matches. It is still a preprint benchmark, not a journal memory result, so C stays C4. No Auto-Gate pass.",
+      "limitation": "Bare arXiv, so A5 fails. The abstract does not quote lambda_eff. QAOA decay is not itself a logical lifetime.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.05928v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.06036",
+      "arxiv": "2610.06036",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Materialised symmetries of 2D translationally invariant codes",
+      "authors": [
+        "Andrew Li",
+        "Stephen D. Bartlett",
+        "Andrew C. Doherty",
+        "Campbell K. McLauchlan"
+      ],
+      "year": 2026,
+      "date": "2026-10-05",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.06036",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-07",
+        "preprint"
+      ],
+      "importance": 68,
+      "confidence": 55,
+      "popularity": 40,
+      "coreIdea": "For two-dimensional translation-invariant CSS codes, the authors split the symmetry space on the infinite lattice into translation-invariant pieces and then restrict that basis to a finite rectangle. Those symmetries are what matching decoders for this code family are built from.",
+      "whyItMatters": "E-QEC only. Matching structure for bicycle-type codes is error-layer reading. It is not a new pillar and it does not move C.",
+      "limitation": "Bare arXiv. No threshold number is stated in the abstract.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.06036v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.06059",
+      "arxiv": "2610.06059",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Comparing thresholds of XZZX and rotated surface codes under spatio-temporal correlated noise",
+      "authors": [
+        "Dhruv Koul"
+      ],
+      "year": 2026,
+      "date": "2026-10-05",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.06059",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-07",
+        "preprint"
+      ],
+      "importance": 72,
+      "confidence": 58,
+      "popularity": 40,
+      "coreIdea": "Under circuit-level correlated noise, a hypergraph decoder is used to compare the XZZX code with the rotated surface code. At strong Z bias the abstract's XZZX threshold sits above the rotated code, and it dips at moderate bias where X and Y errors bridge the diagonal strings.",
+      "whyItMatters": "E-QEC only. Bias-tailored surface codes are the same error layer. The numbers are a simulation input, not a C move.",
+      "limitation": "Bare arXiv. One noise family. Not hardware.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.06059v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.06189",
+      "arxiv": "2610.06189",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Eliminating Tokamak Disruptions with Feedback",
+      "authors": [
+        "H. R. Strauss"
+      ],
+      "year": 2026,
+      "date": "2026-10-05",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2610.06189",
+      "fields": [
+        "plasma"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-07",
+        "preprint"
+      ],
+      "importance": 75,
+      "confidence": 56,
+      "popularity": 42,
+      "coreIdea": "Using a DIII-D locked-mode disruption database, the author argues that a major tearing disruption needs the q=2 surface close enough to the wall to couple to it, and that magnetic feedback can imitate a conducting wall in simulations. Coil layout matters; a bad layout does not stabilize.",
+      "whyItMatters": "E-RL is the plant-attach claim. This is classical feedback on a tokamak, queued as a plant note. It is not a learned controller and it writes no plant Q.",
+      "limitation": "Bare arXiv. Model equilibria and an MST model, not a DIII-D feedback shot. No coil-current waveform is given.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.06189v1",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.06203",
+      "arxiv": "2610.06203",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Interferometric braiding of non-Abelian anyons",
+      "authors": [
+        "Francesco Debortoli",
+        "Fabian Grusdt"
+      ],
+      "year": 2026,
+      "date": "2026-10-05",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.06203",
+      "fields": [
+        "anyons",
+        "braid-knot"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-07",
+        "preprint"
+      ],
+      "importance": 77,
+      "confidence": 60,
+      "popularity": 44,
+      "coreIdea": "Mobile impurities with an addressable spin are used, on paper, as an interferometer that reads the R and F matrices of Ising and Fibonacci anyons. The same sketch includes a converter from a flying qubit into a topological memory.",
+      "whyItMatters": "E-S3 only. Braiding proposals stay on the topological claim. Fusion measurement stays. This does not open a pillar and does not move C.",
+      "limitation": "Bare arXiv. No data. Ising is not universal by braiding alone, and Fibonacci is not S3.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.06203v1",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.06606",
+      "arxiv": "2610.06606",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Staying Sober: A Shot-Free Predictor of Logical Error Rates for Concatenated Quantum Error Correcting Codes",
+      "authors": [
+        "Sayam Sethi",
+        "Aditi Awasthi",
+        "Maxwell Poster",
+        "Joshua Viszlai",
+        "Jonathan Mark Baker"
+      ],
+      "year": 2026,
+      "date": "2026-10-05",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.06606",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-07",
+        "preprint"
+      ],
+      "importance": 64,
+      "confidence": 53,
+      "popularity": 38,
+      "coreIdea": "Monte Carlo logical-error estimates get expensive as distance grows, and worse for concatenated codes. The authors give a shot-free predictor for the leading power of the physical error rate, exact for an unconcatenated stabilizer code when their budgets are not exhausted, and approximate once codes are concatenated.",
+      "whyItMatters": "E-QEC only. It is a costing tool for the error layer. C stays C4.",
+      "limitation": "Bare arXiv. Exact only in the unconcatenated case they prove. No device.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.06606v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.06692",
+      "arxiv": "2610.06692",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Climbing the Fusion Tree: Center Ordering and Decoding Hierarchy in Non-Abelian Mixed States",
+      "authors": [
+        "Pablo Sala",
+        "Vlad Temkin",
+        "Cenke Xu",
+        "Daniel Podolsky",
+        "Ehud Altman"
+      ],
+      "year": 2026,
+      "date": "2026-10-05",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.06692",
+      "fields": [
+        "anyons",
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-07",
+        "preprint"
+      ],
+      "importance": 79,
+      "confidence": 62,
+      "popularity": 44,
+      "coreIdea": "Decoding two states that differ by a pair of non-Abelian charges, after symmetric noise, is dual to decoding the quantum double D(G). Fusion outcomes on larger regions define a hierarchy. The authors find that the strong symmetry breaks down to the center, and that the only nonzero-error transition is an ordering of that center. They check S3 and SU(2).",
+      "whyItMatters": "Bridge, not ADD. S3 appears as the group of a mixed-state decoder, so E-S3 and E-QEC are coupled. That coupling starts at C1. Fusion measurement is not shown on a processor.",
+      "limitation": "Bare arXiv. Tensor networks. The abstract's S3 threshold is not given as a number in the text we scored, so none is entered.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.06692v1",
+      "claimIds": [
+        "E-S3",
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
     }
   ],
   "runs": [
+    {
+      "id": "run-2026-10-07-daily",
+      "kind": "daily",
+      "startedAt": "2026-10-07T18:41:00-05:00",
+      "finishedAt": "2026-10-07T18:53:00-05:00",
+      "windowStart": "2026-09-30",
+      "windowEnd": "2026-10-07",
+      "sources": [
+        {
+          "id": "arxiv-yesterday-ids",
+          "url": "https://export.arxiv.org/api/query",
+          "status": "ok",
+          "http": 200,
+          "requests": 1,
+          "returned": 20,
+          "new": 20,
+          "ms": 190,
+          "error": null
+        },
+        {
+          "id": "arxiv-recent-window",
+          "url": "https://export.arxiv.org/api/query",
+          "status": "ok",
+          "http": 200,
+          "requests": 5,
+          "returned": 200,
+          "new": 44,
+          "ms": 1078,
+          "error": null
+        },
+        {
+          "id": "arxiv-ingest-queries",
+          "url": "https://export.arxiv.org/api/query",
+          "status": "ok",
+          "http": 200,
+          "requests": 7,
+          "returned": 84,
+          "new": 0,
+          "ms": 1639,
+          "error": null
+        },
+        {
+          "id": "arxiv-fetch-queries",
+          "url": "https://export.arxiv.org/api/query",
+          "status": "ok",
+          "http": 200,
+          "requests": 10,
+          "returned": 80,
+          "new": 0,
+          "ms": 3236,
+          "error": null
+        },
+        {
+          "id": "arxiv-oai",
+          "url": "https://oaipmh.arxiv.org/oai",
+          "status": "ok",
+          "http": 200,
+          "requests": 15,
+          "returned": 15,
+          "new": 0,
+          "ms": 1135,
+          "error": null
+        },
+        {
+          "id": "openalex",
+          "url": "https://api.openalex.org/works",
+          "status": "skipped",
+          "http": null,
+          "requests": 0,
+          "returned": 0,
+          "new": 0,
+          "ms": 0,
+          "error": "OPENALEX_API_KEY unset"
+        },
+        {
+          "id": "crossref",
+          "url": "https://api.crossref.org/works",
+          "status": "skipped",
+          "http": null,
+          "requests": 0,
+          "returned": 0,
+          "new": 0,
+          "ms": 0,
+          "error": "DBE_CONTACT_EMAIL unset; mailto not invented"
+        },
+        {
+          "id": "unpaywall",
+          "url": "https://api.unpaywall.org/v2",
+          "status": "skipped",
+          "http": null,
+          "requests": 0,
+          "returned": 0,
+          "new": 0,
+          "ms": 0,
+          "error": "DBE_CONTACT_EMAIL unset"
+        },
+        {
+          "id": "weekly",
+          "url": null,
+          "status": "skipped",
+          "http": null,
+          "requests": 0,
+          "returned": 0,
+          "new": 0,
+          "ms": 0,
+          "error": "Wednesday; weekly sources run Sunday only"
+        }
+      ],
+      "counts": {
+        "harvested": 384,
+        "duplicates": 68,
+        "merged": 0,
+        "new": 15,
+        "scored": 15,
+        "unscored": 11,
+        "add": 0,
+        "strengthen": 0,
+        "weaken": 0,
+        "hold": 14,
+        "newPillar": 0,
+        "reject": 1
+      },
+      "paperIds": [
+        "2610.03682",
+        "2610.03684",
+        "2610.03714",
+        "2610.03864",
+        "2610.04704",
+        "2610.05307",
+        "2610.05395",
+        "2610.05901",
+        "2610.05928",
+        "2610.06036",
+        "2610.06059",
+        "2610.06189",
+        "2610.06203",
+        "2610.06606",
+        "2610.06692"
+      ],
+      "unscoredIds": [
+        {
+          "id": "2610.06697",
+          "reason": "yesterday's queue, 2026-10-05 measurement-free surface-code preparation; E-QEC; score next"
+        },
+        {
+          "id": "2610.06749",
+          "reason": "yesterday's queue, 2026-10-05 logic for ultra-high-rate quantum codes; E-QEC; score next"
+        },
+        {
+          "id": "2610.06775",
+          "reason": "yesterday's queue, 2026-10-05 logical gates from irrep surface codes; E-QEC; score next"
+        },
+        {
+          "id": "2610.06811",
+          "reason": "yesterday's queue, 2026-10-05 polynomial-time simulation of non-Clifford QEC; E-QEC; score next"
+        },
+        {
+          "id": "2610.06845",
+          "reason": "yesterday's queue, 2026-10-05 rewire-and-reset for non-Abelions; possible E-S3; score next"
+        },
+        {
+          "id": "2610.07169",
+          "reason": "2026-10-05 one-sided tetrons as Majorana qubits; E-MZM WATCH, not X and Z; score cap"
+        },
+        {
+          "id": "2610.07156",
+          "reason": "2026-10-05 chiral parafermions in Floquet Z_N order; check E-S3 versus the clock cut before any bind; score cap"
+        },
+        {
+          "id": "2610.07165",
+          "reason": "2026-10-05 non-invertible SPT phases from fusion rings; possible E-S3; not a new pillar; score cap"
+        },
+        {
+          "id": "2610.05589",
+          "reason": "2026-10-04 autonomous quantum memories from classical stochastic processes; possible E-QEC; not E-FR hardware; score cap"
+        },
+        {
+          "id": "2610.08787",
+          "reason": "2026-10-06 holographic tensor-network duality; E-HOL denylist check; do not INCLUDE; score cap"
+        },
+        {
+          "id": "2610.05208",
+          "reason": "2026-10-04 holographic superconductors; E-HOL denylist check; do not INCLUDE; score cap"
+        }
+      ],
+      "offPathNotCarried": [
+        "2610.08216",
+        "2610.08699",
+        "2610.07493",
+        "2610.00409",
+        "2610.02086",
+        "2610.05596",
+        "2610.07734",
+        "2610.04960",
+        "2610.04768",
+        "2610.05877"
+      ],
+      "fieldCounts": {
+        "tqc": 10,
+        "anyons": 5,
+        "braid-knot": 2,
+        "topology": 1,
+        "plasma": 1
+      },
+      "gateMisses": {
+        "A1": 3,
+        "A2": 14,
+        "A3": 15,
+        "A4": 15,
+        "A5": 15,
+        "A6": 2,
+        "A7": 0,
+        "A8": 0,
+        "G1": 0,
+        "G2": 0,
+        "G3": 0,
+        "G4": 14,
+        "G5": 1,
+        "G6": 0
+      },
+      "claimDelta": "none",
+      "versionBump": null,
+      "fulltext": {
+        "cached": 0,
+        "privateOnly": 0,
+        "noOA": 0
+      },
+      "tests": {
+        "command": "PYTHONPATH=. python -m pytest -q tests/test_research.py tests/test_claims.py tests/test_api.py tests/test_plasma.py tests/test_transport.py",
+        "result": "pass",
+        "summary": "19 passed, 30 subtests passed"
+      },
+      "branch": "observatory/2026-10-07",
+      "pr": "https://github.com/pjrny/DBE_V0/pull/8",
+      "suspiciousContent": [],
+      "scoreRoutes": [
+        {
+          "paper": "2610.03682",
+          "bind": "E-QEC",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arXiv quant-ph"
+        },
+        {
+          "paper": "2610.03684",
+          "bind": "E-QEC",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arXiv quant-ph"
+        },
+        {
+          "paper": "2610.03714",
+          "bind": "E-QEC",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arXiv quant-ph"
+        },
+        {
+          "paper": "2610.03864",
+          "bind": "E-S3",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arXiv quant-ph"
+        },
+        {
+          "paper": "2610.04704",
+          "bind": "E-S3",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arXiv cond-mat.str-el"
+        },
+        {
+          "paper": "2610.05307",
+          "bind": "E-QEC",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arXiv quant-ph"
+        },
+        {
+          "paper": "2610.05395",
+          "bind": "E-S3",
+          "action": "REJECT",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arXiv cond-mat.str-el"
+        },
+        {
+          "paper": "2610.05901",
+          "bind": "E-S3,E-QEC",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arXiv quant-ph"
+        },
+        {
+          "paper": "2610.05928",
+          "bind": "E-QEC",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arXiv quant-ph"
+        },
+        {
+          "paper": "2610.06036",
+          "bind": "E-QEC",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arXiv quant-ph"
+        },
+        {
+          "paper": "2610.06059",
+          "bind": "E-QEC",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arXiv quant-ph"
+        },
+        {
+          "paper": "2610.06189",
+          "bind": "E-RL",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arXiv physics.plasm-ph"
+        },
+        {
+          "paper": "2610.06203",
+          "bind": "E-S3",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arXiv quant-ph"
+        },
+        {
+          "paper": "2610.06606",
+          "bind": "E-QEC",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arXiv quant-ph"
+        },
+        {
+          "paper": "2610.06692",
+          "bind": "E-S3,E-QEC",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arXiv quant-ph"
+        }
+      ],
+      "notes": "Twentieth run, Wednesday, weekly sources off. Lookback 7 days (2026-09-30 to 2026-10-07). Yesterday's 20 unscored ids were oldest-first; the oldest 15 were scored. Fourteen HOLD and one REJECT. Eight HOLDs are E-QEC only, including a Quantinuum/IBM/IQM benchmark that matches the platform and still fails A5 because it is bare arXiv. Three HOLDs are E-S3 only (mixed-state braided fusion 2-categories, Abelian anyon peeling, an Ising/Fibonacci impurity braid). One HOLD is magnetic feedback on a DIII-D locked-mode criterion under E-RL, with no coil command and no learned policy. Two E-S3+E-QEC bridges (D4 fusion-assisted decoding; an S3 fusion-tree decoder) stay at coupling C1. One REJECT: the Kitaev honeycomb tensor network binds neither E-S3 nor E-MZM. No ADD, no STRENGTHEN, no version bump. C unchanged. The library's newest paper date had been 2026-10-02 because 3-6 Oct runs scored older carry-over; this slice adds papers submitted 2026-10-02 through 2026-10-05. The public lab updates only when this branch is merged into feature/research-grade-physics."
+    },
     {
       "id": "run-2026-10-06-daily",
       "kind": "daily",

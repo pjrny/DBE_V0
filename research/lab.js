@@ -1,4 +1,4 @@
-const NOW = new Date("2026-10-06T09:20:00-05:00");
+let NOW = new Date("2026-10-07T18:41:00-05:00");
 const KEY = "dbe-observatory-freeze-v5";
 const TABS = [
   ["mission", "Mission"],
@@ -244,7 +244,7 @@ function commandStats() {
 function paintFreeze() {
   const el = document.getElementById("freezeBar");
   if (!el) return;
-  el.innerHTML = "<code>" + esc(FREEZE.dbe) + "</code><span>/</span><code>" + esc(FREEZE.dbes) + "</code><span> " + FREEZE.actions.length + " freeze action" + (FREEZE.actions.length === 1 ? "" : "s") + "</span><a href=\"papers/DBE-0.2.2.md\">DBE note</a><a href=\"papers/DBES-0.2.0.md\">DBE-S note</a><button class=\"ghost\" type=\"button\" id=\"resetFreeze\">Reset freeze</button>";
+  el.innerHTML = "<code>" + esc(FREEZE.dbe) + "</code><span>/</span><code>" + esc(FREEZE.dbes) + "</code><span> " + FREEZE.actions.length + " freeze action" + (FREEZE.actions.length === 1 ? "" : "s") + "</span><span>catalog " + esc(String(CAT.generatedAt || "").slice(0, 10)) + "</span><a href=\"papers/DBE-0.2.2.md\">DBE note</a><a href=\"papers/DBES-0.2.0.md\">DBE-S note</a><button class=\"ghost\" type=\"button\" id=\"resetFreeze\">Reset freeze</button>";
   document.getElementById("resetFreeze").onclick = resetFreeze;
   const stats = document.getElementById("stats");
   if (stats) {
@@ -447,6 +447,7 @@ Promise.all([
   fetch("ledger.json").then((r) => r.json()).catch(() => ({})),
 ]).then(([cat, claims, versions, reviews, ledger]) => {
   CAT = cat; CLAIMS = claims; VERS = versions; REVIEWS = reviews; LEDGER = ledger;
+  if (cat.generatedAt) NOW = new Date(cat.generatedAt);
   FREEZE = loadFreeze();
   setup();
 }).catch(() => {

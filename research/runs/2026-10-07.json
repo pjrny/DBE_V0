@@ -1,0 +1,359 @@
+{
+  "id": "run-2026-10-07-daily",
+  "kind": "daily",
+  "startedAt": "2026-10-07T18:41:00-05:00",
+  "finishedAt": "2026-10-07T18:53:00-05:00",
+  "windowStart": "2026-09-30",
+  "windowEnd": "2026-10-07",
+  "sources": [
+    {
+      "id": "arxiv-yesterday-ids",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 20,
+      "new": 20,
+      "ms": 190,
+      "error": null
+    },
+    {
+      "id": "arxiv-recent-window",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 5,
+      "returned": 200,
+      "new": 44,
+      "ms": 1078,
+      "error": null
+    },
+    {
+      "id": "arxiv-ingest-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 7,
+      "returned": 84,
+      "new": 0,
+      "ms": 1639,
+      "error": null
+    },
+    {
+      "id": "arxiv-fetch-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 10,
+      "returned": 80,
+      "new": 0,
+      "ms": 3236,
+      "error": null
+    },
+    {
+      "id": "arxiv-oai",
+      "url": "https://oaipmh.arxiv.org/oai",
+      "status": "ok",
+      "http": 200,
+      "requests": 15,
+      "returned": 15,
+      "new": 0,
+      "ms": 1135,
+      "error": null
+    },
+    {
+      "id": "openalex",
+      "url": "https://api.openalex.org/works",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "OPENALEX_API_KEY unset"
+    },
+    {
+      "id": "crossref",
+      "url": "https://api.crossref.org/works",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "DBE_CONTACT_EMAIL unset; mailto not invented"
+    },
+    {
+      "id": "unpaywall",
+      "url": "https://api.unpaywall.org/v2",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "DBE_CONTACT_EMAIL unset"
+    },
+    {
+      "id": "weekly",
+      "url": null,
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "Wednesday; weekly sources run Sunday only"
+    }
+  ],
+  "counts": {
+    "harvested": 384,
+    "duplicates": 68,
+    "merged": 0,
+    "new": 15,
+    "scored": 15,
+    "unscored": 11,
+    "add": 0,
+    "strengthen": 0,
+    "weaken": 0,
+    "hold": 14,
+    "newPillar": 0,
+    "reject": 1
+  },
+  "paperIds": [
+    "2610.03682",
+    "2610.03684",
+    "2610.03714",
+    "2610.03864",
+    "2610.04704",
+    "2610.05307",
+    "2610.05395",
+    "2610.05901",
+    "2610.05928",
+    "2610.06036",
+    "2610.06059",
+    "2610.06189",
+    "2610.06203",
+    "2610.06606",
+    "2610.06692"
+  ],
+  "unscoredIds": [
+    {
+      "id": "2610.06697",
+      "reason": "yesterday's queue, 2026-10-05 measurement-free surface-code preparation; E-QEC; score next"
+    },
+    {
+      "id": "2610.06749",
+      "reason": "yesterday's queue, 2026-10-05 logic for ultra-high-rate quantum codes; E-QEC; score next"
+    },
+    {
+      "id": "2610.06775",
+      "reason": "yesterday's queue, 2026-10-05 logical gates from irrep surface codes; E-QEC; score next"
+    },
+    {
+      "id": "2610.06811",
+      "reason": "yesterday's queue, 2026-10-05 polynomial-time simulation of non-Clifford QEC; E-QEC; score next"
+    },
+    {
+      "id": "2610.06845",
+      "reason": "yesterday's queue, 2026-10-05 rewire-and-reset for non-Abelions; possible E-S3; score next"
+    },
+    {
+      "id": "2610.07169",
+      "reason": "2026-10-05 one-sided tetrons as Majorana qubits; E-MZM WATCH, not X and Z; score cap"
+    },
+    {
+      "id": "2610.07156",
+      "reason": "2026-10-05 chiral parafermions in Floquet Z_N order; check E-S3 versus the clock cut before any bind; score cap"
+    },
+    {
+      "id": "2610.07165",
+      "reason": "2026-10-05 non-invertible SPT phases from fusion rings; possible E-S3; not a new pillar; score cap"
+    },
+    {
+      "id": "2610.05589",
+      "reason": "2026-10-04 autonomous quantum memories from classical stochastic processes; possible E-QEC; not E-FR hardware; score cap"
+    },
+    {
+      "id": "2610.08787",
+      "reason": "2026-10-06 holographic tensor-network duality; E-HOL denylist check; do not INCLUDE; score cap"
+    },
+    {
+      "id": "2610.05208",
+      "reason": "2026-10-04 holographic superconductors; E-HOL denylist check; do not INCLUDE; score cap"
+    }
+  ],
+  "offPathNotCarried": [
+    "2610.08216",
+    "2610.08699",
+    "2610.07493",
+    "2610.00409",
+    "2610.02086",
+    "2610.05596",
+    "2610.07734",
+    "2610.04960",
+    "2610.04768",
+    "2610.05877"
+  ],
+  "fieldCounts": {
+    "tqc": 10,
+    "anyons": 5,
+    "braid-knot": 2,
+    "topology": 1,
+    "plasma": 1
+  },
+  "gateMisses": {
+    "A1": 3,
+    "A2": 14,
+    "A3": 15,
+    "A4": 15,
+    "A5": 15,
+    "A6": 2,
+    "A7": 0,
+    "A8": 0,
+    "G1": 0,
+    "G2": 0,
+    "G3": 0,
+    "G4": 14,
+    "G5": 1,
+    "G6": 0
+  },
+  "claimDelta": "none",
+  "versionBump": null,
+  "fulltext": {
+    "cached": 0,
+    "privateOnly": 0,
+    "noOA": 0
+  },
+  "tests": {
+    "command": "PYTHONPATH=. python -m pytest -q tests/test_research.py tests/test_claims.py tests/test_api.py tests/test_plasma.py tests/test_transport.py",
+    "result": "pass",
+    "summary": "19 passed, 30 subtests passed"
+  },
+  "branch": "observatory/2026-10-07",
+  "pr": "https://github.com/pjrny/DBE_V0/pull/8",
+  "suspiciousContent": [],
+  "scoreRoutes": [
+    {
+      "paper": "2610.03682",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph"
+    },
+    {
+      "paper": "2610.03684",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph"
+    },
+    {
+      "paper": "2610.03714",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph"
+    },
+    {
+      "paper": "2610.03864",
+      "bind": "E-S3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph"
+    },
+    {
+      "paper": "2610.04704",
+      "bind": "E-S3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv cond-mat.str-el"
+    },
+    {
+      "paper": "2610.05307",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph"
+    },
+    {
+      "paper": "2610.05395",
+      "bind": "E-S3",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv cond-mat.str-el"
+    },
+    {
+      "paper": "2610.05901",
+      "bind": "E-S3,E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph"
+    },
+    {
+      "paper": "2610.05928",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph"
+    },
+    {
+      "paper": "2610.06036",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph"
+    },
+    {
+      "paper": "2610.06059",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph"
+    },
+    {
+      "paper": "2610.06189",
+      "bind": "E-RL",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv physics.plasm-ph"
+    },
+    {
+      "paper": "2610.06203",
+      "bind": "E-S3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph"
+    },
+    {
+      "paper": "2610.06606",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph"
+    },
+    {
+      "paper": "2610.06692",
+      "bind": "E-S3,E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph"
+    }
+  ],
+  "notes": "Twentieth run, Wednesday, weekly sources off. Lookback 7 days (2026-09-30 to 2026-10-07). Yesterday's 20 unscored ids were oldest-first; the oldest 15 were scored. Fourteen HOLD and one REJECT. Eight HOLDs are E-QEC only, including a Quantinuum/IBM/IQM benchmark that matches the platform and still fails A5 because it is bare arXiv. Three HOLDs are E-S3 only (mixed-state braided fusion 2-categories, Abelian anyon peeling, an Ising/Fibonacci impurity braid). One HOLD is magnetic feedback on a DIII-D locked-mode criterion under E-RL, with no coil command and no learned policy. Two E-S3+E-QEC bridges (D4 fusion-assisted decoding; an S3 fusion-tree decoder) stay at coupling C1. One REJECT: the Kitaev honeycomb tensor network binds neither E-S3 nor E-MZM. No ADD, no STRENGTHEN, no version bump. C unchanged. The library's newest paper date had been 2026-10-02 because 3-6 Oct runs scored older carry-over; this slice adds papers submitted 2026-10-02 through 2026-10-05. The public lab updates only when this branch is merged into feature/research-grade-physics."
+}

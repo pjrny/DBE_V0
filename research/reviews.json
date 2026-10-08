@@ -1,6 +1,576 @@
 {
-  "asOf": "2026-10-06",
+  "asOf": "2026-10-07",
   "cards": [
+    {
+      "id": "rev-2026-10-07-2610.03682",
+      "paperId": "2610.03682",
+      "date": "2026-10-07",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: the overhead ratios are qubit counts at stated rate and distance. G2 passes: no energy ledger. G3 passes: the tenfold and 30x figures are comparisons at k/n=1/16 and d>=22 against the [[288,12,18]] code, not a gain that grows from one free parameter. G4 fails: circuit-level simulations of modular hyperbolic surface and color codes are not a surface-code shot on a processor. G5 passes: the modular circuits can be re-simulated this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: the overhead ratios are qubit counts at stated rate and distance. G2 passes: no energy ledger. G3 passes: the tenfold and 30x figures are comparisons at k/n=1/16 and d>=22 against the [[288,12,18]] code, not a gain that grows from one free parameter. G4 fails: circuit-level simulations of modular hyperbolic surface and color codes are not a surface-code shot on a processor. G5 passes: the modular circuits can be re-simulated this quarter. G6 passes.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A tenfold overhead claim from simulated modular seams is not the below-threshold memory that already sets E-QEC at C4. The 30x figure is a projection, and the abstract does not report a device.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Sparse static wires between flat modules make hyperbolic surface and color codes whose syndrome circuits stay mostly nearest-neighbor inside each module. The authors' circuit-level simulations claim a tenfold or larger drop in physical-qubit overhead versus the planar surface code, and a projection past the [[288,12,18]] bivariate bicycle code.",
+        "why": "E-QEC is the error layer. A modular surface or color code is still that layer. It is not a new bus, and a simulation cannot move C.",
+        "limit": "Bare arXiv. Simulation and a projection to d>=22, not hardware. Inter-module seam errors are an assumption, not a measured plant."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss. A4 miss: C stays C4 and no journal bound is tightened. A5 miss: bare arXiv. A6 pass. A7 pass: claim HOLD count unchanged. A8 pass: no ledger term moved.",
+      "math": "Circuit-level simulations of modular hyperbolic surface and color codes with neural-network and matching decoders. The abstract states encoding rate k/n=1/16 and distance d>=22, a comparison with the [[288,12,18]] two-gross bivariate bicycle code, an overhead reduction of more than 30x versus surface codes, and a modular extractor about 4.5 times smaller than the code. Authors Oscar Higgott and thirteen coauthors. arXiv:2610.03682v1, submitted 2026-10-02, quant-ph. No DOI and no journal-ref in the OAI record.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 84,
+        "confidence": 63,
+        "popularity": 48
+      }
+    },
+    {
+      "id": "rev-2026-10-07-2610.03684",
+      "paperId": "2610.03684",
+      "date": "2026-10-07",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: spacetime cost is counted in circuit locations. G2 passes: no energy ledger. G3 passes: the scaling matches a stated lower bound up to constants, for weak noise. G4 fails: an explicit Tanner-code circuit with assumed long-range links is not a memory shot. G5 passes: the construction can be checked against the cited erasure bound this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: spacetime cost is counted in circuit locations. G2 passes: no energy ledger. G3 passes: the scaling matches a stated lower bound up to constants, for weak noise. G4 fails: an explicit Tanner-code circuit with assumed long-range links is not a memory shot. G5 passes: the construction can be checked against the cited erasure bound this quarter. G6 passes.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "The optimal spacetime scaling needs long-range qubit connectivity and fast classical decoding. A nearest-neighbor surface-code plant does not inherit it.",
+      "ledger": "none.",
+      "plain": {
+        "core": "For independent erasures, storing K logical qubits for S steps at error at most epsilon needs spacetime cost of order S times (K plus log of S over epsilon). The authors give a noisy quantum-Tanner-code circuit, counting preparation, gates, measurement, and waits, that meets that scaling when the hardware has long-range links.",
+        "why": "E-QEC only. A spacetime lower bound is a decoder-theory input. It does not replace the surface-code or qLDPC layer, and it does not raise C.",
+        "limit": "Bare arXiv. The construction assumes long-range connectivity. No device result is reported."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss. A4 miss: C stays C4. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass.",
+      "math": "The abstract states the erasure lower bound Omega(S(K+log(S/epsilon))) and a matching noisy circuit on quantum Tanner codes, with one syndrome round per memory step plus a fixed number of parallel decoder steps. No numeric threshold is quoted, so none is entered. Authors Kishor Bharti, Tobias Haug, Derek Khu, Andrew Tanggara. arXiv:2610.03684v1, submitted 2026-10-02, quant-ph. No DOI and no journal-ref in the OAI record.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 76,
+        "confidence": 60,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-07-2610.03714",
+      "paperId": "2610.03714",
+      "date": "2026-10-07",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: depth, qubit count, logical error, and acceptance rate are the stated circuit quantities. G2 passes: no energy ledger. G3 passes: the 33.7 percent and 9.5 percent figures are Monte Carlo averages up to distance 15, not an unbounded scaling. G4 fails: simulated CSS preparation is not a logical-memory shot. G5 passes: the distance-15 circuits can be re-run this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: depth, qubit count, logical error, and acceptance rate are the stated circuit quantities. G2 passes: no energy ledger. G3 passes: the 33.7 percent and 9.5 percent figures are Monte Carlo averages up to distance 15, not an unbounded scaling. G4 fails: simulated CSS preparation is not a logical-memory shot. G5 passes: the distance-15 circuits can be re-run this quarter. G6 passes.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A compiler that preserves fault tolerance on paper is not a measured logical state. The reported error-rate drop is Monte Carlo, and CSS preparation is not non-Abelian fusion.",
+      "ledger": "none.",
+      "plain": {
+        "core": "SpiderCSS turns an ideal CSS state into a fault-tolerant preparation circuit with ZX rewrites that the authors say stay fault-equivalent, so the output circuit does not need a separate verifier. Monte Carlo runs up to distance 15 report a lower logical error rate and a higher acceptance rate than the scalable methods they compare.",
+        "why": "E-QEC only. State preparation is part of the error layer. It is not a new code family and it does not move C.",
+        "limit": "Bare arXiv. Simulation to distance 15. The abstract's 33.7 percent and 9.5 percent are averages, not a device."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass.",
+      "math": "Monte Carlo on CSS codes up to distance 15. The abstract states an average 33.7 percent decrease in logical error rate and a 9.5 percent increase in acceptance rate versus existing scalable and heuristic methods. Authors Boldizs\u00e1r Po\u00f3r, Andrey Boris Khesin, Sarah Meng Li, Benjamin Rodatz, John van de Wetering, Richie Yeung. arXiv:2610.03714v1, submitted 2026-10-02, quant-ph. No DOI and no journal-ref in the OAI record.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 74,
+        "confidence": 58,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-07-2610.03864",
+      "paperId": "2610.03864",
+      "date": "2026-10-07",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: no new dimensionful claim. G2 passes: no plant energy ledger. G3 passes: no single-parameter scaling. G4 fails: a (3+1)D mixed-state braided fusion 2-category is not the S3 braid-plus-fusion gate set on a processor. G5 passes: the lattice models named in the abstract can be checked as constructions this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: no new dimensionful claim. G2 passes: no plant energy ledger. G3 passes: no single-parameter scaling. G4 fails: a (3+1)D mixed-state braided fusion 2-category is not the S3 braid-plus-fusion gate set on a processor. G5 passes: the lattice models named in the abstract can be checked as constructions this quarter. G6 passes.",
+      "score": "E-S3 C3 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Braided fusion 2-categories are not S3 with fusion measurement kept in the gate set. A gravitational anomaly in (3+1)D mixed-state order is not a bus and not an AdS encoder.",
+      "ledger": "none.",
+      "plain": {
+        "core": "The authors build large families of (3+1)D mixed-state topological orders, including ones they say cannot appear in any gapped ground state, by matching braided fusion 2-categories to higher-form symmetries. Some of those orders braid non-degenerately and still carry a gravitational anomaly.",
+        "why": "E-S3 only, as topological-order reading. Fusion measurement stays. This is not a new pillar and it is not E-HOL: the bulk is a mixed-state order, not an AdS map onto a plant.",
+        "limit": "Bare arXiv. Bosonic lattice constructions. No S3 compilation and no processor."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-S3 only). A2 miss (G4). A3 miss. A4 miss: C stays C3. A5 miss: bare arXiv. A6 pass: no new bus. A7 pass. A8 pass.",
+      "math": "No numeric threshold or rate is stated in the abstract, so none is entered. The construction is decoherence followed by strong and weak gauging. Authors Ryohei Kobayashi, Abhinav Prem, Matthew Yu. arXiv:2610.03864v1, submitted 2026-10-02, quant-ph. No DOI and no journal-ref in the OAI record.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 70,
+        "confidence": 53,
+        "popularity": 42
+      }
+    },
+    {
+      "id": "rev-2026-10-07-2610.04704",
+      "paperId": "2610.04704",
+      "date": "2026-10-07",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: the transition field theory is written with Chern-Simons and a scalar, with no new unit claimed. G2 passes: no plant ledger. G3 passes: no unbounded cross-section. G4 fails: peeling the Abelian anyons off a TQFT is not an S3 fusion-measurement experiment. G5 passes: the symmetry account can be checked against their earlier arXiv:2603.00245 this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: the transition field theory is written with Chern-Simons and a scalar, with no new unit claimed. G2 passes: no plant ledger. G3 passes: no unbounded cross-section. G4 fails: peeling the Abelian anyons off a TQFT is not an S3 fusion-measurement experiment. G5 passes: the symmetry account can be checked against their earlier arXiv:2603.00245 this quarter. G6 passes.",
+      "score": "E-S3 C3 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Removing the Abelian sector does not put fusion measurement into the S3 gate set. A transition field theory is not a compiled braid.",
+      "ledger": "none.",
+      "plain": {
+        "core": "A (2+1)D TQFT has an invertible one-form symmetry that the authors say peels every Abelian anyon off the rest of the theory. They then couple those Abelian anyons, written as U(1) Chern-Simons fields, to a scalar, and describe a transition out of the original TQFT.",
+        "why": "E-S3 only. It is a symmetry fact about Abelian anyons. The non-Abelian content, and fusion measurement, stay where they were. C stays C3.",
+        "limit": "Bare arXiv. Continuum TQFT. The abstract does not treat S3 or a device."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-S3 only). A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass.",
+      "math": "No rate or threshold is quoted, so none is entered. The abstract says the discussion extends arXiv:2603.00245. Authors Meng Cheng, Nathan Seiberg. arXiv:2610.04704v1, submitted 2026-10-03, cond-mat.str-el. No DOI and no journal-ref in the OAI record.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 78,
+        "confidence": 62,
+        "popularity": 48
+      }
+    },
+    {
+      "id": "rev-2026-10-07-2610.05307",
+      "paperId": "2610.05307",
+      "date": "2026-10-07",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: distances, gains, and round counts are code parameters. G2 passes: no energy ledger. G3 passes: the gain is proved at most the index of a largest Abelian subgroup, so it does not grow without a bound. G4 fails: Relay-BP circuit simulations are not a memory shot, and non-Abelian here is the code's group, not an anyon. G5 passes: the [[336,26,12]] examples can be re-checked this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: distances, gains, and round counts are code parameters. G2 passes: no energy ledger. G3 passes: the gain is proved at most the index of a largest Abelian subgroup, so it does not grow without a bound. G4 fails: Relay-BP circuit simulations are not a memory shot, and non-Abelian here is the code's group, not an anyon. G5 passes: the [[336,26,12]] examples can be re-checked this quarter. G6 passes.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Non-Abelian in this paper is the group of a two-block group-algebra code, not a non-Abelian anyon. Lifted surgery does not add fusion measurement to S3, so this is not an E-S3 bridge.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Lifted surgery measures an orbit of logical operators in one merged qLDPC block. Extended to two-block codes over non-Abelian groups, the extra gain is at most the index of a largest Abelian subgroup. Some codes still let one merged block read every logical qubit, with two to three times fewer rounds in the simulations they report.",
+        "why": "E-QEC only. Group-algebra surgery stays inside the error layer. Binding E-S3 would be a false friend. C stays C4.",
+        "limit": "Bare arXiv. Exact distances up to 13 and circuit-level Relay-BP, not hardware."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass: not a coupling. A7 pass. A8 pass.",
+      "math": "The abstract states exact distance up to 13, gain two on some codes, gain three on codes over products of A4, S4, and SL(2,3), up to [[336,26,12]], and two to three times fewer rounds than the Abelian gadgets, within statistical error. Authors Tushar Pandey. arXiv:2610.05307v1, submitted 2026-10-04, quant-ph. No DOI and no journal-ref in the OAI record.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 73,
+        "confidence": 56,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-07-2610.05395",
+      "paperId": "2610.05395",
+      "date": "2026-10-07",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "fail",
+        "G6": "pass",
+        "note": "G1 passes: topological entanglement entropy is dimensionless, and the abstract gives no value, so none is entered. G2 passes. G3 passes. G4 fails: a Z2 Kitaev spin liquid is not the S3 gate set and not a Majorana-device experiment. G5 fails: the Gutzwiller projection does not test M5 or fusion measurement this year. G6 passes."
+      },
+      "gateNote": "G1 passes: topological entanglement entropy is dimensionless, and the abstract gives no value, so none is entered. G2 passes. G3 passes. G4 fails: a Z2 Kitaev spin liquid is not the S3 gate set and not a Majorana-device experiment. G5 fails: the Gutzwiller projection does not test M5 or fusion measurement this year. G6 passes.",
+      "score": "no claim; reading list",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "The Majorana fermion in the Kitaev honeycomb is a parton of a Z2 spin liquid, not a device zero mode and not an S3 anyon. Entanglement after a Gutzwiller projection does not put fusion measurement in the gate set.",
+      "ledger": "none.",
+      "plain": {
+        "core": "An exact tensor network for the Kitaev honeycomb, built by quantum-number projection and a Gutzwiller projection, is used to argue that topological entanglement entropy shows up for every eigenstate only after the projection onto the physical spins.",
+        "why": "No KEEP or HOLD claim fits. E-S3 is S3 braid plus fusion, not Z2. E-MZM is a device distinguisher, not a parton. Reading list only. Not INCLUDE.",
+        "limit": "Bare arXiv. Spin-liquid theory. Off-path for the engine. Not a CUT reversal."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero KEEP/HOLD claims. A2 miss (G4, G5). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass. Not a new pillar. Reading list.",
+      "math": "Bond dimension D=2 is stated for the local matrix-product operators. No entanglement value is quoted, so none is entered. Authors Hidehiro Saito, Chisa Hotta. arXiv:2610.05395v1, submitted 2026-10-04, cond-mat.str-el. No DOI and no journal-ref in the OAI record.",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 48,
+        "confidence": 44,
+        "popularity": 36
+      }
+    },
+    {
+      "id": "rev-2026-10-07-2610.05901",
+      "paperId": "2610.05901",
+      "date": "2026-10-07",
+      "bind": [
+        "E-S3",
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: no new unit. G2 passes: no plant ledger. G3 passes: a nonzero threshold is asserted, and no unbounded gain is claimed. G4 fails: a D4 quantum-double stat-mech decoder is not an S3 shot and not a surface-code memory. G5 passes: the D4 charge-noise model can be re-simulated this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: no new unit. G2 passes: no plant ledger. G3 passes: a nonzero threshold is asserted, and no unbounded gain is claimed. G4 fails: a D4 quantum-double stat-mech decoder is not an S3 shot and not a surface-code memory. G5 passes: the D4 charge-noise model can be re-simulated this quarter. G6 passes.",
+      "score": "bridge E-S3+E-QEC coupling C1; neither C moves",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "D4 fusion channels are not the S3 fusion-measurement gate set. One round of charge-noise decoding in a statistical-mechanics model is not a processor memory. Coupling stays C1.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Maximum-likelihood decoding of non-Abelian anyons is harder because fusion is not deterministic. The authors add fusion-outcome measurements to the syndrome and build an explicit decoder for the D4 quantum double under charge noise, with a nonzero threshold in the stat-mech model.",
+        "why": "Bridge, not ADD. Fusion-aware decoding touches E-S3 and E-QEC together. That coupling is a new claim and starts at C1. It does not raise either C.",
+        "limit": "Bare arXiv. D4, not S3. No numeric threshold is printed in the abstract, so none is copied. Not hardware."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: two claims. A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 miss: coupling sentence. A bridge is never ADD. A7 pass. A8 pass.",
+      "math": "The abstract states a nonzero noise threshold below which the whole logical qudit is recovered with one round of measurements, via a mapping to a classical stat-mech model. No percent is given, so none is entered. Authors Rohith Sajith, Yabo Li, Zijian Song, Tsung-Cheng Lu, Carolyn Zhang. arXiv:2610.05901v1, submitted 2026-10-05, quant-ph. No DOI and no journal-ref in the OAI record.",
+      "autoGate": "miss A1, A2, A3, A4, A5, A6",
+      "scoreHeuristic": {
+        "importance": 80,
+        "confidence": 63,
+        "popularity": 44
+      }
+    },
+    {
+      "id": "rev-2026-10-07-2610.05928",
+      "paperId": "2610.05928",
+      "date": "2026-10-07",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: the approximation ratio is dimensionless and lambda_eff is defined as an equivalent two-qubit depolarizing rate. The abstract does not quote a value of lambda_eff, so none is entered. G2 passes: no energy ledger. G3 passes: widths are stated (81, 91, 48 data qubits), not an unbounded extrapolation. G4 passes: the circuits ran on IBM, IQM, and Quantinuum processors, which is the E-QEC hardware class. G5 passes: the same benchmark can be re-run this year. G6 passes."
+      },
+      "gateNote": "G1 passes: the approximation ratio is dimensionless and lambda_eff is defined as an equivalent two-qubit depolarizing rate. The abstract does not quote a value of lambda_eff, so none is entered. G2 passes: no energy ledger. G3 passes: widths are stated (81, 91, 48 data qubits), not an unbounded extrapolation. G4 passes: the circuits ran on IBM, IQM, and Quantinuum processors, which is the E-QEC hardware class. G5 passes: the same benchmark can be re-run this year. G6 passes.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "An LR-QAOA approximation ratio is not a logical error rate. A correlation with memory experiments on one IBM device is not an independent threshold. Bare arXiv cannot move E-QEC.",
+      "ledger": "none.",
+      "plain": {
+        "core": "A short mid-circuit-measurement circuit, shaped like a code's checks, is run as a benchmark on ten processors from IBM, IQM, and Quantinuum. On Quantinuum the authors use surface-code, color-code, and bivariate-bicycle check patterns, and on one IBM device they compare the benchmark with logical-memory runs.",
+        "why": "E-QEC only, and the platform matches. It is still a preprint benchmark, not a journal memory result, so C stays C4. No Auto-Gate pass.",
+        "limit": "Bare arXiv, so A5 fails. The abstract does not quote lambda_eff. QAOA decay is not itself a logical lifetime."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 pass. A3 miss: action is HOLD, not INCLUDE. A4 miss: C stays C4. A5 miss: bare arXiv cannot raise C. A6 pass. A7 pass. A8 pass. Importance 83 is under the ADD bar of 85.",
+      "math": "The abstract states 10 QPUs, circuits with up to 2950 mid-circuit measurements, Helios-1 and H2-1 runs with up to 81, 91, and 48 data qubits for surface, triangular color, and bivariate-bicycle Hamiltonians, and up to 480 mid-circuit measurements on those code-structured runs. No lambda_eff number is given, so none is entered. Authors J. A. Montanez-Barrera, Kristel Michielsen. arXiv:2610.05928v1, submitted 2026-10-05, quant-ph. No DOI and no journal-ref in the OAI record.",
+      "autoGate": "miss A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 83,
+        "confidence": 67,
+        "popularity": 52
+      }
+    },
+    {
+      "id": "rev-2026-10-07-2610.06036",
+      "paperId": "2610.06036",
+      "date": "2026-10-07",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: symmetry bases are dimensionless. G2 passes. G3 passes: the basis is a decomposition, not a scaling law. G4 fails: a symmetry basis for matching is not a memory shot. G5 passes: the rectangular-lattice restriction can be checked on a named code this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: symmetry bases are dimensionless. G2 passes. G3 passes: the basis is a decomposition, not a scaling law. G4 fails: a symmetry basis for matching is not a memory shot. G5 passes: the rectangular-lattice restriction can be checked on a named code this quarter. G6 passes.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Materialised symmetries are a decoder bookkeeping tool. They do not measure a threshold, and bivariate bicycle codes stay inside E-QEC.",
+      "ledger": "none.",
+      "plain": {
+        "core": "For two-dimensional translation-invariant CSS codes, the authors split the symmetry space on the infinite lattice into translation-invariant pieces and then restrict that basis to a finite rectangle. Those symmetries are what matching decoders for this code family are built from.",
+        "why": "E-QEC only. Matching structure for bicycle-type codes is error-layer reading. It is not a new pillar and it does not move C.",
+        "limit": "Bare arXiv. No threshold number is stated in the abstract."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass.",
+      "math": "No threshold or distance is quoted, so none is entered. Authors Andrew Li, Stephen D. Bartlett, Andrew C. Doherty, Campbell K. McLauchlan. arXiv:2610.06036v1, submitted 2026-10-05, quant-ph. No DOI and no journal-ref in the OAI record.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 68,
+        "confidence": 55,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-07-2610.06059",
+      "paperId": "2610.06059",
+      "date": "2026-10-07",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: thresholds are circuit error rates. G2 passes. G3 passes: the thresholds are reported at stated bias, including a minimum near eta about 10, not an unbounded law. G4 fails: MWPF simulations are not a device threshold. G5 passes: the bias sweep can be re-run this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: thresholds are circuit error rates. G2 passes. G3 passes: the thresholds are reported at stated bias, including a minimum near eta about 10, not an unbounded law. G4 fails: MWPF simulations are not a device threshold. G5 passes: the bias sweep can be re-run this quarter. G6 passes.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A simulated XZZX threshold under a chosen correlated-noise model is not the hardware memory that sets C4. Bare arXiv cannot tighten that C.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Under circuit-level correlated noise, a hypergraph decoder is used to compare the XZZX code with the rotated surface code. At strong Z bias the abstract's XZZX threshold sits above the rotated code, and it dips at moderate bias where X and Y errors bridge the diagonal strings.",
+        "why": "E-QEC only. Bias-tailored surface codes are the same error layer. The numbers are a simulation input, not a C move.",
+        "limit": "Bare arXiv. One noise family. Not hardware."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass.",
+      "math": "The abstract states that at eta=100 the rotated-code threshold falls to about 0.36 percent and the XZZX threshold to about 0.70 percent, with a threshold minimum near eta about 10. Authors Dhruv Koul. arXiv:2610.06059v1, submitted 2026-10-05, quant-ph. No DOI and no journal-ref in the OAI record.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 72,
+        "confidence": 58,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-07-2610.06189",
+      "paperId": "2610.06189",
+      "date": "2026-10-07",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: the q=2 wall criterion is geometric. G2 passes: no Q_eng is written. G3 passes: the criterion is a position of the q=2 surface, not an unbounded gain. G4 fails: simulations of model equilibria are not a closed-loop coil command on DIII-D. G5 passes: the locked-mode database criterion can be checked against DIII-D shots this year. G6 passes."
+      },
+      "gateNote": "G1 passes: the q=2 wall criterion is geometric. G2 passes: no Q_eng is written. G3 passes: the criterion is a position of the q=2 surface, not an unbounded gain. G4 fails: simulations of model equilibria are not a closed-loop coil command on DIII-D. G5 passes: the locked-mode database criterion can be checked against DIII-D shots this year. G6 passes.",
+      "score": "E-RL C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Magnetic feedback in a simulated equilibrium is not an RL policy and not a published coil command with a safe-hold. M2 stays open. No Q_eng.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Using a DIII-D locked-mode disruption database, the author argues that a major tearing disruption needs the q=2 surface close enough to the wall to couple to it, and that magnetic feedback can imitate a conducting wall in simulations. Coil layout matters; a bad layout does not stabilize.",
+        "why": "E-RL is the plant-attach claim. This is classical feedback on a tokamak, queued as a plant note. It is not a learned controller and it writes no plant Q.",
+        "limit": "Bare arXiv. Model equilibria and an MST model, not a DIII-D feedback shot. No coil-current waveform is given."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-RL only). A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass: not a new bus. A7 pass. A8 pass: no ledger term moved.",
+      "math": "No disruption-rate or latency number is stated in the abstract, so none is entered. The criterion is the q=2 surface versus the resistive wall. Authors H. R. Strauss. arXiv:2610.06189v1, submitted 2026-10-05, physics.plasm-ph. No DOI and no journal-ref in the OAI record.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 75,
+        "confidence": 56,
+        "popularity": 42
+      }
+    },
+    {
+      "id": "rev-2026-10-07-2610.06203",
+      "paperId": "2610.06203",
+      "date": "2026-10-07",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: R and F are dimensionless matrices. G2 passes. G3 passes: no scaling law. G4 fails: a proposed impurity interferometer for Ising and Fibonacci anyons is not an S3 experiment. G5 passes: the protocol is concrete enough to accept or reject in a cold-atom proposal this year. G6 passes."
+      },
+      "gateNote": "G1 passes: R and F are dimensionless matrices. G2 passes. G3 passes: no scaling law. G4 fails: a proposed impurity interferometer for Ising and Fibonacci anyons is not an S3 experiment. G5 passes: the protocol is concrete enough to accept or reject in a cold-atom proposal this year. G6 passes.",
+      "score": "E-S3 C3 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Measuring R and F for Ising or Fibonacci impurities is not an S3 braid with fusion measurement kept in the gate set. Fibonacci universality is not a licence to drop fusion from S3. The protocol has not been run.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Mobile impurities with an addressable spin are used, on paper, as an interferometer that reads the R and F matrices of Ising and Fibonacci anyons. The same sketch includes a converter from a flying qubit into a topological memory.",
+        "why": "E-S3 only. Braiding proposals stay on the topological claim. Fusion measurement stays. This does not open a pillar and does not move C.",
+        "limit": "Bare arXiv. No data. Ising is not universal by braiding alone, and Fibonacci is not S3."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-S3 only). A2 miss (G4). A3 miss. A4 miss: C stays C3. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass.",
+      "math": "No fidelity or visibility is quoted, so none is entered. Authors Francesco Debortoli, Fabian Grusdt. arXiv:2610.06203v1, submitted 2026-10-05, quant-ph. No DOI and no journal-ref in the OAI record.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 77,
+        "confidence": 60,
+        "popularity": 44
+      }
+    },
+    {
+      "id": "rev-2026-10-07-2610.06606",
+      "paperId": "2610.06606",
+      "date": "2026-10-07",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: the logical-error leading term is a monomial in the physical error rate. G2 passes. G3 passes: the predictor stops at the leading monomial rather than extrapolating a free parameter. G4 fails: a sampling-free formula is not a memory shot. G5 passes: the unconcatenated exactness claim can be checked on a small stabilizer code this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: the logical-error leading term is a monomial in the physical error rate. G2 passes. G3 passes: the predictor stops at the leading monomial rather than extrapolating a free parameter. G4 fails: a sampling-free formula is not a memory shot. G5 passes: the unconcatenated exactness claim can be checked on a small stabilizer code this quarter. G6 passes.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A leading-term predictor is not a measured logical error rate. Concatenated-code algebra does not change the surface-code or qLDPC layer.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Monte Carlo logical-error estimates get expensive as distance grows, and worse for concatenated codes. The authors give a shot-free predictor for the leading power of the physical error rate, exact for an unconcatenated stabilizer code when their budgets are not exhausted, and approximate once codes are concatenated.",
+        "why": "E-QEC only. It is a costing tool for the error layer. C stays C4.",
+        "limit": "Bare arXiv. Exact only in the unconcatenated case they prove. No device."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass.",
+      "math": "The abstract states the Monte Carlo sample cost O(p to the minus ceil(d/2), over epsilon squared) and a leading monomial c p to the o, computed without sampling. No fitted c is quoted, so none is entered. Authors Sayam Sethi, Aditi Awasthi, Maxwell Poster, Joshua Viszlai, Jonathan Mark Baker. arXiv:2610.06606v1, submitted 2026-10-05, quant-ph. No DOI and no journal-ref in the OAI record.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 64,
+        "confidence": 53,
+        "popularity": 38
+      }
+    },
+    {
+      "id": "rev-2026-10-07-2610.06692",
+      "paperId": "2610.06692",
+      "date": "2026-10-07",
+      "bind": [
+        "E-S3",
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: the decoding order parameter is dimensionless. G2 passes. G3 passes: the center-ordering threshold is not claimed to rise without a bound as the hierarchy is climbed. G4 fails: a tensor-network threshold for S3 and SU(2) mixed states is not an S3 gate experiment. G5 passes: the S3 tensor-network model can be re-run this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: the decoding order parameter is dimensionless. G2 passes. G3 passes: the center-ordering threshold is not claimed to rise without a bound as the hierarchy is climbed. G4 fails: a tensor-network threshold for S3 and SU(2) mixed states is not an S3 gate experiment. G5 passes: the S3 tensor-network model can be re-run this quarter. G6 passes.",
+      "score": "bridge E-S3+E-QEC coupling C1; neither C moves",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Center ordering of S3 under decoherence is a statistical-mechanics threshold for a decoding hierarchy, not a fusion-measurement experiment and not a hardware code threshold. Coupling stays C1. Do not open a mixed-state pillar.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Decoding two states that differ by a pair of non-Abelian charges, after symmetric noise, is dual to decoding the quantum double D(G). Fusion outcomes on larger regions define a hierarchy. The authors find that the strong symmetry breaks down to the center, and that the only nonzero-error transition is an ordering of that center. They check S3 and SU(2).",
+        "why": "Bridge, not ADD. S3 appears as the group of a mixed-state decoder, so E-S3 and E-QEC are coupled. That coupling starts at C1. Fusion measurement is not shown on a processor.",
+        "limit": "Bare arXiv. Tensor networks. The abstract's S3 threshold is not given as a number in the text we scored, so none is entered."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: two claims. A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 miss: coupling. A bridge is never ADD. A7 pass. A8 pass.",
+      "math": "The abstract names S3 and SU(2) tensor-network checks and states that the center-ordering threshold cannot decrease as the fusion hierarchy is ascended, for non-nilpotent groups at any finite level. No percent is copied. Authors Pablo Sala, Vlad Temkin, Cenke Xu, Daniel Podolsky, Ehud Altman. arXiv:2610.06692v1, submitted 2026-10-05, quant-ph. No DOI and no journal-ref in the OAI record.",
+      "autoGate": "miss A1, A2, A3, A4, A5, A6",
+      "scoreHeuristic": {
+        "importance": 79,
+        "confidence": 62,
+        "popularity": 44
+      }
+    },
     {
       "id": "rev-2026-10-06-sorbom-arc-2015",
       "paperId": "sorbom-arc-2015",
