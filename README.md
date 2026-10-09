@@ -105,6 +105,23 @@ The frozen regression suite reuses the ten V1/V2 paper cases and the five
 previous DBE/DBE-S cases. It introduces no new papers and fails the release if
 any prior scientific conclusion becomes an `UNEXPECTED_REGRESSION`.
 
+### V5/V6 R2 — Read-only Evidence Workbench and 90-concept pilot
+
+Files:
+
+- `docs/SDBES/V5_V6_R2_EVIDENCE_WORKBENCH.md`
+- `docs/SDBES/data/V6_CONCEPT_INVENTORY.json`
+- `docs/SDBES/data/V5_RUNTIME_VIEW.json`
+- `sdbes/v5_v6.py`
+- `navigator/`
+
+V5/V6 R2 provides a read-only research navigator, stages all 90 Phase-1
+concept candidates, preserves the 13 Observatory program claims separately,
+and exposes only the 10 explicitly reviewed paper-to-concept relations. It
+quarantines the corrupted `SEARCH_AND_GAPS.md` artifact and keeps scientific
+ranking, pruning, and V4 scenarios disabled until their respective provenance
+and authorization gates are satisfied.
+
 ## Development sequence
 
 Current planned sequence:
@@ -114,8 +131,8 @@ V1  Typed ledger and mathematical safety rules
 V2  Claim evaluation rules
 V3  Dependency mathematics and structural semantics — committed
 V4  Causal dynamics, composition and research intervention — R2 implemented
-V5  Glyphs, linked visualization and research-priority system — next
-V6  Real-paper pilot
+V5  Read-only Evidence Workbench — R2 implemented
+V6  90-concept staging pilot — R2 implemented; source reconciliation incomplete
 V7  Failure-mode and consistency tests at scale
 V8  Probabilistic inference layer
 V9  Scaled domain-simulation orchestration
@@ -170,7 +187,14 @@ python tests/sdbes_v3_core_logic_checks.py
 python tests/sdbes_v4_r2_core_logic_checks.py
 python tests/sdbes_v1_v4_regression.py
 python tests/sdbes_v4_r2_requirement_audit.py
+python scripts/build_v5_v6_assets.py
+python tests/sdbes_v5_v6_integrity_checks.py
 python -m pytest -q tests/test_sdbes_v4_r2.py tests/test_sdbes_v1_v4_regression.py tests/test_sdbes_v4_r2_requirement_audit.py
+
+cd navigator
+npm ci
+npm run test
+npm run build
 ```
 
 The legacy DBE simulator tests are intentionally separate from the SDBES

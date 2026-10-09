@@ -1,0 +1,4324 @@
+{
+  "schema_name": "SDBES_V6_STAGING_INVENTORY_R2",
+  "snapshot_date": "2026-10-09",
+  "scientific_status": "STAGING_ONLY",
+  "warning": "Discovery records are not scientific assessments. Phase-1 D/P/S/X tags are preserved as legacy discovery metadata only.",
+  "source_snapshots": [
+    {
+      "path": "docs/research/phase1/DBE_RESEARCH_ATLAS.md",
+      "sha256": "c078a9a1db5cfbd33cb4ebb63e726f0842a527cb4222c8fbea9fb41b4bfeff57",
+      "role": "concept inventory source"
+    },
+    {
+      "path": "docs/research/phase1/SOURCE_LIBRARY.md",
+      "sha256": "8bab938b5153be02a6806530a06c67fc60308c00fd53ab9e107d7a5422875e02",
+      "role": "source-record inventory"
+    },
+    {
+      "path": "docs/research/phase1/SEARCH_AND_GAPS.md",
+      "sha256": "b3ac53546c8fb6102a56f031e944ce2def2276e9c578b7cefb38dd879828cde4",
+      "role": "quarantined source-gap artifact",
+      "content_status": "INVALID_SOURCE_CONTENT"
+    }
+  ],
+  "source_incidents": [
+    {
+      "id": "INC-SEARCH-AND-GAPS-001",
+      "path": "docs/research/phase1/SEARCH_AND_GAPS.md",
+      "status": "INVALID_SOURCE_CONTENT",
+      "effect": "The reported 19 background-only/adjacent-source identities remain unreconciled.",
+      "do_not_infer": "Do not infer that the remaining 71 concepts have direct support.",
+      "reactivation_condition": "Recover or reconstruct the mapping with documented review provenance."
+    }
+  ],
+  "derived_counts": {
+    "concepts": 90,
+    "source_records": 111,
+    "scientific_or_official_sources": 81,
+    "software_records": 19,
+    "discovery_portals": 11,
+    "assessed_concepts": 0,
+    "unresolved_source_refs": 0
+  },
+  "unresolved_source_refs": [],
+  "concepts": [
+    {
+      "id": "DBE-A01",
+      "title": "Compact high-field tokamak power",
+      "domain_code": "A",
+      "domain": "Nuclear energy and fusion architectures",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "generation",
+      "bounded_question": "Can a compact high-field tokamak export dependable net electricity?",
+      "mechanism_status": "Fusion and high-field magnets demonstrated separately",
+      "resource_ledger": "Fusion fuel; heating, current drive, magnets, cooling and fuel-cycle loads must be included.",
+      "main_gap": "Integrated wall loading, fuel sufficiency, exhaust, availability and cost.",
+      "next_investigation": "Construct a whole-plant power ledger with uncertainty and an experimentally anchored confinement model.",
+      "coverage": "Direct component evidence plus systems background.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "N01",
+        "N08",
+        "N13"
+      ],
+      "tags": [
+        "fusion",
+        "tokamak",
+        "REBCO",
+        "net-electricity"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-A02",
+      "title": "Spherical tokamak power",
+      "domain_code": "A",
+      "domain": "Nuclear energy and fusion architectures",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "generation",
+      "bounded_question": "Can low-aspect-ratio geometry improve whole-plant performance rather than just plasma metrics?",
+      "mechanism_status": "Measured high-temperature spherical plasmas",
+      "resource_ledger": "Fusion fuel and auxiliary plant electricity.",
+      "main_gap": "Center-column engineering, shielding and sustained operation.",
+      "next_investigation": "Compare equivalent net-output designs with common shielding and availability assumptions.",
+      "coverage": "Direct plasma evidence.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "N12",
+        "N13"
+      ],
+      "tags": [
+        "fusion",
+        "spherical-tokamak"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-A03",
+      "title": "Optimized stellarator power",
+      "domain_code": "A",
+      "domain": "Nuclear energy and fusion architectures",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "generation",
+      "bounded_question": "Can optimized three-dimensional magnetic geometry support an economical steady power plant?",
+      "mechanism_status": "Long-pulse stellarator confinement demonstrated",
+      "resource_ledger": "Fusion fuel; magnet, heating, cooling and maintenance resources.",
+      "main_gap": "Transport, alpha confinement, exhaust and maintainable coils.",
+      "next_investigation": "Benchmark equilibrium and transport assumptions against measured devices before scaling.",
+      "coverage": "Direct experimental and foundational sources.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "N03",
+        "N13"
+      ],
+      "tags": [
+        "fusion",
+        "stellarator",
+        "magnetic-fields"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-A04",
+      "title": "Negative-triangularity and alternative plasma shaping",
+      "domain_code": "A",
+      "domain": "Nuclear energy and fusion architectures",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "enabler",
+      "bounded_question": "Can alternative shaping reduce exhaust and instability burdens at equal useful output?",
+      "mechanism_status": "Plasma geometry is controllable; this subtopic needs dedicated evidence",
+      "resource_ledger": "No new reservoir: geometry changes confinement and required control inputs.",
+      "main_gap": "A dedicated positive/negative-triangularity comparison corpus remains to be assembled.",
+      "next_investigation": "Retrieve matched experiments and integrated-design studies; compare transport, heat flux and wall-plug cost.",
+      "coverage": "Background only for the specific shaping claim.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "N13",
+        "I01"
+      ],
+      "tags": [
+        "fusion",
+        "negative-triangularity",
+        "plasma-shape"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-A05",
+      "title": "Field-reversed-configuration fusion",
+      "domain_code": "A",
+      "domain": "Nuclear energy and fusion architectures",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "generation",
+      "bounded_question": "Can FRC confinement and sustainment be extended to a positive plant power balance?",
+      "mechanism_status": "Formation of field-reversed plasmas demonstrated",
+      "resource_ledger": "Fusion fuel minus neutral-beam and other sustainment loads.",
+      "main_gap": "Confinement lifetime, particle losses and efficient sustainment.",
+      "next_investigation": "Separate formation, heating and sustained-burn measurements from projected reactor output.",
+      "coverage": "Direct confinement evidence.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "N07",
+        "N13"
+      ],
+      "tags": [
+        "fusion",
+        "FRC"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-A06",
+      "title": "Sheared-flow-stabilized Z-pinch",
+      "domain_code": "A",
+      "domain": "Nuclear energy and fusion architectures",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "generation",
+      "bounded_question": "Can flow stabilization persist in a repetitive, useful-power Z-pinch?",
+      "mechanism_status": "Neutron-producing stabilized discharges reported",
+      "resource_ledger": "Fusion fuel and pulsed electrical driver.",
+      "main_gap": "Stability scaling, electrodes, repetition and diagnostic interpretation.",
+      "next_investigation": "Review shot-resolved energy input, neutron origin and stability across repeated runs.",
+      "coverage": "Direct experimental seed.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "N05",
+        "N13"
+      ],
+      "tags": [
+        "fusion",
+        "Z-pinch",
+        "flow-stabilization"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-A07",
+      "title": "Magnetized-target and magnetized-liner fusion",
+      "domain_code": "A",
+      "domain": "Nuclear energy and fusion architectures",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "generation",
+      "bounded_question": "Can pre-magnetization reduce driver requirements sufficiently for repetitive net power?",
+      "mechanism_status": "Fusion-relevant compressed magnetized conditions demonstrated",
+      "resource_ledger": "Fusion fuel, preheat and compression-driver energy.",
+      "main_gap": "Target production, driver efficiency and survivable repetition.",
+      "next_investigation": "Compare full-cycle energy and material budgets, not just peak compressed conditions.",
+      "coverage": "Direct experimental seed.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "N06",
+        "N13"
+      ],
+      "tags": [
+        "fusion",
+        "MagLIF",
+        "magnetized-target"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-A08",
+      "title": "Laser inertial-fusion energy",
+      "domain_code": "A",
+      "domain": "Nuclear energy and fusion architectures",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "generation",
+      "bounded_question": "Can target gain become net-electric, high-repetition operation?",
+      "mechanism_status": "Target-level fusion gain demonstrated",
+      "resource_ledger": "Fusion fuel; electricity-to-laser losses, targets, cooling and conversion.",
+      "main_gap": "Efficient drivers, repetition, target cost, chamber survival and fuel cycle.",
+      "next_investigation": "Build a consistent target-to-wall-plug-to-grid gain chain with realistic repetition assumptions.",
+      "coverage": "Direct target evidence.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "N02",
+        "N13"
+      ],
+      "tags": [
+        "fusion",
+        "ICF",
+        "laser",
+        "ignition"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-A09",
+      "title": "Proton-boron fusion",
+      "domain_code": "A",
+      "domain": "Nuclear energy and fusion architectures",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "generation",
+      "bounded_question": "Can a specified p-B11 reactor overcome radiation and sustainment losses?",
+      "mechanism_status": "Proton-boron reactions experimentally observed",
+      "resource_ledger": "Nuclear fuel; include particle-distribution maintenance and energy conversion.",
+      "main_gap": "Radiation, equilibration, confinement and useful energy conversion.",
+      "next_investigation": "Pair modern reactivity calculations with opposing power-balance papers under identical distribution assumptions.",
+      "coverage": "Direct reaction evidence; constraint derivations not yet fully audited.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "N04",
+        "N14"
+      ],
+      "tags": [
+        "fusion",
+        "pB11",
+        "advanced-fuels"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-A10",
+      "title": "Deuterium-deuterium fusion fuel cycle",
+      "domain_code": "A",
+      "domain": "Nuclear energy and fusion architectures",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "generation",
+      "bounded_question": "Could D-D pathways reduce tritium-supply dependence at acceptable confinement and neutron cost?",
+      "mechanism_status": "Underlying nuclear reactions established; atlas source is foundational",
+      "resource_ledger": "Deuterium fuel and reaction products; auxiliary power and neutronics remain.",
+      "main_gap": "Higher operating demands and reaction-product management.",
+      "next_investigation": "Compare complete reaction-chain and material burdens with a D-T baseline.",
+      "coverage": "Background only; dedicated fuel-cycle corpus needed.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "N13",
+        "N08"
+      ],
+      "tags": [
+        "fusion",
+        "DD",
+        "fuel-cycle"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-A11",
+      "title": "Deuterium-helium-3 and other advanced fusion fuels",
+      "domain_code": "A",
+      "domain": "Nuclear energy and fusion architectures",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "generation",
+      "bounded_question": "Can an advanced fuel provide useful net output after fuel procurement and side reactions?",
+      "mechanism_status": "Known reaction channels; practical supply and reactor gaps",
+      "resource_ledger": "Fuel supply plus confinement, handling and conversion energy.",
+      "main_gap": "Scarce feedstocks, operating requirements and residual neutron-producing channels.",
+      "next_investigation": "Test whether fuel procurement and full reaction-network losses erase the proposed benefit.",
+      "coverage": "Background only; dedicated fuel and supply-chain evidence needed.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "N13",
+        "N08"
+      ],
+      "tags": [
+        "fusion",
+        "helium-3",
+        "advanced-fuels"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-A12",
+      "title": "Muon-catalyzed fusion",
+      "domain_code": "A",
+      "domain": "Nuclear energy and fusion architectures",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "generation",
+      "bounded_question": "Can realistic muon production, reuse and sticking losses permit net useful energy?",
+      "mechanism_status": "Muon-catalyzed reactions are established",
+      "resource_ledger": "Fusion fuel plus accelerator/muon-production energy.",
+      "main_gap": "Muon lifetime, sticking, production efficiency and system throughput.",
+      "next_investigation": "Calculate a closed per-muon energy budget using measured rather than ideal catalytic yields.",
+      "coverage": "Historical experimental review plus recent theory.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "N10",
+        "N11"
+      ],
+      "tags": [
+        "fusion",
+        "muons",
+        "catalysis"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-A13",
+      "title": "Advanced fission SMRs and microreactors",
+      "domain_code": "A",
+      "domain": "Nuclear energy and fusion architectures",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "generation",
+      "bounded_question": "Can modular manufacturing and operations deliver a lower-resource reliable nuclear supply?",
+      "mechanism_status": "Fission power is established; each new design requires its own record",
+      "resource_ledger": "Fissile fuel; manufacture, fuel services, cooling and decommissioning.",
+      "main_gap": "Factory learning, licensing, fuel availability, security and real deployment economics.",
+      "next_investigation": "Compare specific designs and demonstrated stages without treating an SMR label as performance evidence.",
+      "coverage": "Academy systems assessment.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "N08"
+      ],
+      "tags": [
+        "fission",
+        "SMR",
+        "microreactor"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-A14",
+      "title": "Fast reactors and closed fuel cycles",
+      "domain_code": "A",
+      "domain": "Nuclear energy and fusion architectures",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "generation",
+      "bounded_question": "Can recycling and breeding greatly extend fuel usefulness with acceptable burdens?",
+      "mechanism_status": "Fission mechanisms and components established; integrated claims are design-specific",
+      "resource_ledger": "Fertile/fissile inventories and the complete reprocessing and fabrication chain.",
+      "main_gap": "Economics, separations, waste, safeguards and institutional feasibility.",
+      "next_investigation": "Compare fuel utilization, losses and lifecycle requirements across explicit cycle boundaries.",
+      "coverage": "Academy background; detailed fuel-cycle audit pending.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "N08"
+      ],
+      "tags": [
+        "fission",
+        "fast-reactor",
+        "breeding",
+        "recycling"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-A15",
+      "title": "Molten-salt reactors and liquid-fuel architectures",
+      "domain_code": "A",
+      "domain": "Nuclear energy and fusion architectures",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "generation",
+      "bounded_question": "Can a selected liquid-fuel or salt-cooled design improve useful output and maintainability?",
+      "mechanism_status": "Nuclear and molten-salt subcomponents have historical foundations",
+      "resource_ledger": "Nuclear fuel plus pumps, chemistry control and material replacement.",
+      "main_gap": "Salt chemistry, corrosion, maintenance and fuel management.",
+      "next_investigation": "Keep salt-cooled and liquid-fuel systems separate and gather operating evidence for each.",
+      "coverage": "Cross-design assessment; historical reactor records still needed.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "N08"
+      ],
+      "tags": [
+        "fission",
+        "molten-salt",
+        "materials"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-A16",
+      "title": "Thorium-based fuel cycles",
+      "domain_code": "A",
+      "domain": "Nuclear energy and fusion architectures",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "generation",
+      "bounded_question": "Can a defined thorium cycle improve long-horizon fuel availability and lifecycle outcomes?",
+      "mechanism_status": "Fuel-conversion physics established; implementation-specific evidence required",
+      "resource_ledger": "Thorium conversion requires a fissile driver and a complete fuel-cycle ledger.",
+      "main_gap": "Full primary fuel-cycle corpus, startup inventory, recycle losses and waste comparison.",
+      "next_investigation": "Retrieve IAEA-TECDOC-1450 and update its assumptions with measured contemporary cycle data.",
+      "coverage": "Background only; IAEA technical-report lead recorded separately.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "N08"
+      ],
+      "tags": [
+        "fission",
+        "thorium",
+        "fuel-cycle"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-A17",
+      "title": "Accelerator-driven subcritical systems",
+      "domain_code": "A",
+      "domain": "Nuclear energy and fusion architectures",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "generation",
+      "bounded_question": "Can external neutron driving yield a useful fuel or waste-management advantage after accelerator costs?",
+      "mechanism_status": "Conceptual engineering framework exists",
+      "resource_ledger": "Nuclear fuel plus accelerator electricity, targets and cooling.",
+      "main_gap": "Accelerator reliability, beam power, target lifetime and integration.",
+      "next_investigation": "Review the original energy-amplifier design and compare system availability against critical-reactor alternatives.",
+      "coverage": "Historical report metadata plus broader systems context.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "N09",
+        "N08"
+      ],
+      "tags": [
+        "fission",
+        "ADS",
+        "accelerators"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-A18",
+      "title": "Fusion-fission hybrid systems",
+      "domain_code": "A",
+      "domain": "Nuclear energy and fusion architectures",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "generation",
+      "bounded_question": "Can a fusion neutron source improve a fission fuel-cycle or waste objective enough to justify added complexity?",
+      "mechanism_status": "Known reaction mechanisms; integrated proposal is not established here",
+      "resource_ledger": "Both nuclear fuel streams, neutron-source power and coupled processing.",
+      "main_gap": "Source duty cycle, coupled safety, fuel handling and economics.",
+      "next_investigation": "Identify one bounded hybrid function and compare with a fission-only or accelerator-driven alternative.",
+      "coverage": "Background only; dedicated hybrid literature not yet verified.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "N08",
+        "N13"
+      ],
+      "tags": [
+        "fusion",
+        "fission",
+        "hybrid"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-B01",
+      "title": "Enhanced geothermal systems",
+      "domain_code": "B",
+      "domain": "Planetary heat, solar and other renewable gradients",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "generation",
+      "bounded_question": "Can engineered reservoirs deliver long-lived, widely deployable useful heat or electricity?",
+      "mechanism_status": "Field experiments and operating experience support the mechanism",
+      "resource_ledger": "Subsurface heat; drilling, stimulation, circulation and heat depletion.",
+      "main_gap": "Reservoir lifetime, induced seismicity, water and site variation.",
+      "next_investigation": "Analyze time-resolved production and circulation data rather than resource maps alone.",
+      "coverage": "Direct government field-program evidence.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "R01",
+        "R02"
+      ],
+      "tags": [
+        "geothermal",
+        "EGS"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-B02",
+      "title": "Superhot and supercritical geothermal",
+      "domain_code": "B",
+      "domain": "Planetary heat, solar and other renewable gradients",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "generation",
+      "bounded_question": "Can very hot resources be accessed with durable wells and controlled fluid behavior?",
+      "mechanism_status": "Geological modeling supports candidate resources",
+      "resource_ledger": "Rock heat; high-temperature drilling, casing and surface-conversion loads.",
+      "main_gap": "Permeability, material survival, fluid chemistry and sustainable extraction.",
+      "next_investigation": "Separate modeled heat-in-place from recoverable output after downhole and surface losses.",
+      "coverage": "Direct geoscience modeling plus drilling context.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "R03",
+        "R04"
+      ],
+      "tags": [
+        "geothermal",
+        "supercritical",
+        "superhot"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-B03",
+      "title": "Closed-loop geothermal",
+      "domain_code": "B",
+      "domain": "Planetary heat, solar and other renewable gradients",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "generation",
+      "bounded_question": "Can sealed well loops provide economical heat or electricity across useful geological settings?",
+      "mechanism_status": "Thermal extraction is physically established; economics depend on design",
+      "resource_ledger": "Subsurface heat; conduction, pumping and well construction.",
+      "main_gap": "Heat-transfer area and drilling cost; heating and electricity have different thresholds.",
+      "next_investigation": "Reproduce selected published scenarios with transparent fluid, cost and lifetime assumptions.",
+      "coverage": "Direct modeling and economic evidence.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "R12"
+      ],
+      "tags": [
+        "geothermal",
+        "closed-loop"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-B04",
+      "title": "Directed-energy deep drilling",
+      "domain_code": "B",
+      "domain": "Planetary heat, solar and other renewable gradients",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "enabler",
+      "bounded_question": "Can millimeter waves, lasers or plasma-assisted methods materially reduce cost per usable deep well?",
+      "mechanism_status": "General drilling research is established; a specific deep-drilling system is not verified here",
+      "resource_ledger": "External electricity converted to rock removal; heat reservoir is separate.",
+      "main_gap": "Primary high-depth performance, debris removal, well completion and realistic energy cost.",
+      "next_investigation": "Gather independent rock-removal, penetration and borehole-completion results before choosing a design.",
+      "coverage": "Background only for the proposed drilling mechanisms.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "R04"
+      ],
+      "tags": [
+        "geothermal",
+        "drilling",
+        "millimeter-wave",
+        "laser"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-B05",
+      "title": "Tandem and multijunction photovoltaics",
+      "domain_code": "B",
+      "domain": "Planetary heat, solar and other renewable gradients",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "generation",
+      "bounded_question": "Can higher spectral utilization produce durable, low-resource photovoltaic systems?",
+      "mechanism_status": "High-efficiency research cells demonstrated",
+      "resource_ledger": "Sunlight; materials, module manufacture, balance of system and storage.",
+      "main_gap": "Stability, scale-up, critical materials, recycling and field yield.",
+      "next_investigation": "Compare lifetime energy yield per material and installed area, not champion-cell efficiency alone.",
+      "coverage": "Direct cell evidence.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "R05"
+      ],
+      "tags": [
+        "solar",
+        "tandem",
+        "perovskite"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-B06",
+      "title": "Singlet-fission-enhanced photovoltaics",
+      "domain_code": "B",
+      "domain": "Planetary heat, solar and other renewable gradients",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "conversion",
+      "bounded_question": "Can exciton multiplication yield a net device-level efficiency improvement?",
+      "mechanism_status": "Exciton generation and transfer demonstrated",
+      "resource_ledger": "High-energy solar photons; molecular/semiconductor interfaces.",
+      "main_gap": "Transfer losses, interface durability and full-cell current-voltage performance.",
+      "next_investigation": "Measure power conversion and lifetime against an otherwise identical control cell.",
+      "coverage": "Direct mechanism evidence.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "R06"
+      ],
+      "tags": [
+        "solar",
+        "excitons",
+        "singlet-fission"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-B07",
+      "title": "Hot-carrier photovoltaics",
+      "domain_code": "B",
+      "domain": "Planetary heat, solar and other renewable gradients",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "conversion",
+      "bounded_question": "Can hot carriers be extracted before their excess energy is dissipated?",
+      "mechanism_status": "Mechanism-specific measurements and models exist",
+      "resource_ledger": "Photon energy and selective-contact architecture.",
+      "main_gap": "Carrier cooling, selective contacts and practical illumination intensity.",
+      "next_investigation": "Distinguish carrier-temperature evidence from an end-to-end conversion advantage.",
+      "coverage": "Direct recent mechanism seed.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "R07"
+      ],
+      "tags": [
+        "solar",
+        "hot-carrier",
+        "nonequilibrium"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-B08",
+      "title": "Space-based solar power",
+      "domain_code": "B",
+      "domain": "Planetary heat, solar and other renewable gradients",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "generation",
+      "bounded_question": "Can orbital collection and power transmission outperform terrestrial alternatives on a lifecycle basis?",
+      "mechanism_status": "Physics-compatible architecture; integrated assessment rather than deployment proof",
+      "resource_ledger": "Sunlight; launch, assembly, transmission losses, replacement and receivers.",
+      "main_gap": "Launch/maintenance burden, wireless transmission, safety and cost.",
+      "next_investigation": "Reproduce architecture comparisons with sensitivity to launch cadence and service lifetime.",
+      "coverage": "Direct architecture assessment.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "R08"
+      ],
+      "tags": [
+        "solar",
+        "space-power",
+        "no-Dyson-sphere"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-B09",
+      "title": "Wave-energy conversion",
+      "domain_code": "B",
+      "domain": "Planetary heat, solar and other renewable gradients",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "generation",
+      "bounded_question": "Can robust wave devices deliver valuable power after maintenance and survivability constraints?",
+      "mechanism_status": "Wave resources and conversion mechanisms are recognized",
+      "resource_ledger": "Ocean waves driven largely by winds; moorings, storms and servicing.",
+      "main_gap": "Survival, availability, mooring cost and ecological effects.",
+      "next_investigation": "Screen sea-trial datasets and distinguish theoretical resource from practical capacity.",
+      "coverage": "Government resource framework; device-specific papers pending.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "R09"
+      ],
+      "tags": [
+        "marine",
+        "wave-energy"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-B10",
+      "title": "Tidal-stream and ocean-current generation",
+      "domain_code": "B",
+      "domain": "Planetary heat, solar and other renewable gradients",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "generation",
+      "bounded_question": "Can predictable marine flows support scalable generation at acceptable ecosystem cost?",
+      "mechanism_status": "Known kinetic-energy conversion mechanisms",
+      "resource_ledger": "Gravitational/rotational tidal forcing or ocean circulation; flow depletion and infrastructure.",
+      "main_gap": "Array interactions, resource limits, underwater servicing and ecosystems.",
+      "next_investigation": "Combine hydrodynamic resource estimates with extraction feedback and measured availability.",
+      "coverage": "Government resource framework; device-specific papers pending.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "R09"
+      ],
+      "tags": [
+        "marine",
+        "tides",
+        "rotational-reservoirs"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-B11",
+      "title": "Ocean thermal energy conversion",
+      "domain_code": "B",
+      "domain": "Planetary heat, solar and other renewable gradients",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "generation",
+      "bounded_question": "Can small ocean temperature gradients provide useful net output after pumping?",
+      "mechanism_status": "Heat-engine mechanism established; specific systems require review",
+      "resource_ledger": "Warm surface water and colder deep water; heat exchangers and pumps.",
+      "main_gap": "Small temperature differences and large water-throughput burdens.",
+      "next_investigation": "Screen net rather than gross power and include cold-water-pipe construction.",
+      "coverage": "Background only; dedicated OTEC system corpus pending.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "R09",
+        "C11"
+      ],
+      "tags": [
+        "marine",
+        "OTEC",
+        "heat-engines"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-B12",
+      "title": "Salinity-gradient and osmotic power",
+      "domain_code": "B",
+      "domain": "Planetary heat, solar and other renewable gradients",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "generation",
+      "bounded_question": "Can scalable membranes convert mixing free energy while resisting fouling?",
+      "mechanism_status": "Nanopore energy conversion demonstrated",
+      "resource_ledger": "Separated salt/fresh-water streams; pretreatment, pumping and gradient replenishment.",
+      "main_gap": "Membrane-area scaling, concentration polarization, fouling and salinity sources.",
+      "next_investigation": "Replace per-pore normalization with net power per installed membrane and complete operating cycle.",
+      "coverage": "Direct nanoscale seed.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "R10"
+      ],
+      "tags": [
+        "osmotic",
+        "salinity",
+        "nanopores"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-B13",
+      "title": "Artificial and biohybrid photosynthesis",
+      "domain_code": "B",
+      "domain": "Planetary heat, solar and other renewable gradients",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "conversion",
+      "bounded_question": "Can artificial or hybrid biological systems make fuels and materials with favorable lifecycle energy?",
+      "mechanism_status": "Solar-to-chemical laboratory systems demonstrated",
+      "resource_ledger": "Sunlight and feedstocks; product separation, nutrients, water and catalyst replacement.",
+      "main_gap": "Durability, productivity, separation energy and biological control.",
+      "next_investigation": "Compare delivered chemical exergy per input resource with photovoltaic-electrochemical baselines.",
+      "coverage": "Direct experimental seed.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "R11"
+      ],
+      "tags": [
+        "solar-fuels",
+        "synthetic-biology",
+        "biohybrid"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-C01",
+      "title": "High-field superconducting magnets and robust conductors",
+      "domain_code": "C",
+      "domain": "Magnetism, materials, conversion and storage",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "enabler",
+      "bounded_question": "Can better conductors and magnet engineering unlock more useful confinement and power infrastructure?",
+      "mechanism_status": "Representative high-field REBCO coils demonstrated",
+      "resource_ledger": "No new fuel: magnet production, cryogenics, protection and replacement enter the ledger.",
+      "main_gap": "Stress, irradiation, quench behavior, joints and conductor cost.",
+      "next_investigation": "Compare magnet lifetime and total support power per unit of useful field in the intended environment.",
+      "coverage": "Direct magnet and material evidence.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "N01",
+        "C03"
+      ],
+      "tags": [
+        "magnetic-fields",
+        "superconductivity",
+        "REBCO"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-C02",
+      "title": "Ambient-pressure high-temperature superconductivity",
+      "domain_code": "C",
+      "domain": "Magnetism, materials, conversion and storage",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "enabler",
+      "bounded_question": "Can reproducible ambient-condition superconductors enable practical power and magnet applications?",
+      "mechanism_status": "High-temperature superconductivity under pressure is not the desired ambient result",
+      "resource_ledger": "Reduced electrical losses, offset by manufacturing, operating and mechanical requirements.",
+      "main_gap": "Reproducibility, pressure dependence, current density and usable bulk fabrication.",
+      "next_investigation": "Require independent transport, magnetic and structural evidence under the claimed operating conditions.",
+      "coverage": "Direct adjacent evidence, not proof of the target material.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "C03"
+      ],
+      "tags": [
+        "superconductivity",
+        "materials",
+        "replication"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-C03",
+      "title": "Magnetic topology, helicity and knotted-field confinement",
+      "domain_code": "C",
+      "domain": "Magnetism, materials, conversion and storage",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "enabler",
+      "bounded_question": "Can topology-informed design improve confinement without increasing transport or control costs?",
+      "mechanism_status": "Self-organized magnetic structures appear in MHD simulations",
+      "resource_ledger": "Magnetic and plasma energy supplied by known sources; reconnection and resistive losses remain.",
+      "main_gap": "Simulation-to-device validity and transport properties at fusion-relevant conditions.",
+      "next_investigation": "Compare topology metrics with measured loss and stability metrics rather than visual knot complexity.",
+      "coverage": "Direct simulation seed.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "C02",
+        "N13"
+      ],
+      "tags": [
+        "magnetic-fields",
+        "helicity",
+        "topology",
+        "original-DBE"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-C04",
+      "title": "Direct charged-particle energy conversion",
+      "domain_code": "C",
+      "domain": "Magnetism, materials, conversion and storage",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "conversion",
+      "bounded_question": "Can charged reaction products be converted to electricity with less loss than an indirect thermal cycle?",
+      "mechanism_status": "Compatible with known electrodynamics; this source set is foundational",
+      "resource_ledger": "Kinetic energy of externally generated particles; collection and conditioning losses.",
+      "main_gap": "Particle distributions, space charge, radiation and capture efficiency.",
+      "next_investigation": "Find measured converter performance and integrate it with a realistic reaction-product spectrum.",
+      "coverage": "Background only; converter experiments need targeted retrieval.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "C01",
+        "N13"
+      ],
+      "tags": [
+        "direct-conversion",
+        "charged-particles"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-C05",
+      "title": "Magnetohydrodynamic power conversion",
+      "domain_code": "C",
+      "domain": "Magnetism, materials, conversion and storage",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "conversion",
+      "bounded_question": "Can conducting-fluid or plasma MHD conversion improve a specified plant energy balance?",
+      "mechanism_status": "Electromagnetic conversion mechanism is established",
+      "resource_ledger": "Flow or thermal energy of a working fluid; ionization and magnet overhead.",
+      "main_gap": "Electrode losses, conductivity, corrosion and conditioning power.",
+      "next_investigation": "Compare electrical output against all fluid preparation and magnetic support inputs.",
+      "coverage": "Background only; system-specific operating records pending.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "C01",
+        "N13"
+      ],
+      "tags": [
+        "MHD",
+        "magnetic-fields",
+        "conversion"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-C06",
+      "title": "Superconducting magnetic energy storage",
+      "domain_code": "C",
+      "domain": "Magnetism, materials, conversion and storage",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "storage",
+      "bounded_question": "Can SMES supply a useful storage service with competitive lifecycle and cryogenic costs?",
+      "mechanism_status": "Magnetic field storage is established; application-scale claims are design-specific",
+      "resource_ledger": "Electricity stored in a magnetic field; cooling, conversion and protection draw energy.",
+      "main_gap": "Cryogenics, mechanical stress, stored-energy safety and storage duration.",
+      "next_investigation": "Compare full round-trip efficiency and installed cost for the required response time and duration.",
+      "coverage": "Foundational and component sources.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "C01",
+        "N01",
+        "C10"
+      ],
+      "tags": [
+        "SMES",
+        "magnetic-fields",
+        "storage"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-C07",
+      "title": "Magnetocaloric and other caloric cooling",
+      "domain_code": "C",
+      "domain": "Magnetism, materials, conversion and storage",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "demand reduction",
+      "bounded_question": "Can caloric cycles reduce cooling energy at realistic load and lifetime?",
+      "mechanism_status": "Large magnetic entropy changes demonstrated",
+      "resource_ledger": "Work-driven transfer of heat; field cycling, fluid flow and regeneration losses.",
+      "main_gap": "Hysteresis, heat-transfer rates, fatigue and system coefficient of performance.",
+      "next_investigation": "Compare whole-appliance electricity at matched cooling duty, not material entropy change alone.",
+      "coverage": "Direct material mechanism evidence.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "C04"
+      ],
+      "tags": [
+        "magnetocaloric",
+        "cooling",
+        "magnetic-fields"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-C08",
+      "title": "Thermoelectrics and phonon engineering",
+      "domain_code": "C",
+      "domain": "Magnetism, materials, conversion and storage",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "conversion",
+      "bounded_question": "Can materials decouple heat and charge transport enough to recover otherwise unusable heat?",
+      "mechanism_status": "Thermoelectric conversion is established",
+      "resource_ledger": "Existing temperature gradients; heat-source access and heat-sink provision.",
+      "main_gap": "Material figure of merit versus contact, module and heat-exchanger losses.",
+      "next_investigation": "Benchmark complete modules over real duty cycles and account for critical-material demand.",
+      "coverage": "Review background; targeted modern benchmarks needed.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "C11"
+      ],
+      "tags": [
+        "thermoelectric",
+        "phonons",
+        "waste-heat"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-C09",
+      "title": "Thermophotovoltaics and heat-to-electric storage",
+      "domain_code": "C",
+      "domain": "Magnetism, materials, conversion and storage",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "conversion",
+      "bounded_question": "Can hot storage coupled to TPV deliver attractive full-cycle electricity storage or heat recovery?",
+      "mechanism_status": "High cell-level conversion efficiency demonstrated",
+      "resource_ledger": "Externally supplied high-temperature heat; storage, emitter and cooling losses.",
+      "main_gap": "Round-trip performance, insulation, emitter life and thermal cycling.",
+      "next_investigation": "Connect charging, standby and discharge losses in a measured common-boundary energy budget.",
+      "coverage": "Direct converter evidence plus storage context.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "C05",
+        "C10"
+      ],
+      "tags": [
+        "TPV",
+        "thermal-storage",
+        "conversion"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-C10",
+      "title": "Near-field thermal radiation and evanescent transport",
+      "domain_code": "C",
+      "domain": "Magnetism, materials, conversion and storage",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "conversion",
+      "bounded_question": "Can engineered nanoscale gaps improve useful thermal conversion or cooling?",
+      "mechanism_status": "Enhanced nanoscale radiative transfer observed",
+      "resource_ledger": "Heat flowing between nonequilibrium bodies; gap control and parasitic conduction.",
+      "main_gap": "Maintaining uniform gaps, useful area and material stability.",
+      "next_investigation": "Measure net system improvement after gap-control, conduction and surface-degradation costs.",
+      "coverage": "Direct physical-mechanism seed.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "C06"
+      ],
+      "tags": [
+        "near-field",
+        "thermal-radiation",
+        "metamaterials"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-C11",
+      "title": "Magnons, spintronics and magnetic quasiparticle transport",
+      "domain_code": "C",
+      "domain": "Magnetism, materials, conversion and storage",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "enabler",
+      "bounded_question": "Can collective spin excitations reduce energy per specified information-processing task?",
+      "mechanism_status": "Magnon information transport demonstrated",
+      "resource_ledger": "Excitation and transduction energy; no independent source of energy is implied.",
+      "main_gap": "Injection/readout loss, propagation length and useful logic integration.",
+      "next_investigation": "Compare task-level energy including electrical-to-spin and spin-to-electrical conversion.",
+      "coverage": "Direct transport seed.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "C07"
+      ],
+      "tags": [
+        "magnons",
+        "spintronics",
+        "quasiparticles"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-C12",
+      "title": "Polaritons, cavity chemistry and engineered light-matter phases",
+      "domain_code": "C",
+      "domain": "Magnetism, materials, conversion and storage",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "enabler",
+      "bounded_question": "Can light-matter coupling alter useful reactions or transport reproducibly enough to reduce process energy?",
+      "mechanism_status": "Mechanism-specific cavity chemistry effects have been reported",
+      "resource_ledger": "Chemical free energy and cavity/control resources; no vacuum fuel is assumed.",
+      "main_gap": "Reproducibility, mechanism attribution and scalable chemical throughput.",
+      "next_investigation": "Pair positive studies with replication attempts and off-resonant, thermal and geometrical controls.",
+      "coverage": "Direct experimental seed; replication landscape not yet mapped.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "C08"
+      ],
+      "tags": [
+        "polaritons",
+        "cavity-chemistry",
+        "quasiparticles"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-C13",
+      "title": "Quantum batteries and collective charging",
+      "domain_code": "C",
+      "domain": "Magnetism, materials, conversion and storage",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "storage",
+      "bounded_question": "Can collective effects improve usable storage service after charging and discharge costs?",
+      "mechanism_status": "Collective absorption and charging signatures demonstrated",
+      "resource_ledger": "External charging field; excitation energy, decoherence and energy extraction.",
+      "main_gap": "Extractable work, retention, cycling and charger efficiency.",
+      "next_investigation": "Distinguish fast absorption from demonstrably recoverable electrical work across repeated cycles.",
+      "coverage": "Direct mechanism seed.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "C09"
+      ],
+      "tags": [
+        "quantum-battery",
+        "superabsorption",
+        "storage"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-C14",
+      "title": "Long-duration mechanical, electrochemical and thermal storage",
+      "domain_code": "C",
+      "domain": "Magnetism, materials, conversion and storage",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "storage",
+      "bounded_question": "Can storage make intermittent supply dependable with acceptable material and energy overhead?",
+      "mechanism_status": "Several storage mechanisms are demonstrated; novel scale claims vary",
+      "resource_ledger": "Previously generated energy; charging, standby, discharge and replacement losses.",
+      "main_gap": "Duration, degradation, siting, critical minerals and system reliability.",
+      "next_investigation": "Compare service-equivalent storage portfolios rather than cost per nominal capacity alone.",
+      "coverage": "Government research roadmap; technology-specific datasets pending.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "C10"
+      ],
+      "tags": [
+        "long-duration-storage",
+        "grid",
+        "materials"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-C15",
+      "title": "Hydrogen, ammonia and synthetic chemical energy carriers",
+      "domain_code": "C",
+      "domain": "Magnetism, materials, conversion and storage",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "storage and transport",
+      "bounded_question": "Can chemical carriers economically shift or transport energy without excessive conversion loss?",
+      "mechanism_status": "Carrier chemistry is established; lifecycle advantage is conditional",
+      "resource_ledger": "Electricity/heat and feedstocks used to manufacture the carrier; handling and reconversion.",
+      "main_gap": "Production, compression or synthesis, transport leakage and reconversion.",
+      "next_investigation": "Compare delivered service with direct electrification under an identical energy-source mix.",
+      "coverage": "Background and adjacent solar-chemical evidence; carrier-specific corpus pending.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "C10",
+        "R11"
+      ],
+      "tags": [
+        "hydrogen",
+        "ammonia",
+        "synthetic-fuels",
+        "carriers"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-C16",
+      "title": "Heat pumps, exergy matching and cascaded energy use",
+      "domain_code": "C",
+      "domain": "Magnetism, materials, conversion and storage",
+      "discovery_class": "D",
+      "discovery_class_label": "Demonstrated bounded mechanism or technology",
+      "role": "demand reduction",
+      "bounded_question": "Can matching energy quality to service reduce avoidable primary-energy use?",
+      "mechanism_status": "Work-driven heat transfer is an established mechanism",
+      "resource_ledger": "Electrical work plus environmental or waste heat; temperatures and losses define performance.",
+      "main_gap": "Application temperatures, seasonal performance and system integration.",
+      "next_investigation": "Use service-matched seasonal and lifecycle metrics; a heat pump does not create energy.",
+      "coverage": "Background only for a full heat-pump/cascade assessment.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "C04",
+        "C11",
+        "D10"
+      ],
+      "tags": [
+        "heat-pumps",
+        "exergy",
+        "industrial-heat"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-C17",
+      "title": "Static-magnet-only cyclic power claims",
+      "domain_code": "C",
+      "domain": "Magnetism, materials, conversion and storage",
+      "discovery_class": "X",
+      "discovery_class_label": "Conflicts with established constraints under the specified formulation",
+      "role": "constraint test",
+      "bounded_question": "Can an unchanged permanent-magnet arrangement supply continuing cyclic work without another input?",
+      "mechanism_status": "Conservative full-cycle accounting constrains the proposed formulation",
+      "resource_ledger": "Claim assumes no consumed magnetic, mechanical, chemical, electrical or thermal resource.",
+      "main_gap": "The formulation omits a replenishing energy source or irreversible change in the apparatus.",
+      "next_investigation": "Audit the complete reset cycle and all hidden inputs; a different driven mechanism would be a different claim.",
+      "coverage": "Foundational constraint sources.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "C01",
+        "E01"
+      ],
+      "tags": [
+        "permanent-magnets",
+        "energy-conservation",
+        "falsification"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-D01",
+      "title": "AI-assisted plasma prediction and feedback",
+      "domain_code": "D",
+      "domain": "Intelligence and discovery multipliers",
+      "discovery_class": "D",
+      "discovery_class_label": "Demonstrated bounded mechanism or technology",
+      "role": "intelligence multiplier",
+      "bounded_question": "Can learned controllers improve plasma performance and robustness against defined baselines?",
+      "mechanism_status": "A bounded learned-control application demonstrated experimentally",
+      "resource_ledger": "Compute and actuators consume power; benefit comes from better plant operation.",
+      "main_gap": "Transfer across devices, uncertainty, distribution shifts and actuator limits.",
+      "next_investigation": "Use held-out shots, uncertainty calibration and classical safety/control baselines.",
+      "coverage": "Direct experimental evidence.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "I01"
+      ],
+      "tags": [
+        "AI",
+        "plasma-control",
+        "reinforcement-learning"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-D02",
+      "title": "Differentiable simulators and reduced-order digital twins",
+      "domain_code": "D",
+      "domain": "Intelligence and discovery multipliers",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "intelligence multiplier",
+      "bounded_question": "Can validated fast models improve experiment and engineering decisions?",
+      "mechanism_status": "Software and modeling frameworks exist",
+      "resource_ledger": "Compute/training expense traded against experimental and operational savings.",
+      "main_gap": "Surrogate bias and uncertainty outside training conditions.",
+      "next_investigation": "Benchmark conserved quantities, predictive accuracy and latency on independently held-out data.",
+      "coverage": "Application seeds plus official software documentation.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "I01",
+        "R12"
+      ],
+      "tags": [
+        "digital-twin",
+        "differentiable-modeling",
+        "surrogate"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-D03",
+      "title": "AI-guided materials discovery",
+      "domain_code": "D",
+      "domain": "Intelligence and discovery multipliers",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "intelligence multiplier",
+      "bounded_question": "Can candidate discovery increase the rate of experimentally verified useful materials?",
+      "mechanism_status": "Computational screening and some synthesis-linked workflows demonstrated",
+      "resource_ledger": "Compute, synthesis and characterization resources.",
+      "main_gap": "Synthesis feasibility, novelty, deployment properties and independence of validation. Corrected phase identification, genuine novelty and independent experimental validation must be distinguished from automated output.",
+      "next_investigation": "Measure successful independent syntheses and service-relevant properties per experimental budget.",
+      "coverage": "Direct computational and experimental workflow evidence.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "I02",
+        "I03",
+        "I11",
+        "I12"
+      ],
+      "tags": [
+        "AI",
+        "materials",
+        "active-learning"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-D04",
+      "title": "Autonomous and self-driving laboratories",
+      "domain_code": "D",
+      "domain": "Intelligence and discovery multipliers",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "intelligence multiplier",
+      "bounded_question": "Can closed-loop automation produce reproducible discoveries more efficiently than a strong baseline?",
+      "mechanism_status": "Autonomy demonstrated within bounded experimental workflows",
+      "resource_ledger": "Robotics, consumables, instrumentation, compute and human oversight.",
+      "main_gap": "Reliable identification, generalization, safety and independent verification. Corrected phase identification, genuine novelty and independent experimental validation must be distinguished from automated output.",
+      "next_investigation": "Compare blinded reproducibility and useful discoveries per total resource input.",
+      "coverage": "Direct laboratory workflow evidence.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "I03",
+        "I11",
+        "I12"
+      ],
+      "tags": [
+        "autonomous-lab",
+        "robotics",
+        "closed-loop-science"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-D05",
+      "title": "Active learning and value-of-information experiment selection",
+      "domain_code": "D",
+      "domain": "Intelligence and discovery multipliers",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "intelligence multiplier",
+      "bounded_question": "Can choosing the next informative experiment outperform broad trial-and-error screening?",
+      "mechanism_status": "Experiment-selection methods appear in bounded autonomous workflows",
+      "resource_ledger": "Experimental and computational budgets rather than a new energy reservoir.",
+      "main_gap": "Exploration bias, misleading uncertainty and out-of-distribution hypotheses.",
+      "next_investigation": "Preregister a discovery/uncertainty metric and compare against random, expert and conventional optimization baselines.",
+      "coverage": "Experimental workflow and methodological seeds.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "I03",
+        "M03"
+      ],
+      "tags": [
+        "active-learning",
+        "Bayesian-design",
+        "value-of-information"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-D06",
+      "title": "AI-assisted symbolic theory and formal verification",
+      "domain_code": "D",
+      "domain": "Intelligence and discovery multipliers",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "intelligence multiplier",
+      "bounded_question": "Can machine-generated models and machine-checked mathematics produce testable, useful energy-science insights?",
+      "mechanism_status": "General proposal; domain-specific validation remains to be gathered",
+      "resource_ledger": "Compute and independent proof/experiment checking.",
+      "main_gap": "Correctness, identifiability, novelty and physical interpretability.",
+      "next_investigation": "Require independent derivation checks and new predictions; fit quality alone is not a physical explanation.",
+      "coverage": "Methodological/adjacent sources only; dedicated theory-discovery corpus pending.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "M02",
+        "M03",
+        "I02"
+      ],
+      "tags": [
+        "symbolic-regression",
+        "formal-proof",
+        "AI-theory"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-D07",
+      "title": "AGI as a general scientific-discovery accelerator",
+      "domain_code": "D",
+      "domain": "Intelligence and discovery multipliers",
+      "discovery_class": "S",
+      "discovery_class_label": "Speculative capability or unknown physics",
+      "role": "intelligence multiplier",
+      "bounded_question": "Could broadly capable autonomous reasoning accelerate discovery across unrelated physical domains?",
+      "mechanism_status": "No general capability is established by the bounded examples in this atlas",
+      "resource_ledger": "Training/inference, laboratories, data acquisition and verification resources.",
+      "main_gap": "Operational definition, generalization and measurable counterfactual discovery acceleration.",
+      "next_investigation": "Define a reproducible cross-domain benchmark before assigning likelihood or energy benefits.",
+      "coverage": "Adjacent bounded-AI examples, not direct AGI validation.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "I02",
+        "I03",
+        "M01"
+      ],
+      "tags": [
+        "AGI",
+        "scientific-discovery",
+        "capability-forecast"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-D08",
+      "title": "Fault-tolerant quantum chemistry and materials simulation",
+      "domain_code": "D",
+      "domain": "Intelligence and discovery multipliers",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "intelligence multiplier",
+      "bounded_question": "Can quantum methods provide useful chemistry predictions beyond competitive classical methods?",
+      "mechanism_status": "Concrete algorithms and resource estimates exist",
+      "resource_ledger": "Quantum hardware, error correction, control and cooling costs.",
+      "main_gap": "End-to-end resources, precision, verification and changing classical baselines.",
+      "next_investigation": "Choose an industrially relevant observable and include data preparation and output extraction in the resource estimate.",
+      "coverage": "Direct resource-estimation and hardware-component evidence.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "I10",
+        "I04"
+      ],
+      "tags": [
+        "quantum-computing",
+        "chemistry",
+        "fault-tolerance"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-D09",
+      "title": "Quantum algorithms for plasma, transport and turbulence",
+      "domain_code": "D",
+      "domain": "Intelligence and discovery multipliers",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "intelligence multiplier",
+      "bounded_question": "Can a specified quantum subroutine improve a plasma-relevant task end to end?",
+      "mechanism_status": "Proposals face important algorithm-specific complexity constraints",
+      "resource_ledger": "Input loading, circuit depth, error correction, measurement and classical post-processing.",
+      "main_gap": "Nonlinearity, chaos, readout and real-time latency.",
+      "next_investigation": "Test the proposed subproblem against the theorem assumptions and a current classical baseline.",
+      "coverage": "Direct constraint seed plus physical background.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "I05",
+        "N13"
+      ],
+      "tags": [
+        "quantum-computing",
+        "plasma",
+        "complexity"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-D10",
+      "title": "Adaptive quantum error correction and decoherence modeling",
+      "domain_code": "D",
+      "domain": "Intelligence and discovery multipliers",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "intelligence multiplier",
+      "bounded_question": "Can adaptive noise models and decoding reduce logical error and system overhead?",
+      "mechanism_status": "Below-threshold logical-memory error suppression demonstrated",
+      "resource_ledger": "Measurement, reset, decoding, control and refrigeration energy.",
+      "main_gap": "Correlated noise, nonstationarity, decoder latency and scaling.",
+      "next_investigation": "Compare logical error per operation and complete overhead; do not assume prediction of each random error is necessary.",
+      "coverage": "Direct error-correction evidence; AI-decoder-specific corpus pending.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "I04"
+      ],
+      "tags": [
+        "QEC",
+        "decoherence",
+        "decoding",
+        "noise"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-D11",
+      "title": "Majorana and other non-Abelian topological computation",
+      "domain_code": "D",
+      "domain": "Intelligence and discovery multipliers",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "intelligence multiplier",
+      "bounded_question": "Can a specified topological platform reduce fault-tolerant computing overhead?",
+      "mechanism_status": "Engineered non-Abelian operations demonstrated; material implementations need separate evidence",
+      "resource_ledger": "Fabrication, cooling, readout and non-protected operations.",
+      "main_gap": "Unambiguous quasiparticles, gates, leakage and full universality.",
+      "next_investigation": "Distinguish simulation, encoded circuit demonstrations and material-based braiding; compare complete logical resources.",
+      "coverage": "Direct circuit evidence, not a blanket validation of Majorana hardware.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "I06",
+        "I04"
+      ],
+      "tags": [
+        "Majorana",
+        "anyons",
+        "topological-computing",
+        "original-DBE"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-D12",
+      "title": "Fracton and self-correcting quantum memories",
+      "domain_code": "D",
+      "domain": "Intelligence and discovery multipliers",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "intelligence multiplier",
+      "bounded_question": "Can constrained-mobility codes improve finite-temperature memory at realistic hardware cost?",
+      "mechanism_status": "Mathematical model results, not indefinite physical storage",
+      "resource_ledger": "Many-body interactions, preparation, cooling and remaining active correction.",
+      "main_gap": "Implementability, finite-size regime and noise-model validity.",
+      "next_investigation": "Test lifetimes with realistic local noise and compare to simpler error-correcting memories.",
+      "coverage": "Direct theoretical seed.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "I07"
+      ],
+      "tags": [
+        "fractons",
+        "quantum-memory",
+        "original-DBE"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-D13",
+      "title": "Floquet engineering and time-crystalline order",
+      "domain_code": "D",
+      "domain": "Intelligence and discovery multipliers",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "enabler",
+      "bounded_question": "Can a driven many-body phase improve synchronization or logical reliability enough to justify its overhead?",
+      "mechanism_status": "Driven time-crystalline order experimentally demonstrated",
+      "resource_ledger": "Periodic driving, control and dissipation management.",
+      "main_gap": "Lifetime, usable timing quality and cost relative to conventional clocks/control.",
+      "next_investigation": "Benchmark real timing or error suppression with the drive counted; persistent oscillation is not free energy.",
+      "coverage": "Direct demonstration plus scoped equilibrium no-go source.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "I08",
+        "E03"
+      ],
+      "tags": [
+        "Floquet",
+        "time-crystal",
+        "original-DBE"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-D14",
+      "title": "Tensor networks and holographic quantum codes",
+      "domain_code": "D",
+      "domain": "Intelligence and discovery multipliers",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "intelligence multiplier",
+      "bounded_question": "Can structured representations reduce cost for a specified physical problem without unacceptable information loss?",
+      "mechanism_status": "Mathematical encoding models established",
+      "resource_ledger": "Memory, computation, encoding, decoding and measurement costs.",
+      "main_gap": "Task-specific compressibility, reconstruction accuracy and noise.",
+      "next_investigation": "Compare reconstruction and prediction at equal resources; do not infer generic compression from a geometric analogy.",
+      "coverage": "Direct theory seeds.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "I09",
+        "I05"
+      ],
+      "tags": [
+        "tensor-networks",
+        "holography",
+        "original-DBE"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-D15",
+      "title": "Quantum sensing and precision metrology",
+      "domain_code": "D",
+      "domain": "Intelligence and discovery multipliers",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "intelligence multiplier",
+      "bounded_question": "Can improved sensing reveal accessible reservoirs or reduce control and measurement uncertainty?",
+      "mechanism_status": "Specific particle and field measurements demonstrated",
+      "resource_ledger": "Sensor excitation, cooling, readout and background rejection.",
+      "main_gap": "Sensitivity versus bandwidth, interference and integration costs.",
+      "next_investigation": "Choose a measurable control or discovery benefit rather than using sensitivity alone as an energy metric.",
+      "coverage": "Direct measurement examples.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "E06",
+        "E09",
+        "E13"
+      ],
+      "tags": [
+        "quantum-sensing",
+        "metrology",
+        "hidden-sectors"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-E01",
+      "title": "Equilibrium vacuum and zero-point energy extraction",
+      "domain_code": "E",
+      "domain": "Unconventional reservoirs and fundamental physics",
+      "discovery_class": "X",
+      "discovery_class_label": "Conflicts with established constraints under the specified formulation",
+      "role": "constraint test",
+      "bounded_question": "Can a cyclic device extract continuing net work from an unchanged equilibrium vacuum with no other consumed resource?",
+      "mechanism_status": "Vacuum phenomena exist, but the cyclic free-power formulation is constrained",
+      "resource_ledger": "Claim excludes all drives, state preparation, reservoirs and irreversible apparatus changes.",
+      "main_gap": "Under the stated passivity assumptions there is no available cyclic work resource.",
+      "next_investigation": "Write the full Hamiltonian and cycle; identify the precise assumption escaped by any proposed counterexample.",
+      "coverage": "Foundational constraint plus contrasting driven experiment.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "E01",
+        "E02"
+      ],
+      "tags": [
+        "zero-point",
+        "vacuum",
+        "passivity",
+        "falsification"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-E02",
+      "title": "Dynamical Casimir and engineered quantum-field boundaries",
+      "domain_code": "E",
+      "domain": "Unconventional reservoirs and fundamental physics",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "conversion",
+      "bounded_question": "Can controlled boundary changes provide useful quantum conversion, sensing or communication?",
+      "mechanism_status": "Driven photon generation demonstrated",
+      "resource_ledger": "External modulation supplies energy; vacuum fluctuations participate in the dynamics.",
+      "main_gap": "Conversion efficiency, pump noise and useful output.",
+      "next_investigation": "Include pump energy and compare with conventional parametric devices at the same task.",
+      "coverage": "Direct experimental seed and thermodynamic boundary.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "E02",
+        "E01"
+      ],
+      "tags": [
+        "dynamical-Casimir",
+        "vacuum-engineering"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-E03",
+      "title": "Quantum heat engines and nonequilibrium reservoirs",
+      "domain_code": "E",
+      "domain": "Unconventional reservoirs and fundamental physics",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "conversion",
+      "bounded_question": "Can quantum resources improve an explicitly defined conversion task after preparation costs?",
+      "mechanism_status": "Specific quantum engines experimentally realized",
+      "resource_ledger": "Prepared quantum states, controlled interactions and external drives or gradients.",
+      "main_gap": "Reset, control and resource preparation can dominate small work outputs.",
+      "next_investigation": "Compare work and efficiency with a resource-matched classical engine, not an unmatched thermal baseline.",
+      "coverage": "Direct experiment plus passivity framework.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "E05",
+        "E01"
+      ],
+      "tags": [
+        "quantum-thermodynamics",
+        "Pauli-engine"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-E04",
+      "title": "Quantum energy teleportation",
+      "domain_code": "E",
+      "domain": "Unconventional reservoirs and fundamental physics",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "conversion and information",
+      "bounded_question": "Can local operations and correlations provide a useful energy-control or information function?",
+      "mechanism_status": "Model protocols exist",
+      "resource_ledger": "Local energy injection, measurement, classical communication and extraction.",
+      "main_gap": "Operational usefulness, finite-speed communication and a complete energy ledger.",
+      "next_investigation": "Reproduce one protocol with all measurement, preparation and resetting costs explicit.",
+      "coverage": "Direct theoretical seed.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "E04",
+        "E01"
+      ],
+      "tags": [
+        "QET",
+        "entanglement",
+        "quantum-thermodynamics"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-E05",
+      "title": "Ambient neutrino energy harvesting",
+      "domain_code": "E",
+      "domain": "Unconventional reservoirs and fundamental physics",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "harvesting",
+      "bounded_question": "Can any specified interaction channel deliver useful net power from ambient neutrino flux?",
+      "mechanism_status": "Neutrino interactions are measurable; useful harvesting is not demonstrated here",
+      "resource_ledger": "Incident neutrino flux; interaction cross-section, recoil energy and detector overhead.",
+      "main_gap": "Small deposited energy and interaction rates, plus material and cooling cost.",
+      "next_investigation": "Calculate flux times capture probability times recoverable event energy before considering device claims.",
+      "coverage": "Direct interaction evidence, not a power-harvesting demonstration.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "E06",
+        "E07"
+      ],
+      "tags": [
+        "neutrinos",
+        "weak-interactions",
+        "harvesting"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-E06",
+      "title": "Axion-photon conversion",
+      "domain_code": "E",
+      "domain": "Unconventional reservoirs and fundamental physics",
+      "discovery_class": "S",
+      "discovery_class_label": "Speculative capability or unknown physics",
+      "role": "harvesting",
+      "bounded_question": "Could an axion field be converted into useful electromagnetic energy?",
+      "mechanism_status": "Searches constrain candidates; the required dark matter particle is unconfirmed",
+      "resource_ledger": "Hypothesized field density and coupling; resonator/magnet/cooling costs.",
+      "main_gap": "Existence, allowed coupling, bandwidth and accessible power.",
+      "next_investigation": "Use measured exclusion curves and specify a surviving model before estimating energy yield.",
+      "coverage": "Direct particle-search evidence, not discovery.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "E08"
+      ],
+      "tags": [
+        "axions",
+        "dark-matter",
+        "magnetic-fields"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-E07",
+      "title": "Dark photons and other weakly coupled hidden fields",
+      "domain_code": "E",
+      "domain": "Unconventional reservoirs and fundamental physics",
+      "discovery_class": "S",
+      "discovery_class_label": "Speculative capability or unknown physics",
+      "role": "harvesting",
+      "bounded_question": "Could a hidden field couple to an engineered material strongly enough for useful conversion?",
+      "mechanism_status": "Candidate searches and sensor networks exist",
+      "resource_ledger": "Hypothesized local field energy; conversion coupling and detector resources.",
+      "main_gap": "Existence, coupling constraints, frequency range and background signals.",
+      "next_investigation": "Build a model-specific detection and recoverable-power estimate consistent with existing searches.",
+      "coverage": "Direct search example; no confirmed reservoir.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "E09"
+      ],
+      "tags": [
+        "dark-photons",
+        "hidden-sectors",
+        "metamaterials"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-E08",
+      "title": "Dark-matter capture or annihilation as an energy reservoir",
+      "domain_code": "E",
+      "domain": "Unconventional reservoirs and fundamental physics",
+      "discovery_class": "S",
+      "discovery_class_label": "Speculative capability or unknown physics",
+      "role": "harvesting",
+      "bounded_question": "Could a surviving dark-matter model allow practical capture and controlled energy release?",
+      "mechanism_status": "Generic dark-matter energy engineering remains a hypothesis",
+      "resource_ledger": "Hypothesized particle flux and reaction energy; capture, containment and depletion.",
+      "main_gap": "Identity, density, interactions, accessibility and actual energy-release mechanism.",
+      "next_investigation": "Replace the generic label with a particle model and compare capture-rate bounds before engineering.",
+      "coverage": "Adjacent constraints only; no direct harvester design verified.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "E08",
+        "E09"
+      ],
+      "tags": [
+        "dark-matter",
+        "annihilation",
+        "unknown-reservoir"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-E09",
+      "title": "Antimatter energy storage and naturally accessible antimatter",
+      "domain_code": "E",
+      "domain": "Unconventional reservoirs and fundamental physics",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "storage or harvesting",
+      "bounded_question": "Can any realistic antimatter supply or storage route provide a useful energy service?",
+      "mechanism_status": "Antimatter physics established; accessible fuel is a separate issue",
+      "resource_ledger": "Manufactured antimatter consumes prior energy; a natural supply would need independent evidence.",
+      "main_gap": "Production efficiency, containment, losses, radiation and supply.",
+      "next_investigation": "Separate manufactured storage from natural harvesting; compare total supply-chain energy and useful output.",
+      "coverage": "Laboratory background; application-specific corpus pending.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "E10"
+      ],
+      "tags": [
+        "antimatter",
+        "mass-energy",
+        "storage"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-E10",
+      "title": "Black-hole rotational and accretion energy",
+      "domain_code": "E",
+      "domain": "Unconventional reservoirs and fundamental physics",
+      "discovery_class": "S",
+      "discovery_class_label": "Speculative capability or unknown physics",
+      "role": "harvesting",
+      "bounded_question": "Could accessible observations or eventual engineering exploit black-hole energy without assuming a ready-made generator?",
+      "mechanism_status": "Astrophysical extraction mechanisms are theoretically grounded",
+      "resource_ledger": "Black-hole spin or accreting matter; access, coupling and control resources.",
+      "main_gap": "Access, stability, control, capture and useful delivery.",
+      "next_investigation": "First study observable electromagnetic extraction and possible transferable plasma insights, separately from remote engineering scenarios.",
+      "coverage": "Direct theoretical mechanism; human engineering remains speculative.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "E11"
+      ],
+      "tags": [
+        "black-holes",
+        "Blandford-Znajek",
+        "magnetic-fields"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-E11",
+      "title": "Hawking radiation and artificial black-hole power",
+      "domain_code": "E",
+      "domain": "Unconventional reservoirs and fundamental physics",
+      "discovery_class": "S",
+      "discovery_class_label": "Speculative capability or unknown physics",
+      "role": "harvesting",
+      "bounded_question": "Could a physically specified black hole supply controllable useful power?",
+      "mechanism_status": "Semiclassical emission theory; artificial power system unestablished",
+      "resource_ledger": "Black-hole mass and its creation or capture; conversion and lifetime constraints.",
+      "main_gap": "Creating/accessing the object, lifetime, feeding and radiation handling.",
+      "next_investigation": "Analyze mass, lifetime, emitted spectrum and full creation cost before making an engineering claim.",
+      "coverage": "Direct theoretical foundation only.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "E12"
+      ],
+      "tags": [
+        "Hawking-radiation",
+        "black-holes",
+        "semiclassical-gravity"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-E12",
+      "title": "Nuclear isomers and controlled excitation release",
+      "domain_code": "E",
+      "domain": "Unconventional reservoirs and fundamental physics",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "storage",
+      "bounded_question": "Can a specified long-lived excited nucleus serve as a practical controllable energy store?",
+      "mechanism_status": "Low-energy nuclear-state spectroscopy demonstrated",
+      "resource_ledger": "Energy invested in nuclear excitation or in producing an excited isotope.",
+      "main_gap": "Charging cost, triggering, useful energy density, branching and safety.",
+      "next_investigation": "Keep nuclear clocks separate from storage; require a complete excitation-and-release cycle.",
+      "coverage": "Direct adjacent spectroscopy; not a high-energy storage demonstration.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "E13"
+      ],
+      "tags": [
+        "nuclear-isomers",
+        "nuclear-clocks",
+        "storage"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-E13",
+      "title": "LENR and anomalous low-temperature nuclear claims",
+      "domain_code": "E",
+      "domain": "Unconventional reservoirs and fundamental physics",
+      "discovery_class": "S",
+      "discovery_class_label": "Speculative capability or unknown physics",
+      "role": "anomaly investigation",
+      "bounded_question": "Does a bounded anomalous heat or nuclear-signature claim survive independent calibrated testing?",
+      "mechanism_status": "Claims are heterogeneous; selected experiments found no supporting effect",
+      "resource_ledger": "Unknown claimed source; chemical, thermal and electrical alternatives must be excluded.",
+      "main_gap": "Replication, calorimetry, contamination and nuclear-product consistency.",
+      "next_investigation": "Preregister controls and energy accounting; reconcile heat with isotope and radiation diagnostics.",
+      "coverage": "Direct negative investigation, not a universal impossibility proof.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "E14"
+      ],
+      "tags": [
+        "LENR",
+        "cold-fusion",
+        "anomalies",
+        "replication"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-E14",
+      "title": "Externally driven lattice-confinement nuclear reactions",
+      "domain_code": "E",
+      "domain": "Unconventional reservoirs and fundamental physics",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "generation or conversion",
+      "bounded_question": "Can externally driven lattice reactions provide useful net output or a non-power application?",
+      "mechanism_status": "Irradiated deuterated-material experiments reported",
+      "resource_ledger": "Incident radiation/beam energy plus nuclear reactants and target manufacture.",
+      "main_gap": "Drive efficiency, reaction yield, target lifetime and net balance.",
+      "next_investigation": "Retrieve the original reaction papers and calculate output relative to complete irradiation-system input.",
+      "coverage": "Official experimental-program summary.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "E15"
+      ],
+      "tags": [
+        "lattice-confinement",
+        "driven-nuclear-reactions"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-E15",
+      "title": "Dark energy, new interactions and genuinely unknown reservoirs",
+      "domain_code": "E",
+      "domain": "Unconventional reservoirs and fundamental physics",
+      "discovery_class": "S",
+      "discovery_class_label": "Speculative capability or unknown physics",
+      "role": "discovery",
+      "bounded_question": "Could newly established physics reveal a locally accessible free-energy resource or conversion channel?",
+      "mechanism_status": "Cosmological observations constrain models; no local harvester is established",
+      "resource_ledger": "No reservoir is credited until a model specifies coupling, replenishment and conservation accounting.",
+      "main_gap": "An observable cosmological parameter is not an engineering input; unrestricted unknowns are not testable.",
+      "next_investigation": "Create separate falsifiable claims for candidate interactions, with explicit observables and surviving parameter space.",
+      "coverage": "Cosmology and thermodynamic context only.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "E16",
+        "E01"
+      ],
+      "tags": [
+        "dark-energy",
+        "cosmology",
+        "new-physics",
+        "unknown-unknowns"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-F01",
+      "title": "Reversible and adiabatic computing",
+      "domain_code": "F",
+      "domain": "Demand reduction, computation and digital civilization",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "demand reduction",
+      "bounded_question": "Can reversible architectures materially lower energy per reliable useful computation?",
+      "mechanism_status": "Specific reversible gates and erasure experiments exist",
+      "resource_ledger": "Switching, memory, I/O, control, error management and finite-speed operation.",
+      "main_gap": "Finite-time dissipation, reliable reset, composability and system overhead.",
+      "next_investigation": "Compare an end-to-end computation at matched error, latency and throughput rather than one gate.",
+      "coverage": "Direct physical gate and thermodynamics seeds.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "D01",
+        "D02"
+      ],
+      "tags": [
+        "reversible-computing",
+        "Landauer",
+        "adiabatic"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-F02",
+      "title": "Neuromorphic and event-driven computing",
+      "domain_code": "F",
+      "domain": "Demand reduction, computation and digital civilization",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "demand reduction",
+      "bounded_question": "Can event-driven representations lower energy for scientifically or socially useful workloads?",
+      "mechanism_status": "Task-specific low-power hardware demonstrated",
+      "resource_ledger": "Hardware, sensing, learning, memory movement and task-matched performance.",
+      "main_gap": "Workload dependence, accuracy and generalization.",
+      "next_investigation": "Benchmark complete sensing-to-output tasks with equal accuracy and latency.",
+      "coverage": "Direct hardware evidence.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "D03"
+      ],
+      "tags": [
+        "neuromorphic",
+        "spiking-networks",
+        "edge-computing"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-F03",
+      "title": "Analogue and in-memory computing",
+      "domain_code": "F",
+      "domain": "Demand reduction, computation and digital civilization",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "demand reduction",
+      "bounded_question": "Can reduced data movement outweigh analogue variability and conversion overhead?",
+      "mechanism_status": "Mixed-precision hardware computation demonstrated",
+      "resource_ledger": "Compute, memory, calibration, ADC/DAC and digital correction energy.",
+      "main_gap": "Precision, drift, endurance and workload mapping.",
+      "next_investigation": "Compare full task energy with calibration and correction included.",
+      "coverage": "Direct experimental evidence.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "D04"
+      ],
+      "tags": [
+        "in-memory",
+        "analogue-computing",
+        "memristors"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-F04",
+      "title": "Photonic computing and optical interconnects",
+      "domain_code": "F",
+      "domain": "Demand reduction, computation and digital civilization",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "demand reduction",
+      "bounded_question": "Can optical processing or data movement reduce complete computational energy?",
+      "mechanism_status": "Integrated photonic communication demonstrated",
+      "resource_ledger": "Laser generation, modulation, optical/electrical conversion and memory.",
+      "main_gap": "Full-system power, precision, programmability and integration.",
+      "next_investigation": "Separate a front-end communication metric from complete compute-node energy.",
+      "coverage": "Direct interconnect evidence; broad optical-compute claims need more sources.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "D05"
+      ],
+      "tags": [
+        "photonics",
+        "optical-computing",
+        "interconnects"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-F05",
+      "title": "Cryogenic and superconducting computing systems",
+      "domain_code": "F",
+      "domain": "Demand reduction, computation and digital civilization",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "demand reduction",
+      "bounded_question": "Can low-dissipation devices save more energy than refrigeration and interfaces consume?",
+      "mechanism_status": "Relevant devices operate; system benefit is not automatic",
+      "resource_ledger": "Device electricity plus refrigeration, heat leaks, wiring and reliability.",
+      "main_gap": "Temperature-dependent cooling penalty and full system utilization.",
+      "next_investigation": "Compare wall-plug energy at matched throughput, not only energy dissipated on the cold chip.",
+      "coverage": "Device and cryogenic-engineering seeds.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "D02",
+        "N01"
+      ],
+      "tags": [
+        "cryogenics",
+        "superconducting-computing"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-F06",
+      "title": "Whole-brain emulation and individualized digital twins",
+      "domain_code": "F",
+      "domain": "Demand reduction, computation and digital civilization",
+      "discovery_class": "S",
+      "discovery_class_label": "Speculative capability or unknown physics",
+      "role": "civilization transformation",
+      "bounded_question": "Can an individual brain be captured and emulated with validated functional fidelity?",
+      "mechanism_status": "Large network models and connectomes exist; individualized emulation remains unestablished",
+      "resource_ledger": "Imaging, state capture, compute, memory, cooling, embodiment and maintenance.",
+      "main_gap": "Required biological detail, functional validation and complete resource demand.",
+      "next_investigation": "Define a fidelity target and test predictive behavior on progressively richer validated models.",
+      "coverage": "Direct adjacent simulations/anatomy plus historical roadmap.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "D06",
+        "D07",
+        "D12"
+      ],
+      "tags": [
+        "whole-brain-emulation",
+        "digital-twin",
+        "connectomics"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-F07",
+      "title": "Consciousness, personal identity and substrate transition",
+      "domain_code": "F",
+      "domain": "Demand reduction, computation and digital civilization",
+      "discovery_class": "S",
+      "discovery_class_label": "Speculative capability or unknown physics",
+      "role": "civilization transformation",
+      "bounded_question": "What evidence could distinguish functional emulation, conscious experience and preservation of personal continuity?",
+      "mechanism_status": "Competing consciousness theories are empirically investigated",
+      "resource_ledger": "No energy saving is assumed before the target phenomenon and implementation are defined.",
+      "main_gap": "No agreed single operational test settles identity or subjective continuity.",
+      "next_investigation": "Separate empirical predictions from philosophical commitments and preregister tests where possible.",
+      "coverage": "Direct theory-testing context; no upload or continuity proof.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "D08",
+        "D12"
+      ],
+      "tags": [
+        "consciousness",
+        "identity",
+        "mind-uploading",
+        "ethics"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-F08",
+      "title": "Energy per validated cognitive service and subjective-time scheduling",
+      "domain_code": "F",
+      "domain": "Demand reduction, computation and digital civilization",
+      "discovery_class": "S",
+      "discovery_class_label": "Speculative capability or unknown physics",
+      "role": "civilization transformation",
+      "bounded_question": "Could digital execution schedules and representations reduce resource needs per validated cognitive service?",
+      "mechanism_status": "A proposed evaluation framework, not a demonstrated conscious-computing mechanism",
+      "resource_ledger": "Total compute and support energy per agreed unit of service or experience; subjective time is unresolved.",
+      "main_gap": "Defining equivalent cognition/experience, welfare and whether slower execution saves total energy.",
+      "next_investigation": "Begin with measurable functional tasks; never equate a slower clock with lower total work or proven mind continuity.",
+      "coverage": "Background only for the speculative target.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "D01",
+        "D06",
+        "D08"
+      ],
+      "tags": [
+        "digital-civilization",
+        "cognitive-efficiency",
+        "subjective-time"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-F09",
+      "title": "Passive radiative cooling and low-energy heat rejection",
+      "domain_code": "F",
+      "domain": "Demand reduction, computation and digital civilization",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "demand reduction",
+      "bounded_question": "Can radiative surfaces reduce real cooling-system energy and resource requirements?",
+      "mechanism_status": "Below-ambient cooling under specified conditions demonstrated",
+      "resource_ledger": "Heat rejected to the radiative environment; surface area and climate constraints.",
+      "main_gap": "Sky conditions, heat loads, durability and urban integration.",
+      "next_investigation": "Compare seasonal whole-building or process cooling energy with controlled baselines.",
+      "coverage": "Direct experimental seed.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "D09"
+      ],
+      "tags": [
+        "radiative-cooling",
+        "heat-rejection"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-F10",
+      "title": "Circular materials, longer-lived infrastructure and resource efficiency",
+      "domain_code": "F",
+      "domain": "Demand reduction, computation and digital civilization",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "demand reduction",
+      "bounded_question": "Can reuse, durability and material substitution lower energy demand without reducing the required service?",
+      "mechanism_status": "Systems-level hypothesis; technology-specific evidence varies",
+      "resource_ledger": "Mining, manufacture, maintenance, collection, reprocessing and losses.",
+      "main_gap": "Rebound effects, substitution tradeoffs and actual collection/recovery rates.",
+      "next_investigation": "Use service-equivalent lifecycle boundaries and measured rather than ideal recycling fractions.",
+      "coverage": "Background only; targeted lifecycle inventories pending.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "D10",
+        "N08"
+      ],
+      "tags": [
+        "circularity",
+        "materials",
+        "life-cycle"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-F11",
+      "title": "Energy services and low-demand civilization scenarios",
+      "domain_code": "F",
+      "domain": "Demand reduction, computation and digital civilization",
+      "discovery_class": "P",
+      "discovery_class_label": "Physics-compatible frontier",
+      "role": "systems design",
+      "bounded_question": "Can a high-quality civilization operate with substantially lower material and energy throughput?",
+      "mechanism_status": "Quantified service-demand scenarios have been modeled",
+      "resource_ledger": "Energy for explicitly defined services, infrastructure and equitable access.",
+      "main_gap": "Normative assumptions, distribution, transition cost and demand rebound.",
+      "next_investigation": "Compare transparent service baskets and sensitivity to infrastructure and behavior assumptions.",
+      "coverage": "Direct scenario-modeling seed.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "D10"
+      ],
+      "tags": [
+        "energy-services",
+        "resource-scarcity",
+        "scenarios"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    },
+    {
+      "id": "DBE-F12",
+      "title": "Waste heat and planetary-scale carrying constraints",
+      "domain_code": "F",
+      "domain": "Demand reduction, computation and digital civilization",
+      "discovery_class": "D",
+      "discovery_class_label": "Demonstrated bounded mechanism or technology",
+      "role": "systems constraint",
+      "bounded_question": "What heat-rejection and environmental constraints remain even with abundant low-carbon power?",
+      "mechanism_status": "Energy dissipation and modeled climate coupling are established",
+      "resource_ledger": "Distinguish newly added heat from redirected natural energy fluxes and altered surface properties.",
+      "main_gap": "Location, added versus intercepted flux, climate response and acceptable impacts.",
+      "next_investigation": "Model source-specific heat budgets and spatial constraints rather than one unlimited-growth slogan.",
+      "coverage": "Direct modeling and thermal-control seeds.",
+      "formal_confidence": "Not yet independently assessed.",
+      "source_refs": [
+        "D11",
+        "D09"
+      ],
+      "tags": [
+        "waste-heat",
+        "planetary-limits",
+        "energy-abundance"
+      ],
+      "review_workflow": "STAGED",
+      "work_disposition": "DISCOVERY_INVENTORY",
+      "record_roles": [
+        "CONCEPT_CANDIDATE"
+      ],
+      "scientific_assessment_refs": [],
+      "context_compatibility": "NOT_ASSESSED",
+      "display_status": "Discovery-only — not assessed"
+    }
+  ],
+  "sources": [
+    {
+      "id": "M01",
+      "title": "Climate Change 2021: The Physical Science Basis, Chapter 1",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-1/",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "M02",
+      "title": "PRISMA Extension for Scoping Reviews (PRISMA-ScR): Checklist and Explanation",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.prisma-statement.org/scoping",
+      "doi_url": "https://doi.org/10.7326/M18-0850",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "M03",
+      "title": "ROSES RepOrting standards for Systematic Evidence Syntheses: pro forma, flow-diagram and descriptive summary of the plan and conduct of environmental systematic reviews and systematic maps",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://link.springer.com/article/10.1186/s13750-018-0121-7",
+      "doi_url": "https://doi.org/10.1186/s13750-018-0121-7",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "M04",
+      "title": "Technology Readiness Levels",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://esto.nasa.gov/trl/",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "N01",
+      "title": "The SPARC Toroidal Field Model Coil Program",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://doi.org/10.1109/TASC.2023.3332613",
+      "doi_url": "https://doi.org/10.1109/TASC.2023.3332613",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "N02",
+      "title": "National Ignition Facility 2025",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://annual.llnl.gov/fy-2025/national-ignition-facility-2025",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "N03",
+      "title": "Wendelstein 7-X long-pulse performance announcement and update",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.ipp.mpg.de/5532945/w7x",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "N04",
+      "title": "First measurements of p11B fusion in a magnetically confined plasma",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/s41467-023-36655-1",
+      "doi_url": "https://doi.org/10.1038/s41467-023-36655-1",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "N05",
+      "title": "Sustained Neutron Production from a Sheared-Flow Stabilized Z Pinch",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://arxiv.org/abs/1806.05894",
+      "doi_url": "https://doi.org/10.1103/PhysRevLett.122.135001",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "N06",
+      "title": "Experimental Demonstration of Fusion-Relevant Conditions in Magnetized Liner Inertial Fusion",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25375714/",
+      "doi_url": "https://doi.org/10.1103/PhysRevLett.113.155003",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "N07",
+      "title": "Generation of field-reversed configurations via neutral beam injection",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/s41467-025-58849-5",
+      "doi_url": "https://doi.org/10.1038/s41467-025-58849-5",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "N08",
+      "title": "Laying the Foundation for New and Advanced Nuclear Reactors in the United States",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nationalacademies.org/read/26630",
+      "doi_url": "https://doi.org/10.17226/26630",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "N09",
+      "title": "Conceptual design of a fast neutron operated high power energy amplifier",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://cds.cern.ch/record/289551",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "N10",
+      "title": "Muon catalyzed fusion",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.sciencedirect.com/science/article/pii/0920379689900239",
+      "doi_url": "https://doi.org/10.1016/0920379689900239",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "N11",
+      "title": "Radiative decay of muonic molecules in resonance states",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://arxiv.org/abs/2407.01756",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "N12",
+      "title": "Overview of recent results from the ST40 compact high-field spherical tokamak",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://doi.org/10.1088/1741-4326/ad6ba7",
+      "doi_url": "https://doi.org/10.1088/1741-4326/ad6ba7",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "N13",
+      "title": "Plasma Physics and Fusion Energy",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.cambridge.org/core/books/plasma-physics-and-fusion-energy/CD7B530D2889F70446F34E14EE0EF703",
+      "doi_url": "https://doi.org/10.1017/CBO9780511755705",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "N14",
+      "title": "Fundamental limitations on plasma fusion systems not in thermodynamic equilibrium",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://dspace.mit.edu/entities/publication/449e4702-2940-43e6-921d-8aa2d4cfc171",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "R01",
+      "title": "Frontier Observatory for Research in Geothermal Energy (FORGE)",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.energy.gov/hgeo/geothermal/forge",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "R02",
+      "title": "Running Hot, Keeping Cool: FORGE Embarks on Extended Circulation Test",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.energy.gov/hgeo/geothermal/articles/running-hot-keeping-cool-forge-embarks-extended-circulation-test",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "R03",
+      "title": "Geologic controls on supercritical geothermal resources above magmatic intrusions",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/ncomms8837",
+      "doi_url": "https://doi.org/10.1038/ncomms8837",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "R04",
+      "title": "Geothermal Drilling Research",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.energy.gov/hgeo/geothermal/geothermal-drilling-research",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "R05",
+      "title": "Flexible perovskite/silicon tandem solar cells with 33.6% efficiency",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/s41586-025-09849-4",
+      "doi_url": "https://doi.org/10.1038/s41586-025-09849-4",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "R06",
+      "title": "Sensitization of silicon by singlet exciton fission in tetracene",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/s41586-019-1339-4",
+      "doi_url": "https://doi.org/10.1038/s41586-019-1339-4",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "R07",
+      "title": "Hot carrier organic solar cells",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://pubs.rsc.org/en/content/articlehtml/2024/ee/d4ee02612h",
+      "doi_url": "https://doi.org/10.1039/D4EE02612H",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "R08",
+      "title": "Space-Based Solar Power report",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nasa.gov/organizations/otps/space-based-solar-power-report/",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "R09",
+      "title": "Marine Energy Resource Assessment and Characterization",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.energy.gov/cmei/water/marine-energy-resource-assessment-and-characterization",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "R10",
+      "title": "Single-layer MoS2 nanopores as nanopower generators",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/nature18593",
+      "doi_url": "https://doi.org/10.1038/nature18593",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "R11",
+      "title": "Nanowire-Bacteria Hybrids for Unassisted Solar Carbon Dioxide Fixation to Value-Added Chemicals",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://pubs.acs.org/nalefd/article/15/5/3634/1268533/Nanowire-Bacteria-Hybrids-for-Unassisted-Solar",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "C01",
+      "title": "The Feynman Lectures on Physics, Volume II, Chapter 27: Field Energy and Field Momentum",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.feynmanlectures.caltech.edu/II_27.html",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "C02",
+      "title": "Self-Organizing Knotted Magnetic Structures in Plasma",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.115.095001",
+      "doi_url": "https://doi.org/10.1103/PhysRevLett.115.095001",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "C03",
+      "title": "Superconductivity at 250 K in lanthanum hydride under high pressures",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/s41586-019-1201-8",
+      "doi_url": "https://doi.org/10.1038/s41586-019-1201-8",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "C04",
+      "title": "Giant Magnetocaloric Effect in Gd5(Si2Ge2)",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.78.4494",
+      "doi_url": "https://doi.org/10.1103/PhysRevLett.78.4494",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "C05",
+      "title": "Thermophotovoltaic efficiency of 40%",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/s41586-022-04473-y",
+      "doi_url": "https://doi.org/10.1038/s41586-022-04473-y",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "C06",
+      "title": "Radiative heat transfer at the nanoscale",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/nphoton.2009.144",
+      "doi_url": "https://doi.org/10.1038/nphoton.2009.144",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "C07",
+      "title": "Long-distance transport of magnon spin information in a magnetic insulator at room temperature",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/nphys3465",
+      "doi_url": "https://doi.org/10.1038/nphys3465",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "C08",
+      "title": "Ground-State Chemical Reactivity under Vibrational Coupling to the Vacuum Electromagnetic Field",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/anie.201605504",
+      "doi_url": "https://doi.org/10.1002/anie.201605504",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "C09",
+      "title": "Superabsorption in an organic microcavity: Toward a quantum battery",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://doi.org/10.1126/sciadv.abk3160",
+      "doi_url": "https://doi.org/10.1126/sciadv.abk3160",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "C10",
+      "title": "Energy Storage Grand Challenge Roadmap",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.energy.gov/energy-storage-grand-challenge/articles/energy-storage-grand-challenge-roadmap",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "I01",
+      "title": "Avoiding fusion plasma tearing instability with deep reinforcement learning",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.osti.gov/biblio/2326058",
+      "doi_url": "https://doi.org/10.1038/s41586-024-07024-9",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "I02",
+      "title": "Scaling deep learning for materials discovery",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/s41586-023-06735-9",
+      "doi_url": "https://doi.org/10.1038/s41586-023-06735-9",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "I03",
+      "title": "An autonomous laboratory for the accelerated synthesis of inorganic materials",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/s41586-023-06734-w",
+      "doi_url": "https://doi.org/10.1038/s41586-023-06734-w",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "I04",
+      "title": "Quantum error correction below the surface code threshold",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://doi.org/10.1038/s41586-024-08449-y",
+      "doi_url": "https://doi.org/10.1038/s41586-024-08449-y",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "I05",
+      "title": "Limitations for Quantum Algorithms to Solve Turbulent and Chaotic Systems",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://quantum-journal.org/papers/q-2024-10-24-1509/",
+      "doi_url": "https://doi.org/10.22331/q-2024-10-24-1509",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "I06",
+      "title": "Non-Abelian braiding of graph vertices in a superconducting processor",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/s41586-023-05954-4",
+      "doi_url": "https://doi.org/10.1038/s41586-023-05954-4",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "I07",
+      "title": "Quantum Self-Correction in the 3D Cubic Code Model",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.111.200501",
+      "doi_url": "https://doi.org/10.1103/PhysRevLett.111.200501",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "I08",
+      "title": "Long-lived topological time-crystalline order on a quantum processor",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/s41467-024-53077-9",
+      "doi_url": "https://doi.org/10.1038/s41467-024-53077-9",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "I09",
+      "title": "Holographic quantum error-correcting codes: Toy models for the bulk/boundary correspondence",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://arxiv.org/abs/1503.06237",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "I10",
+      "title": "Elucidating reaction mechanisms on quantum computers",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.research-collection.ethz.ch/entities/publication/8f10258c-5fce-40b7-891c-a6729286bcc8",
+      "doi_url": "https://doi.org/10.1073/pnas.1619152114",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "E01",
+      "title": "Passive states and KMS states for general quantum systems",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://link.springer.com/article/10.1007/BF01614224",
+      "doi_url": "https://doi.org/10.1007/BF01614224",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "E02",
+      "title": "Observation of the dynamical Casimir effect in a superconducting circuit",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/nature10561",
+      "doi_url": "https://doi.org/10.1038/nature10561",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "E03",
+      "title": "Absence of Quantum Time Crystals",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26197119/",
+      "doi_url": "https://doi.org/10.1103/PhysRevLett.114.251603",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "E04",
+      "title": "Quantum Energy Teleportation in Spin Chain Systems",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://arxiv.org/abs/0803.0348",
+      "doi_url": "https://doi.org/10.1143/JPSJ.78.034001",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "E05",
+      "title": "A quantum engine in the BEC-BCS crossover",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/s41586-023-06469-8",
+      "doi_url": "https://doi.org/10.1038/s41586-023-06469-8",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "E06",
+      "title": "Observation of coherent elastic neutrino-nucleus scattering",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.ornl.gov/publication/observation-coherent-elastic-neutrino-nucleus-scattering",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "E07",
+      "title": "Direct observation of coherent elastic antineutrino-nucleus scattering",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/s41586-025-09322-2",
+      "doi_url": "https://doi.org/10.1038/s41586-025-09322-2",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "E08",
+      "title": "Search for Axion Dark Matter from 1.1 to 1.3 GHz with ADMX",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://arxiv.org/abs/2504.07279",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "E09",
+      "title": "Long-baseline quantum sensor network as dark matter haloscope",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/s41467-024-47566-0",
+      "doi_url": "https://doi.org/10.1038/s41467-024-47566-0",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "E10",
+      "title": "Antimatter",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://home.cern/science/physics/antimatter/",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "E11",
+      "title": "Electromagnetic extraction of energy from Kerr black holes",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://academic.oup.com/mnras/article/179/3/433/962905",
+      "doi_url": "https://doi.org/10.1093/mnras/179.3.433",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "E12",
+      "title": "Particle creation by black holes",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://doi.org/10.1007/BF02345020",
+      "doi_url": "https://doi.org/10.1007/BF02345020",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "E13",
+      "title": "Observation of the radiative decay of the 229Th nuclear clock isomer",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/s41586-023-05894-z",
+      "doi_url": "https://doi.org/10.1038/s41586-023-05894-z",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "E14",
+      "title": "Revisiting the cold case of cold fusion",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/s41586-019-1256-6",
+      "doi_url": "https://doi.org/10.1038/s41586-019-1256-6",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "E15",
+      "title": "Lattice Confinement Fusion",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nasa.gov/glenn/glenn-expertise-space-exploration/lattice-confinement-fusion/",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "E16",
+      "title": "DESI DR2 Results IV: Alcock-Paczynski Measurements from the Lyman Alpha Forest and Cosmological Constraints",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://arxiv.org/abs/2607.27410",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "D01",
+      "title": "Experimental verification of Landauer's principle linking information and thermodynamics",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/nature10872",
+      "doi_url": "https://doi.org/10.1038/nature10872",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "D02",
+      "title": "Reversible logic gate using adiabatic superconducting devices",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/srep06354",
+      "doi_url": "https://doi.org/10.1038/srep06354",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "D03",
+      "title": "Spike-based dynamic computing with asynchronous sensing-computing neuromorphic chip",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/s41467-024-47811-6",
+      "doi_url": "https://doi.org/10.1038/s41467-024-47811-6",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "D04",
+      "title": "Mixed-precision in-memory computing",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/s41928-018-0054-8",
+      "doi_url": "https://doi.org/10.1038/s41928-018-0054-8",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "D05",
+      "title": "Three-dimensional photonic integration for ultra-low-energy, high-bandwidth interchip data links",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://doi.org/10.1038/s41566-025-01633-0",
+      "doi_url": "https://doi.org/10.1038/s41566-025-01633-0",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "D06",
+      "title": "Simulation and assimilation of the digital human brain",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/s43588-024-00731-3",
+      "doi_url": "https://doi.org/10.1038/s43588-024-00731-3",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "D07",
+      "title": "Neuronal wiring diagram of an adult brain",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://doi.org/10.1038/s41586-024-07558-y",
+      "doi_url": "https://doi.org/10.1038/s41586-024-07558-y",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "D08",
+      "title": "Adversarial testing of global neuronal workspace and integrated information theories of consciousness",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/s41586-025-08888-1",
+      "doi_url": "https://doi.org/10.1038/s41586-025-08888-1",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "D09",
+      "title": "Passive radiative cooling below ambient air temperature under direct sunlight",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/nature13883",
+      "doi_url": "https://doi.org/10.1038/nature13883",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "D10",
+      "title": "Providing decent living with minimum energy: A global scenario",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0959378020307512",
+      "doi_url": "https://doi.org/10.1016/j.gloenvcha.2020.102168",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "D11",
+      "title": "Integrating anthropogenic heat flux with global climate models",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2008GL036465",
+      "doi_url": "https://doi.org/10.1029/2008GL036465",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "D12",
+      "title": "Whole brain emulation: a roadmap",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://ora.ox.ac.uk/objects/uuid%3Aa6880196-34c7-47a0-80f1-74d32ab98788",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "R12",
+      "title": "Numerical investigation of closed-loop geothermal systems in deep geothermal reservoirs",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0375650523002079",
+      "doi_url": "https://doi.org/10.1016/j.geothermics.2023.102852",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "C11",
+      "title": "Complex thermoelectric materials",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/nmat2090",
+      "doi_url": "https://doi.org/10.1038/nmat2090",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "I11",
+      "title": "Author Correction: An autonomous laboratory for the accelerated synthesis of inorganic materials",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://www.nature.com/articles/s41586-025-09992-y",
+      "doi_url": "https://doi.org/10.1038/s41586-025-09992-y",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "I12",
+      "title": "Challenges in High-Throughput Inorganic Materials Prediction and Autonomous Synthesis",
+      "record_type": "SCIENTIFIC_OR_OFFICIAL",
+      "url": "https://journals.aps.org/prxenergy/abstract/10.1103/PRXEnergy.3.011002",
+      "doi_url": "https://doi.org/10.1103/PRXEnergy.3.011002",
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "T01",
+      "title": "TORAX",
+      "record_type": "SOFTWARE",
+      "url": "https://github.com/google-deepmind/torax",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "T02",
+      "title": "SIMSOPT",
+      "record_type": "SOFTWARE",
+      "url": "https://github.com/hiddenSymmetries/simsopt",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "T03",
+      "title": "DESC",
+      "record_type": "SOFTWARE",
+      "url": "https://github.com/PlasmaControl/DESC",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "T04",
+      "title": "PlasmaPy",
+      "record_type": "SOFTWARE",
+      "url": "https://github.com/PlasmaPy/PlasmaPy",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "T05",
+      "title": "OpenMC",
+      "record_type": "SOFTWARE",
+      "url": "https://github.com/openmc-dev/openmc",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "T06",
+      "title": "BOUT++",
+      "record_type": "SOFTWARE",
+      "url": "https://github.com/boutproject/BOUT-dev",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "T07",
+      "title": "Stim",
+      "record_type": "SOFTWARE",
+      "url": "https://github.com/quantumlib/Stim",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "T08",
+      "title": "QuTiP",
+      "record_type": "SOFTWARE",
+      "url": "https://github.com/qutip/qutip",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "T09",
+      "title": "NetKet",
+      "record_type": "SOFTWARE",
+      "url": "https://github.com/netket/netket",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "T10",
+      "title": "Qiskit",
+      "record_type": "SOFTWARE",
+      "url": "https://github.com/Qiskit/qiskit",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "T11",
+      "title": "GNoME materials_discovery",
+      "record_type": "SOFTWARE",
+      "url": "https://github.com/google-deepmind/materials_discovery",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "T12",
+      "title": "pymatgen",
+      "record_type": "SOFTWARE",
+      "url": "https://github.com/materialsproject/pymatgen",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "T13",
+      "title": "OpenMDAO",
+      "record_type": "SOFTWARE",
+      "url": "https://github.com/OpenMDAO/OpenMDAO",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "T14",
+      "title": "PyPSA",
+      "record_type": "SOFTWARE",
+      "url": "https://github.com/PyPSA/PyPSA",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "T15",
+      "title": "The Virtual Brain",
+      "record_type": "SOFTWARE",
+      "url": "https://github.com/the-virtual-brain/tvb-root",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "T16",
+      "title": "Digital twin brain open resources",
+      "record_type": "SOFTWARE",
+      "url": "https://github.com/DTB-consortium/Digital_twin_brain-open",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "T17",
+      "title": "Calorimetry System Identification (CSID)",
+      "record_type": "SOFTWARE",
+      "url": "https://github.com/calorimetry/CSID",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "T18",
+      "title": "Meep",
+      "record_type": "SOFTWARE",
+      "url": "https://github.com/NanoComp/meep",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "T19",
+      "title": "GeoCLUSTER",
+      "record_type": "SOFTWARE",
+      "url": "https://github.com/pnnl/GeoCLUSTER",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "P01",
+      "title": "arXiv",
+      "record_type": "PORTAL",
+      "url": "https://arxiv.org/",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "P02",
+      "title": "DOE OSTI",
+      "record_type": "PORTAL",
+      "url": "https://www.osti.gov/",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "P03",
+      "title": "NASA NTRS",
+      "record_type": "PORTAL",
+      "url": "https://ntrs.nasa.gov/",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "P04",
+      "title": "INSPIRE",
+      "record_type": "PORTAL",
+      "url": "https://inspirehep.net/",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "P05",
+      "title": "Zenodo",
+      "record_type": "PORTAL",
+      "url": "https://zenodo.org/",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "P06",
+      "title": "Geothermal Data Repository",
+      "record_type": "PORTAL",
+      "url": "https://gdr.openei.org/",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "P07",
+      "title": "Materials Project",
+      "record_type": "PORTAL",
+      "url": "https://materialsproject.org/",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "P08",
+      "title": "OpenAlex",
+      "record_type": "PORTAL",
+      "url": "https://openalex.org/",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "P09",
+      "title": "Crossref",
+      "record_type": "PORTAL",
+      "url": "https://www.crossref.org/",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "P10",
+      "title": "DESI publication and data index",
+      "record_type": "PORTAL",
+      "url": "https://data.desi.lbl.gov/doc/papers/",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    },
+    {
+      "id": "P11",
+      "title": "Oxford Research Archive",
+      "record_type": "PORTAL",
+      "url": "https://ora.ox.ac.uk/objects/uuid%3Aa6880196-34c7-47a0-80f1-74d32ab98788",
+      "doi_url": null,
+      "verification": {
+        "status": "SOURCE_RECORD_PRESENT",
+        "receipt": null,
+        "note": "Inventory record only; primary-result verification is not implied."
+      }
+    }
+  ]
+}

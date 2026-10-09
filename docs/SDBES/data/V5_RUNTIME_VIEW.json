@@ -1,0 +1,1938 @@
+{
+  "schema_name": "SDBES_V5_READ_ONLY_RUNTIME_R2",
+  "snapshot_date": "2026-10-09",
+  "mode": "READ_ONLY",
+  "source_snapshots": [
+    {
+      "path": "research/claims.json",
+      "sha256": "4569f39206e20c15b8f84fdab9822e7751e79364b8a47523eafa55e08027d49a",
+      "role": "13 legacy Observatory program claims"
+    }
+  ],
+  "reviewed_claims": [
+    {
+      "id": "N01",
+      "title": "The SPARC Toroidal Field Model Coil Program",
+      "type": [
+        "experimental",
+        "engineering"
+      ],
+      "candidate": "DBE-A01",
+      "direct_claim": "Representative-scale REBCO toroidal-field model coil was built and tested at approximately 20 T peak field on the conductor under reported conditions.",
+      "application_claim": "A compact high-field tokamak can export dependable net electricity.",
+      "application_relation": "COMPONENT_EVIDENCE_FOR",
+      "framework_result": "PASS_WITH_SCHEMA_EXTENSION",
+      "stress": [
+        "application_relation",
+        "demonstration_context"
+      ],
+      "record_type": "REVIEWED_CLAIM_CASE",
+      "review_workflow": "REVIEWED",
+      "assessment_result": "PASS_WITH_SCHEMA_EXTENSION",
+      "assessment_scope": "Frozen V1-V4 regression case; not an independent reproduction.",
+      "v4_contract": "component evidence requires composition and transfer assessment before whole-plant use",
+      "source_locator": {
+        "path": "docs/SDBES/tests/V1_V2_10_PAPER_ASSESSMENTS.json",
+        "record_id": "N01",
+        "exact_primary_result_location": null,
+        "status": "INVENTORY_LOCATOR_ONLY"
+      }
+    },
+    {
+      "id": "C02",
+      "title": "Self-Organizing Knotted Magnetic Structures in Plasma",
+      "type": [
+        "simulation",
+        "analytic_model"
+      ],
+      "candidate": "DBE-C03",
+      "direct_claim": "Full-MHD simulations produce quasistable linked/knotted configurations with nested toroidal surfaces under modeled conditions.",
+      "application_claim": "Topology-informed magnetic design can improve fusion confinement without unacceptable transport or control costs.",
+      "application_relation": "MECHANISM_SEED_FOR",
+      "framework_result": "PASS_WITH_SCHEMA_EXTENSION",
+      "stress": [
+        "simulation_world_correspondence",
+        "application_relation"
+      ],
+      "record_type": "REVIEWED_CLAIM_CASE",
+      "review_workflow": "REVIEWED",
+      "assessment_result": "PASS_WITH_SCHEMA_EXTENSION",
+      "assessment_scope": "Frozen V1-V4 regression case; not an independent reproduction.",
+      "v4_contract": "mechanistic simulation is SCENARIO_ONLY and cannot claim fusion-grade validation",
+      "source_locator": {
+        "path": "docs/SDBES/tests/V1_V2_10_PAPER_ASSESSMENTS.json",
+        "record_id": "C02",
+        "exact_primary_result_location": null,
+        "status": "INVENTORY_LOCATOR_ONLY"
+      }
+    },
+    {
+      "id": "C09",
+      "title": "Superabsorption in an organic microcavity: Toward a quantum battery",
+      "type": [
+        "experimental",
+        "theoretical_model"
+      ],
+      "candidate": "DBE-C13",
+      "direct_claim": "The tested organic microcavity exhibits collective/superextensive charging behavior and energy-storage dynamics.",
+      "application_claim": "Collective quantum effects can provide useful repeated storage service after charging, discharge and wall-plug losses.",
+      "application_relation": "COMPONENT_EVIDENCE_FOR",
+      "framework_result": "PASS_WITH_SCHEMA_EXTENSION",
+      "stress": [
+        "demonstration_context",
+        "application_relation"
+      ],
+      "record_type": "REVIEWED_CLAIM_CASE",
+      "review_workflow": "REVIEWED",
+      "assessment_result": "PASS_WITH_SCHEMA_EXTENSION",
+      "assessment_scope": "Frozen V1-V4 regression case; not an independent reproduction.",
+      "v4_contract": "charging mechanism cannot become storage service without a complete typed cycle balance",
+      "source_locator": {
+        "path": "docs/SDBES/tests/V1_V2_10_PAPER_ASSESSMENTS.json",
+        "record_id": "C09",
+        "exact_primary_result_location": null,
+        "status": "INVENTORY_LOCATOR_ONLY"
+      }
+    },
+    {
+      "id": "I01",
+      "title": "Avoiding fusion plasma tearing instability with deep reinforcement learning",
+      "type": [
+        "experimental",
+        "causal_intervention",
+        "control"
+      ],
+      "candidate": "DBE-D01",
+      "direct_claim": "A learned predictive/control workflow was experimentally used on DIII-D to avoid tearing instability within the tested regime.",
+      "application_claim": "Learned controllers can improve plasma performance and robustness against defined baselines.",
+      "application_relation": "DIRECT_EVIDENCE_FOR_BOUNDED_CLAIM",
+      "framework_result": "PASS",
+      "stress": [
+        "generalization_status"
+      ],
+      "record_type": "REVIEWED_CLAIM_CASE",
+      "review_workflow": "REVIEWED",
+      "assessment_result": "PASS",
+      "assessment_scope": "Frozen V1-V4 regression case; not an independent reproduction.",
+      "v4_contract": "bounded source-device intervention remains valid; cross-device transfer remains PARTIAL",
+      "source_locator": {
+        "path": "docs/SDBES/tests/V1_V2_10_PAPER_ASSESSMENTS.json",
+        "record_id": "I01",
+        "exact_primary_result_location": null,
+        "status": "INVENTORY_LOCATOR_ONLY"
+      }
+    },
+    {
+      "id": "I02",
+      "title": "Scaling deep learning for materials discovery",
+      "type": [
+        "computational",
+        "empirical_crosscheck"
+      ],
+      "candidate": "DBE-D03",
+      "direct_claim": "Learned models and first-principles calculations enable large-scale computational prediction of candidate stable crystal structures.",
+      "application_claim": "AI-guided discovery increases the rate of independently verified useful energy materials.",
+      "application_relation": "COMPONENT_EVIDENCE_FOR",
+      "framework_result": "PASS_WITH_SCHEMA_EXTENSION",
+      "stress": [
+        "composite_claim_decomposition",
+        "application_relation"
+      ],
+      "record_type": "REVIEWED_CLAIM_CASE",
+      "review_workflow": "REVIEWED",
+      "assessment_result": "PASS_WITH_SCHEMA_EXTENSION",
+      "assessment_scope": "Frozen V1-V4 regression case; not an independent reproduction.",
+      "v4_contract": "candidate discovery updates K(t), not deployed energy-system state X(t)",
+      "source_locator": {
+        "path": "docs/SDBES/tests/V1_V2_10_PAPER_ASSESSMENTS.json",
+        "record_id": "I02",
+        "exact_primary_result_location": null,
+        "status": "INVENTORY_LOCATOR_ONLY"
+      }
+    },
+    {
+      "id": "I03",
+      "title": "An autonomous laboratory for the accelerated synthesis of inorganic materials",
+      "type": [
+        "experimental",
+        "autonomous_workflow",
+        "corrected"
+      ],
+      "candidate": "DBE-D04",
+      "direct_claim": "The corrected article reports autonomous realization of 36 compounds from 57 targets in the campaign.",
+      "application_claim": "Closed-loop autonomous laboratories can produce reproducible discoveries more efficiently than strong baselines.",
+      "application_relation": "COMPONENT_EVIDENCE_FOR",
+      "framework_result": "PASS_SCHEMA_AMENDMENT_REQUIRED",
+      "stress": [
+        "assessment_supersession",
+        "external_challenge",
+        "verification_provenance",
+        "claim_specific_correction"
+      ],
+      "record_type": "REVIEWED_CLAIM_CASE",
+      "review_workflow": "REVIEWED",
+      "assessment_result": "PASS_SCHEMA_AMENDMENT_REQUIRED",
+      "assessment_scope": "Frozen V1-V4 regression case; not an independent reproduction.",
+      "v4_contract": "V4 preserves the V2/V3 correction and assessment lineage without changing the verdict",
+      "source_locator": {
+        "path": "docs/SDBES/tests/V1_V2_10_PAPER_ASSESSMENTS.json",
+        "record_id": "I03",
+        "exact_primary_result_location": null,
+        "status": "INVENTORY_LOCATOR_ONLY"
+      }
+    },
+    {
+      "id": "I04",
+      "title": "Quantum error correction below the surface code threshold",
+      "type": [
+        "experimental",
+        "quantum_hardware",
+        "corrected"
+      ],
+      "candidate": "DBE-D10",
+      "direct_claim": "The tested surface-code memories operate below threshold with logical-error suppression as code distance increases and real-time decoding.",
+      "application_claim": "Error correction and decoding can reduce total overhead enough for useful fault-tolerant quantum computation and scientific simulation.",
+      "application_relation": "COMPONENT_EVIDENCE_FOR",
+      "framework_result": "PASS_WITH_SCHEMA_EXTENSION",
+      "stress": [
+        "composite_claim_decomposition",
+        "demonstration_context",
+        "assessment_versioning"
+      ],
+      "record_type": "REVIEWED_CLAIM_CASE",
+      "review_workflow": "REVIEWED",
+      "assessment_result": "PASS_WITH_SCHEMA_EXTENSION",
+      "assessment_scope": "Frozen V1-V4 regression case; not an independent reproduction.",
+      "v4_contract": "memory demonstration cannot silently promote to fault-tolerant computer or scientific workload",
+      "source_locator": {
+        "path": "docs/SDBES/tests/V1_V2_10_PAPER_ASSESSMENTS.json",
+        "record_id": "I04",
+        "exact_primary_result_location": null,
+        "status": "INVENTORY_LOCATOR_ONLY"
+      }
+    },
+    {
+      "id": "I07",
+      "title": "Quantum Self-Correction in the 3D Cubic Code Model",
+      "type": [
+        "formal",
+        "numerical",
+        "model"
+      ],
+      "candidate": "DBE-D12",
+      "direct_claim": "The specified 3D cubic-code model has proved lower-bound and numerical evidence for finite-size/temperature-dependent memory-lifetime enhancement.",
+      "application_claim": "Self-correcting quantum memories are practically useful and implementable at realistic hardware cost.",
+      "application_relation": "MODEL_EVIDENCE_FOR",
+      "framework_result": "PASS",
+      "stress": [
+        "formal_result_subtype"
+      ],
+      "record_type": "REVIEWED_CLAIM_CASE",
+      "review_workflow": "REVIEWED",
+      "assessment_result": "PASS",
+      "assessment_scope": "Frozen V1-V4 regression case; not an independent reproduction.",
+      "v4_contract": "formal/model result is not authorized for device prediction or hardware transfer",
+      "source_locator": {
+        "path": "docs/SDBES/tests/V1_V2_10_PAPER_ASSESSMENTS.json",
+        "record_id": "I07",
+        "exact_primary_result_location": null,
+        "status": "INVENTORY_LOCATOR_ONLY"
+      }
+    },
+    {
+      "id": "E03",
+      "title": "Absence of Quantum Time Crystals",
+      "type": [
+        "formal",
+        "no_go_theorem"
+      ],
+      "candidate": "DBE-D13",
+      "direct_claim": "Under stated definitions and assumptions, the specified equilibrium time-crystal behavior is ruled out.",
+      "application_claim": "Driven/Floquet time-crystalline phases can provide useful synchronization or reliability.",
+      "application_relation": "SCOPE_LIMIT_ON",
+      "framework_result": "STRONG_PASS",
+      "stress": [],
+      "record_type": "REVIEWED_CLAIM_CASE",
+      "review_workflow": "REVIEWED",
+      "assessment_result": "STRONG_PASS",
+      "assessment_scope": "Frozen V1-V4 regression case; not an independent reproduction.",
+      "v4_contract": "formal no-go scope is preserved and not expanded into a physical claim outside assumptions",
+      "source_locator": {
+        "path": "docs/SDBES/tests/V1_V2_10_PAPER_ASSESSMENTS.json",
+        "record_id": "E03",
+        "exact_primary_result_location": null,
+        "status": "INVENTORY_LOCATOR_ONLY"
+      }
+    },
+    {
+      "id": "E04",
+      "title": "Quantum Energy Teleportation in Spin Chain Systems",
+      "type": [
+        "theoretical_model",
+        "protocol"
+      ],
+      "candidate": "DBE-E04",
+      "direct_claim": "A spin-chain model protocol permits distant local energy extraction using local operations, classical communication and ground-state correlations while respecting causality and local energy conservation.",
+      "application_claim": "QET can provide a useful practical energy-control or transmission function after all resource costs.",
+      "application_relation": "MODEL_EVIDENCE_FOR",
+      "framework_result": "PASS_WITH_SCHEMA_EXTENSION",
+      "stress": [
+        "capability_separation",
+        "demonstration_context",
+        "application_relation"
+      ],
+      "record_type": "REVIEWED_CLAIM_CASE",
+      "review_workflow": "REVIEWED",
+      "assessment_result": "PASS_WITH_SCHEMA_EXTENSION",
+      "assessment_scope": "Frozen V1-V4 regression case; not an independent reproduction.",
+      "v4_contract": "model protocol cannot claim practical energy service without complete resource accounting",
+      "source_locator": {
+        "path": "docs/SDBES/tests/V1_V2_10_PAPER_ASSESSMENTS.json",
+        "record_id": "E04",
+        "exact_primary_result_location": null,
+        "status": "INVENTORY_LOCATOR_ONLY"
+      }
+    }
+  ],
+  "program_claims": [
+    {
+      "id": "E-S3",
+      "doc": "DBE",
+      "name": "S3 braid + fusion",
+      "claim": "S3 braid+fusion is the topological primitive",
+      "status": "KEEP",
+      "C": "C3",
+      "T": "T3",
+      "D": "D3",
+      "A": "A3",
+      "bus": "B",
+      "verdict": "KEEP. Load-bearing topological primitive. Cyclic fusion (S3 + fusion measurement) is the universality reason, not a new bus.",
+      "evidence": [
+        "lo-2026",
+        "kitaev-1997",
+        "nayak-2008",
+        "levaillant-2015",
+        "lyons-2026",
+        "gattu-jain-2026",
+        "witten-cs-2026",
+        "perez-fadon-2026",
+        "faurot-2026"
+      ],
+      "disputer": "Braiding alone is not universal for S3; fusion measurement must stay in the gate set (Freedman–Larsen–Wang / Levaillant).",
+      "kill": "If fusion is dropped and braid-only compilation fails, E-S3 is no longer a universal primitive.",
+      "record_type": "LEGACY_PROGRAM_CLAIM",
+      "review_workflow": "IMPORTED_SNAPSHOT",
+      "assessment_scope": "Program-use decision in the pinned research snapshot; not universal scientific status.",
+      "source_locator": {
+        "path": "research/claims.json",
+        "record_id": "E-S3"
+      }
+    },
+    {
+      "id": "E-QEC",
+      "doc": "DBE",
+      "name": "Surface-code / qLDPC error layer",
+      "claim": "Surface-code / qLDPC is the error layer",
+      "status": "KEEP",
+      "C": "C4",
+      "T": "T3",
+      "D": "D3",
+      "A": "A3",
+      "bus": "B",
+      "verdict": "KEEP as default error layer.",
+      "evidence": [
+        "google-willow-2024",
+        "tamiya-2026",
+        "bluvstein-2023",
+        "dehghani-2026",
+        "hartweg-2026",
+        "iacobacci-2026",
+        "han-qldpc-coherent-2026",
+        "baldelli-qd-qldpc-2026",
+        "shutty-dense-color-2026"
+      ],
+      "disputer": "Threshold papers are still Abelian; they do not make non-Abelian decoding free.",
+      "kill": "If a larger code makes logical error worse on the relevant platform, drop as default.",
+      "record_type": "LEGACY_PROGRAM_CLAIM",
+      "review_workflow": "IMPORTED_SNAPSHOT",
+      "assessment_scope": "Program-use decision in the pinned research snapshot; not universal scientific status.",
+      "source_locator": {
+        "path": "research/claims.json",
+        "record_id": "E-QEC"
+      }
+    },
+    {
+      "id": "E-RL",
+      "doc": "DBE",
+      "name": "RL / AI plant control",
+      "claim": "RL/AI control attaches to an existing plant bus",
+      "status": "KEEP",
+      "C": "C4",
+      "T": "T3",
+      "D": "D3",
+      "A": "A3",
+      "bus": "A",
+      "verdict": "KEEP. First attach point. No quantum hardware required.",
+      "evidence": [
+        "seo-2024",
+        "degrave-2022",
+        "rothstein-2026",
+        "virtual-circuits-2026",
+        "subbotin-2026",
+        "rl4f-2026",
+        "koshizuka-2026",
+        "gaytan-2026",
+        "kaltsas-2026",
+        "xie-veqdb-2026",
+        "wang-invgs-2026",
+        "yang-tokaglint-2026"
+      ],
+      "disputer": "Loop cannot close inside tearing / Alfvén times if I/O is a quantum job queue.",
+      "kill": "Fail M2 if the module cannot beat the lab baseline on one disruption-relevant metric.",
+      "record_type": "LEGACY_PROGRAM_CLAIM",
+      "review_workflow": "IMPORTED_SNAPSHOT",
+      "assessment_scope": "Program-use decision in the pinned research snapshot; not universal scientific status.",
+      "source_locator": {
+        "path": "research/claims.json",
+        "record_id": "E-RL"
+      }
+    },
+    {
+      "id": "E-MZM",
+      "doc": "DBE",
+      "name": "Majorana zero-mode qubits",
+      "claim": "Majorana zero modes as load-bearing qubits",
+      "status": "WATCH",
+      "C": "C1",
+      "T": "T3",
+      "D": "D3",
+      "A": "A2",
+      "bus": "B",
+      "verdict": "WATCH. Do not make load-bearing. S3 is the braid primitive we have.",
+      "evidence": [
+        "kitaev-2001-wires",
+        "kitaev-honeycomb",
+        "majorana-landscape-2026",
+        "majorana-shotnoise-2026",
+        "roy-mzmcapp-2026",
+        "sahu-noisy-braid-2026"
+      ],
+      "disputer": "Trivial Andreev / YSR mimics; Nature caveat on Majorana 1; missing public X+Z logical on Majorana 2.",
+      "kill": "No independent X and Z logical ops with topological-gap scaling → drop as load-bearing.",
+      "record_type": "LEGACY_PROGRAM_CLAIM",
+      "review_workflow": "IMPORTED_SNAPSHOT",
+      "assessment_scope": "Program-use decision in the pinned research snapshot; not universal scientific status.",
+      "source_locator": {
+        "path": "research/claims.json",
+        "record_id": "E-MZM"
+      }
+    },
+    {
+      "id": "E-TC",
+      "doc": "DBE",
+      "name": "Floquet time crystal as clock",
+      "claim": "Floquet time crystal as system clock",
+      "status": "CUT",
+      "C": "C1",
+      "T": "T2",
+      "D": "D1",
+      "A": "A2",
+      "bus": null,
+      "verdict": "CUT as metronome. Classical clock + QEC cycle only. Time-crystal physics stays on the reading list.",
+      "evidence": [
+        "else-2016",
+        "wilczek-2012",
+        "watanabe-2014",
+        "floquet-fracton-2026",
+        "cole-aperiodic-2026",
+        "chen-tqc-2026"
+      ],
+      "disputer": "Prethermal lifetime vs required shot duration.",
+      "kill": "Lifetime < control horizon → cut as clock.",
+      "record_type": "LEGACY_PROGRAM_CLAIM",
+      "review_workflow": "IMPORTED_SNAPSHOT",
+      "assessment_scope": "Program-use decision in the pinned research snapshot; not universal scientific status.",
+      "source_locator": {
+        "path": "research/claims.json",
+        "record_id": "E-TC"
+      }
+    },
+    {
+      "id": "E-FR",
+      "doc": "DBE",
+      "name": "Fracton hardware memory",
+      "claim": "Fracton code as hardware memory",
+      "status": "CUT",
+      "C": "C2",
+      "T": "T2",
+      "D": "D1",
+      "A": "A2",
+      "bus": null,
+      "verdict": "CUT from the hardware stack. Fracton codes remain theory. Do not store a control bit on a 3D multi-body Hamiltonian.",
+      "evidence": [
+        "bravyi-haah-2011",
+        "pretko-2020",
+        "hopkin-2026",
+        "floquet-fracton-2026"
+      ],
+      "disputer": "No 3D fracton processor exists; Haah/X-cube remain theory.",
+      "kill": "If D stays D1, it cannot ride Bus B as memory.",
+      "record_type": "LEGACY_PROGRAM_CLAIM",
+      "review_workflow": "IMPORTED_SNAPSHOT",
+      "assessment_scope": "Program-use decision in the pinned research snapshot; not universal scientific status.",
+      "source_locator": {
+        "path": "research/claims.json",
+        "record_id": "E-FR"
+      }
+    },
+    {
+      "id": "E-HOL",
+      "doc": "DBE",
+      "name": "Holographic encoding",
+      "claim": "Holographic encoding as a reactor/processor part",
+      "status": "CUT",
+      "C": "C0",
+      "T": "T0",
+      "D": "D0",
+      "A": "A0",
+      "bus": null,
+      "verdict": "CUT from the engine. AdS/CFT stays on the reading list. Not a reactor or processor part.",
+      "evidence": [
+        "maldacena-1997",
+        "almheiri-2015",
+        "wormhole-2022",
+        "holographic-ions-2026",
+        "liu-ads-2026"
+      ],
+      "disputer": "Duality ≠ a tokamak I/O map. T=0 as a reactor part.",
+      "kill": "Already cut. Reversal needs two independent C≥4 sources.",
+      "record_type": "LEGACY_PROGRAM_CLAIM",
+      "review_workflow": "IMPORTED_SNAPSHOT",
+      "assessment_scope": "Program-use decision in the pinned research snapshot; not universal scientific status.",
+      "source_locator": {
+        "path": "research/claims.json",
+        "record_id": "E-HOL"
+      }
+    },
+    {
+      "id": "E-5",
+      "doc": "DBE",
+      "name": "Five-way coupled engine",
+      "claim": "Five subsystems coupled as one device",
+      "status": "CUT",
+      "C": "C1",
+      "T": "T1",
+      "D": "D0",
+      "A": "A0",
+      "bus": null,
+      "verdict": "CUT as a first system. Coupling is a new C1 claim. Reintroduce only after modules pass on one bus.",
+      "evidence": [
+        "dbe-whitepaper"
+      ],
+      "disputer": "Coupling is a new claim and starts at C1. No subsystem may raise another’s C.",
+      "kill": "A module that cannot state inputs, outputs, latency, and fail-safe is not a module.",
+      "record_type": "LEGACY_PROGRAM_CLAIM",
+      "review_workflow": "IMPORTED_SNAPSHOT",
+      "assessment_scope": "Program-use decision in the pinned research snapshot; not universal scientific status.",
+      "source_locator": {
+        "path": "research/claims.json",
+        "record_id": "E-5"
+      }
+    },
+    {
+      "id": "S-L1",
+      "doc": "DBE-S",
+      "name": "Lindblad coherence penalty",
+      "claim": "Lindblad coherence penalty P_coh is computable vs n,T",
+      "status": "HOLD",
+      "C": "C2",
+      "T": "T2",
+      "D": "D1",
+      "A": "A3",
+      "bus": "C",
+      "verdict": "HOLD. First output must be P_coh vs n,T.",
+      "evidence": [
+        "dbe-s-revision",
+        "floquet-tunneling-2023"
+      ],
+      "disputer": "Collision frequencies at fusion-relevant n,T vs optical pumping rate.",
+      "kill": "If P_coh / P_fusion ≥ 0.1 at any useful density, L1 fails.",
+      "record_type": "LEGACY_PROGRAM_CLAIM",
+      "review_workflow": "IMPORTED_SNAPSHOT",
+      "assessment_scope": "Program-use decision in the pinned research snapshot; not universal scientific status.",
+      "source_locator": {
+        "path": "research/claims.json",
+        "record_id": "S-L1"
+      }
+    },
+    {
+      "id": "S-L2",
+      "doc": "DBE-S",
+      "name": "Floquet / multiphoton barrier evasion",
+      "claim": "Floquet/Volkov drive enhances DT tunneling at reachable I,ω",
+      "status": "HOLD",
+      "C": "C1",
+      "T": "T2",
+      "D": "D1",
+      "A": "A2",
+      "bus": "C",
+      "verdict": "HOLD. Must beat published FV/CN baselines. Required fields are extreme.",
+      "evidence": [
+        "prc109-2024",
+        "prc110-2024",
+        "assisted-fusion-2019",
+        "dbe-s-revision",
+        "perez-gonzalez-floquet-2026"
+      ],
+      "disputer": "PRC 109 10^15–10^16 V/m; PRC 110 10^27–10^29 W/cm^2; KH vs FV disagreement.",
+      "kill": "After hole-burning + instability, net <2× thermal rate at reachable I,ω → Layer 2 off the plant path.",
+      "record_type": "LEGACY_PROGRAM_CLAIM",
+      "review_workflow": "IMPORTED_SNAPSHOT",
+      "assessment_scope": "Program-use decision in the pinned research snapshot; not universal scientific status.",
+      "source_locator": {
+        "path": "research/claims.json",
+        "record_id": "S-L2"
+      }
+    },
+    {
+      "id": "S-L3",
+      "doc": "DBE-S",
+      "name": "Vlasov / hole-burning / SRS-SBS",
+      "claim": "Vlasov / hole-burning / SRS-SBS must sit in the rate",
+      "status": "KEEP",
+      "C": "C4",
+      "T": "T2",
+      "D": "D2",
+      "A": "A3",
+      "bus": "C",
+      "verdict": "KEEP the solvers. Do not skip them. C1 for DBE coupling.",
+      "evidence": [
+        "dbe-s-revision"
+      ],
+      "disputer": "Resonant depletion without repopulation kills bulk rate.",
+      "kill": "A rate that assumes infinite Maxwellian refill is void.",
+      "record_type": "LEGACY_PROGRAM_CLAIM",
+      "review_workflow": "IMPORTED_SNAPSHOT",
+      "assessment_scope": "Program-use decision in the pinned research snapshot; not universal scientific status.",
+      "source_locator": {
+        "path": "research/claims.json",
+        "record_id": "S-L3"
+      }
+    },
+    {
+      "id": "S-L4",
+      "doc": "DBE-S",
+      "name": "Cavity suppression + direct conversion",
+      "claim": "Cavity suppression + direct conversion are net sources",
+      "status": "HOLD",
+      "C": "C1",
+      "T": "T1",
+      "D": "D1",
+      "A": "A1",
+      "bus": "C",
+      "verdict": "HOLD. Energy sink, not a source.",
+      "evidence": [
+        "dbe-s-revision"
+      ],
+      "disputer": "High-Z Bremsstrahlung (p-11B, Z=5) classically exceeds fusion power at equilibrium.",
+      "kill": "Model as a loss-reduction term with an independent unstaged-plasma baseline, or drop.",
+      "record_type": "LEGACY_PROGRAM_CLAIM",
+      "review_workflow": "IMPORTED_SNAPSHOT",
+      "assessment_scope": "Program-use decision in the pinned research snapshot; not universal scientific status.",
+      "source_locator": {
+        "path": "research/claims.json",
+        "record_id": "S-L4"
+      }
+    },
+    {
+      "id": "S-Q",
+      "doc": "DBE-S",
+      "name": "Stack Q_eng ≈ 1000",
+      "claim": "Net Q ≈ 1000 from L1–L4 as written",
+      "status": "CUT",
+      "C": "C1",
+      "T": "T2",
+      "D": "D0",
+      "A": "A0",
+      "bus": "C",
+      "verdict": "CUT as output. KEEP as ledger stress test. Fail-unless-proven. Not a number the paper may quote as a result.",
+      "evidence": [
+        "dbe-s-revision",
+        "prc109-2024",
+        "prc110-2024"
+      ],
+      "disputer": "NIF Q_sci ≈ 4.13 (Apr 2025); JET Q ≈ 0.67; no MCF Q_sci > 1; plant Q unshown.",
+      "kill": "Any stack whose energy ledger omits drive, pumping, and conversion → reject the number.",
+      "record_type": "LEGACY_PROGRAM_CLAIM",
+      "review_workflow": "IMPORTED_SNAPSHOT",
+      "assessment_scope": "Program-use decision in the pinned research snapshot; not universal scientific status.",
+      "source_locator": {
+        "path": "research/claims.json",
+        "record_id": "S-Q"
+      }
+    }
+  ],
+  "program_claim_rubric": {
+    "freeze": "2026-10-02",
+    "rule": "PASS if C≥3 and T≥2 and D≥2. HOLD if C=2 and T≥2. CUT if T=0 or C≤1 after a distinguisher or D=0. Coupling is a new claim and starts at C1. Heuristic 0–100 gauges are harvest metadata and never move C.",
+    "axes": {
+      "C": [
+        {
+          "id": "C0",
+          "meaning": "No closed math, or math that contradicts a conservation law"
+        },
+        {
+          "id": "C1",
+          "meaning": "Theory only, contested or mimic-prone"
+        },
+        {
+          "id": "C2",
+          "meaning": "Standard theory, textbooks agree, no relevant experiment"
+        },
+        {
+          "id": "C3",
+          "meaning": "Analog or digital-quantum demo on a processor, not the target platform"
+        },
+        {
+          "id": "C4",
+          "meaning": "Experiment on the relevant class of machine"
+        },
+        {
+          "id": "C5",
+          "meaning": "Repeated by independent labs or in engineering use"
+        }
+      ],
+      "T": [
+        {
+          "id": "T0",
+          "meaning": "Not falsifiable as written"
+        },
+        {
+          "id": "T1",
+          "meaning": "Falsifiable only after a multi-year facility exists"
+        },
+        {
+          "id": "T2",
+          "meaning": "Falsifiable in simulation against a published baseline this quarter"
+        },
+        {
+          "id": "T3",
+          "meaning": "Falsifiable on existing hardware or a tabletop this year"
+        }
+      ],
+      "D": [
+        {
+          "id": "D0",
+          "meaning": "Cannot be built; conflicts with measured rates or energy accounting"
+        },
+        {
+          "id": "D1",
+          "meaning": "Simulation only"
+        },
+        {
+          "id": "D2",
+          "meaning": "Module that can bolt onto an existing machine"
+        },
+        {
+          "id": "D3",
+          "meaning": "Hardware that labs or companies are already building"
+        }
+      ],
+      "A": [
+        {
+          "id": "A0",
+          "meaning": "Our notes only"
+        },
+        {
+          "id": "A1",
+          "meaning": "A few papers, <50 citations, no company"
+        },
+        {
+          "id": "A2",
+          "meaning": "Active literature or one serious lab/company line"
+        },
+        {
+          "id": "A3",
+          "meaning": "Textbook + many groups + funded programs"
+        }
+      ]
+    },
+    "warning": "Legacy Observatory harvest metadata; never substitute these axes for canonical SDBES assessments."
+  },
+  "relationships": [
+    {
+      "id": "REL-N01-DBE-A01",
+      "source_id": "N01",
+      "target_id": "DBE-A01",
+      "relation_type": "COMPONENT_EVIDENCE_FOR",
+      "review_status": "REVIEWED",
+      "gate": null,
+      "source_locator": "docs/SDBES/tests/V1_V2_10_PAPER_ASSESSMENTS.json"
+    },
+    {
+      "id": "REL-C02-DBE-C03",
+      "source_id": "C02",
+      "target_id": "DBE-C03",
+      "relation_type": "MECHANISM_SEED_FOR",
+      "review_status": "REVIEWED",
+      "gate": null,
+      "source_locator": "docs/SDBES/tests/V1_V2_10_PAPER_ASSESSMENTS.json"
+    },
+    {
+      "id": "REL-C09-DBE-C13",
+      "source_id": "C09",
+      "target_id": "DBE-C13",
+      "relation_type": "COMPONENT_EVIDENCE_FOR",
+      "review_status": "REVIEWED",
+      "gate": null,
+      "source_locator": "docs/SDBES/tests/V1_V2_10_PAPER_ASSESSMENTS.json"
+    },
+    {
+      "id": "REL-I01-DBE-D01",
+      "source_id": "I01",
+      "target_id": "DBE-D01",
+      "relation_type": "DIRECT_EVIDENCE_FOR_BOUNDED_CLAIM",
+      "review_status": "REVIEWED",
+      "gate": null,
+      "source_locator": "docs/SDBES/tests/V1_V2_10_PAPER_ASSESSMENTS.json"
+    },
+    {
+      "id": "REL-I02-DBE-D03",
+      "source_id": "I02",
+      "target_id": "DBE-D03",
+      "relation_type": "COMPONENT_EVIDENCE_FOR",
+      "review_status": "REVIEWED",
+      "gate": null,
+      "source_locator": "docs/SDBES/tests/V1_V2_10_PAPER_ASSESSMENTS.json"
+    },
+    {
+      "id": "REL-I03-DBE-D04",
+      "source_id": "I03",
+      "target_id": "DBE-D04",
+      "relation_type": "COMPONENT_EVIDENCE_FOR",
+      "review_status": "REVIEWED",
+      "gate": null,
+      "source_locator": "docs/SDBES/tests/V1_V2_10_PAPER_ASSESSMENTS.json"
+    },
+    {
+      "id": "REL-I04-DBE-D10",
+      "source_id": "I04",
+      "target_id": "DBE-D10",
+      "relation_type": "COMPONENT_EVIDENCE_FOR",
+      "review_status": "REVIEWED",
+      "gate": null,
+      "source_locator": "docs/SDBES/tests/V1_V2_10_PAPER_ASSESSMENTS.json"
+    },
+    {
+      "id": "REL-I07-DBE-D12",
+      "source_id": "I07",
+      "target_id": "DBE-D12",
+      "relation_type": "MODEL_EVIDENCE_FOR",
+      "review_status": "REVIEWED",
+      "gate": null,
+      "source_locator": "docs/SDBES/tests/V1_V2_10_PAPER_ASSESSMENTS.json"
+    },
+    {
+      "id": "REL-E03-DBE-D13",
+      "source_id": "E03",
+      "target_id": "DBE-D13",
+      "relation_type": "SCOPE_LIMIT_ON",
+      "review_status": "REVIEWED",
+      "gate": null,
+      "source_locator": "docs/SDBES/tests/V1_V2_10_PAPER_ASSESSMENTS.json"
+    },
+    {
+      "id": "REL-E04-DBE-E04",
+      "source_id": "E04",
+      "target_id": "DBE-E04",
+      "relation_type": "MODEL_EVIDENCE_FOR",
+      "review_status": "REVIEWED",
+      "gate": null,
+      "source_locator": "docs/SDBES/tests/V1_V2_10_PAPER_ASSESSMENTS.json"
+    }
+  ],
+  "research_queue": [
+    {
+      "id": "RQ-DBE-A01",
+      "concept_id": "DBE-A01",
+      "title": "Construct a whole-plant power ledger with uncertainty and an experimentally anchored confinement model.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-A02",
+      "concept_id": "DBE-A02",
+      "title": "Compare equivalent net-output designs with common shielding and availability assumptions.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-A03",
+      "concept_id": "DBE-A03",
+      "title": "Benchmark equilibrium and transport assumptions against measured devices before scaling.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-A04",
+      "concept_id": "DBE-A04",
+      "title": "Retrieve matched experiments and integrated-design studies; compare transport, heat flux and wall-plug cost.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-A05",
+      "concept_id": "DBE-A05",
+      "title": "Separate formation, heating and sustained-burn measurements from projected reactor output.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-A06",
+      "concept_id": "DBE-A06",
+      "title": "Review shot-resolved energy input, neutron origin and stability across repeated runs.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-A07",
+      "concept_id": "DBE-A07",
+      "title": "Compare full-cycle energy and material budgets, not just peak compressed conditions.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-A08",
+      "concept_id": "DBE-A08",
+      "title": "Build a consistent target-to-wall-plug-to-grid gain chain with realistic repetition assumptions.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-A09",
+      "concept_id": "DBE-A09",
+      "title": "Pair modern reactivity calculations with opposing power-balance papers under identical distribution assumptions.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-A10",
+      "concept_id": "DBE-A10",
+      "title": "Compare complete reaction-chain and material burdens with a D-T baseline.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-A11",
+      "concept_id": "DBE-A11",
+      "title": "Test whether fuel procurement and full reaction-network losses erase the proposed benefit.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-A12",
+      "concept_id": "DBE-A12",
+      "title": "Calculate a closed per-muon energy budget using measured rather than ideal catalytic yields.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-A13",
+      "concept_id": "DBE-A13",
+      "title": "Compare specific designs and demonstrated stages without treating an SMR label as performance evidence.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-A14",
+      "concept_id": "DBE-A14",
+      "title": "Compare fuel utilization, losses and lifecycle requirements across explicit cycle boundaries.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-A15",
+      "concept_id": "DBE-A15",
+      "title": "Keep salt-cooled and liquid-fuel systems separate and gather operating evidence for each.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-A16",
+      "concept_id": "DBE-A16",
+      "title": "Retrieve IAEA-TECDOC-1450 and update its assumptions with measured contemporary cycle data.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-A17",
+      "concept_id": "DBE-A17",
+      "title": "Review the original energy-amplifier design and compare system availability against critical-reactor alternatives.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-A18",
+      "concept_id": "DBE-A18",
+      "title": "Identify one bounded hybrid function and compare with a fission-only or accelerator-driven alternative.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-B01",
+      "concept_id": "DBE-B01",
+      "title": "Analyze time-resolved production and circulation data rather than resource maps alone.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-B02",
+      "concept_id": "DBE-B02",
+      "title": "Separate modeled heat-in-place from recoverable output after downhole and surface losses.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-B03",
+      "concept_id": "DBE-B03",
+      "title": "Reproduce selected published scenarios with transparent fluid, cost and lifetime assumptions.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-B04",
+      "concept_id": "DBE-B04",
+      "title": "Gather independent rock-removal, penetration and borehole-completion results before choosing a design.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-B05",
+      "concept_id": "DBE-B05",
+      "title": "Compare lifetime energy yield per material and installed area, not champion-cell efficiency alone.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-B06",
+      "concept_id": "DBE-B06",
+      "title": "Measure power conversion and lifetime against an otherwise identical control cell.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-B07",
+      "concept_id": "DBE-B07",
+      "title": "Distinguish carrier-temperature evidence from an end-to-end conversion advantage.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-B08",
+      "concept_id": "DBE-B08",
+      "title": "Reproduce architecture comparisons with sensitivity to launch cadence and service lifetime.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-B09",
+      "concept_id": "DBE-B09",
+      "title": "Screen sea-trial datasets and distinguish theoretical resource from practical capacity.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-B10",
+      "concept_id": "DBE-B10",
+      "title": "Combine hydrodynamic resource estimates with extraction feedback and measured availability.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-B11",
+      "concept_id": "DBE-B11",
+      "title": "Screen net rather than gross power and include cold-water-pipe construction.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-B12",
+      "concept_id": "DBE-B12",
+      "title": "Replace per-pore normalization with net power per installed membrane and complete operating cycle.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-B13",
+      "concept_id": "DBE-B13",
+      "title": "Compare delivered chemical exergy per input resource with photovoltaic-electrochemical baselines.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-C01",
+      "concept_id": "DBE-C01",
+      "title": "Compare magnet lifetime and total support power per unit of useful field in the intended environment.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-C02",
+      "concept_id": "DBE-C02",
+      "title": "Require independent transport, magnetic and structural evidence under the claimed operating conditions.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-C03",
+      "concept_id": "DBE-C03",
+      "title": "Compare topology metrics with measured loss and stability metrics rather than visual knot complexity.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-C04",
+      "concept_id": "DBE-C04",
+      "title": "Find measured converter performance and integrate it with a realistic reaction-product spectrum.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-C05",
+      "concept_id": "DBE-C05",
+      "title": "Compare electrical output against all fluid preparation and magnetic support inputs.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-C06",
+      "concept_id": "DBE-C06",
+      "title": "Compare full round-trip efficiency and installed cost for the required response time and duration.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-C07",
+      "concept_id": "DBE-C07",
+      "title": "Compare whole-appliance electricity at matched cooling duty, not material entropy change alone.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-C08",
+      "concept_id": "DBE-C08",
+      "title": "Benchmark complete modules over real duty cycles and account for critical-material demand.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-C09",
+      "concept_id": "DBE-C09",
+      "title": "Connect charging, standby and discharge losses in a measured common-boundary energy budget.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-C10",
+      "concept_id": "DBE-C10",
+      "title": "Measure net system improvement after gap-control, conduction and surface-degradation costs.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-C11",
+      "concept_id": "DBE-C11",
+      "title": "Compare task-level energy including electrical-to-spin and spin-to-electrical conversion.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-C12",
+      "concept_id": "DBE-C12",
+      "title": "Pair positive studies with replication attempts and off-resonant, thermal and geometrical controls.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-C13",
+      "concept_id": "DBE-C13",
+      "title": "Distinguish fast absorption from demonstrably recoverable electrical work across repeated cycles.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-C14",
+      "concept_id": "DBE-C14",
+      "title": "Compare service-equivalent storage portfolios rather than cost per nominal capacity alone.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-C15",
+      "concept_id": "DBE-C15",
+      "title": "Compare delivered service with direct electrification under an identical energy-source mix.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-C16",
+      "concept_id": "DBE-C16",
+      "title": "Use service-matched seasonal and lifecycle metrics; a heat pump does not create energy.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-C17",
+      "concept_id": "DBE-C17",
+      "title": "Audit the complete reset cycle and all hidden inputs; a different driven mechanism would be a different claim.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-D01",
+      "concept_id": "DBE-D01",
+      "title": "Use held-out shots, uncertainty calibration and classical safety/control baselines.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-D02",
+      "concept_id": "DBE-D02",
+      "title": "Benchmark conserved quantities, predictive accuracy and latency on independently held-out data.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-D03",
+      "concept_id": "DBE-D03",
+      "title": "Measure successful independent syntheses and service-relevant properties per experimental budget.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-D04",
+      "concept_id": "DBE-D04",
+      "title": "Compare blinded reproducibility and useful discoveries per total resource input.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-D05",
+      "concept_id": "DBE-D05",
+      "title": "Preregister a discovery/uncertainty metric and compare against random, expert and conventional optimization baselines.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-D06",
+      "concept_id": "DBE-D06",
+      "title": "Require independent derivation checks and new predictions; fit quality alone is not a physical explanation.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-D07",
+      "concept_id": "DBE-D07",
+      "title": "Define a reproducible cross-domain benchmark before assigning likelihood or energy benefits.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-D08",
+      "concept_id": "DBE-D08",
+      "title": "Choose an industrially relevant observable and include data preparation and output extraction in the resource estimate.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-D09",
+      "concept_id": "DBE-D09",
+      "title": "Test the proposed subproblem against the theorem assumptions and a current classical baseline.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-D10",
+      "concept_id": "DBE-D10",
+      "title": "Compare logical error per operation and complete overhead; do not assume prediction of each random error is necessary.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-D11",
+      "concept_id": "DBE-D11",
+      "title": "Distinguish simulation, encoded circuit demonstrations and material-based braiding; compare complete logical resources.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-D12",
+      "concept_id": "DBE-D12",
+      "title": "Test lifetimes with realistic local noise and compare to simpler error-correcting memories.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-D13",
+      "concept_id": "DBE-D13",
+      "title": "Benchmark real timing or error suppression with the drive counted; persistent oscillation is not free energy.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-D14",
+      "concept_id": "DBE-D14",
+      "title": "Compare reconstruction and prediction at equal resources; do not infer generic compression from a geometric analogy.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-D15",
+      "concept_id": "DBE-D15",
+      "title": "Choose a measurable control or discovery benefit rather than using sensitivity alone as an energy metric.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-E01",
+      "concept_id": "DBE-E01",
+      "title": "Write the full Hamiltonian and cycle; identify the precise assumption escaped by any proposed counterexample.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-E02",
+      "concept_id": "DBE-E02",
+      "title": "Include pump energy and compare with conventional parametric devices at the same task.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-E03",
+      "concept_id": "DBE-E03",
+      "title": "Compare work and efficiency with a resource-matched classical engine, not an unmatched thermal baseline.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-E04",
+      "concept_id": "DBE-E04",
+      "title": "Reproduce one protocol with all measurement, preparation and resetting costs explicit.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-E05",
+      "concept_id": "DBE-E05",
+      "title": "Calculate flux times capture probability times recoverable event energy before considering device claims.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-E06",
+      "concept_id": "DBE-E06",
+      "title": "Use measured exclusion curves and specify a surviving model before estimating energy yield.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-E07",
+      "concept_id": "DBE-E07",
+      "title": "Build a model-specific detection and recoverable-power estimate consistent with existing searches.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-E08",
+      "concept_id": "DBE-E08",
+      "title": "Replace the generic label with a particle model and compare capture-rate bounds before engineering.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-E09",
+      "concept_id": "DBE-E09",
+      "title": "Separate manufactured storage from natural harvesting; compare total supply-chain energy and useful output.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-E10",
+      "concept_id": "DBE-E10",
+      "title": "First study observable electromagnetic extraction and possible transferable plasma insights, separately from remote engineering scenarios.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-E11",
+      "concept_id": "DBE-E11",
+      "title": "Analyze mass, lifetime, emitted spectrum and full creation cost before making an engineering claim.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-E12",
+      "concept_id": "DBE-E12",
+      "title": "Keep nuclear clocks separate from storage; require a complete excitation-and-release cycle.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-E13",
+      "concept_id": "DBE-E13",
+      "title": "Preregister controls and energy accounting; reconcile heat with isotope and radiation diagnostics.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-E14",
+      "concept_id": "DBE-E14",
+      "title": "Retrieve the original reaction papers and calculate output relative to complete irradiation-system input.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-E15",
+      "concept_id": "DBE-E15",
+      "title": "Create separate falsifiable claims for candidate interactions, with explicit observables and surviving parameter space.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-F01",
+      "concept_id": "DBE-F01",
+      "title": "Compare an end-to-end computation at matched error, latency and throughput rather than one gate.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-F02",
+      "concept_id": "DBE-F02",
+      "title": "Benchmark complete sensing-to-output tasks with equal accuracy and latency.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-F03",
+      "concept_id": "DBE-F03",
+      "title": "Compare full task energy with calibration and correction included.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-F04",
+      "concept_id": "DBE-F04",
+      "title": "Separate a front-end communication metric from complete compute-node energy.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-F05",
+      "concept_id": "DBE-F05",
+      "title": "Compare wall-plug energy at matched throughput, not only energy dissipated on the cold chip.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-F06",
+      "concept_id": "DBE-F06",
+      "title": "Define a fidelity target and test predictive behavior on progressively richer validated models.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-F07",
+      "concept_id": "DBE-F07",
+      "title": "Separate empirical predictions from philosophical commitments and preregister tests where possible.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-F08",
+      "concept_id": "DBE-F08",
+      "title": "Begin with measurable functional tasks; never equate a slower clock with lower total work or proven mind continuity.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-F09",
+      "concept_id": "DBE-F09",
+      "title": "Compare seasonal whole-building or process cooling energy with controlled baselines.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-F10",
+      "concept_id": "DBE-F10",
+      "title": "Use service-equivalent lifecycle boundaries and measured rather than ideal recycling fractions.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-F11",
+      "concept_id": "DBE-F11",
+      "title": "Compare transparent service baskets and sensitivity to infrastructure and behavior assumptions.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    },
+    {
+      "id": "RQ-DBE-F12",
+      "concept_id": "DBE-F12",
+      "title": "Model source-specific heat budgets and spatial constraints rather than one unlimited-growth slogan.",
+      "activity_mode": "EXPLORATORY",
+      "origin": "PHASE1_PROPOSED_INVESTIGATION",
+      "comparison_state": "INSUFFICIENT_COMPARABLE_INFORMATION",
+      "attempts": [],
+      "preregistration": null,
+      "decision_rule": null,
+      "work_status": "PROPOSED"
+    }
+  ],
+  "authorized_models": [],
+  "scenario_message": "No authorized model available"
+}

@@ -32,9 +32,34 @@ jobs:
         run: python tests/sdbes_v1_v4_regression.py
       - name: Run V4 R2 second-pass requirement audit
         run: python tests/sdbes_v4_r2_requirement_audit.py
+      - name: Rebuild and validate V5/V6 R2 assets
+        run: |
+          python scripts/build_v5_v6_assets.py
+          git diff --exit-code -- docs/SDBES/data
+          python tests/sdbes_v5_v6_integrity_checks.py
       - name: Run SDBES pytest adapters
         run: >-
           python -m pytest -q
           tests/test_sdbes_v4_r2.py
           tests/test_sdbes_v1_v4_regression.py
           tests/test_sdbes_v4_r2_requirement_audit.py
+          tests/test_sdbes_v5_v6.py
+
+  navigator:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: navigator/package-lock.json
+      - name: Install navigator dependencies
+        working-directory: navigator
+        run: npm ci
+      - name: Test navigator
+        working-directory: navigator
+        run: npm run test
+      - name: Build navigator
+        working-directory: navigator
+        run: npm run build
