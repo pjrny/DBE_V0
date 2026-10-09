@@ -1934,5 +1934,5 @@
     }
   ],
   "authorized_models": [],
-  "scenario_message": "No authorized model available"
+  "scenario_message": "No registered scientific model package available"
 }

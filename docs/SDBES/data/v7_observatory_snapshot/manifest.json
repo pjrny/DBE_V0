@@ -1,0 +1,27 @@
+{
+  "source_ref": "origin/observatory/2026-10-08",
+  "source_commit": "9665178ca906a20af25ad23f7cea6ff838d43d57",
+  "captured_files": {
+    "catalog": {
+      "path": "docs/SDBES/data/v7_observatory_snapshot/catalog.json",
+      "sha256": "9d7bd2c9999749f7eeb4ed34a46a0502ff0d4f83caa5b073dbbc20e0fe2d1b83",
+      "bytes": 731139
+    },
+    "reviews": {
+      "path": "docs/SDBES/data/v7_observatory_snapshot/reviews.json",
+      "sha256": "d30ea9c46c991ca2b96dbd23616efcbf693187b7c7b4382bdc2888483a0d16ca",
+      "bytes": 560819
+    },
+    "claims": {
+      "path": "docs/SDBES/data/v7_observatory_snapshot/claims.json",
+      "sha256": "78bb909289c826c009fb2802cd29ee47d46590ee054d481bd353554436dc4026",
+      "bytes": 11661
+    },
+    "ledger": {
+      "path": "docs/SDBES/data/v7_observatory_snapshot/ledger.json",
+      "sha256": "eedbc5a3f0787f18d4d66f770ec0d3ba6efa607db429e55f9bbdb905a527a456",
+      "bytes": 2912
+    }
+  },
+  "capture_boundary": "Structured Observatory JSON only; review markdown and simulator code were not merged."
+}

@@ -39,7 +39,7 @@ export function Inspector({ concept, tab, onTab }: Props) {
         <p className="caveat">Inventory anchors only. Exact passages, figures, tables, equations, or code locations are not yet recorded.</p>
         <ul className="sources">{sources.map((source) => source && <li key={source.id}><span>{source.id}</span>{source.url ? <a href={source.url} target="_blank" rel="noreferrer">{source.title}</a> : <span>{source.title}</span>}</li>)}</ul>
       </Section>
-      <Section title="Model scenarios" icon="network"><div className="disabled-model"><strong>{runtime.scenario_message}</strong><span>V4 outputs appear only after explicit model-use authorization and scope checks.</span></div></Section>
+      <Section title="Model scenarios" icon="network"><div className="disabled-model"><strong>{runtime.scenario_message}</strong><span>The V4 framework is active. Scenario results appear after a pinned domain model, model card, allowed scope, and internal authorization receipt are registered.</span></div></Section>
     </div>
 
     <div className={tab === "relations" ? "tab-active" : "tab-mobile-hidden"}>

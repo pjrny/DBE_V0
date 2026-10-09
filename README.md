@@ -141,6 +141,21 @@ V1.0 Validated research platform milestone
 
 Version labels here describe SDBES framework progression. They do not imply that the underlying scientific claims have been validated.
 
+### V7 — Observatory-scale stress run
+
+Files:
+
+- `docs/SDBES/V7_OBSERVATORY_SCALE_STRESS_TEST.md`
+- `docs/SDBES/data/V7_OBSERVATORY_STRESS_REPORT.json`
+- `docs/SDBES/data/v7_observatory_snapshot/`
+- `sdbes/v7.py`
+
+V7 pins the 2026-10-08 Observatory structured corpus and stress-tests 405
+paper records, 291 review cards, 13 program claims, and their declared
+associations. It preserves known broken joins and vocabulary drift as visible
+findings. The run applies zero automatic scientific promotions: a catalog
+record, review decision, or claim binding is not independent confirmation.
+
 ## Pilot strategy
 
 The framework should be tested in stages rather than waiting for a perfect schema.

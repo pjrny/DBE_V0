@@ -1,0 +1,250 @@
+{
+  "schema_name": "SDBES_V7_OBSERVATORY_SCALE_STRESS_REPORT",
+  "schema_version": "7.0.0",
+  "generated_from": {
+    "source_ref": "origin/observatory/2026-10-08",
+    "source_commit": "9665178ca906a20af25ad23f7cea6ff838d43d57",
+    "captured_files": {
+      "catalog": {
+        "path": "docs/SDBES/data/v7_observatory_snapshot/catalog.json",
+        "sha256": "9d7bd2c9999749f7eeb4ed34a46a0502ff0d4f83caa5b073dbbc20e0fe2d1b83",
+        "bytes": 731139
+      },
+      "reviews": {
+        "path": "docs/SDBES/data/v7_observatory_snapshot/reviews.json",
+        "sha256": "d30ea9c46c991ca2b96dbd23616efcbf693187b7c7b4382bdc2888483a0d16ca",
+        "bytes": 560819
+      },
+      "claims": {
+        "path": "docs/SDBES/data/v7_observatory_snapshot/claims.json",
+        "sha256": "78bb909289c826c009fb2802cd29ee47d46590ee054d481bd353554436dc4026",
+        "bytes": 11661
+      },
+      "ledger": {
+        "path": "docs/SDBES/data/v7_observatory_snapshot/ledger.json",
+        "sha256": "eedbc5a3f0787f18d4d66f770ec0d3ba6efa607db429e55f9bbdb905a527a456",
+        "bytes": 2912
+      }
+    },
+    "capture_boundary": "Structured Observatory JSON only; review markdown and simulator code were not merged."
+  },
+  "scientific_boundary": {
+    "mode": "BULK_METADATA_AND_EXISTING_REVIEW_STRESS_TEST",
+    "new_scientific_assessments": 0,
+    "scientific_promotions_applied": 0,
+    "rule": "Inventory, review, and claim association do not by themselves strengthen a scientific claim."
+  },
+  "grain": {
+    "catalog_record": "one Observatory paper inventory record",
+    "review_record": "one structured Observatory review card",
+    "association_record": "one review-declared paper-to-program-claim binding"
+  },
+  "counts": {
+    "catalog_papers": 405,
+    "review_cards": 291,
+    "reviewed_catalog_papers": 288,
+    "catalog_papers_without_review_card": 117,
+    "program_claims": 13,
+    "paper_claim_associations": 239,
+    "review_cards_without_program_claim_binding": 61,
+    "declared_claim_delta_records": 8,
+    "data_quality_findings": 8,
+    "high_or_critical_findings": 2
+  },
+  "coverage": {
+    "reviewed_catalog_share": 0.711111,
+    "source_tiers": {
+      "UNSPECIFIED": 322,
+      "government/lab report": 1,
+      "journal": 8,
+      "preprint": 74
+    },
+    "actions": {
+      "HOLD": 143,
+      "INCLUDE": 29,
+      "NEW PILLAR": 2,
+      "REJECT": 117
+    },
+    "routes": {
+      "AUTO-MERGED": 28,
+      "QUEUE": 260,
+      "REJECT": 3
+    }
+  },
+  "program_claim_load": [
+    {
+      "claim_id": "E-5",
+      "associated_review_count": 0
+    },
+    {
+      "claim_id": "E-FR",
+      "associated_review_count": 6
+    },
+    {
+      "claim_id": "E-HOL",
+      "associated_review_count": 37
+    },
+    {
+      "claim_id": "E-MZM",
+      "associated_review_count": 17
+    },
+    {
+      "claim_id": "E-QEC",
+      "associated_review_count": 74
+    },
+    {
+      "claim_id": "E-RL",
+      "associated_review_count": 34
+    },
+    {
+      "claim_id": "E-S3",
+      "associated_review_count": 31
+    },
+    {
+      "claim_id": "E-TC",
+      "associated_review_count": 16
+    },
+    {
+      "claim_id": "S-L1",
+      "associated_review_count": 1
+    },
+    {
+      "claim_id": "S-L2",
+      "associated_review_count": 3
+    },
+    {
+      "claim_id": "S-L3",
+      "associated_review_count": 13
+    },
+    {
+      "claim_id": "S-L4",
+      "associated_review_count": 4
+    },
+    {
+      "claim_id": "S-Q",
+      "associated_review_count": 3
+    }
+  ],
+  "claim_delta_candidates": [
+    {
+      "review_id": "2026-09-27/2609.28730",
+      "paper_id": "2609.28730",
+      "declared_delta": "none — coupling stays C1"
+    },
+    {
+      "review_id": "rev-2026-09-20-tamiya",
+      "paper_id": "tamiya-2026",
+      "declared_delta": "E-QEC C4 → C4 (no move)"
+    },
+    {
+      "review_id": "rev-2026-09-20-polley",
+      "paper_id": "polley-2026",
+      "declared_delta": "E-S3 C3 → C3; queued suggested pillar topo-dynamics"
+    },
+    {
+      "review_id": "rev-2026-09-20-lo",
+      "paper_id": "lo-2026",
+      "declared_delta": "E-S3 C3 stays (already set by this paper at freeze)"
+    },
+    {
+      "review_id": "rev-2026-09-20-prc109",
+      "paper_id": "prc109-2024",
+      "declared_delta": "S-L2 C1 as gain path stays; required E bound recorded"
+    },
+    {
+      "review_id": "rev-2026-09-20-seo",
+      "paper_id": "seo-2024",
+      "declared_delta": "E-RL C4 stays; T3 confirmed on DIII-D"
+    },
+    {
+      "review_id": "rev-2026-09-20-mzml",
+      "paper_id": "majorana-landscape-2026",
+      "declared_delta": "E-MZM C1 → C1"
+    },
+    {
+      "review_id": "rev-2026-09-20-ffracton",
+      "paper_id": "floquet-fracton-2026",
+      "declared_delta": "none (queued)"
+    }
+  ],
+  "known_findings": [
+    {
+      "code": "MISSING_SOURCE_TIER",
+      "severity": "MEDIUM",
+      "path": "catalog.papers[*].sourceTier",
+      "message": "322 of 405 records lack a source-tier classification"
+    },
+    {
+      "code": "INVALID_GATE_STATE",
+      "severity": "MEDIUM",
+      "path": "reviews.cards[251].gates.G3",
+      "message": "hold"
+    },
+    {
+      "code": "REVIEW_WITHOUT_CATALOG_PAPER",
+      "severity": "HIGH",
+      "path": "reviews.cards[266].paperId",
+      "message": "2609.20985"
+    },
+    {
+      "code": "REVIEW_WITHOUT_CATALOG_PAPER",
+      "severity": "HIGH",
+      "path": "reviews.cards[267].paperId",
+      "message": "2609.20725"
+    },
+    {
+      "code": "INVALID_GATE_STATE",
+      "severity": "MEDIUM",
+      "path": "reviews.cards[284].gates.G3",
+      "message": "hold"
+    },
+    {
+      "code": "INVALID_GATE_STATE",
+      "severity": "MEDIUM",
+      "path": "reviews.cards[288].gates.G3",
+      "message": "hold"
+    },
+    {
+      "code": "INVALID_GATE_STATE",
+      "severity": "MEDIUM",
+      "path": "reviews.cards[289].gates.G3",
+      "message": "hold"
+    },
+    {
+      "code": "INVALID_GATE_STATE",
+      "severity": "MEDIUM",
+      "path": "reviews.cards[290].gates.G3",
+      "message": "hold"
+    }
+  ],
+  "release_decision": {
+    "status": "PASS_WITH_QUARANTINED_SOURCE_DEFECTS",
+    "may_browse_corpus": true,
+    "may_use_existing_review_bindings": true,
+    "may_auto_promote_claims": false,
+    "may_auto_create_causal_edges": false,
+    "missing_catalog_links_are_quarantined": true
+  },
+  "v4_model_eligibility": {
+    "authorized_executable_models": 0,
+    "reference_implementations_found": [
+      "sdbes.v4"
+    ],
+    "decision": "NO_REGISTERED_SCIENTIFIC_MODEL_PACKAGE",
+    "explanation": "The V4 reference implementation tests contracts and regression behavior; it is not yet a registered domain simulator with a pinned model card, calibrated inputs, and authorization receipt."
+  },
+  "external_source_probes": [
+    {
+      "id": "OPENAI_MATH_2026_10_09",
+      "source": "https://github.com/openai/math",
+      "status": "SEPARATE_EXPERIMENTAL_SOURCE_FAMILY",
+      "reported_inventory": {
+        "manuscripts": 722,
+        "families": 372
+      },
+      "formal_verification": "MIXED; some results have Lean artifacts and some do not",
+      "independent_confirmation": "NOT_ESTABLISHED_BY_REPOSITORY_MEMBERSHIP_OR_LEAN_CHECK_ALONE",
+      "v7_use": "Test formal-artifact ingestion, dependency tracking, correction history, and possible bottleneck relevance; do not merge into Observatory evidence scores automatically."
+    }
+  ]
+}

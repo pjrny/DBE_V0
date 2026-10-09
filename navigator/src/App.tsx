@@ -5,6 +5,7 @@ import { Filters } from "./components/Filters";
 import { Header } from "./components/Header";
 import { Inspector } from "./components/Inspector";
 import { Queue } from "./components/Queue";
+import { ScaleRun } from "./components/ScaleRun";
 import { Icon } from "./icons";
 import { useNavigatorState } from "./useNavigatorState";
 
@@ -47,6 +48,7 @@ export function App() {
   return <div className="app-shell">
     <Header query={state.query} onQuery={state.setQuery} onExport={exportSession}/>
     <div className="integrity-banner"><Icon name="warning"/><strong>Staging boundary:</strong><span>{inventory.warning}</span></div>
+    <ScaleRun />
     {(state.query || filterCount > 0) && <div className="filter-caution"><Icon name="info"/><span>Current filters may hide relevant challenging or null records. Clear filters before interpreting the evidence set.</span><button onClick={() => { state.setQuery(""); state.setDomain("ALL"); state.setClassCode("ALL"); }}>Clear filters</button></div>}
     <main className="workspace">
       <div className={`filter-drawer ${filtersOpen ? "open" : ""}`}><Filters domain={state.domain} classCode={state.classCode} onDomain={state.setDomain} onClass={state.setClassCode} onClose={() => setFiltersOpen(false)}/></div>

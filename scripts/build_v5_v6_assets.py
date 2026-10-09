@@ -267,7 +267,7 @@ def main() -> None:
             if concept["next_investigation"]
         ],
         "authorized_models": [],
-        "scenario_message": "No authorized model available",
+        "scenario_message": "No registered scientific model package available",
     }
     runtime_target = OUT / "V5_RUNTIME_VIEW.json"
     runtime_target.write_text(json.dumps(runtime, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")

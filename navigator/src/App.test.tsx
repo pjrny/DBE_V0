@@ -9,7 +9,10 @@ describe("SDBES Research Navigator", () => {
     render(<App />);
     expect(screen.getByText(/Discovery records are not scientific assessments/)).toBeInTheDocument();
     expect(screen.getByText("Discovery-only — not assessed")).toBeInTheDocument();
-    expect(screen.getByText("No authorized model available")).toBeInTheDocument();
+    expect(screen.getByText("No registered scientific model package available")).toBeInTheDocument();
+    expect(screen.getByText(/405 papers · 291 reviews · 0 scientific promotions/)).toBeInTheDocument();
+    fireEvent.click(screen.getByText("V7 Observatory scale run"));
+    expect(screen.getByLabelText("Observatory review associations by program claim")).toHaveTextContent("E-QEC74");
   });
 
   it("filters the atlas without changing evidence status", () => {

@@ -11,6 +11,6 @@ export function Header({ query, onQuery, onExport }: Props) {
       <input value={query} onChange={(event) => onQuery(event.target.value)} placeholder="Search concepts, claims, or sources…" />
     </label>
     <button className="button secondary" onClick={onExport}><Icon name="download" />Export session</button>
-    <div className="read-only">Read-only<br/><span>V5/V6 R2</span></div>
+    <div className="read-only">Read-only<br/><span>V5–V7</span></div>
   </header>;
 }
