@@ -17543,10 +17543,10 @@
           "bind": "S-L3",
           "action": "HOLD",
           "route": "QUEUE",
-          "a5": "PASS",
-          "venue": "OpenAI Math preprint",
+          "a5": "FAIL",
+          "venue": "preprint",
           "exit": 0,
-          "note": "score.py A5 string check did not flag this venue; card A5 remains a miss; route stayed QUEUE"
+          "note": "Follow-up: score.py was re-run with venue preprint. A5 FAIL, route QUEUE. The display venue remains OpenAI Math preprint. C was not raised."
         },
         {
           "paper": "2610.10679",
