@@ -16671,7 +16671,7 @@
         "merged": 0,
         "new": 15,
         "scored": 15,
-        "unscored": 8,
+        "unscored": 9,
         "add": 0,
         "strengthen": 0,
         "weaken": 0,
@@ -16697,6 +16697,18 @@
         "2610.08907"
       ],
       "unscoredIds": [
+        {
+          "id": "openai-math-362",
+          "reason": "Queued 2026-10-09 by Oscar (manual carry-over, not scored, no catalog row yet). openai/math family #362, Global classical solutions of the three-dimensional relativistic Vlasov-Maxwell system (manuscript dated 2026-09-23; Lean-formalized), pinned to commit fd4aeeb2e. Suggested bind: S-L3 (background). Oscar's note: Lean formalization alone is not sufficient for confidence; score normally; machine-generated, not peer-reviewed, cannot raise C (A5); store link only, no PDF; oaStatus TBD by Oscar. Score next.",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2e/preprints/Global-classical-solutions-of-the-three-dimensional-relativistic-Vlasov-Maxwell-system-September-23-2026/paper.pdf",
+          "repo": "https://github.com/openai/math",
+          "commit": "fd4aeeb2e",
+          "licence": "Apache-2.0",
+          "suggestedBind": [
+            "S-L3"
+          ],
+          "sourceTier": "repo/model"
+        },
         {
           "id": "2610.10011",
           "reason": "2026-10-07 thermal conductance at a TI-SC interface cannot separate a chiral Majorana mode from equilibrated Abelian edges when the anomaly data match; M5 charge-sector test; E-MZM WATCH; score next"
@@ -16934,7 +16946,7 @@
           "exit": 0
         }
       ],
-      "notes": "Twenty-first run, Thursday, weekly sources off. Lookback 7 days (2026-10-01 to 2026-10-08). ingest.py was not executed: it fires its queries with no sleep and would break the 1 request / 3 s rule. The same QUERIES, the fetch_arxiv QUERIES, a paged category window, yesterday's 11 ids, and OAI GetRecord for the 15 scored ids were issued with a 3.1 s gap. API rows 453, unique ids 352, of which 29 were already in the catalog and 101 rows were repeat fetches. Yesterday's 11 unscored ids were scored oldest first. Twelve HOLD and three REJECT. Seven HOLDs are E-QEC only (4D toric-code memory proof, measurement-free surface-code preparation, high-rate qLDPC surgery, irrep surface codes, a non-Clifford simulator, a fault-counting sensitivity estimator, and a surface-code resource-estimate spread). Three HOLDs are E-S3 only (quantum-double rewire-and-reset, Floquet Z_N parafermions, Fibonacci defects in a Read-Rezayi FQH-SC). One HOLD is a tokamak flux surrogate under E-RL, with no device name and no coil command. One HOLD is a one-sided tetron proposal; E-MZM stays WATCH. Two REJECT on the E-HOL denylist. One REJECT is a fusion-ring classification with no KEEP or HOLD claim and no interface contract. No ADD, no STRENGTHEN, no bridge, no new pillar, no CUT reversal, no version bump. C unchanged. OpenAlex, Crossref, and Unpaywall were skipped because OPENALEX_API_KEY and DBE_CONTACT_EMAIL are unset. No PDF was cached. DBE-0.2.2 / DBES-0.2.0 stand. Q=1000 remains a ledger stress test. The public lab updates only when this branch is merged into feature/research-grade-physics."
+      "notes": "Twenty-first run, Thursday, weekly sources off. Lookback 7 days (2026-10-01 to 2026-10-08). ingest.py was not executed: it fires its queries with no sleep and would break the 1 request / 3 s rule. The same QUERIES, the fetch_arxiv QUERIES, a paged category window, yesterday's 11 ids, and OAI GetRecord for the 15 scored ids were issued with a 3.1 s gap. API rows 453, unique ids 352, of which 29 were already in the catalog and 101 rows were repeat fetches. Yesterday's 11 unscored ids were scored oldest first. Twelve HOLD and three REJECT. Seven HOLDs are E-QEC only (4D toric-code memory proof, measurement-free surface-code preparation, high-rate qLDPC surgery, irrep surface codes, a non-Clifford simulator, a fault-counting sensitivity estimator, and a surface-code resource-estimate spread). Three HOLDs are E-S3 only (quantum-double rewire-and-reset, Floquet Z_N parafermions, Fibonacci defects in a Read-Rezayi FQH-SC). One HOLD is a tokamak flux surrogate under E-RL, with no device name and no coil command. One HOLD is a one-sided tetron proposal; E-MZM stays WATCH. Two REJECT on the E-HOL denylist. One REJECT is a fusion-ring classification with no KEEP or HOLD claim and no interface contract. No ADD, no STRENGTHEN, no bridge, no new pillar, no CUT reversal, no version bump. C unchanged. OpenAlex, Crossref, and Unpaywall were skipped because OPENALEX_API_KEY and DBE_CONTACT_EMAIL are unset. No PDF was cached. DBE-0.2.2 / DBES-0.2.0 stand. Q=1000 remains a ledger stress test. The public lab updates only when this branch is merged into feature/research-grade-physics. Addendum 2026-10-09 (Oscar-approved queue PR, not a run): openai/math family #362 (relativistic Vlasov-Maxwell, commit fd4aeeb2e) was added to the top of unscoredIds for the next run to score under section 8.5; counts.unscored 8 -> 9."
     },
     {
       "id": "run-2026-10-07-daily",
