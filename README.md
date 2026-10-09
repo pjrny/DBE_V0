@@ -79,11 +79,31 @@ V3 was formalized after the V1/V2 10-paper stress test and Pro mathematical revi
 
 The required core-logic verification passed with `ALL_CHECKS_PASSED`.
 
-V4 is next and must preserve the V3 invariant:
+V4 R2 is now implemented and preserves the V3 invariant:
 
 ```text
 Structural Requirement ≠ Causal Effect
 ```
+
+### V4 R2 — Causal Dynamics, Model Composition & Research Intervention
+
+Files:
+
+- `docs/SDBES/V4_R2_CAUSAL_DYNAMICS_MODEL_COMPOSITION.md`
+- `docs/SDBES/V4_R2_SCHEMA_TEMPLATE.json`
+- `sdbes/v4.py`
+- `tests/sdbes_v4_r2_core_logic_checks.py`
+- `tests/sdbes_v1_v4_regression.py`
+
+V4 R2 adds use-bounded dynamic models; separate state, control, disturbance,
+parameter and observation response maps; ordered finite-horizon propagation;
+typed model composition; V3 predicate bindings; multi-fidelity promotion;
+platform/regime transfer assessments; typed resource balances; and explicit
+research tests, decision rules and milestone bindings.
+
+The frozen regression suite reuses the ten V1/V2 paper cases and the five
+previous DBE/DBE-S cases. It introduces no new papers and fails the release if
+any prior scientific conclusion becomes an `UNEXPECTED_REGRESSION`.
 
 ## Development sequence
 
@@ -93,12 +113,12 @@ Current planned sequence:
 V1  Typed ledger and mathematical safety rules
 V2  Claim evaluation rules
 V3  Dependency mathematics and structural semantics — committed
-V4  Influence, causality & dynamic-state semantics — next
-V5  Glyphs and linked visualization system
+V4  Causal dynamics, composition and research intervention — R2 implemented
+V5  Glyphs, linked visualization and research-priority system — next
 V6  Real-paper pilot
 V7  Failure-mode and consistency tests at scale
 V8  Probabilistic inference layer
-V9  Early simulation layer
+V9  Scaled domain-simulation orchestration
 V1.0 Validated research platform milestone
 ```
 
@@ -142,3 +162,18 @@ The repository's existing simulator on `main` explores a specific fusion/DBE imp
 SDBES is a broader evidence and research architecture. It should eventually be capable of evaluating and contextualizing models like the existing simulator rather than inheriting their assumptions as established facts.
 
 For the original repository simulator documentation, see the `main` branch.
+
+## Verify the SDBES framework
+
+```bash
+python tests/sdbes_v3_core_logic_checks.py
+python tests/sdbes_v4_r2_core_logic_checks.py
+python tests/sdbes_v1_v4_regression.py
+python tests/sdbes_v4_r2_requirement_audit.py
+python -m pytest -q tests/test_sdbes_v4_r2.py tests/test_sdbes_v1_v4_regression.py tests/test_sdbes_v4_r2_requirement_audit.py
+```
+
+The legacy DBE simulator tests are intentionally separate from the SDBES
+release gate because the inherited `SDBES` branch already contains nine
+simulator API/test mismatches at its V3 baseline. V4 R2 does not touch those
+simulator modules or reinterpret their outputs.

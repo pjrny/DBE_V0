@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file.
 
+## [SDBES V4 R2] - 2026-10-09
+
+### Added
+- Added the V4 R2 causal-dynamics, model-composition, simulation-credibility,
+  and research-intervention specification and schema template.
+- Added dependency-free executable reference semantics for local response
+  families, ordered finite-horizon propagation, unit/timebase closure,
+  coupling validation, V3 predicate authorization, typed resource balances,
+  multi-fidelity promotion, transfer, V2 evidence return, K/X separation,
+  research decisions, kill tests, and milestone bindings.
+- Added a frozen 15-case V1→V4 regression suite containing only the ten
+  previously assessed papers and five previously used DBE/DBE-S cases.
+- Added a dedicated SDBES CI release gate for Python 3.10–3.12.
+
+### Verification
+- V3 reference checks: pass.
+- V4 R2 reference checks: 13/13 pass.
+- Existing-case regression: 15/15 pass; 13 expected refinements, 2 unchanged,
+  0 unexpected regressions.
+- The nine legacy simulator failures reproduce unchanged at the V3 baseline
+  commit and are outside the V4 R2 change set.
+
 ## [0.2.0] - 2025-08-20
 ### Added
 - Created a modular package structure for the DBE research simulator with subpackages for plasma physics, actuators, quantum subsystems, controller logic and risk analysis.

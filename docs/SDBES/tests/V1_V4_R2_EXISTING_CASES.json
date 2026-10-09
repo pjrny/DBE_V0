@@ -1,0 +1,208 @@
+{
+  "schema_name": "SDBES_V1_V4_R2_existing_case_regression",
+  "snapshot_date": "2026-10-09",
+  "new_papers_added": false,
+  "source_snapshots": [
+    {
+      "branch": "SDBES",
+      "commit": "a8278039cff8e4c13c225b982ecc63249e37b70a",
+      "use": "V1-V3 framework and ten-paper V1/V2 assessments"
+    },
+    {
+      "branch": "feature/research-grade-physics",
+      "commit": "a1903d7f1e4baab3d35f4b0bb2f1ba35796bfbbb",
+      "use": "previously used DBE/DBE-S claim, ledger, milestone, and bus states only"
+    },
+    {
+      "branch": "conversation-provided internal result",
+      "commit": null,
+      "use": "previously reviewed M2 near-ignition burn-control result; no new source introduced"
+    }
+  ],
+  "release_rule": "fail if any case classifies as UNEXPECTED_REGRESSION",
+  "cases": [
+    {
+      "id": "N01",
+      "group": "V1_V2_TEN_PAPER",
+      "title": "The SPARC Toroidal Field Model Coil Program",
+      "prior_conclusion": "PASS_WITH_SCHEMA_EXTENSION",
+      "r2_conclusion": "PASS_WITH_SCHEMA_EXTENSION",
+      "scientific_detail_added": true,
+      "schema_only": false,
+      "expected_classification": "EXPECTED_REFINEMENT",
+      "v4_contract": "component evidence requires composition and transfer assessment before whole-plant use"
+    },
+    {
+      "id": "C02",
+      "group": "V1_V2_TEN_PAPER",
+      "title": "Self-Organizing Knotted Magnetic Structures in Plasma",
+      "prior_conclusion": "PASS_WITH_SCHEMA_EXTENSION",
+      "r2_conclusion": "PASS_WITH_SCHEMA_EXTENSION",
+      "scientific_detail_added": true,
+      "schema_only": false,
+      "expected_classification": "EXPECTED_REFINEMENT",
+      "v4_contract": "mechanistic simulation is SCENARIO_ONLY and cannot claim fusion-grade validation"
+    },
+    {
+      "id": "C09",
+      "group": "V1_V2_TEN_PAPER",
+      "title": "Superabsorption in an organic microcavity: Toward a quantum battery",
+      "prior_conclusion": "PASS_WITH_SCHEMA_EXTENSION",
+      "r2_conclusion": "PASS_WITH_SCHEMA_EXTENSION",
+      "scientific_detail_added": true,
+      "schema_only": false,
+      "expected_classification": "EXPECTED_REFINEMENT",
+      "v4_contract": "charging mechanism cannot become storage service without a complete typed cycle balance"
+    },
+    {
+      "id": "I01",
+      "group": "V1_V2_TEN_PAPER",
+      "title": "Avoiding fusion plasma tearing instability with deep reinforcement learning",
+      "prior_conclusion": "PASS",
+      "r2_conclusion": "PASS",
+      "scientific_detail_added": true,
+      "schema_only": false,
+      "expected_classification": "EXPECTED_REFINEMENT",
+      "v4_contract": "bounded source-device intervention remains valid; cross-device transfer remains PARTIAL"
+    },
+    {
+      "id": "I02",
+      "group": "V1_V2_TEN_PAPER",
+      "title": "Scaling deep learning for materials discovery",
+      "prior_conclusion": "PASS_WITH_SCHEMA_EXTENSION",
+      "r2_conclusion": "PASS_WITH_SCHEMA_EXTENSION",
+      "scientific_detail_added": true,
+      "schema_only": false,
+      "expected_classification": "EXPECTED_REFINEMENT",
+      "v4_contract": "candidate discovery updates K(t), not deployed energy-system state X(t)"
+    },
+    {
+      "id": "I03",
+      "group": "V1_V2_TEN_PAPER",
+      "title": "An autonomous laboratory for the accelerated synthesis of inorganic materials",
+      "prior_conclusion": "PASS_SCHEMA_AMENDMENT_REQUIRED",
+      "r2_conclusion": "PASS_SCHEMA_AMENDMENT_REQUIRED",
+      "scientific_detail_added": false,
+      "schema_only": false,
+      "expected_classification": "UNCHANGED",
+      "v4_contract": "V4 preserves the V2/V3 correction and assessment lineage without changing the verdict"
+    },
+    {
+      "id": "I04",
+      "group": "V1_V2_TEN_PAPER",
+      "title": "Quantum error correction below the surface code threshold",
+      "prior_conclusion": "PASS_WITH_SCHEMA_EXTENSION",
+      "r2_conclusion": "PASS_WITH_SCHEMA_EXTENSION",
+      "scientific_detail_added": true,
+      "schema_only": false,
+      "expected_classification": "EXPECTED_REFINEMENT",
+      "v4_contract": "memory demonstration cannot silently promote to fault-tolerant computer or scientific workload"
+    },
+    {
+      "id": "I07",
+      "group": "V1_V2_TEN_PAPER",
+      "title": "Quantum Self-Correction in the 3D Cubic Code Model",
+      "prior_conclusion": "PASS",
+      "r2_conclusion": "PASS",
+      "scientific_detail_added": true,
+      "schema_only": false,
+      "expected_classification": "EXPECTED_REFINEMENT",
+      "v4_contract": "formal/model result is not authorized for device prediction or hardware transfer"
+    },
+    {
+      "id": "E03",
+      "group": "V1_V2_TEN_PAPER",
+      "title": "Absence of Quantum Time Crystals",
+      "prior_conclusion": "STRONG_PASS",
+      "r2_conclusion": "STRONG_PASS",
+      "scientific_detail_added": false,
+      "schema_only": false,
+      "expected_classification": "UNCHANGED",
+      "v4_contract": "formal no-go scope is preserved and not expanded into a physical claim outside assumptions"
+    },
+    {
+      "id": "E04",
+      "group": "V1_V2_TEN_PAPER",
+      "title": "Quantum Energy Teleportation in Spin Chain Systems",
+      "prior_conclusion": "PASS_WITH_SCHEMA_EXTENSION",
+      "r2_conclusion": "PASS_WITH_SCHEMA_EXTENSION",
+      "scientific_detail_added": true,
+      "schema_only": false,
+      "expected_classification": "EXPECTED_REFINEMENT",
+      "v4_contract": "model protocol cannot claim practical energy service without complete resource accounting"
+    },
+    {
+      "id": "M2_INTERNAL_BURN_CONTROL",
+      "group": "PREVIOUS_V1_V4_CASES",
+      "title": "Internal near-ignition burn-control / E-RL result",
+      "prior_conclusion": "DOES_NOT_CLOSE_M2",
+      "r2_conclusion": "DOES_NOT_CLOSE_M2",
+      "scientific_detail_added": true,
+      "schema_only": false,
+      "expected_classification": "EXPECTED_REFINEMENT",
+      "observations": {
+        "headline_success_rate_upper_bound": 0.05,
+        "pure_ppo": "FAILED",
+        "hybrid": "PARTIAL",
+        "model_fidelity": "0-D single-temperature",
+        "omissions": ["profiles", "MHD", "disruption physics"],
+        "training_seeds_per_learned_controller": 1
+      },
+      "v4_contract": "SCENARIO_ONLY 0-D precursor; cannot promote to TORAX, MHD, or machine validation"
+    },
+    {
+      "id": "BUS_B_OFFLINE_COMPUTE",
+      "group": "PREVIOUS_V1_V4_CASES",
+      "title": "Bus B offline topological compute",
+      "prior_conclusion": "NO_DIRECT_CAUSAL_PATH_TO_Q",
+      "r2_conclusion": "NO_DIRECT_CAUSAL_PATH_TO_Q",
+      "scientific_detail_added": true,
+      "schema_only": false,
+      "expected_classification": "EXPECTED_REFINEMENT",
+      "v4_contract": "research compute may change K(t); X(t) requires experiment and validated engineering intervention"
+    },
+    {
+      "id": "S_L2_BARRIER_EVASION",
+      "group": "PREVIOUS_V1_V4_CASES",
+      "title": "DBE-S S-L2 Floquet / multiphoton barrier evasion",
+      "prior_conclusion": "HOLD",
+      "r2_conclusion": "HOLD",
+      "scientific_detail_added": true,
+      "schema_only": false,
+      "expected_classification": "EXPECTED_REFINEMENT",
+      "kill_condition": "net enhancement below 2x thermal at reachable field/intensity after hole-burning and instability",
+      "v4_contract": "method disagreement is represented by a fidelity family and explicit kill test, not averaged"
+    },
+    {
+      "id": "Q_ENG_1000",
+      "group": "PREVIOUS_V1_V4_CASES",
+      "title": "Engineering gain Q_eng approximately 1000",
+      "prior_conclusion": "CUT_AS_OUTPUT_KEEP_AS_LEDGER_TEST",
+      "r2_conclusion": "CUT_AS_OUTPUT_KEEP_AS_LEDGER_TEST",
+      "scientific_detail_added": true,
+      "schema_only": false,
+      "expected_classification": "EXPECTED_REFINEMENT",
+      "required_terms": [
+        "P_fusion",
+        "P_coh",
+        "P_repopulate",
+        "P_drive",
+        "P_aux",
+        "P_rad",
+        "eta_conv"
+      ],
+      "v4_contract": "strict result is blocked unless the typed plant ledger closes"
+    },
+    {
+      "id": "COMPONENT_COUPLING",
+      "group": "PREVIOUS_V1_V4_CASES",
+      "title": "Cross-model component coupling",
+      "prior_conclusion": "NO_INTERFACE_NO_PILLAR",
+      "r2_conclusion": "NO_INTERFACE_NO_PILLAR",
+      "scientific_detail_added": true,
+      "schema_only": false,
+      "expected_classification": "EXPECTED_REFINEMENT",
+      "v4_contract": "composition requires semantic, unit, timebase, validity-domain, uncertainty, resource, and failure contracts"
+    }
+  ]
+}
