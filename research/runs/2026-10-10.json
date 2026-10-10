@@ -1,0 +1,279 @@
+{
+  "id": "run-2026-10-10-daily",
+  "kind": "daily",
+  "startedAt": "2026-10-10T09:19:00-05:00",
+  "finishedAt": "2026-10-10T09:35:04-05:00",
+  "windowStart": "2026-10-03",
+  "windowEnd": "2026-10-10",
+  "sources": [
+    {
+      "id": "arxiv-yesterday-ids",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 6,
+      "new": 6,
+      "ms": 227,
+      "error": null
+    },
+    {
+      "id": "arxiv-recent-window-encoded",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "partial",
+      "http": 200,
+      "requests": 5,
+      "returned": 0,
+      "new": 0,
+      "ms": 772,
+      "error": "Brackets in submittedDate were percent-encoded and the API rewrote the range. Those five responses were discarded."
+    },
+    {
+      "id": "arxiv-date-syntax-check",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 5,
+      "new": 0,
+      "ms": 164,
+      "error": null
+    },
+    {
+      "id": "arxiv-recent-window",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 5,
+      "returned": 0,
+      "new": 0,
+      "ms": 814,
+      "error": null
+    },
+    {
+      "id": "arxiv-ingest-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 7,
+      "returned": 175,
+      "new": null,
+      "ms": 1725,
+      "error": null
+    },
+    {
+      "id": "arxiv-fetch-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 10,
+      "returned": 200,
+      "new": null,
+      "ms": 4205,
+      "error": null
+    },
+    {
+      "id": "arxiv-oai",
+      "url": "https://oaipmh.arxiv.org/oai",
+      "status": "ok",
+      "http": 200,
+      "requests": 7,
+      "returned": 7,
+      "new": 0,
+      "ms": 778,
+      "error": null
+    },
+    {
+      "id": "openalex",
+      "url": "https://api.openalex.org/works",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "OPENALEX_API_KEY unset"
+    },
+    {
+      "id": "crossref",
+      "url": "https://api.crossref.org/works",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "DBE_CONTACT_EMAIL unset; mailto not invented"
+    },
+    {
+      "id": "unpaywall",
+      "url": "https://api.unpaywall.org/v2",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "DBE_CONTACT_EMAIL unset"
+    },
+    {
+      "id": "weekly",
+      "url": null,
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "Saturday; weekly sources run Sunday only"
+    }
+  ],
+  "counts": {
+    "harvested": 381,
+    "duplicates": 218,
+    "merged": 1,
+    "new": 7,
+    "scored": 7,
+    "unscored": 0,
+    "add": 0,
+    "strengthen": 0,
+    "weaken": 0,
+    "hold": 5,
+    "newPillar": 0,
+    "reject": 2
+  },
+  "paperIds": [
+    "2610.10668",
+    "2610.10764",
+    "2610.11225",
+    "2610.11372",
+    "2610.11321",
+    "2610.11890",
+    "2610.12223"
+  ],
+  "unscoredIds": [],
+  "offPathNotCarried": [
+    "2610.11868",
+    "2610.12079",
+    "2610.11652",
+    "2610.05177",
+    "2610.07611",
+    "2610.04729",
+    "2610.04958",
+    "2610.10109",
+    "2610.09925",
+    "2610.11940"
+  ],
+  "fieldCounts": {
+    "anyons": 1,
+    "topology": 2,
+    "tqc": 3,
+    "plasma": 1,
+    "fusion-quantum": 1,
+    "majorana": 1
+  },
+  "gateMisses": {
+    "A1": 3,
+    "A2": 6,
+    "A3": 7,
+    "A4": 7,
+    "A5": 7,
+    "A6": 0,
+    "A7": 0,
+    "A8": 0,
+    "G1": 0,
+    "G2": 0,
+    "G3": 0,
+    "G4": 6,
+    "G5": 0,
+    "G6": 0
+  },
+  "claimDelta": "none",
+  "versionBump": null,
+  "fulltext": {
+    "cached": 0,
+    "privateOnly": 0,
+    "noOA": 0
+  },
+  "tests": {
+    "command": "PYTHONPATH=. python -m pytest -q tests/test_research.py tests/test_claims.py tests/test_api.py tests/test_plasma.py tests/test_transport.py",
+    "result": "pass",
+    "summary": "19 passed, 30 subtests passed"
+  },
+  "branch": "observatory/2026-10-10",
+  "pr": null,
+  "suspiciousContent": [],
+  "scoreRoutes": [
+    {
+      "paper": "2610.10668",
+      "bind": "E-S3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.10764",
+      "bind": "E-S3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.11225",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.11372",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.11321",
+      "bind": "",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": null,
+      "note": "score.py skipped: no claim id"
+    },
+    {
+      "paper": "2610.11890",
+      "bind": "",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": null,
+      "note": "score.py skipped: no claim id"
+    },
+    {
+      "paper": "2610.12223",
+      "bind": "E-MZM",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH. WATCH fails A1."
+    }
+  ],
+  "notes": "Twenty-third run, Saturday, weekly sources off. Lookback 7 days (2026-10-03 to 2026-10-10). Predecessor PR #11 (observatory/2026-10-09) was squash-merged at 2026-10-10 09:21 CT before this branch was cut; head 30f85bc. ingest.py was not executed: it fires its queries with no sleep and would break the 1 request / 3 s rule. The same QUERIES (max 25), the fetch_arxiv QUERIES (max 20), yesterday's 6 arXiv ids, and OAI GetRecord for the 7 scored ids were issued with a 3.1 s gap. A first submittedDate window percent-encoded the brackets and was discarded. A control query for 2026-10-08 physics.plasm-ph with literal brackets returned totalResults 11, including 2610.11890. The corrected window submittedDate 2026-10-09 through 2026-10-10 in the five categories returned 0. That is a real empty Saturday listing, not a second encoding failure. Main API rows 381, unique ids 301, of which 138 were already in the catalog and 80 rows were repeat fetches (duplicates 218). 61 unique ids in the lookback were not in the catalog. Yesterday's 6 unscored ids were scored oldest first (2026-10-07, then 2026-10-08). One new card: Majorana tetron 2610.12223, HOLD on E-MZM. Five HOLD and two REJECT. No ADD, no STRENGTHEN, no bridge, no new pillar, no CUT reversal, no version bump. C unchanged. Merge, not a new row: 2606.17499v2 is the same work as wang-ysr-mimic-2026 (identical title, first author Dongfei Wang). The arXiv id was added. It was submitted 2026-06-16, outside the window. 54 other in-window ids were not catalogued. Ten near-misses are listed in offPathNotCarried; the rest are holography, math, or unrelated computer science. No PDF cached. DBE_FULLTEXT_STORE unset. Q=1000 remains a ledger stress test. Prompt source: research/OBSERVATORY_PROMPT.md on feature/research-grade-physics, blob 226375bdc29fa23856dc38714f84b2fca90c5f1d, read in full, NORTH STAR present. Files agree with the freeze: DBE-0.2.2 / DBES-0.2.0, claims freeze 2026-10-02."
+}

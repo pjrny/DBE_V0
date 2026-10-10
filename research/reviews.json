@@ -1,6 +1,268 @@
 {
-  "asOf": "2026-10-09",
+  "asOf": "2026-10-10",
   "cards": [
+    {
+      "id": "rev-2026-10-10-2610.10668",
+      "paperId": "2610.10668",
+      "date": "2026-10-10",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: no new dimension is entered. G2 passes: no plant energy term is adopted. G3 passes: the parton examples are constructions, not a gain scaled from one free parameter. G4 fails: a gapless bosonic superfluid is not an S3 braid-plus-fusion gate set. G5 passes: the gauging map and the non-Abelian vortex examples can be checked against the stated algebraic data this quarter. G6 passes: Q_eng is not an output."
+      },
+      "gateNote": "G1 passes: no new dimension is entered. G2 passes: no plant energy term is adopted. G3 passes: the parton examples are constructions, not a gain scaled from one free parameter. G4 fails: a gapless bosonic superfluid is not an S3 braid-plus-fusion gate set. G5 passes: the gauging map and the non-Abelian vortex examples can be checked against the stated algebraic data this quarter. G6 passes: Q_eng is not an output.",
+      "score": "E-S3 C3 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Deconfined anyons plus non-Abelian vortices in a gapless superfluid are not an S3 fusion measurement. Goldstone modes keep the phase gapless. Do not raise C3. No inputs, outputs, latency, or fail-safe, so not a new pillar.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Topologically ordered superfluids are described as phases that keep deconfined, gapped anyons while staying gapless because of Goldstone modes. Gauging the charge symmetry maps such a superfluid to a gapped symmetry-enriched topological order with vanishing Hall conductance, and gauging back recovers the superfluid. Vortices inherit the topological properties of the residual flux defects. Parton examples include non-Abelian vortices in bosonic systems.",
+        "why": "The anyon content is why it is queued under E-S3. It is a field theory of a gapless superfluid, not an S3 braid and not a fusion measurement. C3 does not move.",
+        "limit": "Bare arXiv. Algebraic and field-theoretic framework. The non-Abelian vortices are examples, not a device."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-S3 only). A2 miss (G4). A3 miss: HOLD, not INCLUDE. A4 miss: C unchanged and no numerical bound on the S3 gate set is tightened. A5 miss: bare arXiv. A6 pass: the superfluid is not adopted as a mechanism. A7 pass. A8 pass.",
+      "math": "Author Chao-Ming Jian. arXiv:2610.10668v1, 2026-10-07, cond-mat.str-el (also cond-mat.supr-con, hep-th). OAI licence CC BY 4.0. No DOI and no journal-ref. Non-Abelian vortices appear in the parton examples. No device count.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 72,
+        "confidence": 58,
+        "popularity": 36
+      }
+    },
+    {
+      "id": "rev-2026-10-10-2610.10764",
+      "paperId": "2610.10764",
+      "date": "2026-10-10",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: no new dimension is entered. G2 passes: no plant energy term is adopted. G3 passes: the classification is of finite Abelian modulated symmetries, not a gain from one parameter. G4 fails: an Abelian crystalline SET is not an S3 gate set. G5 passes: the kernel construction and the claim that literature models fit it can be checked this quarter. G6 passes: Q_eng is not an output."
+      },
+      "gateNote": "G1 passes: no new dimension is entered. G2 passes: no plant energy term is adopted. G3 passes: the classification is of finite Abelian modulated symmetries, not a gain from one parameter. G4 fails: an Abelian crystalline SET is not an S3 gate set. G5 passes: the kernel construction and the claim that literature models fit it can be checked this quarter. G6 passes: Q_eng is not an output.",
+      "score": "E-S3 C3 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "An Abelian crystalline SET that keeps its braiding pairing is not an S3 fusion measurement. Do not raise C3. No interface contract, so not a new pillar.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Modulated symmetries whose spatial action factors through a finite quotient are classified, and the allowed local interactions are built from a kernel. After gauging, the open-operator algebra becomes Wilson and boundary operators. In the deconfined regime the result is an Abelian crystalline symmetry-enriched topological order. Electric and magnetic sectors stay in mutually contragredient representations, so their braiding pairing is kept.",
+        "why": "It is queued under E-S3 because the braiding pairing is part of the result. The order is Abelian. It is not an S3 gate set and it does not replace fusion measurement. C3 does not move.",
+        "limit": "Bare arXiv. Lattice classification. No processor and no fusion-measurement protocol."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-S3 only). A2 miss (G4). A3 miss. A4 miss: C unchanged and no S3 bound is tightened. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass.",
+      "math": "Authors Gustavo M. Yoshitome, Pedro R. S. Gomes, Guilherme Delfino. arXiv:2610.10764v1, 2026-10-07, cond-mat.str-el (also hep-th). OAI licence arXiv non-exclusive. No DOI and no journal-ref. Braiding pairing of the Abelian SET is kept. No gate count.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 68,
+        "confidence": 56,
+        "popularity": 34
+      }
+    },
+    {
+      "id": "rev-2026-10-10-2610.11225",
+      "paperId": "2610.11225",
+      "date": "2026-10-10",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: code parameters and the thresholds are in percent. G2 passes: no plant energy term is adopted. G3 passes: 10.0% at q=13 and 5.1% for qubits are stated at fixed local dimension, not an unbounded gain from one free parameter. G4 fails: many-hypercube concatenated qudit codes under a code-capacity X-error model are not a surface-code or qLDPC shot. G5 passes: those two thresholds can be re-simulated this quarter. G6 passes: Q_eng is not an output."
+      },
+      "gateNote": "G1 passes: code parameters and the thresholds are in percent. G2 passes: no plant energy term is adopted. G3 passes: 10.0% at q=13 and 5.1% for qubits are stated at fixed local dimension, not an unbounded gain from one free parameter. G4 fails: many-hypercube concatenated qudit codes under a code-capacity X-error model are not a surface-code or qLDPC shot. G5 passes: those two thresholds can be re-simulated this quarter. G6 passes: Q_eng is not an output.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A code-capacity threshold on many-hypercube qudit codes is not a surface-code or qLDPC shot. 10.0% at q=13 and 5.1% for qubits do not tighten those bounds. Do not raise C4. Not a new pillar.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Many-hypercube concatenated codes are extended from qubits to prime-dimension qudits. Level-2 and level-3 codes are given as [[6^2, 4^2, 2^2]]_q and [[6^3, 4^3, 2^3]]_q, with a level-by-level minimum-distance decoder. In a qudit X-error code-capacity model the threshold rises with q, to 10.0% at q=13, against 5.1% for qubits. At large q the logical error is said to fall faster than a conventional distance estimate.",
+        "why": "It is error correction, so it is queued under E-QEC. The code family is concatenated many-hypercube codes, not a surface code and not qLDPC. The 10.0% and 5.1% figures do not tighten those bounds. C4 does not move.",
+        "limit": "Bare arXiv. Code-capacity simulation under X errors only. Not a device shot."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss. A4 miss: C unchanged, and the quoted percents are a different code family. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass.",
+      "math": "Authors Takanori Nishi, Hayato Goto. arXiv:2610.11225v1, 2026-10-08, quant-ph. OAI licence CC BY 4.0. No DOI and no journal-ref. Codes [[6^2, 4^2, 2^2]]_q and [[6^3, 4^3, 2^3]]_q. Code-capacity X-error threshold 10.0% at q=13 and 5.1% for qubits.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 78,
+        "confidence": 62,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-10-2610.11372",
+      "paperId": "2610.11372",
+      "date": "2026-10-10",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: fidelity error and sampling overhead keep their meanings. G2 passes: no plant energy term is adopted. G3 passes: the one-to-two-order drop is a simulation comparison against gate insertion, not an unbounded gain from one parameter. G4 fails: circuit-level mitigation is not a surface-code or qLDPC threshold. G5 passes: the HES versus gate-insertion comparison can be re-simulated this quarter. G6 passes: Q_eng is not an output."
+      },
+      "gateNote": "G1 passes: fidelity error and sampling overhead keep their meanings. G2 passes: no plant energy term is adopted. G3 passes: the one-to-two-order drop is a simulation comparison against gate insertion, not an unbounded gain from one parameter. G4 fails: circuit-level mitigation is not a surface-code or qLDPC threshold. G5 passes: the HES versus gate-insertion comparison can be re-simulated this quarter. G6 passes: Q_eng is not an output.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Canceling the leading gate-insertion error in simulation does not give a surface-code or qLDPC threshold. The variance caveat for high-rank observables is not a logical qubit. Do not raise C4.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Gate insertion replaces an involutory gate such as CZ or CX with 2j+1 copies to amplify noise, and that scaling is said to fail for non-commuting gate noise. Heisenberg-echo symmetrization adds an echo that cancels the leading insertion error. In the author's simulations the absolute fidelity error drops by one to two orders of magnitude relative to gate insertion. For pure initial states, high-rank observables can raise the echo variance; rank-one observables do not add sampling overhead relative to gate insertion.",
+        "why": "Error mitigation sits next to E-QEC, so it is queued there. It is a circuit-level simulation, not a surface-code or qLDPC threshold. C4 does not move.",
+        "limit": "Bare arXiv. Simulation. The one-to-two-order drop is versus gate insertion, not versus a logical-error baseline on a code."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass: the echo is not adopted as a bus. A7 pass. A8 pass.",
+      "math": "Author Raam Uzdin. arXiv:2610.11372v1, 2026-10-08, quant-ph. OAI licence CC BY-NC-SA 4.0. No DOI and no journal-ref. Simulations: absolute fidelity error lower by one to two orders of magnitude versus gate insertion. No code distance and no threshold.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 64,
+        "confidence": 53,
+        "popularity": 32
+      }
+    },
+    {
+      "id": "rev-2026-10-10-2610.11321",
+      "paperId": "2610.11321",
+      "date": "2026-10-10",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: the review enters no new dimension. G2 passes: no plant energy term is adopted. G3 passes: no gain is scaled from one parameter. G4 fails: a photonic-chip review is not the surface-code / qLDPC platform and not an S3 braid. G5 passes: the claim that full fault tolerance is still open can be checked against the devices the review cites this year. G6 passes: Q_eng is not an output."
+      },
+      "gateNote": "G1 passes: the review enters no new dimension. G2 passes: no plant energy term is adopted. G3 passes: no gain is scaled from one parameter. G4 fails: a photonic-chip review is not the surface-code / qLDPC platform and not an S3 braid. G5 passes: the claim that full fault tolerance is still open can be checked against the devices the review cites this year. G6 passes: Q_eng is not an output.",
+      "score": "no claim; reading list",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A photonic review states no new gate set and no device threshold. It does not bind surface-code / qLDPC or S3 fusion measurement. Not a pillar. Reading list only.",
+      "ledger": "none.",
+      "plain": {
+        "core": "This is a review of integrated photonic chips for discrete-variable and continuous-variable universal quantum computation, covering fault-tolerant architectures and the gap between proof-of-principle devices and a scalable processor. No new gate set and no device threshold are stated.",
+        "why": "No KEEP or HOLD claim fits. E-QEC is the surface-code / qLDPC layer, not this review. There is no interface contract, so it is not a new pillar. Reading list only.",
+        "limit": "Bare arXiv review. No new numeric threshold. Licence of the arXiv copy is CC BY-NC-ND 4.0, so it is not mirrored here."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero KEEP/HOLD claims. A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass. Not a new pillar. Reading list. A7 pass. A8 pass.",
+      "math": "Authors Wei Wang, Menglong Fang, Hao Yu, Sijin Li, Zan Tang, Hong Cai, Lip-Ket Chin, Peter van Loock, Daiqin Su, Ai-Qun Liu (10). arXiv:2610.11321v1, 2026-10-08, quant-ph. OAI licence CC BY-NC-ND 4.0. No DOI and no journal-ref. No new threshold is stated.",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 58,
+        "confidence": 51,
+        "popularity": 34
+      }
+    },
+    {
+      "id": "rev-2026-10-10-2610.11890",
+      "paperId": "2610.11890",
+      "date": "2026-10-10",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: Te, Ti, liner diameter, and compression factor carry units. G2 passes: no Q and no auxiliary power are adopted as ledger terms. G3 passes: the fivefold electron and twofold ion heating are at the stated compression 2.75, not an extrapolation in one free parameter. G4 fails: magnetized-target compression is not plant-attach control and not a Vlasov or SRS-SBS method. G5 passes: the diode, Thomson, and neutron-yield temperatures can be checked against the shot record this year. G6 passes: no Q is stated and none is entered."
+      },
+      "gateNote": "G1 passes: Te, Ti, liner diameter, and compression factor carry units. G2 passes: no Q and no auxiliary power are adopted as ledger terms. G3 passes: the fivefold electron and twofold ion heating are at the stated compression 2.75, not an extrapolation in one free parameter. G4 fails: magnetized-target compression is not plant-attach control and not a Vlasov or SRS-SBS method. G5 passes: the diode, Thomson, and neutron-yield temperatures can be checked against the shot record this year. G6 passes: no Q is stated and none is entered.",
+      "score": "no claim; reading list",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A 1 keV electron temperature is not Q. The abstract states no Q_sci, Q_fuel, or Q_eng. None is written into the ledger. Not a controller and not a Layer-3 solver. Not a new pillar.",
+      "ledger": "none. Temperatures are not entered as P_fusion, P_aux, or Q_eng.",
+      "plain": {
+        "core": "LM26 reports a peak electron temperature of 1180 \u00b1 65 eV from filtered X-ray diodes, Thomson scattering electron temperature 1090 \u00b1 40 eV, and a deuterium ion temperature of 459 \u00b1 33 eV inferred from neutron yield. A spherical tokamak plasma is compressed inside a solid lithium liner whose initial diameter is 1.76 m, by a radial factor 2.75, using theta-pinch coils. Electron temperature rises more than fivefold and ion temperature as much as twofold. No Q is stated.",
+        "why": "The temperatures are recorded so they are not later mistaken for a gain. No KEEP or HOLD claim fits: this is not plant-attach control and not a Vlasov or SRS-SBS solver. No Q is entered. Q=1000 stays a stress test.",
+        "limit": "Bare arXiv. The abstract states no Q_sci, Q_fuel, or Q_eng. Crossref was not called. Not a controller."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero KEEP/HOLD claims. A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass: compression is not adopted as a fuel or a bus. A7 pass. A8 pass: ledger terms did not move.",
+      "math": "Authors S. J. Howard and 45 coauthors (46 on the arXiv record). arXiv:2610.11890v1, 2026-10-08, physics.plasm-ph. OAI licence CC BY 4.0. No DOI and no journal-ref. Te = 1180 \u00b1 65 eV (filtered X-ray diodes); Thomson Te = 1090 \u00b1 40 eV; Ti = 459 \u00b1 33 eV from neutron yield; initial liner diameter 1.76 m; radial compression 2.75. No Q is stated.",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 76,
+        "confidence": 65,
+        "popularity": 44
+      }
+    },
+    {
+      "id": "rev-2026-10-10-2610.12223",
+      "paperId": "2610.12223",
+      "date": "2026-10-10",
+      "bind": [
+        "E-MZM"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: the lifetimes are in microseconds and tens of nanoseconds. G2 passes: no plant energy term is adopted. G3 passes: the lifetimes are for representative noise strengths in a minimal model, not an unbounded scaling. G4 passes: the platform is a Majorana tetron, which is the E-MZM platform. G5 passes: idle versus measured X-parity lifetime on that device class can be compared this year. G6 passes: Q_eng is not an output."
+      },
+      "gateNote": "G1 passes: the lifetimes are in microseconds and tens of nanoseconds. G2 passes: no plant energy term is adopted. G3 passes: the lifetimes are for representative noise strengths in a minimal model, not an unbounded scaling. G4 passes: the platform is a Majorana tetron, which is the E-MZM platform. G5 passes: idle versus measured X-parity lifetime on that device class can be compared this year. G6 passes: Q_eng is not an output.",
+      "score": "E-MZM C1 T3 D3 A2 stays WATCH",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Order-of-microseconds versus tens of nanoseconds is a noise-model result for representative strengths, not an X and Z logical. E-MZM stays WATCH at C1. M5 stays open. Do not raise C.",
+      "ledger": "none.",
+      "plain": {
+        "core": "A minimal model of a Majorana tetron coupled to a readout dot, with electrostatic noise, is used to study the interwire X-parity lifetime. Coupling to the dot can open an energy splitting that moves noise-induced transitions off zero frequency. For representative noise strengths motivated by disordered nanowires, the X-parity switching lifetime in the measurement configuration is of order microseconds when the bare-tetron coherence time is only tens of nanoseconds. Near resonance the four low-energy states form two longer-lived manifolds of the combined X-loop parity.",
+        "why": "The platform is a Majorana tetron, so it is queued under E-MZM. E-MZM is WATCH until an X and Z logical exists. These lifetimes are a noise model, not that logical. C1 does not move. M5 stays open.",
+        "limit": "Bare arXiv theory. The microseconds and tens of nanoseconds are for representative noise strengths, not a reported device shot in this paper. The motivating experiment is cited as arXiv:2507.08795."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-MZM is WATCH, not KEEP or HOLD. A2 pass. A3 miss: HOLD, not INCLUDE. A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass: measurement stabilization is not adopted. A7 pass. A8 pass.",
+      "math": "Authors Katharina Laubscher, Jay D. Sau, Sankar Das Sarma. arXiv:2610.12223v1, 2026-10-08, cond-mat.mes-hall. OAI licence arXiv non-exclusive. No DOI and no journal-ref. For representative noise strengths, X-parity switching lifetimes of order microseconds in the measurement configuration, against a bare-tetron coherence time of tens of nanoseconds. Motivating experiment cited as arXiv:2507.08795. Not re-fetched this run.",
+      "autoGate": "miss A1, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 80,
+        "confidence": 60,
+        "popularity": 42
+      }
+    },
     {
       "id": "rev-2026-10-09-2610.06699",
       "paperId": "2610.06699",
