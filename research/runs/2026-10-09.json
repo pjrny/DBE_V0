@@ -1,0 +1,365 @@
+{
+  "id": "run-2026-10-09-daily",
+  "kind": "daily",
+  "startedAt": "2026-10-09T09:19:00-05:00",
+  "finishedAt": "2026-10-09T09:34:10-05:00",
+  "windowStart": "2026-10-02",
+  "windowEnd": "2026-10-09",
+  "sources": [
+    {
+      "id": "arxiv-yesterday-ids",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 8,
+      "new": 8,
+      "ms": 308,
+      "error": null
+    },
+    {
+      "id": "arxiv-recent-window",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 5,
+      "returned": 152,
+      "new": null,
+      "ms": 1001,
+      "error": null
+    },
+    {
+      "id": "arxiv-ingest-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 7,
+      "returned": 175,
+      "new": null,
+      "ms": 1843,
+      "error": null
+    },
+    {
+      "id": "arxiv-fetch-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 10,
+      "returned": 200,
+      "new": null,
+      "ms": 4095,
+      "error": null
+    },
+    {
+      "id": "arxiv-oai",
+      "url": "https://oaipmh.arxiv.org/oai",
+      "status": "ok",
+      "http": 200,
+      "requests": 14,
+      "returned": 14,
+      "new": 0,
+      "ms": 1840,
+      "error": null
+    },
+    {
+      "id": "github-openai-math",
+      "url": "https://api.github.com/repos/openai/math",
+      "status": "ok",
+      "http": 200,
+      "requests": 12,
+      "returned": 1,
+      "new": 1,
+      "ms": null,
+      "error": null
+    },
+    {
+      "id": "openalex",
+      "url": "https://api.openalex.org/works",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "OPENALEX_API_KEY unset"
+    },
+    {
+      "id": "crossref",
+      "url": "https://api.crossref.org/works",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "DBE_CONTACT_EMAIL unset; mailto not invented"
+    },
+    {
+      "id": "unpaywall",
+      "url": "https://api.unpaywall.org/v2",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "DBE_CONTACT_EMAIL unset"
+    },
+    {
+      "id": "weekly",
+      "url": null,
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "Friday; weekly sources run Sunday only"
+    }
+  ],
+  "counts": {
+    "harvested": 535,
+    "duplicates": 243,
+    "merged": 2,
+    "new": 15,
+    "scored": 15,
+    "unscored": 6,
+    "add": 0,
+    "strengthen": 0,
+    "weaken": 0,
+    "hold": 10,
+    "newPillar": 0,
+    "reject": 5
+  },
+  "paperIds": [
+    "2610.06699",
+    "2610.06768",
+    "2610.07683",
+    "2610.08667",
+    "2610.09190",
+    "2610.09749",
+    "2610.10011",
+    "2610.10432",
+    "openai-math-362",
+    "2610.10679",
+    "2610.11079",
+    "2610.11080",
+    "2610.11658",
+    "2610.11871",
+    "2610.12400"
+  ],
+  "unscoredIds": [
+    {
+      "id": "2610.11225",
+      "reason": "2026-10-08 qudit many-hypercube codes; code-capacity X-error threshold stated as 10.0 percent at q=13 and 5.1 percent for qubits. Not a surface-code shot. E-QEC adjacent. Score next."
+    },
+    {
+      "id": "2610.11890",
+      "reason": "2026-10-08 LM26 magnetized-target compression. Abstract reports Te = 1180 ± 65 eV (filtered X-ray diodes), Thomson Te = 1090 ± 40 eV, Ti = 459 ± 33 eV from neutron yield, radial compression 2.75, initial liner diameter 1.76 m. No Q is stated. Not a controller. Score next; do not enter a Q."
+    },
+    {
+      "id": "2610.10668",
+      "reason": "2026-10-07 topologically ordered superfluids with deconfined anyons and gapless Goldstone modes; non-Abelian vortices in examples. E-S3 background, not a braid experiment. Score next."
+    },
+    {
+      "id": "2610.10764",
+      "reason": "2026-10-07 gauging of modulated symmetries; Abelian symmetry-enriched topological order with the braiding pairing kept. Not an S3 gate set. Score next."
+    },
+    {
+      "id": "2610.11372",
+      "reason": "2026-10-08 Heisenberg-echo symmetrization for gate-insertion error mitigation. Simulation, not a code threshold. E-QEC adjacent. Score next."
+    },
+    {
+      "id": "2610.11321",
+      "reason": "2026-10-08 review of photonic chips for fault-tolerant quantum computing. No new gate set and no device threshold. Score next only if a KEEP claim is actually bound."
+    }
+  ],
+  "offPathNotCarried": [
+    "2610.11868",
+    "2610.09097",
+    "2610.12334",
+    "2610.11035"
+  ],
+  "fieldCounts": {
+    "tqc": 9,
+    "plasma": 4,
+    "majorana": 1,
+    "anyons": 1,
+    "fusion-quantum": 1
+  },
+  "gateMisses": {
+    "A1": 6,
+    "A2": 14,
+    "A3": 15,
+    "A4": 15,
+    "A5": 14,
+    "A6": 0,
+    "A7": 0,
+    "A8": 0,
+    "G1": 0,
+    "G2": 0,
+    "G3": 0,
+    "G4": 14,
+    "G5": 0,
+    "G6": 0
+  },
+  "claimDelta": "none",
+  "versionBump": null,
+  "fulltext": {
+    "cached": 0,
+    "privateOnly": 0,
+    "noOA": 0
+  },
+  "tests": {
+    "command": "PYTHONPATH=. python -m pytest -q tests/test_research.py tests/test_claims.py tests/test_api.py tests/test_plasma.py tests/test_transport.py",
+    "result": "pass",
+    "summary": "19 passed, 30 subtests passed"
+  },
+  "branch": "observatory/2026-10-09",
+  "pr": "https://github.com/pjrny/DBE_V0/pull/11",
+  "suspiciousContent": [],
+  "scoreRoutes": [
+    {
+      "paper": "2610.06699",
+      "bind": "",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv math-ph",
+      "exit": null,
+      "note": "score.py skipped: no claim id"
+    },
+    {
+      "paper": "2610.06768",
+      "bind": "",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph",
+      "exit": null,
+      "note": "score.py skipped: no claim id"
+    },
+    {
+      "paper": "2610.07683",
+      "bind": "",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv cond-mat.mes-hall",
+      "exit": null,
+      "note": "score.py skipped: no claim id"
+    },
+    {
+      "paper": "2610.08667",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph",
+      "exit": 0
+    },
+    {
+      "paper": "2610.09190",
+      "bind": "",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv physics.plasm-ph",
+      "exit": null,
+      "note": "score.py skipped: no claim id"
+    },
+    {
+      "paper": "2610.09749",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph",
+      "exit": 0
+    },
+    {
+      "paper": "2610.10011",
+      "bind": "E-MZM",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv cond-mat.mes-hall",
+      "exit": 0
+    },
+    {
+      "paper": "2610.10432",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph",
+      "exit": 0
+    },
+    {
+      "paper": "openai-math-362",
+      "bind": "S-L3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "preprint",
+      "exit": 0,
+      "note": "Follow-up: score.py was re-run with venue preprint. A5 FAIL, route QUEUE. The display venue remains OpenAI Math preprint. C was not raised."
+    },
+    {
+      "paper": "2610.10679",
+      "bind": "E-S3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv cond-mat.str-el",
+      "exit": 0
+    },
+    {
+      "paper": "2610.11079",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph",
+      "exit": 0
+    },
+    {
+      "paper": "2610.11080",
+      "bind": "",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv physics.plasm-ph",
+      "exit": null,
+      "note": "score.py skipped: no claim id"
+    },
+    {
+      "paper": "2610.11658",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph",
+      "exit": 0
+    },
+    {
+      "paper": "2610.11871",
+      "bind": "E-RL",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "PASS",
+      "venue": "Nuclear Fusion 66(12), 126042 (2026)",
+      "exit": 0
+    },
+    {
+      "paper": "2610.12400",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arXiv quant-ph",
+      "exit": 0
+    }
+  ],
+  "notes": "Twenty-second run, Friday, weekly sources off. Lookback 7 days (2026-10-02 to 2026-10-09). ingest.py was not executed: it fires its queries with no sleep and would break the 1 request / 3 s rule. The same QUERIES, the fetch_arxiv QUERIES, a one-day category window (submitted 2026-10-08 through 2026-10-09), yesterday's 8 arXiv ids, and OAI GetRecord for the 14 scored arXiv ids were issued with a 3.1 s gap. API rows 535, unique ids 425, of which 133 were already in the catalog and 110 rows were repeat fetches. Yesterday's 9 unscored ids, including OpenAI math family 362 queued by PR #10, were scored oldest first (the eight arXiv ids by date, then the queued manuscript). 10 HOLD and 5 REJECT. No ADD, no STRENGTHEN, no bridge, no new pillar, no CUT reversal, no version bump. C unchanged. Two existing rows gained metadata and were not duplicated: 2609.11389 now carries doi 10.1002/ctpp.70156 and the Contributions to Plasma Physics (2026) e70156 journal-ref; 2609.11985 gained doi 10.1038/s41524-026-02292-7 with no journal-ref, so its venue stays arXiv. Crossref was not called. OpenAlex, Crossref, and Unpaywall were skipped because OPENALEX_API_KEY and DBE_CONTACT_EMAIL are unset. No PDF was cached. The OpenAI math PDF was not downloaded. DBE-0.2.2 / DBES-0.2.0 stand. Q=1000 remains a ledger stress test. The spin-polarized-fuel abstract says high gain and states no number; none was entered. score.py, given venue \"OpenAI Math preprint\", did not mark A5 as a bare preprint (its checker only flags venues that start with arxiv or preprint). The action was HOLD, so the route stayed QUEUE and nothing was auto-merged. The card still records A5 as a miss: the manuscript is not a journal and not replicated hardware, and C does not move."
+}

@@ -1,6 +1,566 @@
 {
-  "asOf": "2026-10-08",
+  "asOf": "2026-10-09",
   "cards": [
+    {
+      "id": "rev-2026-10-09-2610.06699",
+      "paperId": "2610.06699",
+      "date": "2026-10-09",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: no new dimension is entered. G2 passes: no plant energy term is adopted. G3 passes: the semi-Clifford statements are about fixed qudit counts, not a gain from one free parameter. G4 fails: a cohomological description of the Clifford hierarchy is not a surface-code or qLDPC shot, and not an S3 braid. G5 passes: the two-qudit and three-qudit semi-Clifford claims can be checked this quarter. G6 passes: Q_eng is not an output."
+      },
+      "gateNote": "G1 passes: no new dimension is entered. G2 passes: no plant energy term is adopted. G3 passes: the semi-Clifford statements are about fixed qudit counts, not a gain from one free parameter. G4 fails: a cohomological description of the Clifford hierarchy is not a surface-code or qLDPC shot, and not an S3 braid. G5 passes: the two-qudit and three-qudit semi-Clifford claims can be checked this quarter. G6 passes: Q_eng is not an output.",
+      "score": "no claim; reading list",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A 1-cocycle description of the Clifford hierarchy does not put fusion measurement into an S3 gate set and does not give a code threshold. No inputs, outputs, latency, or fail-safe are stated. Not a pillar.",
+      "ledger": "none.",
+      "plain": {
+        "core": "The quantum derivatives of a unitary are shown to form a non-abelian 1-cocycle, and every such cocycle is said to come from a unitary. That is used as a recursive cohomological description of the Clifford hierarchy. At the third level the cocycle is split into symplectic, affine, and phase parts. The applications stated are a new proof that every two-qudit gate in that level is semi-Clifford, and a first proof that every three-qudit gate in that level is semi-Clifford.",
+        "why": "No KEEP or HOLD claim fits. E-QEC is the surface-code / qLDPC layer, not the Clifford hierarchy. E-S3 is braid plus fusion measurement. There is no interface contract, so this is not a new pillar. Reading list only.",
+        "limit": "Bare arXiv (math-ph). Fifty-page cohomology argument. No threshold and no processor."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero KEEP/HOLD claims. A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass. Not a new pillar. Reading list. A7 pass. A8 pass.",
+      "math": "Author Junaid Aftab. arXiv:2610.06699v1, submitted 2026-10-05, primary math-ph. OAI licence CC BY 4.0. No DOI and no journal-ref. Claims: every two-qudit third-level gate is semi-Clifford, and every three-qudit third-level gate is semi-Clifford.",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 54,
+        "confidence": 56,
+        "popularity": 32
+      }
+    },
+    {
+      "id": "rev-2026-10-09-2610.06768",
+      "paperId": "2610.06768",
+      "date": "2026-10-09",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: the stated costs keep their units (gate counts and qubit number). G2 passes: no plant energy term is adopted. G3 passes: the O(n^2) compilers and the constant-factor gate cuts are at stated connectivities, not an unbounded gain. G4 fails: Majorana here is a signed permutation of 2n fermionic modes in a matchgate compiler, not a device zero mode. G5 passes: the path and complete-graph compilers, and the tree NP-completeness claim, can be checked this quarter. G6 passes: Q_eng is not an output."
+      },
+      "gateNote": "G1 passes: the stated costs keep their units (gate counts and qubit number). G2 passes: no plant energy term is adopted. G3 passes: the O(n^2) compilers and the constant-factor gate cuts are at stated connectivities, not an unbounded gain. G4 fails: Majorana here is a signed permutation of 2n fermionic modes in a matchgate compiler, not a device zero mode. G5 passes: the path and complete-graph compilers, and the tree NP-completeness claim, can be checked this quarter. G6 passes: Q_eng is not an output.",
+      "score": "no claim; reading list",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A matchgate-Clifford compiler that permutes Majorana modes is not an X or Z logical on a device. E-MZM stays WATCH and is not bound. Not a pillar.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Optimal exact synthesis is studied for the matchgate-Clifford group, whose adjoint action is a unit-determinant signed permutation of 2n Majorana modes. For path and complete connectivity the problem is classically solvable in O(n^2) time, with explicit gate-optimal compilers. On a tree the decision version is NP-complete. On chains up to n=80 the compiler is reported to cut total gate count by a factor 2.57 against Qiskit and 2.28 against Tket.",
+        "why": "The word Majorana is a fermionic gate label. It is not a nanowire zero mode and not a code. No KEEP or HOLD claim fits. Reading list only.",
+        "limit": "Bare arXiv. Synthesis complexity. The factors 2.57 and 2.28 are compiler comparisons, not a logical-error result."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero KEEP/HOLD claims. A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass. Not a new pillar. Reading list. A7 pass. A8 pass.",
+      "math": "Authors Berta Casas, Diego Garc\u00eda-Mart\u00edn, Yuxuan Zhang. arXiv:2610.06768v1, 2026-10-05, quant-ph. OAI licence arXiv non-exclusive. Path and complete graphs: O(n^2). Tree decision problem: NP-complete. Benchmark n=80: gate-count factors 2.57 (Qiskit) and 2.28 (Tket). No DOI.",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 50,
+        "confidence": 53,
+        "popularity": 30
+      }
+    },
+    {
+      "id": "rev-2026-10-09-2610.07683",
+      "paperId": "2610.07683",
+      "date": "2026-10-09",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: array size, distance, and the crosstalk factor keep their units. G2 passes: no plant energy term is adopted. G3 passes: the 42-fold crosstalk drop is a comparison of two operating regimes, not a gain that grows from one free parameter. G4 fails: a 6 by 6 quantum-dot array with spin shuttling is a connectivity result, not a surface-code or qLDPC memory. G5 passes: the shuttling distances and the crosstalk factor can be checked on the device this year. G6 passes: Q_eng is not an output."
+      },
+      "gateNote": "G1 passes: array size, distance, and the crosstalk factor keep their units. G2 passes: no plant energy term is adopted. G3 passes: the 42-fold crosstalk drop is a comparison of two operating regimes, not a gain that grows from one free parameter. G4 fails: a 6 by 6 quantum-dot array with spin shuttling is a connectivity result, not a surface-code or qLDPC memory. G5 passes: the shuttling distances and the crosstalk factor can be checked on the device this year. G6 passes: Q_eng is not an output.",
+      "score": "no claim; reading list",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Ten simultaneously operated dots in a 6 by 6 array do not demonstrate a code. CZ via shuttling is not the E-QEC layer. No interface contract for a new pillar.",
+      "ledger": "none.",
+      "plain": {
+        "core": "A 6 by 6 quantum-dot array is defined by one shared barrier gate and individual plunger gates. Coherent spin shuttling over distances up to 5.2 micrometres tunes the array into a sparse set of 10 simultaneously operated qubits. In that separated regime crosstalk is reduced by a factor 42, and control-Z is said to be available through shuttling and plunger-only control.",
+        "why": "E-QEC is the error-correcting layer. This paper does not run a code. It is a semiconductor connectivity result. Reading list only.",
+        "limit": "Bare arXiv. No logical error rate and no code distance are stated, so none are entered."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero KEEP/HOLD claims. A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass. Not a new pillar. Reading list. A7 pass. A8 pass.",
+      "math": "arXiv:2610.07683v1, 2026-10-06, cond-mat.mes-hall. OAI licence CC BY-NC-ND 4.0. 6 by 6 dots; 10 qubits operated together; shuttling up to 5.2 micrometres; crosstalk reduced 42 times. No DOI.",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 62,
+        "confidence": 62,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-09-2610.08667",
+      "paperId": "2610.08667",
+      "date": "2026-10-09",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: the T-gate count and the site count keep their units. G2 passes: no plant energy term is adopted. G3 passes: the reported drop against the rigorous bound is a comparison at one 36-site model, not a gain from one free parameter. G4 fails: a T-count for Lindblad ground-state preparation of a Hubbard model is not a surface-code or qLDPC shot. G5 passes: the 7.7 times 10^8 T-gate estimate can be recomputed this quarter. G6 passes: Q_eng is not an output."
+      },
+      "gateNote": "G1 passes: the T-gate count and the site count keep their units. G2 passes: no plant energy term is adopted. G3 passes: the reported drop against the rigorous bound is a comparison at one 36-site model, not a gain from one free parameter. G4 fails: a T-count for Lindblad ground-state preparation of a Hubbard model is not a surface-code or qLDPC shot. G5 passes: the 7.7 times 10^8 T-gate estimate can be recomputed this quarter. G6 passes: Q_eng is not an output.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "An early-fault-tolerant T-count for a 36-site Hubbard model does not test the surface-code layer. S-L1 is not bound: this is not P_coh versus density and temperature.",
+      "ledger": "none.",
+      "plain": {
+        "core": "The cost of preparing Hubbard-model ground states with the single-ancilla Lindblad method is estimated in the early fault-tolerant regime, with error bounds that keep constant prefactors. Empirically chosen parameters are reported to cut the resources by orders of magnitude relative to the rigorous bound. The stated estimate is 7.7 times 10^8 T gates for one unit of time evolution into the low-energy subspace of a 36-site fermionic Hubbard model. Filtering of energy transitions is identified as the main cost.",
+        "why": "E-QEC is the error layer, so a fault-tolerant resource count sits next to it. It is not a memory experiment, and C4 does not move. It is not the S-L1 coherence ledger.",
+        "limit": "Bare arXiv. A resource estimate, not a device. The T-count is not a surface-code threshold."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss. A4 miss: C unchanged and no journal bound is tightened. A5 miss: bare arXiv. A6 pass. A7 pass: claim HOLD count unchanged. A8 pass: no ledger term moved.",
+      "math": "Authors Marius Bothe, Patrick Schoepf, Nick S. Blunt. arXiv:2610.08667v1, 2026-10-06, quant-ph. OAI licence arXiv non-exclusive. 7.7e8 T gates; 36-site Hubbard model; one unit of time evolution. No DOI.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 64,
+        "confidence": 55,
+        "popularity": 34
+      }
+    },
+    {
+      "id": "rev-2026-10-09-2610.09190",
+      "paperId": "2610.09190",
+      "date": "2026-10-09",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: no unnamed plasma quantity is entered as a result. G2 passes: no plant energy term is adopted. G3 passes: the paper is an error budget, not a scaling we adopt. G4 fails: a numerical-error analysis of EMC3-EIRENE on HSX is not a coil command and not a plant-attach controller. G5 passes: the statistical, bias, and time-integration errors can be recomputed this quarter. G6 passes: Q_eng is not an output."
+      },
+      "gateNote": "G1 passes: no unnamed plasma quantity is entered as a result. G2 passes: no plant energy term is adopted. G3 passes: the paper is an error budget, not a scaling we adopt. G4 fails: a numerical-error analysis of EMC3-EIRENE on HSX is not a coil command and not a plant-attach controller. G5 passes: the statistical, bias, and time-integration errors can be recomputed this quarter. G6 passes: Q_eng is not an output.",
+      "score": "no claim; reading list",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "An edge-code error budget on HSX does not close M2. EMC3-EIRENE is not the S-L3 Vlasov / hole-burning / SRS-SBS method set. The comment says submitted to Nuclear Fusion; that is not a journal-ref.",
+      "ledger": "none.",
+      "plain": {
+        "core": "The statistical error, bias, and time-integration error of EMC3-EIRENE are characterized for edge plasmas in the Helically Symmetric Experiment, and the discretization error is left hard to quantify on that grid. The usual volume-averaged relative-change metric is reported to underestimate the statistical error. Time-integration error is said to weigh differently in a stellarator than in a tokamak because cross-field transport matters more.",
+        "why": "E-RL needs diagnostics in and actuator commands out. This paper has neither. S-L3 is a different solver family. Reading list only.",
+        "limit": "Bare arXiv. Comment line says submitted to Nuclear Fusion. No journal-ref and no DOI in the OAI record, so the venue stays arXiv."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero KEEP/HOLD claims. A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass. Not a new pillar. Reading list. A7 pass. A8 pass.",
+      "math": "Authors F. A. Chavarria, D. Boeyaert, H. Frerichs, K. A. Garcia, B. Geiger. arXiv:2610.09190v1, 2026-10-06, physics.plasm-ph. OAI licence arXiv non-exclusive. No DOI. No numeric error is copied because the abstract states the classes of error and not a single error value.",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 55,
+        "confidence": 56,
+        "popularity": 33
+      }
+    },
+    {
+      "id": "rev-2026-10-09-2610.09749",
+      "paperId": "2610.09749",
+      "date": "2026-10-09",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: ancilla counts, CNOT counts, and the physical error rate keep their units. G2 passes: no plant energy term is adopted. G3 passes: the logical-error drops are comparisons at stated circuits and a stated p, not a gain from one free parameter. G4 fails: a fault-equivalent rewrite of a [[7,1,3]] syndrome circuit is not a surface-code or qLDPC memory. G5 passes: the rewritten circuits can be resimulated this quarter. G6 passes: Q_eng is not an output."
+      },
+      "gateNote": "G1 passes: ancilla counts, CNOT counts, and the physical error rate keep their units. G2 passes: no plant energy term is adopted. G3 passes: the logical-error drops are comparisons at stated circuits and a stated p, not a gain from one free parameter. G4 fails: a fault-equivalent rewrite of a [[7,1,3]] syndrome circuit is not a surface-code or qLDPC memory. G5 passes: the rewritten circuits can be resimulated this quarter. G6 passes: Q_eng is not an output.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A shorter Steane syndrome circuit is not a surface-code threshold. The logical-error drops are Monte Carlo comparisons. C4 does not move.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Fault-equivalent rewrites are searched so that a fault-tolerant circuit keeps its fault tolerance while Bell-pair reductions remove ancilla preparations and CNOTs. For Shor-style syndrome extraction on the [[7,1,3]] code, one round is reduced from 30 to 18 ancilla preparations and from 54 to 42 CNOT gates. At a physical two-qubit error rate of 10^-3 the optimized circuit is reported to lower the logical error rate by about 21 percent for both logical basis states, with the reduction between 13 and 23 percent over two orders of magnitude in p. A Steane-style search selects four ancillas and 14 CNOT gates and is reported to lower the logical error by about 15 percent under depolarizing idle noise at 3p/10, and by about 10 percent at p/10.",
+        "why": "E-QEC is the error layer, so a fault-tolerant circuit rewrite sits next to it. The code is the Steane code, not the surface code or a qLDPC code. C4 does not move.",
+        "limit": "Bare arXiv. Monte Carlo on one small code. Not a processor memory."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss. A4 miss: C unchanged and no journal bound is tightened. A5 miss: bare arXiv. A6 pass. A7 pass: claim HOLD count unchanged. A8 pass: no ledger term moved.",
+      "math": "Authors Hyeongjun Jeon, Jeonghoon Lee, Taehyun Kim. arXiv:2610.09749v1, 2026-10-07, quant-ph. OAI licence CC BY 4.0. [[7,1,3]]: 30 to 18 ancillas, 54 to 42 CNOTs; about 21 percent logical-error drop at p=10^-3 (range 13 to 23 percent). Steane dynamic: 4 ancillas, 14 CNOTs; about 15 percent at idle 3p/10 and about 10 percent at p/10. No DOI.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 72,
+        "confidence": 60,
+        "popularity": 38
+      }
+    },
+    {
+      "id": "rev-2026-10-09-2610.10011",
+      "paperId": "2610.10011",
+      "date": "2026-10-09",
+      "bind": [
+        "E-MZM"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: central charge and the filling pair keep their units. No new conductance number is entered beyond the abstract's citation. G2 passes: no plant energy term is adopted. G3 passes: the impossibility statement is at fixed anomaly data, not a gain from one parameter. G4 fails: a thermal-conductance theorem is not an X and Z logical on a Majorana device. G5 passes: the abstract names the Lorenz ratio and excess shot noise as the charge-sector tests that can separate the two mechanisms. G6 passes: Q_eng is not an output."
+      },
+      "gateNote": "G1 passes: central charge and the filling pair keep their units. No new conductance number is entered beyond the abstract's citation. G2 passes: no plant energy term is adopted. G3 passes: the impossibility statement is at fixed anomaly data, not a gain from one parameter. G4 fails: a thermal-conductance theorem is not an X and Z logical on a Majorana device. G5 passes: the abstract names the Lorenz ratio and excess shot noise as the charge-sector tests that can separate the two mechanisms. G6 passes: Q_eng is not an output.",
+      "score": "E-MZM C1 T3 D3 A2 stays WATCH",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Matching thermal conductance is not a Majorana logical. The abstract's own corollary is that thermometry cannot separate a chiral Majorana mode from equilibrated Abelian edges when the anomaly data match. M5 stays the charge sector. E-MZM stays WATCH.",
+      "ledger": "none.",
+      "plain": {
+        "core": "The abstract cites a half-integer thermal-conductance plateau, kappa_0 T/2, at a bipolar (2,-1) junction in bilayer graphene (Roy et al., Nat. Commun. 17, 2853 (2026)), and says that plateau came from equilibration of electron and hole edges, not from non-Abelian topology. A theorem is stated: under full thermal equilibration, the two-terminal thermal conductance of a network of chiral edge segments depends only on the net chiral central charges. The corollary is that two realizations with the same anomaly data cannot be distinguished by thermal conductance. The application is a topological-insulator\u2013superconductor interface, where a vortex is assigned charge e/4, the boundary is assigned a chiral Majorana mode of central charge 1/2, and a neighboring integer quantum Hall region supplies the kinetic copy. The Lorenz ratio and the excess shot noise are named as the charge-sector separators, provided the quantum Hall edge does not abut the superconductor.",
+        "why": "This is the M5 question for E-MZM, and the answer in the abstract is that thermometry is not the distinguisher. E-MZM is WATCH, so A1 fails. C1 does not move. No X or Z logical is shown.",
+        "limit": "Bare arXiv. A theorem plus a proposed charge-sector test. Not a device logical. The half-integer plateau is the cited experiment, not a new measurement in this paper."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: E-MZM is WATCH, not KEEP or HOLD. A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass. A7 pass: claim HOLD count unchanged. A8 pass: no ledger term moved.",
+      "math": "Authors Laurence A. Jacobs, Guillermo R. Zemba. arXiv:2610.10011v1, 2026-10-07, cond-mat.mes-hall (cross hep-th). OAI licence CC BY 4.0. Central charge 1/2; vortex charge e/4; filling pair (2,-1); cited plateau kappa_0 T/2. No DOI.",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 80,
+        "confidence": 62,
+        "popularity": 42
+      }
+    },
+    {
+      "id": "rev-2026-10-09-2610.10432",
+      "paperId": "2610.10432",
+      "date": "2026-10-09",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: reset time, residual population, gate time, and error per Clifford keep their units. G2 passes: no plant energy term is adopted. G3 passes: the erasure bias and the error per Clifford are stated device comparisons, not a gain from one free parameter. G4 fails: a dual-rail erasure qubit on driven Kerr oscillators is not a surface-code or qLDPC memory. G5 passes: the error per Clifford is a this-year device number. G6 passes: Q_eng is not an output."
+      },
+      "gateNote": "G1 passes: reset time, residual population, gate time, and error per Clifford keep their units. G2 passes: no plant energy term is adopted. G3 passes: the erasure bias and the error per Clifford are stated device comparisons, not a gain from one free parameter. G4 fails: a dual-rail erasure qubit on driven Kerr oscillators is not a surface-code or qLDPC memory. G5 passes: the error per Clifford is a this-year device number. G6 passes: Q_eng is not an output.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "An erasure-biased dual-rail on transmon-regime Kerr oscillators is not the surface-code layer. Post-selection is not a threshold. C4 does not move.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Sub-gigahertz charge driving of superconducting Kerr oscillators in the transmon regime is used both to turn on parametric interactions and to reduce sensitivity to low-frequency charge noise. One oscillator is reset in 82 ns to a residual population below 0.7 percent, under its 2.5 percent steady-state thermal population. Two oscillators encode a dual-rail qubit with nearly fourfold erasure bias. With one end-of-circuit erasure check the error per Clifford is 5.6 times 10^-4, and 1.5 times 10^-4 after post-selection, with 25 ns gates.",
+        "why": "E-QEC is the error layer. A biased erasure qubit is adjacent hardware, not a surface-code or qLDPC demonstration. The error per Clifford is not entered as a code threshold.",
+        "limit": "Bare arXiv. One check and post-selection. Not a distance-d memory."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss. A4 miss: C unchanged and no journal bound is tightened. A5 miss: bare arXiv. A6 pass. A7 pass: claim HOLD count unchanged. A8 pass: no ledger term moved.",
+      "math": "arXiv:2610.10432v1, 2026-10-07, quant-ph. OAI licence CC BY 4.0. Reset 82 ns; residual population below 0.7 percent versus 2.5 percent thermal; nearly fourfold erasure bias; error per Clifford 5.6e-4, and 1.5e-4 after post-selection; 25 ns gates. No DOI.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 76,
+        "confidence": 63,
+        "popularity": 44
+      }
+    },
+    {
+      "id": "rev-2026-10-09-openai-math-362",
+      "paperId": "openai-math-362",
+      "date": "2026-10-09",
+      "bind": [
+        "S-L3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: the Lean statement is a existence-and-uniqueness claim for admissible data. No plasma unit is entered as a measured result. G2 passes: no plant energy term is adopted. P_fusion and the other ledger terms do not appear. G3 passes: no cross-section or gain is scaled. G4 fails: a relativistic Vlasov\u2013Maxwell existence manuscript is not an FV/CN reactivity ratio and not a hole-burning or SRS-SBS method. G5 passes: the pinned Lean tree can be compiled this quarter. This run did not compile it, so the build is not evidence. G6 passes: Q_eng is not an output."
+      },
+      "gateNote": "G1 passes: the Lean statement is a existence-and-uniqueness claim for admissible data. No plasma unit is entered as a measured result. G2 passes: no plant energy term is adopted. P_fusion and the other ledger terms do not appear. G3 passes: no cross-section or gain is scaled. G4 fails: a relativistic Vlasov\u2013Maxwell existence manuscript is not an FV/CN reactivity ratio and not a hole-burning or SRS-SBS method. G5 passes: the pinned Lean tree can be compiled this quarter. This run did not compile it, so the build is not evidence. G6 passes: Q_eng is not an output.",
+      "score": "S-L3 C4 T2 D2 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "An unchecked machine-written existence theorem is not a Layer-3 solver. Lean was not executed. The PDF was not stored and not read. S-L3 stays C4. This cannot raise C.",
+      "ledger": "none.",
+      "plain": {
+        "core": "OpenAI math family 362, manuscript dated 23 September 2026, is a public GitHub preprint titled as global classical solutions of the three-dimensional relativistic Vlasov\u2013Maxwell system. At commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb the tree contains lean/OAI/Analysis/VlasovMaxwell/. Model.lean defines the one-species relativistic system on Euclidean 3-space. Main.lean states a theorem, global_classical_solution, that admissible smooth data have a classical solution which is smooth on every finite time horizon and unique at nonnegative times, proved by calling global_classical_of_uniform_physical_increment. The repository text says the manuscripts were produced by an internal model and that not every result is formalized. This run did not compile Lean and did not read the PDF.",
+        "why": "S-L3 keeps Vlasov methods. This is an existence claim for the relativistic Vlasov\u2013Maxwell equation, so it is queued as background. It is not a fusion reactivity ratio, not M4 (FV versus CN), and not a reason to move C4.",
+        "limit": "Machine-generated. Not peer-reviewed. PDF stored nowhere (link only). Lean build not run. One species, not a tokamak edge solver. oaStatus left TBD."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (S-L3 only). A2 miss (G4). A3 miss. A4 miss: C unchanged and no journal bound is tightened. A5 miss: not a journal and not replicated hardware. A6 pass. A7 pass: claim HOLD count unchanged. A8 pass: no ledger term moved. Machine-generated; verify before any later STRENGTHEN.",
+      "math": "Commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (2026-10-08). Licence Apache-2.0 from the LICENSE blob at that commit. Theorem name global_classical_solution for Admissible data. PDF sha recorded by the contents API: 0605323dab9e34937ba0a42ffa675bb965903491, 601957 bytes. Not hashed again here and not stored. No DOI.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 60,
+        "confidence": 30,
+        "popularity": 22
+      }
+    },
+    {
+      "id": "rev-2026-10-09-2610.10679",
+      "paperId": "2610.10679",
+      "date": "2026-10-09",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: condensate charge 2ne and flux h/(2ne) keep their units. The sqrt(6) bound is dimensionless quantum dimension. G2 passes: no plant energy term is adopted. G3 passes: the sqrt(6) bound is a no-go for one vortex sector, not a gain from one parameter. G4 fails: a classification of gapped superconductors is not an S3 braid on a processor. G5 passes: the Fibonacci no-go is a stated algebraic claim and can be checked this quarter. G6 passes: Q_eng is not an output."
+      },
+      "gateNote": "G1 passes: condensate charge 2ne and flux h/(2ne) keep their units. The sqrt(6) bound is dimensionless quantum dimension. G2 passes: no plant energy term is adopted. G3 passes: the sqrt(6) bound is a no-go for one vortex sector, not a gain from one parameter. G4 fails: a classification of gapped superconductors is not an S3 braid on a processor. G5 passes: the Fibonacci no-go is a stated algebraic claim and can be checked this quarter. G6 passes: Q_eng is not an output.",
+      "score": "E-S3 C3 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A no-go on Fibonacci fusion for elementary vortices in the SC-sharp family is not a failure of S3 braid-plus-fusion. Read-Rezayi Fibonacci defects are not this vortex. Do not lower C.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Gapped superconductors in 2+1 dimensions with condensate charge 2ne are classified by how their vortices intertwine with topological order. The top of that list is called SC-sharp: the elementary vortex of flux h/(2ne) cannot be written as an invertible-superconductor vortex dressed by bulk anyons, and every elementary vortex is non-Abelian. For that family the elementary vortex sector is given quantum dimension at least sqrt(6) and is said to be unable to satisfy Fibonacci fusion rules. The phases are built by anyon condensation.",
+        "why": "E-S3 uses Fibonacci anyons as a fusion measurement story in a different platform. This paper constrains one superconductor class. It does not remove fusion measurement from the S3 gate set. C3 does not move, and the claim is not weakened.",
+        "limit": "Bare arXiv. Algebraic classification. The sqrt(6) bound is theirs, for that vortex sector only."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-S3 only). A2 miss (G4). A3 miss. A4 miss: C unchanged and no journal bound is tightened. A5 miss: bare arXiv. A6 pass: no new mechanism is adopted. A7 pass. A8 pass.",
+      "math": "Authors Zhi-Qiang Gao, Yan-Qi Wang, Hui Yang, Zhaoyu Han, Ashvin Vishwanath. arXiv:2610.10679v1, 2026-10-07, cond-mat.str-el. OAI licence CC BY-SA 4.0. Condensate charge 2ne; elementary flux h/(2ne); quantum dimension at least sqrt(6); Fibonacci fusion rules excluded for that elementary vortex sector. No DOI.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 78,
+        "confidence": 58,
+        "popularity": 36
+      }
+    },
+    {
+      "id": "rev-2026-10-09-2610.11079",
+      "paperId": "2610.11079",
+      "date": "2026-10-09",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: the overheads are qubit counts in n, k, and d. G2 passes: no plant energy term is adopted. G3 passes: the overhead is a stated function of code parameters, not a gain from one free parameter. G4 fails: an ancilla-overhead proof for qLDPC surgery is not a shot on a processor. G5 passes: the overhead claim can be checked against the cited surgery framework this quarter. G6 passes: Q_eng is not an output."
+      },
+      "gateNote": "G1 passes: the overheads are qubit counts in n, k, and d. G2 passes: no plant energy term is adopted. G3 passes: the overhead is a stated function of code parameters, not a gain from one free parameter. G4 fails: an ancilla-overhead proof for qLDPC surgery is not a shot on a processor. G5 passes: the overhead claim can be checked against the cited surgery framework this quarter. G6 passes: Q_eng is not an output.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A better ancilla count for fast qLDPC surgery is not a memory experiment. C4 does not move.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Fast surgery in the Baspin-Berent-Cohen framework is instantiated with at most order n(k+d) ancilla qubits, up to polylog factors, improving on a previous O(n k d) overhead. The abstract says this matches the order of regular surgery, which needs order n k ancillas up to polylog factors. The ancilla is built from a dense expanding system and then sparsified.",
+        "why": "qLDPC surgery is inside the E-QEC family. The result is a space bound, not a device demonstration, so it is queued and C4 stays.",
+        "limit": "Bare arXiv. One-author overhead proof. No threshold and no hardware."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss. A4 miss: C unchanged and no journal bound is tightened. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass.",
+      "math": "Author Nou\u00e9dyn Baspin. arXiv:2610.11079v1, 2026-10-08, quant-ph. OAI licence arXiv non-exclusive. Ancilla overhead \\tilde O(n(k+d)) versus prior O(n k d), compared with regular surgery \\tilde O(n k). No DOI.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 74,
+        "confidence": 58,
+        "popularity": 36
+      }
+    },
+    {
+      "id": "rev-2026-10-09-2610.11080",
+      "paperId": "2610.11080",
+      "date": "2026-10-09",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: grams and kilograms per day are fuel masses. No gain number is stated, so none is entered. G2 passes: no ledger term is adopted. P_fusion, P_aux, and Q_eng are not assigned. G3 passes: the kilogram-per-day figure is their continuous-fueling scale, not a cross-section we scale. G4 fails: a spin-polarized-fuel scenario for tokamaks and stellarators is not a plant-attach controller and not an S-L3 solver. G5 passes: gram-scale polarized-fuel shots are a this-year experimental question, as the abstract frames them. G6 passes: the abstract says high fusion gain and does not give a number. No Q is entered. Q=1000 stays a stress test."
+      },
+      "gateNote": "G1 passes: grams and kilograms per day are fuel masses. No gain number is stated, so none is entered. G2 passes: no ledger term is adopted. P_fusion, P_aux, and Q_eng are not assigned. G3 passes: the kilogram-per-day figure is their continuous-fueling scale, not a cross-section we scale. G4 fails: a spin-polarized-fuel scenario for tokamaks and stellarators is not a plant-attach controller and not an S-L3 solver. G5 passes: gram-scale polarized-fuel shots are a this-year experimental question, as the abstract frames them. G6 passes: the abstract says high fusion gain and does not give a number. No Q is entered. Q=1000 stays a stress test.",
+      "score": "no claim; reading list",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "High gain without a number is not a ledger result. Spin-polarized fuel is not Bus A control and not a Vlasov method. Do not open a fuel pillar. S-Q stays cut.",
+      "ledger": "none.",
+      "plain": {
+        "core": "The abstract argues that a single-use, gram-scale pulse of spin-polarized fuel can raise fusion power and gain in tokamaks and stellarators, and that the plasma can stay in a high-gain regime after the fueling returns to unpolarized fuel. Continuous polarized fueling is said to need on the order of kilograms per day. A resonant wave that depolarizes the fuel is suggested as a fast reactivity knob. No numeric gain, Q, or reactivity is stated.",
+        "why": "No KEEP or HOLD claim fits. E-RL is a controller with commands out. S-L3 is a solver class. A depolarizing wave is not an interface contract. Reading list only, and no Q is entered.",
+        "limit": "Bare arXiv. Scenario paper, 10 pages. The words high fusion gain are not a measured Q."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero KEEP/HOLD claims. A2 miss (G4). A3 miss. A4 miss. A5 miss: bare arXiv. A6 pass: the fuel idea is not adopted. A7 pass. A8 pass: ledger terms did not move.",
+      "math": "Author J. F. Parisi. arXiv:2610.11080v1, 2026-10-08, physics.plasm-ph. OAI licence arXiv non-exclusive. Fuel scales stated: grams for a single-use pulse; about kilograms per day for continuous fueling. No gain number. No DOI.",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 70,
+        "confidence": 53,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-09-2610.11658",
+      "paperId": "2610.11658",
+      "date": "2026-10-09",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: qubit count, percent changes, and fidelities keep their units. G2 passes: no plant energy term is adopted. G3 passes: the 35 percent and 56 percent figures are comparisons of strategies on one processor, not a gain from one free parameter. G4 fails: a dynamic compass code on a heavy-hex superconducting processor is not a surface-code or qLDPC memory. G5 passes: the memory and surgery experiments are on existing hardware and can be checked this year. G6 passes: Q_eng is not an output."
+      },
+      "gateNote": "G1 passes: qubit count, percent changes, and fidelities keep their units. G2 passes: no plant energy term is adopted. G3 passes: the 35 percent and 56 percent figures are comparisons of strategies on one processor, not a gain from one free parameter. G4 fails: a dynamic compass code on a heavy-hex superconducting processor is not a surface-code or qLDPC memory. G5 passes: the memory and surgery experiments are on existing hardware and can be checked this year. G6 passes: Q_eng is not an output.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Compass-code memory on 156 heavy-hex qubits is not the surface-code layer. Post-selected Bell fidelities are not a threshold. C4 does not move. Importance 84 and confidence 65 miss the ADD bar.",
+      "ledger": "none.",
+      "plain": {
+        "core": "A dynamic compass code is run on 156 superconducting qubits in a heavy-hex lattice, using the whole monolithic processor and dropping weak components from the measurement schedule. A noise-informed decoder, exclusion of the worst qubits and couplers, and post-selection on low leakage are reported to improve logical error probabilities by up to 35 percent in a memory experiment, and the same strategies by up to 56 percent in stability experiments for measurement-based logic. Lattice surgery is demonstrated. Pre-selection is reported to give Bell fidelities above 77 percent, and logical-gap post-selection with exclusive decoding above 97 percent.",
+        "why": "E-QEC is the error layer, and this is a real error-corrected memory and logic experiment. The code is a compass code, not the surface code or a qLDPC code, so the platform gate fails and C4 stays.",
+        "limit": "Bare arXiv. Post-selection is part of the higher fidelities. Not a surface-code threshold."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss. A4 miss: C unchanged and no journal bound is tightened. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. ADD also misses the harvest bar (importance 84, confidence 65).",
+      "math": "arXiv:2610.11658v1, 2026-10-08, quant-ph. OAI licence CC BY 4.0. 156 qubits; heavy-hex; up to 35 percent memory logical-error improvement; up to 56 percent on stability experiments; Bell fidelity above 77 percent with pre-selection and above 97 percent with further logical-gap post-selection. No DOI. Authors as returned by the arXiv API.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 84,
+        "confidence": 65,
+        "popularity": 48
+      }
+    },
+    {
+      "id": "rev-2026-10-09-2610.11871",
+      "paperId": "2610.11871",
+      "date": "2026-10-09",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: campaign duration, plasma time, and the component count keep their units. G2 passes: no fusion-gain or ledger term is adopted. G3 passes: the 1337-second pulse is one campaign record, not a gain from one free parameter. G4 passes: WEST is an operating tokamak. Infrared and other diagnostics go in, and some indicators feed back on power actuators through the plasma control system. G5 passes: campaigns C9 to C11 and the pulse-length record can be checked against WEST logs this year. G6 passes: Q_eng is not an output."
+      },
+      "gateNote": "G1 passes: campaign duration, plasma time, and the component count keep their units. G2 passes: no fusion-gain or ledger term is adopted. G3 passes: the 1337-second pulse is one campaign record, not a gain from one free parameter. G4 passes: WEST is an operating tokamak. Infrared and other diagnostics go in, and some indicators feed back on power actuators through the plasma control system. G5 passes: campaigns C9 to C11 and the pulse-length record can be checked against WEST logs this year. G6 passes: Q_eng is not an output.",
+      "score": "E-RL C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Real-time wall protection is not an M2 disruption-rate beat. The authors say it cannot be shown that the protection caused the 1337-second pulse. C4 does not move. Crossref was not called.",
+      "ledger": "none.",
+      "plain": {
+        "core": "WEST monitors 10 major plasma-facing components with 10 series of temperature and power indicators, including the infrared viewing system. Some of the learned indicators run in real time and feed back on power actuators through the plasma control system. Others are used after the discharge. Campaigns C9 to C11 (2024-2025), about 13 hours of plasma, had no critical wall-power event that changed the campaign plan. A plasma-duration record of 1337 seconds is reported. The authors say it cannot be demonstrated that the wall protection caused that record, and that the system plausibly helped by keeping hot spots from becoming critical.",
+        "why": "E-RL is plant-attach control: diagnostics in, actuator commands out. This is that shape on a named tokamak, so it is queued under E-RL. It does not beat a disruption baseline, the causal claim is hedged, and C4 does not move.",
+        "limit": "Journal-ref from the arXiv OAI record: Nuclear Fusion, 2026, 66 (12), pp.126042. No DOI in that record. Crossref and Unpaywall were not called. The arXiv PDF licence is the arXiv non-exclusive licence, not a journal CC licence."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-RL only). A2 pass. A3 miss: the action is HOLD, not INCLUDE. A4 miss: C unchanged, and 1337 seconds is not a disruption-rate bound. A5 pass on the journal-ref only (Crossref not called). A6 pass. A7 pass. A8 pass. Harvest bar also misses ADD (importance 83, confidence 72).",
+      "math": "Authors as returned by the arXiv API, first author R. Mitteau. arXiv:2610.11871v1, 2026-10-08, physics.plasm-ph. OAI journal-ref: Nuclear Fusion, 2026, 66 (12), pp.126042. OAI licence of the arXiv copy: arXiv non-exclusive. No DOI element. 10 components; about 13 h of plasma in C9-C11 (2024-2025); pulse record 1337 seconds.",
+      "autoGate": "miss A3, A4",
+      "scoreHeuristic": {
+        "importance": 83,
+        "confidence": 72,
+        "popularity": 46
+      }
+    },
+    {
+      "id": "rev-2026-10-09-2610.12400",
+      "paperId": "2610.12400",
+      "date": "2026-10-09",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: code distance and the suppression factor are stated as simulation comparisons. G2 passes: no plant energy term is adopted. G3 passes: the suppression is versus sample count on a distance-7 code, not a gain from one free parameter. G4 fails: a numerical test of a distance-7 rotated surface code is not a shot on a processor. G5 passes: the dual-decoder simulation can be rerun this quarter. G6 passes: Q_eng is not an output. Three orders of magnitude of logical-error suppression is not a plant Q."
+      },
+      "gateNote": "G1 passes: code distance and the suppression factor are stated as simulation comparisons. G2 passes: no plant energy term is adopted. G3 passes: the suppression is versus sample count on a distance-7 code, not a gain from one free parameter. G4 fails: a numerical test of a distance-7 rotated surface code is not a shot on a processor. G5 passes: the dual-decoder simulation can be rerun this quarter. G6 passes: Q_eng is not an output. Three orders of magnitude of logical-error suppression is not a plant Q.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Syndrome-based virtual error cancellation on a simulated distance-7 surface code is not a memory experiment. C4 does not move.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Virtual error cancellation uses only syndrome records, in classical post-processing, to reduce bias on logical circuits without a prior noise-learning experiment and without modified circuits. A low-latency decoder is paired with a heavier decoder run after the shot. In numerical simulations of a distance-7 rotated surface code, the full-stack dual decoder is reported to drive the error down as the sample count grows, by more than three orders of magnitude relative to the decoded logical error rate, in a setting the authors call experimentally achievable.",
+        "why": "The code family is the rotated surface code, so the paper binds E-QEC. The evidence is a simulation, not a processor, so G4 fails and C4 stays.",
+        "limit": "Bare arXiv. Numerical. The phrase experimentally achievable is the authors' setting, not a reported device result."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss. A4 miss: C unchanged and no journal bound is tightened. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass.",
+      "math": "Authors Oles Shtanko, Saswata Roy, Shashwat Kumar, Zlatko Minev. arXiv:2610.12400v1, 2026-10-08, quant-ph. OAI licence CC BY 4.0. Distance-7 rotated surface code; more than three orders of magnitude of suppression versus the decoded logical error in simulation. No DOI.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 80,
+        "confidence": 58,
+        "popularity": 38
+      }
+    },
     {
       "id": "rev-2026-10-08-2610.05589",
       "paperId": "2610.05589",
