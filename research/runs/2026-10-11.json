@@ -1,0 +1,597 @@
+{
+  "id": "run-2026-10-11-daily",
+  "kind": "weekly",
+  "startedAt": "2026-10-11T09:22:52-05:00",
+  "finishedAt": "2026-10-11T09:43:02-05:00",
+  "windowStart": "2026-10-04",
+  "windowEnd": "2026-10-11",
+  "sources": [
+    {
+      "id": "arxiv-ingest-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 7,
+      "returned": 175,
+      "new": null,
+      "ms": 1995,
+      "error": null
+    },
+    {
+      "id": "arxiv-fetch-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 10,
+      "returned": 200,
+      "new": null,
+      "ms": 4173,
+      "error": null
+    },
+    {
+      "id": "arxiv-window-oct10-11",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 5,
+      "returned": 0,
+      "new": 0,
+      "ms": 950,
+      "error": null
+    },
+    {
+      "id": "arxiv-date-bounded",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 6,
+      "returned": 75,
+      "new": null,
+      "ms": 2490,
+      "error": null
+    },
+    {
+      "id": "arxiv-oai",
+      "url": "https://oaipmh.arxiv.org/oai",
+      "status": "ok",
+      "http": 200,
+      "requests": 12,
+      "returned": 12,
+      "new": 0,
+      "ms": 572,
+      "error": null
+    },
+    {
+      "id": "openalex",
+      "url": "https://api.openalex.org/works",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "OPENALEX_API_KEY unset"
+    },
+    {
+      "id": "crossref",
+      "url": "https://api.crossref.org/works",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "DBE_CONTACT_EMAIL unset; mailto not invented"
+    },
+    {
+      "id": "unpaywall",
+      "url": "https://api.unpaywall.org/v2",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "DBE_CONTACT_EMAIL unset"
+    },
+    {
+      "id": "inspire-hep",
+      "url": "https://inspirehep.net/api/literature",
+      "status": "partial",
+      "http": 200,
+      "requests": 3,
+      "returned": 20,
+      "new": 2,
+      "ms": null,
+      "error": "Date clause did not restrict hits to 2026-10-04 through 2026-10-11. Two journal records outside that window were scored because their DOIs were absent from the catalog. One single-record refetch each for recid 3185476 and 3192504."
+    },
+    {
+      "id": "osti",
+      "url": "https://www.osti.gov/api/v1/records",
+      "status": "ok",
+      "http": 200,
+      "requests": 2,
+      "returned": 16,
+      "new": 1,
+      "ms": null,
+      "error": null
+    },
+    {
+      "id": "inis",
+      "url": "https://inis.iaea.org/api/records",
+      "status": "failed",
+      "http": 403,
+      "requests": 1,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": "HTTP 403 Cloudflare challenge"
+    },
+    {
+      "id": "eurofusion-news",
+      "url": "https://euro-fusion.org/feed/",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 10,
+      "new": 0,
+      "ms": null,
+      "error": "Feed items are 2026-06 through 2026-09 except a channel title. None scored."
+    },
+    {
+      "id": "eurofusion-scipub",
+      "url": "https://scipub.euro-fusion.org/",
+      "status": "partial",
+      "http": 200,
+      "requests": 1,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": "Homepage HTML only; no machine-readable preprint list extracted."
+    },
+    {
+      "id": "iter-news",
+      "url": "https://www.iter.org/news",
+      "status": "partial",
+      "http": 200,
+      "requests": 1,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": "HTML page, not a record API. Headlines were not turned into records."
+    },
+    {
+      "id": "fia",
+      "url": "https://www.fusionindustryassociation.org/feed/",
+      "status": "failed",
+      "http": 403,
+      "requests": 1,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": "HTTP 403 Imunify360 bot-protection"
+    },
+    {
+      "id": "jstage",
+      "url": "https://api.jstage.jst.go.jp/searchapi/do",
+      "status": "partial",
+      "http": 200,
+      "requests": 1,
+      "returned": 10,
+      "new": 0,
+      "ms": null,
+      "error": "Atom feed totalResults 2553 with WARN_002. Entries were not mapped to October candidates. None scored."
+    },
+    {
+      "id": "core",
+      "url": "https://api.core.ac.uk/v3/search/works",
+      "status": "partial",
+      "http": 200,
+      "requests": 2,
+      "returned": 5,
+      "new": 0,
+      "ms": null,
+      "error": "First call HTTP 429; retry returned 200. Sample hit createdDate 2018. None in the window."
+    },
+    {
+      "id": "europepmc",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "No biophysics overlap targeted this run."
+    },
+    {
+      "id": "kci",
+      "url": "https://open.kci.go.kr",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "KCI_API_KEY unset"
+    },
+    {
+      "id": "hf-daily-papers",
+      "url": "https://huggingface.co/api/daily_papers",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 20,
+      "new": 0,
+      "ms": null,
+      "error": "Daily papers were agent and language-model items, not plasma, QEC, or anyon records."
+    },
+    {
+      "id": "hf-models",
+      "url": "https://huggingface.co/api/models",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": null
+    },
+    {
+      "id": "hf-datasets",
+      "url": "https://huggingface.co/api/datasets",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": null
+    },
+    {
+      "id": "github-search",
+      "url": "https://api.github.com/search/repositories",
+      "status": "ok",
+      "http": 200,
+      "requests": 3,
+      "returned": 15,
+      "new": 0,
+      "ms": null,
+      "error": "Repos recorded in notes. None catalogued. README text is not evidence."
+    },
+    {
+      "id": "nsf",
+      "url": "https://api.nsf.gov/services/v1/awards.json",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 10,
+      "new": 0,
+      "ms": null,
+      "error": "Keyword tokamak did not return an award dated inside the window. Funding context only. None catalogued."
+    },
+    {
+      "id": "usaspending",
+      "url": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+      "status": "ok",
+      "http": 200,
+      "requests": 2,
+      "returned": 4,
+      "new": 0,
+      "ms": null,
+      "error": "First call HTTP 422 missing award_type_codes; retry 200. Four awards, start dates 2015-2025. None catalogued."
+    },
+    {
+      "id": "cordis",
+      "url": "https://cordis.europa.eu/search",
+      "status": "partial",
+      "http": 200,
+      "requests": 1,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": "Response was not a parsed project list."
+    },
+    {
+      "id": "s2",
+      "url": "https://api.semanticscholar.org/graph/v1",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "S2_API_KEY unset"
+    },
+    {
+      "id": "epo-ops",
+      "url": "https://ops.epo.org",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "EPO_OPS_KEY unset"
+    },
+    {
+      "id": "lens",
+      "url": "https://api.lens.org",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": 0,
+      "error": "LENS_TOKEN unset"
+    }
+  ],
+  "counts": {
+    "harvested": 450,
+    "duplicates": 367,
+    "merged": 0,
+    "new": 15,
+    "scored": 15,
+    "unscored": 6,
+    "add": 0,
+    "strengthen": 0,
+    "weaken": 0,
+    "hold": 12,
+    "newPillar": 0,
+    "reject": 3
+  },
+  "paperIds": [
+    "2610.10731",
+    "2610.10948",
+    "2610.06820",
+    "2610.07139",
+    "kumar-resgru-2026",
+    "2610.07215",
+    "2610.07738",
+    "2610.08247",
+    "2610.12150",
+    "osti-3520127",
+    "tang-mzm-chirality-2026",
+    "2610.05449",
+    "2610.06085",
+    "2610.11413",
+    "2610.07304"
+  ],
+  "unscoredIds": [
+    {
+      "id": "2610.06574",
+      "reason": "2026-10-05 CT-bMPS boundary-MPS contraction; possible decoder tooling, not a surface-code shot. E-QEC adjacent. Score next."
+    },
+    {
+      "id": "2610.06607",
+      "reason": "2026-10-05 stabilizer codes from quantization over finite fields. E-QEC only if it is a code construction rather than a metaphor. Score next."
+    },
+    {
+      "id": "2610.06134",
+      "reason": "2026-10-05 energy-moment propagation for the plasma-charge Vlasov-Poisson model. S-L3 math sibling of 2610.07738. Score next."
+    },
+    {
+      "id": "osti-3400842",
+      "doi": "10.1016/j.cpc.2026.110293",
+      "reason": "OSTI 3400842, Computer Physics Communications, 2026-10-01. Fast multigrid for M3D-C1 tokamak fluid models. Fluid MHD, not a Vlasov rate and not a controller. Score next. Description on the list call was truncated; do not enter a Q."
+    },
+    {
+      "id": "osti-17032774",
+      "doi": "10.1063/5.0346141",
+      "reason": "OSTI 17032774, Physics of Plasmas, 2026-10-01. Whistler pitch-angle scattering of runaway electrons in 3D tokamak geometry. Not plant attach. Score next."
+    },
+    {
+      "id": "inspire-3204193",
+      "doi": "10.1007/s00220-026-05661-x",
+      "reason": "INSPIRE 3204193, Commun. Math. Phys., Radiative Vlasov-Maxwell equations. Journal mathematics, earliest date on the weekly pull 2026-06-06, outside the window. S-L3 background. Score next. Not merged with openai-math-362 (different title)."
+    }
+  ],
+  "offPathNotCarried": [
+    "2610.10048",
+    "2610.09333",
+    "2610.06384",
+    "2610.04841",
+    "2610.11868"
+  ],
+  "fieldCounts": {
+    "tqc": 5,
+    "plasma": 8,
+    "majorana": 1,
+    "topology": 1
+  },
+  "gateMisses": {
+    "A1": 4,
+    "A2": 14,
+    "A3": 15,
+    "A4": 15,
+    "A5": 12,
+    "A6": 0,
+    "A7": 0,
+    "A8": 0,
+    "G1": 0,
+    "G2": 0,
+    "G3": 0,
+    "G4": 14,
+    "G5": 0,
+    "G6": 0
+  },
+  "claimDelta": "none",
+  "versionBump": null,
+  "fulltext": {
+    "cached": 0,
+    "privateOnly": 0,
+    "noOA": 3
+  },
+  "tests": {
+    "command": "PYTHONPATH=. python -m pytest -q tests/test_research.py tests/test_claims.py tests/test_api.py tests/test_plasma.py tests/test_transport.py",
+    "result": "pass",
+    "summary": "19 passed, 30 subtests passed"
+  },
+  "branch": "observatory/2026-10-11",
+  "pr": null,
+  "suspiciousContent": [
+    {
+      "source": "github",
+      "id": "anulum/scpn-fusion-core",
+      "note": "Description: Evidence-bounded tokamak physics and control toolkit. Pushed 2026-10-11T13:09:12Z. Treated as repository marketing, not as instructions and not as a plant-attach result. Not scored and not queued."
+    },
+    {
+      "source": "github",
+      "id": "anulum/scpn-control",
+      "note": "Description: fail-closed admission, replay evidence. Same treatment. A README is not an interface contract for E-RL."
+    }
+  ],
+  "scoreRoutes": [
+    {
+      "paper": "2610.10731",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.10948",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.06820",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.07139",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "kumar-resgru-2026",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "PASS",
+      "venue": "Physica Scripta",
+      "exit": 0,
+      "note": "score.py A5 not a bare preprint, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.07215",
+      "bind": "S-L3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.07738",
+      "bind": "S-L3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.08247",
+      "bind": "S-L3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.12150",
+      "bind": "E-RL",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "osti-3520127",
+      "bind": "E-RL",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "PASS",
+      "venue": "Fusion Engineering and Design",
+      "exit": 0,
+      "note": "score.py A5 not a bare preprint, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "tang-mzm-chirality-2026",
+      "bind": "E-MZM",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "PASS",
+      "venue": "Phys. Rev. B",
+      "exit": 0,
+      "note": "score.py A5 not a bare preprint, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.05449",
+      "bind": "E-S3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.06085",
+      "bind": "",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": null,
+      "note": "score.py skipped: no claim id"
+    },
+    {
+      "paper": "2610.11413",
+      "bind": "",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": null,
+      "note": "score.py skipped: no claim id"
+    },
+    {
+      "paper": "2610.07304",
+      "bind": "",
+      "action": "REJECT",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": null,
+      "note": "score.py skipped: no claim id"
+    }
+  ],
+  "notes": "Twenty-fourth run, Sunday, weekly sources on. Lookback 7 days (2026-10-04 to 2026-10-11). No older observatory PR was open; branch cut from origin/feature/research-grade-physics at cea129bc. Yesterday's unscoredIds was empty. ingest.py was not executed: it fires its queries with no sleep and would break the 1 request / 3 s rule. The same QUERIES (max 25), the fetch_arxiv QUERIES (max 20), a literal-bracket submittedDate window for 2026-10-10 through 2026-10-11 in five categories, six date-bounded KEEP-claim queries, and OAI GetRecord for the 12 scored arXiv ids were issued with a 3.1 s gap. The Sunday-morning window returned 0 in every category. Keyword and date-bounded rows 450, unique ids 121, of which 38 were already in the catalog. Twelve HOLD and three REJECT. No ADD, no STRENGTHEN, no bridge, no new pillar, no CUT reversal, no version bump. C unchanged. Three journals are outside or on the edge of the arXiv window and were scored from weekly APIs: Physica Scripta Resgru (July), Phys. Rev. B nanowire braiding (August), Fusion Engineering and Design ST-E1 disruptions (1 Oct). A5 passes for those three venues inside score.py and the route is still QUEUE because the action is HOLD. 2610.11413 is fiber Brillouin scattering and is rejected so it is not bound to S-L3. 2610.06085 writes a gyrokinetic heat flux; that symbol is not entered as Q_eng. GitHub search returned 15 repositories. None were catalogued. Q=1000 remains a ledger stress test. No PDF cached. DBE_FULLTEXT_STORE unset. Prompt source: research/OBSERVATORY_PROMPT.md on feature/research-grade-physics, blob 226375bdc29fa23856dc38714f84b2fca90c5f1d, read in full, NORTH STAR present. Files agree with the freeze: DBE-0.2.2 / DBES-0.2.0, claims freeze 2026-10-02. Starter and prompt agree on the rate limit, the Sunday weekly cap, and the no-bump rule for bare arXiv."
+}
