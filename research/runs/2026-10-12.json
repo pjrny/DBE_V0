@@ -1,0 +1,397 @@
+{
+  "id": "run-2026-10-12-daily",
+  "kind": "daily",
+  "startedAt": "2026-10-12T09:22:44-05:00",
+  "finishedAt": "2026-10-12T09:42:49-05:00",
+  "windowStart": "2026-10-05",
+  "windowEnd": "2026-10-12",
+  "sources": [
+    {
+      "id": "arxiv-ingest-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 7,
+      "returned": 41,
+      "new": null,
+      "ms": null,
+      "error": null
+    },
+    {
+      "id": "arxiv-fetch-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 10,
+      "returned": 69,
+      "new": null,
+      "ms": null,
+      "error": null
+    },
+    {
+      "id": "arxiv-keep-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 4,
+      "returned": 13,
+      "new": null,
+      "ms": null,
+      "error": null
+    },
+    {
+      "id": "arxiv-window",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 5,
+      "returned": 125,
+      "new": null,
+      "ms": null,
+      "error": null
+    },
+    {
+      "id": "arxiv-id-list",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 2,
+      "returned": 15,
+      "new": 12,
+      "ms": null,
+      "error": null
+    },
+    {
+      "id": "arxiv-oai",
+      "url": "https://oaipmh.arxiv.org/oai",
+      "status": "ok",
+      "http": 200,
+      "requests": 12,
+      "returned": 12,
+      "new": 0,
+      "ms": null,
+      "error": null
+    },
+    {
+      "id": "openalex",
+      "url": "https://api.openalex.org/works",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": "OPENALEX_API_KEY unset"
+    },
+    {
+      "id": "crossref",
+      "url": "https://api.crossref.org/works/10.1007/s00220-026-05661-x",
+      "status": "partial",
+      "http": 200,
+      "requests": 1,
+      "returned": 1,
+      "new": 0,
+      "ms": null,
+      "error": "Single-record lookup only. DBE_CONTACT_EMAIL unset, so no mailto and not the polite pool. Abstract absent. Licence entries are Springer TDM links, not an open licence."
+    },
+    {
+      "id": "unpaywall",
+      "url": "https://api.unpaywall.org/v2",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": "DBE_CONTACT_EMAIL unset"
+    },
+    {
+      "id": "osti-carryover",
+      "url": "https://www.osti.gov/api/v1/records",
+      "status": "ok",
+      "http": 200,
+      "requests": 2,
+      "returned": 2,
+      "new": 2,
+      "ms": null,
+      "error": null
+    },
+    {
+      "id": "inspire-carryover",
+      "url": "https://inspirehep.net/api/literature/3204193",
+      "status": "partial",
+      "http": 200,
+      "requests": 1,
+      "returned": 1,
+      "new": 1,
+      "ms": null,
+      "error": "Record metadata returned. abstracts empty. Not a weekly list sweep."
+    },
+    {
+      "id": "weekly-6.2",
+      "url": "section 6.2",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": "Monday. Weekly sources are Sunday only. INSPIRE and OSTI calls above are carry-over refetches of yesterday's unscored ids, not new sweeps."
+    }
+  ],
+  "counts": {
+    "harvested": 254,
+    "duplicates": 28,
+    "merged": 0,
+    "new": 15,
+    "scored": 15,
+    "unscored": 8,
+    "add": 0,
+    "strengthen": 0,
+    "weaken": 0,
+    "hold": 12,
+    "newPillar": 0,
+    "reject": 3
+  },
+  "paperIds": [
+    "2610.06574",
+    "2610.06607",
+    "2610.06134",
+    "osti-3400842",
+    "osti-17032774",
+    "inspire-3204193",
+    "2610.13879",
+    "2610.12782",
+    "2610.12685",
+    "2610.13880",
+    "2610.12645",
+    "2610.12395",
+    "2610.08180",
+    "2610.11061",
+    "2610.11652"
+  ],
+  "unscoredIds": [
+    {
+      "id": "2610.11004",
+      "reason": "2026-10-07 ReMAIN reconstructor for a collisionless ExB plasma. The abstract names control as a motive and demonstrates a U-Net decoder, not a coil or pellet command. E-RL only if a later read shows a closed loop. Score next."
+    },
+    {
+      "id": "2610.13428",
+      "reason": "2026-10-09 SpeCyl free-boundary resistive-wall module, verified on analytic RWM growth rates. Fluid MHD, not a controller and not a Vlasov rate. Score next."
+    },
+    {
+      "id": "2610.12597",
+      "reason": "2026-10-08 error correction on sparse graphs. Floquet random Clifford circuits used as a CSS encoder. E-QEC adjacent. Not a surface-code shot. Score next."
+    },
+    {
+      "id": "2610.12079",
+      "reason": "2026-10-08 fiber product of condensable algebras for boundary phase transitions in 2+1D topological order. E-S3 math. Score next."
+    },
+    {
+      "id": "2610.07611",
+      "reason": "2026-10-06 Grothendieck rings of module categories, examples include the Haagerup center. E-S3 math. Score next."
+    },
+    {
+      "id": "2610.12155",
+      "reason": "2026-10-08 hybrid-kinetic Alfvenic turbulence and proton heating. Heliospheric, not the S-L3 fusion rate and not Bus A. Score next."
+    },
+    {
+      "id": "2610.12607",
+      "reason": "2026-10-08 dissipative Majorana chain, anomalies and non-invertible symmetries. Not a device zero mode. E-MZM stays WATCH and is not bound. Score next only if a device signature appears."
+    },
+    {
+      "id": "2610.08530",
+      "reason": "2026-10-06 laboratory suppression of parallel heat conduction by magnetic microturbulence in a high-beta plasma. Not a controller. Score next."
+    }
+  ],
+  "fieldCounts": {
+    "tqc": 7,
+    "plasma": 7,
+    "anyons": 1
+  },
+  "gateMisses": {
+    "A1": 3,
+    "A2": 15,
+    "A3": 15,
+    "A4": 15,
+    "A5": 12,
+    "A6": 0,
+    "A7": 0,
+    "A8": 0,
+    "G1": 0,
+    "G2": 0,
+    "G3": 0,
+    "G4": 15,
+    "G5": 0,
+    "G6": 0
+  },
+  "claimDelta": "none",
+  "versionBump": null,
+  "fulltext": {
+    "cached": 0,
+    "privateOnly": 0,
+    "noOA": 1,
+    "unknownOA": 2
+  },
+  "tests": {
+    "command": "PYTHONPATH=. python -m pytest -q tests/test_research.py tests/test_claims.py tests/test_api.py tests/test_plasma.py tests/test_transport.py",
+    "result": "pass",
+    "summary": "19 passed, 30 subtests passed"
+  },
+  "branch": "observatory/2026-10-12",
+  "pr": "https://github.com/pjrny/DBE_V0/pull/14",
+  "suspiciousContent": [],
+  "scoreRoutes": [
+    {
+      "paper": "2610.06574",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.06607",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.06134",
+      "bind": "S-L3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "osti-3400842",
+      "bind": "",
+      "action": "REJECT",
+      "route": "SKIPPED",
+      "a5": "PASS",
+      "venue": "Computer Physics Communications",
+      "exit": null,
+      "note": "score.py skipped: no claim id. Card route is REJECT so Apply CUT parks the paper."
+    },
+    {
+      "paper": "osti-17032774",
+      "bind": "S-L3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "PASS",
+      "venue": "Physics of Plasmas",
+      "exit": 0,
+      "note": "score.py A5 not a bare preprint, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "inspire-3204193",
+      "bind": "S-L3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "PASS",
+      "venue": "Communications in Mathematical Physics",
+      "exit": 0,
+      "note": "score.py A5 not a bare preprint, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.13879",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.12782",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.12685",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.13880",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.12645",
+      "bind": "E-S3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.12395",
+      "bind": "S-L3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.08180",
+      "bind": "",
+      "action": "REJECT",
+      "route": "SKIPPED",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": null,
+      "note": "score.py skipped: no claim id. Card route is REJECT so Apply CUT parks the paper."
+    },
+    {
+      "paper": "2610.11061",
+      "bind": "",
+      "action": "REJECT",
+      "route": "SKIPPED",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": null,
+      "note": "score.py skipped: no claim id. Card route is REJECT so Apply CUT parks the paper."
+    },
+    {
+      "paper": "2610.11652",
+      "bind": "E-S3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    }
+  ],
+  "notes": "Twenty-fifth run, Monday, daily sources only. Lookback 7 days (2026-10-05 to 2026-10-12). Pull request 13 was open at the start and was landed first by squash merge 0155a27 (head 384f71b). Today's branch is cut from that merge. Yesterday's six unscored ids were scored first. ingest.py was not executed: it has no inter-request sleep. The same ingest QUERIES (7), fetch QUERIES (10), and four KEEP-claim queries were issued with a submittedDate window and a 3.1 s gap, plus five category windows (max 25) and OAI GetRecord for the 12 scored arXiv ids. Hit rows 251, unique ids 196, of which 28 were already in the catalog. 168 were not in the catalog. Fifteen were scored. The rest of the program-adjacent rows are in unscoredIds. Off-program category rows were not catalogued. Twelve HOLD and three REJECT. No ADD, no STRENGTHEN, no bridge, no new pillar, no CUT reversal, no version bump. C unchanged. Three journals are carry-overs from the Sunday list, not a new weekly sweep: Computer Physics Communications (M3D-C1 multigrid, rejected, fluid), Physics of Plasmas (whistler runaways, HOLD on S-L3 only), Communications in Mathematical Physics (title only, abstract missing, HOLD on S-L3). OpenAlex, Unpaywall, and the Sunday source list were skipped. Crossref was one DOI lookup without a mailto. 2610.08180 writes a gyrokinetic heat flux. That symbol is not Q_eng. 2610.11061 writes a PIC neutron yield. That is not Q_eng. 2610.12782 and 2610.13880 use Q for kd^2/n. That figure is not entered on the ledger. No PDF cached. DBE_FULLTEXT_STORE unset. Q=1000 remains a ledger stress test. Prompt source: research/OBSERVATORY_PROMPT.md on feature/research-grade-physics, blob 226375bdc29fa23856dc38714f84b2fca90c5f1d, read in full, NORTH STAR present. Files agree with the freeze: DBE-0.2.2 / DBES-0.2.0, claims freeze 2026-10-02. No scored abstract told this run to change rules, files, or targets."
+}

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T09:43:02-05:00",
+  "generatedAt": "2026-10-12T09:42:49-05:00",
   "lookback": "1y+",
   "northStar": "Q=1000",
   "feeds": [
@@ -18252,9 +18252,1046 @@
       "bindAction": "REJECT",
       "pillarEffect": "none",
       "lang": "en"
+    },
+    {
+      "id": "2610.06574",
+      "arxiv": "2610.06574",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "CT-bMPS: Approximate Tensor Network Contraction with Boundary MPS on Contraction Trees",
+      "authors": [
+        "Hidetaka Manabe",
+        "Feng Pan"
+      ],
+      "year": 2026,
+      "date": "2026-10-05",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.06574",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-12",
+        "preprint"
+      ],
+      "importance": 74,
+      "confidence": 62,
+      "popularity": 32,
+      "coreIdea": "CT-bMPS contracts a closed tensor network by storing the boundary tensor and its environment on each edge of a contraction tree as matrix product states. Compression uses a reduced transition matrix, and the cost stays polynomial in the network size and the bond dimension. Benchmarks include Ising partition functions, random tensor networks, kicked Ising dynamics, and quantum error-correction decoding. The abstract reports better accuracy than existing general-purpose approximate contraction, and says optimized trees and environment updates help without raising the bond dimension.",
+      "whyItMatters": "A decoder has to contract something. This is queued under E-QEC because decoding is one of the benchmarks. It is a general contraction method, not a surface-code or qLDPC memory, and the abstract states no logical error rate. C4 does not move.",
+      "limitation": "Bare arXiv. Two authors. No code distance, no physical error rate, and no device. The decoding result is not given as a number, and none is added.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.06574v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.06607",
+      "arxiv": "2610.06607",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Quantum codes are quantized codes: Stabilizer codes from quantization over finite fields",
+      "authors": [
+        "Michael Zurel"
+      ],
+      "year": 2026,
+      "date": "2026-10-05",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.06607",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-12",
+        "preprint"
+      ],
+      "importance": 66,
+      "confidence": 56,
+      "popularity": 28,
+      "coreIdea": "The paper gives a discrete analogue of geometric quantization over finite fields. Applied to certain classical error-correcting codes, it produces quantum error-correcting codes. The author presents this as a physical reading of a quantum-classical correspondence that was already known in coding theory.",
+      "whyItMatters": "It is a stabilizer-code construction, so it is queued under E-QEC rather than dropped as a metaphor. The abstract names no distance, no rate, and no threshold, and it does not say the codes are surface codes or qLDPC. C4 does not move.",
+      "limitation": "Bare arXiv. One author. No parameter table. A correspondence is not a memory experiment.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.06607v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.06134",
+      "arxiv": "2610.06134",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Propagation of Energy Moments for the Plasma-Charge Model",
+      "authors": [
+        "Zhaopeng Wang"
+      ],
+      "year": 2026,
+      "date": "2026-10-05",
+      "venue": "arXiv math.AP",
+      "url": "https://arxiv.org/abs/2610.06134",
+      "fields": [
+        "plasma"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-12",
+        "preprint"
+      ],
+      "importance": 71,
+      "confidence": 65,
+      "popularity": 30,
+      "coreIdea": "The paper proves that energy moments propagate for the three-dimensional plasma-charge model, the repulsive Vlasov-Poisson system with a moving point charge. For every K greater than 2, a finite Kth energy moment stays finite on every bounded time interval, with no higher-moment assumption, no small-mass assumption, and no initial gap from the charge. The global weak solution that is constructed conserves total energy for almost every time. The argument uses a critical space-time density estimate and control of the electric field along the charge.",
+      "whyItMatters": "S-L3 keeps Vlasov methods. This is the energy-moment sibling of the momentum-moment preprint 2610.07738 by the same author, and it is not the same paper. It is a PDE theorem, not hole-burning and not SRS or SBS, and it writes no plant Q. C stays C4. M4 stays open.",
+      "limitation": "Bare arXiv. One author. No reactivity, no 1 keV comparison, and no numerical rate. Not merged with 2610.07738.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.06134v1",
+      "claimIds": [
+        "S-L3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "osti-3400842",
+      "arxiv": null,
+      "arxivVersion": null,
+      "doi": "10.1016/j.cpc.2026.110293",
+      "title": "Fast solvers for tokamak fluid models with PETSc",
+      "authors": [
+        "Adams, Mark F.",
+        "Chen, Jin",
+        "Sturdevant, Benjamin"
+      ],
+      "year": 2026,
+      "date": "2026-10-01",
+      "venue": "Computer Physics Communications",
+      "url": "https://doi.org/10.1016/j.cpc.2026.110293",
+      "fields": [
+        "plasma"
+      ],
+      "role": "month",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-12",
+        "journal"
+      ],
+      "importance": 60,
+      "confidence": 72,
+      "popularity": 36,
+      "coreIdea": "The paper takes a first step on multigrid for the tokamak MHD models in M3D-C1. The hard piece is the implicit momentum advance. The production solver is a block-Jacobi preconditioner inside a Krylov method, with blocks on planes of constant toroidal angle, and that preconditioner degrades as the number of planes grows. The authors build a semi-coarsening geometric multigrid in the toroidal direction on the partly field-aligned grid. They report competitive performance on a runaway-electron model of a SPARC disruption, and better robustness on a stellarator case where block Jacobi does not converge.",
+      "whyItMatters": "A faster fluid solve is not a plant-attach controller and not a Vlasov, hole-burning, or SRS-SBS rate. No KEEP or HOLD claim is bound. Reading list. The SPARC sentence is a solver test. It states no Q, and none is entered.",
+      "limitation": "OSTI 3400842, publication date 2026-10-01, outside the seven-day window. Licence and OA were not resolved (Unpaywall skipped). The OSTI servlet link was not fetched. No PDF cached. Three authors.",
+      "source": "OSTI API",
+      "sourceTier": "journal",
+      "licence": null,
+      "oaStatus": "unknown",
+      "fulltextUrl": null,
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "osti-17032774",
+      "arxiv": null,
+      "arxivVersion": null,
+      "doi": "10.1063/5.0346141",
+      "title": "Non-diffusive pitch-angle scattering of runaway electrons in the presence of whistler waves",
+      "authors": [
+        "Ghai, Yashika",
+        "Del-Castillo-Negrete, D.",
+        "Spong, D. A.",
+        "Beidler, M. T."
+      ],
+      "year": 2026,
+      "date": "2026-10-01",
+      "venue": "Physics of Plasmas",
+      "url": "https://doi.org/10.1063/5.0346141",
+      "fields": [
+        "plasma"
+      ],
+      "role": "month",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-12",
+        "journal"
+      ],
+      "importance": 76,
+      "confidence": 78,
+      "popularity": 40,
+      "coreIdea": "The paper couples an all-orders spectral solver of the Maxwell-Vlasov system for whistler eigenmodes in a tokamak equilibrium to a full-orbit runaway-electron code in the prescribed wave field. Pitch-angle moments and displacement variance are used to describe the transport. The description says the electrons scatter strongly in pitch angle and that the transport is energy-dependent and not diffusive: diffusive, subdiffusive, and superdiffusive regimes appear as the initial kinetic energy changes. That split is outside quasilinear diffusion. The text says the result is relevant to wave-based control of runaways.",
+      "whyItMatters": "The Maxwell-Vlasov eigenmode is why it is queued under S-L3. It is a runaway-transport calculation, not hole-burning and not SRS or SBS, and it is not a closed-loop coil or pellet command, so E-RL is not bound. Binding both would be a bridge and would start at C1. No Q is stated. C stays C4.",
+      "limitation": "OSTI 17032774, publication date 2026-10-01, outside the seven-day window. The description does not give the energies at which the regime changes, and none are invented. Licence and OA were not resolved. No PDF cached.",
+      "source": "OSTI API",
+      "sourceTier": "journal",
+      "licence": null,
+      "oaStatus": "unknown",
+      "fulltextUrl": null,
+      "claimIds": [
+        "S-L3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "inspire-3204193",
+      "arxiv": null,
+      "arxivVersion": null,
+      "doi": "10.1007/s00220-026-05661-x",
+      "title": "Radiative Vlasov-Maxwell Equations",
+      "authors": [
+        "Constantin, Peter",
+        "Grayer, Hezekiah, II"
+      ],
+      "year": 2026,
+      "date": "2026-06-06",
+      "venue": "Communications in Mathematical Physics",
+      "url": "https://doi.org/10.1007/s00220-026-05661-x",
+      "fields": [
+        "plasma"
+      ],
+      "role": "lookback",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-12",
+        "journal"
+      ],
+      "importance": 68,
+      "confidence": 60,
+      "popularity": 34,
+      "coreIdea": "INSPIRE 3204193 and Crossref agree on the title Radiative Vlasov-Maxwell Equations, the authors Peter Constantin and Hezekiah Grayer, and the journal Communications in Mathematical Physics. Crossref dates the issue 2026-06-06. Neither call returned an abstract. No equation, no theorem, and no bound from the paper is written here.",
+      "whyItMatters": "The title is the Vlasov-Maxwell system, so the card is queued under S-L3 as background and not dropped. A title is not a rate. It is not merged with openai-math-362, which is a different title and a different author string. C stays C4.",
+      "limitation": "Issued 2026-06-06, outside this window. Abstract missing from both APIs this run. Crossref licence entries are text-and-data-mining links, not an open licence. The Springer PDF was not fetched. No PDF cached.",
+      "source": "INSPIRE-HEP API",
+      "sourceTier": "journal",
+      "licence": null,
+      "oaStatus": "closed",
+      "fulltextUrl": null,
+      "claimIds": [
+        "S-L3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.13879",
+      "arxiv": "2610.13879",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "GPU-Based Parallel BP Decoding for Quantum LDPC Memory",
+      "authors": [
+        "Ming Wang",
+        "Yanbo Zhao",
+        "Ang Li",
+        "Frank Mueller"
+      ],
+      "year": 2026,
+      "date": "2026-10-09",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.13879",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-12",
+        "preprint"
+      ],
+      "importance": 84,
+      "confidence": 76,
+      "popularity": 38,
+      "coreIdea": "The paper extends an oscillation-guided belief-propagation decoder with syndrome-flip trials (BP-SF) by windowed and streaming updates, and implements it in CUDA. On the [[144,12,12]] bivariate bicycle code at physical error rate 0.002, parallel BP-SF cuts the 99.9th-percentile call latency by a factor of 13.15 against an eight-chain Relay-BP GPU baseline, on 100,000 matched samples where the first BP stage of every tested method fails inside 80 iterations. Windowed BP-SF is reported to hold a flat logical error rate and a nearly constant per-round time through 512 rounds, with a 17.1-fold speedup against monolithic decoding. In a 512-round full-frame stream with syndrome arrivals every 2.97 ms, layered BP-SF with 20 retries on a transformed joint graph cuts the 99.9th-percentile correction-release age from 166.29 ms to 36.25 ms against flooding updates with 100 retries.",
+      "whyItMatters": "This is the closest new preprint to a qLDPC memory decoder, so it is queued under E-QEC. The numbers are classical circuit-level simulations on one code. They do not change the hardware claim. Importance 84 is still under the ADD bar of 85, and confidence 76 is under 80. C stays C4.",
+      "limitation": "Bare arXiv. One code, one physical error rate, one GPU comparison. Not a device shot. CC BY-SA 4.0, so a public mirror would be allowed, but this repo does not store the PDF.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.13879v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.12782",
+      "arxiv": "2610.12782",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Coset Lifted Product Codes: Constructing Quantum LDPC Codes from Non-Normal Subgroup Actions",
+      "authors": [
+        "Rajendra Prasad Rajpurohit",
+        "V. Lalitha",
+        "Shayan Srinivasa Garani"
+      ],
+      "year": 2026,
+      "date": "2026-10-08",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.12782",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-12",
+        "preprint"
+      ],
+      "importance": 80,
+      "confidence": 72,
+      "popularity": 36,
+      "coreIdea": "Coset lifted product codes build quantum CSS codes from a protograph over the group algebra of G and a protograph over the normalizer of a subgroup H that need not be normal. The two protographs act on the cosets from the left and from the right. For groups of odd order the dimension is written as a sum, over irreps of G, of hypergraph-product dimensions. A search of 14,843 pairs with non-normal H and length between 120 and 400 reports codes that beat the best published value of the code figure kd squared over n at check weights 6, 7, and 9, including [[360,20,20]] at weight 6, [[360,24,20]] at weight 7, and [[252,16,18]] and [[288,16,20]] at weight 9.",
+      "whyItMatters": "New qLDPC parameters are queued under E-QEC. The figure written Q in this literature is kd squared over n. That Q is not Q_eng and is not entered on the ledger. The search is combinatorial. C stays C4.",
+      "limitation": "Bare arXiv. Distances are from the search the authors certify. No device, no noise model in the sentences used here. The abstract also lists [[168,10,14]] and [[240,8,20]] at weight 6 and [[216,8,18]] at weight 7.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.12782v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.12685",
+      "arxiv": "2610.12685",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Fast computational primitives for La-cross qLDPC codes",
+      "authors": [
+        "Andrea Di Fini",
+        "Tom Hartweg",
+        "Laura Pecorari",
+        "Guido Pupillo",
+        "Samuel Crew"
+      ],
+      "year": 2026,
+      "date": "2026-10-08",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.12685",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-12",
+        "preprint"
+      ],
+      "importance": 79,
+      "confidence": 70,
+      "popularity": 34,
+      "coreIdea": "The paper builds logical primitives for La-cross hypergraph-product codes. For a subclass, seed automorphisms plus fold-transversal gates generate the logical Clifford group up to Pauli corrections. Every rank-one logical operator has D pairwise disjoint physical representatives, which the authors use for parallel gauging and a space-time tradeoff on logical measurement. They also give an addressable surface-code interface that injects an externally prepared resource state into a chosen logical qubit. The stated result is a Clifford plus T instruction set on several encoded qubits, with connectivity like a surface code.",
+      "whyItMatters": "Logical gates on a qLDPC family are Bus B reading, queued under E-QEC only. The surface-code interface is an injection scheme inside the paper, not a second claim and not a new bus. No threshold and no clock cycle are stated. C stays C4.",
+      "limitation": "Bare arXiv. Proofs and a construction. CC BY-NC-ND 4.0, so the PDF stays out of the public repo even if a private store existed. DBE_FULLTEXT_STORE is unset, so nothing was cached.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.12685v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.13880",
+      "arxiv": "2610.13880",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Bicycle Race: small two-block codes on the Pareto frontier",
+      "authors": [
+        "Gideon Lee"
+      ],
+      "year": 2026,
+      "date": "2026-10-09",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.13880",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-12",
+        "preprint"
+      ],
+      "importance": 77,
+      "confidence": 69,
+      "popularity": 33,
+      "coreIdea": "Two-block group-algebra codes are treated as a searchable family of quantum LDPC codes, many of them translation invariant on a twisted torus. A census of about 10 to the 8 two-block codes with up to 320 qubits, at check weights five through nine, supports a few exhaustive statements: up to equivalence the Gross code is the only abelian weight-six two-block code with n at most 200 that reaches kd squared over n equal to 12, and the known [[64,18,8]] is the best two-block code by that figure for n at most 94 across those weights. Codes found include [[102,20,10]] and [[120,24,10]] at weight nine, which are simulated in noisy syndrome-extraction circuits, and [[288,16,16]] as the best weight-six two-block code with n at most 300. The abstract says the best codes at weights seven to nine beat the best published exact-distance kd squared over n at the same weight in most length bands up to 320. The codes are in a public database.",
+      "whyItMatters": "Another qLDPC census is queued under E-QEC. The figure kd squared over n is not Q_eng. Noisy-circuit simulations are mentioned and no logical error rate from them is quoted here, because the abstract does not give one. C stays C4.",
+      "limitation": "Bare arXiv. One author. CC BY 4.0. The database is not fetched. No device.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.13880v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.12645",
+      "arxiv": "2610.12645",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Search for free non-Abelian anyons in paired composite-fermion states",
+      "authors": [
+        "Mytraya Gattu",
+        "J. K. Jain"
+      ],
+      "year": 2026,
+      "date": "2026-10-08",
+      "venue": "arXiv cond-mat.str-el",
+      "url": "https://arxiv.org/abs/2610.12645",
+      "fields": [
+        "anyons"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-12",
+        "preprint"
+      ],
+      "importance": 73,
+      "confidence": 67,
+      "popularity": 36,
+      "coreIdea": "Even-denominator fractional quantum Hall states, read as topological superconductors of composite fermions, are expected to host quasiparticles with non-Abelian braid statistics. In the parton framework the authors look at paired composite-fermion states that have been seen in experiment and find that the elementary quasiparticles and quasiholes generally bind into Abelian molecules, which hides the non-Abelian statistics. The exception they report is the one-half state in wide quantum wells, where the calculation shows free quasiparticles or quasiholes. They mark that state as a candidate for studying non-Abelian braids, and they say bound states can also expose the topological structure.",
+      "whyItMatters": "Non-Abelian braids are why E-S3 is on this card. The platform in the claim is an S3 gate set with fusion measurement. This paper is a fractional-quantum-Hall wavefunction argument, not that gate set, and it reports no fusion measurement. C3 does not move. Not a new pillar: no inputs, outputs, latency, or fail-safe.",
+      "limitation": "Bare arXiv. No interferometry number and no device fidelity. CC BY 4.0. The wide-well exception is a calculation, not a new shot.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.12645v1",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.12395",
+      "arxiv": "2610.12395",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "A neural characteristic mapping method: Lagrangian PINNs based on flow maps for transport-dominated problems",
+      "authors": [
+        "Martin Campos Pinto",
+        "Victor Fournet",
+        "Emmanuel Franck",
+        "Philipp Krah",
+        "Victor Michel-Dansac"
+      ],
+      "year": 2026,
+      "date": "2026-10-08",
+      "venue": "arXiv math.NA",
+      "url": "https://arxiv.org/abs/2610.12395",
+      "fields": [
+        "plasma"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-12",
+        "preprint"
+      ],
+      "importance": 69,
+      "confidence": 63,
+      "popularity": 32,
+      "coreIdea": "Instead of fitting the solution of a transport equation with a physics-informed network, the paper fits the flow map and pulls the exact initial condition back through that map. One network is trained on each time slab and the slabs are composed with the semigroup property, so each map stays close to the identity. The tests are linear advection, incompressible Euler in vorticity form, the Vlasov-Poisson equation, and a drift-kinetic equation. The abstract does not quote an error table.",
+      "whyItMatters": "Vlasov-Poisson is one of four examples, which is why the card is queued under S-L3 and not rejected on the keyword alone. It is not a fusion rate, not hole-burning, and not SRS or SBS. No error number is copied because none is in the abstract. C stays C4. M4 stays open.",
+      "limitation": "Bare arXiv. CC BY 4.0. A method paper. The drift-kinetic example is not a tokamak shot.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.12395v1",
+      "claimIds": [
+        "S-L3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.08180",
+      "arxiv": "2610.08180",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Fast-ion effects on E x B staircase organization and the heat-flux response to the ion-temperature gradient",
+      "authors": [
+        "Il-Hwan Kim",
+        "Jaemin Seo"
+      ],
+      "year": 2026,
+      "date": "2026-10-06",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2610.08180",
+      "fields": [
+        "plasma"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-12",
+        "preprint"
+      ],
+      "importance": 58,
+      "confidence": 62,
+      "popularity": 34,
+      "coreIdea": "Global gyrokinetic simulations of a KSTAR fast-ion-regulated enhancement mode compare profile relaxation with and without fast ions, at five initial main-ion temperature gradients. With fast ions the zonal-flow and shearing-rate amplitudes are larger and the shear layers persist. At the experimental reference profile those layers sit with temperature-gradient corrugations that the authors call consistent with E cross B staircases. Inward and outward ion heat fluxes then coexist, so the average heat flux is smaller than in the run without fast ions. With fast ions the heat flux falls as the ion-temperature gradient rises, opposite the usual Fick trend. The authors read that as a possible bifurcation rather than a smooth extension of L-mode.",
+      "whyItMatters": "The heat flux in a gyrokinetic scan is not Q_eng, not Q_fuel, and not Q_sci. The paper is not a controller and not a Vlasov or SRS-SBS rate method. No KEEP or HOLD claim is bound. Reading list. The symbol for heat flux is not entered on the ledger.",
+      "limitation": "Bare arXiv. CC BY 4.0. No numeric heat flux and no Q are stated in the abstract, and none are added. Not a plant.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.08180v1",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.11061",
+      "arxiv": "2610.11061",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Beam filamentation instability drives deuterium-tritium fusion with polarized neutron emission",
+      "authors": [
+        "Guanqi Qiu",
+        "Deji Liu",
+        "Dongchi Cai",
+        "Ronghao Hu",
+        "Zheng Gong",
+        "Xueqing Yan"
+      ],
+      "year": 2026,
+      "date": "2026-10-08",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2610.11061",
+      "fields": [
+        "plasma"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-12",
+        "preprint"
+      ],
+      "importance": 52,
+      "confidence": 56,
+      "popularity": 30,
+      "coreIdea": "Two-dimensional particle-in-cell runs with a spin-dependent deuterium-tritium fusion module ask whether filamentation can move energy from counter-streaming electrons to prepolarized fuel ions. Magnetic filaments, plus inductive and charge-separation electric fields, accelerate deuterons and tritons that started at rest up to energies where fusion reactions occur. Over the range they scanned, the calculated neutron yield rises with the saturated magnetic-field energy. The model also gives anisotropic, spin-resolved neutron emission, with the strongest polarization roughly perpendicular to the main collision direction.",
+      "whyItMatters": "A simulated neutron yield is not Q_eng, not Q_fuel, and not Q_sci. The setup is a beam-plasma PIC box, not a plant attach and not the Vlasov or SRS-SBS rate method. No KEEP or HOLD claim is bound. Reading list. No yield number is in the abstract, and none is added.",
+      "limitation": "Bare arXiv. Two-dimensional. CC BY-NC-ND 4.0, so the PDF is not mirrored. No Q.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.11061v1",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.11652",
+      "arxiv": "2610.11652",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Triangular prism equations for near-group categories: algebraic solutions and a unitary conjecture",
+      "authors": [
+        "Huixuan He",
+        "Zhengwei Liu",
+        "Fan Lu",
+        "Sebastien Palcoux",
+        "Yunxiang Ren"
+      ],
+      "year": 2026,
+      "date": "2026-10-08",
+      "venue": "arXiv math.QA",
+      "url": "https://arxiv.org/abs/2610.11652",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-12",
+        "preprint"
+      ],
+      "importance": 64,
+      "confidence": 62,
+      "popularity": 30,
+      "coreIdea": "The paper derives the triangular prism equations for near-group fusion rules of type G plus the order of G, with G a finite abelian group. Spherical categorification with trivial Frobenius-Schur indicator, over a field where the group order is invertible, is equivalent to solving that system. For every cyclic group they build a solution with hyperbolic gamma functions: one spherical category with negative dimensions, and a Galois conjugate that is pseudo-unitary with positive dimensions. Scalar solutions with positive dimensions get a singular-value formula and a gap that are sufficient for unitarity. Unitarity of the cyclic Galois-conjugated coefficients for every order is tied to a real-multiplication conjecture that follows from the order-one abelian Stark conjecture.",
+      "whyItMatters": "Near-group fusion rules are why this is queued under E-S3. They are not an S3 gate set and not a fusion measurement. C3 does not move. No inputs, outputs, latency, or fail-safe, so not a new pillar.",
+      "limitation": "Bare arXiv. CC BY 4.0. Algebra. No anyon interferometer and no fidelity.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.11652v1",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
     }
   ],
   "runs": [
+    {
+      "id": "run-2026-10-12-daily",
+      "kind": "daily",
+      "startedAt": "2026-10-12T09:22:44-05:00",
+      "finishedAt": "2026-10-12T09:42:49-05:00",
+      "windowStart": "2026-10-05",
+      "windowEnd": "2026-10-12",
+      "sources": [
+        {
+          "id": "arxiv-ingest-queries",
+          "url": "https://export.arxiv.org/api/query",
+          "status": "ok",
+          "http": 200,
+          "requests": 7,
+          "returned": 41,
+          "new": null,
+          "ms": null,
+          "error": null
+        },
+        {
+          "id": "arxiv-fetch-queries",
+          "url": "https://export.arxiv.org/api/query",
+          "status": "ok",
+          "http": 200,
+          "requests": 10,
+          "returned": 69,
+          "new": null,
+          "ms": null,
+          "error": null
+        },
+        {
+          "id": "arxiv-keep-queries",
+          "url": "https://export.arxiv.org/api/query",
+          "status": "ok",
+          "http": 200,
+          "requests": 4,
+          "returned": 13,
+          "new": null,
+          "ms": null,
+          "error": null
+        },
+        {
+          "id": "arxiv-window",
+          "url": "https://export.arxiv.org/api/query",
+          "status": "ok",
+          "http": 200,
+          "requests": 5,
+          "returned": 125,
+          "new": null,
+          "ms": null,
+          "error": null
+        },
+        {
+          "id": "arxiv-id-list",
+          "url": "https://export.arxiv.org/api/query",
+          "status": "ok",
+          "http": 200,
+          "requests": 2,
+          "returned": 15,
+          "new": 12,
+          "ms": null,
+          "error": null
+        },
+        {
+          "id": "arxiv-oai",
+          "url": "https://oaipmh.arxiv.org/oai",
+          "status": "ok",
+          "http": 200,
+          "requests": 12,
+          "returned": 12,
+          "new": 0,
+          "ms": null,
+          "error": null
+        },
+        {
+          "id": "openalex",
+          "url": "https://api.openalex.org/works",
+          "status": "skipped",
+          "http": null,
+          "requests": 0,
+          "returned": 0,
+          "new": 0,
+          "ms": null,
+          "error": "OPENALEX_API_KEY unset"
+        },
+        {
+          "id": "crossref",
+          "url": "https://api.crossref.org/works/10.1007/s00220-026-05661-x",
+          "status": "partial",
+          "http": 200,
+          "requests": 1,
+          "returned": 1,
+          "new": 0,
+          "ms": null,
+          "error": "Single-record lookup only. DBE_CONTACT_EMAIL unset, so no mailto and not the polite pool. Abstract absent. Licence entries are Springer TDM links, not an open licence."
+        },
+        {
+          "id": "unpaywall",
+          "url": "https://api.unpaywall.org/v2",
+          "status": "skipped",
+          "http": null,
+          "requests": 0,
+          "returned": 0,
+          "new": 0,
+          "ms": null,
+          "error": "DBE_CONTACT_EMAIL unset"
+        },
+        {
+          "id": "osti-carryover",
+          "url": "https://www.osti.gov/api/v1/records",
+          "status": "ok",
+          "http": 200,
+          "requests": 2,
+          "returned": 2,
+          "new": 2,
+          "ms": null,
+          "error": null
+        },
+        {
+          "id": "inspire-carryover",
+          "url": "https://inspirehep.net/api/literature/3204193",
+          "status": "partial",
+          "http": 200,
+          "requests": 1,
+          "returned": 1,
+          "new": 1,
+          "ms": null,
+          "error": "Record metadata returned. abstracts empty. Not a weekly list sweep."
+        },
+        {
+          "id": "weekly-6.2",
+          "url": "section 6.2",
+          "status": "skipped",
+          "http": null,
+          "requests": 0,
+          "returned": 0,
+          "new": 0,
+          "ms": null,
+          "error": "Monday. Weekly sources are Sunday only. INSPIRE and OSTI calls above are carry-over refetches of yesterday's unscored ids, not new sweeps."
+        }
+      ],
+      "counts": {
+        "harvested": 254,
+        "duplicates": 28,
+        "merged": 0,
+        "new": 15,
+        "scored": 15,
+        "unscored": 8,
+        "add": 0,
+        "strengthen": 0,
+        "weaken": 0,
+        "hold": 12,
+        "newPillar": 0,
+        "reject": 3
+      },
+      "paperIds": [
+        "2610.06574",
+        "2610.06607",
+        "2610.06134",
+        "osti-3400842",
+        "osti-17032774",
+        "inspire-3204193",
+        "2610.13879",
+        "2610.12782",
+        "2610.12685",
+        "2610.13880",
+        "2610.12645",
+        "2610.12395",
+        "2610.08180",
+        "2610.11061",
+        "2610.11652"
+      ],
+      "unscoredIds": [
+        {
+          "id": "2610.11004",
+          "reason": "2026-10-07 ReMAIN reconstructor for a collisionless ExB plasma. The abstract names control as a motive and demonstrates a U-Net decoder, not a coil or pellet command. E-RL only if a later read shows a closed loop. Score next."
+        },
+        {
+          "id": "2610.13428",
+          "reason": "2026-10-09 SpeCyl free-boundary resistive-wall module, verified on analytic RWM growth rates. Fluid MHD, not a controller and not a Vlasov rate. Score next."
+        },
+        {
+          "id": "2610.12597",
+          "reason": "2026-10-08 error correction on sparse graphs. Floquet random Clifford circuits used as a CSS encoder. E-QEC adjacent. Not a surface-code shot. Score next."
+        },
+        {
+          "id": "2610.12079",
+          "reason": "2026-10-08 fiber product of condensable algebras for boundary phase transitions in 2+1D topological order. E-S3 math. Score next."
+        },
+        {
+          "id": "2610.07611",
+          "reason": "2026-10-06 Grothendieck rings of module categories, examples include the Haagerup center. E-S3 math. Score next."
+        },
+        {
+          "id": "2610.12155",
+          "reason": "2026-10-08 hybrid-kinetic Alfvenic turbulence and proton heating. Heliospheric, not the S-L3 fusion rate and not Bus A. Score next."
+        },
+        {
+          "id": "2610.12607",
+          "reason": "2026-10-08 dissipative Majorana chain, anomalies and non-invertible symmetries. Not a device zero mode. E-MZM stays WATCH and is not bound. Score next only if a device signature appears."
+        },
+        {
+          "id": "2610.08530",
+          "reason": "2026-10-06 laboratory suppression of parallel heat conduction by magnetic microturbulence in a high-beta plasma. Not a controller. Score next."
+        }
+      ],
+      "fieldCounts": {
+        "tqc": 7,
+        "plasma": 7,
+        "anyons": 1
+      },
+      "gateMisses": {
+        "A1": 3,
+        "A2": 15,
+        "A3": 15,
+        "A4": 15,
+        "A5": 12,
+        "A6": 0,
+        "A7": 0,
+        "A8": 0,
+        "G1": 0,
+        "G2": 0,
+        "G3": 0,
+        "G4": 15,
+        "G5": 0,
+        "G6": 0
+      },
+      "claimDelta": "none",
+      "versionBump": null,
+      "fulltext": {
+        "cached": 0,
+        "privateOnly": 0,
+        "noOA": 1,
+        "unknownOA": 2
+      },
+      "tests": {
+        "command": "PYTHONPATH=. python -m pytest -q tests/test_research.py tests/test_claims.py tests/test_api.py tests/test_plasma.py tests/test_transport.py",
+        "result": "pass",
+        "summary": "19 passed, 30 subtests passed"
+      },
+      "branch": "observatory/2026-10-12",
+      "pr": "https://github.com/pjrny/DBE_V0/pull/14",
+      "suspiciousContent": [],
+      "scoreRoutes": [
+        {
+          "paper": "2610.06574",
+          "bind": "E-QEC",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arxiv",
+          "exit": 0,
+          "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+        },
+        {
+          "paper": "2610.06607",
+          "bind": "E-QEC",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arxiv",
+          "exit": 0,
+          "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+        },
+        {
+          "paper": "2610.06134",
+          "bind": "S-L3",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arxiv",
+          "exit": 0,
+          "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+        },
+        {
+          "paper": "osti-3400842",
+          "bind": "",
+          "action": "REJECT",
+          "route": "SKIPPED",
+          "a5": "PASS",
+          "venue": "Computer Physics Communications",
+          "exit": null,
+          "note": "score.py skipped: no claim id. Card route is REJECT so Apply CUT parks the paper."
+        },
+        {
+          "paper": "osti-17032774",
+          "bind": "S-L3",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "PASS",
+          "venue": "Physics of Plasmas",
+          "exit": 0,
+          "note": "score.py A5 not a bare preprint, ROUTE QUEUE. No AUTO-MERGED PATCH."
+        },
+        {
+          "paper": "inspire-3204193",
+          "bind": "S-L3",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "PASS",
+          "venue": "Communications in Mathematical Physics",
+          "exit": 0,
+          "note": "score.py A5 not a bare preprint, ROUTE QUEUE. No AUTO-MERGED PATCH."
+        },
+        {
+          "paper": "2610.13879",
+          "bind": "E-QEC",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arxiv",
+          "exit": 0,
+          "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+        },
+        {
+          "paper": "2610.12782",
+          "bind": "E-QEC",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arxiv",
+          "exit": 0,
+          "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+        },
+        {
+          "paper": "2610.12685",
+          "bind": "E-QEC",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arxiv",
+          "exit": 0,
+          "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+        },
+        {
+          "paper": "2610.13880",
+          "bind": "E-QEC",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arxiv",
+          "exit": 0,
+          "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+        },
+        {
+          "paper": "2610.12645",
+          "bind": "E-S3",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arxiv",
+          "exit": 0,
+          "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+        },
+        {
+          "paper": "2610.12395",
+          "bind": "S-L3",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arxiv",
+          "exit": 0,
+          "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+        },
+        {
+          "paper": "2610.08180",
+          "bind": "",
+          "action": "REJECT",
+          "route": "SKIPPED",
+          "a5": "FAIL",
+          "venue": "arxiv",
+          "exit": null,
+          "note": "score.py skipped: no claim id. Card route is REJECT so Apply CUT parks the paper."
+        },
+        {
+          "paper": "2610.11061",
+          "bind": "",
+          "action": "REJECT",
+          "route": "SKIPPED",
+          "a5": "FAIL",
+          "venue": "arxiv",
+          "exit": null,
+          "note": "score.py skipped: no claim id. Card route is REJECT so Apply CUT parks the paper."
+        },
+        {
+          "paper": "2610.11652",
+          "bind": "E-S3",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arxiv",
+          "exit": 0,
+          "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+        }
+      ],
+      "notes": "Twenty-fifth run, Monday, daily sources only. Lookback 7 days (2026-10-05 to 2026-10-12). Pull request 13 was open at the start and was landed first by squash merge 0155a27 (head 384f71b). Today's branch is cut from that merge. Yesterday's six unscored ids were scored first. ingest.py was not executed: it has no inter-request sleep. The same ingest QUERIES (7), fetch QUERIES (10), and four KEEP-claim queries were issued with a submittedDate window and a 3.1 s gap, plus five category windows (max 25) and OAI GetRecord for the 12 scored arXiv ids. Hit rows 251, unique ids 196, of which 28 were already in the catalog. 168 were not in the catalog. Fifteen were scored. The rest of the program-adjacent rows are in unscoredIds. Off-program category rows were not catalogued. Twelve HOLD and three REJECT. No ADD, no STRENGTHEN, no bridge, no new pillar, no CUT reversal, no version bump. C unchanged. Three journals are carry-overs from the Sunday list, not a new weekly sweep: Computer Physics Communications (M3D-C1 multigrid, rejected, fluid), Physics of Plasmas (whistler runaways, HOLD on S-L3 only), Communications in Mathematical Physics (title only, abstract missing, HOLD on S-L3). OpenAlex, Unpaywall, and the Sunday source list were skipped. Crossref was one DOI lookup without a mailto. 2610.08180 writes a gyrokinetic heat flux. That symbol is not Q_eng. 2610.11061 writes a PIC neutron yield. That is not Q_eng. 2610.12782 and 2610.13880 use Q for kd^2/n. That figure is not entered on the ledger. No PDF cached. DBE_FULLTEXT_STORE unset. Q=1000 remains a ledger stress test. Prompt source: research/OBSERVATORY_PROMPT.md on feature/research-grade-physics, blob 226375bdc29fa23856dc38714f84b2fca90c5f1d, read in full, NORTH STAR present. Files agree with the freeze: DBE-0.2.2 / DBES-0.2.0, claims freeze 2026-10-02. No scored abstract told this run to change rules, files, or targets."
+    },
     {
       "id": "run-2026-10-11-daily",
       "kind": "weekly",
