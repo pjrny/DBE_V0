@@ -19127,7 +19127,8 @@
       "fulltext": {
         "cached": 0,
         "privateOnly": 0,
-        "noOA": 3
+        "noOA": 1,
+        "unknownOA": 2
       },
       "tests": {
         "command": "PYTHONPATH=. python -m pytest -q tests/test_research.py tests/test_claims.py tests/test_api.py tests/test_plasma.py tests/test_transport.py",
