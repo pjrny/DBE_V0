@@ -139,14 +139,14 @@ function applyCard(id) {
     toast("Auto-Gate blocked a C raise (missed " + gate.misses.join(", ") + ").");
     return;
   }
-  if (action === "NEW PILLAR" || (c.route === "QUEUE" && action !== "WEAKEN" && action !== "INCLUDE")) {
-    FREEZE.actions.push({ reviewId: id, action, route: "QUEUE", at: new Date().toISOString(), paperId: c.paperId });
-    saveFreeze(); toast("Queued " + action + " — no auto-bump"); paintFreeze(); render(); return;
-  }
   if (action === "REJECT" || action === "CUT") {
     FREEZE.actions.push({ reviewId: id, action, route: "REJECT", at: new Date().toISOString(), paperId: c.paperId });
     if (c.paperId) FREEZE.parkedPaperIds = Array.from(new Set([...(FREEZE.parkedPaperIds || []), c.paperId]));
     saveFreeze(); toast("Cut from the working paper view."); paintFreeze(); render(); return;
+  }
+  if (action === "NEW PILLAR" || (c.route === "QUEUE" && action !== "WEAKEN" && action !== "INCLUDE")) {
+    FREEZE.actions.push({ reviewId: id, action, route: "QUEUE", at: new Date().toISOString(), paperId: c.paperId });
+    saveFreeze(); toast("Queued " + action + " — no auto-bump"); paintFreeze(); render(); return;
   }
   const line = lineFor(bind);
   const kind = action === "INCLUDE" ? "patch" : "minor";
