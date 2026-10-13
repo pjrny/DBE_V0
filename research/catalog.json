@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T09:42:49-05:00",
+  "generatedAt": "2026-10-13T09:35:32-05:00",
   "lookback": "1y+",
   "northStar": "Q=1000",
   "feeds": [
@@ -134,6 +134,7 @@
         "nonabelian-qldpc"
       ],
       "blockers": [
+        "2026-10-13: fiber-product condensable algebras (2610.12079) and module-category Grothendieck rings (2610.07611) are queued under E-S3. Neither is an S3 braid-plus-fusion measurement. E-S3 stays C3.",
         "2026-10-10: topologically ordered superfluids (2610.10668) and Abelian modulated-symmetry SETs (2610.10764) are queued under E-S3. Neither is an S3 braid-plus-fusion measurement. E-S3 stays C3.",
         "2026-10-09: SC-sharp (2610.10679) says elementary vortices in that superconductor family cannot obey Fibonacci fusion rules. That is not an S3 braid-plus-fusion result. E-S3 stays C3.",
         "2026-10-08: quantum-double rewire-and-reset (2610.06845) is queued under E-S3. Unknown-type fusion needs a reset or an ancilla, so fusion measurement stays in the gate set. Fibonacci defect ratios (2610.08907) and Floquet Z_N parafermions (2610.07156) are not an S3 braid. No new bus.",
@@ -185,6 +186,7 @@
         "floquet-majorana-codes"
       ],
       "blockers": [
+        "2026-10-13: a dissipative Majorana chain (2610.12607) and an extended Kitaev magnet (2610.13401) are not device zero modes. E-MZM stays WATCH at C1 and is not bound.",
         "2026-10-10: a noise model of a Majorana tetron (2610.12223) gives measurement-configuration X-parity lifetimes of order microseconds when the bare coherence time is tens of nanoseconds, for representative noise strengths. Not an X and Z logical. E-MZM stays WATCH. M5 stays open.",
         "2026-10-09: thermal conductance at a TI-SC interface (2610.10011) cannot separate a chiral Majorana mode from equilibrated Abelian edges when the anomaly data match. The charge sector is the test they name. Not an X or Z logical. E-MZM stays WATCH. M5 stays open.",
         "2026-10-08: a one-sided tetron proposal (2610.07169) stays on E-MZM WATCH. The splitting drop is a model comparison, not an X and Z logical. M5 stays open.",
@@ -265,6 +267,7 @@
         "spacetime-fractons"
       ],
       "blockers": [
+        "2026-10-13: dynamical freezing under a strong periodic drive (2610.12551) is not the engine metronome. E-TC stays CUT.",
         "2026-10-08: chiral parafermions in Floquet Z_N order (2610.07156) use clock variables as matter, not as the engine metronome. E-TC stays CUT.",
         "2026-10-04: no clock candidate scored. Graphene Floquet-gap theory (2609.39817) left unscored. CUT stands.",
         "2026-10-03: no new clock candidate in the empty Fri–Sat window. CUT as metronome stands.",
@@ -344,6 +347,7 @@
         "topo-dynamics"
       ],
       "blockers": [
+        "2026-10-13: ReMAIN (2610.11004) reconstructs an ExB plasma from sparse sensors. Control is named as a motive. No coil or pellet command is closed. M2 stays open. E-RL stays C4.",
         "2026-10-09: WEST wall protection (2610.11871, Nuclear Fusion journal-ref) feeds back on power actuators. It is not an M2 disruption-rate beat, and the authors hedge the 1337-second pulse. E-RL stays C4.",
         "2026-10-08: synthetic pre-training of a tokamak flux surrogate (2610.09674) is queued under E-RL. The metric is nRMSE of poloidal flux, the abstract names no device, and there is no coil command. M2 stays open.",
         "2026-10-07: Strauss magnetic-feedback simulations of a DIII-D locked-mode criterion (2610.06189) queued under E-RL. No coil command and no learned policy. M2 stays open.",
@@ -393,6 +397,7 @@
       ],
       "amplifies": [],
       "blockers": [
+        "2026-10-13: XFEL mix imaging (2610.11603), an implosion surrogate (2610.13822), and an Orion heat-conduction shot (2610.08530) state no Q_eng. None entered. Q=1000 stays a stress test.",
         "2026-10-10: LM26 (2610.11890) reports Te = 1180 ± 65 eV, Thomson Te = 1090 ± 40 eV, Ti = 459 ± 33 eV. No Q is stated. None entered. Q=1000 stays a stress test.",
         "2026-10-09: spin-polarized fuel (2610.11080) says high gain and states no number; none entered. OpenAI math 362 is an unchecked Vlasov-Maxwell existence manuscript, not a ledger term. Q=1000 stays a stress test.",
         "2026-10-04: no ledger term moved. Lost-ion energy and zonal-flow drive are not Q_eng. Q=1000 stays a stress test.",
@@ -443,6 +448,7 @@
         "cyclic-fusion-family"
       ],
       "blockers": [
+        "2026-10-13: 2610.07611 and 2610.12079 are fusion-category algebra, not a new bus. cyclic-fusion stays under E-S3.",
         "2026-10-08: 2610.06845 says input-agnostic fusion is not unitary without a reset. Fusion measurement stays in the gate set. Not a new bus.",
         "2026-10-07: fusion measurement stays. Braided fusion 2-categories (2610.03864), Abelian anyon peeling (2610.04704), and an Ising/Fibonacci impurity braid (2610.06203) queued under E-S3 only. D4 fusion-assisted decoding (2610.05901) and the S3 fusion-tree decoder (2610.06692) are E-S3+E-QEC bridges at coupling C1. No new bus.",
         "2026-10-04: fusion measurement stays. Chern-band composite fermions and 1D anyons are not S3 fusion and do not open a new bus.",
@@ -551,6 +557,7 @@
       ],
       "amplifies": [],
       "blockers": [
+        "2026-10-13: Clifford-deformed surface-code search (2610.13589) and sparse-graph CSS encoders (2610.12597) are queued under E-QEC only. Not an interface contract. CUT as an engine pillar stands.",
         "2026-10-04: layer-code circuits, an entropy-threshold proxy, and qLDPC decoders queued under E-QEC only. Not an interface contract. CUT as an engine pillar stands.",
         "2026-10-03: algebraic surgery (2609.39874), twisted-double stabilizers (2610.00464), the e–m no-go (2610.02097), and PRX mixed-state axioms (2506.04221) queued under E-QEC only. Not an interface contract. Learned BP (2610.01068) and the GNN decoder (2610.01683) left unscored.",
         "2026-10-02: one-shot qLDPC lift (2610.02137) and photonic-fusion lattice surgery (2610.01923) queued under E-QEC only. Photon fusion is not S3 fusion. Clifford EM-duality no-go (2610.02097) and learned BP (2610.01068) left unscored. Not an interface contract.",
@@ -18892,9 +18899,1079 @@
       "bindAction": "HOLD",
       "pillarEffect": "none",
       "lang": "en"
+    },
+    {
+      "id": "2610.11004",
+      "arxiv": "2610.11004",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Reconstruction of Multiscale Plasma Dynamics Across Operating Regimes",
+      "authors": [
+        "Maryam Reza",
+        "Farbod Faraji"
+      ],
+      "year": 2026,
+      "date": "2026-10-07",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2610.11004",
+      "fields": [
+        "plasma"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-13",
+        "preprint"
+      ],
+      "importance": 72,
+      "confidence": 62,
+      "popularity": 32,
+      "coreIdea": "ReMAIN keeps a recurrent encoder of sensor history and replaces the fully connected decoder of SHRED with a U-Net whose features are modulated by that recurrent state. A parametric extension embeds the operating condition with the sensor history. The paper first compares the two on six one-dimensional nonlinear PDEs, then demonstrates the parameter-conditioned model on a collisionless ExB plasma whose electric-field strength is the operating parameter. It reports lower reconstruction error on unseen trajectories and recovery of regime-dependent dynamics at field strengths withheld from training.",
+      "whyItMatters": "E-RL is plant-attach control. This is queued because the abstract names control as a use and the method is a learned state estimator. It does not command a coil, a gas valve, or a pellet. C4 does not move. M2 stays open.",
+      "limitation": "Bare arXiv. Two authors. The ExB demonstration is not a tokamak. No actuator, no latency, and no safe-hold are stated.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.11004v1",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.13428",
+      "arxiv": "2610.13428",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Implementation and verification of a new free boundary module for Resistive Wall Modes simulations with the nonlinear 3D full MHD code SpeCyl",
+      "authors": [
+        "Francesco Galeazzi",
+        "Daniele Bonfiglio",
+        "Luca Spinicci",
+        "Susanna Cappello"
+      ],
+      "year": 2026,
+      "date": "2026-10-09",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2610.13428",
+      "fields": [
+        "plasma"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-13",
+        "reading list",
+        "preprint"
+      ],
+      "importance": 60,
+      "confidence": 56,
+      "popularity": 34,
+      "coreIdea": "SpeCyl gains a free-boundary module for resistive wall modes and external kinks. Two coaxial thin resistive shells surround the plasma, vacuum is assumed between and outside them, and their positions and time constants can be varied. The linear growth rates of the (m=2, n=1) resistive wall mode and external kink are checked against Shafranov's analytic theory for a circular large-aspect-ratio tokamak with a flat current profile, over a range of wall positions, shell time constants, and reference equilibria. The same growth rates are also compared with earlier resistive-wall modelling used on RFX-mod tokamak plasmas.",
+      "whyItMatters": "Fluid MHD is not E-RL and not the Vlasov, hole-burning, or SRS-SBS method. No KEEP or HOLD claim is bound. Reading list. No growth-rate number is copied because the abstract states agreement and does not state a value.",
+      "limitation": "Bare arXiv. CC BY 4.0. Linear verification on a circular large-aspect-ratio equilibrium. Not a controller.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.13428v1",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.12597",
+      "arxiv": "2610.12597",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Error correction and quantum information spreading on sparse random graphs",
+      "authors": [
+        "Giovanni Cemin",
+        "Marin Bukov",
+        "Andrea Solfanelli"
+      ],
+      "year": 2026,
+      "date": "2026-10-08",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.12597",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-13",
+        "preprint"
+      ],
+      "importance": 70,
+      "confidence": 60,
+      "popularity": 32,
+      "coreIdea": "The paper treats the spectral dimension of a sparse graph, read from the low-energy spectrum of the graph Laplacian, as the parameter that links information spreading to code distance. Floquet random Clifford circuits on two sparse architectures show an entanglement transition from area-law to volume-law whose location tracks that spectral dimension and long-range percolation. In the ergodic phase the circuit is a CSS encoder. The code distance is the competition between the cost of cutting the graph and the length of its shortest winding cycle, with a maximum at intermediate spectral dimension.",
+      "whyItMatters": "E-QEC only. Sparse-graph codes are adjacent to the error layer and are not that layer. No surface-code distance and no logical error rate are stated. C4 does not move. E-TC is not bound.",
+      "limitation": "Bare arXiv. Three authors. No device. No numeric distance in the abstract, and none is added.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.12597v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.12079",
+      "arxiv": "2610.12079",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Fiber product of condensable algebras and critical points of boundary phase transitions",
+      "authors": [
+        "Hanlin Lin",
+        "Hao Zheng"
+      ],
+      "year": 2026,
+      "date": "2026-10-08",
+      "venue": "arXiv math.CT",
+      "url": "https://arxiv.org/abs/2610.12079",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-13",
+        "preprint"
+      ],
+      "importance": 66,
+      "confidence": 58,
+      "popularity": 30,
+      "coreIdea": "For two boundary phases of a 2+1D topological order, the paper proposes that the critical point between them, when it exists, is the fiber product of the two Lagrangian algebras over an algebra M. That fiber product is proved to be condensable. The paper also reclassifies condensable algebras in Z(Vec_G^omega), notes a splitting that appears when some of those algebras condense, and computes examples for both Abelian and non-Abelian finite groups G.",
+      "whyItMatters": "E-S3 only. Boundary anyon condensation is why it is queued. It is not an S3 braid-plus-fusion measurement, and it states no inputs, outputs, latency, or fail-safe, so it is not a new pillar. C3 does not move.",
+      "limitation": "Bare arXiv. Two authors. Algebra. No interferometer and no fidelity.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.12079v1",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.07611",
+      "arxiv": "2610.07611",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Grothendieck Rings of Module Categories: Localizations, Strata, and Radicals",
+      "authors": [
+        "Riley Chinburg",
+        "Dmitri Nikshych"
+      ],
+      "year": 2026,
+      "date": "2026-10-06",
+      "venue": "arXiv math.QA",
+      "url": "https://arxiv.org/abs/2610.07611",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-13",
+        "preprint"
+      ],
+      "importance": 66,
+      "confidence": 58,
+      "popularity": 30,
+      "coreIdea": "For a non-degenerate braided fusion category, the paper studies the Grothendieck ring of its module categories. A convolution of etale algebras in the Drinfeld center matches the full center of a relative tensor product. The ring is graded by localizations. Each stratum is described by double-coset blocks and a transition matrix, with a sandwich multiplication formula. When the category is a center, the top stratum's transition matrix is the Gram matrix of the Lagrangian algebras. Examples include finite geometry, Drinfeld doubles, exceptional WZW categories, and the Haagerup center, some with nonzero radicals.",
+      "whyItMatters": "E-S3 only. Braided fusion data are why it is queued. They are not an S3 measurement, and there is no interface contract, so not a new pillar. C3 does not move.",
+      "limitation": "Bare arXiv. Two authors. No anyon interferometer and no fidelity.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.07611v1",
+      "claimIds": [
+        "E-S3"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.12155",
+      "arxiv": "2610.12155",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Kinetic wave activity and proton heating in 3D hybrid simulations of decaying balanced and imbalanced Alfvénic turbulence",
+      "authors": [
+        "C. A. González",
+        "T. A. Bowen",
+        "A. Mallet",
+        "A. Tenerani"
+      ],
+      "year": 2026,
+      "date": "2026-10-08",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2610.12155",
+      "fields": [
+        "plasma"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-13",
+        "reading list",
+        "preprint"
+      ],
+      "importance": 48,
+      "confidence": 51,
+      "popularity": 32,
+      "coreIdea": "Three-dimensional hybrid-kinetic simulations compare freely decaying balanced and imbalanced Alfvenic turbulence, with the same initial amplitude and spectrum and different normalized cross-helicity. The balanced run dissipates more energy and heats protons more efficiently. At sub-proton scales both runs are mostly oblique and right-hand polarized. Only the imbalanced run shows substantial parallel power with ion-cyclotron waves, born where temperature anisotropy grows during the initial steepening, together with parallel proton beams. Non-Maxwellian features in velocity space differ between the two regimes.",
+      "whyItMatters": "Heliospheric turbulence is not a tokamak controller and not the Vlasov, hole-burning, or SRS-SBS rate method. No KEEP or HOLD claim is bound. Reading list. No heating number is in the abstract, and none is added.",
+      "limitation": "Bare arXiv. CC BY 4.0. Decaying box, not a confinement device. No Q.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.12155v1",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.12607",
+      "arxiv": "2610.12607",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Dissipative Majorana Chain---Anomalies and Non-Invertible Symmetries",
+      "authors": [
+        "Hung-Hsuan Teh",
+        "Tokiro Numasawa"
+      ],
+      "year": 2026,
+      "date": "2026-10-08",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.12607",
+      "fields": [
+        "majorana"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-13",
+        "reading list",
+        "preprint"
+      ],
+      "importance": 54,
+      "confidence": 55,
+      "popularity": 30,
+      "coreIdea": "Dissipative Majorana chains are written as Lindblad dynamics and mapped to a non-Hermitian operator on a doubled space. Strong fermion parity and strong translation live on the ket and bra contours, and weak symmetries are their diagonal combinations. Anomalies are read by comparing algebras with and without weak fermion-parity defects, for even and odd length. The algebras keep the lattice precursor of the closed-chain modulo-8 anomaly. Even length with collective energy dephasing, after a GSO projection, gives an Ising Lindbladian with non-invertible Kramers-Wannier symmetries. Odd length gives an Ising Lindbladian with a Kramers-Wannier duality defect.",
+      "whyItMatters": "Not a device zero mode, so it does not feed M5. E-MZM is WATCH and fails A1, and it is not bound. No KEEP or HOLD claim matches the platform. Reading list.",
+      "limitation": "Bare arXiv. Two authors. No wire, no gap, and no coherence time. None are invented.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.12607v1",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.08530",
+      "arxiv": "2610.08530",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Experimental observations of microturbulence-suppressed parallel heat conduction in a weakly collisional, high-\\b{eta} plasma",
+      "authors": [
+        "T. A. Vincent",
+        "P. Ariyathilaka",
+        "L. Creaser",
+        "C. Danson",
+        "R. Davies",
+        "D. Lamb",
+        "J. Meinecke",
+        "C. A. J. Palmer",
+        "S. Pitt",
+        "H. Poole",
+        "C. Spindloe",
+        "P. Thomas",
+        "E. R. Tubman",
+        "L. Wilson",
+        "W. Garbett",
+        "G. Gregori",
+        "P. Tzeferacos",
+        "T. Hodge",
+        "A. F. A. Bott"
+      ],
+      "year": 2026,
+      "date": "2026-10-06",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2610.08530",
+      "fields": [
+        "plasma"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-13",
+        "reading list",
+        "preprint"
+      ],
+      "importance": 62,
+      "confidence": 60,
+      "popularity": 38,
+      "coreIdea": "Experiments at the Orion laser facility follow the temperature of a weakly collisional high-beta plasma whose evolution is mainly sensitive to conduction along an initially quasi-laminar magnetic field. Temperature, density, and magnetic field are read with x-ray spectroscopy, x-ray imaging, and proton imaging. After stochastic magnetic fluctuations grow, the measured temperature history requires the parallel thermal conductivity to be suppressed by at least an order of magnitude relative to the classical Coulomb value. The abstract calls this the first laboratory evidence linking magnetic microturbulence to that suppression. The plasmas it names as the same regime include intracluster gas and inertial-confinement hot spots.",
+      "whyItMatters": "A heat-conduction experiment is not plant-attach control and not the Vlasov, hole-burning, or SRS-SBS rate. No KEEP or HOLD claim is bound. Reading list. The order-of-magnitude figure stays in the card as the abstract's claim and is not entered on the ledger.",
+      "limitation": "Bare arXiv. CC BY 4.0. One facility. Not a tokamak and not a yield.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.08530v1",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.13589",
+      "arxiv": "2610.13589",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Decoder- and Noise-Aware Optimization Framework for Clifford-Deformed Quantum Error-Correcting Codes",
+      "authors": [
+        "Julius Rye Bønnelykke",
+        "Benjamin Joecker",
+        "Peter Krogstrup",
+        "Vincent Philippe Michal",
+        "Mark Kamper Svendsen"
+      ],
+      "year": 2026,
+      "date": "2026-10-09",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.13589",
+      "fields": [
+        "tqc"
+      ],
+      "role": "week",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-13",
+        "preprint"
+      ],
+      "importance": 78,
+      "confidence": 63,
+      "popularity": 36,
+      "coreIdea": "Clifford deformations change the stabilizers of a code to cut the logical error rate without adding qubits, and the best deformation depends on both the noise and the decoder. Evolution-Based Best-arm Identification treats the circuit, the noise, and the decoder as a black box. On the rotated surface code with PyMatching and two strongly Z-biased circuit-level models, the abstract says the search finds the optimal deformation at distance 3 with up to about 1100 times fewer shots than random search. At distance 5 the median search reaches the deformations the authors believe are optimal, and random search does not. Under a Z-biased SI1000-like model they report a new pattern, B-XZZX, which differs from XZZX on a fraction of order 1/d of the qubits, with a relative advantage that grows from about 5 percent at distance 3 to about 12 percent at distance 11.",
+      "whyItMatters": "E-QEC only. The rotated surface code is the same error layer. These are decoder-in-the-loop simulations, not the device that holds C4. The percentages stay in the card as the abstract's claims and do not move C.",
+      "limitation": "Bare arXiv. CC BY 4.0. Two noise families. Not hardware. The distance-5 optimum is the authors' belief, as the abstract says, and is not upgraded here.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.13589v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.11603",
+      "arxiv": "2610.11603",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Imaging ablator-fuel mix of hot spot in inertial confinement fusion via resonant X-ray absorption using an X-ray free electron laser",
+      "authors": [
+        "Lingen Huang",
+        "Long Yang",
+        "Alejandro Laso Garcia",
+        "Oliver S. Humphries",
+        "Michal Šmíd",
+        "Mikhail Mishchenko",
+        "Victorien Bouffetier",
+        "Carsten Baehtz",
+        "Erik Brambrink",
+        "Samuele D. Di Dio Cafiso",
+        "Gabriel Pérez-Callejo",
+        "Yangzhe Cui",
+        "Thea Engler",
+        "Wen Feng",
+        "Sebastian Göde",
+        "Joerg Grenzer",
+        "Christian Gutt",
+        "Johannes Hagemann",
+        "Marie-Luise Herbert",
+        "Arthur Hirsch-Passicos",
+        "Hauke Höppner",
+        "Thomas Kluge",
+        "Dominik Kraus",
+        "Julian Lütgert",
+        "Masruri Masruri",
+        "Motoaki Nakatsutsumi",
+        "Özgül Öztürk",
+        "Paweł Ordyna",
+        "Xiayun Pan",
+        "Franziska Paschke-Bruehl",
+        "Alexander Pelka",
+        "Thomas R. Preston",
+        "Chongbing Qu",
+        "S. V. Rahul",
+        "Lisa Randolph",
+        "Martin Rehwald",
+        "Hans-Peter Schlenvoigt",
+        "Samuel Schumacher",
+        "Ulrich Schramm",
+        "Jan-Patrick Schwinkendorf",
+        "Georgiy Shoulga",
+        "Monika Toncian",
+        "Jan Vorberger",
+        "Karl Zeil",
+        "Ulf Zastrau",
+        "Toma Toncian",
+        "Thomas E. Cowan"
+      ],
+      "year": 2026,
+      "date": "2026-10-08",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2610.11603",
+      "fields": [
+        "plasma"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-13",
+        "reading list",
+        "preprint"
+      ],
+      "importance": 64,
+      "confidence": 58,
+      "popularity": 40,
+      "coreIdea": "The paper proposes resonant x-ray absorption imaging with an x-ray free-electron laser as an active probe of dopant mix and burn in inertial-confinement shells. Charge-state imaging of the dopant is meant to constrain ionization, opacity, and mix from hydrodynamic instabilities at stagnation. Proof-of-principle shots probe a hot spot in coated copper wires driven by an ultra-short relativistic laser. Atomic and radiation-hydrodynamic simulations with synthetic images extend the idea to direct-drive shells with copper-doped ablators and indirect-drive shells with tungsten-doped ablators. The abstract says the combination could measure fusion-relevant hot dense plasma at multi-keV temperatures and benchmark radiation hydrodynamics.",
+      "whyItMatters": "ICF mix imaging is not anyon fusion, not plant-attach control, and not the Vlasov or SRS-SBS rate. No KEEP or HOLD claim is bound. Reading list. M6 stays open. The multi-keV phrase is the abstract's target regime, not a measured temperature entered here.",
+      "limitation": "Bare arXiv. CC BY-NC-ND 4.0, so the PDF is not mirrored. Wire shots are not a spherical yield. No Q.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.11603v1",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.13822",
+      "arxiv": "2610.13822",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Physical-state supervision for design-only Gaussian process surrogates of implosion simulations",
+      "authors": [
+        "Chang Liu",
+        "Hao Shen",
+        "Chuanying Li"
+      ],
+      "year": 2026,
+      "date": "2026-10-09",
+      "venue": "arXiv physics.comp-ph",
+      "url": "https://arxiv.org/abs/2610.13822",
+      "fields": [
+        "plasma"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-13",
+        "reading list",
+        "preprint"
+      ],
+      "importance": 56,
+      "confidence": 55,
+      "popularity": 32,
+      "coreIdea": "A Gaussian-process surrogate learns burn-weighted diagnostic states from design variables so those states can be used at prediction time without another simulation. On 1,987 paired one-dimensional implosions, states learned from calculations without alpha-particle heating cut the mean squared log-response error of the global predictor by 60.25 percent on a random holdout and by 52.98 percent on design-space extrapolation. Random projections and shuffled states do not reproduce the gain. Experts help at smaller training sets and add little at 1,000 CH designs. A further 3,000 Be/Cocktail designs show weaker extrapolation and cases where experts hurt. The abstract points to an open Python implementation and to archived data and code.",
+      "whyItMatters": "An implosion emulator is not a controller and not a Vlasov or SRS-SBS rate. No KEEP or HOLD claim is bound. Reading list. The percentages are the abstract's surrogate errors and are not entered as Q.",
+      "limitation": "Bare arXiv. One-dimensional training set. The Zenodo DOIs in the comment are data and code, not a paper DOI. No paper DOI in the OAI record.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.13822v1",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.08519",
+      "arxiv": "2610.08519",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Seifert type magnetohydrostatic equilibria in rotationally symmetric toroidal domains",
+      "authors": [
+        "Daniel Peralta-Salas",
+        "Radu Slobodeanu"
+      ],
+      "year": 2026,
+      "date": "2026-10-06",
+      "venue": "arXiv math.AP",
+      "url": "https://arxiv.org/abs/2610.08519",
+      "fields": [
+        "plasma"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-13",
+        "reading list",
+        "preprint"
+      ],
+      "importance": 46,
+      "confidence": 48,
+      "popularity": 28,
+      "coreIdea": "The paper constructs magnetohydrostatic equilibria in rotationally symmetric toroidal domains whose magnetic field lines form an (m, n) Seifert fibration for any coprime integers m and n.",
+      "whyItMatters": "A toroidal equilibrium is not plant-attach control and not the Vlasov, hole-burning, or SRS-SBS rate. No KEEP or HOLD claim is bound. Reading list.",
+      "limitation": "Bare arXiv. Two authors. The abstract is one existence sentence. No beta and no q profile are stated.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.08519v1",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.11122",
+      "arxiv": "2610.11122",
+      "arxivVersion": "v1",
+      "doi": "10.1017/jfm.2022.847",
+      "title": "The Richtmyer-Meshkov Instability of Thermal, Isotope, and Species Interfaces in a five-moment multi-fluid plasma",
+      "authors": [
+        "K. C. Tapinou",
+        "V. Wheatley",
+        "D. Bond",
+        "Ingo Jahn"
+      ],
+      "year": 2022,
+      "date": "2026-10-08",
+      "venue": "Journal of Fluid Mechanics 951, A11",
+      "url": "https://arxiv.org/abs/2610.11122",
+      "fields": [
+        "plasma"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-13",
+        "reading list",
+        "journal"
+      ],
+      "importance": 58,
+      "confidence": 64,
+      "popularity": 34,
+      "coreIdea": "The Richtmyer-Meshkov instability of a single-mode density interface is simulated in an ideal ion-electron plasma with a five-moment multi-fluid model, for thermal, species, and isotope interfaces. Unlike a single-fluid model at matched Atwood number, the three interfaces diverge. Thermal and species interfaces grow harder and develop secondary instabilities. The isotope interface stays closer to the single-fluid response because the electron density ratio across it is unity. Self-generated fields, and the extra growth, shrink as that electron density ratio drops. Stronger ion-electron coupling, read as a smaller plasma skin depth, makes the three cases more alike. The abstract names inertial confinement fusion as one application.",
+      "whyItMatters": "Multi-fluid shock mix is not a controller and not the Vlasov, hole-burning, or SRS-SBS rate. No KEEP or HOLD claim is bound. Reading list. The 2022 journal date does not make it an INCLUDE.",
+      "limitation": "Version of record is Journal of Fluid Mechanics 951, A11 (2022), DOI 10.1017/jfm.2022.847, issued 2022-11-03 on Crossref. The arXiv copy is dated 2026-10-08. OAI licence on that PDF is CC BY-NC-ND 4.0, so the PDF is not mirrored. Crossref lists CC BY 4.0 on the version of record. Unpaywall was not called. No growth-rate value is in the abstract, and none is added.",
+      "source": "arXiv API",
+      "sourceTier": "journal",
+      "licence": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.11122v1",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.13401",
+      "arxiv": "2610.13401",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Temperature evolution of spin dynamics in extended Kitaev models within an Abrikosov fermion theory beyond mean field",
+      "authors": [
+        "Daiki Sasamoto",
+        "Joji Nasu"
+      ],
+      "year": 2026,
+      "date": "2026-10-09",
+      "venue": "arXiv cond-mat.str-el",
+      "url": "https://arxiv.org/abs/2610.13401",
+      "fields": [
+        "majorana"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-13",
+        "reading list",
+        "preprint"
+      ],
+      "importance": 52,
+      "confidence": 53,
+      "popularity": 30,
+      "coreIdea": "An Abrikosov-fermion parton theory with random-phase approximation is used for the finite-temperature dynamical spin structure factor of extended spin-1/2 Kitaev models. For the pure Kitaev model it reproduces a strong nearly flat low-energy peak, a broad high-energy continuum, and a downward shift of low-energy weight with temperature, in qualitative agreement with continuous-time quantum Monte Carlo. The continuum shrinks because bond amplitudes fall and the two-parton phase space compresses. Ferromagnetic and antiferromagnetic Heisenberg additions move the low-energy peak at the Gamma point in opposite directions. The ferromagnetic Kitaev-Gamma model softens at finite momentum toward the period-three order seen in other numerics. In a [111] field, a broad parton continuum sits with magnon-like branches.",
+      "whyItMatters": "This is a spin-liquid spectrum, not a device distinguisher for M5. E-MZM is WATCH and fails A1, so it is not bound. No KEEP or HOLD claim matches a Kitaev magnet. Reading list.",
+      "limitation": "Bare arXiv. Two authors. Qualitative agreement only. No energy in meV is stated, and none is added.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.13401v1",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.12551",
+      "arxiv": "2610.12551",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Engineering Ergodicity-Breaking and Stable Emergent Conservation Laws in a Generic Quantum Many-body System Under Strong Periodic Drive",
+      "authors": [
+        "Sagnik Chaudhuri",
+        "Anirban Das",
+        "Asmi Haldar",
+        "Arnab Das"
+      ],
+      "year": 2026,
+      "date": "2026-10-08",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.12551",
+      "fields": [
+        "time-crystal"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-10-13",
+        "reading list",
+        "preprint"
+      ],
+      "importance": 50,
+      "confidence": 53,
+      "popularity": 32,
+      "coreIdea": "The paper gives a condition for ergodicity breaking in a strongly driven quantum many-body system and a local way to stabilize dynamical freezing, meaning local operators that keep a permanent memory of their initial values. It contrasts that with a recently noted exception. Under the engineering, the Floquet Hamiltonian ordered by spin flips becomes quasi-local while the time-dependent Hamiltonian stays non-integrable at each instant. The abstract says the same tools can make dynamical-freezing error mitigation and state stabilization more flexible, and it points to three earlier works for those claims.",
+      "whyItMatters": "E-TC is CUT and this is not a metronome for plant actuators, so the clock claim is not reversed and not bound. The error-mitigation sentence cites other papers. This run did not resolve those citations, and this abstract is not a surface-code or qLDPC result. No KEEP or HOLD claim is bound. Reading list.",
+      "limitation": "Bare arXiv. CC BY 4.0. The abstract cites PRX 11, 021008 (2021), PRX 16, 011041 (2026), and Nature 653, 1027 (2026). Those three were not fetched. No threshold value is stated, and none is added.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.12551v1",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "lang": "en"
     }
   ],
   "runs": [
+    {
+      "id": "run-2026-10-13-daily",
+      "kind": "daily",
+      "startedAt": "2026-10-13T09:23:44-05:00",
+      "finishedAt": "2026-10-13T09:35:32-05:00",
+      "windowStart": "2026-10-06",
+      "windowEnd": "2026-10-13",
+      "sources": [
+        {
+          "id": "arxiv-ingest-queries",
+          "url": "https://export.arxiv.org/api/query",
+          "status": "ok",
+          "http": 200,
+          "requests": 7,
+          "returned": 30,
+          "new": null,
+          "ms": null,
+          "error": null
+        },
+        {
+          "id": "arxiv-fetch-queries",
+          "url": "https://export.arxiv.org/api/query",
+          "status": "ok",
+          "http": 200,
+          "requests": 11,
+          "returned": 68,
+          "new": null,
+          "ms": null,
+          "error": "The non-Abelian query reported 31 hits. A second page from start=25 returned the remaining 6. Not truncated after that page."
+        },
+        {
+          "id": "arxiv-keep-queries",
+          "url": "https://export.arxiv.org/api/query",
+          "status": "ok",
+          "http": 200,
+          "requests": 4,
+          "returned": 11,
+          "new": null,
+          "ms": null,
+          "error": null
+        },
+        {
+          "id": "arxiv-window",
+          "url": "https://export.arxiv.org/api/query",
+          "status": "partial",
+          "http": 200,
+          "requests": 6,
+          "returned": 126,
+          "new": null,
+          "ms": null,
+          "error": "Category windows capped at 25. quant-ph 309, cond-mat.str-el 92, cond-mat.mes-hall 85, hep-th 173. physics.plasm-ph was 26 and the extra row was fetched. Off-program rows were not catalogued."
+        },
+        {
+          "id": "arxiv-id-list",
+          "url": "https://export.arxiv.org/api/query",
+          "status": "ok",
+          "http": 200,
+          "requests": 1,
+          "returned": 8,
+          "new": 8,
+          "ms": null,
+          "error": null
+        },
+        {
+          "id": "arxiv-oai",
+          "url": "https://oaipmh.arxiv.org/oai",
+          "status": "ok",
+          "http": 200,
+          "requests": 16,
+          "returned": 16,
+          "new": 0,
+          "ms": null,
+          "error": null
+        },
+        {
+          "id": "openalex",
+          "url": "https://api.openalex.org/works",
+          "status": "skipped",
+          "http": null,
+          "requests": 0,
+          "returned": 0,
+          "new": 0,
+          "ms": null,
+          "error": "OPENALEX_API_KEY unset"
+        },
+        {
+          "id": "crossref",
+          "url": "https://api.crossref.org/works",
+          "status": "partial",
+          "http": 200,
+          "requests": 1,
+          "returned": 3,
+          "new": 0,
+          "ms": null,
+          "error": "One bibliographic query, no mailto, because DBE_CONTACT_EMAIL is unset. Not the polite pool. Top hit DOI 10.1017/jfm.2022.847 matches the OAI DOI on 2610.11122."
+        },
+        {
+          "id": "unpaywall",
+          "url": "https://api.unpaywall.org/v2",
+          "status": "skipped",
+          "http": null,
+          "requests": 0,
+          "returned": 0,
+          "new": 0,
+          "ms": null,
+          "error": "DBE_CONTACT_EMAIL unset"
+        },
+        {
+          "id": "weekly-6.2",
+          "url": "section 6.2",
+          "status": "skipped",
+          "http": null,
+          "requests": 0,
+          "returned": 0,
+          "new": 0,
+          "ms": null,
+          "error": "Tuesday. Weekly sources are Sunday only."
+        }
+      ],
+      "counts": {
+        "harvested": 243,
+        "duplicates": 27,
+        "merged": 0,
+        "new": 15,
+        "scored": 15,
+        "unscored": 8,
+        "add": 0,
+        "strengthen": 0,
+        "weaken": 0,
+        "hold": 5,
+        "newPillar": 0,
+        "reject": 10
+      },
+      "paperIds": [
+        "2610.11004",
+        "2610.13428",
+        "2610.12597",
+        "2610.12079",
+        "2610.07611",
+        "2610.12155",
+        "2610.12607",
+        "2610.08530",
+        "2610.13589",
+        "2610.11603",
+        "2610.13822",
+        "2610.08519",
+        "2610.11122",
+        "2610.13401",
+        "2610.12551"
+      ],
+      "unscoredIds": [
+        {
+          "id": "2610.13845",
+          "reason": "2026-10-09 truss gadget for an XX interaction, checked on a trapped-ion processor and a superconducting annealer. The abstract's approximate thousand-fold figure is a ground-state probability, not Q_eng. Not a surface code. Score next only if a logical memory is the result."
+        },
+        {
+          "id": "2610.13843",
+          "reason": "2026-10-09 hardware-native trapped-ion qudit-oscillator instruction set. The comment says submitted to ACM Transactions on Quantum Computing. That line is not an OAI journal-ref. Not E-QEC. Score next only if a logical memory appears."
+        },
+        {
+          "id": "2610.10048",
+          "reason": "2026-10-07 coupled Kondo critical states in a charge-Kondo circuit. The word anyon here is a Kondo anyon, not an S3 braid. Score next only if a topological gate appears."
+        },
+        {
+          "id": "2610.11868",
+          "reason": "2026-10-08 Majorana stellar representation of qudits versus the Bloch ball. Not a zero-mode device. E-MZM stays unbound. Score next only if a wire signature appears."
+        },
+        {
+          "id": "2610.13946",
+          "reason": "2026-10-09 doublon-holon collision on ibm_boston, 21 Hubbard sites on 42 qubits. Not a surface-code or qLDPC shot. Score next only if the memory is the result."
+        },
+        {
+          "id": "2610.11081",
+          "reason": "2026-10-08 hyperbolic drive on a superconducting circuit. Holographic duality is named as a motive, not as an encoder. E-HOL stays CUT and unbound. Score next only if an encoding contract is stated."
+        },
+        {
+          "id": "2610.09097",
+          "reason": "2026-10-06 long-lived synchronized state in a thermal-vapor Rydberg time crystal. Not the engine metronome. E-TC stays CUT. Score next only if a plant-timing claim is made."
+        },
+        {
+          "id": "2610.10763",
+          "reason": "2026-10-07 toolbox for effective models, including Floquet and adiabatic elimination, with the quantum Rabi model as a benchmark. Not a code and not a plant. Score next only if a KEEP claim is actually computed."
+        }
+      ],
+      "fieldCounts": {
+        "plasma": 8,
+        "tqc": 4,
+        "majorana": 2,
+        "time-crystal": 1
+      },
+      "gateMisses": {
+        "A1": 10,
+        "A2": 15,
+        "A3": 15,
+        "A4": 15,
+        "A5": 14,
+        "A6": 0,
+        "A7": 0,
+        "A8": 0,
+        "G1": 0,
+        "G2": 0,
+        "G3": 0,
+        "G4": 15,
+        "G5": 0,
+        "G6": 0
+      },
+      "claimDelta": "none",
+      "versionBump": null,
+      "fulltext": {
+        "cached": 0,
+        "privateOnly": 0,
+        "noOA": 0
+      },
+      "tests": {
+        "command": "PYTHONPATH=. python -m pytest -q tests/test_research.py tests/test_claims.py tests/test_api.py tests/test_plasma.py tests/test_transport.py",
+        "result": "pass",
+        "summary": "19 passed, 30 subtests passed"
+      },
+      "branch": "observatory/2026-10-13",
+      "pr": null,
+      "suspiciousContent": [],
+      "scoreRoutes": [
+        {
+          "paper": "2610.11004",
+          "bind": "E-RL",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arxiv",
+          "exit": 0,
+          "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+        },
+        {
+          "paper": "2610.13428",
+          "bind": "",
+          "action": "REJECT",
+          "route": "SKIPPED",
+          "a5": "FAIL",
+          "venue": "arxiv",
+          "exit": null,
+          "note": "score.py skipped: no claim id. Card route is REJECT so the paper is parked on the reading list."
+        },
+        {
+          "paper": "2610.12597",
+          "bind": "E-QEC",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arxiv",
+          "exit": 0,
+          "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+        },
+        {
+          "paper": "2610.12079",
+          "bind": "E-S3",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arxiv",
+          "exit": 0,
+          "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+        },
+        {
+          "paper": "2610.07611",
+          "bind": "E-S3",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arxiv",
+          "exit": 0,
+          "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+        },
+        {
+          "paper": "2610.12155",
+          "bind": "",
+          "action": "REJECT",
+          "route": "SKIPPED",
+          "a5": "FAIL",
+          "venue": "arxiv",
+          "exit": null,
+          "note": "score.py skipped: no claim id. Card route is REJECT so the paper is parked on the reading list."
+        },
+        {
+          "paper": "2610.12607",
+          "bind": "",
+          "action": "REJECT",
+          "route": "SKIPPED",
+          "a5": "FAIL",
+          "venue": "arxiv",
+          "exit": null,
+          "note": "score.py skipped: no claim id. Card route is REJECT so the paper is parked on the reading list."
+        },
+        {
+          "paper": "2610.08530",
+          "bind": "",
+          "action": "REJECT",
+          "route": "SKIPPED",
+          "a5": "FAIL",
+          "venue": "arxiv",
+          "exit": null,
+          "note": "score.py skipped: no claim id. Card route is REJECT so the paper is parked on the reading list."
+        },
+        {
+          "paper": "2610.13589",
+          "bind": "E-QEC",
+          "action": "HOLD",
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "venue": "arxiv",
+          "exit": 0,
+          "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+        },
+        {
+          "paper": "2610.11603",
+          "bind": "",
+          "action": "REJECT",
+          "route": "SKIPPED",
+          "a5": "FAIL",
+          "venue": "arxiv",
+          "exit": null,
+          "note": "score.py skipped: no claim id. Card route is REJECT so the paper is parked on the reading list."
+        },
+        {
+          "paper": "2610.13822",
+          "bind": "",
+          "action": "REJECT",
+          "route": "SKIPPED",
+          "a5": "FAIL",
+          "venue": "arxiv",
+          "exit": null,
+          "note": "score.py skipped: no claim id. Card route is REJECT so the paper is parked on the reading list."
+        },
+        {
+          "paper": "2610.08519",
+          "bind": "",
+          "action": "REJECT",
+          "route": "SKIPPED",
+          "a5": "FAIL",
+          "venue": "arxiv",
+          "exit": null,
+          "note": "score.py skipped: no claim id. Card route is REJECT so the paper is parked on the reading list."
+        },
+        {
+          "paper": "2610.11122",
+          "bind": "",
+          "action": "REJECT",
+          "route": "SKIPPED",
+          "a5": "PASS",
+          "venue": "Journal of Fluid Mechanics",
+          "exit": null,
+          "note": "score.py skipped: no claim id. Card route is REJECT so the paper is parked on the reading list."
+        },
+        {
+          "paper": "2610.13401",
+          "bind": "",
+          "action": "REJECT",
+          "route": "SKIPPED",
+          "a5": "FAIL",
+          "venue": "arxiv",
+          "exit": null,
+          "note": "score.py skipped: no claim id. Card route is REJECT so the paper is parked on the reading list."
+        },
+        {
+          "paper": "2610.12551",
+          "bind": "",
+          "action": "REJECT",
+          "route": "SKIPPED",
+          "a5": "FAIL",
+          "venue": "arxiv",
+          "exit": null,
+          "note": "score.py skipped: no claim id. Card route is REJECT so the paper is parked on the reading list."
+        }
+      ],
+      "notes": "Twenty-sixth run, Tuesday, daily sources only. Lookback 7 days (2026-10-06 to 2026-10-13). No older observatory pull request was open. Today's branch is cut from origin/feature/research-grade-physics at 4cbf040. Yesterday's eight unscored ids were scored first. ingest.py was not executed: it has no inter-request sleep and would overwrite the run log with a non-schema payload. The same ingest QUERIES (7), fetch QUERIES (10), and four KEEP-claim queries were issued with a submittedDate window and a 3.1 s gap, plus five category windows (max 25) and one extra page for the truncated anyon query and the last plasma-ph row. OAI GetRecord for the 15 scored arXiv ids. Returned rows 243, unique ids 188, of which 27 were already in the catalog. Five HOLD and ten REJECT. No ADD, no STRENGTHEN, no bridge, no new pillar, no CUT reversal, no version bump. C unchanged. 2610.11122 is the 2022 Journal of Fluid Mechanics article 10.1017/jfm.2022.847, posted to arXiv on 2026-10-08. It is one new row, not a merge into an older catalog id. A5 passes and A1 does not. 2610.13822 writes surrogate error percentages. Those are not Q_eng. 2610.08530 writes an order-of-magnitude conduction suppression. That is not Q_eng. 2610.13589 writes simulated logical-error advantages. Those do not move C4. AdS and holographic-query hits that do not state an encoder were left off the carry-over so they do not consume the next run's cap. E-HOL stays CUT. OpenAlex, Unpaywall, and the Sunday source list were skipped. Crossref was one title query without a mailto. No PDF cached. DBE_FULLTEXT_STORE unset. Q=1000 remains a ledger stress test. Prompt source: research/OBSERVATORY_PROMPT.md on feature/research-grade-physics, blob 226375bdc29fa23856dc38714f84b2fca90c5f1d, read in full, NORTH STAR present. Files agree with the freeze: DBE-0.2.2 / DBES-0.2.0, claims freeze 2026-10-02. No scored abstract told this run to change rules, files, or targets."
+    },
     {
       "id": "run-2026-10-12-daily",
       "kind": "daily",
