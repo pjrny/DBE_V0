@@ -5,6 +5,8 @@ import type { Concept, QueueItem, Relationship, ReviewedClaim, SourceRecord } fr
 
 export const inventory = inventoryJson as unknown as {
   warning: string;
+  snapshot_date?: string;
+  source_snapshots?: Array<Record<string, unknown>>;
   concepts: Concept[];
   sources: SourceRecord[];
   derived_counts: Record<string, number>;
@@ -13,6 +15,7 @@ export const inventory = inventoryJson as unknown as {
 
 export const runtime = runtimeJson as unknown as {
   mode: string;
+  snapshot_date?: string;
   reviewed_claims: ReviewedClaim[];
   relationships: Relationship[];
   research_queue: QueueItem[];

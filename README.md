@@ -156,6 +156,15 @@ associations. It preserves known broken joins and vocabulary drift as visible
 findings. The run applies zero automatic scientific promotions: a catalog
 record, review decision, or claim binding is not independent confirmation.
 
+
+### V8 — Multidimensional Knowledge Universe (visual first release)
+
+- `docs/SDBES/V8_MULTIDIMENSIONAL_KNOWLEDGE_UNIVERSE.md`
+- `navigator/src/components/KnowledgeUniverse.tsx`
+- `navigator/src/knowledgeUniverse.ts`
+
+V8 restores the project's original broad visual mission: six source research domains, a linked 2D concept universe, the Formal/Empirical/Applied matrix display, strict evidence-versus-dependency separation, model-gated dynamics, time/revision snapshot navigation, and explicitly exploratory cross-domain tag candidates. The prior V5 evidence table and focused V7 Observatory remain available. Formal/empirical/applied method tags never substitute for structured V/I/G verification, model authorization, or causal simulation.
+
 ## Pilot strategy
 
 The framework should be tested in stages rather than waiting for a perfect schema.

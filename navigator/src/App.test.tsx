@@ -28,4 +28,18 @@ describe("SDBES Research Navigator", () => {
     expect(screen.getAllByText(/N01/).length).toBeGreaterThan(0);
     expect(screen.queryByText(/topic overlap/i)).not.toBeInTheDocument();
   });
+
+  it("opens the V8 global universe and preserves unassessed science", () => {
+    render(<App />);
+    expect(screen.getByText("Dimensions Beyond Energy Scarcity")).toBeInTheDocument();
+    expect(screen.getByRole("navigation", { name: "Knowledge visualization lenses" })).toBeInTheDocument();
+    fireEvent.click(screen.getByRole("button", { name: "Evidence space" }));
+    expect(screen.getByRole("table", { name: "Formal Empirical Applied evidence assessment matrix" })).toBeInTheDocument();
+    expect(screen.getAllByText("UNKNOWN")).toHaveLength(9);
+    fireEvent.click(screen.getByRole("button", { name: "Dynamics" }));
+    expect(screen.getByRole("button", { name: /Run scenario/ })).toBeDisabled();
+    fireEvent.click(screen.getByRole("button", { name: "Evidence record table" }));
+    expect(screen.getByText("Evidence Workbench")).toBeInTheDocument();
+  });
+
 });
