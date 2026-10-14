@@ -1,0 +1,65 @@
+name: Publish SDBES V8 Navigator to project Pages
+
+on:
+  push:
+    branches: [feature/research-grade-physics]
+    paths:
+      - .github/workflows/build-sdbes-navigator.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sdbes-v8-pages-bundle
+  cancel-in-progress: false
+
+jobs:
+  publish-v8:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out scientific SDBES source
+        uses: actions/checkout@v4
+        with:
+          ref: SDBES
+          path: sdbes-source
+          persist-credentials: false
+
+      - name: Check out existing Pages publishing branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/research-grade-physics
+          path: pages-source
+          persist-credentials: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: sdbes-source/navigator/package-lock.json
+
+      - name: Install, test, and build V8 for GitHub Pages path
+        working-directory: sdbes-source/navigator
+        run: |
+          npm ci
+          npm run test
+          npm run build -- --base=/DBE_V0/navigator/
+
+      - name: Synchronize only compiled navigator subtree
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p pages-source/navigator
+          find pages-source/navigator -mindepth 1 -maxdepth 1 -exec rm -rf {} +
+          cp -R sdbes-source/navigator/dist/. pages-source/navigator/
+          test -s pages-source/navigator/index.html
+          grep -q '/DBE_V0/navigator/assets/' pages-source/navigator/index.html
+          cd pages-source
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add navigator
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish verified SDBES V8 static navigator"
+            git push origin HEAD:feature/research-grade-physics
+          fi
