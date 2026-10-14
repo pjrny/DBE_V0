@@ -116,7 +116,7 @@ export function KnowledgeUniverse({ concepts, selected, onSelect, onOpenFilters,
             </g>)}
           </svg>
           <div className="v8-map-key"><strong>{hovered ? `${hovered} · ${conceptById.get(hovered)?.title}` : `${selected.id} · ${selected.title}`}</strong><span>Circles: discovery concepts · Rings: research domains · Lines: taxonomy only</span></div>
-        </div>
+        </div>}
         <div className="v8-domain-strip" aria-label="Research domains">
           {positions.domains.map(domain=><button key={domain.id} onClick={()=>selectDomain(domain.id)} aria-pressed={focused===domain.id}>
             <span className="v8-domain-dot" style={{background:DOMAIN_PALETTE[domain.id]}}/>
