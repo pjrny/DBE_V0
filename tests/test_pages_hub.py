@@ -45,11 +45,13 @@ def test_landing_links_and_anchors():
             assert target.is_file(), href
     assert "./research/lab.html" in page.links
     assert "./dimensions/" in page.links
-    assert not any(x.startswith("./navigator") for x in page.links)
+    assert "./navigator/" in page.links
+    assert (ROOT / "navigator" / "index.html").is_file()
+    assert (ROOT / "navigator" / "assets").is_dir()
     for branch in ("SDBES", "feature/research-grade-physics", "dimensions-beyond-energy"):
         assert f"https://github.com/pjrny/DBE_V0/blob/{branch}/README.md" in html
     assert "Dimension G" in html
-    assert "Web deployment pending" in html
+    assert "Interactive · online" in html
 
 def test_dimensions_mirror_is_original():
     data = (ROOT / "dimensions" / "index.html").read_bytes()

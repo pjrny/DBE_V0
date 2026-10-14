@@ -16,8 +16,11 @@ The hub's project summaries were written from the root READMEs of `SDBES`, `feat
 ## Observatory preservation
 The existing `research/lab.html`, `research/lab.js` and the Observatory JSON files remain on the publishing branch. The new landing page links to them using relative project-site paths, so it works at `/DBE_V0/`. Changes to this portal must not rewrite the frozen research ledger or browser-side data just to make a link look functional.
 
-## Future V8 navigator
-The SDBES `navigator/index.html` is a Vite/React **source entry point**, not a standalone deployable HTML file. It must be built with the correct GitHub Pages base path before a public `/navigator/` link can be offered. The portal currently links to the repository source and labels its web deployment pending. Once a tested production bundle is published, replace the source-only launch card with the live URL.
+## Hosted V8 navigator
+
+The V8 SDBES navigator is built by `.github/workflows/build-sdbes-navigator.yml` from the `SDBES` branch using `npm ci`, `npm run test` and `npm run build -- --base=/DBE_V0/navigator/`. Only the compiled `navigator/` directory is synchronized into the Pages source branch; `research/` and the Dimensions snapshot are not touched. The link is `https://pjrny.github.io/DBE_V0/navigator/`.
+
+The build workflow commits using the GitHub Actions token. Because token-initiated pushes may not trigger Pages rebuilds, an independently created Pages branch commit is used after build completion to refresh GitHub Pages and update the project hub. Any future SDBES updates require rebuilding and checking the published bundle again.
 
 ## Checks
 - `python -m pytest -q tests/test_pages_hub.py` verifies local destinations, source snapshot integrity, README links, and Observatory asset dependencies.
