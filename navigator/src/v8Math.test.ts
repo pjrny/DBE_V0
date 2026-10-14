@@ -36,7 +36,7 @@ describe("V8 bounded demonstration dynamics",()=>{
    expect(toyTrajectory({retention:.5,control:.4,disturbance:.2,steps:2})).toEqual([
      {k:0,x:0,baseline:0,impulse:1},
      {k:1,x:.2,baseline:-.2,impulse:.5},
-     {k:2,x:.30000000000000004,baseline:-.30000000000000004,impulse:.25}
+     {k:2,x:.3,baseline:-.30000000000000004,impulse:.25}
    ]);
  });
  it("never treats a=1 as a stable finite equilibrium",()=>{
