@@ -1,0 +1,19 @@
+{
+  "schema_name": "SDBES_V8_TYPED_VISUAL_REGISTRY",
+  "schema_version": "8.2.0",
+  "snapshot_id": "V8_2026-10-14_BASELINE",
+  "recording_policy": "STRICT_RECEIPT_BACKED_ONLY",
+  "provenance": {
+    "source_branch": "SDBES",
+    "intake_artifacts": [
+      "docs/SDBES/data/V5_RUNTIME_VIEW.json",
+      "docs/SDBES/data/V6_CONCEPT_INVENTORY.json",
+      "docs/SDBES/data/V7_OBSERVATORY_STRESS_REPORT.json"
+    ],
+    "note": "No source-backed V/I/G assessment cells, registered V3 structural predicate snapshots, or calibrated V4 domain model cards are present in this baseline. This is not a zero-evidence scientific claim."
+  },
+  "verification_activities": [],
+  "claim_profiles": [],
+  "structural_graphs": [],
+  "registered_model_cards": []
+}

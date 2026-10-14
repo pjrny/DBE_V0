@@ -42,4 +42,30 @@ describe("SDBES Research Navigator", () => {
     expect(screen.getByText("Evidence Workbench")).toBeInTheDocument();
   });
 
+  it("can switch to 3D taxonomy and return to the accessible 2D map", () => {
+    render(<App />);
+    fireEvent.click(screen.getByRole("button", { name: "Explore 3D layers" }));
+    expect(screen.getByLabelText("Optional three-dimensional taxonomy projection")).toBeInTheDocument();
+    expect(screen.getByLabelText("Spatial rotation")).toBeInTheDocument();
+    fireEvent.click(screen.getByRole("button", { name: "Switch to accessible 2D" }));
+    expect(screen.getByLabelText("Interactive 2D map of six energy-scarcity research domains and their concept candidates")).toBeInTheDocument();
+  });
+
+  it("separates live logical sandbox from registered V3 science", () => {
+    render(<App />);
+    fireEvent.click(screen.getByRole("button", { name: "Dependencies" }));
+    expect(screen.getByLabelText("Registered V3 structural snapshot")).toBeInTheDocument();
+    expect(screen.getByLabelText("V3 structural gate sandbox")).toBeInTheDocument();
+    fireEvent.change(screen.getByLabelText("Predicate B knowledge status"), { target: {value:"TRUE_ONLY"} });
+    expect(screen.getByText("V3 scenario state")).toBeInTheDocument();
+  });
+
+  it("renders the synthetic dynamic plot, but cannot run any unregistered physical model", () => {
+    render(<App />);
+    fireEvent.click(screen.getByRole("button", { name: "Dynamics" }));
+    expect(screen.getByLabelText("V4 synthetic dynamics visualization")).toBeInTheDocument();
+    expect(screen.getByRole("img", {name:/Unitless toy model time series/})).toBeInTheDocument();
+    expect(screen.getByRole("button", {name:/Run scenario/})).toBeDisabled();
+  });
+
 });

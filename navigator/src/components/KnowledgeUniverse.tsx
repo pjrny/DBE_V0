@@ -6,6 +6,10 @@ import {
   LENSES, methodCoverage, reviewedRelations, type KnowledgeLens,
 } from "../knowledgeUniverse";
 import "../v8.css";
+import "../v8-completion.css";
+import { SpatialUniverse } from "../SpatialUniverse";
+import { CompareConcepts, DependencyGateLab, DynamicsLab, EvidenceTrace, ProvenanceAudit, RegisteredGraphPanel } from "../V8Labs";
+import { CRITERIA, registeredProfiles, resolvedV8Cell, scienceRegistry, validateV8Registry, type RegisteredProfile } from "../v8Registry";
 
 type Props = {
   concepts: Concept[];
@@ -28,12 +32,17 @@ export function KnowledgeUniverse({ concepts, selected, onSelect, onOpenFilters,
   const [focused, setFocused] = useState<string | null>(null);
   const [hovered, setHovered] = useState<string | null>(null);
   const [showTaxonomyEdges, setTaxonomyEdges] = useState(false);
+  const [spatialMode,setSpatialMode] = useState(false);
+  const [profileId,setProfileId]=useState("");
   const positions = useMemo(() => knowledgeGeometry(inventory.concepts), []);
   const conceptById = useMemo(() => new Map(inventory.concepts.map(c => [c.id, c])), []);
   const visibleIds = new Set(concepts.map(c => c.id));
   const reviewed = reviewedRelations(selected.id, runtime.relationships, runtime.reviewed_claims);
   const reviewedCases = runtime.reviewed_claims.filter(claim => reviewed.some(edge => edge.source_id === claim.id));
   const methodRows = methodCoverage(selected.id, runtime.reviewed_claims);
+  const registryProblems = validateV8Registry(scienceRegistry,new Map(runtime.reviewed_claims.map(c=>[c.id,c.candidate])));
+  const profiles=registryProblems.length ? [] : registeredProfiles(selected.id);
+  const currentProfile=profiles.find(p=>p.profile_id===profileId)??profiles[0];
   const candidates = useMemo(() => catalogBridgeCandidates(inventory.concepts), []);
   const timeline = knowledgeTimeline(inventory.snapshot_date ?? "2026-10-09", runtime.snapshot_date ?? "2026-10-09", "2026-10-08");
   const v7Models = runtime.authorized_models.length;
@@ -70,13 +79,13 @@ export function KnowledgeUniverse({ concepts, selected, onSelect, onOpenFilters,
       {lens === "universe" && <>
         <div className="v8-subheading"><div><strong>Cross-domain universe</strong><span>2D taxonomy projection · not a physical or semantic distance scale</span></div>
           <div className="v8-toolbar"><label><input type="checkbox" checked={showTaxonomyEdges} onChange={(e: {target:{checked:boolean}}) => setTaxonomyEdges(e.target.checked)}/>Show taxonomy membership</label>
-            <button onClick={() => setFocused(null)} disabled={!focused}>Show all domains</button></div>
+            <button onClick={() => setFocused(null)} disabled={!focused}>Show all domains</button><button aria-pressed={spatialMode} onClick={() => setSpatialMode(value=>!value)}>{spatialMode?"Switch to accessible 2D":"Explore 3D layers"}</button></div>
         </div>
         {concepts.length <= 8 && concepts.length < inventory.concepts.length && <div className="v8-visible-results" aria-label="Matching research concepts">
           {concepts.map(c => <button key={c.id} onClick={() => onSelect(c.id)}><b>{c.id}</b><span>{c.title}</span></button>)}
           {!concepts.length && <span>No candidates match these filters.</span>}
         </div>}
-        <div className="v8-map-wrap">
+        {spatialMode ? <SpatialUniverse concepts={concepts} selected={selected} onSelect={onSelect}/> : <div className="v8-map-wrap">
           <svg className="v8-map" role="group" aria-label="Interactive 2D map of six energy-scarcity research domains and their concept candidates"
             viewBox={(() => { const d = positions.domains.find(d => d.id === focused); return d ? `${d.x - 175} ${d.y - 170} 350 340` : "0 0 1200 760"; })()}>
             <defs><pattern id="v8grid" patternUnits="userSpaceOnUse" width="36" height="36"><path d="M36 0H0V36" fill="none" stroke="#dde6ec" strokeWidth=".75"/></pattern></defs>
@@ -121,17 +130,23 @@ export function KnowledgeUniverse({ concepts, selected, onSelect, onOpenFilters,
       </>}
       {lens === "evidence" && <>
         <LensIntro title="Formal · Empirical · Applied" subtitle="V1's 3×3 profile, with V3's structured meaning restored"/>
-        <div className="v8-evidence-key">Selected: <strong>{selected.id}</strong> · {reviewedCases.length} related reviewed claim case(s). The current staging export does not contain canonical V/I/G assessment cells for this concept.</div>
+        <div className="v8-evidence-key">Selected: <strong>{selected.id}</strong> · {reviewedCases.length} related reviewed claim case(s). {currentProfile ? "Receipt-backed F/E/A profile available for this scoped claim." : "The current staging export does not contain canonical V/I/G assessment cells for this concept."}</div>
+        {registryProblems.length>0&&<div role="alert" className="v8lab-issue">Registered assessment import rejected: {registryProblems.join("; ")}</div>}
+        {profiles.length>1&&<label className="v8lab-select v8lab-profile-select"><span>Scoped assessment</span><select value={currentProfile?.profile_id??""} onChange={e=>setProfileId(e.target.value)}>
+           {profiles.map(p=><option key={p.profile_id} value={p.profile_id}>{p.claim_id} · {p.profile_id}</option>)}
+        </select></label>}
+        {currentProfile&&<div className="v8lab-note">Scope: {currentProfile.assessment_scope} · Source: {currentProfile.source_snapshot_ref} · Assessment date: {currentProfile.recorded_at}</div>}
         <div className="v8-matrix" role="table" aria-label="Formal Empirical Applied evidence assessment matrix">
           <div className="v8-cell v8-corner" role="columnheader">Method ↓ / Criterion →</div>
           {VIG.map(s=><div key={s} className="v8-cell v8-header" role="columnheader">{s}</div>)}
-          {methodRows.map(row=><FragmentRow key={row.id} row={row}/>)}
+          {methodRows.map(row=><FragmentRow key={row.id} row={row} profile={currentProfile}/>)}
         </div>
         <div className="v8-methods">
           <h3>Related claim-case method tags</h3>
           {methodRows.map(r=><div key={r.id}><strong>{r.id} · {r.label}</strong><span>{r.caseIds.length ? `${r.caseIds.join(", ")} · source labels: ${r.methods.join(", ")}` : "No matching reviewed-case method tag"}</span></div>)}
           <p>Method tags are imported descriptions. They do not establish validated, independently replicated or generalized results. Unknown is not zero, failure, or inapplicability.</p>
         </div>
+        <EvidenceTrace concept={selected}/>
       </>}
       {lens === "dependencies" && <>
         <LensIntro title="Typed dependencies & bottlenecks" subtitle="V3 distinguishes epistemic evidence, structural gates and physical causal effects"/>
@@ -141,6 +156,8 @@ export function KnowledgeUniverse({ concepts, selected, onSelect, onOpenFilters,
         </div>
         <div className="v8-methods"><h3>Structural requirement layer</h3><p>No selected-concept V3 Structural Predicate and Gate assessment is registered in the current read-only projection. A paper-to-concept association is never promoted to a prerequisite or causal edge.</p></div>
         <div className="v8-gate-legend"><span><b>ALL</b> All required</span><span><b>ANY</b> Alternative routes</span><span><b>k-of-n</b> Explicit threshold</span><span><b>NEITHER / TRUE_ONLY / FALSE_ONLY / BOTH</b> Knowledge status</span></div>
+        <RegisteredGraphPanel conceptId={selected.id}/>
+        <DependencyGateLab/>
       </>}
       {lens === "dynamics" && <>
         <LensIntro title="Physical dynamics versus research knowledge" subtitle="V4 supports bounded causal interventions only with a registered model and a use-specific receipt"/>
@@ -154,11 +171,13 @@ export function KnowledgeUniverse({ concepts, selected, onSelect, onOpenFilters,
           <p>{runtime.scenario_message}. No example trajectory, sensitivity, intervention benefit or probability is fabricated.</p>
           <button disabled type="button">Run scenario · requires scoped model authorization</button>
         </div>
+        <DynamicsLab/>
       </>}
       {lens === "timeline" && <>
         <LensIntro title="Time, provenance & revision" subtitle="A timeline of what the project recorded, not a graph of how physical laws changed"/>
         <ol className="v8-timeline">{timeline.map(event=><li key={event.key}><time>{event.date}</time><div><strong>{event.label}</strong><p>{event.detail}</p></div></li>)}</ol>
-        <div className="v8-methods"><h3>What this timeline does not show</h3><p>Source addition, paper count, and reviewer activity must not be interpreted as a technology maturity curve, confidence gain, or actual physical-world intervention. Full claim-level historical diffs remain a later integration.</p></div>
+        <div className="v8-methods"><h3>What this timeline does not show</h3><p>Source addition, paper count, and reviewer activity must not be interpreted as a technology maturity curve, confidence gain, or actual physical-world intervention. Full claim-level historical diffs are not present in the existing frozen snapshots.</p></div>
+        <ProvenanceAudit/>
       </>}
       {lens === "exploration" && <>
         <LensIntro title="Cross-field exploration" subtitle="Catalog co-occurrence suggestions, not approved scientific bridges or prioritized truths"/>
@@ -167,6 +186,7 @@ export function KnowledgeUniverse({ concepts, selected, onSelect, onOpenFilters,
           <strong>{pair.a} ↔ {pair.b}</strong><span>{pair.sharedTags.join(", ")}</span><small>Unreviewed catalog-tag overlap</small>
         </button>) : <p>No catalog-tag overlaps found across the six domains.</p>}</div>
         <div className="v8-methods"><h3>Selected concept · next question</h3><p>{selected.next_investigation}</p><p>Suggested investigations are exploratory. V9 may turn reviewed, bounded questions into research campaigns after explicit decisions.</p></div>
+        <CompareConcepts selected={selected} onSelect={onSelect}/>
       </>}
     </div>
     <footer className="v8-footer"><span>V8 · Read-only visualization</span><span>{concepts.length} visible / {inventory.concepts.length} original candidates · {runtime.relationships.filter(r=>r.review_status==="REVIEWED").length} reviewed case links · {v7Report.counts.catalog_papers} Observatory papers separate</span></footer>
@@ -176,9 +196,14 @@ export function KnowledgeUniverse({ concepts, selected, onSelect, onOpenFilters,
 function LensIntro({title,subtitle}:{title:string;subtitle:string}) {
   return <div className="v8-subheading"><div><strong>{title}</strong><span>{subtitle}</span></div></div>;
 }
-function FragmentRow({row}:{row:{id:string;label:string;caseIds:string[]};key?:string}) {
+function FragmentRow({row,profile}:{row:{id:"F"|"E"|"A";label:string;caseIds:string[]};profile?:RegisteredProfile;key?:string}) {
   return <>
     <div className="v8-cell v8-row-label" role="rowheader"><b>{row.id}</b><span>{row.label}</span><small>{row.caseIds.length} method-tagged case(s)</small></div>
-    {VIG.map(col=><div key={`${row.id}-${col}`} className="v8-cell v8-unknown" role="cell"><strong>UNKNOWN</strong><small>not yet imported</small></div>)}
+    {VIG.map((col,i)=>{
+      const cell=profile?.cells[row.id]?.[CRITERIA[i]];
+      const resolved=resolvedV8Cell(cell,scienceRegistry.verification_activities);
+      return <div key={row.id+"-"+col} className={"v8-cell v8-profile-"+resolved.kind} role="cell"
+        title={resolved.detail}><strong>{resolved.label}</strong><small>{cell?.scope||resolved.detail}</small></div>;
+    })}
   </>;
 }

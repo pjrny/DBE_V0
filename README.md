@@ -165,6 +165,14 @@ record, review decision, or claim binding is not independent confirmation.
 
 V8 restores the project's original broad visual mission: six source research domains, a linked 2D concept universe, the Formal/Empirical/Applied matrix display, strict evidence-versus-dependency separation, model-gated dynamics, time/revision snapshot navigation, and explicitly exploratory cross-domain tag candidates. The prior V5 evidence table and focused V7 Observatory remain available. Formal/empirical/applied method tags never substitute for structured V/I/G verification, model authorization, or causal simulation.
 
+### V8 — Completed cross-domain visualization interface
+
+The V8 Knowledge Universe includes accessible 2D and optional object-kind 3D taxonomy, the receipt-validated Formal/Empirical/Applied evidence-cell registry, source/application evidence tracing, V3 registered dependency-graph projection and a separate logic sandbox, V4 model-gated scenario interfaces and a dimensionless educational dynamics sandbox, recorded snapshot provenance, and exploratory cross-domain comparison. The scientific registry is intentionally empty for concepts without verification receipts; interactive examples are not scientifically calibrated models.
+
+- [V8 complete release specification](docs/SDBES/V8_COMPLETE_RELEASE.md)
+- [V8 typed visual registry](docs/SDBES/data/V8_VIEW_RECORDS.json)
+- [Interactive navigator source](navigator/)
+
 ## Pilot strategy
 
 The framework should be tested in stages rather than waiting for a perfect schema.
