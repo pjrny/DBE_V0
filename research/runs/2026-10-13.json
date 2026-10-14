@@ -1,0 +1,375 @@
+{
+  "id": "run-2026-10-13-daily",
+  "kind": "daily",
+  "startedAt": "2026-10-13T09:23:44-05:00",
+  "finishedAt": "2026-10-13T09:35:32-05:00",
+  "windowStart": "2026-10-06",
+  "windowEnd": "2026-10-13",
+  "sources": [
+    {
+      "id": "arxiv-ingest-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 7,
+      "returned": 30,
+      "new": null,
+      "ms": null,
+      "error": null
+    },
+    {
+      "id": "arxiv-fetch-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 11,
+      "returned": 68,
+      "new": null,
+      "ms": null,
+      "error": "The non-Abelian query reported 31 hits. A second page from start=25 returned the remaining 6. Not truncated after that page."
+    },
+    {
+      "id": "arxiv-keep-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 4,
+      "returned": 11,
+      "new": null,
+      "ms": null,
+      "error": null
+    },
+    {
+      "id": "arxiv-window",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "partial",
+      "http": 200,
+      "requests": 6,
+      "returned": 126,
+      "new": null,
+      "ms": null,
+      "error": "Category windows capped at 25. quant-ph 309, cond-mat.str-el 92, cond-mat.mes-hall 85, hep-th 173. physics.plasm-ph was 26 and the extra row was fetched. Off-program rows were not catalogued."
+    },
+    {
+      "id": "arxiv-id-list",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 8,
+      "new": 8,
+      "ms": null,
+      "error": null
+    },
+    {
+      "id": "arxiv-oai",
+      "url": "https://oaipmh.arxiv.org/oai",
+      "status": "ok",
+      "http": 200,
+      "requests": 16,
+      "returned": 16,
+      "new": 0,
+      "ms": null,
+      "error": null
+    },
+    {
+      "id": "openalex",
+      "url": "https://api.openalex.org/works",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": "OPENALEX_API_KEY unset"
+    },
+    {
+      "id": "crossref",
+      "url": "https://api.crossref.org/works",
+      "status": "partial",
+      "http": 200,
+      "requests": 1,
+      "returned": 3,
+      "new": 0,
+      "ms": null,
+      "error": "One bibliographic query, no mailto, because DBE_CONTACT_EMAIL is unset. Not the polite pool. Top hit DOI 10.1017/jfm.2022.847 matches the OAI DOI on 2610.11122."
+    },
+    {
+      "id": "unpaywall",
+      "url": "https://api.unpaywall.org/v2",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": "DBE_CONTACT_EMAIL unset"
+    },
+    {
+      "id": "weekly-6.2",
+      "url": "section 6.2",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": "Tuesday. Weekly sources are Sunday only."
+    }
+  ],
+  "counts": {
+    "harvested": 243,
+    "duplicates": 27,
+    "merged": 0,
+    "new": 15,
+    "scored": 15,
+    "unscored": 8,
+    "add": 0,
+    "strengthen": 0,
+    "weaken": 0,
+    "hold": 5,
+    "newPillar": 0,
+    "reject": 10
+  },
+  "paperIds": [
+    "2610.11004",
+    "2610.13428",
+    "2610.12597",
+    "2610.12079",
+    "2610.07611",
+    "2610.12155",
+    "2610.12607",
+    "2610.08530",
+    "2610.13589",
+    "2610.11603",
+    "2610.13822",
+    "2610.08519",
+    "2610.11122",
+    "2610.13401",
+    "2610.12551"
+  ],
+  "unscoredIds": [
+    {
+      "id": "2610.13845",
+      "reason": "2026-10-09 truss gadget for an XX interaction, checked on a trapped-ion processor and a superconducting annealer. The abstract's approximate thousand-fold figure is a ground-state probability, not Q_eng. Not a surface code. Score next only if a logical memory is the result."
+    },
+    {
+      "id": "2610.13843",
+      "reason": "2026-10-09 hardware-native trapped-ion qudit-oscillator instruction set. The comment says submitted to ACM Transactions on Quantum Computing. That line is not an OAI journal-ref. Not E-QEC. Score next only if a logical memory appears."
+    },
+    {
+      "id": "2610.10048",
+      "reason": "2026-10-07 coupled Kondo critical states in a charge-Kondo circuit. The word anyon here is a Kondo anyon, not an S3 braid. Score next only if a topological gate appears."
+    },
+    {
+      "id": "2610.11868",
+      "reason": "2026-10-08 Majorana stellar representation of qudits versus the Bloch ball. Not a zero-mode device. E-MZM stays unbound. Score next only if a wire signature appears."
+    },
+    {
+      "id": "2610.13946",
+      "reason": "2026-10-09 doublon-holon collision on ibm_boston, 21 Hubbard sites on 42 qubits. Not a surface-code or qLDPC shot. Score next only if the memory is the result."
+    },
+    {
+      "id": "2610.11081",
+      "reason": "2026-10-08 hyperbolic drive on a superconducting circuit. Holographic duality is named as a motive, not as an encoder. E-HOL stays CUT and unbound. Score next only if an encoding contract is stated."
+    },
+    {
+      "id": "2610.09097",
+      "reason": "2026-10-06 long-lived synchronized state in a thermal-vapor Rydberg time crystal. Not the engine metronome. E-TC stays CUT. Score next only if a plant-timing claim is made."
+    },
+    {
+      "id": "2610.10763",
+      "reason": "2026-10-07 toolbox for effective models, including Floquet and adiabatic elimination, with the quantum Rabi model as a benchmark. Not a code and not a plant. Score next only if a KEEP claim is actually computed."
+    }
+  ],
+  "fieldCounts": {
+    "plasma": 8,
+    "tqc": 4,
+    "majorana": 2,
+    "time-crystal": 1
+  },
+  "gateMisses": {
+    "A1": 10,
+    "A2": 15,
+    "A3": 15,
+    "A4": 15,
+    "A5": 14,
+    "A6": 0,
+    "A7": 0,
+    "A8": 0,
+    "G1": 0,
+    "G2": 0,
+    "G3": 0,
+    "G4": 15,
+    "G5": 0,
+    "G6": 0
+  },
+  "claimDelta": "none",
+  "versionBump": null,
+  "fulltext": {
+    "cached": 0,
+    "privateOnly": 0,
+    "noOA": 0
+  },
+  "tests": {
+    "command": "PYTHONPATH=. python -m pytest -q tests/test_research.py tests/test_claims.py tests/test_api.py tests/test_plasma.py tests/test_transport.py",
+    "result": "pass",
+    "summary": "19 passed, 30 subtests passed"
+  },
+  "branch": "observatory/2026-10-13",
+  "pr": "https://github.com/pjrny/DBE_V0/pull/15",
+  "suspiciousContent": [],
+  "scoreRoutes": [
+    {
+      "paper": "2610.11004",
+      "bind": "E-RL",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.13428",
+      "bind": "",
+      "action": "REJECT",
+      "route": "SKIPPED",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": null,
+      "note": "score.py skipped: no claim id. Card route is REJECT so the paper is parked on the reading list."
+    },
+    {
+      "paper": "2610.12597",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.12079",
+      "bind": "E-S3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.07611",
+      "bind": "E-S3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.12155",
+      "bind": "",
+      "action": "REJECT",
+      "route": "SKIPPED",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": null,
+      "note": "score.py skipped: no claim id. Card route is REJECT so the paper is parked on the reading list."
+    },
+    {
+      "paper": "2610.12607",
+      "bind": "",
+      "action": "REJECT",
+      "route": "SKIPPED",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": null,
+      "note": "score.py skipped: no claim id. Card route is REJECT so the paper is parked on the reading list."
+    },
+    {
+      "paper": "2610.08530",
+      "bind": "",
+      "action": "REJECT",
+      "route": "SKIPPED",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": null,
+      "note": "score.py skipped: no claim id. Card route is REJECT so the paper is parked on the reading list."
+    },
+    {
+      "paper": "2610.13589",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.11603",
+      "bind": "",
+      "action": "REJECT",
+      "route": "SKIPPED",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": null,
+      "note": "score.py skipped: no claim id. Card route is REJECT so the paper is parked on the reading list."
+    },
+    {
+      "paper": "2610.13822",
+      "bind": "",
+      "action": "REJECT",
+      "route": "SKIPPED",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": null,
+      "note": "score.py skipped: no claim id. Card route is REJECT so the paper is parked on the reading list."
+    },
+    {
+      "paper": "2610.08519",
+      "bind": "",
+      "action": "REJECT",
+      "route": "SKIPPED",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": null,
+      "note": "score.py skipped: no claim id. Card route is REJECT so the paper is parked on the reading list."
+    },
+    {
+      "paper": "2610.11122",
+      "bind": "",
+      "action": "REJECT",
+      "route": "SKIPPED",
+      "a5": "PASS",
+      "venue": "Journal of Fluid Mechanics",
+      "exit": null,
+      "note": "score.py skipped: no claim id. Card route is REJECT so the paper is parked on the reading list."
+    },
+    {
+      "paper": "2610.13401",
+      "bind": "",
+      "action": "REJECT",
+      "route": "SKIPPED",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": null,
+      "note": "score.py skipped: no claim id. Card route is REJECT so the paper is parked on the reading list."
+    },
+    {
+      "paper": "2610.12551",
+      "bind": "",
+      "action": "REJECT",
+      "route": "SKIPPED",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": null,
+      "note": "score.py skipped: no claim id. Card route is REJECT so the paper is parked on the reading list."
+    }
+  ],
+  "notes": "Twenty-sixth run, Tuesday, daily sources only. Lookback 7 days (2026-10-06 to 2026-10-13). No older observatory pull request was open. Today's branch is cut from origin/feature/research-grade-physics at 4cbf040. Yesterday's eight unscored ids were scored first. ingest.py was not executed: it has no inter-request sleep and would overwrite the run log with a non-schema payload. The same ingest QUERIES (7), fetch QUERIES (10), and four KEEP-claim queries were issued with a submittedDate window and a 3.1 s gap, plus five category windows (max 25) and one extra page for the truncated anyon query and the last plasma-ph row. OAI GetRecord for the 15 scored arXiv ids. Returned rows 243, unique ids 188, of which 27 were already in the catalog. Five HOLD and ten REJECT. No ADD, no STRENGTHEN, no bridge, no new pillar, no CUT reversal, no version bump. C unchanged. 2610.11122 is the 2022 Journal of Fluid Mechanics article 10.1017/jfm.2022.847, posted to arXiv on 2026-10-08. It is one new row, not a merge into an older catalog id. A5 passes and A1 does not. 2610.13822 writes surrogate error percentages. Those are not Q_eng. 2610.08530 writes an order-of-magnitude conduction suppression. That is not Q_eng. 2610.13589 writes simulated logical-error advantages. Those do not move C4. AdS and holographic-query hits that do not state an encoder were left off the carry-over so they do not consume the next run's cap. E-HOL stays CUT. OpenAlex, Unpaywall, and the Sunday source list were skipped. Crossref was one title query without a mailto. No PDF cached. DBE_FULLTEXT_STORE unset. Q=1000 remains a ledger stress test. Prompt source: research/OBSERVATORY_PROMPT.md on feature/research-grade-physics, blob 226375bdc29fa23856dc38714f84b2fca90c5f1d, read in full, NORTH STAR present. Files agree with the freeze: DBE-0.2.2 / DBES-0.2.0, claims freeze 2026-10-02. No scored abstract told this run to change rules, files, or targets."
+}

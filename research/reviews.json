@@ -1,6 +1,556 @@
 {
-  "asOf": "2026-10-12",
+  "asOf": "2026-10-13",
   "cards": [
+    {
+      "id": "rev-2026-10-13-2610.11004",
+      "paperId": "2610.11004",
+      "date": "2026-10-13",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: no plant unit is converted into a gain. G2 passes: no power balance is stated. G3 passes: the electric-field scan is one withheld-parameter check, not an unbounded cross section. G4 fails: a sparse-sensor reconstructor on a collisionless ExB plasma is not a tokamak coil or pellet loop. G5 passes: the withheld-field reconstruction can be re-run on the stated one-dimensional benchmarks this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: no plant unit is converted into a gain. G2 passes: no power balance is stated. G3 passes: the electric-field scan is one withheld-parameter check, not an unbounded cross section. G4 fails: a sparse-sensor reconstructor on a collisionless ExB plasma is not a tokamak coil or pellet loop. G5 passes: the withheld-field reconstruction can be re-run on the stated one-dimensional benchmarks this quarter. G6 passes.",
+      "score": "E-RL C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Naming control as a motive does not close a loop. A U-Net that paints a plasma state from sensor history is not an actuator command, and it does not move E-RL.",
+      "ledger": "none.",
+      "plain": {
+        "core": "ReMAIN keeps a recurrent encoder of sensor history and replaces the fully connected decoder of SHRED with a U-Net whose features are modulated by that recurrent state. A parametric extension embeds the operating condition with the sensor history. The paper first compares the two on six one-dimensional nonlinear PDEs, then demonstrates the parameter-conditioned model on a collisionless ExB plasma whose electric-field strength is the operating parameter. It reports lower reconstruction error on unseen trajectories and recovery of regime-dependent dynamics at field strengths withheld from training.",
+        "why": "E-RL is plant-attach control. This is queued because the abstract names control as a use and the method is a learned state estimator. It does not command a coil, a gas valve, or a pellet. C4 does not move. M2 stays open.",
+        "limit": "Bare arXiv. Two authors. The ExB demonstration is not a tokamak. No actuator, no latency, and no safe-hold are stated."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-RL only). A3 miss: HOLD, not INCLUDE. A2 miss (G4). A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 62 is round(70 x 0.88).",
+      "math": "arXiv:2610.11004v1, 2026-10-07, physics.plasm-ph. OAI licence arXiv non-exclusive. No DOI and no journal-ref. Six one-dimensional PDE benchmarks and one ExB plasma. No error number is in the abstract, and none is added.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 72,
+        "confidence": 62,
+        "popularity": 32
+      }
+    },
+    {
+      "id": "rev-2026-10-13-2610.13428",
+      "paperId": "2610.13428",
+      "date": "2026-10-13",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: growth rates are compared to an analytic formula and not turned into a plant gain. G2 passes: no plant power. G3 passes: the wall-position and time-constant scan is bounded by the cases they state. G4 fails: a free-boundary MHD module is not Bus A and not the S-L3 rate method. G5 passes: the (m=2, n=1) growth-rate comparison can be re-run against Shafranov's circular large-aspect-ratio case this year. G6 passes."
+      },
+      "gateNote": "G1 passes: growth rates are compared to an analytic formula and not turned into a plant gain. G2 passes: no plant power. G3 passes: the wall-position and time-constant scan is bounded by the cases they state. G4 fails: a free-boundary MHD module is not Bus A and not the S-L3 rate method. G5 passes: the (m=2, n=1) growth-rate comparison can be re-run against Shafranov's circular large-aspect-ratio case this year. G6 passes.",
+      "score": "no claim bound",
+      "action": "REJECT",
+      "route": "REJECT",
+      "version": null,
+      "disputer": "Agreement with an analytic resistive-wall growth rate does not make a fluid code into a controller or into a Vlasov rate. RFX-mod is the benchmark device in the abstract, not an attached plant.",
+      "ledger": "none.",
+      "plain": {
+        "core": "SpeCyl gains a free-boundary module for resistive wall modes and external kinks. Two coaxial thin resistive shells surround the plasma, vacuum is assumed between and outside them, and their positions and time constants can be varied. The linear growth rates of the (m=2, n=1) resistive wall mode and external kink are checked against Shafranov's analytic theory for a circular large-aspect-ratio tokamak with a flat current profile, over a range of wall positions, shell time constants, and reference equilibria. The same growth rates are also compared with earlier resistive-wall modelling used on RFX-mod tokamak plasmas.",
+        "why": "Fluid MHD is not E-RL and not the Vlasov, hole-burning, or SRS-SBS method. No KEEP or HOLD claim is bound. Reading list. No growth-rate number is copied because the abstract states agreement and does not state a value.",
+        "limit": "Bare arXiv. CC BY 4.0. Linear verification on a circular large-aspect-ratio equilibrium. Not a controller."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero claims. A3 miss: REJECT. Importance 60 is not under 40, so this is not the low-signal conjunction. The reject is the platform. A2 miss (G4). A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 56 is round(64 x 0.88).",
+      "math": "arXiv:2610.13428v1, 2026-10-09, physics.plasm-ph. OAI licence CC BY 4.0. No DOI and no journal-ref. Benchmarks named: Shafranov analytic theory and prior RFX-mod RWM studies. No growth-rate value in the abstract.",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 60,
+        "confidence": 56,
+        "popularity": 34
+      }
+    },
+    {
+      "id": "rev-2026-10-13-2610.12597",
+      "paperId": "2610.12597",
+      "date": "2026-10-13",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: spectral dimension is dimensionless and no code-distance unit is invented. G2 passes: no plant power. G3 passes: the distance trade-off is between two graph lengths, not an unbounded cross section. G4 fails: Floquet random Clifford circuits on sparse graphs are not a surface-code or qLDPC memory. G5 passes: the area-law to volume-law transition can be re-run on a small sparse graph this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: spectral dimension is dimensionless and no code-distance unit is invented. G2 passes: no plant power. G3 passes: the distance trade-off is between two graph lengths, not an unbounded cross section. G4 fails: Floquet random Clifford circuits on sparse graphs are not a surface-code or qLDPC memory. G5 passes: the area-law to volume-law transition can be re-run on a small sparse graph this quarter. G6 passes.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A CSS encoder whose distance is set by a graph cut and a winding cycle is not the hardware memory that holds E-QEC at C4. Floquet here is the circuit, not a clock.",
+      "ledger": "none.",
+      "plain": {
+        "core": "The paper treats the spectral dimension of a sparse graph, read from the low-energy spectrum of the graph Laplacian, as the parameter that links information spreading to code distance. Floquet random Clifford circuits on two sparse architectures show an entanglement transition from area-law to volume-law whose location tracks that spectral dimension and long-range percolation. In the ergodic phase the circuit is a CSS encoder. The code distance is the competition between the cost of cutting the graph and the length of its shortest winding cycle, with a maximum at intermediate spectral dimension.",
+        "why": "E-QEC only. Sparse-graph codes are adjacent to the error layer and are not that layer. No surface-code distance and no logical error rate are stated. C4 does not move. E-TC is not bound.",
+        "limit": "Bare arXiv. Three authors. No device. No numeric distance in the abstract, and none is added."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A3 miss: HOLD, not INCLUDE. A2 miss (G4). A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 60 is round(68 x 0.88).",
+      "math": "arXiv:2610.12597v1, 2026-10-08, quant-ph. OAI licence arXiv non-exclusive. No DOI and no journal-ref. Spectral dimension from the graph Laplacian. No distance value and no threshold value in the abstract.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 70,
+        "confidence": 60,
+        "popularity": 32
+      }
+    },
+    {
+      "id": "rev-2026-10-13-2610.12079",
+      "paperId": "2610.12079",
+      "date": "2026-10-13",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: algebras are named and no device unit is entered. G2 passes: no plant power. G3 passes: the fiber product is one construction, not an unbounded scaling. G4 fails: a condensable-algebra classification is not an S3 fusion measurement. G5 passes: the stated examples in Z(Vec_G^omega) can be recomputed this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: algebras are named and no device unit is entered. G2 passes: no plant power. G3 passes: the fiber product is one construction, not an unbounded scaling. G4 fails: a condensable-algebra classification is not an S3 fusion measurement. G5 passes: the stated examples in Z(Vec_G^omega) can be recomputed this quarter. G6 passes.",
+      "score": "E-S3 C3 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A fiber product of Lagrangian algebras is not a fusion measurement inside a gate set. Non-Abelian G in the examples is group data, not a braided device.",
+      "ledger": "none.",
+      "plain": {
+        "core": "For two boundary phases of a 2+1D topological order, the paper proposes that the critical point between them, when it exists, is the fiber product of the two Lagrangian algebras over an algebra M. That fiber product is proved to be condensable. The paper also reclassifies condensable algebras in Z(Vec_G^omega), notes a splitting that appears when some of those algebras condense, and computes examples for both Abelian and non-Abelian finite groups G.",
+        "why": "E-S3 only. Boundary anyon condensation is why it is queued. It is not an S3 braid-plus-fusion measurement, and it states no inputs, outputs, latency, or fail-safe, so it is not a new pillar. C3 does not move.",
+        "limit": "Bare arXiv. Two authors. Algebra. No interferometer and no fidelity."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-S3 only). A3 miss: HOLD, not INCLUDE. A2 miss (G4). A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 58 is round(66 x 0.88).",
+      "math": "arXiv:2610.12079v1, 2026-10-08, math.CT. OAI licence arXiv non-exclusive. No DOI and no journal-ref. Fiber product D = A times_M B. No quantum dimension is quoted as a device number.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 66,
+        "confidence": 58,
+        "popularity": 30
+      }
+    },
+    {
+      "id": "rev-2026-10-13-2610.07611",
+      "paperId": "2610.07611",
+      "date": "2026-10-13",
+      "bind": [
+        "E-S3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: the ring grading is algebraic and no device unit is entered. G2 passes: no plant power. G3 passes: the stratum formula is a finite poset, not an unbounded cross section. G4 fails: a Grothendieck ring of module categories is not an S3 fusion measurement. G5 passes: the Haagerup-center example can be checked against the stated multiplication this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: the ring grading is algebraic and no device unit is entered. G2 passes: no plant power. G3 passes: the stratum formula is a finite poset, not an unbounded cross section. G4 fails: a Grothendieck ring of module categories is not an S3 fusion measurement. G5 passes: the Haagerup-center example can be checked against the stated multiplication this quarter. G6 passes.",
+      "score": "E-S3 C3 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A radical in a complexified module Grothendieck ring is not a measured fusion space. The Haagerup center is an example in the abstract, not a gate set.",
+      "ledger": "none.",
+      "plain": {
+        "core": "For a non-degenerate braided fusion category, the paper studies the Grothendieck ring of its module categories. A convolution of etale algebras in the Drinfeld center matches the full center of a relative tensor product. The ring is graded by localizations. Each stratum is described by double-coset blocks and a transition matrix, with a sandwich multiplication formula. When the category is a center, the top stratum's transition matrix is the Gram matrix of the Lagrangian algebras. Examples include finite geometry, Drinfeld doubles, exceptional WZW categories, and the Haagerup center, some with nonzero radicals.",
+        "why": "E-S3 only. Braided fusion data are why it is queued. They are not an S3 measurement, and there is no interface contract, so not a new pillar. C3 does not move.",
+        "limit": "Bare arXiv. Two authors. No anyon interferometer and no fidelity."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-S3 only). A3 miss: HOLD, not INCLUDE. A2 miss (G4). A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 58 is round(66 x 0.88).",
+      "math": "arXiv:2610.07611v1, 2026-10-06, math.QA. OAI licence arXiv non-exclusive. No DOI and no journal-ref. Examples named, not numbered: finite geometry, Drinfeld doubles, exceptional WZW, Haagerup center.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 66,
+        "confidence": 58,
+        "popularity": 30
+      }
+    },
+    {
+      "id": "rev-2026-10-13-2610.12155",
+      "paperId": "2610.12155",
+      "date": "2026-10-13",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: cross-helicity is dimensionless and no plant gain is formed. G2 passes: proton heating in the box is not a plant power balance. G3 passes: two turbulence regimes are a comparison, not an unbounded cross section. G4 fails: heliospheric hybrid-kinetic turbulence is not Bus A and not the S-L3 fusion rate. G5 passes: the balanced-versus-imbalanced heating comparison can be re-run in a hybrid code this year. G6 passes."
+      },
+      "gateNote": "G1 passes: cross-helicity is dimensionless and no plant gain is formed. G2 passes: proton heating in the box is not a plant power balance. G3 passes: two turbulence regimes are a comparison, not an unbounded cross section. G4 fails: heliospheric hybrid-kinetic turbulence is not Bus A and not the S-L3 fusion rate. G5 passes: the balanced-versus-imbalanced heating comparison can be re-run in a hybrid code this year. G6 passes.",
+      "score": "no claim bound",
+      "action": "REJECT",
+      "route": "REJECT",
+      "version": null,
+      "disputer": "Stronger proton heating in a balanced Alfvenic box is not Q_eng, Q_fuel, or Q_sci. Binding S-L3 because the model is kinetic would put a solar-wind cascade on the fusion rate.",
+      "ledger": "none. Proton heating in the simulation is not Q_eng.",
+      "plain": {
+        "core": "Three-dimensional hybrid-kinetic simulations compare freely decaying balanced and imbalanced Alfvenic turbulence, with the same initial amplitude and spectrum and different normalized cross-helicity. The balanced run dissipates more energy and heats protons more efficiently. At sub-proton scales both runs are mostly oblique and right-hand polarized. Only the imbalanced run shows substantial parallel power with ion-cyclotron waves, born where temperature anisotropy grows during the initial steepening, together with parallel proton beams. Non-Maxwellian features in velocity space differ between the two regimes.",
+        "why": "Heliospheric turbulence is not a tokamak controller and not the Vlasov, hole-burning, or SRS-SBS rate method. No KEEP or HOLD claim is bound. Reading list. No heating number is in the abstract, and none is added.",
+        "limit": "Bare arXiv. CC BY 4.0. Decaying box, not a confinement device. No Q."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero claims. A3 miss: REJECT. Not the low-signal conjunction (importance 48, confidence is the harvest gauge below). The reject is the platform. A2 miss (G4). A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 51 is round(58 x 0.88).",
+      "math": "arXiv:2610.12155v1, 2026-10-08, physics.plasm-ph. OAI licence CC BY 4.0. No DOI and no journal-ref. Balanced versus imbalanced cross-helicity. No heating value and no Q value in the abstract.",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 48,
+        "confidence": 51,
+        "popularity": 32
+      }
+    },
+    {
+      "id": "rev-2026-10-13-2610.12607",
+      "paperId": "2610.12607",
+      "date": "2026-10-13",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: the modulo-8 anomaly is a discrete invariant and no device unit is entered. G2 passes: Lindblad dephasing here is not a plant power term. G3 passes: even and odd lengths are two cases, not an unbounded scaling. G4 fails: an open-chain symmetry algebra is not a Majorana device and not the S-L1 barrier penalty. G5 passes: the even-length Ising Lindbladian with a Kramers-Wannier defect can be checked on a small chain this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: the modulo-8 anomaly is a discrete invariant and no device unit is entered. G2 passes: Lindblad dephasing here is not a plant power term. G3 passes: even and odd lengths are two cases, not an unbounded scaling. G4 fails: an open-chain symmetry algebra is not a Majorana device and not the S-L1 barrier penalty. G5 passes: the even-length Ising Lindbladian with a Kramers-Wannier defect can be checked on a small chain this quarter. G6 passes.",
+      "score": "no claim bound",
+      "action": "REJECT",
+      "route": "REJECT",
+      "version": null,
+      "disputer": "A lattice precursor of the modulo-8 anomaly is not a measured zero mode. E-MZM stays WATCH and is not bound. S-L1 is the barrier coherence penalty, not this chain.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Dissipative Majorana chains are written as Lindblad dynamics and mapped to a non-Hermitian operator on a doubled space. Strong fermion parity and strong translation live on the ket and bra contours, and weak symmetries are their diagonal combinations. Anomalies are read by comparing algebras with and without weak fermion-parity defects, for even and odd length. The algebras keep the lattice precursor of the closed-chain modulo-8 anomaly. Even length with collective energy dephasing, after a GSO projection, gives an Ising Lindbladian with non-invertible Kramers-Wannier symmetries. Odd length gives an Ising Lindbladian with a Kramers-Wannier duality defect.",
+        "why": "Not a device zero mode, so it does not feed M5. E-MZM is WATCH and fails A1, and it is not bound. No KEEP or HOLD claim matches the platform. Reading list.",
+        "limit": "Bare arXiv. Two authors. No wire, no gap, and no coherence time. None are invented."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero KEEP or HOLD claims. E-MZM was not used. A3 miss: REJECT. A2 miss (G4). A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 55 is round(62 x 0.88).",
+      "math": "arXiv:2610.12607v1, 2026-10-08, quant-ph. OAI licence arXiv non-exclusive. No DOI and no journal-ref. Modulo-8 lattice precursor stated. No energy gap and no lifetime in the abstract.",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 54,
+        "confidence": 55,
+        "popularity": 30
+      }
+    },
+    {
+      "id": "rev-2026-10-13-2610.08530",
+      "paperId": "2610.08530",
+      "date": "2026-10-13",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: the conduction ratio is against the classical parallel value and is not turned into a plant gain. G2 passes: Orion laser energy is not entered as P_aux or Q. G3 passes: one facility comparison is not an unbounded cross section. G4 fails: a laser-driven high-beta slab is not Bus A and not the S-L3 rate method. G5 passes: the temperature history can be compared with the stated x-ray and proton diagnostics on a similar shot this year. G6 passes: the order-of-magnitude suppression is heat conduction, not Q_eng."
+      },
+      "gateNote": "G1 passes: the conduction ratio is against the classical parallel value and is not turned into a plant gain. G2 passes: Orion laser energy is not entered as P_aux or Q. G3 passes: one facility comparison is not an unbounded cross section. G4 fails: a laser-driven high-beta slab is not Bus A and not the S-L3 rate method. G5 passes: the temperature history can be compared with the stated x-ray and proton diagnostics on a similar shot this year. G6 passes: the order-of-magnitude suppression is heat conduction, not Q_eng.",
+      "score": "no claim bound",
+      "action": "REJECT",
+      "route": "REJECT",
+      "version": null,
+      "disputer": "An order-of-magnitude drop in parallel heat conduction is a transport result. It is not Q_eng approximately 1000, and it is not a coil command.",
+      "ledger": "none. The conduction suppression is not Q_eng, Q_fuel, or Q_sci.",
+      "plain": {
+        "core": "Experiments at the Orion laser facility follow the temperature of a weakly collisional high-beta plasma whose evolution is mainly sensitive to conduction along an initially quasi-laminar magnetic field. Temperature, density, and magnetic field are read with x-ray spectroscopy, x-ray imaging, and proton imaging. After stochastic magnetic fluctuations grow, the measured temperature history requires the parallel thermal conductivity to be suppressed by at least an order of magnitude relative to the classical Coulomb value. The abstract calls this the first laboratory evidence linking magnetic microturbulence to that suppression. The plasmas it names as the same regime include intracluster gas and inertial-confinement hot spots.",
+        "why": "A heat-conduction experiment is not plant-attach control and not the Vlasov, hole-burning, or SRS-SBS rate. No KEEP or HOLD claim is bound. Reading list. The order-of-magnitude figure stays in the card as the abstract's claim and is not entered on the ledger.",
+        "limit": "Bare arXiv. CC BY 4.0. One facility. Not a tokamak and not a yield."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero claims. A3 miss: REJECT. Not the low-signal conjunction. The reject is the platform. A2 miss (G4). A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 60 is round(68 x 0.88).",
+      "math": "arXiv:2610.08530v1, 2026-10-06, physics.plasm-ph. OAI licence CC BY 4.0. No DOI and no journal-ref. Abstract: suppression by at least an order of magnitude versus classical parallel conduction. No temperature value and no Q value.",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 62,
+        "confidence": 60,
+        "popularity": 38
+      }
+    },
+    {
+      "id": "rev-2026-10-13-2610.13589",
+      "paperId": "2610.13589",
+      "date": "2026-10-13",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: shot counts and relative logical-error advantages are named as simulation outputs and are not converted into a plant gain. G2 passes: no plant power. G3 passes: the abstract's advantage is quoted at distances 3 and 11 and is not scaled into a device. G4 fails: a decoder search on a simulated rotated surface code is not the hardware memory that sets C4. G5 passes: the distance-3 search can be re-run with PyMatching under the stated Z-biased circuit noise this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: shot counts and relative logical-error advantages are named as simulation outputs and are not converted into a plant gain. G2 passes: no plant power. G3 passes: the abstract's advantage is quoted at distances 3 and 11 and is not scaled into a device. G4 fails: a decoder search on a simulated rotated surface code is not the hardware memory that sets C4. G5 passes: the distance-3 search can be re-run with PyMatching under the stated Z-biased circuit noise this quarter. G6 passes.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A simulated few-percent logical-error advantage of a Clifford deformation is not a hardware surface-code shot. Bare arXiv cannot raise C4.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Clifford deformations change the stabilizers of a code to cut the logical error rate without adding qubits, and the best deformation depends on both the noise and the decoder. Evolution-Based Best-arm Identification treats the circuit, the noise, and the decoder as a black box. On the rotated surface code with PyMatching and two strongly Z-biased circuit-level models, the abstract says the search finds the optimal deformation at distance 3 with up to about 1100 times fewer shots than random search. At distance 5 the median search reaches the deformations the authors believe are optimal, and random search does not. Under a Z-biased SI1000-like model they report a new pattern, B-XZZX, which differs from XZZX on a fraction of order 1/d of the qubits, with a relative advantage that grows from about 5 percent at distance 3 to about 12 percent at distance 11.",
+        "why": "E-QEC only. The rotated surface code is the same error layer. These are decoder-in-the-loop simulations, not the device that holds C4. The percentages stay in the card as the abstract's claims and do not move C.",
+        "limit": "Bare arXiv. CC BY 4.0. Two noise families. Not hardware. The distance-5 optimum is the authors' belief, as the abstract says, and is not upgraded here."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A2 miss (G4). A3 miss: HOLD, not INCLUDE. A4 miss: C stays C4. A simulated percent is not a hardware bound. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 63 is round(72 x 0.88).",
+      "math": "arXiv:2610.13589v1, 2026-10-09, quant-ph. OAI licence CC BY 4.0. No DOI and no journal-ref. Abstract figures, not remeasured: up to about 1100 times fewer shots at distance 3; relative advantage about 5 percent at distance 3 and about 12 percent at distance 11.",
+      "autoGate": "miss A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 78,
+        "confidence": 63,
+        "popularity": 36
+      }
+    },
+    {
+      "id": "rev-2026-10-13-2610.11603",
+      "paperId": "2610.11603",
+      "date": "2026-10-13",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: mix and opacity are named and not converted into a gain. G2 passes: no plant power balance and no Q. G3 passes: the diagnostic is proposed for stated shell types, not an unbounded yield scaling. G4 fails: XFEL absorption imaging of mix is not Bus A, not S-L3, and not the M6 driven-tunneling shot. G5 passes: the coated-wire resonant-absorption demonstration can be compared with the stated laser-plus-XFEL layout this year. G6 passes."
+      },
+      "gateNote": "G1 passes: mix and opacity are named and not converted into a gain. G2 passes: no plant power balance and no Q. G3 passes: the diagnostic is proposed for stated shell types, not an unbounded yield scaling. G4 fails: XFEL absorption imaging of mix is not Bus A, not S-L3, and not the M6 driven-tunneling shot. G5 passes: the coated-wire resonant-absorption demonstration can be compared with the stated laser-plus-XFEL layout this year. G6 passes.",
+      "score": "no claim bound",
+      "action": "REJECT",
+      "route": "REJECT",
+      "version": null,
+      "disputer": "A proposed mix diagnostic is not a fusion gain. M6 is a driven-tunneling shot. This paper does not report one, and no yield is invented.",
+      "ledger": "none. No Q_eng, Q_fuel, or Q_sci is stated.",
+      "plain": {
+        "core": "The paper proposes resonant x-ray absorption imaging with an x-ray free-electron laser as an active probe of dopant mix and burn in inertial-confinement shells. Charge-state imaging of the dopant is meant to constrain ionization, opacity, and mix from hydrodynamic instabilities at stagnation. Proof-of-principle shots probe a hot spot in coated copper wires driven by an ultra-short relativistic laser. Atomic and radiation-hydrodynamic simulations with synthetic images extend the idea to direct-drive shells with copper-doped ablators and indirect-drive shells with tungsten-doped ablators. The abstract says the combination could measure fusion-relevant hot dense plasma at multi-keV temperatures and benchmark radiation hydrodynamics.",
+        "why": "ICF mix imaging is not anyon fusion, not plant-attach control, and not the Vlasov or SRS-SBS rate. No KEEP or HOLD claim is bound. Reading list. M6 stays open. The multi-keV phrase is the abstract's target regime, not a measured temperature entered here.",
+        "limit": "Bare arXiv. CC BY-NC-ND 4.0, so the PDF is not mirrored. Wire shots are not a spherical yield. No Q."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero claims. A3 miss: REJECT. A6 pass: no fuel pillar is opened. A2 miss (G4). A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 58 is round(66 x 0.88).",
+      "math": "arXiv:2610.11603v1, 2026-10-08, physics.plasm-ph. OAI licence CC BY-NC-ND 4.0. No DOI and no journal-ref. Proof-of-principle: coated copper wires. No neutron yield and no Q in the abstract.",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 64,
+        "confidence": 58,
+        "popularity": 40
+      }
+    },
+    {
+      "id": "rev-2026-10-13-2610.13822",
+      "paperId": "2610.13822",
+      "date": "2026-10-13",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: mean squared log-response error is a surrogate residual and is not a plant gain. G2 passes: no plant power. G3 passes: the error drop is reported on a fixed database, not scaled into a cross section. G4 fails: a one-dimensional implosion surrogate is not Bus A and not S-L3. G5 passes: the archived predictions can be checked against the stated Zenodo data this quarter. G6 passes: the percentages are surrogate error, not Q_eng."
+      },
+      "gateNote": "G1 passes: mean squared log-response error is a surrogate residual and is not a plant gain. G2 passes: no plant power. G3 passes: the error drop is reported on a fixed database, not scaled into a cross section. G4 fails: a one-dimensional implosion surrogate is not Bus A and not S-L3. G5 passes: the archived predictions can be checked against the stated Zenodo data this quarter. G6 passes: the percentages are surrogate error, not Q_eng.",
+      "score": "no claim bound",
+      "action": "REJECT",
+      "route": "REJECT",
+      "version": null,
+      "disputer": "A 60 percent drop in surrogate error is not a 60 percent gain in Q. Alpha-particle heating is turned off in the training calculations the abstract describes. That is not a ledger.",
+      "ledger": "none. Surrogate error is not Q_eng, Q_fuel, or Q_sci.",
+      "plain": {
+        "core": "A Gaussian-process surrogate learns burn-weighted diagnostic states from design variables so those states can be used at prediction time without another simulation. On 1,987 paired one-dimensional implosions, states learned from calculations without alpha-particle heating cut the mean squared log-response error of the global predictor by 60.25 percent on a random holdout and by 52.98 percent on design-space extrapolation. Random projections and shuffled states do not reproduce the gain. Experts help at smaller training sets and add little at 1,000 CH designs. A further 3,000 Be/Cocktail designs show weaker extrapolation and cases where experts hurt. The abstract points to an open Python implementation and to archived data and code.",
+        "why": "An implosion emulator is not a controller and not a Vlasov or SRS-SBS rate. No KEEP or HOLD claim is bound. Reading list. The percentages are the abstract's surrogate errors and are not entered as Q.",
+        "limit": "Bare arXiv. One-dimensional training set. The Zenodo DOIs in the comment are data and code, not a paper DOI. No paper DOI in the OAI record."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero claims. A3 miss: REJECT. A6 pass: no fuel pillar is opened. A2 miss (G4). A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 55 is round(62 x 0.88).",
+      "math": "arXiv:2610.13822v1, 2026-10-09, physics.comp-ph. OAI licence arXiv non-exclusive. No paper DOI and no journal-ref. Comment data DOI 10.5281/zenodo.23253596 and code DOI 10.5281/zenodo.23255040. Abstract errors: 60.25 percent and 52.98 percent on 1,987 implosions. 3,000 Be/Cocktail designs.",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 56,
+        "confidence": 55,
+        "popularity": 32
+      }
+    },
+    {
+      "id": "rev-2026-10-13-2610.08519",
+      "paperId": "2610.08519",
+      "date": "2026-10-13",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: an (m, n) Seifert pair is dimensionless and no plasma unit is entered. G2 passes: magnetohydrostatics has no plant power in this abstract. G3 passes: coprime integers are a discrete family, not an unbounded cross section. G4 fails: a toroidal equilibrium existence proof is not Bus A and not S-L3. G5 passes: one coprime pair can be checked on a rotationally symmetric torus this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: an (m, n) Seifert pair is dimensionless and no plasma unit is entered. G2 passes: magnetohydrostatics has no plant power in this abstract. G3 passes: coprime integers are a discrete family, not an unbounded cross section. G4 fails: a toroidal equilibrium existence proof is not Bus A and not S-L3. G5 passes: one coprime pair can be checked on a rotationally symmetric torus this quarter. G6 passes.",
+      "score": "no claim bound",
+      "action": "REJECT",
+      "route": "REJECT",
+      "version": null,
+      "disputer": "An equilibrium whose field lines are a Seifert fibration is not a coil-current command and not a Vlasov growth rate. No pressure or current number is in the abstract, and none is added.",
+      "ledger": "none.",
+      "plain": {
+        "core": "The paper constructs magnetohydrostatic equilibria in rotationally symmetric toroidal domains whose magnetic field lines form an (m, n) Seifert fibration for any coprime integers m and n.",
+        "why": "A toroidal equilibrium is not plant-attach control and not the Vlasov, hole-burning, or SRS-SBS rate. No KEEP or HOLD claim is bound. Reading list.",
+        "limit": "Bare arXiv. Two authors. The abstract is one existence sentence. No beta and no q profile are stated."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero claims. A3 miss: REJECT. Not the low-signal conjunction. The reject is the platform. A2 miss (G4). A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 48 is round(54 x 0.88).",
+      "math": "arXiv:2610.08519v1, 2026-10-06, math.AP. OAI licence arXiv non-exclusive. No DOI and no journal-ref. No numeric equilibrium in the abstract.",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 46,
+        "confidence": 48,
+        "popularity": 28
+      }
+    },
+    {
+      "id": "rev-2026-10-13-2610.11122",
+      "paperId": "2610.11122",
+      "date": "2026-10-13",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: an electron density ratio is dimensionless and is not a plant gain. G2 passes: no plant power. G3 passes: the skin-depth scan is a coupling parameter, not an unbounded cross section. G4 fails: a five-moment Richtmyer-Meshkov study is not Bus A and not the S-L3 rate method. G5 passes: the isotope-interface case, where the electron density ratio is unity, can be re-run in a multi-fluid code this year. G6 passes."
+      },
+      "gateNote": "G1 passes: an electron density ratio is dimensionless and is not a plant gain. G2 passes: no plant power. G3 passes: the skin-depth scan is a coupling parameter, not an unbounded cross section. G4 fails: a five-moment Richtmyer-Meshkov study is not Bus A and not the S-L3 rate method. G5 passes: the isotope-interface case, where the electron density ratio is unity, can be re-run in a multi-fluid code this year. G6 passes.",
+      "score": "no claim bound",
+      "action": "REJECT",
+      "route": "REJECT",
+      "version": null,
+      "disputer": "A journal venue does not create a claim. The instability growth is not Q_eng. S-L3 is not a multi-fluid shock tube.",
+      "ledger": "none.",
+      "plain": {
+        "core": "The Richtmyer-Meshkov instability of a single-mode density interface is simulated in an ideal ion-electron plasma with a five-moment multi-fluid model, for thermal, species, and isotope interfaces. Unlike a single-fluid model at matched Atwood number, the three interfaces diverge. Thermal and species interfaces grow harder and develop secondary instabilities. The isotope interface stays closer to the single-fluid response because the electron density ratio across it is unity. Self-generated fields, and the extra growth, shrink as that electron density ratio drops. Stronger ion-electron coupling, read as a smaller plasma skin depth, makes the three cases more alike. The abstract names inertial confinement fusion as one application.",
+        "why": "Multi-fluid shock mix is not a controller and not the Vlasov, hole-burning, or SRS-SBS rate. No KEEP or HOLD claim is bound. Reading list. The 2022 journal date does not make it an INCLUDE.",
+        "limit": "Version of record is Journal of Fluid Mechanics 951, A11 (2022), DOI 10.1017/jfm.2022.847, issued 2022-11-03 on Crossref. The arXiv copy is dated 2026-10-08. OAI licence on that PDF is CC BY-NC-ND 4.0, so the PDF is not mirrored. Crossref lists CC BY 4.0 on the version of record. Unpaywall was not called. No growth-rate value is in the abstract, and none is added."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero claims. A3 miss: REJECT. A5 pass: Journal of Fluid Mechanics, from the OAI journal-ref and Crossref. A journal does not bind a claim by itself. A2 miss (G4). A4 miss: C unchanged. A6 pass. A7 pass. A8 pass. Harvest confidence 64 is round(64 x 1.00).",
+      "math": "arXiv:2610.11122v1. OAI journal-ref: Journal of Fluid Mechanics. 2022;951:A11. OAI DOI 10.1017/jfm.2022.847. Crossref confirms the same DOI, container, and title, issued 2022-11-03, licence URL http://creativecommons.org/licenses/by/4.0/ on the version of record. Electron density ratio unity for the isotope interface. No numeric growth rate in the abstract.",
+      "autoGate": "miss A1, A2, A3, A4",
+      "scoreHeuristic": {
+        "importance": 58,
+        "confidence": 64,
+        "popularity": 34
+      }
+    },
+    {
+      "id": "rev-2026-10-13-2610.13401",
+      "paperId": "2610.13401",
+      "date": "2026-10-13",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: a dynamical spin structure factor is not assigned a device unit. G2 passes: no plant power. G3 passes: the RPA continuum is a calculated spectrum, not an unbounded cross section. G4 fails: a Kitaev-magnet spin liquid is not a Majorana-wire device. G5 passes: the pure-Kitaev low-energy peak can be compared with the continuous-time quantum Monte Carlo trend the abstract cites, this year. G6 passes."
+      },
+      "gateNote": "G1 passes: a dynamical spin structure factor is not assigned a device unit. G2 passes: no plant power. G3 passes: the RPA continuum is a calculated spectrum, not an unbounded cross section. G4 fails: a Kitaev-magnet spin liquid is not a Majorana-wire device. G5 passes: the pure-Kitaev low-energy peak can be compared with the continuous-time quantum Monte Carlo trend the abstract cites, this year. G6 passes.",
+      "score": "no claim bound",
+      "action": "REJECT",
+      "route": "REJECT",
+      "version": null,
+      "disputer": "Itinerant Majorana fermions in a Kitaev magnet are not a zero-mode qubit. E-MZM stays WATCH and is not bound. No gap or lifetime is copied because the abstract does not state one.",
+      "ledger": "none.",
+      "plain": {
+        "core": "An Abrikosov-fermion parton theory with random-phase approximation is used for the finite-temperature dynamical spin structure factor of extended spin-1/2 Kitaev models. For the pure Kitaev model it reproduces a strong nearly flat low-energy peak, a broad high-energy continuum, and a downward shift of low-energy weight with temperature, in qualitative agreement with continuous-time quantum Monte Carlo. The continuum shrinks because bond amplitudes fall and the two-parton phase space compresses. Ferromagnetic and antiferromagnetic Heisenberg additions move the low-energy peak at the Gamma point in opposite directions. The ferromagnetic Kitaev-Gamma model softens at finite momentum toward the period-three order seen in other numerics. In a [111] field, a broad parton continuum sits with magnon-like branches.",
+        "why": "This is a spin-liquid spectrum, not a device distinguisher for M5. E-MZM is WATCH and fails A1, so it is not bound. No KEEP or HOLD claim matches a Kitaev magnet. Reading list.",
+        "limit": "Bare arXiv. Two authors. Qualitative agreement only. No energy in meV is stated, and none is added."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero KEEP or HOLD claims. E-MZM was not used. A3 miss: REJECT. A2 miss (G4). A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 53 is round(60 x 0.88).",
+      "math": "arXiv:2610.13401v1, 2026-10-09, cond-mat.str-el. OAI licence arXiv non-exclusive. No DOI and no journal-ref. No peak energy and no lifetime in the abstract.",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 52,
+        "confidence": 53,
+        "popularity": 30
+      }
+    },
+    {
+      "id": "rev-2026-10-13-2610.12551",
+      "paperId": "2610.12551",
+      "date": "2026-10-13",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: the Floquet Hamiltonian is an operator and no plant unit is entered. G2 passes: no plant power. G3 passes: the drive threshold is a stated condition, not an unbounded cross section. G4 fails: dynamical freezing is not the engine clock and not a surface-code memory. G5 passes: the local engineering condition can be checked on a small driven spin chain this quarter. G6 passes."
+      },
+      "gateNote": "G1 passes: the Floquet Hamiltonian is an operator and no plant unit is entered. G2 passes: no plant power. G3 passes: the drive threshold is a stated condition, not an unbounded cross section. G4 fails: dynamical freezing is not the engine clock and not a surface-code memory. G5 passes: the local engineering condition can be checked on a small driven spin chain this quarter. G6 passes.",
+      "score": "no claim bound",
+      "action": "REJECT",
+      "route": "REJECT",
+      "version": null,
+      "disputer": "A citation to a Nature paper on error mitigation is not this paper's device, and it is not Q_eng. E-TC stays CUT. The three cited works were not resolved in this run.",
+      "ledger": "none.",
+      "plain": {
+        "core": "The paper gives a condition for ergodicity breaking in a strongly driven quantum many-body system and a local way to stabilize dynamical freezing, meaning local operators that keep a permanent memory of their initial values. It contrasts that with a recently noted exception. Under the engineering, the Floquet Hamiltonian ordered by spin flips becomes quasi-local while the time-dependent Hamiltonian stays non-integrable at each instant. The abstract says the same tools can make dynamical-freezing error mitigation and state stabilization more flexible, and it points to three earlier works for those claims.",
+        "why": "E-TC is CUT and this is not a metronome for plant actuators, so the clock claim is not reversed and not bound. The error-mitigation sentence cites other papers. This run did not resolve those citations, and this abstract is not a surface-code or qLDPC result. No KEEP or HOLD claim is bound. Reading list.",
+        "limit": "Bare arXiv. CC BY 4.0. The abstract cites PRX 11, 021008 (2021), PRX 16, 011041 (2026), and Nature 653, 1027 (2026). Those three were not fetched. No threshold value is stated, and none is added."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero claims. A3 miss: REJECT. Not a CUT reversal. A2 miss (G4). A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 53 is round(60 x 0.88).",
+      "math": "arXiv:2610.12551v1, 2026-10-08, quant-ph. OAI licence CC BY 4.0. No DOI and no journal-ref. No drive amplitude and no logical error rate in the abstract.",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 50,
+        "confidence": 53,
+        "popularity": 32
+      }
+    },
     {
       "id": "rev-2026-10-12-2610.06574",
       "paperId": "2610.06574",
