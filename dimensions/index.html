@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dimensions Beyond Energy — DBE</title>
+  <meta name="description" content="DBE is a moonshot hypothesis landscape exploring physically permissible paths toward a civilization beyond energy scarcity." />
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #071018;
+      --panel: #0d1823;
+      --panel-2: #111f2c;
+      --text: #e9f0f6;
+      --muted: #9fb0c0;
+      --line: #223343;
+      --accent: #72e1ff;
+      --green: #75e6a1;
+      --blue: #79a8ff;
+      --violet: #bb8cff;
+      --red: #ff8181;
+      --gold: #ffd37a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 15% 0%, rgba(114,225,255,.08), transparent 32rem),
+        linear-gradient(180deg, #071018 0%, #08131d 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    main { width: min(980px, calc(100% - 36px)); margin: 0 auto; padding: 72px 0 96px; }
+    .eyebrow {
+      font-size: .78rem; letter-spacing: .16em; text-transform: uppercase;
+      color: var(--accent); font-weight: 700; margin-bottom: 14px;
+    }
+    h1 { font-size: clamp(2.7rem, 8vw, 5.8rem); line-height: .95; margin: 0 0 16px; letter-spacing: -.05em; }
+    .subtitle { font-size: clamp(1.15rem, 3vw, 1.65rem); color: var(--muted); margin: 0 0 44px; max-width: 760px; }
+    .question {
+      padding: 22px 24px; border: 1px solid var(--line); border-left: 3px solid var(--accent);
+      background: rgba(13,24,35,.78); border-radius: 10px; font-size: 1.08rem; margin: 0 0 52px;
+    }
+    section { margin-top: 54px; }
+    h2 { font-size: 1.55rem; margin: 0 0 18px; letter-spacing: -.02em; }
+    p { color: #d7e1ea; }
+    .abstract {
+      font-size: 1.04rem;
+      background: rgba(13,24,35,.56);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 28px;
+    }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; margin-top: 20px; }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px; }
+    .card strong { display: block; margin-bottom: 4px; }
+    .card small { color: var(--muted); }
+    .green { border-top: 3px solid var(--green); }
+    .blue { border-top: 3px solid var(--blue); }
+    .violet { border-top: 3px solid var(--violet); }
+    .red { border-top: 3px solid var(--red); }
+    .axis {
+      display: grid; grid-template-columns: 180px 1fr; gap: 18px; padding: 15px 0;
+      border-top: 1px solid var(--line);
+    }
+    .axis:first-child { border-top: 0; }
+    .axis b { color: var(--text); }
+    .axis span { color: var(--muted); }
+    .note {
+      margin-top: 18px; padding: 16px 18px; background: var(--panel-2); border: 1px solid var(--line);
+      border-radius: 10px; color: var(--muted);
+    }
+    .graduation {
+      counter-reset: step; display: grid; gap: 10px; margin-top: 18px;
+    }
+    .step {
+      counter-increment: step; padding: 16px 18px; border: 1px solid var(--line); border-radius: 10px;
+      background: rgba(13,24,35,.72);
+    }
+    .step:before {
+      content: counter(step, decimal-leading-zero); color: var(--gold); font-weight: 800; margin-right: 12px;
+    }
+    footer { margin-top: 70px; color: #708497; font-size: .9rem; }
+    @media (max-width: 700px) {
+      .grid { grid-template-columns: 1fr; }
+      .axis { grid-template-columns: 1fr; gap: 4px; }
+      main { padding-top: 48px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">DBE — Exploratory Research Framework</div>
+  <h1>Dimensions Beyond Energy</h1>
+  <p class="subtitle">The Search for a Civilization Beyond Energy Scarcity</p>
+
+  <div class="question"><strong>Core question:</strong> What physically permissible discovery, technology, combination of technologies, or transformation of civilization could make energy cease to be a binding constraint on intelligent life?</div>
+
+  <section>
+    <h2>Abstract</h2>
+    <div class="abstract">
+      <p>DBE is a broad, continuously updated research program for mapping the scientific and technological search space around one civilization-scale objective: making energy and resource scarcity cease to be meaningful constraints on intelligent life. It is not limited to a single reactor design, energy source, or engineering discipline. Instead, DBE deliberately spans near-term engineering, frontier physics, computation, materials science, intelligence amplification, and transformations in the physical requirements of civilization itself.</p>
+
+      <p>The project does not assume that literally unlimited energy is attainable under known thermodynamics. Its target is broader and more practical: <strong>effectively inexhaustible accessible energy, radically improved conversion and use of energy, discovery of presently inaccessible reservoirs or interactions, or sufficiently reduced energy demand that scarcity becomes non-binding.</strong> A successful pathway may therefore increase the numerator of available useful energy, reduce the denominator of energy required for civilization, or do both simultaneously.</p>
+
+      <p>Candidate concepts may include fusion and advanced fission, geothermal and solar systems, superconductivity and magnetic-field engineering, quantum and emergent materials, quasiparticles, quantum thermodynamics, antimatter, nuclear isomers, weakly interacting or hidden particles, vacuum and zero-point phenomena, black-hole and gravitational physics, reversible and neuromorphic computation, brain emulation and consciousness science, AI and AGI-assisted discovery, quantum computing, autonomous laboratories, and currently unknown particles, fields, phases of matter, interactions, or physical principles. Inclusion is not endorsement. DBE is intentionally designed to search widely while preserving strict separation between established science, frontier hypotheses, and claims that conflict with current evidence.</p>
+
+      <p>Each concept is therefore evaluated on multiple independent axes rather than compressed into a single “believability” score. Its <strong>evidence class</strong> identifies whether the pathway is demonstrated, compatible with known physics but unproven, dependent on unknown physics, or in conflict with established constraints. A separate <strong>confidence level</strong> estimates how strongly the central claim is supported by reproducible evidence, theoretical coherence, predictive success, and independent replication. <strong>Scientific maturity</strong> measures how far the concept has progressed from conjecture through proof-of-principle and engineering validation. <strong>Impact</strong> estimates the potential magnitude of its effect on energy abundance or demand. <strong>Importance</strong> reflects how much the concept could alter the overall DBE search landscape if true. <strong>Research tractability</strong> measures whether meaningful progress can be made with available mathematics, simulations, experiments, datasets, or instrumentation. <strong>Falsifiability</strong> records whether the claim can be tested decisively. <strong>Attention</strong> tracks publication volume, active laboratories, funding, citations, and public or scientific interest, but is never treated as a substitute for evidence. Resource intensity, environmental burden, scalability, time horizon, and leverage from AI or quantum computation are tracked separately.</p>
+
+      <p>Confidence is intentionally dynamic. A concept can be highly important but low-confidence; popular but weakly evidenced; physically plausible but experimentally immature; or strongly demonstrated yet unlikely to scale. DBE preserves these distinctions so that speculative ideas are neither prematurely discarded nor accidentally presented as equivalent to established science. Where a concept appears to conflict with conservation laws, thermodynamics, experimentally established limits, or other well-supported theory, it is retained with a <strong>falsification record</strong> documenting the precise claim, the mathematical or empirical constraint against it, the assumptions on which that conclusion depends, and the observation or discovery that would justify reopening the hypothesis.</p>
+
+      <p>The purpose of classification is ultimately procedural. DBE begins with broad hypothesis discovery, but concepts that accumulate sufficient evidence, importance, tractability, and scientific definition can <strong>graduate</strong> into research-grade investigations. Graduation requires a clearly bounded research question, a defensible literature corpus, explicit assumptions, competing hypotheses, measurable predictions, a defined falsification route, quantitative models or experiments where appropriate, reproducible methods, uncertainty analysis, and a documented distinction between established evidence and speculation. Those concepts can then move into a separate core research track for dedicated papers, simulations, experiments, or engineering programs.</p>
+
+      <p>DBE therefore functions as both a map and a filter: a structured attempt to explore as many serious answers as possible to the question of civilization beyond energy scarcity, while continuously ranking what is known, what is plausible, what is merely possible, what appears impossible under current physics, and what evidence would be required to change those judgments.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Primary evidence classes</h2>
+    <div class="grid">
+      <div class="card green"><strong>Demonstrated pathway</strong><small>Core physics is experimentally established; the remaining barriers are primarily engineering, economics, scale, integration, or deployment.</small></div>
+      <div class="card blue"><strong>Physics-compatible frontier</strong><small>No established physical law forbids the concept, but one or more essential scientific or technological steps remain unproven.</small></div>
+      <div class="card violet"><strong>Speculative / unknown physics</strong><small>The pathway requires phenomena, couplings, states, interactions, or capabilities not yet demonstrated.</small></div>
+      <div class="card red"><strong>Conflicts with established constraints</strong><small>The current formulation conflicts with strong theory, conservation laws, thermodynamics, or experiment and therefore requires a falsification record.</small></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Concept scoring axes</h2>
+    <div class="card">
+      <div class="axis"><b>Confidence</b><span>0–5: strength of direct evidence, replication, theoretical coherence, and predictive success.</span></div>
+      <div class="axis"><b>Scientific maturity</b><span>0–5: conjecture → formal model → experimental signal → proof-of-principle → engineered prototype → scalable system.</span></div>
+      <div class="axis"><b>Potential impact</b><span>0–5: possible effect on usable energy abundance, efficiency, or required demand.</span></div>
+      <div class="axis"><b>Strategic importance</b><span>0–5: how much confirmation or refutation would reshape the DBE search landscape.</span></div>
+      <div class="axis"><b>Research tractability</b><span>0–5: ability to make meaningful progress using current theory, simulation, experiments, or datasets.</span></div>
+      <div class="axis"><b>Falsifiability</b><span>0–5: clarity and feasibility of observations that could disconfirm the central claim.</span></div>
+      <div class="axis"><b>Attention / popularity</b><span>0–5: publication volume, citations, active research groups, funding, and broader interest. This is descriptive, not evidentiary.</span></div>
+      <div class="axis"><b>Scalability</b><span>0–5: plausible ability to move from a phenomenon or prototype to civilization-scale usefulness.</span></div>
+      <div class="axis"><b>Resource burden</b><span>0–5: material, capital, land, infrastructure, and supply-chain intensity. Lower burden is preferable.</span></div>
+      <div class="axis"><b>Environmental profile</b><span>0–5: lifecycle cleanliness, waste, safety, ecological footprint, and externalities.</span></div>
+      <div class="axis"><b>Intelligence leverage</b><span>0–5: expected acceleration from AI/AGI, quantum computing, automated science, or advanced simulation.</span></div>
+    </div>
+    <div class="note">DBE should never collapse these axes into one universal score. Composite rankings may be generated for particular decisions, but the underlying dimensions remain visible so popularity, plausibility, impact, and evidence cannot be confused with one another.</div>
+  </section>
+
+  <section>
+    <h2>Graduation to research-grade work</h2>
+    <div class="graduation">
+      <div class="step">The concept is stated as a precise scientific or engineering claim rather than a loose idea.</div>
+      <div class="step">The relevant literature and strongest supporting and opposing evidence have been mapped.</div>
+      <div class="step">Assumptions, boundary conditions, competing hypotheses, and known physical constraints are explicit.</div>
+      <div class="step">The concept produces measurable predictions, decision criteria, or an engineering objective.</div>
+      <div class="step">A falsification route or decisive evidence threshold is defined.</div>
+      <div class="step">Methods are reproducible: mathematics, simulation, datasets, experiments, or engineering analysis can be independently inspected.</div>
+      <div class="step">Uncertainty, sensitivity, failure modes, and counterarguments are quantified or explicitly documented.</div>
+      <div class="step">The expected scientific value is sufficient to justify a dedicated paper, model, experiment, or development program.</div>
+    </div>
+  </section>
+
+  <footer>DBE exploratory branch — working framework. Classification values are expected to change as evidence changes.</footer>
+</main>
+</body>
+</html>

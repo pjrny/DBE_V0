@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b131c">
+  <meta name="description" content="Explore Dimensions Beyond Energy Scarcity: the research Observatory, the Dimensions Beyond Energy concept atlas, and the SDBES scientific knowledge framework.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="DBE — Dimensions Beyond Energy Scarcity">
+  <meta property="og:description" content="One home for the DBE Observatory, the discovery atlas, and the SDBES knowledge universe.">
+  <link rel="canonical" href="https://pjrny.github.io/DBE_V0/">
+  <title>DBE — Dimensions Beyond Energy Scarcity</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #090f16;
+      --bg-2: #0d1721;
+      --panel: #111d28;
+      --panel-bright: #162632;
+      --line: #2b3b48;
+      --text: #edf4f7;
+      --muted: #a4b6c1;
+      --subtle: #7e97a7;
+      --cyan: #a3e7f4;
+      --blue: #8bbef0;
+      --mint: #b3dfc9;
+      --violet: #c8baf8;
+      --gold: #f0ce96;
+      --radius: 18px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      min-width: 320px;
+      margin: 0;
+      color: var(--text);
+      font: 16px/1.6 ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at 76% 10%, #18324a 0, transparent 35rem),
+                  radial-gradient(circle at 6% 48%, #102a30 0, transparent 27rem),
+                  linear-gradient(180deg, #0b131c 0%, #090f16 100%);
+    }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--cyan); }
+    a:focus-visible, button:focus-visible { outline: 3px solid #b4eaff; outline-offset: 4px; }
+    .skip { position: absolute; transform: translateY(-150%); top: 12px; left: 16px; z-index: 12; padding: 10px 14px; background: white; color: #0b131c; border-radius: 8px; }
+    .skip:focus { transform: translateY(0); }
+    .wrap { width: min(1192px, calc(100% - 48px)); margin: 0 auto; }
+    .topbar { border-bottom: 1px solid rgba(160, 195, 216, .15); background: rgba(9, 15, 22, .75); backdrop-filter: blur(18px); }
+    .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 28px; min-height: 76px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; white-space: nowrap; }
+    .brand-mark { display: inline-grid; place-items: center; width: 39px; height: 39px; border-radius: 11px; border: 1px solid #577c90; background: linear-gradient(145deg, #1e3d4e, #0d1b27); color: #d6f6fb; font: 700 13px/1 ui-monospace, monospace; }
+    .brand-name { font-weight: 760; letter-spacing: .055em; font-size: 15px; }
+    .brand-sub { color: var(--subtle); letter-spacing: .08em; font-size: 10px; text-transform: uppercase; display: block; margin-top: -3px; }
+    nav { display: flex; align-items: center; flex-wrap: wrap; justify-content: flex-end; gap: 8px 30px; }
+    nav a { color: #c5d5de; font-size: 13px; font-weight: 600; }
+    nav a:hover { color: #fff; }
+    .nav-external::after { content: "↗"; margin-left: 5px; color: var(--cyan); }
+    .hero { padding: 90px 0 78px; display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; }
+    .eyebrow { margin: 0 0 18px; text-transform: uppercase; font: 700 11px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .17em; color: var(--cyan); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { font-size: clamp(44px, 5.6vw, 78px); letter-spacing: -.065em; line-height: 1.07; font-weight: 720; margin: 0 0 24px; max-width: 760px; }
+    h1 em { font-style: normal; color: var(--cyan); }
+    .hero-description { color: #c1d0da; font-size: clamp(16px, 1.6vw, 18px); max-width: 650px; line-height: 1.75; margin-bottom: 30px; }
+    .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 11px; }
+    .btn { display: inline-flex; gap: 12px; align-items: center; justify-content: center; padding: 12px 18px; min-height: 48px; border-radius: 10px; border: 1px solid var(--line); font-size: 13px; font-weight: 730; transition: background .17s, border-color .17s, transform .17s; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { color: #0a1720; background: var(--cyan); border-color: var(--cyan); }
+    .btn-primary:hover { background: #c8f3fa; color: #071118; }
+    .btn-secondary { color: #e0ebf1; background: rgba(24, 44, 58, .65); border-color: #4a6678; }
+    .btn-secondary:hover { background: #223a4b; color: #fff; }
+    .hero-graphic { position: relative; min-height: 375px; border-radius: 24px; border: 1px solid rgba(126, 164, 185, .21); background: radial-gradient(ellipse at 50% 44%, #1b3b4f 0, #12212e 36%, #0b151e 75%); display: grid; place-items: center; overflow: hidden; }
+    .hero-graphic::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(#d0eeff08 1px, transparent 1px), linear-gradient(90deg, #d0eeff08 1px, transparent 1px); background-size: 38px 38px; }
+    .hero-graphic svg { position: relative; z-index: 1; width: 92%; max-height: 345px; }
+    .graphic-key { position: absolute; bottom: 17px; left: 20px; right: 20px; display: flex; justify-content: space-between; gap: 8px; z-index: 2; font: 11px ui-monospace, monospace; color: #bdd1dd; }
+    .graphic-key span:last-child { color: #88a7b8; }
+    .rule { border: 0; height: 1px; background: linear-gradient(90deg, #324958, #21313d 55%, transparent); margin: 0; }
+    .section { padding: 69px 0 12px; scroll-margin-top: 28px; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 25px; }
+    .section-head h2 { font-size: clamp(28px, 3vw, 39px); letter-spacing: -.05em; line-height: 1.14; margin: 0; }
+    .section-head p { max-width: 460px; color: var(--muted); font-size: 13px; line-height: 1.65; margin-bottom: 2px; }
+    .feature-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px; }
+    .feature-card { min-width: 0; min-height: 330px; padding: 24px; border: 1px solid #344c5b; border-radius: var(--radius); background: linear-gradient(145deg, #162733, #101a25 75%); display: flex; flex-direction: column; }
+    .feature-card.observatory { background: radial-gradient(ellipse at 100% 0, #2b3c40, transparent 66%), linear-gradient(145deg, #17252e, #101a25); }
+    .feature-card.dimensions { background: radial-gradient(ellipse at 100% 0, #1c343c, transparent 66%), linear-gradient(145deg, #17252e, #101a25); }
+    .feature-card.future { border-style: dashed; border-color: #3a4e60; background: #101922; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 34px; }
+    .symbol { font: 700 15px ui-monospace, monospace; letter-spacing: -.045em; display: grid; place-items: center; height: 44px; min-width: 44px; padding: 0 9px; border-radius: 12px; background: #243945; color: var(--cyan); border: 1px solid #3a5869; }
+    .dimensions .symbol { background: #203c39; border-color: #427065; color: var(--mint); }
+    .future .symbol { background: #29263a; border-color: #4d466d; color: var(--violet); }
+    .status { display: inline-flex; gap: 6px; align-items: center; padding: 5px 9px; border: 1px solid #476557; border-radius: 100px; color: #c2e9d4; background: #21342c; font: 700 10px/1.4 ui-monospace, monospace; white-space: nowrap; }
+    .status::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #a2d8b7; }
+    .status.readable { color: #cde7ee; border-color: #416477; background: #1b3240; }
+    .status.readable::before { background: var(--cyan); }
+    .status.pending { color: #b2bdca; border-color: #536070; background: #26303b; }
+    .status.pending::before { background: #8d9ba9; }
+    .feature-card h3 { font-size: 23px; letter-spacing: -.035em; line-height: 1.22; margin: 0 0 11px; }
+    .feature-card p { font-size: 13px; color: #b4c5d1; line-height: 1.75; margin-bottom: 24px; }
+    .feature-card .launch { margin-top: auto; font-size: 13px; color: #d9f7fb; font-weight: 740; display: inline-flex; align-items: center; gap: 9px; padding: 8px 0; }
+    .feature-card .launch:hover { color: #fff; }
+    .feature-card .launch.dim { color: #aab9c6; }
+    .feature-card .launch.dim:hover { color: #fff; }
+    .feature-card .launch span { font-size: 17px; }
+    .section-note { margin: 16px 0 0; font-size: 12px; color: #96adbd; line-height: 1.6; }
+    .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 15px; }
+    .project { border: 1px solid #293f4d; border-radius: var(--radius); background: rgba(15, 25, 36, .83); padding: 23px 23px 19px; display: flex; flex-direction: column; min-height: 310px; }
+    .project .no { color: var(--subtle); font: 700 11px ui-monospace, monospace; letter-spacing: .12em; margin-bottom: 12px; }
+    .project h3 { font-size: 20px; line-height: 1.25; letter-spacing: -.028em; margin-bottom: 12px; }
+    .project p { color: #aebfc9; font-size: 13px; line-height: 1.75; margin-bottom: 18px; }
+    .project .topic { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; margin-bottom: 22px; }
+    .topic span { font: 11px ui-monospace, monospace; color: #b5c5d0; border: 1px solid #364c5d; border-radius: 6px; padding: 4px 7px; background: #172632; }
+    .project-links { display: flex; flex-wrap: wrap; gap: 13px 20px; padding-top: 17px; border-top: 1px solid #2b4050; }
+    .project-links a { color: #c8ebf5; font-size: 12px; font-weight: 720; }
+    .project-links a:hover { color: #fff; }
+    .pathway { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 35px; border-top: 1px solid #29414f; padding-top: 23px; }
+    .pathway div { color: #aabfc9; font-size: 12px; line-height: 1.7; }
+    .pathway b { display: block; color: #e2edf2; margin-bottom: 4px; }
+    .pathway strong { color: var(--cyan); font: 700 11px ui-monospace, monospace; margin-right: 8px; }
+    .foot { margin-top: 85px; border-top: 1px solid #2b3d4a; padding: 24px 0 35px; display: flex; justify-content: space-between; gap: 25px; flex-wrap: wrap; color: var(--subtle); font-size: 12px; }
+    .foot a { color: #b9d0db; }
+    @media (max-width: 1000px) {
+      .hero { grid-template-columns: 1fr; padding-top: 62px; }
+      .hero-graphic { min-height: 275px; }
+      .hero-graphic svg { max-height: 270px; }
+      .graphic-key { bottom: 10px; }
+      .feature-grid, .project-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .feature-grid > :last-child, .project-grid > :last-child { grid-column: 1 / -1; min-height: 0; }
+    }
+    @media (max-width: 650px) {
+      .wrap { width: min(100% - 32px, 1192px); }
+      .topbar .wrap { min-height: 65px; align-items: flex-start; padding: 13px 0; gap: 10px; flex-wrap: wrap; }
+      .brand { gap: 8px; }
+      .brand-mark { width: 34px; height: 34px; border-radius: 9px; }
+      .brand-name { font-size: 12px; }
+      .brand-sub { font-size: 9px; }
+      nav { gap: 8px 13px; padding-top: 4px; width: 100%; justify-content: flex-start; }
+      nav a { font-size: 11px; }
+      nav a:first-child { display: none; }
+      .hero { padding-top: 47px; padding-bottom: 46px; gap: 26px; }
+      h1 { font-size: clamp(40px, 11vw, 58px); }
+      .hero-description { font-size: 15px; }
+      .hero-graphic { min-height: 255px; border-radius: 16px; }
+      .section { padding-top: 49px; }
+      .section-head { display: block; margin-bottom: 20px; }
+      .section-head p { margin-top: 12px; }
+      .feature-grid, .project-grid { grid-template-columns: 1fr; }
+      .feature-grid > :last-child, .project-grid > :last-child { grid-column: auto; }
+      .feature-card { min-height: 264px; }
+      .card-top { margin-bottom: 20px; }
+      .project { min-height: 0; }
+      .pathway { grid-template-columns: 1fr; gap: 10px; }
+      .graphic-key { font-size: 9px; }
+      .foot { margin-top: 55px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } .btn:hover { transform: none; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="wrap">
+      <a href="./" class="brand" aria-label="DBE home">
+        <span class="brand-mark">DBE</span>
+        <span><span class="brand-name">DIMENSIONS BEYOND ENERGY</span><span class="brand-sub">Research network</span></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#explore">Explore online</a>
+        <a href="#projects">Projects</a>
+        <a href="./research/lab.html">Observatory</a>
+        <a href="https://github.com/pjrny/DBE_V0" target="_blank" rel="noopener noreferrer" class="nav-external">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="hero" aria-labelledby="mission-title">
+      <div>
+        <p class="eyebrow">DBE · Research network / 2026</p>
+        <h1 id="mission-title">Mapping paths <em>beyond energy scarcity.</em></h1>
+        <p class="hero-description">A shared gateway to three connected projects: broad discovery across physics and civilization, a scientific evidence-and-dependency framework, and a focused research Observatory studying fusion and related technologies.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="./research/lab.html">Open research Observatory <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-secondary" href="./dimensions/">Read the DBE abstract <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="hero-graphic" aria-label="Decorative diagram representing connected research domains" role="img">
+        <svg viewBox="0 0 480 350" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="net" x1="60" y1="45" x2="420" y2="306" gradientUnits="userSpaceOnUse"><stop stop-color="#83b6e7"/><stop offset=".48" stop-color="#a1e3ee"/><stop offset="1" stop-color="#c4b8f3"/></linearGradient>
+            <radialGradient id="core"><stop stop-color="#6ca9b5" stop-opacity=".55"/><stop offset="1" stop-color="#143043" stop-opacity="0"/></radialGradient>
+          </defs>
+          <circle cx="245" cy="178" r="128" fill="url(#core)"/>
+          <g stroke="url(#net)" stroke-width="1.1" opacity=".42">
+            <path d="M99 113 230 58 377 111 401 249 251 295 94 242Z"/>
+            <path d="M99 113 246 178 377 111M94 242 246 178 401 249M230 58 246 178 251 295M230 58 401 249M99 113 251 295M377 111 94 242"/>
+            <path d="M154 184 246 178 312 209 246 178 189 102" stroke-dasharray="4 6" opacity=".75"/>
+          </g>
+          <g fill="#112837" stroke="url(#net)" stroke-width="2">
+            <circle cx="99" cy="113" r="25"/><circle cx="230" cy="58" r="25"/><circle cx="377" cy="111" r="25"/>
+            <circle cx="401" cy="249" r="25"/><circle cx="251" cy="295" r="25"/><circle cx="94" cy="242" r="25"/>
+            <circle cx="246" cy="178" r="43" fill="#143444" stroke-width="2.5"/>
+          </g>
+          <g fill="#e4f5fa" text-anchor="middle" dominant-baseline="middle" font-size="17" font-family="ui-monospace, monospace" font-weight="700">
+            <text x="99" y="113">A</text><text x="230" y="58">B</text><text x="377" y="111">C</text>
+            <text x="401" y="249">D</text><text x="251" y="295">E</text><text x="94" y="242">F</text>
+          </g>
+          <g text-anchor="middle" dominant-baseline="middle"><text x="246" y="173" font-size="21" fill="#e6fbff" font-weight="780" font-family="ui-sans-serif, sans-serif">DBE</text><text x="246" y="195" font-size="10" fill="#a1cad8" font-family="ui-monospace, monospace" letter-spacing="2">RESEARCH</text></g>
+          <g fill="#9ec6d2" font-size="9" font-family="ui-monospace, monospace" letter-spacing="1"><text x="30" y="53">6 FIELDS</text><text x="336" y="320">1 MISSION</text></g>
+        </svg>
+        <div class="graphic-key"><span>Domains A–F · technical search</span><span>Relationships under review</span></div>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <section class="section" id="explore" aria-labelledby="explore-title">
+      <div class="section-head">
+        <div><p class="eyebrow">Quick access</p><h2 id="explore-title">Explore the research</h2></div>
+        <p>Browser-accessible pages are distinguished from application source code. Only the Observatory is currently an interactive published research tool.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card observatory">
+          <div class="card-top"><span class="symbol" aria-hidden="true">∿</span><span class="status">Interactive · online</span></div>
+          <h3>Research Observatory</h3>
+          <p>Browse the focused DBE-S research stream: paper library, program claims, reviews, daily activity, version history, and the Q ledger. A research record is not automatically scientific confirmation.</p>
+          <a class="launch" href="./research/lab.html">Launch Observatory <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="feature-card dimensions">
+          <div class="card-top"><span class="symbol" aria-hidden="true">∞</span><span class="status readable">Research page · online</span></div>
+          <h3>Dimensions Beyond Energy</h3>
+          <p>Read the original public-facing research abstract: the civilization-scale question, scientific landscape, and the distinction between established mechanisms and speculative possibilities.</p>
+          <a class="launch" href="./dimensions/">Open research abstract <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="feature-card future">
+          <div class="card-top"><span class="symbol" aria-hidden="true">3×3</span><span class="status pending">Web deployment pending</span></div>
+          <h3>SDBES Knowledge Universe</h3>
+          <p>V8 introduces an interactive six-domain map, F/E/A evidence profiles, typed dependency views, dynamics, and revision history. Its React app is in the SDBES branch, not yet hosted on this site.</p>
+          <a class="launch dim" href="https://github.com/pjrny/DBE_V0/tree/SDBES/navigator" target="_blank" rel="noopener noreferrer">View navigator source <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+      <p class="section-note">The Python fusion simulator runs locally; it is not a browser application. The Dimensions page is a preserved copy of the research branch’s standalone HTML abstract.</p>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="section-head">
+        <div><p class="eyebrow">Project directory</p><h2 id="projects-title">Three complementary branches</h2></div>
+        <p>Summaries below follow the branches' README files. They describe different responsibilities, not three competing scientific conclusions.</p>
+      </div>
+      <div class="project-grid">
+        <article class="project">
+          <div class="no">01 / BROAD DISCOVERY</div>
+          <h3>Dimensions Beyond Energy</h3>
+          <p>The concept-discovery and source-gathering layer searches across energy systems, materials, intelligence, frontier physics, and transformations that reduce civilization's energy needs. Its Phase-1 atlas includes 90 candidates and 81 annotated sources. Dimension G separately explores governance and transition risks if a pathway succeeds.</p>
+          <div class="topic"><span>Concept atlas</span><span>Source library</span><span>Dimension G</span></div>
+          <div class="project-links">
+            <a href="https://github.com/pjrny/DBE_V0/blob/dimensions-beyond-energy/README.md" target="_blank" rel="noopener noreferrer">Read README ↗</a>
+            <a href="https://github.com/pjrny/DBE_V0/blob/dimensions-beyond-energy/docs/research/phase1/DBE_RESEARCH_ATLAS.md" target="_blank" rel="noopener noreferrer">View atlas ↗</a>
+          </div>
+        </article>
+        <article class="project">
+          <div class="no">02 / SHARED FRAMEWORK</div>
+          <h3>SDBES</h3>
+          <p>The general evidence-ledger and visualization framework organizes claims, their Formal/Empirical/Applied evidence, structural dependencies, and model-bounded dynamics. Its V8 Knowledge Universe maps six scientific domains; exploratory connections never become causal findings by appearance alone.</p>
+          <div class="topic"><span>Evidence matrix</span><span>Dependencies</span><span>Knowledge universe</span></div>
+          <div class="project-links">
+            <a href="https://github.com/pjrny/DBE_V0/blob/SDBES/README.md" target="_blank" rel="noopener noreferrer">Read README ↗</a>
+            <a href="https://github.com/pjrny/DBE_V0/blob/SDBES/docs/SDBES/V8_MULTIDIMENSIONAL_KNOWLEDGE_UNIVERSE.md" target="_blank" rel="noopener noreferrer">V8 specification ↗</a>
+          </div>
+        </article>
+        <article class="project">
+          <div class="no">03 / SPECIALIZED PROGRAM</div>
+          <h3>Research-grade physics</h3>
+          <p>The focused DBE-S branch studies fusion-plasma stability with a simplified MHD/transport simulator, control actuators, and an Observatory of topology, quantum computing, plasma control, and fusion research. Papers, frozen C/T/D/A claim decisions, and version history are deliberately kept separate.</p>
+          <div class="topic"><span>Fusion simulator</span><span>Research Observatory</span><span>Claim ledger</span></div>
+          <div class="project-links">
+            <a href="https://github.com/pjrny/DBE_V0/blob/feature/research-grade-physics/README.md" target="_blank" rel="noopener noreferrer">Read README ↗</a>
+            <a href="https://github.com/pjrny/DBE_V0/blob/feature/research-grade-physics/research/README.md" target="_blank" rel="noopener noreferrer">Observatory guide ↗</a>
+          </div>
+        </article>
+      </div>
+      <div class="pathway" aria-label="How the projects relate">
+        <div><b><strong>01</strong> Explore the landscape</b>Collect candidate concepts and research sources without presuming they are scientifically validated.</div>
+        <div><b><strong>02</strong> Examine relationships</b>Use SDBES to evaluate scoped claims, evidence, dependencies, and possible cross-domain connections.</div>
+        <div><b><strong>03</strong> Run focused research</b>Use specialized programs such as the DBE-S Observatory to investigate particular mechanisms and publication goals.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot wrap">
+    <span>DBE / Dimensions Beyond Energy Scarcity · Research navigation, not a claim of validated breakthroughs.</span>
+    <a href="https://github.com/pjrny/DBE_V0" target="_blank" rel="noopener noreferrer">Repository on GitHub ↗</a>
+  </footer>
+</body>
+</html>
