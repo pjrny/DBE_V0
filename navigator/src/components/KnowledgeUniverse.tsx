@@ -73,7 +73,7 @@ export function KnowledgeUniverse({ concepts, selected, onSelect, onOpenFilters,
             <button onClick={() => setFocused(null)} disabled={!focused}>Show all domains</button></div>
         </div>
         {concepts.length <= 8 && concepts.length < inventory.concepts.length && <div className="v8-visible-results" aria-label="Matching research concepts">
-          {concepts.map(c => <button key={c.id} onClick={() => onSelect(c.id)}><b>Record {c.id}</b><span>{c.title}</span></button>)}
+          {concepts.map(c => <button key={c.id} onClick={() => onSelect(c.id)}><b>{c.id}</b><span>{c.title}</span></button>)}
           {!concepts.length && <span>No candidates match these filters.</span>}
         </div>}
         <div className="v8-map-wrap">
