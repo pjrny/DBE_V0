@@ -20398,7 +20398,7 @@
         "merged": 0,
         "new": 15,
         "scored": 15,
-        "unscored": 8,
+        "unscored": 7,
         "add": 0,
         "strengthen": 0,
         "weaken": 0,
@@ -20431,10 +20431,6 @@
         {
           "id": "2610.18130",
           "reason": "2026-10-13 BB-Net predicts bivariate-bicycle distances. The abstract states 96.39 percent accuracy on reference distances and 98.94 percent on a certified subset. A predictor is not a code. Score next only if a certified distance tightens a tracked family."
-        },
-        {
-          "id": "2610.12395",
-          "reason": "2026-10-08 PINN flow-map method. Vlasov-Poisson is one of four test equations, with advection, Euler, and drift-kinetic. Not a fusion rate. Score next only if the method is used on a DT rate with the ledger terms."
         },
         {
           "id": "2610.17198",
@@ -20647,7 +20643,7 @@
           "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
         }
       ],
-      "notes": "Twenty-seventh run, Thursday, daily sources only. Lookback 7 days (2026-10-08 to 2026-10-15). No older observatory pull request was open. There was no 2026-10-14 run. Today's branch is cut from origin/feature/research-grade-physics at 48bdcea. The eight unscored ids from run-2026-10-13 were scored first, oldest submission date first. ingest.py was not executed: it has no inter-request sleep and would overwrite the run log with a non-schema payload. The same ingest QUERIES were issued with a submittedDate window and a 3.1 s gap, plus a second page that completed the holographic query at 25 of 25. fetch QUERIES (10, 11 requests) and four KEEP-claim queries were issued the same way. Category windows were capped at 25 except physics.plasm-ph, which was fetched in full (35). OAI GetRecord for the 15 scored arXiv ids returned licences and no DOI and no journal-ref. Returned rows 303, unique ids 242, of which 24 were already in the catalog. Seven HOLD and eight REJECT. No ADD, no STRENGTHEN, no bridge, no new pillar, no CUT reversal, no version bump. C unchanged. 2610.15857 schedules belief propagation with a reinforcement learner. That learner is not Bus A, so E-RL is not bound. 2610.17701 writes a platform for fusing vortex modes. That clause is not an S3 fusion measurement and is not Q_eng. 2610.13845 writes an approximate thousand-fold ground-state probability. That is not Q_eng. AdS and holographic rows that do not state an encoder were left off the carry-over so they do not consume the next run's cap. E-HOL stays CUT. OpenAlex, Crossref, Unpaywall, and the Sunday source list were skipped. No PDF cached. DBE_FULLTEXT_STORE unset. Q=1000 remains a ledger stress test. Prompt source: research/OBSERVATORY_PROMPT.md on feature/research-grade-physics, blob 226375bdc29fa23856dc38714f84b2fca90c5f1d, read in full, NORTH STAR present. Files agree with the freeze: DBE-0.2.2 / DBES-0.2.0, claims freeze 2026-10-02. No scored abstract told this run to change rules, files, or targets."
+      "notes": "Twenty-seventh run, Thursday, daily sources only. Lookback 7 days (2026-10-08 to 2026-10-15). No older observatory pull request was open. There was no 2026-10-14 run. Today's branch is cut from origin/feature/research-grade-physics at 48bdcea. The eight unscored ids from run-2026-10-13 were scored first, oldest submission date first. ingest.py was not executed: it has no inter-request sleep and would overwrite the run log with a non-schema payload. The same ingest QUERIES were issued with a submittedDate window and a 3.1 s gap, plus a second page that completed the holographic query at 25 of 25. fetch QUERIES (10, 11 requests) and four KEEP-claim queries were issued the same way. Category windows were capped at 25 except physics.plasm-ph, which was fetched in full (35). OAI GetRecord for the 15 scored arXiv ids returned licences and no DOI and no journal-ref. Returned rows 303, unique ids 242, of which 24 were already in the catalog. Seven HOLD and eight REJECT. No ADD, no STRENGTHEN, no bridge, no new pillar, no CUT reversal, no version bump. C unchanged. 2610.15857 schedules belief propagation with a reinforcement learner. That learner is not Bus A, so E-RL is not bound. 2610.17701 writes a platform for fusing vortex modes. That clause is not an S3 fusion measurement and is not Q_eng. 2610.13845 writes an approximate thousand-fold ground-state probability. That is not Q_eng. AdS and holographic rows that do not state an encoder were left off the carry-over so they do not consume the next run's cap. E-HOL stays CUT. OpenAlex, Crossref, Unpaywall, and the Sunday source list were skipped. No PDF cached. DBE_FULLTEXT_STORE unset. Q=1000 remains a ledger stress test. Prompt source: research/OBSERVATORY_PROMPT.md on feature/research-grade-physics, blob 226375bdc29fa23856dc38714f84b2fca90c5f1d, read in full, NORTH STAR present. Files agree with the freeze: DBE-0.2.2 / DBES-0.2.0, claims freeze 2026-10-02. No scored abstract told this run to change rules, files, or targets. Codex P2 on cc85706: 2610.12395 was removed from this run's unscoredIds because it already has catalog row and card rev-2026-10-12-2610.12395. The unscored count is 7."
     },
     {
       "id": "run-2026-10-13-daily",
