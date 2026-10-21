@@ -1,0 +1,391 @@
+{
+  "id": "run-2026-10-21-daily",
+  "kind": "daily",
+  "startedAt": "2026-10-21T09:20:42-05:00",
+  "finishedAt": "2026-10-21T09:34:00-05:00",
+  "windowStart": "2026-10-14",
+  "windowEnd": "2026-10-21",
+  "sources": [
+    {
+      "id": "arxiv-id-list",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 14,
+      "new": 14,
+      "ms": 297,
+      "error": "The fourteen run-2026-10-20 carry-over ids. All fourteen resolved."
+    },
+    {
+      "id": "arxiv-ingest-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 7,
+      "returned": 41,
+      "new": null,
+      "ms": 1571,
+      "error": "The seven ingest.py QUERIES with submittedDate 2026-10-14 00:00 to 2026-10-22 00:00 UTC, max 40. None was truncated. ingest.py was not executed."
+    },
+    {
+      "id": "arxiv-fetch-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 10,
+      "returned": 90,
+      "new": null,
+      "ms": 7280,
+      "error": "The ten fetch_arxiv.py QUERIES as read-only searches, same window, max 30. fetch-1 returned 30 of 30. fetch_arxiv.py was not run in write mode."
+    },
+    {
+      "id": "arxiv-keep-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 4,
+      "returned": 20,
+      "new": null,
+      "ms": 1634,
+      "error": "qLDPC / surface code (15), plasma control or RL on tokamak or stellarator (1), Vlasov / SRS / SBS / hole burning (4), S3 anyon (0)."
+    },
+    {
+      "id": "arxiv-category-windows",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "partial",
+      "http": 200,
+      "requests": 6,
+      "returned": 258,
+      "new": null,
+      "ms": 1475,
+      "error": "Newest-first caps. Truncated: quant-ph 100 of 425; cond-mat.str-el 40 of 129; cond-mat.mes-hall 40 of 115; hep-th 40 of 228. physics.plasm-ph was complete (38 of 38). Not a bulk scrape of /list pages."
+    },
+    {
+      "id": "arxiv-oai",
+      "url": "https://oaipmh.arxiv.org/oai",
+      "status": "ok",
+      "http": 200,
+      "requests": 15,
+      "returned": 15,
+      "new": 0,
+      "ms": 994,
+      "error": "GetRecord for the 14 carry-overs plus 2610.28538. Every record had a licence. None had a DOI or a journal-ref."
+    },
+    {
+      "id": "openalex",
+      "url": "https://api.openalex.org/works",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": "OPENALEX_API_KEY unset"
+    },
+    {
+      "id": "crossref",
+      "url": "https://api.crossref.org/works",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": "DBE_CONTACT_EMAIL unset. OAI returned no DOI and no journal-ref on the 15 scored ids, so there was no preprint-to-journal merge to check."
+    },
+    {
+      "id": "unpaywall",
+      "url": "https://api.unpaywall.org/v2",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": "DBE_CONTACT_EMAIL unset"
+    },
+    {
+      "id": "weekly-6.2",
+      "url": "section 6.2",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": "Wednesday. Weekly sources are Sunday only."
+    }
+  ],
+  "counts": {
+    "harvested": 423,
+    "duplicates": 110,
+    "merged": 0,
+    "new": 15,
+    "scored": 15,
+    "unscored": 12,
+    "add": 0,
+    "strengthen": 0,
+    "weaken": 0,
+    "hold": 12,
+    "newPillar": 0,
+    "reject": 3
+  },
+  "paperIds": [
+    "2610.22112",
+    "2610.22199",
+    "2610.22315",
+    "2610.22357",
+    "2610.22473",
+    "2610.23043",
+    "2610.23493",
+    "2610.23740",
+    "2610.23815",
+    "2610.23844",
+    "2610.24525",
+    "2610.25213",
+    "2610.26110",
+    "2610.26471",
+    "2610.28538"
+  ],
+  "unscoredIds": [
+    {
+      "id": "2610.19459",
+      "reason": "2026-10-14 qLDPC codes from polynomial minors, including a verified [[255,80,12]] code. E-QEC candidate, over the 15-card cap."
+    },
+    {
+      "id": "2610.20078",
+      "reason": "2026-10-14 strong subadditivity of topological Rényi entropy on the torus for unitary modular categories. Score next only if it states an S3 braid-plus-fusion result; otherwise it is off-path."
+    },
+    {
+      "id": "2610.21317",
+      "reason": "2026-10-15 thermodynamic-limit bootstrap of fractional quantum Hall ground states, including Moore-Read counting and nu=12/5. Not an S3 device. Over the cap."
+    },
+    {
+      "id": "2610.22965",
+      "reason": "2026-10-16 Kitaev and spinon liquids on the square-hexagon-dodecagon lattice. Majorana bands in a spin liquid, not an X and Z logical. E-MZM context, over the cap."
+    },
+    {
+      "id": "2610.23405",
+      "reason": "2026-10-16 Schrödingerised circuits for variable-coefficient Vlasov dynamics. S-L3 candidate as a method, not a rate. Over the cap."
+    },
+    {
+      "id": "2610.23507",
+      "reason": "2026-10-16 coherent-Ising-machine MAP inference for tokamak diagnostic fusion. Not a closed-loop PCS. E-RL context, over the cap."
+    },
+    {
+      "id": "2610.25878",
+      "reason": "2026-10-19 higher-genus contact pages where Fibonacci fusion leaves a channel free and Ising fusion does not. Possible E-S3 theory, over the cap."
+    },
+    {
+      "id": "2610.26784",
+      "reason": "2026-10-19 propagation-assisted local decoding for transversal Cliffords, with reported logical-error ratios against ghost and LOM. E-QEC candidate, over the cap."
+    },
+    {
+      "id": "2610.27556",
+      "reason": "2026-10-20 smooth hybrid lattice surgery for group surface codes, including non-Abelian groups. E-QEC, and a possible E-S3 bridge if the group is treated as an anyon theory. Over the cap. Do not auto-open nonabelian-qldpc."
+    },
+    {
+      "id": "2610.28008",
+      "reason": "2026-10-20 certified non-degenerate maximum-likelihood benchmark for qLDPC decoders on two bivariate bicycle codes. E-QEC candidate, over the cap."
+    },
+    {
+      "id": "2610.28148",
+      "reason": "2026-10-20 field theories of anyon condensation, including a criterion for non-abelian condensates. Not a braid measurement. E-S3 context, over the cap."
+    },
+    {
+      "id": "2610.28253",
+      "reason": "2026-10-20 proliferation transitions for quantum doubles of finite groups. Condensation theory, not an S3 braid-plus-fusion measurement. Over the cap."
+    }
+  ],
+  "fieldCounts": {
+    "tqc": 7,
+    "anyons": 2,
+    "time-crystal": 1,
+    "plasma": 5
+  },
+  "gateMisses": {
+    "A1": 3,
+    "A2": 3,
+    "A3": 15,
+    "A4": 15,
+    "A5": 15,
+    "A6": 0,
+    "A7": 0,
+    "A8": 0,
+    "G1": 0,
+    "G2": 0,
+    "G3": 0,
+    "G4": 3,
+    "G5": 0,
+    "G6": 0
+  },
+  "claimDelta": "none",
+  "versionBump": null,
+  "fulltext": {
+    "cached": 0,
+    "privateOnly": 0,
+    "noOA": 0
+  },
+  "tests": {
+    "command": "PYTHONPATH=. python -m pytest -q tests/test_research.py tests/test_claims.py tests/test_api.py tests/test_plasma.py tests/test_transport.py",
+    "result": "pass",
+    "summary": "19 passed, 30 subtests passed"
+  },
+  "branch": "observatory/2026-10-21",
+  "pr": null,
+  "suspiciousContent": [],
+  "scoreRoutes": [
+    {
+      "paper": "2610.22112",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.22199",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.22315",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.22357",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.22473",
+      "bind": "",
+      "action": "REJECT",
+      "route": "SKIPPED",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": null,
+      "note": "score.py skipped: no claim id. Card route is REJECT so the paper is parked on the reading list."
+    },
+    {
+      "paper": "2610.23043",
+      "bind": "",
+      "action": "REJECT",
+      "route": "SKIPPED",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": null,
+      "note": "score.py skipped: no claim id. Card route is REJECT so the paper is parked on the reading list."
+    },
+    {
+      "paper": "2610.23493",
+      "bind": "S-L3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.23740",
+      "bind": "S-L3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.23815",
+      "bind": "",
+      "action": "REJECT",
+      "route": "SKIPPED",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": null,
+      "note": "score.py skipped: no claim id. Card route is REJECT so the paper is parked on the reading list."
+    },
+    {
+      "paper": "2610.23844",
+      "bind": "E-RL",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.24525",
+      "bind": "E-RL",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.25213",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.26110",
+      "bind": "S-L3",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.26471",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    },
+    {
+      "paper": "2610.28538",
+      "bind": "E-QEC",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "venue": "arxiv",
+      "exit": 0,
+      "note": "score.py A5 FAIL, ROUTE QUEUE. No AUTO-MERGED PATCH."
+    }
+  ],
+  "notes": "Wednesday daily run. No older observatory pull request was open. Branch observatory/2026-10-21 was cut from origin/feature/research-grade-physics at 5c5c567. The fourteen unscored ids from run-2026-10-20 were scored first, oldest submission date first, then the highest new KEEP-claim paper in the window (2610.28538, NeST). Harvest rows 423, unique ids 323, of which 10 were already in the catalog (duplicates 100 repeat rows + 10 catalog hits = 110). Fuzzy title merge: none. Possible duplicates at similarity 0.85: none. 2610.23815 is not perez-fadon-2026. ingest.py was not executed: it has no inter-request sleep and would replace this run log with a non-schema payload. Its seven QUERIES were issued at 3.1 s spacing, as were the fetch and KEEP queries and the category windows. Category windows are partial: quant-ph, cond-mat.str-el, cond-mat.mes-hall, and hep-th were newest-first caps, not the full week. physics.plasm-ph was complete. No PDF cached. DBE_FULLTEXT_STORE is unset. research/fulltext.json was not created. OPENALEX_API_KEY, DBE_CONTACT_EMAIL, and the other source keys were unset, so OpenAlex, Crossref, and Unpaywall were skipped. No scored paper had a DOI or a journal-ref. Twelve HOLD and three REJECT. No ADD, no STRENGTHEN, no WEAKEN, no new pillar, no bridge. Claims, versions, and pillar engineStatus were not edited. Pillar blocker lines were left as they are: no blocker cleared and no engine status moved. Files agree with the freeze (DBE-0.2.2 / DBES-0.2.0, claims freeze 2026-10-02). Q=1000 remains a ledger stress test. The NeST 10^{-14} extrapolation was not adopted."
+}
