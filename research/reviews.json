@@ -1,6 +1,570 @@
 {
-  "asOf": "2026-10-20",
+  "asOf": "2026-10-21",
   "cards": [
+    {
+      "id": "rev-2026-10-21-2610.22112",
+      "paperId": "2610.22112",
+      "date": "2026-10-21",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: code distance and failure probability are not a plant gain. G2 passes: no energy balance is claimed. G3 passes: distance preservation is reported for the distances they simulated, not as an unbounded law. G4 passes: a narrow-corridor surface code is the E-QEC platform. G5 passes: the ten-logical simulation can be re-run this quarter. G6 passes: no Q_eng is stated."
+      },
+      "gateNote": "G1 passes: code distance and failure probability are not a plant gain. G2 passes: no energy balance is claimed. G3 passes: distance preservation is reported for the distances they simulated, not as an unbounded law. G4 passes: a narrow-corridor surface code is the E-QEC platform. G5 passes: the ten-logical simulation can be re-run this quarter. G6 passes: no Q_eng is stated.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A compiler that preserves distance in simulation is not a measured logical qubit. E-QEC stays C4.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Patchwork is a lattice-surgery compiler for multi-qubit Pauli measurements on a narrow-corridor surface-code layout. Geometric rules cover stabilizer placement and logical Y measurements with twist defects, and a wavefront split marks commit, buffer, and cleanup regions so decoding can run in stages. On three sequential measurements of ten logical qubits, staged decoding stayed close to monolithic decoding over the distances they tested, and the effective distance was preserved in those numerics.",
+        "why": "E-QEC only. A surface-code surgery schedule and a real-time decoding split. Simulation, so C4 does not move.",
+        "limit": "Bare arXiv. One layout family. No hardware."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A3 miss: HOLD, not INCLUDE. A2 pass. A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 63 is round(72 x 0.88).",
+      "autoGate": "miss A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 72,
+        "confidence": 63,
+        "popularity": 46
+      },
+      "math": "arXiv:2610.22112v1, 2026-10-15, quant-ph. OAI licence CC BY 4.0. No DOI and no journal-ref. Three sequential Pauli measurements on ten logical qubits. Staged decoding close to monolithic decoding. Effective distance preserved on the distances tested. Authors Christopher Chamberland, Muyuan Li, Scott Thornton, Justin Gage Lietz, Melody Ren, Antonio deMarti iOlius."
+    },
+    {
+      "id": "rev-2026-10-21-2610.22199",
+      "paperId": "2610.22199",
+      "date": "2026-10-21",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: kilowatts are a computer power, not a plant gain we adopt. G2 passes: the budget is not the fusion ledger, and no term is copied into P_fusion, P_aux, or eta_conv. G3 passes: about 100 kW at about one million qubits is one model point, not an unbounded scaling. G4 passes: surface-code cycles on a Loss-DiVincenzo machine are the E-QEC platform class, as a model. G5 passes: the QFT-versus-FFT comparison can be recomputed this quarter. G6 passes: 100 kW is not Q_eng \u2248 1000."
+      },
+      "gateNote": "G1 passes: kilowatts are a computer power, not a plant gain we adopt. G2 passes: the budget is not the fusion ledger, and no term is copied into P_fusion, P_aux, or eta_conv. G3 passes: about 100 kW at about one million qubits is one model point, not an unbounded scaling. G4 passes: surface-code cycles on a Loss-DiVincenzo machine are the E-QEC platform class, as a model. G5 passes: the QFT-versus-FFT comparison can be recomputed this quarter. G6 passes: 100 kW is not Q_eng \u2248 1000.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A million-qubit power model is not a surface-code threshold and is not Q_eng. E-QEC stays C4. Do not copy 100 kW into the fusion ledger.",
+      "ledger": "none.",
+      "plain": {
+        "core": "The paper builds a wall-power budget for a Loss-DiVincenzo spin-qubit computer, first for the quantum Fourier transform against the classical FFT, then with surface-code error correction. Cryogenic cooling dominates before QEC; at scale, instrumentation and decoding dominate. For about one million physical qubits they estimate about 100 kW, and they say a better control-signal demultiplexing ratio can cut that model by about two orders of magnitude.",
+        "why": "E-QEC only. A model of surface-code energy overhead on a spin platform. The 100 kW figure is a computer power estimate, not a fusion ledger term, and C4 does not move.",
+        "limit": "Bare arXiv. A model, not a measured machine. No plant Q."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A3 miss: HOLD, not INCLUDE. A2 pass. A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 56 is round(64 x 0.88).",
+      "autoGate": "miss A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 64,
+        "confidence": 56,
+        "popularity": 46
+      },
+      "math": "arXiv:2610.22199v1, 2026-10-15, quant-ph. OAI licence arXiv non-exclusive. No DOI and no journal-ref. About 100 kW at about one million physical qubits. Demultiplexing ratio claimed to cut the model by about two orders of magnitude. Cryogenics dominate before QEC. Authors Jo\u00e3o Santos, Jayshankar Nath, Marco Pezzutto, Valentin Savin, Tristan Meunier, Yasser Omar."
+    },
+    {
+      "id": "rev-2026-10-21-2610.22315",
+      "paperId": "2610.22315",
+      "date": "2026-10-21",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: acceptance rate and fidelity are dimensionless. G2 passes: no energy ledger is claimed. G3 passes: the non-exponential simulator cost is a statement about Bravyi-Haah contraction, not a physical cross-section. G4 passes: magic-state factories for surface and color codes sit in the E-QEC stack. G5 passes: the distance-5 timings can be re-run this quarter. G6 passes: no Q_eng is stated."
+      },
+      "gateNote": "G1 passes: acceptance rate and fidelity are dimensionless. G2 passes: no energy ledger is claimed. G3 passes: the non-exponential simulator cost is a statement about Bravyi-Haah contraction, not a physical cross-section. G4 passes: magic-state factories for surface and color codes sit in the E-QEC stack. G5 passes: the distance-5 timings can be re-run this quarter. G6 passes: no Q_eng is stated.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A cheaper classical simulator does not move the code threshold. E-QEC stays C4.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Magna simulates magic-state factories, including distillation, cultivation, and code switching, by writing acceptance rate and accepted-state fidelity as tensor networks that reduce like transversal gates. It allows feedforward on decoder outputs. Bravyi-Haah distillation is taken to 100 output magic states without an exponential cost in the output count, and distance-5 cultivation is timed on color codes and RP^2 surface codes.",
+        "why": "E-QEC only. A classical simulator for magic-state factories. It does not change a hardware threshold, so C4 does not move.",
+        "limit": "Bare arXiv. Simulator only. No device."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A3 miss: HOLD, not INCLUDE. A2 pass. A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 58 is round(66 x 0.88).",
+      "autoGate": "miss A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 66,
+        "confidence": 58,
+        "popularity": 30
+      },
+      "math": "arXiv:2610.22315v1, 2026-10-15, quant-ph. OAI licence arXiv non-exclusive. No DOI and no journal-ref. Bravyi-Haah distillation up to 100 output magic states. Distance-5 cultivation on color codes and RP^2 surface codes. Fifteen rounds of decoder-dependent feedforward in one check. Authors Yifei Wang, Yingfei Gu."
+    },
+    {
+      "id": "rev-2026-10-21-2610.22357",
+      "paperId": "2610.22357",
+      "date": "2026-10-21",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: conditional mutual information is not a plant unit. G2 passes: no power balance is claimed. G3 passes: the exponential buffer bound is a theorem, not an unbounded plant scaling. G4 passes: Z_d qLDPC stabilizer states are the E-QEC platform. G5 passes: the weak-noise bound is a finite lattice statement that can be checked this quarter. G6 passes: no Q_eng is stated."
+      },
+      "gateNote": "G1 passes: conditional mutual information is not a plant unit. G2 passes: no power balance is claimed. G3 passes: the exponential buffer bound is a theorem, not an unbounded plant scaling. G4 passes: Z_d qLDPC stabilizer states are the E-QEC platform. G5 passes: the weak-noise bound is a finite lattice statement that can be checked this quarter. G6 passes: no Q_eng is stated.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Exponential decay of noise-induced mutual information is not a measured logical error rate. E-QEC stays C4.",
+      "ledger": "none.",
+      "plain": {
+        "core": "For the normalized code-projector state of a Z_d qLDPC stabilizer code under local Pauli noise, the conditional mutual information across a buffer decays exponentially with the buffer width, both at weak noise for full-system cuts and at strong noise when the buffer holds no logical operator. Under an extra uniformity assumption the Levin-Wen topological entropy is robust, and at weak noise on a finite lattice there is a constant-layer quasi-local Petz recovery.",
+        "why": "E-QEC only. A stability proof for qLDPC mixed states. It is not a device threshold, so C4 does not move.",
+        "limit": "Bare arXiv. Proof plus a quasi-local recovery bound. No hardware."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A3 miss: HOLD, not INCLUDE. A2 pass. A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 62 is round(70 x 0.88).",
+      "autoGate": "miss A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 70,
+        "confidence": 62,
+        "popularity": 38
+      },
+      "math": "arXiv:2610.22357v1, 2026-10-15, quant-ph. OAI licence arXiv non-exclusive. No DOI and no journal-ref. Exponential CMI decay in two noise regimes. Petz recovery of range O(poly(log n)/epsilon) at weak noise on finite lattices. No DOI and no journal-ref. Authors Tai-Hsuan Yang, Andrew D. Kim, Akash Vijay, Jong Yeon Lee."
+    },
+    {
+      "id": "rev-2026-10-21-2610.22473",
+      "paperId": "2610.22473",
+      "date": "2026-10-21",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: e/3 and a meV binding are not a plant gain. G2 passes: no energy ledger is claimed. G3 passes: the binding scan is finite. G4 fails: an Abelian exciton-quasihole in MoTe2 is not the S3 braid-plus-fusion platform. G5 passes: the diagonalization can be repeated this quarter. G6 passes: no Q_eng is stated."
+      },
+      "gateNote": "G1 passes: e/3 and a meV binding are not a plant gain. G2 passes: no energy ledger is claimed. G3 passes: the binding scan is finite. G4 fails: an Abelian exciton-quasihole in MoTe2 is not the S3 braid-plus-fusion platform. G5 passes: the diagonalization can be repeated this quarter. G6 passes: no Q_eng is stated.",
+      "score": "no claim bound",
+      "action": "REJECT",
+      "route": "REJECT",
+      "version": null,
+      "disputer": "Binding an e/3 quasihole to an exciton does not realize S3. E-S3 stays C3.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Exact diagonalization of a continuum model finds a bound state of a mobile dipolar exciton and an e/3 quasihole in twisted bilayer MoTe2, with meV-scale binding set by exciton mobility and layer separation. The quasihole shows a localized depletion of about e/3 and a moir\u00e9 octupole. Interlayer tunneling deforms that shape and leaves the enclosed charge nearly unchanged.",
+        "why": "No KEEP or HOLD claim. An Abelian e/3 exciton-quasihole pair is not an S3 braid-plus-fusion measurement, so E-S3 is not bound. Reading list.",
+        "limit": "Bare arXiv. Abelian fractional Chern insulator. No braiding."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero claims. A3 miss: REJECT, not INCLUDE. A2 miss (G4). A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 51 is round(58 x 0.88).",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 58,
+        "confidence": 51,
+        "popularity": 30
+      },
+      "math": "arXiv:2610.22473v1, 2026-10-15, cond-mat.str-el. OAI licence CC BY 4.0. No DOI and no journal-ref. e/3 quasihole, meV-scale binding, moir\u00e9 octupole. No braid statistic is computed. Authors Tianhong Lu, Luiz H. Santos."
+    },
+    {
+      "id": "rev-2026-10-21-2610.23043",
+      "paperId": "2610.23043",
+      "date": "2026-10-21",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: coupling and amplitude are model quantities, not a plant gain. G2 passes: no fusion power balance is claimed. G3 passes: the relaxation-time divergence is one mean-field critical point, not a plant law. G4 fails: a Dicke dimer is not a KEEP platform and is not a reversal of the CUT clock. G5 passes: the NAND/NOR window can be re-simulated this quarter. G6 passes: no Q_eng is stated."
+      },
+      "gateNote": "G1 passes: coupling and amplitude are model quantities, not a plant gain. G2 passes: no fusion power balance is claimed. G3 passes: the relaxation-time divergence is one mean-field critical point, not a plant law. G4 fails: a Dicke dimer is not a KEEP platform and is not a reversal of the CUT clock. G5 passes: the NAND/NOR window can be re-simulated this quarter. G6 passes: no Q_eng is stated.",
+      "score": "no claim bound",
+      "action": "REJECT",
+      "route": "REJECT",
+      "version": null,
+      "disputer": "A DTC NAND in a Dicke dimer is not a system clock. E-TC stays CUT. Reversal would need two independent C>=4 sources and an interface contract.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Mean-field and truncated-Wigner runs of two coupled open Dicke models show that coupling discrete time crystals reduces their amplitude and, past a critical coupling, drops them into the normal phase, with a diverging relaxation time at that point. A brief coupling can seed a normal-phase site into a synchronized or anti-synchronized crystal. The authors use three sites as a NAND or NOR and map where that window survives noise.",
+        "why": "No KEEP or HOLD claim. E-TC is CUT as a clock. A Dicke-dimer logic gate does not reverse that cut. Reading list.",
+        "limit": "Bare arXiv. Mean-field cavity model. Not a plant clock."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero claims. A3 miss: REJECT, not INCLUDE. A2 miss (G4). A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 39 is round(44 x 0.88).",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 44,
+        "confidence": 39,
+        "popularity": 34
+      },
+      "math": "arXiv:2610.23043v1, 2026-10-16, quant-ph. OAI licence arXiv non-exclusive. No DOI and no journal-ref. Mean-field Dicke dimer plus truncated Wigner. NAND and NOR from three discrete time crystals. No DOI and no journal-ref. Authors Emmanuel D. G. U, Roy D. Jara, Jayson G. Cosme."
+    },
+    {
+      "id": "rev-2026-10-21-2610.23493",
+      "paperId": "2610.23493",
+      "date": "2026-10-21",
+      "bind": [
+        "S-L3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: the discrete energy and the E\u00d7B cancellation stay inside the equilibrium equations. G2 passes: no fusion power balance is claimed. G3 passes: the cancellation is an identity of this symmetry reduction, not an unbounded rate. G4 passes: a conservative Vlasov-Maxwell equilibrium is an S-L3 method. G5 passes: the boundary-value problem can be re-solved this quarter. G6 passes: no Q_eng is stated."
+      },
+      "gateNote": "G1 passes: the discrete energy and the E\u00d7B cancellation stay inside the equilibrium equations. G2 passes: no fusion power balance is claimed. G3 passes: the cancellation is an identity of this symmetry reduction, not an unbounded rate. G4 passes: a conservative Vlasov-Maxwell equilibrium is an S-L3 method. G5 passes: the boundary-value problem can be re-solved this quarter. G6 passes: no Q_eng is stated.",
+      "score": "S-L3 C4 T2 D2 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "An exact discrete energy for a symmetric equilibrium is not a reactivity bound. S-L3 stays C4. No Q is stated.",
+      "ledger": "none.",
+      "plain": {
+        "core": "A symmetry-reduced class of Vlasov-Maxwell equilibria with pressure gradients is solved as a nonlinear boundary-value problem whose discretization keeps an energy invariant exactly. For any distribution of the constants of motion in this reduction, the E\u00d7B flow cancels an electrostatic part of the pressure-gradient flow. The setting is deliberately simple and is meant as a starting point for kinetic stability studies, not as a reactor rate.",
+        "why": "S-L3 only. A conservative Vlasov-Maxwell equilibrium method. It is not a hole-burning or SRS-SBS rate, and no published reactivity bound tightens, so C4 does not move.",
+        "limit": "Bare arXiv. Strong symmetry reduction. No fusion rate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (S-L3 only). A3 miss: HOLD, not INCLUDE. A2 pass. A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 60 is round(68 x 0.88).",
+      "autoGate": "miss A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 68,
+        "confidence": 60,
+        "popularity": 30
+      },
+      "math": "arXiv:2610.23493v1, 2026-10-16, physics.plasm-ph. OAI licence arXiv non-exclusive. No DOI and no journal-ref. Exact discrete energy invariant. Exact E\u00d7B cancellation against an electrostatic pressure-gradient flow. No rate ratio is stated. Authors Benjamin J. Sturdevant, Hong Qin."
+    },
+    {
+      "id": "rev-2026-10-21-2610.23740",
+      "paperId": "2610.23740",
+      "date": "2026-10-21",
+      "bind": [
+        "S-L3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: 21% and 91% are shares of j_i\u00b7E, not a plant Q. G2 passes: the split is not a fusion ledger and nothing is copied into P_fusion or P_rad. G3 passes: two beta values are two runs, not an unbounded scaling. G4 passes: a 3D hybrid Vlasov-Maxwell run is an S-L3 method. G5 passes: the decomposition can be repeated this quarter. G6 passes: reversible bulk-flow exchange is not Q_eng."
+      },
+      "gateNote": "G1 passes: 21% and 91% are shares of j_i\u00b7E, not a plant Q. G2 passes: the split is not a fusion ledger and nothing is copied into P_fusion or P_rad. G3 passes: two beta values are two runs, not an unbounded scaling. G4 passes: a 3D hybrid Vlasov-Maxwell run is an S-L3 method. G5 passes: the decomposition can be repeated this quarter. G6 passes: reversible bulk-flow exchange is not Q_eng.",
+      "score": "S-L3 C4 T2 D2 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A split of j\u00b7E in turbulence is not a fusion-rate bound. S-L3 stays C4. Do not promote either percentage to a plant gain.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Three-dimensional hybrid Vlasov-Maxwell simulations of decaying turbulence at ion beta 0.25 and 4 split the ion energisation j_i\u00b7E into parallel, diamagnetic, curvature, agyrotropic, and polarisation currents without assuming gyrotropy. The agyrotropic share is 21% at beta 0.25 and 91% at beta 4. The dominant instantaneous channel changes with beta, and reversible exchange with the ion bulk flow dominates the instantaneous rate.",
+        "why": "S-L3 only. A Vlasov-Maxwell accounting of ion energisation in turbulence. It is not a fusion rate and it is not Q_eng, so C4 does not move.",
+        "limit": "Bare arXiv. Decaying turbulence at two beta values. No reactivity."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (S-L3 only). A3 miss: HOLD, not INCLUDE. A2 pass. A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 58 is round(66 x 0.88).",
+      "autoGate": "miss A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 66,
+        "confidence": 58,
+        "popularity": 42
+      },
+      "math": "arXiv:2610.23740v1, 2026-10-16, physics.plasm-ph. OAI licence CC BY 4.0. No DOI and no journal-ref. beta_i0 = 0.25 and 4. Agyrotropic share 21% and 91%. No yield and no Q. Authors L. Richard, S. S. Cerri, O. Pezzi, C. Granier, J. M. TenBarge."
+    },
+    {
+      "id": "rev-2026-10-21-2610.23815",
+      "paperId": "2610.23815",
+      "date": "2026-10-21",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: trap energies and densities are not a plant gain. G2 passes: no ledger is claimed. G3 passes: N\u226420 and a 0.4% comparison are finite. G4 fails: an Abelian anyon gas is not the S3 braid-plus-fusion platform. G5 passes: the N=4 diagonalization check can be repeated this quarter. G6 passes: no Q_eng is stated."
+      },
+      "gateNote": "G1 passes: trap energies and densities are not a plant gain. G2 passes: no ledger is claimed. G3 passes: N\u226420 and a 0.4% comparison are finite. G4 fails: an Abelian anyon gas is not the S3 braid-plus-fusion platform. G5 passes: the N=4 diagonalization check can be repeated this quarter. G6 passes: no Q_eng is stated.",
+      "score": "no claim bound",
+      "action": "REJECT",
+      "route": "REJECT",
+      "version": null,
+      "disputer": "A larger Abelian anyon gas does not certify S3. E-S3 stays C3.",
+      "ledger": "none.",
+      "plain": {
+        "core": "AnyNet is a neural-network wavefunction for a continuum gas of Abelian anyons that builds in the non-analytic short-distance cusp from the statistics. It matches exact diagonalization at N=4, reaches N=16 at intermediate statistics and N=20 for almost-fermions, and stays within 0.4% of a perturbative result in that last case. The study covers a harmonic trap and anyons bound to impurities. No non-Abelian braid or fusion measurement is reported.",
+        "why": "No claim. This is not the same work as perez-fadon-2026 (PRX Intelligence, neural FQHE S-matrix). An Abelian anyon gas is not an S3 braid-plus-fusion gate. Reading list.",
+        "limit": "Bare arXiv. Abelian statistics. Variational, not a processor."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero claims. A3 miss: REJECT, not INCLUDE. A2 miss (G4). A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 48 is round(54 x 0.88).",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 54,
+        "confidence": 48,
+        "popularity": 34
+      },
+      "math": "arXiv:2610.23815v1, 2026-10-16, cond-mat.str-el. OAI licence arXiv non-exclusive. No DOI and no journal-ref. N=4 exact match, N=16 intermediate statistics, N=20 almost-fermions within 0.4% of perturbation. Not a duplicate of perez-fadon-2026. Authors Andres Perez Fadon, Pok Man Tam, Leyna Shackleton."
+    },
+    {
+      "id": "rev-2026-10-21-2610.23844",
+      "paperId": "2610.23844",
+      "date": "2026-10-21",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: growth rates and a wall-clock ratio are not a plant gain. G2 passes: no power balance is claimed. G3 passes: the 10,000\u00d7 figure is one inference-versus-JOREK comparison, not an unbounded cross-section. G4 passes: tokamak linear MHD is the E-RL machine class. There is still no actuator loop. G5 passes: the held-out n=1\u20134 screen can be re-scored this quarter. G6 passes: no Q_eng is stated."
+      },
+      "gateNote": "G1 passes: growth rates and a wall-clock ratio are not a plant gain. G2 passes: no power balance is claimed. G3 passes: the 10,000\u00d7 figure is one inference-versus-JOREK comparison, not an unbounded cross-section. G4 passes: tokamak linear MHD is the E-RL machine class. There is still no actuator loop. G5 passes: the held-out n=1\u20134 screen can be re-scored this quarter. G6 passes: no Q_eng is stated.",
+      "score": "E-RL C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A faster surrogate of linear JOREK is not an attached controller. E-RL stays C4. The speedup is not a plant Q.",
+      "ledger": "none.",
+      "plain": {
+        "core": "ModeCast is a learned surrogate of JOREK linear MHD. Trained on more than 45,000 simulations, it returns toroidal mode numbers n=1\u20134, the spatial structure, and the growth rate. Excluding the equilibrium solve, one GPU inference is described as over 10,000 times faster than the multi-core linear JOREK runs, and the held-out set had no missed unstable cases. A resistivity scan outside the training set is used to refit the growth-rate head.",
+        "why": "E-RL only. A tokamak MHD stability surrogate, not a closed-loop controller. It does not beat a disruption baseline, so M2 stays open and C4 does not move.",
+        "limit": "Bare arXiv. Workshop paper. Linear phase only. No actuator."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-RL only). A3 miss: HOLD, not INCLUDE. A2 pass. A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 62 is round(70 x 0.88).",
+      "autoGate": "miss A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 70,
+        "confidence": 62,
+        "popularity": 50
+      },
+      "math": "arXiv:2610.23844v1, 2026-10-16, physics.plasm-ph. OAI licence CC BY 4.0. No DOI and no journal-ref. More than 45,000 JOREK runs. n=1\u20134. No missed unstable held-out cases. About 10,000\u00d7 inference versus linear JOREK, equilibrium solve excluded. NeurIPS 2026 workshop paper. Authors Alex Higginbottom, Zara Z. Ercan, Abetharan Antony, Guzman Sanchez Gonzalez, Rafael Grazzini Placucci, Armand Kassa\u00ef Koupa\u00ef, Artur P. Toshev."
+    },
+    {
+      "id": "rev-2026-10-21-2610.24525",
+      "paperId": "2610.24525",
+      "date": "2026-10-21",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: density and CRPS are diagnostic scores, not a plant gain. G2 passes: the transport equation is a surrogate constraint, and no P_fusion or eta_conv is stated. G3 passes: four uncertainty methods on a set of discharges are not an unbounded scaling. G4 passes: DIII-D reflectometry and interferometry are the Bus A diagnostic platform. G5 passes: the reconstructions can be repeated this year. G6 passes: no Q_eng is stated."
+      },
+      "gateNote": "G1 passes: density and CRPS are diagnostic scores, not a plant gain. G2 passes: the transport equation is a surrogate constraint, and no P_fusion or eta_conv is stated. G3 passes: four uncertainty methods on a set of discharges are not an unbounded scaling. G4 passes: DIII-D reflectometry and interferometry are the Bus A diagnostic platform. G5 passes: the reconstructions can be repeated this year. G6 passes: no Q_eng is stated.",
+      "score": "E-RL C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Seeing the core density is not closing the control loop. E-RL stays C4.",
+      "ledger": "none.",
+      "plain": {
+        "core": "A Fourier neural operator stands in for a one-dimensional particle transport solve so that core electron density can be reconstructed, with uncertainty, from partial reflectometry and interferometry. Four uncertainty methods are scored with CRPS and coverage, on the observed and unobserved regions, including synthetic and experimental DIII-D discharges. The paper compares the reconstruction with a standard analytical fit.",
+        "why": "E-RL only. A DIII-D density reconstruction on the diagnostic side of Bus A. It does not command an actuator and does not beat a disruption metric, so M2 stays open and C4 does not move.",
+        "limit": "Bare arXiv. CC BY-NC-SA. Reconstruction, not control."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-RL only). A3 miss: HOLD, not INCLUDE. A2 pass. A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 63 is round(72 x 0.88).",
+      "autoGate": "miss A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 72,
+        "confidence": 63,
+        "popularity": 46
+      },
+      "math": "arXiv:2610.24525v1, 2026-10-17, physics.plasm-ph. OAI licence CC BY-NC-SA 4.0. No DOI and no journal-ref. Fourier neural operator of a 1D particle transport equation. DIII-D synthetic and experimental discharges. CRPS and coverage reported; no control metric. Authors D. Sorokin, A. Granovskiy, M. Stokolesov, E. Adishchev, M. Nurgaliev, G. Subbotin."
+    },
+    {
+      "id": "rev-2026-10-21-2610.25213",
+      "paperId": "2610.25213",
+      "date": "2026-10-21",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: [[n,k,d]] and physical error rates are code units, not a plant gain. G2 passes: no energy ledger is claimed. G3 passes: beating the Gross code is a finite comparison under the noise models tested. G4 passes: lifted-product qLDPC codes are the E-QEC platform. G5 passes: the reported codes can be rebuilt and decoded this quarter. G6 passes: no Q_eng is stated."
+      },
+      "gateNote": "G1 passes: [[n,k,d]] and physical error rates are code units, not a plant gain. G2 passes: no energy ledger is claimed. G3 passes: beating the Gross code is a finite comparison under the noise models tested. G4 passes: lifted-product qLDPC codes are the E-QEC platform. G5 passes: the reported codes can be rebuilt and decoded this quarter. G6 passes: no Q_eng is stated.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A better simulated code family is not a measured threshold. E-QEC stays C4.",
+      "ledger": "none.",
+      "plain": {
+        "core": "LiftDiff trains a discrete diffusion model to propose base matrices over a group algebra, expands them to lifted-product qLDPC codes, and guides the sampler with girth, degree, sparsity, and decoding performance. Reported parameters include [[169,13,11]], [[143,15,9]], [[260,24,10]], and a [[247,19,14]] code with the highest kd^2/n among the baselines they compare. Several codes beat the Gross code across a range of physical error rates in code-capacity and circuit-level noise.",
+        "why": "E-QEC only. A search for qLDPC codes. Beating the Gross code in simulation does not tighten a hardware bound, so C4 does not move.",
+        "limit": "Bare arXiv. Generated codes, simulated noise. No device."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A3 miss: HOLD, not INCLUDE. A2 pass. A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 60 is round(68 x 0.88).",
+      "autoGate": "miss A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 68,
+        "confidence": 60,
+        "popularity": 30
+      },
+      "math": "arXiv:2610.25213v1, 2026-10-18, quant-ph. OAI licence CC BY 4.0. No DOI and no journal-ref. [[169,13,11]], [[143,15,9]], [[260,24,10]], [[247,19,14]]. Gross-code comparison under code-capacity and circuit-level noise. Authors Yotam Peled, Eliya Nachmani."
+    },
+    {
+      "id": "rev-2026-10-21-2610.26110",
+      "paperId": "2610.26110",
+      "date": "2026-10-21",
+      "bind": [
+        "S-L3"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: moments, thermal energy, and a bounded control effort are not a plant gain. G2 passes: no fusion power balance is claimed. G3 passes: the horizon is a prescribed interval, not an unbounded law. G4 passes: a controlled Vlasov-Poisson system is an S-L3 method. It is not a tokamak PCS, so E-RL is not bound. G5 passes: the particle-grid system can be re-run this quarter. G6 passes: no Q_eng is stated."
+      },
+      "gateNote": "G1 passes: moments, thermal energy, and a bounded control effort are not a plant gain. G2 passes: no fusion power balance is claimed. G3 passes: the horizon is a prescribed interval, not an unbounded law. G4 passes: a controlled Vlasov-Poisson system is an S-L3 method. It is not a tokamak PCS, so E-RL is not bound. G5 passes: the particle-grid system can be re-run this quarter. G6 passes: no Q_eng is stated.",
+      "score": "S-L3 C4 T2 D2 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Moment control in a Vlasov-Poisson box is not a rate bound and not Bus A. S-L3 stays C4. No Q is written.",
+      "ledger": "none.",
+      "plain": {
+        "core": "An external magnetic field, expanded in localized basis functions, is used as a full-horizon control on a two-dimensional Vlasov-Poisson system. The optimality system has a backward Vlasov equation, an elliptic adjoint, and a variational inequality for bounded controls, then a particle-grid gradient. In the reported runs the full-horizon correction further reduces relative thermal energy near the boundaries compared with an instantaneous control, on a prescribed time interval.",
+        "why": "S-L3 only. A controlled Vlasov-Poisson method. It is not a tokamak PCS, so E-RL is not bound, and it states no reactivity, so C4 does not move.",
+        "limit": "Bare arXiv. Two-dimensional Vlasov-Poisson. math.NA. No plant."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (S-L3 only). A3 miss: HOLD, not INCLUDE. A2 pass. A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 56 is round(64 x 0.88).",
+      "autoGate": "miss A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 64,
+        "confidence": 56,
+        "popularity": 38
+      },
+      "math": "arXiv:2610.26110v1, 2026-10-19, math.NA. OAI licence CC BY 4.0. No DOI and no journal-ref. 2D Vlasov-Poisson. Full-horizon magnetic control versus an instantaneous baseline. No rate ratio. Authors Giacomo Albi, Giacomo Dimarco, Federica Ferrarese, Lorenzo Pareschi."
+    },
+    {
+      "id": "rev-2026-10-21-2610.26471",
+      "paperId": "2610.26471",
+      "date": "2026-10-21",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: logical error and circuit depth are code metrics, not a plant gain. G2 passes: no fusion ledger is claimed. G3 passes: more than tenfold versus previous estimates, at stated p, is not an unbounded scaling. G4 passes: surface-code circuits on 171Yb are the E-QEC platform. G5 passes: the circuit-level comparison can be re-run this quarter. G6 passes: p~10^{-3} is not Q_eng."
+      },
+      "gateNote": "G1 passes: logical error and circuit depth are code metrics, not a plant gain. G2 passes: no fusion ledger is claimed. G3 passes: more than tenfold versus previous estimates, at stated p, is not an unbounded scaling. G4 passes: surface-code circuits on 171Yb are the E-QEC platform. G5 passes: the circuit-level comparison can be re-run this quarter. G6 passes: p~10^{-3} is not Q_eng.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A partial-FT overhead model does not move the surface-code C4. The 10^{-3} window is not a plant Q.",
+      "ledger": "none.",
+      "plain": {
+        "core": "The partially fault-tolerant STAR architecture is co-designed with neutral-atom arrays, using a noise bias in 171Yb Rydberg gates that pulse shaping can sharpen. Circuit-level surface-code simulations show more than a tenfold drop in logical error relative to earlier estimates for this architecture. For a Fermi-Hubbard circuit they find partial fault tolerance using fewer resources than a fully fault-tolerant synthesis in the window they plot, around physical error 10^{-3} and a few thousand qubits.",
+        "why": "E-QEC only. An overhead model for partial fault tolerance on neutral atoms. The logical-error drop is against previous estimates, not a new hardware bound, so C4 does not move.",
+        "limit": "Bare arXiv. Simulation and resource counts. No device run."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A3 miss: HOLD, not INCLUDE. A2 pass. A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 61 is round(69 x 0.88).",
+      "autoGate": "miss A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 69,
+        "confidence": 61,
+        "popularity": 34
+      },
+      "math": "arXiv:2610.26471v1, 2026-10-19, quant-ph. OAI licence arXiv non-exclusive. No DOI and no journal-ref. More than 10\u00d7 lower logical error than earlier STAR estimates. Partial versus full FT compared near p~10^{-3} and a few thousand qubits. Authors Stefano Veroni, Aydin Deger, Andrew J. Daley."
+    },
+    {
+      "id": "rev-2026-10-21-2610.28538",
+      "paperId": "2610.28538",
+      "date": "2026-10-21",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: code parameters, a threshold, a cycle time, and a logical error probability are not a plant gain. G2 passes: no fusion energy accounting is claimed. G3 passes: the 10^{-14} figure assumes a ten-fold shuttling improvement and is not adopted as a scaling law. The threshold above 10^{-3} is one circuit-level family. G4 passes: qLDPC cycles on silicon spin qubits are the E-QEC platform. The groups are shuttling groups, not an anyon theory, so E-S3 is not bound. G5 passes: the [[150,30,10]] gadget and the threshold runs can be re-checked this year. The 10^{-14} extrapolation is not the falsifier. G6 passes: no Q_eng is stated."
+      },
+      "gateNote": "G1 passes: code parameters, a threshold, a cycle time, and a logical error probability are not a plant gain. G2 passes: no fusion energy accounting is claimed. G3 passes: the 10^{-14} figure assumes a ten-fold shuttling improvement and is not adopted as a scaling law. The threshold above 10^{-3} is one circuit-level family. G4 passes: qLDPC cycles on silicon spin qubits are the E-QEC platform. The groups are shuttling groups, not an anyon theory, so E-S3 is not bound. G5 passes: the [[150,30,10]] gadget and the threshold runs can be re-checked this year. The 10^{-14} extrapolation is not the falsifier. G6 passes: no Q_eng is stated.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A shuttle-track layout and an extrapolated 10^{-14} are not a measured logical qubit. The ten-fold shuttling assumption is not a bound. E-QEC stays C4.",
+      "ledger": "none.",
+      "plain": {
+        "core": "NeST lays silicon spin qubits on nested conveyor-belt shuttling tracks whose motions copy multiplication in a family of groups, so long-range qLDPC checks can be collision-free train moves. A search in that family returns rate-20% codes up to [[1400,280,\u226428]]. Circuit-level simulations that include shuttling dephasing give thresholds above 10^{-3} and stabiliser cycles under 50 microseconds. An extrapolation to a logical error of 10^{-14} per qubit per round assumes a ten-fold improvement on early shuttling demonstrations and other physical errors at 0.1%; that extrapolation is not adopted.",
+        "why": "E-QEC only. A qLDPC and spin-shuttle co-design. The group in the layout is a shuttling group, not an anyon theory, so E-S3 is not bound. Thresholds are simulated, so C4 does not move.",
+        "limit": "Bare arXiv. One author. The 10^{-14} figure is an extrapolation, not a measurement."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A3 miss: HOLD, not INCLUDE. A2 pass. A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 65 is round(74 x 0.88).",
+      "autoGate": "miss A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 74,
+        "confidence": 65,
+        "popularity": 26
+      },
+      "math": "arXiv:2610.28538v1, 2026-10-20, quant-ph. OAI licence CC BY 4.0. No DOI and no journal-ref. Rate-20% codes up to [[1400,280,\u226428]]. Thresholds above 10^{-3}. Cycles under 50 microseconds. [[150,30,10]] surgery gadget, 29% more gate layers, no extra qubits. 10^{-14} is an extrapolation with a ten-fold shuttling assumption and p=0.1% other errors. Authors Adam Siegel."
+    },
     {
       "id": "rev-2026-10-20-2610.18967",
       "paperId": "2610.18967",
