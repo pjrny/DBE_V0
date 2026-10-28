@@ -1,0 +1,390 @@
+{
+  "id": "run-2026-10-28-daily",
+  "kind": "daily",
+  "startedAt": "2026-10-28T09:18:23-05:00",
+  "finishedAt": "2026-10-28T09:30:56-05:00",
+  "windowStart": "2026-10-21",
+  "windowEnd": "2026-10-28",
+  "sources": [
+    {
+      "id": "arxiv-id-list",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 12,
+      "new": 12,
+      "ms": 324,
+      "error": "The twelve run-2026-10-21 carry-over ids. All twelve resolved."
+    },
+    {
+      "id": "arxiv-ingest-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 7,
+      "returned": 34,
+      "new": null,
+      "ms": 2351,
+      "error": "The seven ingest.py QUERIES with submittedDate 2026-10-21 00:00 to 2026-10-29 00:00 UTC, max 40. None was truncated. ingest.py was not executed: it has no inter-request sleep and would replace this run log with a non-schema payload."
+    },
+    {
+      "id": "arxiv-fetch-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 10,
+      "returned": 78,
+      "new": null,
+      "ms": 6549,
+      "error": "The ten fetch_arxiv.py QUERIES as read-only searches, same window, max 30. None was truncated. fetch_arxiv.py was not run in write mode."
+    },
+    {
+      "id": "arxiv-keep-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 4,
+      "returned": 32,
+      "new": null,
+      "ms": 1354,
+      "error": "qLDPC or surface code (9), tokamak or stellarator control (11), Vlasov or SRS or SBS or hole burning (11), S3 anyon braid or fusion (1)."
+    },
+    {
+      "id": "arxiv-category-windows",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "partial",
+      "http": 200,
+      "requests": 5,
+      "returned": 272,
+      "new": null,
+      "ms": 2214,
+      "error": "Newest-first caps. Truncated: quant-ph 100 of 379; cond-mat.str-el 40 of 109; cond-mat.mes-hall 40 of 115; hep-th 40 of 236. physics.plasm-ph was complete (52 of 52). Not a bulk scrape of /list pages."
+    },
+    {
+      "id": "arxiv-oai",
+      "url": "https://oaipmh.arxiv.org/oai",
+      "status": "ok",
+      "http": 200,
+      "requests": 15,
+      "returned": 15,
+      "new": 0,
+      "ms": 1760,
+      "error": "GetRecord for the 15 scored ids. Every record had a licence. None had a DOI or a journal-ref."
+    },
+    {
+      "id": "openalex",
+      "url": "https://api.openalex.org/works",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": "OPENALEX_API_KEY unset"
+    },
+    {
+      "id": "crossref",
+      "url": "https://api.crossref.org/works",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": "DBE_CONTACT_EMAIL unset. OAI returned no DOI and no journal-ref on the 15 scored ids, so there was no preprint-to-journal merge to check."
+    },
+    {
+      "id": "unpaywall",
+      "url": "https://api.unpaywall.org/v2",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": "DBE_CONTACT_EMAIL unset"
+    },
+    {
+      "id": "weekly-6.2",
+      "url": "section 6.2",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": "Wednesday. Weekly sources are Sunday only."
+    }
+  ],
+  "counts": {
+    "harvested": 428,
+    "duplicates": 78,
+    "merged": 0,
+    "new": 15,
+    "scored": 15,
+    "unscored": 15,
+    "add": 0,
+    "strengthen": 0,
+    "weaken": 0,
+    "hold": 9,
+    "newPillar": 0,
+    "reject": 6
+  },
+  "paperIds": [
+    "2610.19459",
+    "2610.20078",
+    "2610.21317",
+    "2610.22965",
+    "2610.23405",
+    "2610.23507",
+    "2610.25878",
+    "2610.26784",
+    "2610.27556",
+    "2610.28008",
+    "2610.28148",
+    "2610.28253",
+    "2610.32347",
+    "2610.31877",
+    "2610.35735"
+  ],
+  "unscoredIds": [
+    {
+      "id": "2610.37552",
+      "reason": "2026-10-27 Fibonacci anyon CNOT compiler, leakage about 10^{-10} at length 69 in their search. Not an S3 braid-plus-fusion gate. Score only if a later card can bind it without treating Fibonacci as S3. Over the 15-card cap after the twelve carry-overs."
+    },
+    {
+      "id": "2610.36029",
+      "reason": "2026-10-26 AlgebrasTQD, GAP code for condensable algebras of twisted quantum doubles, including non-Abelian surface-code gates. E-QEC candidate. Do not auto-open nonabelian-qldpc. Over the cap."
+    },
+    {
+      "id": "2610.32152",
+      "reason": "2026-10-23 Trident load verification for yoked surface codes. E-QEC architecture. ACM DOI 10.1145/3845814.3850031 resolved this run; that is a conference identifier, not a journal, so it would not pass A5. Over the cap."
+    },
+    {
+      "id": "2610.30087",
+      "reason": "2026-10-21 Injection of resource states for parallel universal logic in concatenated high-rate CSS codes. E-QEC architecture, simulation only. Over the cap."
+    },
+    {
+      "id": "2610.33347",
+      "reason": "2026-10-23 Junction hook errors in the triangular color code, distances 7, 9, and 11. E-QEC. Over the cap."
+    },
+    {
+      "id": "2610.35099",
+      "reason": "2026-10-26 Self-correcting 3D surface code with local dimension growing as Θ(N). E-QEC theory. The growing dimension is not a device. Over the cap."
+    },
+    {
+      "id": "2610.32264",
+      "reason": "2026-10-23 Tokamak-SI, a DIII-D label catalog for AE, ELM, tearing, and related events. E-RL context, not a closed control loop. Over the cap."
+    },
+    {
+      "id": "2610.32428",
+      "reason": "2026-10-23 Quantum secret sharing from CSS qLDPC codes. Uses qLDPC as an access structure, not as the error layer. Over the cap."
+    },
+    {
+      "id": "2610.35507",
+      "reason": "2026-10-26 Journal version in Physical Review E 114, 044136 (DOI 10.1103/xhzy-hxdw). Bimodal Maxwellian reactivity about a factor of two above a single Maxwellian at low energy for D-D and D-T. Not an S-L3 solver and not a Q_eng result. Do not adopt. Over the cap."
+    },
+    {
+      "id": "2610.30638",
+      "reason": "2026-10-22 Experimental forward energy transfer in tokamak turbulence (CTS and DBS). Not a control loop and not a Vlasov, hole-burning, SRS, or SBS method. Over the cap."
+    },
+    {
+      "id": "2610.36686",
+      "reason": "2026-10-27 Time-domain anyonic interference versus dephasing in a fractional quantum Hall proposal. Not an S3 gate. Over the cap."
+    },
+    {
+      "id": "2610.36567",
+      "reason": "2026-10-27 AnyFormer neural wavefunctions for continuum semions. Abelian statistics, not S3. Over the cap."
+    },
+    {
+      "id": "2610.30081",
+      "reason": "2026-10-21 AnyonWiki.org fusion-category database. A resource, not a braid or fusion measurement. Over the cap."
+    },
+    {
+      "id": "2610.32767",
+      "reason": "2026-10-23 Edge-to-vortex transition in 2M-WS2 superconducting rings. E-MZM context. No X and Z logical. Over the cap."
+    },
+    {
+      "id": "2610.29446",
+      "reason": "2026-10-21 Cr chains on Bi2Pd. Zero-bias end modes and a localization length of about three sites. E-MZM context, not an X and Z logical. Over the cap."
+    }
+  ],
+  "fieldCounts": {
+    "tqc": 7,
+    "anyons": 3,
+    "topology": 1,
+    "majorana": 1,
+    "plasma": 2,
+    "braid-knot": 1
+  },
+  "gateMisses": {
+    "A1": 6,
+    "A2": 6,
+    "A3": 15,
+    "A4": 15,
+    "A5": 15,
+    "A6": 0,
+    "A7": 0,
+    "A8": 0,
+    "G1": 0,
+    "G2": 0,
+    "G3": 0,
+    "G4": 6,
+    "G5": 0,
+    "G6": 0
+  },
+  "claimDelta": "none",
+  "versionBump": null,
+  "fulltext": {
+    "cached": 0,
+    "privateOnly": 0,
+    "noOA": 0
+  },
+  "tests": {
+    "command": "PYTHONPATH=. python -m pytest -q tests/test_research.py tests/test_claims.py tests/test_api.py tests/test_plasma.py tests/test_transport.py",
+    "result": "pass",
+    "summary": "19 passed, 30 subtests passed"
+  },
+  "branch": "observatory/2026-10-28",
+  "pr": null,
+  "suspiciousContent": [],
+  "scoreRoutes": [
+    {
+      "paper": "2610.19459",
+      "bind": "E-QEC",
+      "cliBind": "E-QEC",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": true
+    },
+    {
+      "paper": "2610.20078",
+      "bind": null,
+      "cliBind": "E-S3",
+      "action": "REJECT",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": true
+    },
+    {
+      "paper": "2610.21317",
+      "bind": null,
+      "cliBind": "E-S3",
+      "action": "REJECT",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": true
+    },
+    {
+      "paper": "2610.22965",
+      "bind": null,
+      "cliBind": "E-MZM",
+      "action": "REJECT",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": true
+    },
+    {
+      "paper": "2610.23405",
+      "bind": "S-L3",
+      "cliBind": "S-L3",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": true
+    },
+    {
+      "paper": "2610.23507",
+      "bind": "E-RL",
+      "cliBind": "E-RL",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": true
+    },
+    {
+      "paper": "2610.25878",
+      "bind": null,
+      "cliBind": "E-S3",
+      "action": "REJECT",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": true
+    },
+    {
+      "paper": "2610.26784",
+      "bind": "E-QEC",
+      "cliBind": "E-QEC",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": true
+    },
+    {
+      "paper": "2610.27556",
+      "bind": "E-QEC",
+      "cliBind": "E-QEC",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": true
+    },
+    {
+      "paper": "2610.28008",
+      "bind": "E-QEC",
+      "cliBind": "E-QEC",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": true
+    },
+    {
+      "paper": "2610.28148",
+      "bind": null,
+      "cliBind": "E-S3",
+      "action": "REJECT",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": true
+    },
+    {
+      "paper": "2610.28253",
+      "bind": null,
+      "cliBind": "E-S3",
+      "action": "REJECT",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": true
+    },
+    {
+      "paper": "2610.32347",
+      "bind": "E-QEC",
+      "cliBind": "E-QEC",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": true
+    },
+    {
+      "paper": "2610.31877",
+      "bind": "E-QEC",
+      "cliBind": "E-QEC",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": true
+    },
+    {
+      "paper": "2610.35735",
+      "bind": "E-QEC",
+      "cliBind": "E-QEC",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": true
+    }
+  ],
+  "notes": "Wednesday daily run. No older observatory pull request was open. Branch observatory/2026-10-28 was cut from origin/feature/research-grade-physics at a1caa93. The twelve unscored ids from run-2026-10-21 were scored first, oldest submission date first, then the three highest new KEEP-claim papers in the window (2610.32347 hardware surface code, 2610.31877 qLDPC temporal degeneracy, 2610.35735 DAWG decoder). Harvest rows 428, unique ids 350, of which 0 were already in the catalog (duplicates 78 repeat rows + 0 catalog hits = 78). Fuzzy title merge: none. Possible duplicates at similarity 0.85: none. ingest.py was not executed. Its seven QUERIES were issued at 3.1 s spacing, as were the fetch, KEEP, and category windows. Category windows are partial because the newest-first caps truncated four categories. OpenAlex, Crossref, and Unpaywall were skipped: OPENALEX_API_KEY and DBE_CONTACT_EMAIL are unset, and no scored paper had a DOI. DBE_FULLTEXT_STORE is unset, so no PDF was cached and research/fulltext.json was not created. Nine HOLD and six REJECT. No ADD, no STRENGTHEN, no WEAKEN, no new pillar, no bridge. 2610.27556 was not bridged to E-S3: the non-Abelian group is a surface-code label, not an S3 measurement, and nonabelian-qldpc stays CUT. Claims, versions, and pillar engineStatus were not edited. Files agree with the freeze (DBE-0.2.2 / DBES-0.2.0, claims freeze 2026-10-02). Q=1000 remains a ledger stress test. The ibm_phoenix fidelities and the 10^{-12} decoding target were not adopted as claim bounds. Popularity on new rows is an author-count harvest gauge, not a citation count."
+}
