@@ -22540,7 +22540,7 @@
         "summary": "19 passed, 30 subtests passed"
       },
       "branch": "observatory/2026-10-28",
-      "pr": null,
+      "pr": "https://github.com/pjrny/DBE_V0/pull/19",
       "suspiciousContent": [],
       "scoreRoutes": [
         {
@@ -22550,7 +22550,7 @@
           "action": "HOLD",
           "exit": 0,
           "route": "QUEUE",
-          "a5": true
+          "a5": "FAIL"
         },
         {
           "paper": "2610.20078",
@@ -22559,7 +22559,7 @@
           "action": "REJECT",
           "exit": 0,
           "route": "QUEUE",
-          "a5": true
+          "a5": "FAIL"
         },
         {
           "paper": "2610.21317",
@@ -22568,7 +22568,7 @@
           "action": "REJECT",
           "exit": 0,
           "route": "QUEUE",
-          "a5": true
+          "a5": "FAIL"
         },
         {
           "paper": "2610.22965",
@@ -22577,7 +22577,7 @@
           "action": "REJECT",
           "exit": 0,
           "route": "QUEUE",
-          "a5": true
+          "a5": "FAIL"
         },
         {
           "paper": "2610.23405",
@@ -22586,7 +22586,7 @@
           "action": "HOLD",
           "exit": 0,
           "route": "QUEUE",
-          "a5": true
+          "a5": "FAIL"
         },
         {
           "paper": "2610.23507",
@@ -22595,7 +22595,7 @@
           "action": "HOLD",
           "exit": 0,
           "route": "QUEUE",
-          "a5": true
+          "a5": "FAIL"
         },
         {
           "paper": "2610.25878",
@@ -22604,7 +22604,7 @@
           "action": "REJECT",
           "exit": 0,
           "route": "QUEUE",
-          "a5": true
+          "a5": "FAIL"
         },
         {
           "paper": "2610.26784",
@@ -22613,7 +22613,7 @@
           "action": "HOLD",
           "exit": 0,
           "route": "QUEUE",
-          "a5": true
+          "a5": "FAIL"
         },
         {
           "paper": "2610.27556",
@@ -22622,7 +22622,7 @@
           "action": "HOLD",
           "exit": 0,
           "route": "QUEUE",
-          "a5": true
+          "a5": "FAIL"
         },
         {
           "paper": "2610.28008",
@@ -22631,7 +22631,7 @@
           "action": "HOLD",
           "exit": 0,
           "route": "QUEUE",
-          "a5": true
+          "a5": "FAIL"
         },
         {
           "paper": "2610.28148",
@@ -22640,7 +22640,7 @@
           "action": "REJECT",
           "exit": 0,
           "route": "QUEUE",
-          "a5": true
+          "a5": "FAIL"
         },
         {
           "paper": "2610.28253",
@@ -22649,7 +22649,7 @@
           "action": "REJECT",
           "exit": 0,
           "route": "QUEUE",
-          "a5": true
+          "a5": "FAIL"
         },
         {
           "paper": "2610.32347",
@@ -22658,7 +22658,7 @@
           "action": "HOLD",
           "exit": 0,
           "route": "QUEUE",
-          "a5": true
+          "a5": "FAIL"
         },
         {
           "paper": "2610.31877",
@@ -22667,7 +22667,7 @@
           "action": "HOLD",
           "exit": 0,
           "route": "QUEUE",
-          "a5": true
+          "a5": "FAIL"
         },
         {
           "paper": "2610.35735",
@@ -22676,10 +22676,10 @@
           "action": "HOLD",
           "exit": 0,
           "route": "QUEUE",
-          "a5": true
+          "a5": "FAIL"
         }
       ],
-      "notes": "Wednesday daily run. No older observatory pull request was open. Branch observatory/2026-10-28 was cut from origin/feature/research-grade-physics at a1caa93. The twelve unscored ids from run-2026-10-21 were scored first, oldest submission date first, then the three highest new KEEP-claim papers in the window (2610.32347 hardware surface code, 2610.31877 qLDPC temporal degeneracy, 2610.35735 DAWG decoder). Harvest rows 428, unique ids 350, of which 0 were already in the catalog (duplicates 78 repeat rows + 0 catalog hits = 78). Fuzzy title merge: none. Possible duplicates at similarity 0.85: none. ingest.py was not executed. Its seven QUERIES were issued at 3.1 s spacing, as were the fetch, KEEP, and category windows. Category windows are partial because the newest-first caps truncated four categories. OpenAlex, Crossref, and Unpaywall were skipped: OPENALEX_API_KEY and DBE_CONTACT_EMAIL are unset, and no scored paper had a DOI. DBE_FULLTEXT_STORE is unset, so no PDF was cached and research/fulltext.json was not created. Nine HOLD and six REJECT. No ADD, no STRENGTHEN, no WEAKEN, no new pillar, no bridge. 2610.27556 was not bridged to E-S3: the non-Abelian group is a surface-code label, not an S3 measurement, and nonabelian-qldpc stays CUT. Claims, versions, and pillar engineStatus were not edited. Files agree with the freeze (DBE-0.2.2 / DBES-0.2.0, claims freeze 2026-10-02). Q=1000 remains a ledger stress test. The ibm_phoenix fidelities and the 10^{-12} decoding target were not adopted as claim bounds. Popularity on new rows is an author-count harvest gauge, not a citation count."
+      "notes": "Wednesday daily run. No older observatory pull request was open. Branch observatory/2026-10-28 was cut from origin/feature/research-grade-physics at a1caa93. The twelve unscored ids from run-2026-10-21 were scored first, oldest submission date first, then the three highest new KEEP-claim papers in the window (2610.32347 hardware surface code, 2610.31877 qLDPC temporal degeneracy, 2610.35735 DAWG decoder). Harvest rows 428, unique ids 350, of which 0 were already in the catalog (duplicates 78 repeat rows + 0 catalog hits = 78). Fuzzy title merge: none. Possible duplicates at similarity 0.85: none. ingest.py was not executed. Its seven QUERIES were issued at 3.1 s spacing, as were the fetch, KEEP, and category windows. Category windows are partial because the newest-first caps truncated four categories. OpenAlex, Crossref, and Unpaywall were skipped: OPENALEX_API_KEY and DBE_CONTACT_EMAIL are unset, and no scored paper had a DOI. DBE_FULLTEXT_STORE is unset, so no PDF was cached and research/fulltext.json was not created. Nine HOLD and six REJECT. No ADD, no STRENGTHEN, no WEAKEN, no new pillar, no bridge. 2610.27556 was not bridged to E-S3: the non-Abelian group is a surface-code label, not an S3 measurement, and nonabelian-qldpc stays CUT. Claims, versions, and pillar engineStatus were not edited. Files agree with the freeze (DBE-0.2.2 / DBES-0.2.0, claims freeze 2026-10-02). Q=1000 remains a ledger stress test. The ibm_phoenix fidelities and the 10^{-12} decoding target were not adopted as claim bounds. Popularity on new rows is an author-count harvest gauge, not a citation count. Idempotent re-run on 2026-10-28 corrected scoreRoutes.a5 from true to FAIL: score.py --venue arxiv prints A5 FAIL and ROUTE QUEUE. Decisions unchanged."
     },
     {
       "id": "run-2026-10-21-daily",
