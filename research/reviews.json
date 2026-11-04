@@ -1,6 +1,558 @@
 {
-  "asOf": "2026-10-28",
+  "asOf": "2026-11-04",
   "cards": [
+    {
+      "id": "rev-2026-11-04-2610.29446",
+      "paperId": "2610.29446",
+      "date": "2026-11-04",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: a localization length is not a plant gain. G2 passes: no energy balance is claimed. G3 passes: the length is extracted for these chains, not an unbounded scaling law. G4 fails: zero-bias end modes are not a Majorana qubit with an X and a Z logical. G5 passes: the residual splitting can be re-fit this quarter. G6 passes: no Q_eng is stated."
+      },
+      "gateNote": "G1 passes: a localization length is not a plant gain. G2 passes: no energy balance is claimed. G3 passes: the length is extracted for these chains, not an unbounded scaling law. G4 fails: zero-bias end modes are not a Majorana qubit with an X and a Z logical. G5 passes: the residual splitting can be re-fit this quarter. G6 passes: no Q_eng is stated.",
+      "score": "no claim bound",
+      "action": "REJECT",
+      "route": "REJECT",
+      "version": null,
+      "disputer": "Zero-bias end modes with a localization length of about three sites are not an X and Z logical. E-MZM stays C1 WATCH.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Cr chains assembled atom by atom on Bi-terminated Bi2Pd are reported to sit in a short-localization-length Shiba regime that suppresses end-mode hybridization. Scanning tunneling spectra show the in-gap states close and reopen with chain length, and zero-bias modes sit at the ends. Green-function calculations reproduce that evolution. From the residual splitting the authors extract a localization length of about three atomic sites.",
+        "why": "No KEEP or HOLD claim. E-MZM is WATCH and is not load-bearing. End modes without an X and a Z logical are not bound. Reading list.",
+        "limit": "Bare arXiv. Scanning tunneling spectroscopy. No logical qubit."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero claims. A3 miss: REJECT, not INCLUDE. A2 miss (G4). A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 46 is round(52 x 0.88).",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 52,
+        "confidence": 46,
+        "popularity": 17
+      },
+      "math": "arXiv:2610.29446v1, 2026-10-21, cond-mat.supr-con. OAI licence CC BY 4.0. Zero-bias end modes. Localization length about three atomic sites. No X and Z logical. Authors Jinkyung Kim, Piotr Kot, Ryo Ogawa, Atustaka Maeda, Andreas J. Heinrich, Nicolas Lorente, Deung-Jang Choi."
+    },
+    {
+      "id": "rev-2026-11-04-2610.30081",
+      "paperId": "2610.30081",
+      "date": "2026-11-04",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: a database is not a plant gain. G2 passes: no energy balance is claimed. G3 passes: rank cutoffs are finite lists, not an unbounded law. G4 fails: a fusion-category catalog is not the S3 braid-plus-fusion platform. G5 passes: the posted rank-7 list can be re-checked this quarter. G6 passes: no Q_eng is stated."
+      },
+      "gateNote": "G1 passes: a database is not a plant gain. G2 passes: no energy balance is claimed. G3 passes: rank cutoffs are finite lists, not an unbounded law. G4 fails: a fusion-category catalog is not the S3 braid-plus-fusion platform. G5 passes: the posted rank-7 list can be re-checked this quarter. G6 passes: no Q_eng is stated.",
+      "score": "no claim bound",
+      "action": "REJECT",
+      "route": "REJECT",
+      "version": null,
+      "disputer": "A fusion-category database is not an S3 braid-plus-fusion measurement. E-S3 stays C3.",
+      "ledger": "none.",
+      "plain": {
+        "core": "AnyonWiki.org publishes algebraic and numerical data for fusion categories. The associated database, as described, includes multiplicity-free pivotal and braided fusion categories through rank 7 and more than 25000 fusion rings, including multiplicity-free fusion rings through rank 10. The paper is about access, citation, and the database design. It does not report a braid or a fusion measurement.",
+        "why": "No KEEP or HOLD claim. A lookup table of fusion rings is not an S3 gate. Reading list.",
+        "limit": "Bare arXiv. A website and a database. No device."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero claims. A3 miss: REJECT, not INCLUDE. A2 miss (G4). A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 40 is round(46 x 0.88).",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 46,
+        "confidence": 40,
+        "popularity": 14
+      },
+      "math": "arXiv:2610.30081v1, 2026-10-21, math.QA. OAI licence CC BY-NC-ND 4.0. Multiplicity-free pivotal categories through rank 7. More than 25000 fusion rings. No braid gate. Authors Colleen Delaney, Ralph Razzouk, Joost Slingerland, Gert Vercleyen."
+    },
+    {
+      "id": "rev-2026-11-04-2610.30087",
+      "paperId": "2610.30087",
+      "date": "2026-11-04",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: spacetime overhead is not a plant gain. G2 passes: no energy balance is claimed. G3 passes: the comparison is for stated concatenations, not an unbounded family law. G4 passes: concatenated CSS codes, checked against surface-code cultivation, are the E-QEC platform. G5 passes: the two-level H-code and Hamming benchmarks can be re-run this quarter. G6 passes: no Q_eng is stated."
+      },
+      "gateNote": "G1 passes: spacetime overhead is not a plant gain. G2 passes: no energy balance is claimed. G3 passes: the comparison is for stated concatenations, not an unbounded family law. G4 passes: concatenated CSS codes, checked against surface-code cultivation, are the E-QEC platform. G5 passes: the two-level H-code and Hamming benchmarks can be re-run this quarter. G6 passes: no Q_eng is stated.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A simulated cultivation comparison is not a measured logical qubit. E-QEC stays C4.",
+      "ledger": "none.",
+      "plain": {
+        "core": "The architecture concatenates small high-rate self-dual CSS codes and injects addressable universal logic by consuming prepared stabilizer states and global magic states. Flag-at-origin prepares the stabilizer resources. A concatenated cultivation protocol prepares the magic states. Steane or Knill teleportation then corrects and applies the gate. For an algorithm of T-depth D_T the authors say at most 12 D_T resource states are consumed. On two-level concatenations of the [[k+4,k,2]] H codes with the Hamming [[15,7,3]] code, they report that concatenated cultivation reduces spacetime by at least one order of magnitude relative to surface-code cultivation.",
+        "why": "E-QEC only. A high-rate CSS architecture and a simulation benchmark. It does not tighten a hardware threshold, so C4 does not move.",
+        "limit": "Bare arXiv. Simulation. No device."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A3 miss: HOLD, not INCLUDE. A2 pass. A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 67 is round(76 x 0.88).",
+      "autoGate": "miss A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 76,
+        "confidence": 67,
+        "popularity": 13
+      },
+      "math": "arXiv:2610.30087v1, 2026-10-21, quant-ph. OAI licence CC BY 4.0. At most 12 D_T resource states, as reported. Concatenated cultivation at least one order of magnitude below surface-code cultivation in their benchmark. Codes [[k+4,k,2]] and Hamming [[15,7,3]]. Authors Joseph Sullivan, David Amaro, Michael A. Perlin."
+    },
+    {
+      "id": "rev-2026-11-04-2610.30638",
+      "paperId": "2610.30638",
+      "date": "2026-11-04",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: a spectral energy transfer is not a plant gain. G2 passes: no reactor power balance is claimed. G3 passes: the transfer is for this discharge set, not an unbounded cross-section. G4 fails: CTS and DBS turbulence is not RL or AI plant control, and it is not a Vlasov, hole-burning, SRS, or SBS method. G5 passes: the CTS and DBS comparison can be re-examined this quarter. G6 passes: no Q_eng is stated. The authors' remark that the regime is attractive for reactors is not a Q_eng result."
+      },
+      "gateNote": "G1 passes: a spectral energy transfer is not a plant gain. G2 passes: no reactor power balance is claimed. G3 passes: the transfer is for this discharge set, not an unbounded cross-section. G4 fails: CTS and DBS turbulence is not RL or AI plant control, and it is not a Vlasov, hole-burning, SRS, or SBS method. G5 passes: the CTS and DBS comparison can be re-examined this quarter. G6 passes: no Q_eng is stated. The authors' remark that the regime is attractive for reactors is not a Q_eng result.",
+      "score": "no claim bound",
+      "action": "REJECT",
+      "route": "REJECT",
+      "version": null,
+      "disputer": "A CTS and DBS measurement is not a plant controller and not an S-L3 rate. No claim moves.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Collective Thomson scattering and Doppler backscattering are used together on a tokamak. The authors report a quasi-coherent mode that is present from the edge into the core and that couples to broadband turbulence, with forward energy transfer from ion scales toward electron scales. They contrast that with an inverse cascade. They also say the regime avoids large edge-localized modes and keeps confinement in the presence of high-Z impurities.",
+        "why": "No KEEP or HOLD claim. This is a turbulence measurement, not a closed control loop and not a Vlasov, hole-burning, SRS, or SBS solver. Reading list.",
+        "limit": "Bare arXiv. One diagnostic comparison. No actuator."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero claims. A3 miss: REJECT, not INCLUDE. A2 miss (G4). A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 51 is round(58 x 0.88).",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 58,
+        "confidence": 51,
+        "popularity": 40
+      },
+      "math": "arXiv:2610.30638v1, 2026-10-22, physics.plasm-ph. OAI licence arXiv non-exclusive. CTS plus DBS. Forward energy transfer from a core-edge quasi-coherent mode, as reported. No control loop. Authors F. Chen, Z. M. Shen, N. Sun, P. Li, Z. Y. Qiu, P. Liu, Z. Lin, H. T. Chen, and 25 others."
+    },
+    {
+      "id": "rev-2026-11-04-2610.32152",
+      "paperId": "2610.32152",
+      "date": "2026-11-04",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: cycle counts are not a plant gain. G2 passes: no energy balance is claimed. G3 passes: the 2.8\u00d7 and 4.2\u00d7 figures are for two stated designs, not an unbounded law. G4 passes: yoked surface codes are the E-QEC platform. G5 passes: the cycle model can be re-run this quarter. G6 passes: no Q_eng is stated."
+      },
+      "gateNote": "G1 passes: cycle counts are not a plant gain. G2 passes: no energy balance is claimed. G3 passes: the 2.8\u00d7 and 4.2\u00d7 figures are for two stated designs, not an unbounded law. G4 passes: yoked surface codes are the E-QEC platform. G5 passes: the cycle model can be re-run this quarter. G6 passes: no Q_eng is stated.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "An architecture model of load verification is not a measured logical qubit. E-QEC stays C4. ASPLOS '27 is a conference, not a journal.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Trident adds a small 1D yoked-surface-code tier between compute surface codes and 2D yoked memory so that most loads avoid a long yoke check. The authors' model says a 2D load takes 8 retrieval cycles plus 178 verification cycles, and that skipping verification would be a 5.7\u00d7 speedup. Trident-D and Trident-P are reported at 2.8\u00d7 and 4.2\u00d7, with memory qubit cost up 4.9%. 1D and 2D yoked codes are described as 1.8\u00d7 and 4.5\u00d7 more storage-efficient than the surface code.",
+        "why": "E-QEC only. A memory-hierarchy model for yoked surface codes. Conference proceedings do not raise C, and the speedups are not a device threshold.",
+        "limit": "Architecture model. Not a journal and not replicated hardware. No measured logical qubit."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A3 miss: HOLD, not INCLUDE. A2 pass. A4 miss: C unchanged. A5 miss: conference proceedings, not a journal or replicated hardware. A6 pass. A7 pass. A8 pass. Harvest confidence 74 is round(77 x 0.96).",
+      "autoGate": "miss A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 77,
+        "confidence": 74,
+        "popularity": 15
+      },
+      "math": "arXiv:2610.32152v1, 2026-10-23, quant-ph. OAI licence CC BY 4.0. DOI 10.1145/3845814.3850031. Crossref type proceedings-article, container the 32nd ACM ASPLOS proceedings volume 1, issued date-part 2027-04-10. arXiv comment says to be published at ASPLOS '27. Reported cycles 8 and 178. Reported speedups 5.7\u00d7, 2.8\u00d7, and 4.2\u00d7. Qubit overhead 4.9%. Authors Gunagya Singh Mamak, Suhas Vittal, Kabir Dubey, Kaitlin N. Smith, Moinuddin K. Qureshi."
+    },
+    {
+      "id": "rev-2026-11-04-2610.32264",
+      "paperId": "2610.32264",
+      "date": "2026-11-04",
+      "bind": [
+        "E-RL"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: a label set is not a plant gain. G2 passes: no energy balance is claimed. G3 passes: detector comparisons are on this catalog, not an unbounded law. G4 passes: DIII-D event labels are on the data side of Bus A. G5 passes: the AE, ELM, and tearing labels can be re-checked this quarter. G6 passes: no Q_eng is stated."
+      },
+      "gateNote": "G1 passes: a label set is not a plant gain. G2 passes: no energy balance is claimed. G3 passes: detector comparisons are on this catalog, not an unbounded law. G4 passes: DIII-D event labels are on the data side of Bus A. G5 passes: the AE, ELM, and tearing labels can be re-checked this quarter. G6 passes: no Q_eng is stated.",
+      "score": "E-RL C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A DIII-D label catalog is not a closed control loop. E-RL stays C4.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Tokamak-SI gathers earlier DIII-D labeling methods into one time-aligned catalog. The covered events include confinement, detachment, Alfv\u00e9n eigenmodes, edge-localized modes, sawteeth, tearing modes, and resistive wall modes. Models trained to extend those labels match or beat earlier detectors on the catalog, including for Alfv\u00e9n eigenmodes, edge-localized modes, and tearing modes. The stated use is benchmarking and identifying events during an experiment.",
+        "why": "E-RL only. Diagnostic labels on DIII-D, on the data side of Bus A. They do not command an actuator and do not beat a disruption metric, so M2 stays open and C4 does not move.",
+        "limit": "Bare arXiv. A dataset. Not a plant controller."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-RL only). A3 miss: HOLD, not INCLUDE. A2 pass. A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 62 is round(71 x 0.88).",
+      "autoGate": "miss A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 71,
+        "confidence": 62,
+        "popularity": 16
+      },
+      "math": "arXiv:2610.32264v1, 2026-10-23, physics.plasm-ph. OAI licence CC BY 4.0. DIII-D labels for AE, ELM, tearing, sawtooth, detachment, confinement, and resistive wall modes. No closed loop. Authors Nathaniel Chen, Alvin Garcia, Ricardo Shousha, Jalal Butt, Azarakhsh Jalalvand, Egemen Kolemen."
+    },
+    {
+      "id": "rev-2026-11-04-2610.32428",
+      "paperId": "2610.32428",
+      "date": "2026-11-04",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: an access-structure dimension is not a plant gain. G2 passes: no energy balance is claimed. G3 passes: the costs are for four stated codes, not an unbounded law. G4 fails: quantum secret sharing uses qLDPC as an access structure, not as the error layer. G5 passes: the four-code checks can be re-run this quarter. G6 passes: no Q_eng is stated."
+      },
+      "gateNote": "G1 passes: an access-structure dimension is not a plant gain. G2 passes: no energy balance is claimed. G3 passes: the costs are for four stated codes, not an unbounded law. G4 fails: quantum secret sharing uses qLDPC as an access structure, not as the error layer. G5 passes: the four-code checks can be re-run this quarter. G6 passes: no Q_eng is stated.",
+      "score": "no claim bound",
+      "action": "REJECT",
+      "route": "REJECT",
+      "version": null,
+      "disputer": "qLDPC used as a secret-sharing access structure is not the error layer. E-QEC stays C4. The abstract's word bridge is about secret sharing, not a DBE claim coupling.",
+      "ledger": "none.",
+      "plain": {
+        "core": "The paper builds quantum secret sharing from CSS qLDPC codes and computes which coalitions are authorized. It defines an accessible logical dimension from the symplectic rank of local logical classes, and it prices Tanner, Steiner, and scheduling costs of laying the code on a network. On four CSS qLDPC codes the authors check duality and monotonicity. For those codes, a bivariate-bicycle example has the sharpest access transition, and embedding costs vary by more than an order of magnitude across topologies.",
+        "why": "No KEEP or HOLD claim. The codes are an access structure for secret sharing, not the E-QEC error layer. Reading list.",
+        "limit": "Bare arXiv. Four codes. No processor."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero claims. A3 miss: REJECT, not INCLUDE. A2 miss (G4). A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 43 is round(49 x 0.88).",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 49,
+        "confidence": 43,
+        "popularity": 12
+      },
+      "math": "arXiv:2610.32428v1, 2026-10-23, quant-ph. OAI licence arXiv non-exclusive. Four CSS qLDPC codes. Bivariate bicycle has the sharpest transition in their set. Network costs vary by more than 10\u00d7, as reported. Not an error-layer decoder. Authors Malik Mouaji, Saif Al-Kuwari."
+    },
+    {
+      "id": "rev-2026-11-04-2610.32767",
+      "paperId": "2610.32767",
+      "date": "2026-11-04",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: an oscillation period is not a plant gain. G2 passes: no energy balance is claimed. G3 passes: the period change is for this ring, not an unbounded law. G4 fails: an edge-to-vortex crossover is not a Majorana qubit with an X and a Z logical. G5 passes: the Little-Parks periods can be re-measured this quarter. G6 passes: no Q_eng is stated."
+      },
+      "gateNote": "G1 passes: an oscillation period is not a plant gain. G2 passes: no energy balance is claimed. G3 passes: the period change is for this ring, not an unbounded law. G4 fails: an edge-to-vortex crossover is not a Majorana qubit with an X and a Z logical. G5 passes: the Little-Parks periods can be re-measured this quarter. G6 passes: no Q_eng is stated.",
+      "score": "no claim bound",
+      "action": "REJECT",
+      "route": "REJECT",
+      "version": null,
+      "disputer": "An edge-to-vortex transition in a 2M-WS2 ring is not an X and Z logical. E-MZM stays C1 WATCH.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Nano-rings of 2M-WS2 are tuned from edge-state Little-Parks oscillations to a longer period that the authors read as flux necklaces on the annulus. Near the transition the coherence length is larger than the annulus width. Once it is smaller, they infer localized vortex bound states. Ginzburg-Landau and Bogoliubov-de Gennes calculations are used to argue that a large Ginzburg-Landau parameter and strong pinning are needed. The abstract does not report an X and Z logical.",
+        "why": "No KEEP or HOLD claim. E-MZM is WATCH. Flux motion in a ring is not a load-bearing qubit. Reading list.",
+        "limit": "Bare arXiv. One materials device. No logical gate."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero claims. A3 miss: REJECT, not INCLUDE. A2 miss (G4). A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 48 is round(55 x 0.88).",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 55,
+        "confidence": 48,
+        "popularity": 24
+      },
+      "math": "arXiv:2610.32767v1, 2026-10-23, cond-mat.supr-con. OAI licence CC BY 4.0. 2M-WS2 rings. Little-Parks period changes on cooling. No X and Z logical in the abstract. Authors Xiangyu Bi, Aoshen Yang, Hongzi Cao, Ganyu Chen, Yuqiang Fang, Zeya Li, Qizheng Sun, Junwei Huang, and 6 others."
+    },
+    {
+      "id": "rev-2026-11-04-2610.33347",
+      "paperId": "2610.33347",
+      "date": "2026-11-04",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: a circuit distance is not a plant gain. G2 passes: no energy balance is claimed. G3 passes: the checks are for distances 7, 9, and 11, not an unbounded family law. G4 passes: the triangular color code is in the E-QEC platform. G5 passes: the distance-7, 9, and 11 schedules can be re-checked this quarter. G6 passes: no Q_eng is stated."
+      },
+      "gateNote": "G1 passes: a circuit distance is not a plant gain. G2 passes: no energy balance is claimed. G3 passes: the checks are for distances 7, 9, and 11, not an unbounded family law. G4 passes: the triangular color code is in the E-QEC platform. G5 passes: the distance-7, 9, and 11 schedules can be re-checked this quarter. G6 passes: no Q_eng is stated.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "Hook-error schedules at distances 7, 9, and 11 are not a measured logical qubit. E-QEC stays C4.",
+      "ledger": "none.",
+      "plain": {
+        "core": "Color-dependent syndrome schedules were meant to avoid hook errors that shortcut one anyon type. This paper identifies junction hook errors, where the two data qubits of the hook end anyon strings of two colors at the junction of a logical operator. For distances 7, 9, and 11, every non-corner plaquette is reported to admit a scheduled hook that, with d-2 data faults, makes an undetectable logical of weight d-1. The authors say flags are still required on every stabilizer, including the bulk, if this schedule is to recover full circuit distance. A minimum-weight logical has at most one junction, which they use to explain a remaining distance of d minus floor((d+3)/6) rather than d/2.",
+        "why": "E-QEC only. A color-code circuit-distance caveat. It does not tighten a hardware threshold, so C4 does not move.",
+        "limit": "Bare arXiv. Distances 7, 9, and 11. No device."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A3 miss: HOLD, not INCLUDE. A2 pass. A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 65 is round(74 x 0.88).",
+      "autoGate": "miss A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 74,
+        "confidence": 65,
+        "popularity": 12
+      },
+      "math": "arXiv:2610.33347v1, 2026-10-23, quant-ph. OAI licence CC BY 4.0. Triangular color code. Distances 7, 9, and 11. Junction hooks of weight d-1 with d-2 data faults, as reported. Authors Salahedeen Issa, Margaret Martonosi."
+    },
+    {
+      "id": "rev-2026-11-04-2610.35099",
+      "paperId": "2610.35099",
+      "date": "2026-11-04",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: a memory-time bound is not a plant gain. G2 passes: no energy balance is claimed. G3 passes: the exponential lower bound is proved only when the local dimension grows as Theta(N); it is not a one-parameter law for fixed qubits. G4 passes: the geometry is the 3D surface code. G5 passes: the Metropolis argument can be re-checked this quarter. G6 passes: no Q_eng is stated."
+      },
+      "gateNote": "G1 passes: a memory-time bound is not a plant gain. G2 passes: no energy balance is claimed. G3 passes: the exponential lower bound is proved only when the local dimension grows as Theta(N); it is not a one-parameter law for fixed qubits. G4 passes: the geometry is the 3D surface code. G5 passes: the Metropolis argument can be re-checked this quarter. G6 passes: no Q_eng is stated.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "A 3D surface code whose local dimension grows with system size is not a fixed-qubit device. E-QEC stays C4.",
+      "ledger": "none.",
+      "plain": {
+        "core": "The construction keeps the geometry of the 3D surface code and changes only the Pauli powers, so the local dimension q can grow. Below a critical temperature, local Metropolis updates of X and Z by one step are argued to give memory times at least exp of Omega(N to the 1/3) in both sectors when q grows as Theta(N). The energy change per update is bounded by a constant that does not depend on q or N. Numerics are said to support the bound. Growing dimension is the resource, not a fixed qubit.",
+        "why": "E-QEC only. A self-correction theorem for a growing qudit dimension. It does not replace the fixed-qubit surface code, so C4 does not move.",
+        "limit": "Bare arXiv. Local dimension grows with N. No device."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A3 miss: HOLD, not INCLUDE. A2 pass. A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 60 is round(68 x 0.88).",
+      "autoGate": "miss A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 68,
+        "confidence": 60,
+        "popularity": 11
+      },
+      "math": "arXiv:2610.35099v1, 2026-10-26, quant-ph. OAI licence arXiv non-exclusive. 3D surface code over Z_q. Memory-time lower bound exp of Omega(N^{1/3}) when q is Theta(N), as proved in the paper. Not a fixed-qubit device. Authors Jinkang Guo."
+    },
+    {
+      "id": "rev-2026-11-04-2610.35507",
+      "paperId": "2610.35507",
+      "date": "2026-11-04",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: a reactivity ratio is not a plant Q. G2 passes: no plant energy ledger is closed. G3 passes: the factor of about two is for the stated low-energy bimodal Maxwellians, not an unbounded cross-section. G4 fails: an optimal energy distribution is not a Vlasov, hole-burning, SRS, or SBS method. G5 passes: the D-D and D-T integrals can be re-run this quarter. G6 passes: the paper does not state Q_eng. The factor of two must not be rewritten as Q_eng."
+      },
+      "gateNote": "G1 passes: a reactivity ratio is not a plant Q. G2 passes: no plant energy ledger is closed. G3 passes: the factor of about two is for the stated low-energy bimodal Maxwellians, not an unbounded cross-section. G4 fails: an optimal energy distribution is not a Vlasov, hole-burning, SRS, or SBS method. G5 passes: the D-D and D-T integrals can be re-run this quarter. G6 passes: the paper does not state Q_eng. The factor of two must not be rewritten as Q_eng.",
+      "score": "no claim bound",
+      "action": "REJECT",
+      "route": "REJECT",
+      "version": null,
+      "disputer": "A factor-of-two reactivity gain for a bimodal Maxwellian is not an S-L3 solver and is not Q_eng. Do not adopt.",
+      "ledger": "none.",
+      "plain": {
+        "core": "The paper asks which energy distribution maximizes fusion reactivity. A single Maxwellian is optimal where the reactivity is concave in mean kinetic energy, near the peak. Where the curve is convex, a bimodal Maxwellian is optimal, and the superstatistics the authors check stay below that optimum. For deuterium-deuterium and deuterium-tritium, using empirical cross sections, they report about a factor of two higher reactivity at low mean energy.",
+        "why": "No KEEP or HOLD claim. This is not a Vlasov, hole-burning, SRS, or SBS solver, and it is not a plant ledger. Reading list. Do not turn the factor of two into Q_eng.",
+        "limit": "Journal article. Distribution optimization only. arXiv OAI licence is CC BY-NC-ND while Crossref reports the version of record as CC BY. Those two API results disagree; both are recorded and neither is treated as C."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero claims. A3 miss: REJECT, not INCLUDE. A2 miss (G4). A4 miss: C unchanged. A5 pass: Physical Review E is a journal. A5 does not bind a claim and does not raise C. A6 pass. A7 pass. A8 pass. Harvest confidence 57 is round(57 x 1.00).",
+      "autoGate": "miss A1, A2, A3, A4",
+      "scoreHeuristic": {
+        "importance": 57,
+        "confidence": 57,
+        "popularity": 13
+      },
+      "math": "arXiv:2610.35507v1, 2026-10-26, physics.plasm-ph. OAI licence CC BY-NC-ND 4.0. OAI journal-ref Physical Review E 114, 044136 (2026). DOI 10.1103/xhzy-hxdw. Crossref type journal-article, container Physical Review E, issued 2026-10-23, VOR licence CC BY 4.0. arXiv OAI licence CC BY-NC-ND 4.0. Reactivity about a factor of two for D-D and D-T at low energy, as reported. Not Q_eng. Authors Roberto Onofrio, Kamel Ourabah, Carlo Presilla."
+    },
+    {
+      "id": "rev-2026-11-04-2610.36029",
+      "paperId": "2610.36029",
+      "date": "2026-11-04",
+      "bind": [
+        "E-QEC"
+      ],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "pass",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: an algebra count is not a plant gain. G2 passes: no energy balance is claimed. G3 passes: the examples are finite groups, not an unbounded law. G4 passes: the code constructs gates for non-Abelian surface codes, which stay inside E-QEC. It is not an S3 measurement, so E-S3 is not bound. G5 passes: the dihedral and A4 examples can be re-run this quarter. G6 passes: no Q_eng is stated."
+      },
+      "gateNote": "G1 passes: an algebra count is not a plant gain. G2 passes: no energy balance is claimed. G3 passes: the examples are finite groups, not an unbounded law. G4 passes: the code constructs gates for non-Abelian surface codes, which stay inside E-QEC. It is not an S3 measurement, so E-S3 is not bound. G5 passes: the dihedral and A4 examples can be re-run this quarter. G6 passes: no Q_eng is stated.",
+      "score": "E-QEC C4 T3 D3 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
+      "version": null,
+      "disputer": "GAP code for condensable algebras is not a measured non-Abelian logical. E-QEC stays C4. Do not open nonabelian-qldpc.",
+      "ledger": "none.",
+      "plain": {
+        "core": "AlgebrasTQD is GAP code that lists condensable algebras of twisted quantum doubles, their anyon content, and the interfaces between them. The paper illustrates it on Z2 cubed with a type-III cocycle, D8, and A4, with and without anomaly, including twin algebras. It also includes functions that build certain non-Clifford logical gates from non-Abelian surface codes of dihedral quantum doubles. The code is exact arithmetic, limited by runtime. This is not an S3 braid-plus-fusion measurement.",
+        "why": "E-QEC only. Software for non-Abelian surface-code gates. Binding E-S3 as well would be a bridge, and there is no S3 fusion measurement, so E-S3 stays unbound. C4 does not move. nonabelian-qldpc stays CUT.",
+        "limit": "Bare arXiv. GAP code. No device. Repository named in the abstract: https://github.com/AlisonWarman/AlgebrasTQD."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 pass (E-QEC only). A3 miss: HOLD, not INCLUDE. A2 pass. A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 64 is round(73 x 0.88).",
+      "autoGate": "miss A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 73,
+        "confidence": 64,
+        "popularity": 11
+      },
+      "math": "arXiv:2610.36029v1, 2026-10-26, cond-mat.str-el. OAI licence CC BY 4.0. Examples Z2^3 with omega_III, D8, and A4. Non-Clifford gates via non-Abelian surface codes, as functions in the code. No S3 fusion measurement. Authors Alison Warman."
+    },
+    {
+      "id": "rev-2026-11-04-2610.36567",
+      "paperId": "2610.36567",
+      "date": "2026-11-04",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: a variational energy is not a plant gain. G2 passes: no energy balance is claimed. G3 passes: the runs are for stated particle numbers, not an unbounded law. G4 fails: continuum semions are Abelian and are not the S3 platform. G5 passes: the two-semion energy can be re-checked this quarter. G6 passes: no Q_eng is stated."
+      },
+      "gateNote": "G1 passes: a variational energy is not a plant gain. G2 passes: no energy balance is claimed. G3 passes: the runs are for stated particle numbers, not an unbounded law. G4 fails: continuum semions are Abelian and are not the S3 platform. G5 passes: the two-semion energy can be re-checked this quarter. G6 passes: no Q_eng is stated.",
+      "score": "no claim bound",
+      "action": "REJECT",
+      "route": "REJECT",
+      "version": null,
+      "disputer": "Continuum semions are Abelian. They are not an S3 gate. E-S3 stays C3.",
+      "ledger": "none.",
+      "plain": {
+        "core": "AnyFormer is a neural variational ansatz for continuum anyons on a torus, with a statistical pair factor and torus boundary conditions. The application in the paper is semions with no external field and no interaction, so the correlations come from statistics alone. Energies match exact two-semion results and beat a finite-cutoff diagonalization at 4 and 6 semions, and the runs go up to 16 semions. The authors report correlation holes and a reversal of pair circulation near the mean spacing.",
+        "why": "No KEEP or HOLD claim. Semions are not S3 braid plus fusion. Reading list.",
+        "limit": "Bare arXiv. Abelian statistics. No processor."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero claims. A3 miss: REJECT, not INCLUDE. A2 miss (G4). A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 48 is round(54 x 0.88).",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 54,
+        "confidence": 48,
+        "popularity": 12
+      },
+      "math": "arXiv:2610.36567v1, 2026-10-27, cond-mat.str-el. OAI licence CC BY 4.0. Semions. N up to 16. Two-semion energies match the exact result, as reported. Not S3. Authors Ahmed Khalifa, Shubhayu Chatterjee."
+    },
+    {
+      "id": "rev-2026-11-04-2610.36686",
+      "paperId": "2610.36686",
+      "date": "2026-11-04",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: a dephasing scaling is not a plant gain. G2 passes: no energy balance is claimed. G3 passes: the algebraic decay is for this interference model, not an unbounded cross-section. G4 fails: a fractional-quantum-Hall collider proposal is not the S3 platform. G5 passes: the dephasing comparison can be re-derived this quarter. G6 passes: no Q_eng is stated."
+      },
+      "gateNote": "G1 passes: a dephasing scaling is not a plant gain. G2 passes: no energy balance is claimed. G3 passes: the algebraic decay is for this interference model, not an unbounded cross-section. G4 fails: a fractional-quantum-Hall collider proposal is not the S3 platform. G5 passes: the dephasing comparison can be re-derived this quarter. G6 passes: no Q_eng is stated.",
+      "score": "no claim bound",
+      "action": "REJECT",
+      "route": "REJECT",
+      "version": null,
+      "disputer": "A fractional-quantum-Hall interference proposal is not an S3 braid-plus-fusion gate. E-S3 stays C3.",
+      "ledger": "none.",
+      "plain": {
+        "core": "The paper compares time-domain anyonic interference with ordinary spatial interference under dephasing. In the time-domain case the two temporal paths share most of the noise, so the authors find an algebraic decay in the dephasing rate rather than an exponential one. They propose a Fabry-Perot fractional-quantum-Hall device in which both kinds of interference would see the same noise. No braid gate is performed.",
+        "why": "No KEEP or HOLD claim. Hall interferometry is not an S3 measurement. Reading list.",
+        "limit": "Bare arXiv. A proposal. No device result."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero claims. A3 miss: REJECT, not INCLUDE. A2 miss (G4). A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 45 is round(51 x 0.88).",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 51,
+        "confidence": 45,
+        "popularity": 15
+      },
+      "math": "arXiv:2610.36686v1, 2026-10-27, cond-mat.mes-hall. OAI licence arXiv non-exclusive. Time-domain braiding versus spatial interference. Algebraic versus exponential dephasing, as derived. No S3 gate. Authors Hai-Dong Li, Hao-Xiang Long, Gu Zhang, D. Y. Xing, Wei Chen."
+    },
+    {
+      "id": "rev-2026-11-04-2610.37552",
+      "paperId": "2610.37552",
+      "date": "2026-11-04",
+      "bind": [],
+      "gates": {
+        "G1": "pass",
+        "G2": "pass",
+        "G3": "pass",
+        "G4": "fail",
+        "G5": "pass",
+        "G6": "pass",
+        "note": "G1 passes: a braid leakage is not a plant gain. G2 passes: no energy balance is claimed. G3 passes: the search is up to length 72, not an unbounded compiler law. G4 fails: Fibonacci anyons are not the S3 braid-plus-fusion platform. G5 passes: the length-69 braid can be re-evaluated this quarter. G6 passes: no Q_eng is stated."
+      },
+      "gateNote": "G1 passes: a braid leakage is not a plant gain. G2 passes: no energy balance is claimed. G3 passes: the search is up to length 72, not an unbounded compiler law. G4 fails: Fibonacci anyons are not the S3 braid-plus-fusion platform. G5 passes: the length-69 braid can be re-evaluated this quarter. G6 passes: no Q_eng is stated.",
+      "score": "no claim bound",
+      "action": "REJECT",
+      "route": "REJECT",
+      "version": null,
+      "disputer": "A Fibonacci CNOT compiler is not S3 braid plus fusion. E-S3 stays C3.",
+      "ledger": "none.",
+      "plain": {
+        "core": "The paper searches braid words for a Fibonacci anyon CNOT that stays inside the computational fusion space. Leakage into the fifth fusion state is the error they minimize. An exhaustive five-generator search reaches length 21. Narrower families reach length 72. At length 69 they report a braid with leakage and CNOT distance both on the order of 10 to the minus 10. They also prove a number-field constraint on the leakage. Fibonacci statistics are not S3.",
+        "why": "No KEEP or HOLD claim. Do not treat a Fibonacci compiler as the S3 primitive. Reading list.",
+        "limit": "Bare arXiv. A braid search. No fusion-measurement gate and no device."
+      },
+      "claimDelta": "none",
+      "whyQueued": "A1 miss: zero claims. A3 miss: REJECT, not INCLUDE. A2 miss (G4). A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 56 is round(64 x 0.88).",
+      "autoGate": "miss A1, A2, A3, A4, A5",
+      "scoreHeuristic": {
+        "importance": 64,
+        "confidence": 56,
+        "popularity": 12
+      },
+      "math": "arXiv:2610.37552v1, 2026-10-27, quant-ph. OAI licence CC BY 4.0. Fibonacci CNOT search. Length 69 leakage and CNOT distance both about 10^{-10}, as reported. Not S3. Authors Matvei Fedin, Andrey Morozov."
+    },
     {
       "id": "rev-2026-10-28-2610.19459",
       "paperId": "2610.19459",

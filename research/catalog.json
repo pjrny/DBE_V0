@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T09:30:56-05:00",
+  "generatedAt": "2026-11-04T09:36:52-06:00",
   "lookback": "1y+",
   "northStar": "Q=1000",
   "feeds": [
@@ -22288,9 +22288,1114 @@
       "bindAction": "HOLD",
       "pillarEffect": "none",
       "lang": "en"
+    },
+    {
+      "id": "2610.29446",
+      "arxiv": "2610.29446",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Suppressing Majorana Hybridization in Atomically Assembled Cr Chains on Bi2Pd",
+      "authors": [
+        "Jinkyung Kim",
+        "Piotr Kot",
+        "Ryo Ogawa",
+        "Atustaka Maeda",
+        "Andreas J. Heinrich",
+        "Nicolas Lorente",
+        "Deung-Jang Choi"
+      ],
+      "year": 2026,
+      "date": "2026-10-21",
+      "venue": "arXiv cond-mat.supr-con",
+      "url": "https://arxiv.org/abs/2610.29446",
+      "fields": [
+        "majorana"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-11-04",
+        "carry-over",
+        "preprint",
+        "reading-list"
+      ],
+      "importance": 52,
+      "confidence": 46,
+      "popularity": 17,
+      "coreIdea": "Cr chains assembled atom by atom on Bi-terminated Bi2Pd are reported to sit in a short-localization-length Shiba regime that suppresses end-mode hybridization. Scanning tunneling spectra show the in-gap states close and reopen with chain length, and zero-bias modes sit at the ends. Green-function calculations reproduce that evolution. From the residual splitting the authors extract a localization length of about three atomic sites.",
+      "whyItMatters": "No KEEP or HOLD claim. E-MZM is WATCH and is not load-bearing. End modes without an X and a Z logical are not bound. Reading list.",
+      "limitation": "Bare arXiv. Scanning tunneling spectroscopy. No logical qubit.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.29446v1",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.30081",
+      "arxiv": "2610.30081",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "AnyonWiki.org",
+      "authors": [
+        "Colleen Delaney",
+        "Ralph Razzouk",
+        "Joost Slingerland",
+        "Gert Vercleyen"
+      ],
+      "year": 2026,
+      "date": "2026-10-21",
+      "venue": "arXiv math.QA",
+      "url": "https://arxiv.org/abs/2610.30081",
+      "fields": [
+        "anyons"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-11-04",
+        "carry-over",
+        "preprint",
+        "reading-list"
+      ],
+      "importance": 46,
+      "confidence": 40,
+      "popularity": 14,
+      "coreIdea": "AnyonWiki.org publishes algebraic and numerical data for fusion categories. The associated database, as described, includes multiplicity-free pivotal and braided fusion categories through rank 7 and more than 25000 fusion rings, including multiplicity-free fusion rings through rank 10. The paper is about access, citation, and the database design. It does not report a braid or a fusion measurement.",
+      "whyItMatters": "No KEEP or HOLD claim. A lookup table of fusion rings is not an S3 gate. Reading list.",
+      "limitation": "Bare arXiv. A website and a database. No device.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.30081v1",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.30087",
+      "arxiv": "2610.30087",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Injection is all you need: parallel universal logic in high-rate concatenated self-dual codes",
+      "authors": [
+        "Joseph Sullivan",
+        "David Amaro",
+        "Michael A. Perlin"
+      ],
+      "year": 2026,
+      "date": "2026-10-21",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.30087",
+      "fields": [
+        "tqc"
+      ],
+      "role": "lookback",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-11-04",
+        "carry-over",
+        "preprint"
+      ],
+      "importance": 76,
+      "confidence": 67,
+      "popularity": 13,
+      "coreIdea": "The architecture concatenates small high-rate self-dual CSS codes and injects addressable universal logic by consuming prepared stabilizer states and global magic states. Flag-at-origin prepares the stabilizer resources. A concatenated cultivation protocol prepares the magic states. Steane or Knill teleportation then corrects and applies the gate. For an algorithm of T-depth D_T the authors say at most 12 D_T resource states are consumed. On two-level concatenations of the [[k+4,k,2]] H codes with the Hamming [[15,7,3]] code, they report that concatenated cultivation reduces spacetime by at least one order of magnitude relative to surface-code cultivation.",
+      "whyItMatters": "E-QEC only. A high-rate CSS architecture and a simulation benchmark. It does not tighten a hardware threshold, so C4 does not move.",
+      "limitation": "Bare arXiv. Simulation. No device.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.30087v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.30638",
+      "arxiv": "2610.30638",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Experimental evidence of forward energy transfer induced by core-edge coupling in multiscale tokamak turbulence",
+      "authors": [
+        "F. Chen",
+        "Z. M. Shen",
+        "N. Sun",
+        "P. Li",
+        "Z. Y. Qiu",
+        "P. Liu",
+        "Z. Lin",
+        "H. T. Chen",
+        "J. S. Geng",
+        "Y. X. Li",
+        "P. J. Sun",
+        "E. Z. Li",
+        "X. M. Zhong",
+        "A. D. Liu",
+        "L. Zhang",
+        "J. Huang",
+        "Y. M. Duan",
+        "T. F. Zhou",
+        "H. L. Zhao",
+        "Q. Zang",
+        "Y. Q. Chu",
+        "S. X. Wang",
+        "H. Q. Liu",
+        "T. Zhang",
+        "Y. F. Jin",
+        "B. Lyu",
+        "C. B. Wu",
+        "Y. C. Hu",
+        "L. Ye",
+        "X. J. Wang",
+        "X. Z. Gong",
+        "Y. D. Li",
+        "J. G. Li"
+      ],
+      "year": 2026,
+      "date": "2026-10-22",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2610.30638",
+      "fields": [
+        "plasma"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-11-04",
+        "carry-over",
+        "preprint",
+        "reading-list"
+      ],
+      "importance": 58,
+      "confidence": 51,
+      "popularity": 40,
+      "coreIdea": "Collective Thomson scattering and Doppler backscattering are used together on a tokamak. The authors report a quasi-coherent mode that is present from the edge into the core and that couples to broadband turbulence, with forward energy transfer from ion scales toward electron scales. They contrast that with an inverse cascade. They also say the regime avoids large edge-localized modes and keeps confinement in the presence of high-Z impurities.",
+      "whyItMatters": "No KEEP or HOLD claim. This is a turbulence measurement, not a closed control loop and not a Vlasov, hole-burning, SRS, or SBS solver. Reading list.",
+      "limitation": "Bare arXiv. One diagnostic comparison. No actuator.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.30638v1",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.32152",
+      "arxiv": "2610.32152",
+      "arxivVersion": "v1",
+      "doi": "10.1145/3845814.3850031",
+      "title": "Trident: Efficient Load Verification for Yoked Surface Codes using a Three-Level Memory Hierarchy",
+      "authors": [
+        "Gunagya Singh Mamak",
+        "Suhas Vittal",
+        "Kabir Dubey",
+        "Kaitlin N. Smith",
+        "Moinuddin K. Qureshi"
+      ],
+      "year": 2026,
+      "date": "2026-10-23",
+      "venue": "ASPLOS '27 proceedings",
+      "url": "https://arxiv.org/abs/2610.32152",
+      "fields": [
+        "tqc"
+      ],
+      "role": "lookback",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-11-04",
+        "carry-over",
+        "conference"
+      ],
+      "importance": 77,
+      "confidence": 74,
+      "popularity": 15,
+      "coreIdea": "Trident adds a small 1D yoked-surface-code tier between compute surface codes and 2D yoked memory so that most loads avoid a long yoke check. The authors' model says a 2D load takes 8 retrieval cycles plus 178 verification cycles, and that skipping verification would be a 5.7× speedup. Trident-D and Trident-P are reported at 2.8× and 4.2×, with memory qubit cost up 4.9%. 1D and 2D yoked codes are described as 1.8× and 4.5× more storage-efficient than the surface code.",
+      "whyItMatters": "E-QEC only. A memory-hierarchy model for yoked surface codes. Conference proceedings do not raise C, and the speedups are not a device threshold.",
+      "limitation": "Architecture model. Not a journal and not replicated hardware. No measured logical qubit.",
+      "source": "arXiv API",
+      "sourceTier": "conference",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.32152v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.32264",
+      "arxiv": "2610.32264",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Tokamak-SI: Interpreting Tokamak Discharges with Labeled Catalogs",
+      "authors": [
+        "Nathaniel Chen",
+        "Alvin Garcia",
+        "Ricardo Shousha",
+        "Jalal Butt",
+        "Azarakhsh Jalalvand",
+        "Egemen Kolemen"
+      ],
+      "year": 2026,
+      "date": "2026-10-23",
+      "venue": "arXiv physics.plasm-ph",
+      "url": "https://arxiv.org/abs/2610.32264",
+      "fields": [
+        "plasma"
+      ],
+      "role": "lookback",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-11-04",
+        "carry-over",
+        "preprint"
+      ],
+      "importance": 71,
+      "confidence": 62,
+      "popularity": 16,
+      "coreIdea": "Tokamak-SI gathers earlier DIII-D labeling methods into one time-aligned catalog. The covered events include confinement, detachment, Alfvén eigenmodes, edge-localized modes, sawteeth, tearing modes, and resistive wall modes. Models trained to extend those labels match or beat earlier detectors on the catalog, including for Alfvén eigenmodes, edge-localized modes, and tearing modes. The stated use is benchmarking and identifying events during an experiment.",
+      "whyItMatters": "E-RL only. Diagnostic labels on DIII-D, on the data side of Bus A. They do not command an actuator and do not beat a disruption metric, so M2 stays open and C4 does not move.",
+      "limitation": "Bare arXiv. A dataset. Not a plant controller.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.32264v1",
+      "claimIds": [
+        "E-RL"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.32428",
+      "arxiv": "2610.32428",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Quantum Secret Sharing from CSS qLDPC Codes: Computable Access Structures, Accessible Logical Dimension, and Topology-Aware Network Cost",
+      "authors": [
+        "Malik Mouaji",
+        "Saif Al-Kuwari"
+      ],
+      "year": 2026,
+      "date": "2026-10-23",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.32428",
+      "fields": [
+        "tqc"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-11-04",
+        "carry-over",
+        "preprint",
+        "reading-list"
+      ],
+      "importance": 49,
+      "confidence": 43,
+      "popularity": 12,
+      "coreIdea": "The paper builds quantum secret sharing from CSS qLDPC codes and computes which coalitions are authorized. It defines an accessible logical dimension from the symplectic rank of local logical classes, and it prices Tanner, Steiner, and scheduling costs of laying the code on a network. On four CSS qLDPC codes the authors check duality and monotonicity. For those codes, a bivariate-bicycle example has the sharpest access transition, and embedding costs vary by more than an order of magnitude across topologies.",
+      "whyItMatters": "No KEEP or HOLD claim. The codes are an access structure for secret sharing, not the E-QEC error layer. Reading list.",
+      "limitation": "Bare arXiv. Four codes. No processor.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.32428v1",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.32767",
+      "arxiv": "2610.32767",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Majorana Edge-to-bound State Transition in Interferometric Superconductor Rings",
+      "authors": [
+        "Xiangyu Bi",
+        "Aoshen Yang",
+        "Hongzi Cao",
+        "Ganyu Chen",
+        "Yuqiang Fang",
+        "Zeya Li",
+        "Qizheng Sun",
+        "Junwei Huang",
+        "Da Wang",
+        "Fuqiang Huang",
+        "Toshiya Ideue",
+        "Qianghua Wang",
+        "Yoshihiro Iwasa",
+        "Hongtao Yuan"
+      ],
+      "year": 2026,
+      "date": "2026-10-23",
+      "venue": "arXiv cond-mat.supr-con",
+      "url": "https://arxiv.org/abs/2610.32767",
+      "fields": [
+        "majorana"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-11-04",
+        "carry-over",
+        "preprint",
+        "reading-list"
+      ],
+      "importance": 55,
+      "confidence": 48,
+      "popularity": 24,
+      "coreIdea": "Nano-rings of 2M-WS2 are tuned from edge-state Little-Parks oscillations to a longer period that the authors read as flux necklaces on the annulus. Near the transition the coherence length is larger than the annulus width. Once it is smaller, they infer localized vortex bound states. Ginzburg-Landau and Bogoliubov-de Gennes calculations are used to argue that a large Ginzburg-Landau parameter and strong pinning are needed. The abstract does not report an X and Z logical.",
+      "whyItMatters": "No KEEP or HOLD claim. E-MZM is WATCH. Flux motion in a ring is not a load-bearing qubit. Reading list.",
+      "limitation": "Bare arXiv. One materials device. No logical gate.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.32767v1",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.33347",
+      "arxiv": "2610.33347",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Junction Hook Errors in the Color Code",
+      "authors": [
+        "Salahedeen Issa",
+        "Margaret Martonosi"
+      ],
+      "year": 2026,
+      "date": "2026-10-23",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.33347",
+      "fields": [
+        "tqc"
+      ],
+      "role": "lookback",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-11-04",
+        "carry-over",
+        "preprint"
+      ],
+      "importance": 74,
+      "confidence": 65,
+      "popularity": 12,
+      "coreIdea": "Color-dependent syndrome schedules were meant to avoid hook errors that shortcut one anyon type. This paper identifies junction hook errors, where the two data qubits of the hook end anyon strings of two colors at the junction of a logical operator. For distances 7, 9, and 11, every non-corner plaquette is reported to admit a scheduled hook that, with d-2 data faults, makes an undetectable logical of weight d-1. The authors say flags are still required on every stabilizer, including the bulk, if this schedule is to recover full circuit distance. A minimum-weight logical has at most one junction, which they use to explain a remaining distance of d minus floor((d+3)/6) rather than d/2.",
+      "whyItMatters": "E-QEC only. A color-code circuit-distance caveat. It does not tighten a hardware threshold, so C4 does not move.",
+      "limitation": "Bare arXiv. Distances 7, 9, and 11. No device.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.33347v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.35099",
+      "arxiv": "2610.35099",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Self-Correcting 3D Surface Code with Growing Local Dimension",
+      "authors": [
+        "Jinkang Guo"
+      ],
+      "year": 2026,
+      "date": "2026-10-26",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.35099",
+      "fields": [
+        "tqc"
+      ],
+      "role": "lookback",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-11-04",
+        "carry-over",
+        "preprint"
+      ],
+      "importance": 68,
+      "confidence": 60,
+      "popularity": 11,
+      "coreIdea": "The construction keeps the geometry of the 3D surface code and changes only the Pauli powers, so the local dimension q can grow. Below a critical temperature, local Metropolis updates of X and Z by one step are argued to give memory times at least exp of Omega(N to the 1/3) in both sectors when q grows as Theta(N). The energy change per update is bounded by a constant that does not depend on q or N. Numerics are said to support the bound. Growing dimension is the resource, not a fixed qubit.",
+      "whyItMatters": "E-QEC only. A self-correction theorem for a growing qudit dimension. It does not replace the fixed-qubit surface code, so C4 does not move.",
+      "limitation": "Bare arXiv. Local dimension grows with N. No device.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.35099v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.35507",
+      "arxiv": "2610.35507",
+      "arxivVersion": "v1",
+      "doi": "10.1103/xhzy-hxdw",
+      "title": "Maximization of nuclear fusion reactivity via optimal energy distributions",
+      "authors": [
+        "Roberto Onofrio",
+        "Kamel Ourabah",
+        "Carlo Presilla"
+      ],
+      "year": 2026,
+      "date": "2026-10-26",
+      "venue": "Physical Review E",
+      "url": "https://arxiv.org/abs/2610.35507",
+      "fields": [
+        "plasma",
+        "fusion-quantum"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-11-04",
+        "carry-over",
+        "journal",
+        "reading-list"
+      ],
+      "importance": 57,
+      "confidence": 57,
+      "popularity": 13,
+      "coreIdea": "The paper asks which energy distribution maximizes fusion reactivity. A single Maxwellian is optimal where the reactivity is concave in mean kinetic energy, near the peak. Where the curve is convex, a bimodal Maxwellian is optimal, and the superstatistics the authors check stay below that optimum. For deuterium-deuterium and deuterium-tritium, using empirical cross sections, they report about a factor of two higher reactivity at low mean energy.",
+      "whyItMatters": "No KEEP or HOLD claim. This is not a Vlasov, hole-burning, SRS, or SBS solver, and it is not a plant ledger. Reading list. Do not turn the factor of two into Q_eng.",
+      "limitation": "Journal article. Distribution optimization only. arXiv OAI licence is CC BY-NC-ND while Crossref reports the version of record as CC BY. Those two API results disagree; both are recorded and neither is treated as C.",
+      "source": "arXiv API",
+      "sourceTier": "journal",
+      "licence": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.35507v1",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.36029",
+      "arxiv": "2610.36029",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "AlgebrasTQD: Computing Algebras and Interfaces in Twisted Quantum Doubles",
+      "authors": [
+        "Alison Warman"
+      ],
+      "year": 2026,
+      "date": "2026-10-26",
+      "venue": "arXiv cond-mat.str-el",
+      "url": "https://arxiv.org/abs/2610.36029",
+      "fields": [
+        "anyons",
+        "tqc"
+      ],
+      "role": "lookback",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-11-04",
+        "carry-over",
+        "preprint"
+      ],
+      "importance": 73,
+      "confidence": 64,
+      "popularity": 11,
+      "coreIdea": "AlgebrasTQD is GAP code that lists condensable algebras of twisted quantum doubles, their anyon content, and the interfaces between them. The paper illustrates it on Z2 cubed with a type-III cocycle, D8, and A4, with and without anomaly, including twin algebras. It also includes functions that build certain non-Clifford logical gates from non-Abelian surface codes of dihedral quantum doubles. The code is exact arithmetic, limited by runtime. This is not an S3 braid-plus-fusion measurement.",
+      "whyItMatters": "E-QEC only. Software for non-Abelian surface-code gates. Binding E-S3 as well would be a bridge, and there is no S3 fusion measurement, so E-S3 stays unbound. C4 does not move. nonabelian-qldpc stays CUT.",
+      "limitation": "Bare arXiv. GAP code. No device. Repository named in the abstract: https://github.com/AlisonWarman/AlgebrasTQD.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.36029v1",
+      "claimIds": [
+        "E-QEC"
+      ],
+      "bindAction": "HOLD",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.36567",
+      "arxiv": "2610.36567",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Continuum neural wavefunctions for anyons on a torus",
+      "authors": [
+        "Ahmed Khalifa",
+        "Shubhayu Chatterjee"
+      ],
+      "year": 2026,
+      "date": "2026-10-27",
+      "venue": "arXiv cond-mat.str-el",
+      "url": "https://arxiv.org/abs/2610.36567",
+      "fields": [
+        "anyons"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-11-04",
+        "carry-over",
+        "preprint",
+        "reading-list"
+      ],
+      "importance": 54,
+      "confidence": 48,
+      "popularity": 12,
+      "coreIdea": "AnyFormer is a neural variational ansatz for continuum anyons on a torus, with a statistical pair factor and torus boundary conditions. The application in the paper is semions with no external field and no interaction, so the correlations come from statistics alone. Energies match exact two-semion results and beat a finite-cutoff diagonalization at 4 and 6 semions, and the runs go up to 16 semions. The authors report correlation holes and a reversal of pair circulation near the mean spacing.",
+      "whyItMatters": "No KEEP or HOLD claim. Semions are not S3 braid plus fusion. Reading list.",
+      "limitation": "Bare arXiv. Abelian statistics. No processor.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.36567v1",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.36686",
+      "arxiv": "2610.36686",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Robustness of Anyonic Time-Domain Interference Against Dephasing",
+      "authors": [
+        "Hai-Dong Li",
+        "Hao-Xiang Long",
+        "Gu Zhang",
+        "D. Y. Xing",
+        "Wei Chen"
+      ],
+      "year": 2026,
+      "date": "2026-10-27",
+      "venue": "arXiv cond-mat.mes-hall",
+      "url": "https://arxiv.org/abs/2610.36686",
+      "fields": [
+        "anyons"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-11-04",
+        "carry-over",
+        "preprint",
+        "reading-list"
+      ],
+      "importance": 51,
+      "confidence": 45,
+      "popularity": 15,
+      "coreIdea": "The paper compares time-domain anyonic interference with ordinary spatial interference under dephasing. In the time-domain case the two temporal paths share most of the noise, so the authors find an algebraic decay in the dephasing rate rather than an exponential one. They propose a Fabry-Perot fractional-quantum-Hall device in which both kinds of interference would see the same noise. No braid gate is performed.",
+      "whyItMatters": "No KEEP or HOLD claim. Hall interferometry is not an S3 measurement. Reading list.",
+      "limitation": "Bare arXiv. A proposal. No device result.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.36686v1",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "lang": "en"
+    },
+    {
+      "id": "2610.37552",
+      "arxiv": "2610.37552",
+      "arxivVersion": "v1",
+      "doi": null,
+      "title": "Meet-in-the-Middle Compilation of the $[\\mathrm{CNOT}]$ Class with Fibonacci Anyons",
+      "authors": [
+        "Matvei Fedin",
+        "Andrey Morozov"
+      ],
+      "year": 2026,
+      "date": "2026-10-27",
+      "venue": "arXiv quant-ph",
+      "url": "https://arxiv.org/abs/2610.37552",
+      "fields": [
+        "anyons",
+        "braid-knot"
+      ],
+      "role": "off-path",
+      "foundational": false,
+      "tags": [
+        "daily-run",
+        "2026-11-04",
+        "carry-over",
+        "preprint",
+        "reading-list"
+      ],
+      "importance": 64,
+      "confidence": 56,
+      "popularity": 12,
+      "coreIdea": "The paper searches braid words for a Fibonacci anyon CNOT that stays inside the computational fusion space. Leakage into the fifth fusion state is the error they minimize. An exhaustive five-generator search reaches length 21. Narrower families reach length 72. At length 69 they report a braid with leakage and CNOT distance both on the order of 10 to the minus 10. They also prove a number-field constraint on the leakage. Fibonacci statistics are not S3.",
+      "whyItMatters": "No KEEP or HOLD claim. Do not treat a Fibonacci compiler as the S3 primitive. Reading list.",
+      "limitation": "Bare arXiv. A braid search. No fusion-measurement gate and no device.",
+      "source": "arXiv API",
+      "sourceTier": "preprint",
+      "licence": "http://creativecommons.org/licenses/by/4.0/",
+      "oaStatus": "green",
+      "fulltextUrl": "https://arxiv.org/pdf/2610.37552v1",
+      "claimIds": [],
+      "bindAction": "REJECT",
+      "pillarEffect": "none",
+      "lang": "en"
     }
   ],
   "runs": [
+    {
+      "id": "run-2026-11-04-daily",
+      "kind": "daily",
+      "startedAt": "2026-11-04T09:22:00-06:00",
+      "finishedAt": "2026-11-04T09:36:52-06:00",
+      "windowStart": "2026-10-28",
+      "windowEnd": "2026-11-04",
+      "sources": [
+        {
+          "id": "arxiv-id-list",
+          "url": "https://export.arxiv.org/api/query",
+          "status": "ok",
+          "http": 200,
+          "requests": 1,
+          "returned": 15,
+          "new": 15,
+          "ms": 241,
+          "error": "The fifteen run-2026-10-28 carry-over ids, oldest first. All fifteen resolved."
+        },
+        {
+          "id": "arxiv-ingest-queries",
+          "url": "https://export.arxiv.org/api/query",
+          "status": "ok",
+          "http": 200,
+          "requests": 7,
+          "returned": 52,
+          "new": null,
+          "ms": 1640,
+          "error": "The seven ingest.py QUERIES with submittedDate 2026-10-28 00:00 to 2026-11-05 00:00 UTC, max 40, one request per 3 seconds. None was truncated. ingest.py was not executed: it has no inter-request sleep and would replace this run log with a non-schema payload."
+        },
+        {
+          "id": "arxiv-fetch-queries",
+          "url": "https://export.arxiv.org/api/query",
+          "status": "ok",
+          "http": 200,
+          "requests": 11,
+          "returned": 137,
+          "new": null,
+          "ms": 3739,
+          "error": "The ten fetch_arxiv.py QUERIES as read-only searches, same window, max 30. anyons was truncated at 30 of 47; a second page at start=30 completed it. No other fetch query was truncated. fetch_arxiv.py was not run in write mode."
+        },
+        {
+          "id": "arxiv-keep-queries",
+          "url": "https://export.arxiv.org/api/query",
+          "status": "ok",
+          "http": 200,
+          "requests": 4,
+          "returned": 37,
+          "new": null,
+          "ms": 1179,
+          "error": "qLDPC or surface code, tokamak or stellarator control, Vlasov or SRS or SBS or hole burning, and S3 anyon braid or fusion. None was truncated. The S3 query returned 0."
+        },
+        {
+          "id": "arxiv-category-windows",
+          "url": "https://export.arxiv.org/api/query",
+          "status": "partial",
+          "http": 200,
+          "requests": 5,
+          "returned": 253,
+          "new": null,
+          "ms": 1456,
+          "error": "Newest-first caps. cat-quant-ph 80 of 479; cat-cond-mat.str-el 40 of 127; cat-cond-mat.mes-hall 40 of 156; cat-hep-th 40 of 254; cat-physics.plasm-ph 53 of 53 complete. Not a bulk scrape of /list pages."
+        },
+        {
+          "id": "arxiv-oai",
+          "url": "https://oaipmh.arxiv.org/oai",
+          "status": "ok",
+          "http": 200,
+          "requests": 15,
+          "returned": 15,
+          "new": 0,
+          "ms": 1875,
+          "error": "GetRecord for the 15 scored ids. Every record had a licence. DOI and journal-ref only on 2610.32152 (DOI 10.1145/3845814.3850031, no journal-ref) and 2610.35507 (DOI 10.1103/xhzy-hxdw, journal-ref Physical Review E 114, 044136 (2026))."
+        },
+        {
+          "id": "openalex",
+          "url": "https://api.openalex.org/works",
+          "status": "skipped",
+          "http": null,
+          "requests": 0,
+          "returned": 0,
+          "new": 0,
+          "ms": null,
+          "error": "OPENALEX_API_KEY unset"
+        },
+        {
+          "id": "crossref",
+          "url": "https://api.crossref.org/works",
+          "status": "partial",
+          "http": 200,
+          "requests": 2,
+          "returned": 2,
+          "new": 0,
+          "ms": null,
+          "error": "DBE_CONTACT_EMAIL unset, so no mailto. Two single-record lookups only, User-Agent DBE-Observatory/2.0. 10.1145/3845814.3850031 is a proceedings-article in the 32nd ACM ASPLOS volume 1, Crossref issued 2027-04-10, VOR licence CC BY 4.0. 10.1103/xhzy-hxdw is a journal-article in Physical Review E, issued 2026-10-23, VOR licence CC BY 4.0. That VOR licence disagrees with the arXiv OAI licence CC BY-NC-ND 4.0 on 2610.35507."
+        },
+        {
+          "id": "unpaywall",
+          "url": "https://api.unpaywall.org/v2",
+          "status": "skipped",
+          "http": null,
+          "requests": 0,
+          "returned": 0,
+          "new": 0,
+          "ms": null,
+          "error": "DBE_CONTACT_EMAIL unset"
+        },
+        {
+          "id": "weekly-6.2",
+          "url": "section 6.2",
+          "status": "skipped",
+          "http": null,
+          "requests": 0,
+          "returned": 0,
+          "new": 0,
+          "ms": null,
+          "error": "Wednesday. Weekly sources are Sunday only."
+        }
+      ],
+      "counts": {
+        "harvested": 494,
+        "duplicates": 0,
+        "merged": 0,
+        "new": 15,
+        "scored": 15,
+        "unscored": 15,
+        "add": 0,
+        "strengthen": 0,
+        "weaken": 0,
+        "hold": 6,
+        "newPillar": 0,
+        "reject": 9
+      },
+      "paperIds": [
+        "2610.29446",
+        "2610.30081",
+        "2610.30087",
+        "2610.30638",
+        "2610.32152",
+        "2610.32264",
+        "2610.32428",
+        "2610.32767",
+        "2610.33347",
+        "2610.35099",
+        "2610.35507",
+        "2610.36029",
+        "2610.36567",
+        "2610.36686",
+        "2610.37552"
+      ],
+      "unscoredIds": [
+        {
+          "id": "2610.40567",
+          "reason": "2026-10-29 Surface-code partial decodability under coherent Z rotations, related by Wegner duality to a decohering paramagnet. E-QEC. Over the 15-card cap after the 28 Oct carry-overs."
+        },
+        {
+          "id": "2610.40592",
+          "reason": "2026-10-29 Decoupling higher-dimensional translation-invariant CSS codes into toric codes. E-QEC theory. Over the cap."
+        },
+        {
+          "id": "2610.41398",
+          "reason": "2026-10-30 GraphMP, a learning-based message-passing decoder for qLDPC codes, plus a decoder model factory. E-QEC. Simulation. Over the cap."
+        },
+        {
+          "id": "2610.41413",
+          "reason": "2026-10-30 FPGA belief-propagation decoder for a [[512,174,8]] 3D product qLDPC code. The abstract says the FPGA meets a neutral-atom and trapped-ion latency budget. E-QEC. Score next; do not treat that sentence as a measured logical qubit. Over the cap."
+        },
+        {
+          "id": "2611.00404",
+          "reason": "2026-10-30 Color-code magic-state synthesis and analog rotations, titled as run on a superconducting processor. E-QEC. Score next before the title is read as a measured logical. Over the cap."
+        },
+        {
+          "id": "2611.00694",
+          "reason": "2026-10-31 Photon-loss thresholds for the surface-GKP code. The abstract gives estimates at GKP squeezing of 20 dB and 13 dB. E-QEC. Over the cap."
+        },
+        {
+          "id": "2611.01360",
+          "reason": "2026-10-31 Decoder-agnostic logical-class diagnostic for abelian stabilizer codes. E-QEC. Over the cap."
+        },
+        {
+          "id": "2611.02972",
+          "reason": "2026-11-02 Routing for the [[144,12,12]] bivariate bicycle code on spin-qubit shuttling grids. E-QEC. Memory experiments in the abstract, not a device result scored here. Over the cap."
+        },
+        {
+          "id": "2611.03128",
+          "reason": "2026-11-02 Belief-propagation-guided Tesseract decoding of qLDPC codes. E-QEC. Over the cap."
+        },
+        {
+          "id": "2611.04179",
+          "reason": "2026-11-03 Reinforcement-learned scheduling for qLDPC belief-propagation decoders. Could be read as E-QEC and E-RL together. Do not ADD that coupling; a later card must keep it at C1 if both are bound. Over the cap."
+        },
+        {
+          "id": "2611.04964",
+          "reason": "2026-11-03 Asymptotic rate and distance for addressable transversal phase gates, using a cyclic encoding outside binary CSS. E-QEC theory, not a device. Over the cap."
+        },
+        {
+          "id": "2611.05375",
+          "reason": "2026-11-03 Decoding the transverse-field toric code as it is pushed toward a trivial phase. The abstract says bare stabilizer measurements still give a finite threshold under bit-flip and phase-flip noise. E-QEC. No threshold number is copied here. Over the cap."
+        },
+        {
+          "id": "2611.02411",
+          "reason": "2026-11-02 Gate-tunable coupling and zero-bias peaks in PbTe-Pb nanowires. E-MZM context. The abstract does not state an X and Z logical. Over the cap."
+        },
+        {
+          "id": "2611.04290",
+          "reason": "2026-11-03 Universal braiding in Links-Gould fusion spaces for U_q of sl(2|1). Not an S3 braid-plus-fusion measurement. Do not bind E-S3. Over the cap."
+        },
+        {
+          "id": "2611.04906",
+          "reason": "2026-11-03 Extended-MHD model of a passive runaway-electron mitigation coil on a high-current tokamak. Not a closed control loop and not an S-L3 solver. Over the cap."
+        }
+      ],
+      "fieldCounts": {
+        "majorana": 2,
+        "anyons": 5,
+        "tqc": 6,
+        "plasma": 3,
+        "fusion-quantum": 1,
+        "braid-knot": 1
+      },
+      "gateMisses": {
+        "A1": 9,
+        "A2": 9,
+        "A3": 15,
+        "A4": 15,
+        "A5": 14,
+        "A6": 0,
+        "A7": 0,
+        "A8": 0,
+        "G1": 0,
+        "G2": 0,
+        "G3": 0,
+        "G4": 9,
+        "G5": 0,
+        "G6": 0
+      },
+      "claimDelta": "none",
+      "versionBump": null,
+      "fulltext": {
+        "cached": 0,
+        "privateOnly": 0,
+        "noOA": 0
+      },
+      "tests": {
+        "command": "PYTHONPATH=. python -m pytest -q tests/test_research.py tests/test_claims.py tests/test_api.py tests/test_plasma.py tests/test_transport.py",
+        "result": "pass",
+        "summary": "19 passed, 30 subtests passed"
+      },
+      "branch": "observatory/2026-11-04",
+      "pr": null,
+      "suspiciousContent": [],
+      "scoreRoutes": [
+        {
+          "paper": "2610.29446",
+          "bind": null,
+          "cliBind": "E-MZM",
+          "action": "REJECT",
+          "exit": 0,
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "stdoutTail": "BIND E-MZM (WATCH C1/T3/D3/A2) | ACTION REJECT  PAPER 2610.29446  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+        },
+        {
+          "paper": "2610.30081",
+          "bind": null,
+          "cliBind": "E-S3",
+          "action": "REJECT",
+          "exit": 0,
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "stdoutTail": "BIND E-S3 (KEEP C3/T3/D3/A3) | ACTION REJECT  PAPER 2610.30081  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+        },
+        {
+          "paper": "2610.30087",
+          "bind": "E-QEC",
+          "cliBind": "E-QEC",
+          "action": "HOLD",
+          "exit": 0,
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "stdoutTail": "BIND E-QEC (KEEP C4/T3/D3/A3) | ACTION HOLD  PAPER 2610.30087  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+        },
+        {
+          "paper": "2610.30638",
+          "bind": null,
+          "cliBind": "E-RL",
+          "action": "REJECT",
+          "exit": 0,
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "stdoutTail": "BIND E-RL (KEEP C4/T3/D3/A3) | ACTION REJECT  PAPER 2610.30638  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+        },
+        {
+          "paper": "2610.32152",
+          "bind": "E-QEC",
+          "cliBind": "E-QEC",
+          "action": "HOLD",
+          "exit": 0,
+          "route": "QUEUE",
+          "a5": "NOT-BARE",
+          "stdoutTail": "BIND E-QEC (KEEP C4/T3/D3/A3) | ACTION HOLD  PAPER 2610.32152  VENUE ASPLOS 2027 proceedings | A5 venue is not a bare preprint (still confirm journal or replicated hardware) | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+        },
+        {
+          "paper": "2610.32264",
+          "bind": "E-RL",
+          "cliBind": "E-RL",
+          "action": "HOLD",
+          "exit": 0,
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "stdoutTail": "BIND E-RL (KEEP C4/T3/D3/A3) | ACTION HOLD  PAPER 2610.32264  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+        },
+        {
+          "paper": "2610.32428",
+          "bind": null,
+          "cliBind": "E-QEC",
+          "action": "REJECT",
+          "exit": 0,
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "stdoutTail": "BIND E-QEC (KEEP C4/T3/D3/A3) | ACTION REJECT  PAPER 2610.32428  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+        },
+        {
+          "paper": "2610.32767",
+          "bind": null,
+          "cliBind": "E-MZM",
+          "action": "REJECT",
+          "exit": 0,
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "stdoutTail": "BIND E-MZM (WATCH C1/T3/D3/A2) | ACTION REJECT  PAPER 2610.32767  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+        },
+        {
+          "paper": "2610.33347",
+          "bind": "E-QEC",
+          "cliBind": "E-QEC",
+          "action": "HOLD",
+          "exit": 0,
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "stdoutTail": "BIND E-QEC (KEEP C4/T3/D3/A3) | ACTION HOLD  PAPER 2610.33347  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+        },
+        {
+          "paper": "2610.35099",
+          "bind": "E-QEC",
+          "cliBind": "E-QEC",
+          "action": "HOLD",
+          "exit": 0,
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "stdoutTail": "BIND E-QEC (KEEP C4/T3/D3/A3) | ACTION HOLD  PAPER 2610.35099  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+        },
+        {
+          "paper": "2610.35507",
+          "bind": null,
+          "cliBind": "S-L3",
+          "action": "REJECT",
+          "exit": 0,
+          "route": "QUEUE",
+          "a5": "NOT-BARE",
+          "stdoutTail": "BIND S-L3 (KEEP C4/T2/D2/A3) | ACTION REJECT  PAPER 2610.35507  VENUE Physical Review E | A5 venue is not a bare preprint (still confirm journal or replicated hardware) | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+        },
+        {
+          "paper": "2610.36029",
+          "bind": "E-QEC",
+          "cliBind": "E-QEC",
+          "action": "HOLD",
+          "exit": 0,
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "stdoutTail": "BIND E-QEC (KEEP C4/T3/D3/A3) | ACTION HOLD  PAPER 2610.36029  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+        },
+        {
+          "paper": "2610.36567",
+          "bind": null,
+          "cliBind": "E-S3",
+          "action": "REJECT",
+          "exit": 0,
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "stdoutTail": "BIND E-S3 (KEEP C3/T3/D3/A3) | ACTION REJECT  PAPER 2610.36567  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+        },
+        {
+          "paper": "2610.36686",
+          "bind": null,
+          "cliBind": "E-S3",
+          "action": "REJECT",
+          "exit": 0,
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "stdoutTail": "BIND E-S3 (KEEP C3/T3/D3/A3) | ACTION REJECT  PAPER 2610.36686  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+        },
+        {
+          "paper": "2610.37552",
+          "bind": null,
+          "cliBind": "E-S3",
+          "action": "REJECT",
+          "exit": 0,
+          "route": "QUEUE",
+          "a5": "FAIL",
+          "stdoutTail": "BIND E-S3 (KEEP C3/T3/D3/A3) | ACTION REJECT  PAPER 2610.37552  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+        }
+      ],
+      "possibleDuplicates": [],
+      "notes": "Scored the fifteen unscored ids carried from run-2026-10-28, oldest first. No newer paper was scored: the cap is 15 cards. Six HOLDs (five E-QEC, including the ASPLOS '27 yoked-surface-code architecture, and one E-RL) and nine REJECTs. No claim moved and no version bumped. 2610.35507 is Physical Review E 114, 044136, but it does not bind S-L3 and it is not a Q_eng result. 2610.32152 is an ASPLOS '27 proceedings article; score.py does not treat that venue as a bare preprint, and the observatory A5 still fails because a conference is not a journal or replicated hardware. No AUTO-MERGED PATCH. Harvest raw hits 494, unique arXiv ids 391, of which 0 were already in the catalog. Repeated hits across queries are 103. Category windows were truncated, so the unscored list is the next program slice, not every hit. DBE_FULLTEXT_STORE unset: no PDFs cached. versions.json is DBE-0.2.2 / DBES-0.2.0 and claims.json freeze is 2026-10-02, matching the prompt. Popularity is min(40, 10 + author count). It is not a citation count. Fuzzy title check against the catalog found 0 possible duplicates at similarity >= 0.85."
+    },
     {
       "id": "run-2026-10-28-daily",
       "kind": "daily",
