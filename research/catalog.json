@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T09:36:52-06:00",
+  "generatedAt": "2026-11-04T09:49:40-06:00",
   "lookback": "1y+",
   "northStar": "Q=1000",
   "feeds": [
@@ -22994,7 +22994,7 @@
       "id": "run-2026-11-04-daily",
       "kind": "daily",
       "startedAt": "2026-11-04T09:22:00-06:00",
-      "finishedAt": "2026-11-04T09:36:52-06:00",
+      "finishedAt": "2026-11-04T09:49:40-06:00",
       "windowStart": "2026-10-28",
       "windowEnd": "2026-11-04",
       "sources": [
@@ -23111,7 +23111,7 @@
       ],
       "counts": {
         "harvested": 494,
-        "duplicates": 0,
+        "duplicates": 103,
         "merged": 0,
         "new": 15,
         "scored": 15,
@@ -23394,7 +23394,7 @@
         }
       ],
       "possibleDuplicates": [],
-      "notes": "Scored the fifteen unscored ids carried from run-2026-10-28, oldest first. No newer paper was scored: the cap is 15 cards. Six HOLDs (five E-QEC, including the ASPLOS '27 yoked-surface-code architecture, and one E-RL) and nine REJECTs. No claim moved and no version bumped. 2610.35507 is Physical Review E 114, 044136, but it does not bind S-L3 and it is not a Q_eng result. 2610.32152 is an ASPLOS '27 proceedings article; score.py does not treat that venue as a bare preprint, and the observatory A5 still fails because a conference is not a journal or replicated hardware. No AUTO-MERGED PATCH. Harvest raw hits 494, unique arXiv ids 391, of which 0 were already in the catalog. Repeated hits across queries are 103. Category windows were truncated, so the unscored list is the next program slice, not every hit. DBE_FULLTEXT_STORE unset: no PDFs cached. versions.json is DBE-0.2.2 / DBES-0.2.0 and claims.json freeze is 2026-10-02, matching the prompt. Popularity is min(40, 10 + author count). It is not a citation count. Fuzzy title check against the catalog found 0 possible duplicates at similarity >= 0.85."
+      "notes": "Scored the fifteen unscored ids carried from run-2026-10-28, oldest first. No newer paper was scored: the cap is 15 cards. Six HOLDs (five E-QEC, including the ASPLOS '27 yoked-surface-code architecture, and one E-RL) and nine REJECTs. No claim moved and no version bumped. 2610.35507 is Physical Review E 114, 044136, but it does not bind S-L3 and it is not a Q_eng result. 2610.32152 is an ASPLOS '27 proceedings article; score.py does not treat that venue as a bare preprint, and the observatory A5 still fails because a conference is not a journal or replicated hardware. No AUTO-MERGED PATCH. Harvest raw hits 494, unique arXiv ids 391, of which 0 were already in the catalog. Repeated hits across queries are 103. Category windows were truncated, so the unscored list is the next program slice, not every hit. DBE_FULLTEXT_STORE unset: no PDFs cached. versions.json is DBE-0.2.2 / DBES-0.2.0 and claims.json freeze is 2026-10-02, matching the prompt. Popularity is min(40, 10 + author count). It is not a citation count. Fuzzy title check against the catalog found 0 possible duplicates at similarity >= 0.85. counts.duplicates is 103: raw hits minus unique arXiv ids. Catalog overlap stays 0. This corrects the P2 on the prior head."
     },
     {
       "id": "run-2026-10-28-daily",
