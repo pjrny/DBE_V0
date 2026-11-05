@@ -1,0 +1,406 @@
+{
+  "id": "run-2026-11-04-daily",
+  "kind": "daily",
+  "startedAt": "2026-11-04T09:22:00-06:00",
+  "finishedAt": "2026-11-04T09:49:40-06:00",
+  "windowStart": "2026-10-28",
+  "windowEnd": "2026-11-04",
+  "sources": [
+    {
+      "id": "arxiv-id-list",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 15,
+      "new": 15,
+      "ms": 241,
+      "error": "The fifteen run-2026-10-28 carry-over ids, oldest first. All fifteen resolved."
+    },
+    {
+      "id": "arxiv-ingest-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 7,
+      "returned": 52,
+      "new": null,
+      "ms": 1640,
+      "error": "The seven ingest.py QUERIES with submittedDate 2026-10-28 00:00 to 2026-11-05 00:00 UTC, max 40, one request per 3 seconds. None was truncated. ingest.py was not executed: it has no inter-request sleep and would replace this run log with a non-schema payload."
+    },
+    {
+      "id": "arxiv-fetch-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 11,
+      "returned": 137,
+      "new": null,
+      "ms": 3739,
+      "error": "The ten fetch_arxiv.py QUERIES as read-only searches, same window, max 30. anyons was truncated at 30 of 47; a second page at start=30 completed it. No other fetch query was truncated. fetch_arxiv.py was not run in write mode."
+    },
+    {
+      "id": "arxiv-keep-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 4,
+      "returned": 37,
+      "new": null,
+      "ms": 1179,
+      "error": "qLDPC or surface code, tokamak or stellarator control, Vlasov or SRS or SBS or hole burning, and S3 anyon braid or fusion. None was truncated. The S3 query returned 0."
+    },
+    {
+      "id": "arxiv-category-windows",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "partial",
+      "http": 200,
+      "requests": 5,
+      "returned": 253,
+      "new": null,
+      "ms": 1456,
+      "error": "Newest-first caps. cat-quant-ph 80 of 479; cat-cond-mat.str-el 40 of 127; cat-cond-mat.mes-hall 40 of 156; cat-hep-th 40 of 254; cat-physics.plasm-ph 53 of 53 complete. Not a bulk scrape of /list pages."
+    },
+    {
+      "id": "arxiv-oai",
+      "url": "https://oaipmh.arxiv.org/oai",
+      "status": "ok",
+      "http": 200,
+      "requests": 15,
+      "returned": 15,
+      "new": 0,
+      "ms": 1875,
+      "error": "GetRecord for the 15 scored ids. Every record had a licence. DOI and journal-ref only on 2610.32152 (DOI 10.1145/3845814.3850031, no journal-ref) and 2610.35507 (DOI 10.1103/xhzy-hxdw, journal-ref Physical Review E 114, 044136 (2026))."
+    },
+    {
+      "id": "openalex",
+      "url": "https://api.openalex.org/works",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": "OPENALEX_API_KEY unset"
+    },
+    {
+      "id": "crossref",
+      "url": "https://api.crossref.org/works",
+      "status": "partial",
+      "http": 200,
+      "requests": 2,
+      "returned": 2,
+      "new": 0,
+      "ms": null,
+      "error": "DBE_CONTACT_EMAIL unset, so no mailto. Two single-record lookups only, User-Agent DBE-Observatory/2.0. 10.1145/3845814.3850031 is a proceedings-article in the 32nd ACM ASPLOS volume 1, Crossref issued 2027-04-10, VOR licence CC BY 4.0. 10.1103/xhzy-hxdw is a journal-article in Physical Review E, issued 2026-10-23, VOR licence CC BY 4.0. That VOR licence disagrees with the arXiv OAI licence CC BY-NC-ND 4.0 on 2610.35507."
+    },
+    {
+      "id": "unpaywall",
+      "url": "https://api.unpaywall.org/v2",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": "DBE_CONTACT_EMAIL unset"
+    },
+    {
+      "id": "weekly-6.2",
+      "url": "section 6.2",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": "Wednesday. Weekly sources are Sunday only."
+    }
+  ],
+  "counts": {
+    "harvested": 494,
+    "duplicates": 103,
+    "merged": 0,
+    "new": 15,
+    "scored": 15,
+    "unscored": 15,
+    "add": 0,
+    "strengthen": 0,
+    "weaken": 0,
+    "hold": 6,
+    "newPillar": 0,
+    "reject": 9
+  },
+  "paperIds": [
+    "2610.29446",
+    "2610.30081",
+    "2610.30087",
+    "2610.30638",
+    "2610.32152",
+    "2610.32264",
+    "2610.32428",
+    "2610.32767",
+    "2610.33347",
+    "2610.35099",
+    "2610.35507",
+    "2610.36029",
+    "2610.36567",
+    "2610.36686",
+    "2610.37552"
+  ],
+  "unscoredIds": [
+    {
+      "id": "2610.40567",
+      "reason": "2026-10-29 Surface-code partial decodability under coherent Z rotations, related by Wegner duality to a decohering paramagnet. E-QEC. Over the 15-card cap after the 28 Oct carry-overs."
+    },
+    {
+      "id": "2610.40592",
+      "reason": "2026-10-29 Decoupling higher-dimensional translation-invariant CSS codes into toric codes. E-QEC theory. Over the cap."
+    },
+    {
+      "id": "2610.41398",
+      "reason": "2026-10-30 GraphMP, a learning-based message-passing decoder for qLDPC codes, plus a decoder model factory. E-QEC. Simulation. Over the cap."
+    },
+    {
+      "id": "2610.41413",
+      "reason": "2026-10-30 FPGA belief-propagation decoder for a [[512,174,8]] 3D product qLDPC code. The abstract says the FPGA meets a neutral-atom and trapped-ion latency budget. E-QEC. Score next; do not treat that sentence as a measured logical qubit. Over the cap."
+    },
+    {
+      "id": "2611.00404",
+      "reason": "2026-10-30 Color-code magic-state synthesis and analog rotations, titled as run on a superconducting processor. E-QEC. Score next before the title is read as a measured logical. Over the cap."
+    },
+    {
+      "id": "2611.00694",
+      "reason": "2026-10-31 Photon-loss thresholds for the surface-GKP code. The abstract gives estimates at GKP squeezing of 20 dB and 13 dB. E-QEC. Over the cap."
+    },
+    {
+      "id": "2611.01360",
+      "reason": "2026-10-31 Decoder-agnostic logical-class diagnostic for abelian stabilizer codes. E-QEC. Over the cap."
+    },
+    {
+      "id": "2611.02972",
+      "reason": "2026-11-02 Routing for the [[144,12,12]] bivariate bicycle code on spin-qubit shuttling grids. E-QEC. Memory experiments in the abstract, not a device result scored here. Over the cap."
+    },
+    {
+      "id": "2611.03128",
+      "reason": "2026-11-02 Belief-propagation-guided Tesseract decoding of qLDPC codes. E-QEC. Over the cap."
+    },
+    {
+      "id": "2611.04179",
+      "reason": "2026-11-03 Reinforcement-learned scheduling for qLDPC belief-propagation decoders. Could be read as E-QEC and E-RL together. Do not ADD that coupling; a later card must keep it at C1 if both are bound. Over the cap."
+    },
+    {
+      "id": "2611.04964",
+      "reason": "2026-11-03 Asymptotic rate and distance for addressable transversal phase gates, using a cyclic encoding outside binary CSS. E-QEC theory, not a device. Over the cap."
+    },
+    {
+      "id": "2611.05375",
+      "reason": "2026-11-03 Decoding the transverse-field toric code as it is pushed toward a trivial phase. The abstract says bare stabilizer measurements still give a finite threshold under bit-flip and phase-flip noise. E-QEC. No threshold number is copied here. Over the cap."
+    },
+    {
+      "id": "2611.02411",
+      "reason": "2026-11-02 Gate-tunable coupling and zero-bias peaks in PbTe-Pb nanowires. E-MZM context. The abstract does not state an X and Z logical. Over the cap."
+    },
+    {
+      "id": "2611.04290",
+      "reason": "2026-11-03 Universal braiding in Links-Gould fusion spaces for U_q of sl(2|1). Not an S3 braid-plus-fusion measurement. Do not bind E-S3. Over the cap."
+    },
+    {
+      "id": "2611.04906",
+      "reason": "2026-11-03 Extended-MHD model of a passive runaway-electron mitigation coil on a high-current tokamak. Not a closed control loop and not an S-L3 solver. Over the cap."
+    }
+  ],
+  "fieldCounts": {
+    "majorana": 2,
+    "anyons": 5,
+    "tqc": 6,
+    "plasma": 3,
+    "fusion-quantum": 1,
+    "braid-knot": 1
+  },
+  "gateMisses": {
+    "A1": 9,
+    "A2": 9,
+    "A3": 15,
+    "A4": 15,
+    "A5": 14,
+    "A6": 0,
+    "A7": 0,
+    "A8": 0,
+    "G1": 0,
+    "G2": 0,
+    "G3": 0,
+    "G4": 9,
+    "G5": 0,
+    "G6": 0
+  },
+  "claimDelta": "none",
+  "versionBump": null,
+  "fulltext": {
+    "cached": 0,
+    "privateOnly": 0,
+    "noOA": 0
+  },
+  "tests": {
+    "command": "PYTHONPATH=. python -m pytest -q tests/test_research.py tests/test_claims.py tests/test_api.py tests/test_plasma.py tests/test_transport.py",
+    "result": "pass",
+    "summary": "19 passed, 30 subtests passed"
+  },
+  "branch": "observatory/2026-11-04",
+  "pr": "https://github.com/pjrny/DBE_V0/pull/20",
+  "suspiciousContent": [],
+  "scoreRoutes": [
+    {
+      "paper": "2610.29446",
+      "bind": null,
+      "cliBind": "E-MZM",
+      "action": "REJECT",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "stdoutTail": "BIND E-MZM (WATCH C1/T3/D3/A2) | ACTION REJECT  PAPER 2610.29446  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    },
+    {
+      "paper": "2610.30081",
+      "bind": null,
+      "cliBind": "E-S3",
+      "action": "REJECT",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "stdoutTail": "BIND E-S3 (KEEP C3/T3/D3/A3) | ACTION REJECT  PAPER 2610.30081  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    },
+    {
+      "paper": "2610.30087",
+      "bind": "E-QEC",
+      "cliBind": "E-QEC",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "stdoutTail": "BIND E-QEC (KEEP C4/T3/D3/A3) | ACTION HOLD  PAPER 2610.30087  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    },
+    {
+      "paper": "2610.30638",
+      "bind": null,
+      "cliBind": "E-RL",
+      "action": "REJECT",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "stdoutTail": "BIND E-RL (KEEP C4/T3/D3/A3) | ACTION REJECT  PAPER 2610.30638  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    },
+    {
+      "paper": "2610.32152",
+      "bind": "E-QEC",
+      "cliBind": "E-QEC",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "NOT-BARE",
+      "stdoutTail": "BIND E-QEC (KEEP C4/T3/D3/A3) | ACTION HOLD  PAPER 2610.32152  VENUE ASPLOS 2027 proceedings | A5 venue is not a bare preprint (still confirm journal or replicated hardware) | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    },
+    {
+      "paper": "2610.32264",
+      "bind": "E-RL",
+      "cliBind": "E-RL",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "stdoutTail": "BIND E-RL (KEEP C4/T3/D3/A3) | ACTION HOLD  PAPER 2610.32264  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    },
+    {
+      "paper": "2610.32428",
+      "bind": null,
+      "cliBind": "E-QEC",
+      "action": "REJECT",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "stdoutTail": "BIND E-QEC (KEEP C4/T3/D3/A3) | ACTION REJECT  PAPER 2610.32428  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    },
+    {
+      "paper": "2610.32767",
+      "bind": null,
+      "cliBind": "E-MZM",
+      "action": "REJECT",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "stdoutTail": "BIND E-MZM (WATCH C1/T3/D3/A2) | ACTION REJECT  PAPER 2610.32767  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    },
+    {
+      "paper": "2610.33347",
+      "bind": "E-QEC",
+      "cliBind": "E-QEC",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "stdoutTail": "BIND E-QEC (KEEP C4/T3/D3/A3) | ACTION HOLD  PAPER 2610.33347  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    },
+    {
+      "paper": "2610.35099",
+      "bind": "E-QEC",
+      "cliBind": "E-QEC",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "stdoutTail": "BIND E-QEC (KEEP C4/T3/D3/A3) | ACTION HOLD  PAPER 2610.35099  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    },
+    {
+      "paper": "2610.35507",
+      "bind": null,
+      "cliBind": "S-L3",
+      "action": "REJECT",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "NOT-BARE",
+      "stdoutTail": "BIND S-L3 (KEEP C4/T2/D2/A3) | ACTION REJECT  PAPER 2610.35507  VENUE Physical Review E | A5 venue is not a bare preprint (still confirm journal or replicated hardware) | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    },
+    {
+      "paper": "2610.36029",
+      "bind": "E-QEC",
+      "cliBind": "E-QEC",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "stdoutTail": "BIND E-QEC (KEEP C4/T3/D3/A3) | ACTION HOLD  PAPER 2610.36029  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    },
+    {
+      "paper": "2610.36567",
+      "bind": null,
+      "cliBind": "E-S3",
+      "action": "REJECT",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "stdoutTail": "BIND E-S3 (KEEP C3/T3/D3/A3) | ACTION REJECT  PAPER 2610.36567  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    },
+    {
+      "paper": "2610.36686",
+      "bind": null,
+      "cliBind": "E-S3",
+      "action": "REJECT",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "stdoutTail": "BIND E-S3 (KEEP C3/T3/D3/A3) | ACTION REJECT  PAPER 2610.36686  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    },
+    {
+      "paper": "2610.37552",
+      "bind": null,
+      "cliBind": "E-S3",
+      "action": "REJECT",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "stdoutTail": "BIND E-S3 (KEEP C3/T3/D3/A3) | ACTION REJECT  PAPER 2610.37552  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    }
+  ],
+  "possibleDuplicates": [],
+  "notes": "Scored the fifteen unscored ids carried from run-2026-10-28, oldest first. No newer paper was scored: the cap is 15 cards. Six HOLDs (five E-QEC, including the ASPLOS '27 yoked-surface-code architecture, and one E-RL) and nine REJECTs. No claim moved and no version bumped. 2610.35507 is Physical Review E 114, 044136, but it does not bind S-L3 and it is not a Q_eng result. 2610.32152 is an ASPLOS '27 proceedings article; score.py does not treat that venue as a bare preprint, and the observatory A5 still fails because a conference is not a journal or replicated hardware. No AUTO-MERGED PATCH. Harvest raw hits 494, unique arXiv ids 391, of which 0 were already in the catalog. Repeated hits across queries are 103. Category windows were truncated, so the unscored list is the next program slice, not every hit. DBE_FULLTEXT_STORE unset: no PDFs cached. versions.json is DBE-0.2.2 / DBES-0.2.0 and claims.json freeze is 2026-10-02, matching the prompt. Popularity is min(40, 10 + author count). It is not a citation count. Fuzzy title check against the catalog found 0 possible duplicates at similarity >= 0.85. counts.duplicates is 103: raw hits minus unique arXiv ids. Catalog overlap stays 0. This corrects the P2 on the prior head."
+}
