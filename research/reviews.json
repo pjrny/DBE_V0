@@ -164,17 +164,17 @@
         "G1": "pass",
         "G2": "pass",
         "G3": "pass",
-        "G4": "pass",
+        "G4": "fail",
         "G5": "pass",
         "G6": "pass",
-        "note": "G1 passes: the reported probabilities are dimensionless fidelities. G2 passes: no energy balance is claimed. G3 passes: the three fidelities are for stated circuits, not an unbounded law. G4 passes as an error-layer experiment on a superconducting processor; the code is the color code, which is recorded as a limitation and does not tighten the surface-code/qLDPC claim. G5 passes: the post-selection cut can be audited against the device log this year. G6 passes: no Q_eng is stated."
+        "note": "G1 passes: the reported probabilities are dimensionless fidelities. G2 passes: no energy balance is claimed. G3 passes: the three fidelities are for stated circuits, not an unbounded law. G4 fails: E-QEC's frozen platform is surface code or qLDPC, and this experiment is a color code, so the platform does not match the claim. The color-code fidelities stay a limitation and do not tighten C4. G5 passes: the post-selection cut can be audited against the device log this year. G6 passes: no Q_eng is stated."
       },
-      "gateNote": "G1 passes: the reported probabilities are dimensionless fidelities. G2 passes: no energy balance is claimed. G3 passes: the three fidelities are for stated circuits, not an unbounded law. G4 passes as an error-layer experiment on a superconducting processor; the code is the color code, which is recorded as a limitation and does not tighten the surface-code/qLDPC claim. G5 passes: the post-selection cut can be audited against the device log this year. G6 passes: no Q_eng is stated.",
+      "gateNote": "G1 passes: the reported probabilities are dimensionless fidelities. G2 passes: no energy balance is claimed. G3 passes: the three fidelities are for stated circuits, not an unbounded law. G4 fails: E-QEC's frozen platform is surface code or qLDPC, and this experiment is a color code, so the platform does not match the claim. The color-code fidelities stay a limitation and do not tighten C4. G5 passes: the post-selection cut can be audited against the device log this year. G6 passes: no Q_eng is stated.",
       "score": "E-QEC C4 T3 D3 A3 stays",
       "action": "HOLD",
       "route": "QUEUE",
       "version": null,
-      "disputer": "Post-selected color-code fidelities are not a surface-code or qLDPC logical that moves C4. E-QEC stays C4.",
+      "disputer": "Post-selected color-code fidelities are not a surface-code or qLDPC logical. G4 fails because the platform is a color code, not the E-QEC platform. E-QEC stays C4.",
       "ledger": "none.",
       "plain": {
         "core": "The authors report what they call the first implementations of space-time efficient analog rotations and fault-tolerant magic-state synthesis on a color code, on a superconducting processor. Under post-selection they report a kickback-tomography correct-sign probability of 99.9859% on cultivated T_L states, 96% tomographic fidelity on logical analog-rotation states, and 91% fidelity on synthesized logical magic states that consume 3 cultivated T_L states, 3 transversal Hadamards, and real-time feed-forward S_L corrections.",
@@ -182,8 +182,8 @@
         "limit": "Bare arXiv. Color code, not surface code or qLDPC. Post-selected. One processor."
       },
       "claimDelta": "none",
-      "whyQueued": "A1 pass (E-QEC only). A3 miss: HOLD, not INCLUDE. A2 pass. A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 74 is round(84 x 0.88).",
-      "autoGate": "miss A3, A4, A5",
+      "whyQueued": "A1 pass (E-QEC only). A3 miss: HOLD, not INCLUDE. A2 miss: G4 fails, color code is not the surface-code or qLDPC platform. A4 miss: C unchanged. A5 miss: bare arXiv. A6 pass. A7 pass. A8 pass. Harvest confidence 74 is round(84 x 0.88).",
+      "autoGate": "miss A2, A3, A4, A5",
       "scoreHeuristic": {
         "importance": 84,
         "confidence": 74,

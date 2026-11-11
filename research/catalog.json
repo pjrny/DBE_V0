@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T09:38:00-06:00",
+  "generatedAt": "2026-11-11T09:56:00-06:00",
   "lookback": "1y+",
   "northStar": "Q=1000",
   "feeds": [
@@ -23693,7 +23693,7 @@
       "id": "run-2026-11-11-daily",
       "kind": "daily",
       "startedAt": "2026-11-11T09:23:00-06:00",
-      "finishedAt": "2026-11-11T09:38:00-06:00",
+      "finishedAt": "2026-11-11T09:56:00-06:00",
       "windowStart": "2026-11-04",
       "windowEnd": "2026-11-11",
       "sources": [
@@ -23912,7 +23912,7 @@
       },
       "gateMisses": {
         "A1": 3,
-        "A2": 3,
+        "A2": 4,
         "A3": 15,
         "A4": 15,
         "A5": 14,
@@ -23922,7 +23922,7 @@
         "G1": 0,
         "G2": 0,
         "G3": 0,
-        "G4": 3,
+        "G4": 4,
         "G5": 0,
         "G6": 0
       },
@@ -24094,7 +24094,7 @@
         }
       ],
       "possibleDuplicates": [],
-      "notes": "Scored the fifteen unscored ids carried from run-2026-11-04, oldest first. No newer paper was scored: the cap is 15 cards. Twelve HOLDs, all E-QEC, and three REJECTs. No claim moved and no version bumped. 2611.02411 is Physical Review B 114, L231407 (2026). E-MZM is WATCH, so the journal venue does not bind and does not raise C. 2611.04179 uses reinforcement learning to schedule a qLDPC decoder. That is not Bus A, so E-RL is not bound and there is no bridge. 2611.03128's comment says it was submitted to IEEE Transactions on Quantum Engineering. OAI has no journal-ref, so the venue stays arXiv. 2611.04906 says SPARC is designed to achieve a fusion gain Q>1. That sentence is the machine's design aim in the abstract. It is not this paper's output and it is not Q_eng. No AUTO-MERGED PATCH. Harvest raw hits 439, unique arXiv ids 342, of which 0 were already in the catalog. Repeated hits across queries are 97. Category windows were truncated, so the unscored list is the next program slice, not every hit. The scored carry-overs were submitted 2026-10-29 through 2026-11-03, which is before this lookback window; they were resolved again by id list. DBE_FULLTEXT_STORE unset: no PDFs cached. versions.json is DBE-0.2.2 / DBES-0.2.0 and claims.json freeze is 2026-10-02, matching the prompt. Popularity is min(40, 10 + author count). It is not a citation count. Fuzzy title check against the catalog found 0 possible duplicates at similarity >= 0.85. counts.duplicates is 97: raw hits minus unique arXiv ids. Catalog overlap stays 0. ingest.py was not executed, same as run-2026-11-04: it has no inter-request sleep and its output is not the section-10 run log. Its seven QUERIES were issued directly."
+      "notes": "Scored the fifteen unscored ids carried from run-2026-11-04, oldest first. No newer paper was scored: the cap is 15 cards. Twelve HOLDs, all E-QEC, and three REJECTs. No claim moved and no version bumped. 2611.02411 is Physical Review B 114, L231407 (2026). E-MZM is WATCH, so the journal venue does not bind and does not raise C. 2611.04179 uses reinforcement learning to schedule a qLDPC decoder. That is not Bus A, so E-RL is not bound and there is no bridge. 2611.03128's comment says it was submitted to IEEE Transactions on Quantum Engineering. OAI has no journal-ref, so the venue stays arXiv. 2611.04906 says SPARC is designed to achieve a fusion gain Q>1. That sentence is the machine's design aim in the abstract. It is not this paper's output and it is not Q_eng. No AUTO-MERGED PATCH. Harvest raw hits 439, unique arXiv ids 342, of which 0 were already in the catalog. Repeated hits across queries are 97. Category windows were truncated, so the unscored list is the next program slice, not every hit. The scored carry-overs were submitted 2026-10-29 through 2026-11-03, which is before this lookback window; they were resolved again by id list. DBE_FULLTEXT_STORE unset: no PDFs cached. versions.json is DBE-0.2.2 / DBES-0.2.0 and claims.json freeze is 2026-10-02, matching the prompt. Popularity is min(40, 10 + author count). It is not a citation count. Fuzzy title check against the catalog found 0 possible duplicates at similarity >= 0.85. counts.duplicates is 97: raw hits minus unique arXiv ids. Catalog overlap stays 0. ingest.py was not executed, same as run-2026-11-04: it has no inter-request sleep and its output is not the section-10 run log. Its seven QUERIES were issued directly. Re-run correction after the Codex P2: 2611.00404 G4 now fails because the experiment is a color code and E-QEC's platform is surface code or qLDPC, so A2 fails too. The decision stays HOLD. Gate-miss counts A2 and G4 are 4."
     },
     {
       "id": "run-2026-11-04-daily",
