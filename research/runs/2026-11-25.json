@@ -245,7 +245,7 @@
     "summary": "19 passed, 30 subtests passed"
   },
   "branch": "observatory/2026-11-25",
-  "pr": null,
+  "pr": "https://github.com/pjrny/DBE_V0/pull/23",
   "suspiciousContent": [],
   "scoreRoutes": [
     {
