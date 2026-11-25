@@ -343,31 +343,33 @@
       "id": "rev-2026-11-18-2611.10870",
       "paperId": "2611.10870",
       "date": "2026-11-18",
-      "bind": [],
+      "bind": [
+        "S-L3"
+      ],
       "gates": {
         "G1": "pass",
         "G2": "pass",
         "G3": "pass",
-        "G4": "fail",
+        "G4": "pass",
         "G5": "pass",
         "G6": "pass",
-        "note": "G1 passes: the separation is between an imitation loss and a stability horizon. G2 passes: no plant ledger is closed. No P_fusion or P_drive is reported. G3 passes: exponential compounding of behavior-cloning error is the analysis, set against a polynomial online-loss bound. It is not used as a fusion scaling law. G4 fails: a 1D Vlasov-Poisson control simulation is not an S-L3 solver paper and not Bus A plant attach. G5 passes: the 1D simulation can be re-run this quarter. G6 passes: nuclear fusion control is motivation. No Q_eng is computed."
+        "note": "G1 passes: the separation is between an imitation loss and a stability horizon. G2 passes: no plant ledger is closed. No P_fusion or P_drive is reported. G3 passes: exponential compounding of behavior-cloning error is the analysis, set against a polynomial online-loss bound. It is not used as a fusion scaling law. G4 passes: the platform is a controlled Vlasov-Poisson method, the same S-L3 platform as rev-2026-10-21-2610.26110. It is not Bus A plant attach, so E-RL is not bound. G5 passes: the 1D simulation can be re-run this quarter. G6 passes: nuclear fusion control is motivation. No Q_eng is computed."
       },
-      "gateNote": "G1 passes: the separation is between an imitation loss and a stability horizon. G2 passes: no plant ledger is closed. No P_fusion or P_drive is reported. G3 passes: exponential compounding of behavior-cloning error is the analysis, set against a polynomial online-loss bound. It is not used as a fusion scaling law. G4 fails: a 1D Vlasov-Poisson control simulation is not an S-L3 solver paper and not Bus A plant attach. G5 passes: the 1D simulation can be re-run this quarter. G6 passes: nuclear fusion control is motivation. No Q_eng is computed.",
-      "score": "no claim bound",
-      "action": "REJECT",
-      "route": "REJECT",
+      "gateNote": "G1 passes: the separation is between an imitation loss and a stability horizon. G2 passes: no plant ledger is closed. No P_fusion or P_drive is reported. G3 passes: exponential compounding of behavior-cloning error is the analysis, set against a polynomial online-loss bound. It is not used as a fusion scaling law. G4 passes: the platform is a controlled Vlasov-Poisson method, the same S-L3 platform as rev-2026-10-21-2610.26110. It is not Bus A plant attach, so E-RL is not bound. G5 passes: the 1D simulation can be re-run this quarter. G6 passes: nuclear fusion control is motivation. No Q_eng is computed.",
+      "score": "S-L3 C4 T2 D2 A3 stays",
+      "action": "HOLD",
+      "route": "QUEUE",
       "version": null,
-      "disputer": "Do not bind S-L3 and E-RL together. The plasma is a 1D test system, not a kinetic method and not a plant. No C1 bridge. The NeurIPS comment is not a resolved venue.",
+      "disputer": "Online imitation on a 1D Vlasov-Poisson box is not a rate bound and not Bus A. S-L3 stays C4. Do not bind E-RL. No C1 bridge. The NeurIPS comment is not a resolved venue.",
       "ledger": "none.",
       "plain": {
         "core": "Imitation learning is studied for instability control in the Vlasov-Poisson system, with nuclear fusion control named as the motivation and with the controller limited to macroscopic measurements. The abstract states a separation: a small behavior-cloning error compounds and exponentially amplifies instability, while an online imitation loss can polynomially control the stability of rollout trajectories. A DAgger-style algorithm learns from a fully observable expert. Simulations on a 1D Vlasov-Poisson system are said to stabilize instabilities over longer horizons than behavior cloning.",
-        "why": "No KEEP or HOLD claim. A 1D Vlasov-Poisson simulation is not a Vlasov, hole-burning, SRS, or SBS method, so S-L3 is not bound. Imitating an expert in that simulation is not Bus A plant attach, so E-RL is not bound. Binding both would invent a coupling. There is no interface contract, so there is no C1 bridge. Reading list. No Q is written.",
+        "why": "S-L3 only. A controlled Vlasov-Poisson method, matching rev-2026-10-21-2610.26110. It is not a tokamak PCS, so E-RL is not bound, and it states no reactivity, so C4 does not move.",
         "limit": "Bare arXiv. 1D simulation. The author comment says accepted at NeurIPS 2026. OAI returned no DOI and no journal-ref, so the venue stays a preprint. Not a tokamak controller."
       },
       "claimDelta": "none",
-      "whyQueued": "A1 miss: no KEEP or HOLD claim. A two-claim reading was considered and refused. A2 miss (G4). A3 miss: REJECT, not INCLUDE. A4 miss: C unchanged. A5 miss: bare arXiv. The NeurIPS comment is not A5. A6 pass: no coupling sentence is added. A7 pass. A8 pass. Harvest confidence 62 is round(70 x 0.88).",
-      "autoGate": "miss A1, A2, A3, A4, A5",
+      "whyQueued": "A1 pass (S-L3 only). A3 miss: HOLD, not INCLUDE. A2 pass. A4 miss: C unchanged. A5 miss: bare arXiv. The NeurIPS comment is not A5. A6 pass: no coupling sentence is added. A7 pass. A8 pass. Harvest confidence 62 is round(70 x 0.88). Reclassified 2026-11-25 from REJECT after the Codex P2, using the 2610.26110 precedent.",
+      "autoGate": "miss A3, A4, A5",
       "scoreHeuristic": {
         "importance": 68,
         "confidence": 62,

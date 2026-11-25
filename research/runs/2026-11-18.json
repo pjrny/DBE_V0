@@ -127,9 +127,9 @@
     "add": 0,
     "strengthen": 0,
     "weaken": 0,
-    "hold": 12,
+    "hold": 13,
     "newPillar": 0,
-    "reject": 3
+    "reject": 2
   },
   "paperIds": [
     "2611.05850",
@@ -216,8 +216,8 @@
     "topology": 3
   },
   "gateMisses": {
-    "A1": 3,
-    "A2": 3,
+    "A1": 2,
+    "A2": 2,
     "A3": 15,
     "A4": 15,
     "A5": 15,
@@ -227,7 +227,7 @@
     "G1": 0,
     "G2": 0,
     "G3": 0,
-    "G4": 3,
+    "G4": 2,
     "G5": 0,
     "G6": 0
   },
@@ -339,13 +339,13 @@
     },
     {
       "paper": "2611.10870",
-      "bind": null,
-      "cliBind": "E-RL",
-      "action": "REJECT",
+      "bind": "S-L3",
+      "cliBind": "S-L3",
+      "action": "HOLD",
       "exit": 0,
       "route": "QUEUE",
       "a5": "FAIL",
-      "stdoutTail": "BIND E-RL (KEEP C4/T3/D3/A3) | ACTION REJECT  PAPER 2611.10870  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+      "stdoutTail": "BIND S-L3 (KEEP C4/T2/D2/A3) | ACTION HOLD  PAPER 2611.10870  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
     },
     {
       "paper": "2611.12236",
@@ -399,5 +399,5 @@
     }
   ],
   "possibleDuplicates": [],
-  "notes": "Scored the fifteen unscored ids carried from run-2026-11-11, oldest first. No newer paper was scored: the cap is 15 cards. Twelve HOLDs (eleven E-QEC, one S-L3) and three REJECTs. No claim moved and no version bumped. All fifteen OAI records are bare preprints: a licence, no DOI, no journal-ref. 2611.07144's comment names QCE 2026 and 2611.10870's comment says accepted at NeurIPS 2026. Neither is a resolved venue. 2611.10870 can be read as S-L3 and E-RL together. Neither platform matches, so neither is bound and there is no C1 bridge. 2611.06154, 2611.09538, and 2611.12236 mention anyons or quantum doubles. Those are code or learnability constructions, not braid or fusion measurements, so E-S3 is not bound. 2611.13630 uses photonic fusion. That is not a nuclear ledger and not S-L3. 2611.07017's any-p statement is the domain of an Sp(N) theorem with N at least 40 a sufficient bound. G3 passes on that reading. It does not raise C. 2611.13174's author comment discloses AI assistance. It does not ask to change rules, files, or targets. Harvest confidence is round(raw times 0.88) for preprint tier 0.7. Popularity is min(40, 8 plus the API author count), not a citation count: S2_API_KEY is unset. The next carry-over list is date order. It includes the Willow stability preprint 2611.21578 and two superconducting hardware preprints. They stay unscored because the cap was already full. Category hits that are tokamak transport, pure PDE, or keyword false friends were not queued. Prompt source: research/OBSERVATORY_PROMPT.md on feature/research-grade-physics, blob 226375bdc29fa23856dc38714f84b2fca90c5f1d, NORTH STAR present. The starter is a shorter restatement. No rule conflict. versions.json is DBE-0.2.2 / DBES-0.2.0 and claims.json freeze is 2026-10-02, matching the prompt. No open older observatory PR. Branch created from origin/feature/research-grade-physics."
+  "notes": "Scored the fifteen unscored ids carried from run-2026-11-11, oldest first. No newer paper was scored: the cap is 15 cards. Thirteen HOLDs (eleven E-QEC, two S-L3) and two REJECTs. No claim moved and no version bumped. All fifteen OAI records are bare preprints: a licence, no DOI, no journal-ref. 2611.07144's comment names QCE 2026 and 2611.10870's comment says accepted at NeurIPS 2026. Neither is a resolved venue. 2611.10870 is bound to S-L3 only, the same reading as rev-2026-10-21-2610.26110: a controlled Vlasov-Poisson method, not Bus A. E-RL is not bound and there is no C1 bridge. Reclassified on 2026-11-25 to address the unaddressed Codex P2. The harvest-count P2 was already fixed on this branch (harvested 460). 2611.06154, 2611.09538, and 2611.12236 mention anyons or quantum doubles. Those are code or learnability constructions, not braid or fusion measurements, so E-S3 is not bound. 2611.13630 uses photonic fusion. That is not a nuclear ledger and not S-L3. 2611.07017's any-p statement is the domain of an Sp(N) theorem with N at least 40 a sufficient bound. G3 passes on that reading. It does not raise C. 2611.13174's author comment discloses AI assistance. It does not ask to change rules, files, or targets. Harvest confidence is round(raw times 0.88) for preprint tier 0.7. Popularity is min(40, 8 plus the API author count), not a citation count: S2_API_KEY is unset. The next carry-over list is date order. It includes the Willow stability preprint 2611.21578 and two superconducting hardware preprints. They stay unscored because the cap was already full. Category hits that are tokamak transport, pure PDE, or keyword false friends were not queued. Prompt source: research/OBSERVATORY_PROMPT.md on feature/research-grade-physics, blob 226375bdc29fa23856dc38714f84b2fca90c5f1d, NORTH STAR present. The starter is a shorter restatement. No rule conflict. versions.json is DBE-0.2.2 / DBES-0.2.0 and claims.json freeze is 2026-10-02, matching the prompt. No open older observatory PR. Branch created from origin/feature/research-grade-physics."
 }
