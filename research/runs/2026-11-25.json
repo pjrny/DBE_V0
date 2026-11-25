@@ -1,0 +1,404 @@
+{
+  "id": "run-2026-11-25-daily",
+  "kind": "daily",
+  "startedAt": "2026-11-25T09:26:14-06:00",
+  "finishedAt": "2026-11-25T09:39:44-06:00",
+  "windowStart": "2026-11-18",
+  "windowEnd": "2026-11-25",
+  "sources": [
+    {
+      "id": "arxiv-id-list",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 1,
+      "returned": 15,
+      "new": 15,
+      "ms": 1286,
+      "error": "The fifteen run-2026-11-18 carry-over ids, oldest first. All fifteen resolved. 2611.17724 is v2. The other fourteen are v1."
+    },
+    {
+      "id": "arxiv-ingest-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 7,
+      "returned": 50,
+      "new": null,
+      "ms": 2381,
+      "error": "The seven ingest.py QUERIES with submittedDate 2026-11-18 00:00 to 2026-11-26 00:00 UTC, max 40, one request per 3.2 seconds. None was truncated. ingest.py was not executed: it has no inter-request sleep and would replace this run log with a non-schema payload. q0 8 of 8; q1 2 of 2; q2 0 of 0; q3 5 of 5; q4 25 of 25; q5 8 of 8; q6 2 of 2"
+    },
+    {
+      "id": "arxiv-fetch-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 11,
+      "returned": 114,
+      "new": null,
+      "ms": 7664,
+      "error": "The ten fetch_arxiv.py QUERIES as read-only searches, same window, max 30. anyons was 30 of 40, so a second page at start 30 returned 10 and completed 40 of 40. A same-day re-check (start 0, 30, and 40) returned 30, 10, and 0 against a total of 40. start 40 is an empty page and was the wrong offset in the first note. fetch_arxiv.py was not run in write mode. anyons 40 of 40; tqc 1 of 1; majorana 5 of 5; braid-knot 9 of 9; topology 10 of 10; fracton 0 of 0; time-crystal 23 of 23; plasma 2 of 2; holography 15 of 15; fusion-quantum 9 of 9"
+    },
+    {
+      "id": "arxiv-keep-queries",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "ok",
+      "http": 200,
+      "requests": 5,
+      "returned": 79,
+      "new": null,
+      "ms": 5090,
+      "error": "qLDPC or surface code 17 of 17, tokamak or stellarator control 7 of 7, Vlasov or SRS or SBS or hole burning 40 of 52 then a second page returned 12 and completed 52 of 52, anyon braid or fusion 3 of 3. qldpc-surface 17 of 17; tokamak-control 7 of 7; vlasov-srs 52 of 52; anyon-braid-fusion 3 of 3"
+    },
+    {
+      "id": "arxiv-category-windows",
+      "url": "https://export.arxiv.org/api/query",
+      "status": "partial",
+      "http": 200,
+      "requests": 5,
+      "returned": 361,
+      "new": null,
+      "ms": 3188,
+      "error": "Newest-first caps of 80. cat-quant-ph 80 of 487; cat-cond-mat.str-el 80 of 127; cat-cond-mat.mes-hall 80 of 112; cat-hep-th 80 of 250; cat-physics.plasm-ph 41 of 41 complete. The three theory caps are higher than the 40 used on 2026-11-18. Not a bulk scrape of /list pages."
+    },
+    {
+      "id": "arxiv-oai",
+      "url": "https://oaipmh.arxiv.org/oai",
+      "status": "ok",
+      "http": 200,
+      "requests": 15,
+      "returned": 15,
+      "new": 0,
+      "ms": 2201,
+      "error": "GetRecord for the 15 scored ids. Every record had a licence. Only 2611.16234 had a DOI and a journal-ref."
+    },
+    {
+      "id": "openalex",
+      "url": "https://api.openalex.org/works",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": "OPENALEX_API_KEY unset"
+    },
+    {
+      "id": "crossref",
+      "url": "https://api.crossref.org/works",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": "DBE_CONTACT_EMAIL unset, so no mailto. The one scored DOI was taken from the arXiv API and OAI, not from Crossref."
+    },
+    {
+      "id": "unpaywall",
+      "url": "https://api.unpaywall.org/v2",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": "DBE_CONTACT_EMAIL unset"
+    },
+    {
+      "id": "weekly-6.2",
+      "url": "section 6.2",
+      "status": "skipped",
+      "http": null,
+      "requests": 0,
+      "returned": 0,
+      "new": 0,
+      "ms": null,
+      "error": "Wednesday. Weekly sources are Sunday only."
+    }
+  ],
+  "counts": {
+    "harvested": 619,
+    "duplicates": 0,
+    "merged": 0,
+    "new": 15,
+    "scored": 15,
+    "unscored": 15,
+    "add": 0,
+    "strengthen": 0,
+    "weaken": 0,
+    "hold": 13,
+    "newPillar": 0,
+    "reject": 2
+  },
+  "paperIds": [
+    "2611.15248",
+    "2611.15293",
+    "2611.15952",
+    "2611.16234",
+    "2611.17001",
+    "2611.17724",
+    "2611.18476",
+    "2611.19130",
+    "2611.19715",
+    "2611.20410",
+    "2611.21086",
+    "2611.21578",
+    "2611.22035",
+    "2611.23132",
+    "2611.23165"
+  ],
+  "unscoredIds": [
+    {
+      "id": "2611.23759",
+      "reason": "2026-11-18 Parity-push post-selection for qLDPC codes. E-QEC. A decoder-agnostic reject rule, not a device threshold. Over the cap after the 11 Nov carry-overs."
+    },
+    {
+      "id": "2611.23762",
+      "reason": "2026-11-18 Addressable transversal CCZ gates on qLDPC codes and magic-state protocols. E-QEC. Bare preprint. Do not raise C. Over the cap."
+    },
+    {
+      "id": "2611.24852",
+      "reason": "2026-11-18 Limits of magic-state cultivation, a fault theory for non-Clifford checks. E-QEC. Not a device. Over the cap."
+    },
+    {
+      "id": "2611.25397",
+      "reason": "2026-11-19 Counterfactual attribution of surface-code failures under non-Pauli noise. E-QEC. Distance-three example. Over the cap."
+    },
+    {
+      "id": "2611.25540",
+      "reason": "2026-11-19 Infinite plasma-echo cascades in the confined Vlasov-Poisson system, with Sobolev-norm growth. S-L3. A math construction, not a reactivity. Over the cap."
+    },
+    {
+      "id": "2611.25858",
+      "reason": "2026-11-19 Nonmagnetic impurities in vortex-core Majorana braiding gates. E-MZM is WATCH, so A1 would fail. Not an E-S3 fusion measurement. M5 stays open. Over the cap."
+    },
+    {
+      "id": "2611.25880",
+      "reason": "2026-11-19 Grammatical evolution of published qLDPC belief-propagation decoders. E-QEC. Speed is not a device threshold. Over the cap."
+    },
+    {
+      "id": "2611.26329",
+      "reason": "2026-11-19 Code quilts for joint logical measurement without extra ancillas. E-QEC. Construction. Over the cap."
+    },
+    {
+      "id": "2611.26447",
+      "reason": "2026-11-19 Rapids, an FPGA streaming neural decoder for real-time QEC. E-QEC. Not a quantum-device threshold. Over the cap."
+    },
+    {
+      "id": "2611.26506",
+      "reason": "2026-11-19 Decoding under disordered noise that the decoder only partly knows. E-QEC. Theory. Over the cap."
+    },
+    {
+      "id": "2611.27904",
+      "reason": "2026-11-20 Entropy-based moment reduction for the Vlasov-Poisson-Dougherty system. S-L3 method. Not a Q. Over the cap."
+    },
+    {
+      "id": "2611.28219",
+      "reason": "2026-11-20 Foliated surface codes for skip-gate leakage. E-QEC. Not a device. Over the cap."
+    },
+    {
+      "id": "2611.28898",
+      "reason": "2026-11-21 Multiple BGK-like structures in the time-asymptotic state of collisionless Vlasov-Poisson plasmas. S-L3. Simulation, not a rate bound. Over the cap."
+    },
+    {
+      "id": "2611.28944",
+      "reason": "2026-11-21 Non-Abelian twist defects in bivariate bicycle codes. Could be read as E-QEC and E-S3 together. Do not ADD that coupling. Over the cap."
+    },
+    {
+      "id": "2611.32647",
+      "reason": "2026-11-24 Burn and density control for an uncertain zero-dimensional tokamak model, with a model-free funnel controller and actuator constraints. E-RL candidate. Not a closed plant shot. Over the cap."
+    }
+  ],
+  "fieldCounts": {
+    "plasma": 2,
+    "tqc": 11,
+    "majorana": 2,
+    "topology": 2
+  },
+  "gateMisses": {
+    "A1": 2,
+    "A2": 2,
+    "A3": 15,
+    "A4": 15,
+    "A5": 14,
+    "A6": 0,
+    "A7": 0,
+    "A8": 0,
+    "G1": 0,
+    "G2": 0,
+    "G3": 0,
+    "G4": 2,
+    "G5": 0,
+    "G6": 0
+  },
+  "claimDelta": "none",
+  "versionBump": null,
+  "fulltext": {
+    "cached": 0,
+    "privateOnly": 0,
+    "noOA": 0
+  },
+  "tests": {
+    "command": "PYTHONPATH=. python -m pytest -q tests/test_research.py tests/test_claims.py tests/test_api.py tests/test_plasma.py tests/test_transport.py",
+    "result": "pass",
+    "summary": "19 passed, 30 subtests passed"
+  },
+  "branch": "observatory/2026-11-25",
+  "pr": "https://github.com/pjrny/DBE_V0/pull/23",
+  "suspiciousContent": [],
+  "scoreRoutes": [
+    {
+      "paper": "2611.15248",
+      "bind": "S-L3",
+      "cliBind": "S-L3",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "stdoutTail": "BIND S-L3 (KEEP C4/T2/D2/A3) | ACTION HOLD  PAPER 2611.15248  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    },
+    {
+      "paper": "2611.15293",
+      "bind": "S-L3",
+      "cliBind": "S-L3",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "stdoutTail": "BIND S-L3 (KEEP C4/T2/D2/A3) | ACTION HOLD  PAPER 2611.15293  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    },
+    {
+      "paper": "2611.15952",
+      "bind": "E-QEC",
+      "cliBind": "E-QEC",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "stdoutTail": "BIND E-QEC (KEEP C4/T3/D3/A3) | ACTION HOLD  PAPER 2611.15952  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    },
+    {
+      "paper": "2611.16234",
+      "bind": null,
+      "cliBind": "E-MZM",
+      "action": "REJECT",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "PASS",
+      "stdoutTail": "BIND E-MZM (WATCH C1/T3/D3/A2) | ACTION REJECT  PAPER 2611.16234  VENUE J. Phys. Chem. Lett. | A5 venue is not a bare preprint (still confirm journal or replicated hardware) | ROUTE QUEUE"
+    },
+    {
+      "paper": "2611.17001",
+      "bind": null,
+      "cliBind": "E-MZM",
+      "action": "REJECT",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "stdoutTail": "BIND E-MZM (WATCH C1/T3/D3/A2) | ACTION REJECT  PAPER 2611.17001  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    },
+    {
+      "paper": "2611.17724",
+      "bind": "E-QEC",
+      "cliBind": "E-QEC",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "stdoutTail": "BIND E-QEC (KEEP C4/T3/D3/A3) | ACTION HOLD  PAPER 2611.17724  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    },
+    {
+      "paper": "2611.18476",
+      "bind": "E-QEC",
+      "cliBind": "E-QEC",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "stdoutTail": "BIND E-QEC (KEEP C4/T3/D3/A3) | ACTION HOLD  PAPER 2611.18476  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    },
+    {
+      "paper": "2611.19130",
+      "bind": "E-QEC",
+      "cliBind": "E-QEC",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "stdoutTail": "BIND E-QEC (KEEP C4/T3/D3/A3) | ACTION HOLD  PAPER 2611.19130  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    },
+    {
+      "paper": "2611.19715",
+      "bind": "E-QEC",
+      "cliBind": "E-QEC",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "stdoutTail": "BIND E-QEC (KEEP C4/T3/D3/A3) | ACTION HOLD  PAPER 2611.19715  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    },
+    {
+      "paper": "2611.20410",
+      "bind": "E-QEC",
+      "cliBind": "E-QEC",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "stdoutTail": "BIND E-QEC (KEEP C4/T3/D3/A3) | ACTION HOLD  PAPER 2611.20410  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    },
+    {
+      "paper": "2611.21086",
+      "bind": "E-QEC",
+      "cliBind": "E-QEC",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "stdoutTail": "BIND E-QEC (KEEP C4/T3/D3/A3) | ACTION HOLD  PAPER 2611.21086  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    },
+    {
+      "paper": "2611.21578",
+      "bind": "E-QEC",
+      "cliBind": "E-QEC",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "stdoutTail": "BIND E-QEC (KEEP C4/T3/D3/A3) | ACTION HOLD  PAPER 2611.21578  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    },
+    {
+      "paper": "2611.22035",
+      "bind": "E-QEC",
+      "cliBind": "E-QEC",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "stdoutTail": "BIND E-QEC (KEEP C4/T3/D3/A3) | ACTION HOLD  PAPER 2611.22035  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    },
+    {
+      "paper": "2611.23132",
+      "bind": "E-QEC",
+      "cliBind": "E-QEC",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "stdoutTail": "BIND E-QEC (KEEP C4/T3/D3/A3) | ACTION HOLD  PAPER 2611.23132  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    },
+    {
+      "paper": "2611.23165",
+      "bind": "E-QEC",
+      "cliBind": "E-QEC",
+      "action": "HOLD",
+      "exit": 0,
+      "route": "QUEUE",
+      "a5": "FAIL",
+      "stdoutTail": "BIND E-QEC (KEEP C4/T3/D3/A3) | ACTION HOLD  PAPER 2611.23165  VENUE arxiv | A5 FAIL bare arXiv/preprint venue: cannot pass A5 or raise C | ROUTE QUEUE | A5 journal or replicated hardware (bare arXiv cannot raise C)"
+    }
+  ],
+  "possibleDuplicates": [],
+  "notes": "Scored the fifteen unscored ids carried from run-2026-11-18, oldest first. No newer paper was scored: the cap is 15 cards. Thirteen HOLDs (eleven E-QEC, two S-L3) and two REJECTs. No claim moved and no version bumped. Fourteen OAI records are bare preprints. 2611.16234 has DOI 10.1021/acs.jpclett.6c02486 and journal-ref J. Phys. Chem. Lett. 2026, 17, 11079-11086, confirmed by the arXiv API and by OAI. E-MZM is WATCH, so that journal paper is REJECT, not INCLUDE. 2611.17001 is the same WATCH miss. 2611.17724 is arXiv v2 (updated 2026-11-18). It is E-QEC only. The anyon-proliferation reading is not a fusion measurement, so E-S3 is not bound. 2611.21578 is the Willow stability experiment, mu_T = 1.47 +/- 0.25, logical-error floor <= 3.20e-8 at 60 cycles. Importance 92 and tier-adjusted confidence 83 clear the harvest bar. A5 still fails because the venue is arXiv, so C4 does not move. 2611.22035 is distance-5 magic-state cultivation on an IBM Nighthawk. Confidence 79 is under 80, and the venue is arXiv. 2611.23165 teleports two distance-3 logical qubits on 41 superconducting qubits. The abstract quotes no fidelity. 2611.23132 does not reverse the floquet-clock CUT. Harvested 619 is the sum of returned rows from the five candidate sources (15 + 50 + 114 + 79 + 361), not a count of unique works. The anyons fetch was 30 of 40 and a second page completed 40 of 40. The Vlasov/SRS/SBS keep query was 40 of 52 and a second page completed 52 of 52. Category windows used a cap of 80 rather than 40 for str-el, mes-hall, and hep-th. plasm-ph was complete at 41. Not a scrape of /list pages. McKean-Vlasov SDEs, diamond Raman, and segment-routing hits were keyword false friends and were not queued. 2611.29164, cylindrical Vlasov-Maxwell pinch equilibria, was not queued after the fifteen-item carry list. 2611.27566 is JET gyrokinetic ELM transport, not a controller and not an S-L3 solver, so it was not queued. ingest.py was not executed: it has no inter-request sleep and would replace this run log. fetch_arxiv.py was not run in write mode. Harvest confidence is round(raw times 0.88) for preprint tier 0.7 and round(raw times 1.00) for the one journal. Popularity is min(40, 8 plus the API author count). 2611.21578 has 362 authors, so popularity is 40. S2_API_KEY is unset. No PDF was cached: DBE_FULLTEXT_STORE is unset. OpenAlex, Crossref, and Unpaywall were skipped because OPENALEX_API_KEY and DBE_CONTACT_EMAIL are unset. Prompt source: research/OBSERVATORY_PROMPT.md on feature/research-grade-physics, blob 226375bdc29fa23856dc38714f84b2fca90c5f1d, NORTH STAR present. The starter is a shorter restatement. No rule conflict. versions.json is DBE-0.2.2 / DBES-0.2.0 and claims.json freeze is 2026-10-02, matching the prompt. PR 22 (observatory/2026-11-18) was still open. Its Codex P2 on 2611.10870 was fixed on that branch at 2721991 and both CI jobs passed on that SHA. Codex had not posted on 2721991, so this branch was cut from that head rather than from origin/feature/research-grade-physics. The harvest-count P2 on PR 22 had already been fixed before this run. Same-day correction: the anyons page offset in the first note said start 40. The request that returns the remaining 10 is start 30. A7 stays pass on these bound HOLD cards because section 5.2 uses A7 to keep unbound papers out of the HOLD queue, which is the reading on every earlier card. The Codex P2 that would count each new HOLD as an A7 miss is not applied. It is left for Oscar."
+}
